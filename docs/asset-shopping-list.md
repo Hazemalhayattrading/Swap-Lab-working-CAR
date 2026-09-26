@@ -10,6 +10,7 @@ Candidate 3D models for you to buy or download. I don't download or buy anything
 - **The Sketchfab Store has stopped selling.** `/store` redirects to Fab, and every paid Sketchfab model checked shows no Buy button. Prices from the Phase 0 list for Sketchfab paid models are out of date.
 - **NoAI is now allowed on CC0 and CC-BY models** (your decision, 2026-09-26), because we never train AI on them. Those files are processed only by the asset scripts and are never shown to an AI model (CLAUDE.md rule 5).
 - **CGTrader now sells to ordinary buyers only under "Royalty Free License (no AI)".** That licence isn't CC0 or CC-BY, so the No AI clause still keeps it out. Its extraction clause (21A.3) would anyway, unless you approve a model.
+- **Commissioning original models** is costed under "Commissioned models" below, for you to decide later.
 - **Engines and parts are not researched yet.**
 - "Unknown" means the page didn't say. Nothing is guessed. Polycounts are as listed, and listings mix triangles, polygons (quads) and vertices.
 
@@ -93,6 +94,147 @@ That supports launching with CC0 and CC-BY only.
   The FAQ adds that other WebGL use needs a non-standard format or a substantially modified mesh, and "must be approved in advance". **Verdict: no** for three.js with GLB, unless TurboSquid approves it in writing.
 
   Editorial (4): "limited to news reporting ... A second permitted use is use within an academic setting". The FAQ says: "No commercial, non-news related purpose." **Verdict: no.** (The TurboSquid listing pages themselves couldn't be opened; the licence pages on blog.turbosquid.com could.)
+
+## Commissioned models
+
+For you to decide later. Commissioning means paying a 3D artist or studio to build original models to our spec, under a licence written for this site. It's the route to consider because of what the store search found:
+
+- no free, stock-bodied S15 exists;
+- the best free Supra has no interior;
+- neither free pick has an engine bay;
+- no store's standard licence allows a plain GLB served to the browser.
+
+### What the artist would build (per car: S15 Spec-R, Supra RZ/Turbo)
+
+The camera modes in BUILD_PROMPT section 8 decide the scope. Each block below can be quoted and ordered separately.
+
+**1. Exterior (showroom)**
+
+- Stock body, to scale, matching our verified data files:
+  - S15: 4,445 x 1,695 x 1,285 mm, wheelbase 2,525 mm, tracks 1,470 / 1,460 mm.
+  - Supra: 4,520 x 1,810 x 1,275 mm, wheelbase 2,550 mm, tracks 1,520 / 1,525 mm.
+- Separate objects with real pivot points:
+  - four wheels, with brake discs and calipers separate so the wheels can turn while the calipers stay;
+  - bonnet on its real hinge axis (the bay view opens it), plus doors and bootlid or hatch;
+  - glass, and lights with emissive materials.
+- Badges as separate meshes, so they can be hidden (CLAUDE.md rule 5: no manufacturer logos as site branding).
+- Paint as its own material, so the colour can change.
+- Optional extras, quoted separately:
+  - S15: Spec-S 15-inch wheels; the Aero rear wing.
+  - Supra: 16-inch (JDM 1993-96) and 17-inch wheels; the removable targa roof (Aero Top in Japan, Sport Roof in the US).
+
+**2. Interior (cabin view)**
+
+- A full cabin that holds up from the driver's eye point.
+- Every gauge needle as a separate object, so the sim can drive them (tach, speed, boost, oil pressure, water temperature). That includes the S15 Spec-R's A-pillar boost gauge (in Nissan's 1999 launch release).
+- A separate steering wheel, pedals and gear lever.
+- Seats as separate objects on `mount_seat_driver` and `mount_seat_passenger`, so bucket seats can replace them.
+
+**3. Engine bay**
+
+- The bay structure: strut towers, firewall, frame rails, radiator support, inner wings, brake booster, battery, loom and the underside of the bonnet.
+- Built so that it still looks right with the stock engine taken out, because swapped engines sit in the same bay.
+- Our `mount_*` empties placed at the real positions: `mount_engine`, `mount_trans`, `mount_intake`, `mount_turbo`, `mount_exhaust`, `mount_radiator`, `mount_intercooler`, `mount_oilcooler`.
+  A to-scale bay is also what the car files' `geometry` is waiting for: the mount points and bay envelope get measured from it in Phase 4.
+- The underside at least along the transmission tunnel and exhaust route, for the dyno and cutaway views.
+
+**4. Separate engines: SR20DET and 2JZ-GTE (8 MB budget each)**
+
+- Exterior: block, head, cam cover, intake and plenum, throttle body, exhaust manifold, the turbo (two sequential turbos on the 2JZ-GTE), intercooler piping, and accessories and belts.
+- The cutaway set as separate, correctly pivoted objects, so the renderer can animate them in time with rpm and firing order:
+  - pistons, rods, crankshaft;
+  - camshafts, valves and springs;
+  - turbine and compressor wheels;
+  - a sectioned block and head for the X-ray view.
+- Real geometry from our data: 86.0 x 86.0 mm bore and stroke on both engines; firing orders 1-3-4-2 and 1-5-3-6-2-4.
+
+**Technical spec for every model**
+
+- glTF 2.0 (GLB) plus the editable source file (Blender preferred).
+- Metres, Y-up, real-world pivots.
+- Our part names and `mount_*` empties.
+- PBR metal/roughness textures.
+- It must fit the budgets after `npm run assets`: car 25 MB, engine 8 MB. Two levels of detail per car (a light showroom version and a detailed close-up version), sized to the performance targets (60 fps showroom, 45 fps cutaway on mid-range hardware).
+- References: blueprints and photos, which the artist usually sources; our data files give the dimensions.
+
+### Licence terms we'd need
+
+The contract must explicitly grant:
+
+1. **Real-time web use:** rendering the models in a public website, where the optimised GLB is downloaded by every visitor's browser, served from GitHub Pages and stored in a public git repository. This is exactly what store licences forbid.
+2. **Modification:** optimising, decimating, renaming, re-materialing, adding mount points and cutting sections.
+3. **Perpetual and worldwide rights, including commercial use,** in case the site ever earns money.
+4. **Warranties:** original work; no game rips; no AI tools used (one marketplace's terms allow AI tools unless the brief forbids them); no parts from other models, except CC0 or CC-BY items listed in a bill of materials.
+5. **No NoAI clause.** CLAUDE.md rule 5 only accepts NoAI on CC0/CC-BY assets, so a commissioned licence with one would need your sign-off.
+
+What we can accept in return:
+
+- **We don't redistribute the source files** (the .blend and texture masters). They stay out of the repo, since `assets-raw/` is git-ignored.
+- **We don't resell the models as standalone assets.**
+
+Ownership options, from most to least control:
+
+- **Copyright assignment:** we own the model.
+  - Upwork's optional contract terms (6.4) and Fiverr's terms (section 10) assign copyright to the buyer on payment by default. Some Fiverr gigs charge extra for a "Commercial Use License" instead, under which the seller keeps ownership.
+  - A US "work made for hire" needs a signed agreement and one of nine qualifying categories. A web-app model doesn't clearly qualify, so contracts assign copyright as well (US Copyright Office Circular 30). Saudi law wasn't researched.
+- **Exclusive licence:** the artist keeps copyright but can't license the model to anyone else. CGTrader's exclusive project licence (3D Projects terms 6.5) explicitly covers "making available to the public ... over computer networks (on the Internet)".
+- **Non-exclusive licence:** usually the cheapest, and the artist may sell the same model elsewhere. It only works for us if it explicitly allows the unprotected public GLB. CGTrader's non-exclusive project licence falls back to its general terms, including the anti-extraction clause 21A.3, which is the same problem as with stock models. On CGTrader, don't tick the box that lets the designer resell the result.
+
+Other contract points the research supports:
+
+- Source files named by type (.blend or .max, Substance files, full-resolution textures), delivered on payment.
+- Payment by milestone.
+- Acceptance tested in our pipeline (it loads, fits the budget, uses our names). Note that CGTrader deems a delivery accepted after 10 business days without an objection.
+- Portfolio use agreed up front.
+
+### Rough prices (checked 2026-09-26)
+
+Specialist car-model studios don't publish commission prices: Squir, and 3DModels.org (which Hum3D now redirects to), quote on request. These are the published figures found:
+
+| Source                                                       | Published figure                                                                                                                                     |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RocketBrush, game-art studio (prices updated September 2025) | "Vehicle (optimized) $4,000–8,000+" at "$35–37/h". Doesn't say whether an interior is included.                                                      |
+| Pixune, game-art studio                                      | Vehicles and props "$500 to $2,500 per asset"; studios "$40 and $150 per hour".                                                                      |
+| Yord Studio, web car configurators                           | "From €20,000" for one vehicle including the configurator app, "+€5,000 per model". This assumes manufacturer CAD data, which we don't have.         |
+| Visartech, WebGL car interior                                | 56–80 hours to model an interior from scratch.                                                                                                       |
+| Fiverr (107 car gigs read)                                   | Detailed exterior plus interior tiers: median $180 (quartiles $120–$275, highest $800), median 7 days. Engine bays: "message me for a custom quote". |
+| CGTrader 3D Projects (budgets set by clients)                | Mostly $50–$800 per car, e.g. $200 for a stock exterior.                                                                                             |
+| Hourly rates                                                 | Upwork profiles: 3D modellers $17–30/h, 3D artists $25–40/h. Polycount members' averages: US individual contractors $34.50–62.50/h.                  |
+| Engine with moving internals                                 | No commission price published anywhere. For scale, a stock rigged 2JZ-GTE on CGTrader costs $48 (90 parts, 35.8k polygons, "No AI" licence).         |
+
+I spot-checked the RocketBrush and Polycount figures on the live pages.
+
+**Estimate for our scope.** This is not a quote. The hours are inferred from the published anchors above (RocketBrush's price divided by its rate for the exterior, Visartech for the interior, analogy for the bay and engine), at $30–50/h for a vetted vehicle artist:
+
+| Deliverable                                             | Hours         | Cost                                     |
+| ------------------------------------------------------- | ------------- | ---------------------------------------- |
+| Exterior only, per car                                  | 80–200        | $2,400–$10,000                           |
+| Exterior plus cabin, per car                            | 140–320       | $4,200–$16,000                           |
+| Engine bay (add-on), per car                            | 40–100        | $1,200–$5,000                            |
+| Engine with internals, each                             | 60–150        | $1,800–$7,500                            |
+| **Both cars, everything, plus the SR20DET and 2JZ-GTE** | **480–1,140** | **$14,000–$57,000 (SAR 54,000–214,000)** |
+
+One artist would need about 4.5–10.5 weeks per car and 1.5–4 weeks per engine. A studio at RocketBrush-type rates lands at roughly $19,000–$60,000 for the lot.
+
+What to take from it:
+
+- **Fiverr tiers are 10 to 50 times below the studio figures.** At those prices they can't meet a reference-accurate, real-time spec with a clickable bay, so treat them as a floor. Several Fiverr car sellers work on GTA V and FiveM mods, which is one more reason for the originality warranty.
+- **The engine bay and the moving internals are the least certain lines.** Nobody publishes a price for them.
+- **Cheaper hybrid:** keep the free CC-BY exteriors (TinoD2's Supra, zhe_kan's S15) and commission only the cabin, the bay and the engines. That's about 160–370 hours, or $4,800–$18,500 per car. The catch: that S15 isn't stock-bodied, and the CC-BY credit stays.
+
+### Carmaker rights (caution, not legal advice)
+
+- Commissioning a model doesn't clear Nissan's or Toyota's rights in the car's design. TurboSquid's brand policy says the responsibility "applies equally whether you license a 3D model or create it yourself". Its generic-content policy says removing logos "may not be enough", because the body shape can itself be trade dress. A US court held exactly that for Ferrari body shapes (Ferrari v. Roberts, 1991).
+- This applies just as much to the free CC-BY models.
+- CLAUDE.md's rules (descriptive names, no logos as site branding, no implied endorsement) are the right stance. Badges as separate meshes, so they can be hidden, help.
+- If the site ever earns money, get a lawyer's view for your jurisdiction.
+
+### References the artist needs
+
+- No stock-body blueprints were found for either car. The first catalogue pages at the-blueprints.com only showed race-car versions; the full catalogue wasn't paged through.
+- An accurate body may need photos plus measurements, or a scan of a local car. One UK studio quotes £800–£1,000 for a full-car scan (2024); Saudi scanning prices weren't researched.
+
+Full evidence with every quote and link: `docs/research/commissioned-models-2026-09-26.md`, plus the Fiverr tiers and CGTrader job budgets as CSV files next to it.
 
 ## Cars
 
