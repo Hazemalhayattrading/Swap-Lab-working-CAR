@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/
+assets-raw/
+test-results/
+playwright-report/
+package-lock.json
+# Owner-authored files and vendored skills keep their own formatting.
+CLAUDE.md
+BUILD_PROMPT.md
+.claude/

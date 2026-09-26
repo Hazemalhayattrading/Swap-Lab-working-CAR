@@ -1,0 +1,86 @@
+name: CI
+
+# Every push and pull request runs the checks and the smoke tests.
+# A push to main that passes both deploys the tested build to GitHub Pages.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  # GitHub Pages serves this project from /<repo>/.
+  BASE_PATH: /${{ github.event.repository.name }}/
+
+jobs:
+  checks:
+    name: Lint, typecheck, unit + calibration tests, data validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      # Includes tests/calibration once Phase 2 adds it: calibration failures fail CI.
+      - run: npm test
+      - run: npm run validate-data
+
+  e2e:
+    name: Build, smoke tests, screenshots
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Builds with BASE_PATH and tests the production bundle through `vite preview`.
+      - run: npm run e2e
+      - name: Keep screenshots and the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-screenshots
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 14
+      - name: Hand the tested build to Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [checks, e2e]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

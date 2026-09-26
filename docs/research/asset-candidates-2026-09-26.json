@@ -1,0 +1,774 @@
+{
+  "accessed": "2026-09-26",
+  "method": "WebSearch result summaries only; marketplace pages were not fetched (blocked by network policy). Single research pass per item; the adversarial verification pass could not run (search budget exhausted).",
+  "items": [
+    {
+      "item": "Nissan Silvia S15 (Spec-R, 1999-2002)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "Nissan Silvia S15",
+          "url": "https://sketchfab.com/3d-models/nissan-silvia-s15-6570ef4cef894f38af4ac7be7d558e36",
+          "marketplace": "Sketchfab",
+          "author": "NLM (@NLM-Group)",
+          "licence": "Royalty Free (Sketchfab Store)",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "664.8k triangles / 338.7k vertices",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "GLB mentioned (textures already attached); other formats unknown",
+          "evidence": "Page title reads 'Buy Royalty Free 3D model by NLM ... Sketchfab Store'. The search summary says it is highly detailed, 'with highly detailed interior of the car', suitable for games and renders, all textures included, and a GLB file has the textures attached. A second summary gave 664.8k triangles and 338.7k vertices. Price was not shown.",
+          "notes": "Best S15 lead on interior detail. It is far over a real-time budget, so it needs heavy decimation to fit 25 MB. Engine bay not mentioned. The description does not say which trim or body it shows, so check it is a stock Spec-R before buying. Provenance is not stated."
+        },
+        {
+          "title": "Nissan Silvia S15",
+          "url": "https://sketchfab.com/3d-models/nissan-silvia-s15-c3653a18842242edb52a26d47c82647d",
+          "marketplace": "Sketchfab",
+          "author": "Muhammad Seno Aji (@senoaji)",
+          "licence": "Royalty Free (Sketchfab Store)",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "251.5k triangles / 131.3k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Page title reads 'Buy Royalty Free 3D model by Muhammad Seno Aji (@senoaji) - Sketchfab Store'. The summary calls it a medium-poly model, published July 1st 2022, with 251.5k triangles and 131.3k vertices, made with Blender and Photoshop. The summary said the results had no interior details, and the price was not shown.",
+          "notes": "Mid-size polycount is easier to fit the budget. Interior and engine bay status must be checked on the page."
+        },
+        {
+          "title": "Nissan silvia S15",
+          "url": "https://sketchfab.com/3d-models/nissan-silvia-s15-484b546f73774673b78fb6376e4956bf",
+          "marketplace": "Sketchfab",
+          "author": "Mfdoom (@MF_doom)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "386.6k triangles / 203.4k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Page title reads 'Download Free 3D model by Mfdoom'. Several summaries say it is licensed Creative Commons Attribution, made in Blender, 386.6k triangles and 203.4k vertices, published March 23 2023, with 505+ downloads.",
+          "notes": "Free CC-BY, so it needs a credit on /credits. The model description was not visible, so I could not confirm it is original work rather than a game port. Check the description and the look of the interior before use."
+        },
+        {
+          "title": "Nissan S15 Drift [FREE]",
+          "url": "https://sketchfab.com/3d-models/nissan-s15-drift-free-18348c1698f74d9db1497a791bd21a2f",
+          "marketplace": "Sketchfab",
+          "author": "autoNgraphic",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "539.8k triangles / 291.6k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "The summary says it is a Nissan S15 Silvia with Origin widebody fenders, 'The engine is a Sr20det', licensed CC Attribution, published January 5th 2023, 539.8k triangles and 291.6k vertices. It was released for 300 followers, with a version that has an Origin bonnet.",
+          "notes": "Not stock: it has Origin Labo widebody fenders (a real aftermarket kit). The description names the SR20DET engine, which hints an engine may be modelled, but that is not confirmed. Heavy polycount."
+        },
+        {
+          "title": "Nissan silvia s15 collection",
+          "url": "https://www.cgtrader.com/3d-model-collections/nissan-silvia-s15-collection",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "OBJ, FBX, BLEND, DAE",
+          "evidence": "The summary says the collection contains two very detailed versions, a basic one and a custom one, and 'Both cars have the same interior'. It is rigged, comes in OBJ/FBX/BLEND/DAE, and is listed with a Royalty Free license. Price was not shown.",
+          "notes": "The basic version may be close to stock. Confirm there is no 'No AI' tag, because the snippet only said 'Royalty Free', and check the price and author on the page."
+        },
+        {
+          "title": "Nissan Silvia S15 Spec-R AERO",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/nissan-silvia-s15-spec-r-aero",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 15.00",
+          "polycount": "663,000 polygons / 567,000 vertices",
+          "interiorModelled": "partial",
+          "engineBayModelled": "unknown",
+          "formats": "OBJ",
+          "evidence": "The summary says it costs $15.00 with a Royalty Free License. It is a high poly model with 'a low detail interior made only for silhouette purposes', PBR materials made in V-Ray, rigged, 663,000 polygons and 567,000 vertices, published September 16 2021. It also says 'the model is currently not available for purchase'.",
+          "notes": "Right trim (Spec-R Aero, a factory option). The interior is only a silhouette and the listing appears delisted, so it may not be buyable."
+        },
+        {
+          "title": "Nissan Silvia S15 Spec-r Aero 1999",
+          "url": "https://www.turbosquid.com/3d-models/nissan-silvia-s15-specr-aero-1999-3d-2217169",
+          "marketplace": "TurboSquid",
+          "author": "unknown",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "USD 80",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "3ds max, OBJ, FBX",
+          "evidence": "The summary says the 'nissan silvia S15 spec-r aero 1999' model is available for $80 in 3ds max, obj and fbx formats. No licence, polycount or interior details were in the results.",
+          "notes": "Exact trim and year match. The licence was not seen. Branded cars on TurboSquid often carry an Editorial label, so the owner must check the licence on the page before buying."
+        },
+        {
+          "title": "Nissan Silvia S15 (TurboSquid 1519405)",
+          "url": "https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-1519405",
+          "marketplace": "TurboSquid",
+          "author": "unknown",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "1,235,000 polygons / 1,268,000 vertices",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "The summary says it has 1,235,000 polygons and 1,268,000 vertices, 'racing interior equipment and work meister wheel', with mixed unwrapped UVs, textures and materials.",
+          "notes": "Not stock: it has a racing interior and Work Meister wheels. The polycount is very high. Licence not seen."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "2002 Nissan Silvia S15 Spec R Aero (Ddiaz Design)",
+          "url": "https://sketchfab.com/3d-models/2002-nissan-silvia-s15-spec-r-aero-8afd07698ca6414dad100af12dfd0d62",
+          "reason": "Licensed CC Attribution-NonCommercial-ShareAlike, and the summary says it is based on a Need For Speed Heat 3D model, so it is a game rip."
+        },
+        {
+          "title": "2000 Nissan Silvia Spec-R (OUTPISTON)",
+          "url": "https://sketchfab.com/3d-models/2000-nissan-silvia-spec-r-dd63ddbf2a504990b93cee5ebb052a79",
+          "reason": "The summary describes the OUTPISTON account's models as 'sourced from various games and other sources for non-commercial use', so it is a game-sourced NC upload. The same applies to that account's S15 Spec-S Aero and Varietta uploads."
+        },
+        {
+          "title": "Free Nissan Silvia S15 3D Model (TurboSquid 1230532)",
+          "url": "https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-model-1230532",
+          "reason": "The summary says it is under a CC-BY-NC licence for non-commercial purposes."
+        },
+        {
+          "title": "Nissan Silvia S15 Dmax Gripex Garage",
+          "url": "https://www.cgtrader.com/3d-models/car/racing-car/nissan-silvia-s15-dmax-gripex-garage",
+          "reason": "A GTA San Andreas mod with the identical name and spec exists (Dmax kit, 2JZ-GTE swap), so this is probably a game-mod port. I could not confirm that. It is also a heavy kit with an engine swap, not stock."
+        },
+        {
+          "title": "Nissan Silvia S15 2001 Tuning Body For Print",
+          "url": "https://www.cgtrader.com/3d-print-models/hobby-diy/automotive/nissan-silvia-s15-2001-tuning-body-for-print",
+          "reason": "Licence is Royalty Free (no AI), which the project's rules exclude. It is also an STL print body with a tuning kit."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26, WebSearch only (Sketchfab, CGTrader and TurboSquid could not be fetched directly). Queries covered Sketchfab, CGTrader and TurboSquid by name, 'Spec-R', 'Spec-R Aero', SR20DET, and the specific authors (NLM, Seno Aji, Mfdoom, autoNgraphic, Ddiaz, OUTPISTON, LTStudio, br.3d, CG Customs, Naudaff3D). Other leads I saw but did not list: CG Customs (28k tris, game-ready, licence not seen); br.3d (24.2k tris, 2018, licence not seen); LTStudio 'Nissan Silvia S15 SPEC-R' (published 2023-07-27, licence and details not seen, worth checking); NLM Tuned Version e3b55c5 (Royalty Free, 881k tris, detailed interior, but tuned body); Naudaff3D Drift Tune (Royalty Free, but the author says the interior is not detailed, and it has a drift kit); CGTrader Tokyo Drift ($68 RF, Veilside movie car, not stock). No listing I found confirms a modelled SR20DET engine bay. Other Ddiaz Design S15 uploads (1999 Spec-S Aero, Garage Mak, Mona Lisa) were not checked one by one, but this uploader's other cars are NFS-derived BY-NC-SA, so avoid them. The session's WebSearch budget ran out before I could check a few more leads."
+    },
+    {
+      "item": "Toyota Supra JZA80 (MK4, 1993-2002)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "Toyota Supra mk IV",
+          "url": "https://sketchfab.com/3d-models/toyota-supra-mk-iv-6e42a10b2019416996a35972e0537817",
+          "marketplace": "Sketchfab",
+          "author": "Render at Night (@Render_at_Night)",
+          "licence": "Royalty Free (Sketchfab Store)",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "Low poly 132,952 polygons / 134,583 vertices; High poly 815,702 polygons / 819,540 vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "BLEND (with Subdivision Surface modifiers), OBJ (low and high poly)",
+          "evidence": "Page title reads 'Buy Royalty Free 3D model by Render at Night ... Sketchfab Store'. The summary says it has low and high poly versions (132,952 polygons / 134,583 vertices low; 815,702 / 819,540 high) in BLEND with modifiers and OBJ. The summary said the results had no pricing or interior details.",
+          "notes": "The low-poly version is a sensible real-time starting point. Interior and engine bay must be checked on the page."
+        },
+        {
+          "title": "Toyota Supra MK IV (1994)",
+          "url": "https://sketchfab.com/3d-models/toyota-supra-mk-iv-1994-eb9bb1eb41db431cb078088ae1ce45f8",
+          "marketplace": "Sketchfab",
+          "author": "Martin Trafas (@TinoD2)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "262k triangles / 137.3k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Page title reads 'Download Free 3D model by Martin Trafas (@TinoD2)'. The summary says it has 262k triangles and 137.3k vertices, was published July 19th 2021 under a Creative Commons Attribution license, has a 'blender' tag, and has about 46k views and 1,667 downloads. The summary said the results had no interior or engine details.",
+          "notes": "Free CC-BY, so it needs a credit on /credits. Popular and made in Blender. I could not confirm it is original work rather than a port. Check the description."
+        },
+        {
+          "title": "Toyota Supra MK IV A80 1993",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-mk-iv-a80-1993",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 20.00",
+          "polycount": "unknown",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "MAX, OBJ, 3DS, FBX",
+          "evidence": "The summary says it costs $20.00 with a Royalty Free License, comes in MAX/OBJ/3DS/FBX, and a comment on the page calls it 'one of the best if not the best looking interiors for the mk4'.",
+          "notes": "The interior claim comes from a buyer comment, not the seller's spec. Confirm there is no 'No AI' tag, because the snippet only said 'Royalty Free'. Polycount not seen."
+        },
+        {
+          "title": "Supra A80 Mk4 (TurboSquid 1639507)",
+          "url": "https://www.turbosquid.com/3d-models/3d-model-supra-a80-mk4-cars-1639507",
+          "marketplace": "TurboSquid",
+          "author": "PhinDev",
+          "licence": "Editorial",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "BLEND, FBX, OBJ (JPG textures)",
+          "evidence": "The summary says it is 'a highly detailed stock version of the Supra A80 aka MK4 built in Blender with procedural materials', by PhinDev, in blend/fbx/jpg/obj. A search for the editorial wording returned: 'The intellectual property depicted in this model, including brands Toyota, is not affiliated with or endorsed by the original rights holders and must be used under editorial use restrictions.'",
+          "notes": "Stock body, which is preferred. It carries an Editorial restriction, so the owner must decide. Procedural Blender materials must be baked to textures for GLB. Crack sites also host this model; only buy it from TurboSquid."
+        },
+        {
+          "title": "Toyota Supra 1993 (Hum3D)",
+          "url": "https://www.turbosquid.com/3d-models/3d-toyota-supra-1993/1130282",
+          "marketplace": "TurboSquid",
+          "author": "Hum3D",
+          "licence": "Editorial",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "USD 149",
+          "polycount": "668,000 polygons / 677,000 vertices (figure from the CGTrader copy of the same model)",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "3ds Max 2008 (scanline and V-Ray), FBX, OBJ, 3DS, Maya 8.5, Lightwave 6, Cinema 4D 11",
+          "evidence": "The summary says Hum3D's Toyota Supra 1993 covers the JZA80/A80 generation, was 'created on a real car base with accurate measurements', and has main parts as separate objects. The TurboSquid copy states 'Editorial uses of this product are allowed, but other uses (such as within computer games) may require legal clearances'. The CGTrader copy (https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-1993) is listed Royalty Free at $149 with 668k polygons, but its page says 'The model is not available'.",
+          "notes": "Hum3D builds accurate stock bodies, but it is Editorial on TurboSquid and the Royalty Free CGTrader copy appears delisted. Hum3D base (non-HQ-interior) models usually have a simple interior, but that is not confirmed here."
+        },
+        {
+          "title": "Toyota Supra A80 (Ashminggu)",
+          "url": "https://sketchfab.com/3d-models/toyota-supra-a80-ashminggu-9178fa9d53e04bf4bfe1d7761cfa2f74",
+          "marketplace": "Sketchfab",
+          "author": "riftocloes (original model by Ashminggu)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "The summary says it is licensed Creative Commons Attribution, published March 17th 2023, and credits Ashminggu for the original model. Commercial use requires crediting both riftocloes and Ashminggu.",
+          "notes": "This is a re-upload of another creator's model. It is unclear whether the uploader had the right to relicense it, and where Ashminggu's original came from, so the owner should check before relying on the CC-BY licence."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "TOYOTA SUPRA MK4 (A80) (temich)",
+          "url": "https://sketchfab.com/3d-models/toyota-supra-mk4-a80-61d402d6de904374bfe5a98907c85b1d",
+          "reason": "The description says it is 'based on CSR2 model' (a mobile racing game), and the summary says it is not for commercial use. It is a game rip with an NC restriction."
+        },
+        {
+          "title": "Toyota Supra (A80) 1993 (Lexyc16)",
+          "url": "https://sketchfab.com/3d-models/toyota-supra-a80-1993-dd897d7823784bc5893c183c1328e8cb",
+          "reason": "Licensed CC Attribution-NonCommercial (BY-NC)."
+        },
+        {
+          "title": "1998 Toyota Supra (BHP3D)",
+          "url": "https://sketchfab.com/3d-models/1998-toyota-supra-b9ee69e17af947c0bce1c54d34195187",
+          "reason": "The summary says it was 'exported from a BeamNG mod' (model and textures by StivgGames, retextured by BHP3D). It is a game-mod rip, even though it is labelled CC-BY."
+        },
+        {
+          "title": "Toyota Supra MK4 RZ 1998 (CGTrader low-poly)",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-rz-1998-8b0e93ff-9c06-4cf6-88f3-cd2ad3896131",
+          "reason": "Licence is Royalty Free (no AI), which the project's rules exclude."
+        },
+        {
+          "title": "Toyota Supra mk4 low poly free (CGTrader)",
+          "url": "https://www.cgtrader.com/free-3d-models/car/racing-car/toyota-supra-mk4-6edf7cda-4a65-4ea0-8503-b7db477b5e9f",
+          "reason": "Licence is Royalty Free No AI, which the project's rules exclude."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26, WebSearch only. Queries covered Sketchfab, CGTrader and TurboSquid with 'Supra MK4', 'JZA80', 'A80', 'RZ', '2JZ-GTE', 'engine bay', 'Hum3D', and specific authors. No listing I found confirms a modelled 2JZ engine bay on a licence-clean car. Standalone 2JZ-GTE engine models exist on TurboSquid (1274111, 1515225) and CGTrader if the engine is sourced separately. Other leads I saw but did not list: Mona x Supercars 'Toyota Supra RZ (JZA80)' (licence not seen; the description says '5.1L 2JZ-GTE', which is wrong, since it is 3.0 L, so provenance is doubtful); ImperialBlue '1994 Toyota Supra Turbo Mk.4' (CC-BY but only 2.1k triangles, too low); MGR '99 Supra Mk4 (Sketchfab Store Royalty Free, only 33.9k tris); Casey Collins A80 (962k tris, licence and download status not seen); CGTrader 'TOYOTA SUPRA - Red Metallic' ($70 RF, generation not confirmed); CGTrader 'toyota supra MK4 1998' (1.16M vertices, the seller offers a detailed interior on request, licence not seen); The Polygon Pusher 'Toyota Supra Game Ready' (Sketchfab Store, said to be fourth generation, but the dimensions in the snippet look wrong and it is only 62k tris). Ddiaz Design kit Supras (Varis, Ridox, KRC, Bomex) were not checked one by one, but this uploader's other cars are NFS-derived BY-NC-SA, so avoid them. The session's WebSearch budget ran out."
+    },
+    {
+      "item": "Nissan 350Z (Z33, 2003-2008)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "Nissan 350Z with HQ interior 2007",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/nissan-350z-with-hq-interior-2007",
+          "marketplace": "CGTrader",
+          "author": "Hum3D",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 399.00 on CGTrader (3DModels.org lists the same model at USD 295)",
+          "polycount": "1,034,000 polygons / 1,075,000 vertices",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "MAX, OBJ, 3DS, FBX, C4D, LWO",
+          "evidence": "The summary says it costs $399.00 with a Royalty Free License, by hum3d, with 1,034,000 polygons and 1,075,000 vertices, 'created to be maximally close to a real Nissan car and based on dimensions from open sources'. One later summary said the CGTrader listing appears unavailable. It is also sold on hum3d.com, and on 3dmodels.org as 'Nissan 350Z with HQ interior 2009' for $295 with an Interior HQ version.",
+          "notes": "Best lead for cabin detail. It is a 2007 facelift car, the VQ35HR generation with the revised hood and lights, so the year differs from a 2003 car; confirm the variant. It may have to be bought from hum3d.com or 3dmodels.org if the CGTrader listing is gone, and those sites' licence terms were not verified. Engine bay not mentioned. It needs heavy decimation to fit 25 MB."
+        },
+        {
+          "title": "Nissan 350Z 2007",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/nissan-350z-2007-07cefb2907a350d322fe67e994809494",
+          "marketplace": "CGTrader",
+          "author": "Hum3D",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 129.00 on CGTrader (3DModels.org lists 'Nissan 350Z (Z33) 2009' at USD 95)",
+          "polycount": "476,000 polygons / 476,000 vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "MAX, OBJ, 3DS, FBX, C4D, LWO, LW, LWS, Maya",
+          "evidence": "The summary says Hum3D's 'Nissan 350Z 2007' costs $129.00 with a Royalty Free License and has 476,000 polygons and 476,000 vertices. The 3dmodels.org copy is listed at $95, Royalty Free License, with all main parts as separate objects.",
+          "notes": "Cheaper standard version of the model above. The interior level is not stated; the HQ-interior version is sold separately. It is a 2007 facelift car."
+        },
+        {
+          "title": "2002-2008 Nissan 350z",
+          "url": "https://sketchfab.com/3d-models/2002-2008-nissan-350z-fd5937a191c640f0b50ebed311a1399b",
+          "marketplace": "Sketchfab",
+          "author": "stecki",
+          "licence": "Royalty Free (Sketchfab Store)",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "14.2k triangles / 10.3k vertices total (Stock 6,891 tris; Track 7,277 tris)",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown (includes source .psd textures and paint colours)",
+          "evidence": "Page title reads 'Buy Royalty Free 3D model by stecki - Sketchfab Store'. The summary says there are two versions (Stock 6,891 triangles, Track 7,277 triangles), 14.2k triangles overall. It is 'an old game model that was built for an indie developed racing game (racer.nl)', with source .psd textures included.",
+          "notes": "The licence is clean, and the author made the model for their own indie game, so it is not a rip. It is far too low-poly for the photoreal target; at most a fallback or LOD."
+        },
+        {
+          "title": "3ds Nissan 350z (TurboSquid 378483)",
+          "url": "https://www.turbosquid.com/3d-models/3ds-nissan-350z/378483",
+          "marketplace": "TurboSquid",
+          "author": "unknown",
+          "licence": "Editorial",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "yes",
+          "engineBayModelled": "yes",
+          "formats": ".max, .3ds, .max V-Ray, .obj, .lwo",
+          "evidence": "The summary says it is 'a detailed model of a Nissan 350Z with textured interior ... includes engine and undercarriage'. The interior is a separate object, and the doors, hood and rear door are pivoted to open. Another summary says 'The model must be used under editorial use restrictions.'",
+          "notes": "The only 350Z lead with an engine and undercarriage explicitly modelled. The low product ID suggests an old model, so check how the materials and geometry have aged. It is Editorial, so the owner must decide."
+        },
+        {
+          "title": "nissan 350z 3d model (TurboSquid 235037)",
+          "url": "https://www.turbosquid.com/3d-models/nissan-350z-3d-model/235037",
+          "marketplace": "TurboSquid",
+          "author": "unknown",
+          "licence": "Editorial",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "3DS (modelled in Lightwave)",
+          "evidence": "The summary says it is 'a Nissan 350z with interior modelled in lightwave'. It also says 'Editorial uses of this product are allowed, but other uses may require legal clearances.'",
+          "notes": "Very old listing (low ID). The quality is probably below the photoreal target. Editorial."
+        },
+        {
+          "title": "Nissan 350Z (Z33) (Mona x Supercars)",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-z33-0bd921be48f442a7b138c5169b7d0d2f",
+          "marketplace": "Sketchfab",
+          "author": "Mona x Supercars (@Car2022)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "21.8k triangles / 13.7k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "The summary says it has 21.8k triangles and 13.7k vertices, an orange exterior, manual, right-hand drive, modelled as a 2007 Japanese vehicle, licensed Creative Commons Attribution.",
+          "notes": "The licence reads CC-BY, but the source is not stated. The low poly count and 'dealer' collection style suggest it may come from a game, which I could not confirm. The same account's Supra lists a wrong engine spec. Too low detail anyway."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "Nissan 350z Japanese Sports Coupe With Interior Model (Bbenedict)",
+          "url": "https://www.cgtrader.com/free-3d-models/car/sport-car/nissan-350z-japanese-sports-coupe-with-interior-model",
+          "reason": "Licence is 'Royalty Free No Ai License', which the project's rules exclude, despite 971,702 polygons and an interior. The TurboSquid copy (2049724) is probably the same author's; its licence was not checked."
+        },
+        {
+          "title": "Nissan 350Z (Ddiaz Design)",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-05e7604a0f4643ab87c141e244813e9a",
+          "reason": "The summary says it is based on a Need For Speed Heat 3D model and licensed CC Attribution-NonCommercial-ShareAlike."
+        },
+        {
+          "title": "2008 Voltex 350Z (Z33) Bodykit Wing Type 2 (Ddiaz Design)",
+          "url": "https://sketchfab.com/3d-models/2008-voltex-350z-z33-bodykit-wing-type-2-c1c5eb14e492434683381879b468b3f1",
+          "reason": "The summary says it is based on a Need For Speed Heat model, licensed CC BY-NC-SA."
+        },
+        {
+          "title": "Rachel's Nissan 350z NFS Underground 2 (Ddiaz Design)",
+          "url": "https://sketchfab.com/3d-models/rachels-nissan-350z-nfs-underground-2-5b41f9a218624deaa1202efb6ff5a779",
+          "reason": "The summary says it is based on a Need For Speed Mobile model, licensed CC BY-NC-SA."
+        },
+        {
+          "title": "Nissan 350Z (SÄNTI MILOS)",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-2f967462b67e4bd8b94c6abde1d1e07a",
+          "reason": "Licensed CC Attribution-NonCommercial."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26, WebSearch only. Queries covered Sketchfab, CGTrader and TurboSquid with '350Z', 'Z33', 'Fairlady Z', 'VQ35', 'engine bay', 'Hum3D', and specific authors. I found no licence-clean (ok) 350Z with a confirmed engine bay; only the Editorial TurboSquid 378483 states an engine and undercarriage. Standalone VQ35DE engine models exist (CGTrader 'Nissan 350z VQ35DE engine', TurboSquid 1480000, 67 parts, listed royalty-free) if the engine is sourced separately. Other leads I saw but did not list: ImperialBlue3D 350Zs (2.6k tris, too low); CGTrader 'Nissan 350z - rocket bunny' by graficov ($13 RF, moderately detailed interior, but a widebody kit and currently unavailable); TurboSquid 1469806 (snippet says royalty-free, exterior-focused; Editorial status and interior not seen); SÄNTI MILOS 'Nissan 350Z Voltex' ($59.99, aero kit, details not seen); fizzlefreshh 'Interior and Exterior' (licence and download status not seen). Ddiaz Design's Veilside, Top Secret and Rocket Bunny 350Zs were not checked one by one, but they follow the same NFS-derived BY-NC-SA pattern. The session's WebSearch budget (200 calls) ran out before the CGTrader 'Fairlady Z' and further Sketchfab CC-BY queries could run, so coverage for 350Z is thinner than for the other two."
+    },
+    {
+      "item": "BMW 3 Series E46 330i (sedan or coupe, 1998-2006)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "BMW E46 MSport",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-msport-614c2f1660474178a1d4717b7492d1c7",
+          "marketplace": "Sketchfab",
+          "author": "Ricy (@ngon_3d)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "50.7k triangles / 30.1k vertices (the description also says 24,300 polygons)",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Search results for the Sketchfab listing: based on a 2001 BMW E46 330i sedan (3 Series, pre-facelift), 24,300 polygons, 50.7k triangles, 30.1k vertices, licence Creative Commons Attribution, published 19 December 2024, and the creator asks for credit (Ricy). The lfs.net vehicle mod 'BAVARIA A46 SEDAN 30I' says it contains copyrighted material from Sketchfab under 'CC Attribution (BY)', with the BMW E46 M-Sport model by Ricy (@ngon_3d) as the source.",
+          "notes": "This is the best licence match found for a stock 330i sedan. The LFS mod credits this Sketchfab model as its source, which suggests Ricy made it (the Sketchfab model came first; it isn't a rip of the mod). One search summary briefly called the mod 'BY-ND', but the lfs.net licence field reads CC Attribution (BY) and so does the Sketchfab listing. Check the licence and any NoAI tag on the live page before download. It's mid-poly, so the interior and engine bay are probably basic or missing (not stated). The M Sport bumpers and skirts are a factory 330i option, not a fantasy kit. It needs a credit on /credits."
+        },
+        {
+          "title": "Low Poly Car - BMW E46 1998",
+          "url": "https://sketchfab.com/3d-models/low-poly-car-bmw-e46-1998-d9bfd8126e754164b48ded833c017bbf",
+          "marketplace": "Sketchfab",
+          "author": "ROH3D",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "18.4k triangles / 10k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Search result: 'Low Poly Car - BMW E46 1998' by ROH3D, 18.4k triangles and 10k vertices, CC Attribution. ROH3D describes its cars as low-poly with a realistic touch, quality PBR textures and optimised polygon counts, and says this model has the angel-eye headlights. ROH3D also sells it on roh3d.com.",
+          "notes": "This is a fallback only. It's low-poly, so it's unlikely to meet the photoreal close-up standard, and no interior or engine bay is mentioned. The trim level isn't stated and it's a 1998 pre-facelift sedan body. A near-identical listing, 'BMW E46 1998' by slowpoly (https://sketchfab.com/3d-models/bmw-e46-1998-ecc42a37c7e2409b9fd05665512843ce), uses the same wording and was reported as CC Attribution, published 16 June 2024 (polycount not seen). It may be the same creator. It needs a credit on /credits."
+        },
+        {
+          "title": "BMW 3-Series E46 1998-2006 (pre-facelift)",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2006-7df0ea780a1b464bba53b515e7fcdbca",
+          "marketplace": "Sketchfab",
+          "author": "Mercedesiarz_2025 / Merc_TV (@szymonpasterczyk)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "1.1M triangles / 583.1k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Search results: pre-facelift version listing petrol variants 316i, 318i, 320i, 323i, 325i, 328i, 330i and M3, plus diesels. 1.1M triangles, 583.1k vertices, licensed under Creative Commons Attribution, published 18 October 2025.",
+          "notes": "Owner review because it's unclear who made it. The same account has uploaded dozens of free high-poly cars in 2025, mostly Mercedes plus BMW, Audi, Pontiac, Alfa, Nissan, Kia and others, all CC-BY. Its sibling 'BMW E46 Touring 2001-2005' says it has an 'interior from BMW E36', which means parts are combined from other models of unknown origin. I found no proof that it's a game rip, but I also can't show the uploader owns the mesh. The same uploader has two other E46 sedans: 'BMW 3-Series E46 1998-2006' (facelift, https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2006-2e32a3e273ab482b83970603539de06a; a search summary gave 831.3k triangles for a same-titled listing, which is probably this one) and 'BMW 3 Series (E46) 1998-2002' (https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2002-7846a8c9431648c1857546632c8ffa3c, 1.4M triangles / 762.7k vertices, CC-BY). All would need heavy decimation for the 25 MB budget."
+        },
+        {
+          "title": "BMW 3 Series sedan (E46) 2006",
+          "url": "https://3dmodels.org/360-view/?id=38073",
+          "marketplace": "Other",
+          "author": "3DModels.org",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown (listed as 'various formats')",
+          "evidence": "Search result: 3DModels store page with a full 360-degree view of a BMW 3 Series sedan (E46) 2006 3D model, 'could be used in games or movies', available in various formats. The same vendor sells E46 coupe 2006 blueprints.",
+          "notes": "This is a commercial studio model of the facelift sedan and probably accurate, but the search results showed no licence, price or polycount. Vendors like this often sell branded cars under an editorial-style licence, so check the licence text before buying. I couldn't find it on CGTrader or TurboSquid through search."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "BMW 3 Series E46 Coupe And Touring",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-coupe-and-touring-388d4f257a81451a9ad5677fbfa5ee73",
+          "reason": "The uploader (Nieve5677 / @niev) says on the profile that they 'did not make any of these models', so the CC-BY tag wasn't given by the real author. Also 2.2M triangles."
+        },
+        {
+          "title": "BMW 318i E46",
+          "url": "https://sketchfab.com/3d-models/bmw-318i-e46-81827129d1f34aa7a13ab1131fd1cf37",
+          "reason": "Same uploader (Nieve5677), who says they did not make their uploads. It's also a 318i, not a 330i. 1.1M triangles."
+        },
+        {
+          "title": "1999 BMW E46 328i Sport",
+          "url": "https://sketchfab.com/3d-models/1999-bmw-e46-328i-sport-5fce3b693344450380b0112a4d21cfe5",
+          "reason": "The listing says it's based on a Need For Speed 3D model (game rip), and it's licensed CC Attribution-NonCommercial-ShareAlike."
+        },
+        {
+          "title": "BMW E46 HGK",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-hgk-d4e63d61b4a54befbb9daa62c8ff3a4f",
+          "reason": "CC Attribution-NonCommercial licence. It's also the HGK widebody drift kit, not a stock body. 171.5k triangles."
+        },
+        {
+          "title": "2001 BMW 3-Series (E46)",
+          "url": "https://sketchfab.com/3d-models/2001-bmw-3-series-e46-24a2b709937f4629b9fd2a7afa54e609",
+          "reason": "The CC-BY licence is fine, but it's a 1.3k-triangle AI traffic car with no interior and no detail, far below the photoreal standard."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26 using WebSearch results only. Queries covered Sketchfab ('BMW E46 330i', site:sketchfab.com, 'Buy Royalty Free' store listings, named uploaders), CGTrader (site:cgtrader.com, 'E46 330i', 'sedan royalty free'), TurboSquid (site:turbosquid.com, 'E46 coupe interior'), Hum3D, 3DModels.org and Squir. Gaps: search found no stock E46 sedan or coupe car listing on CGTrader or TurboSquid, only printable parts, an M3 GTR and low-poly M3s. The TurboSquid search page for 'e46' exists but its listings weren't indexed. None of the free Sketchfab candidates confirms a modelled engine bay. Useful reference, not render assets: modception's 'BMW 3-series E46 body / chassis 3D scan' (https://sketchfab.com/3d-models/bmw-3-series-e46-body-chassis-3d-scan-11cb6c0433254eb58398cc0732ab0185; scan data only, and buying gives a 3x higher-resolution mesh; price and licence not seen), GoodScan 3D's 'BMW series 3 E46 lidar scan' (free; licence not seen) and a Cults3D 'BMW E46 Engine bay Scan' by z0ne (OBJ; licence not seen). They could help check accuracy or build an engine bay. The web-search budget ran out before I could confirm NoAI tags on the Sketchfab pages. Check each live page before downloading."
+    },
+    {
+      "item": "BMW M3 E46 coupe (2000-2006)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "BMW M3 E46",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-5399b1833e6a4c06af6b11b03832aed7",
+          "marketplace": "Sketchfab",
+          "author": "pIxEL183 (@vladislav.varankin)",
+          "licence": "CC Attribution",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "352.2k triangles / 178.8k vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Search results: free download, 352.2k triangles and 178.8k vertices, licensed under Creative Commons Attribution, published 26 January 2025, and no description provided.",
+          "notes": "The licence as listed is acceptable, but there's no description, so its origin, the interior, the engine bay and the exact year aren't stated. Look at the model in the Sketchfab viewer before relying on it, and check for a NoAI tag. The polycount is workable after decimation for the 25 MB budget. It needs a credit on /credits."
+        },
+        {
+          "title": "Low Poly Gameready BMW M3 E46",
+          "url": "https://www.cgtrader.com/3d-models/car/racing-car/low-poly-sport-car-600aa237-d74b-4b96-a5f4-09a406a0b855",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 2.00",
+          "polycount": "3,606 faces / 6,766 triangles / 3,504 vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "OBJ, FBX, BLEND",
+          "evidence": "Search results: low-poly sports car model of a BMW M3 E46 'for your game or video', USD 2.00 with a royalty-free licence, 3,504 vertices, 7,139 edges, 3,606 faces, 6,766 triangles, OBJ/FBX/BLEND, published 22 May 2024. One summary said the model 'is not available'.",
+          "notes": "The licence is fine, but at about 6.8k triangles it's far too simple for photoreal close-ups. It could work as a distant LOD at most. The listing may no longer be for sale."
+        },
+        {
+          "title": "BMW M3 e46 2000-2005",
+          "url": "https://squir.com/bmw-m3-e46-2000-2005-3d-model.html",
+          "marketplace": "Other",
+          "author": "SQUIR",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "3DS (5.6 MB), C4D (8.3 MB), FBX (11.8 MB), LWO (7.2 MB), MAX 2009 (14.5 MB), OBJ (14.1 MB)",
+          "evidence": "Search results for squir.com: BMW M3 e46 2000-2005 3D model in 3D Studio, Cinema 4D, FBX, Lightwave, Max 2009 and OBJ formats, with the file sizes listed. SQUIR also has a separate 'BMW M3 e46 CSL' page (https://squir.com/bmw-m3-e46-csl.html).",
+          "notes": "This is a commercial studio model of the right car. SQUIR sells on TurboSquid and CGTrader too, but I couldn't find those listings through search. Licence, price and polycount weren't shown. The files date from the Max 2009 era, so the materials will need a full PBR rework."
+        },
+        {
+          "title": "BMW M3 E46 CSL",
+          "url": "https://cgmood.com/3d-model/bmw-m3-e46-csl",
+          "marketplace": "Other",
+          "author": "unknown",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "650,000 polygons",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "3ds Max 2019/2023, FBX, OBJ (160.77 MB; Corona 7/8/9 and V-Ray Next/5/6)",
+          "evidence": "Search result for CGMood: polygon count 650,000, 3DS Max 2019/2023, FBX and OBJ, file size 160.77 MB, Corona and V-Ray materials, 'this 3D model is just a reproduction inspired by a real product'.",
+          "notes": "This is the CSL variant (2003-2004 lightweight model with a carbon roof, different front bumper and bootlid), not the standard M3 coupe. The licence isn't shown. The materials are Corona/V-Ray and would have to be rebuilt as PBR for glTF."
+        },
+        {
+          "title": "BMW M3 E46 (Blend Swap)",
+          "url": "https://blendswap.com/blend/10588",
+          "marketplace": "Other",
+          "author": "Andrei Maximov",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "Free",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": ".blend (Blender 2.68, Cycles)",
+          "evidence": "Search results: made in Blender 2.68 and rendered in Cycles, and the .blend file includes 5 studio environments in separate scene and render layers. The author called it 'a short 3 week project' on Blender Artists. The Sketchfab copy (https://sketchfab.com/3d-models/bmw-m3-e46-6c1b23073ba34b5c9ef86152092a7af5) isn't marked downloadable.",
+          "notes": "The Blend Swap licence (CC-0, CC-BY, CC-BY-SA or CC-BY-NC are all possible on that site) wasn't visible in the results, so check it on the page. Only CC-0 or CC-BY would be allowed. It's an old 2013-era file and would need PBR conversion."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "BMW M3 E46 (MMC Works)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-f1b00ff37d504629b10031da32bc7497",
+          "reason": "It's CC-BY, but it carries the NoAI restriction ('may not be used in datasets for, in the development of, or as inputs to generative AI programs'). It's also 846.9k triangles with a 'rough interior'."
+        },
+        {
+          "title": "BMW M3 E46 (Lexyc16)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-a067132c75f5456daa4f60c4001337d7",
+          "reason": "Licence is CC Attribution-NonCommercial."
+        },
+        {
+          "title": "2003 BMW M3 E46 Coupé",
+          "url": "https://sketchfab.com/3d-models/2003-bmw-m3-e46-coupe-7b43e776153f4dc199f564469cedbaa0",
+          "reason": "The listing says it's based on a Need For Speed Heat 3D model (game rip)."
+        },
+        {
+          "title": "2005 BMW M3 (E46)",
+          "url": "https://sketchfab.com/3d-models/2005-bmw-m3-e46-50549fe15a294acd8a8340988a943eae",
+          "reason": "The listing says it's based on a Forza Motorsport 4 model (game rip), and it's licensed CC Attribution-NonCommercial-ShareAlike."
+        },
+        {
+          "title": "2005 BMW M3 E46 GTR - NFS Most Wanted",
+          "url": "https://sketchfab.com/3d-models/2005-bmw-m3-e46-gtr-nfs-most-wanted-2999936a393340c0a389c6bd31961a63",
+          "reason": "A Need for Speed Most Wanted car (game-derived), and a GTR race car rather than the road M3."
+        },
+        {
+          "title": "BMW M3 GTR - E46 (Need for Speed - Mostwanted)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-gtr-e46-need-for-speed-mostwanted-dc847838a5c84d94ab3a138c0f89191b",
+          "reason": "The Sketchfab Store listing has a NoAI restriction. It's also the NFS Most Wanted GTR race car, not a stock M3, even though it has an interior and engine (277.5k triangles)."
+        },
+        {
+          "title": "BMW E46 M3 CSL (nikki_st)",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-m3-csl-4fcff8ef8e31483d85a044ae5142850e",
+          "reason": "A stylised low-poly '2D-like' recreation, which breaks the no-cartoon rule."
+        },
+        {
+          "title": "BMW M3 E46 (BRIKKER)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-a0cc623fe4ec4b96bc0137b152279321",
+          "reason": "7,410 triangles with no textures (materials only), and the creator says the interior isn't built for first-person views. Too simple; licence not seen."
+        },
+        {
+          "title": "BMW E46 M3 Sports Car Red (and 'NightRyder')",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-m3-sports-car-red-74916396475b414f8dbcb580621a5010",
+          "reason": "The listing only allows use 'in personal projects within the bounds of the Editorial License' (effectively non-commercial). It's also built from a now-deleted Sketchfab 'BMW M3 E46 GTR' model plus interior parts from a StanceNation SketchUp model."
+        },
+        {
+          "title": "CR's BMW E46 M3 Sports Car",
+          "url": "https://sketchfab.com/3d-models/crs-bmw-e46-m3-sports-car-b99dd46e63fa4f6cbb952e41695c079e",
+          "reason": "It's sold under the Sketchfab Store royalty-free licence (70.6k triangles, with an added interior). But the seller says it's built from another uploader's free, now-deleted M3 GTR model with extra interior parts from a SketchUp model, so they may not have the right to grant a commercial licence. Treat it as a rejection unless the owner wants to look into it."
+        },
+        {
+          "title": "BMW M3 E46 (Most Wanted edition), BlenderKit",
+          "url": "https://www.blenderkit.com/asset-gallery-detail/2c049d4b-6acb-47e6-bef2-b2f3325124b2/",
+          "reason": "It's the M3 GTR race car in the NFS Most Wanted livery, not the road M3 coupe. The BlenderKit royalty-free licence (173,894 polygons) also needs the paid Full plan."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26 using WebSearch results only. Queries covered Sketchfab ('BMW M3 E46', 'Buy Royalty Free', named uploaders), CGTrader ('BMW M3 E46 3D model | CGTrader', CSL, high poly interior), TurboSquid (site:turbosquid.com, 'editorial', listing id 1690326), SQUIR, Hum3D/3DModels.org, Blend Swap and BlenderKit. Gaps: the TurboSquid listing 'bmw-m3-e46-model-1690326' (https://www.turbosquid.com/3d-models/bmw-m3-e46-model-1690326) appeared but the results showed no title details, licence or price. A CGTrader 'BMW M3 e46 CSL' exists (YouTube preview), but its listing URL and details weren't found. No candidate with a confirmed modelled engine bay and an acceptable licence turned up. Not checked because the search budget ran out: 'BMW M3 E46' by BadKarma (https://sketchfab.com/3d-models/bmw-m3-e46-c2b0331b64574e03b63d28d3350d522f; licence and details not seen) and '2002 BMW M3 (E46)' by DisneyCars/@supercarmodels (https://sketchfab.com/3d-models/2002-bmw-m3-e46-cc948b0e391b42c1bae76daaebd2f219; licence and origin not seen). Reference only: the Illumaesthetic 'BMW M3 (E46) 3D Scan' (Artec Leo, about 0.5 mm accuracy, 17M polygons, STL and BLEND, 750 MB; licence and price not seen). It could help check accuracy but isn't a render asset. Many free E46 M3s on Sketchfab come from NFS or Forza, so avoid anything mentioning GTR, NFS or Forza."
+    },
+    {
+      "item": "Mazda RX-7 FD3S (1992-2002)",
+      "category": "car",
+      "candidates": [
+        {
+          "title": "Jackboys Mazda RX7 FD High Detailed 3D Model",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/jackboys-mazda-rx7-fd-high-detailed-3d-model",
+          "marketplace": "CGTrader",
+          "author": "hlol911",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "174,484 vertices (triangle count not seen)",
+          "interiorModelled": "yes",
+          "engineBayModelled": "yes",
+          "formats": "OBJ, FBX, BLEND",
+          "evidence": "Search results for the CGTrader listing: Royalty Free licence, 174,484 vertices, OBJ/FBX/BLEND, by hlol911. It's rigged with RigACar, has an engine modelled under the hood (1.3 rotary), a 'JDM styled interior', modelled headlights and taillights, customisable colours, and pop-up headlights that open and close.",
+          "notes": "This is the only RX-7 found that confirms both an engine under the hood and an interior. How detailed the engine and bay are isn't stated. 'Jackboys' refers to the RX-7 in the Travis Scott JackBoys video, and 'JDM styled interior' suggests aftermarket styling, so check it against a stock FD3S (wheels, aero, cabin). Price not seen."
+        },
+        {
+          "title": "Mazda RX-7 FD3S Efini",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-fd3s-efini-61c7faa539424486aff840b78d7d6459",
+          "marketplace": "Sketchfab",
+          "author": "MGR '99 (@MGR99)",
+          "licence": "Royalty Free (Sketchfab Store)",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "4.5M triangles / 2.4M vertices",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "unknown",
+          "evidence": "Search results: the Sketchfab Store listing 'Buy Royalty Free 3D model by MGR '99', 4.5M triangles and 2.4M vertices. The same seller has an older store listing, 'Mazda RX7 FD' (https://sketchfab.com/3d-models/mazda-rx7-fd-90597e9ed8e74937a4ae8de016bfccf5), marked 'OUTDATED' and described as a stock Mazda RX-7 FD efini.",
+          "notes": "The Efini badge is correct for the Japanese-market FD3S, and the seller describes it as stock. At 4.5M triangles it's far over budget and would need heavy decimation and baking to fit 25 MB, though the detail suggests a real interior (not confirmed). Buy the current Efini listing, not the outdated one. Price and NoAI status not seen."
+        },
+        {
+          "title": "Mazda RX7 FD Turbo 1995 JDM",
+          "url": "https://www.cgtrader.com/3d-models/car/racing-car/mazda-rx7-fd-turbo-1995",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "Royalty Free",
+          "licenceVerdict": "ok",
+          "noAiTag": "unknown",
+          "price": "USD 40.00",
+          "polycount": "unknown (the free sister listing gives 279,970 polygons / 171,883 vertices)",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "OBJ, FBX, MA",
+          "evidence": "Search results: the paid listing 'Mazda RX7 FD Turbo 1995 JDM', OBJ/FBX/MA, with 18-inch Volk Racing TE37 wheels and 'headlight re super G', USD 40.00 with a Royalty Free licence. A free listing (https://www.cgtrader.com/free-3d-models/car/racing-car/mazda-rx7-fd-turbo-1995-jdm) gives 279,970 polygons and 171,883 vertices with unwrapped UVs, published 2021-05-11.",
+          "notes": "It has aftermarket TE37 wheels and modified headlights, so it's not fully stock and the wheels would need swapping for stock FD rims. Interior and engine bay aren't stated. The free listing's licence wasn't seen, so use the paid Royalty Free one."
+        },
+        {
+          "title": "Mazda RX-7 FD Full Ready",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/rx-7-fd-full-ready",
+          "marketplace": "CGTrader",
+          "author": "unknown",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "unknown",
+          "polycount": "unknown",
+          "interiorModelled": "yes",
+          "engineBayModelled": "unknown",
+          "formats": "OBJ, FBX, BLEND",
+          "evidence": "Search results for the CGTrader listing: 'An exciting FD with fully rigged features and a detailed interior. Works with both EEVEE and CYCLES.' The spoiler, bumpers and lights are modelled by the creator. OBJ/FBX/BLEND. The polygon and vertex fields showed placeholder text in the results.",
+          "notes": "The interior is confirmed, but licence and price weren't visible, so check whether it's Royalty Free or Editorial on the page. The custom spoiler and bumpers may mean it's not a stock body."
+        },
+        {
+          "title": "RX7 FD3S BN Sport bodykit",
+          "url": "https://www.turbosquid.com/FullPreview/1715974",
+          "marketplace": "TurboSquid",
+          "author": "unknown",
+          "licence": "unknown",
+          "licenceVerdict": "owner-review",
+          "noAiTag": "unknown",
+          "price": "USD 32",
+          "polycount": "unknown",
+          "interiorModelled": "unknown",
+          "engineBayModelled": "unknown",
+          "formats": "BLEND, OBJ",
+          "evidence": "Search result: TurboSquid 1715974 'RX7 Fd3s BN Sport bodykit 3D', blend and obj, priced at USD 32.",
+          "notes": "The BN Sports aero kit is a real aftermarket kit, but it isn't stock. Licence not seen; TurboSquid branded cars are often Editorial, so check before buying. A 'RX7 FD Pandem V3' listing also appeared on TurboSquid (widebody; details not seen)."
+        }
+      ],
+      "rejected": [
+        {
+          "title": "Mazda RX-7 Panspeed (FD3S)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-panspeed-fd3s-745eac0542eb470f9d88b6215f33ee93",
+          "reason": "Taken from Grid Autosport (mobile), so it's a game rip."
+        },
+        {
+          "title": "Mazda RX7 FD 1999",
+          "url": "https://sketchfab.com/3d-models/mazda-rx7-fd-1999-06986b70c65b44c5a7315ed467b621a6",
+          "reason": "Uploaded by Nieve5677 (@niev), whose profile says they 'did not make any of these models', so the licence isn't from the real author."
+        },
+        {
+          "title": "2023 LB SUPER SILHOUETTE MAZDA FD3S RX-7",
+          "url": "https://sketchfab.com/3d-models/2023-lbsuper-silhouette-mazda-fd3s-rx-7-c5c5ad569240468e9f58a8f88e7aaaf0",
+          "reason": "A heavy Liberty Walk Super Silhouette widebody, not stock. The same uploader (Ddiaz Design) says several of their other models come from NFS or Forza under CC BY-NC-SA. I didn't verify this one's source or licence."
+        }
+      ],
+      "searchNotes": "Accessed 2026-09-26 using WebSearch results only. Queries covered Sketchfab ('Mazda RX-7 FD3S', store listings), CGTrader ('RX-7 FD interior engine', FD3S, 'FD Turbo 1995', named listings) and TurboSquid ('RX-7 FD3S'). The session's web-search budget (200 calls) ran out partway through this item, so some leads weren't checked: 'Mazda RX-7 Type-RS (FD3S)' and 'Mazda RX-7 Spirit R (FD3S)' by Mona x Supercars (@Car2022) (free; licence and origin not seen), 'Mazda RX-7 FD3S Abflug' by @0verly, 'Mazda RX-7' by wallon, 'Mazda RX-7 FD' by Lexyc16 (licence not seen; the same author's E46 M3 is CC BY-NC, so it may be too), 'Mazda RX-7 Custom' by Naudaff3D (Sketchfab Store royalty-free; the name suggests it's modified), 'Mazda RX-7 FD' by Dimensionalworks on BlenderKit (licence not seen), CGTrader 'Mazda RX-7 FD3S Abflug Anibus 1994' (Abflug aero kit, not stock; licence and price not seen), and a low-poly CGTrader 'Mazda RX-7 FD3S' (OBJ/3DS/FBX/STL/DAE/X3D; nothing else seen). Check the Jackboys and MGR '99 pages for price and NoAI before buying."
+    }
+  ]
+}
