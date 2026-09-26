@@ -58,6 +58,7 @@ One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md s
 ### How it was verified
 
 - `npm run lint`, `npm run typecheck` (app, scripts and e2e configs) and `npm test` (79 tests) pass. `npm run validate-data` passes.
+- The same checks and all six e2e tests passed on a fresh GitHub runner with Playwright's own Chromium: [CI run 1](https://github.com/Hazemalhayattrading/Swap-Lab-working-CAR/actions/runs/36271288264). The deploy job was skipped because the branch isn't `main`, which is what should happen.
 - `npm run e2e`: six Playwright smoke tests against the production build served at `/Swap-Lab-working-CAR/`:
   - default backend (WebGPU in headless Chromium via SwiftShader);
   - forced WebGL 2;
