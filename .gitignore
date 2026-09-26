@@ -1,0 +1,21 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+
+# Raw, unoptimised 3D assets never go into git (CLAUDE.md rule 7).
+# Put source files here and run `npm run assets`.
+assets-raw/
+
+# Test output
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# OS and editor noise
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

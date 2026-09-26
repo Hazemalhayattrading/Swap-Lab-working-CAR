@@ -1,0 +1,79 @@
+{
+  "$comment": "Every third-party file the site ships. Validated by `npm run validate-data` (src/data/schema/asset.ts). The /credits page will be generated from this list. `restrictions` must be checked on the listing page; any `true` means the asset can't be used.",
+  "assets": [
+    {
+      "id": "empty_warehouse_01",
+      "kind": "hdri",
+      "title": "Empty Warehouse 01 (512 x 256 EXR, interim)",
+      "author": "Poly Haven",
+      "licence": "CC0-1.0",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "restrictions": {
+        "noAi": false,
+        "editorialOnly": false,
+        "gameRip": false,
+        "aiGenerated": false
+      },
+      "source": {
+        "url": "https://www.npmjs.com/package/@pmndrs/assets",
+        "accessed": "2026-09-26",
+        "title": "@pmndrs/assets 1.7.0, file hdri/warehouse.exr.js",
+        "note": "Base64 data URI decoded to binary, bytes unchanged. SHA-256 bb11fe7e9c3037b8db21beab826a7ed7c452a48cb6d361f982ca7311aacba9c1. The package README says its HDRIs are a selection of Poly Haven HDRIs resized to 512 and converted to DWAB-compressed EXR, and the package is CC0-1.0."
+      },
+      "origin": {
+        "url": "https://polyhaven.com/a/empty_warehouse_01",
+        "accessed": "2026-09-26",
+        "title": "Empty Warehouse 01 HDRI, Poly Haven",
+        "note": "The package does not name the original. Matched on content (concrete hall, fluorescent strips, side windows) and on the same maintainers' drei `warehouse` preset, which drei's source maps to empty_warehouse_01_1k.hdr (github.com/pmndrs/drei, src/helpers/environment-assets.ts, seen via search on 2026-09-26)."
+      },
+      "originConfidence": "estimated",
+      "files": ["public/env/empty_warehouse_01_512.exr"],
+      "status": "interim",
+      "notes": "Used for image-based lighting only, never as a visible background. To be replaced by a 2k original from Poly Haven once polyhaven.com is reachable from the build environment (see docs/decisions.md, 2026-09-26)."
+    },
+    {
+      "id": "font-barlow-condensed",
+      "kind": "font",
+      "title": "Barlow Condensed",
+      "author": "The Barlow Project Authors",
+      "licence": "OFL-1.1",
+      "licenceUrl": "https://openfontlicense.org/open-font-license-official-text/",
+      "restrictions": {
+        "noAi": false,
+        "editorialOnly": false,
+        "gameRip": false,
+        "aiGenerated": false
+      },
+      "source": {
+        "url": "https://www.npmjs.com/package/@fontsource/barlow-condensed",
+        "accessed": "2026-09-26",
+        "title": "@fontsource/barlow-condensed 5.3.0"
+      },
+      "files": ["npm:@fontsource/barlow-condensed@5.3.0"],
+      "status": "final",
+      "notes": "Self-hosted through the bundle (latin subset, weights 500, 600 and 700). Used for headings and stamped tags."
+    },
+    {
+      "id": "font-ibm-plex-mono",
+      "kind": "font",
+      "title": "IBM Plex Mono",
+      "author": "IBM Corp.",
+      "licence": "OFL-1.1",
+      "licenceUrl": "https://openfontlicense.org/open-font-license-official-text/",
+      "restrictions": {
+        "noAi": false,
+        "editorialOnly": false,
+        "gameRip": false,
+        "aiGenerated": false
+      },
+      "source": {
+        "url": "https://www.npmjs.com/package/@fontsource/ibm-plex-mono",
+        "accessed": "2026-09-26",
+        "title": "@fontsource/ibm-plex-mono 5.3.0"
+      },
+      "files": ["npm:@fontsource/ibm-plex-mono@5.3.0"],
+      "status": "final",
+      "notes": "Self-hosted through the bundle (latin subset, weights 400 and 500). Used for readouts."
+    }
+  ]
+}
