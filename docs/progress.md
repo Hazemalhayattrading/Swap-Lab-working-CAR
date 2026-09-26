@@ -2,17 +2,17 @@
 
 One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md section 10.
 
-| #   | Phase                                                                   | Status                                                                                    |
-| --- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | **Done in code, pending first deploy.** Shopping list covers cars only (see known issues) |
-| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | Next                                                                                      |
-| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                               |
-| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                               |
-| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                               |
-| 5   | Engine bay and cutaway animation                                        | Not started                                                                               |
-| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                               |
-| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                               |
-| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                               |
+| #   | Phase                                                                   | Status                                                                         |
+| --- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                  |
+| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Part 1 of 3 done:** schemas, S15, Supra, SR20DET, 2JZ-GTE (+ SR20DE, 2JZ-GE) |
+| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                    |
+| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                    |
+| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                    |
+| 5   | Engine bay and cutaway animation                                        | Not started                                                                    |
+| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                    |
+| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                    |
+| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                    |
 
 ## Phase 0: scaffold (2026-09-26)
 
@@ -98,14 +98,67 @@ One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md s
 
 No vehicle data exists yet. The only `estimated` field is the HDRI's origin in `src/data/assets.json`.
 
-## Next: Phase 1 (data layer)
+## Phase 1, part 1: S15, Supra, SR20, 2JZ (2026-09-26)
 
-- Zod schemas for cars (trims by year and market, weights, mount-point geometry, bay envelopes) and for the 12 engines, each value with a `source` and a `confidence`.
-- Register the schemas in `SCHEMA_RULES` (`src/data/validate.ts`).
-- Check each seed figure in BUILD_PROMPT section 3 against at least two sources.
+Phase 1 is split across sessions because of the web-search limit (owner's call). This part covers the Nissan Silvia S15 and Toyota Supra JZA80 (every trim), their engines, a re-check of those two cars' shopping-list entries, and the Poly Haven HDRI.
+
+### What's built
+
+- **Schemas** (`src/data/schema/`):
+  - `car.ts`: chassis, production period, dimensions, gearboxes with every ratio, and trims. A trim is market x grade x gearbox x period; it holds the engine variant, final drive, diff, curb weight, tyres, wheels, limiter and road tests. `geometry` is `pending-model` until Phase 4 (see decisions).
+  - `engine.ts`: shared hardware (bore, stroke, materials, firing order, bellhousing, sump, internals and reported limits), plus per-market `variants` (compression, turbos, boost, injectors, cams, VVT, rated output with its rating standard). `launch-swap` engines must also carry weight, size, bellhousing, sump and internals.
+  - `common.ts`: markets, YYYY-MM periods, and one unit list per quantity. Numbers are stored in the unit the source prints; `src/data/units.ts` converts to SI.
+- **Validation:** `npm run validate-data` now checks cars and engines, that ids match file names, and that every trim points at a real engine variant and gearbox. It counts values by confidence and lists every `estimated` one.
+- **Data:**
+
+  | File                                 | Contents                                                                                  | Verified | Single-source | Estimated |
+  | ------------------------------------ | ----------------------------------------------------------------------------------------- | -------- | ------------- | --------- |
+  | `cars/nissan-silvia-s15.json`        | 16 trims: JDM Spec-S, Spec-R, HICAS, Autech Version, Style-A, Varietta; AUDM 200SX        | 110      | 25            | 2         |
+  | `cars/toyota-supra-jza80.json`       | 34 trims: 22 JDM (SZ, SZ-R, GZ, RZ, RZ-S, Aero Top), 10 USDM, 2 EUDM                      | 176      | 123           | 8         |
+  | `engines/sr20det.json` (launch swap) | Variants: S15 JDM MT (250 PS), S15 JDM AT (225 PS), S15 AUDM (147 kW), S14, S13           | 59       | 18            | 7         |
+  | `engines/sr20de.json` (stock only)   | Variants: S15 Spec-S MT (165 PS), AT (160 PS), Autech Version (200 PS)                    | 31       | 13            | 2         |
+  | `engines/2jz-gte.json` (launch swap) | Variants: JDM (280 PS / 44.0 kgf·m), JDM VVT-i (46.0 kgf·m), USDM (320 hp), EUDM (330 PS) | 56       | 23            | 0         |
+  | `engines/2jz-ge.json` (stock only)   | Variants: JDM (225 PS), USDM (220 hp), USDM VVT-i (225 hp)                                | 31       | 11            | 0         |
+
+  Main sources: Nissan's and Toyota's own releases and history pages, the Autech brochures, the Japanese catalogue databases (goo-net, Car Sensor, carview), the Nissan S14 service manual, Toyota USA's newsroom, Car and Driver road tests, and the MKIV NZ club's reproduction of Toyota's tables. Every source note quotes the line that states the value.
+
+- **HDRI:** Poly Haven's _Autoshop 01_ (2k EXR, CC0, checksum-matched) replaces the interim warehouse copy. It's graded at load time to dim its daylight skylights, which put a blue glint in the oil stains that no light in the night bay explains (see decisions and `docs/screenshots/phase-1/`).
+- **Shopping list:** the S15 and Supra entries were re-checked on the live listing pages, and the paid licences' terms were read and quoted. Findings are under "Known issues".
+
+### How it was verified
+
+- `npm run lint`, `npm run typecheck`, `npm test` (111 tests) and `npm run validate-data` all pass. New tests cover the car and engine schemas, unit conversion, the night grade, and the committed data files themselves (validation plus spot checks of the headline figures).
+- `npm run e2e`: all six Playwright tests pass on the new HDRI.
+- Screenshots reviewed by eye from four angles, at High and Low, on both backends and on a phone; the set is in `docs/screenshots/phase-1/`.
+- I spot-checked the research myself against the live pages: Nissan's 1999 press kit (1,240 kg, the 6MT ratios, the 3.692 final drive) and goo-net's automatic Spec-R page (3.916 final drive, 1,270 kg, 225 PS at 6,000 rpm) both match what's stored. The MKIV NZ club page matches the 2JZ dimensions and turbo models. I also overturned one of my own assumptions: the S15's factory intercooler is a side-mount (DSPORT, plus an owner thread), not a front-mount.
+
+### Checks against the BUILD_PROMPT seed table
+
+- **S15 Spec-R:** 250 PS / 28.0 kgf·m (274.6 Nm) holds, but only for the 6MT; the 4AT Spec-R is 225 PS. The curb weight is 1,240 kg (6MT), not about 1,250 (1,250 is the HICAS car, 1,270 the 4AT).
+- **Supra:** 280 PS JDM and 320 hp US hold. Torque is 44.0 kgf·m (431 Nm) before 1997-08 and 46.0 kgf·m (451 Nm) after, and 315 lb-ft (427 Nm) in the US; the EU car is 330 PS / 441 Nm. Weight: the JDM RZ 6MT is 1,490 kg (1993-96) or 1,510 kg; the US Turbo 6MT is 3,450 lb (1,565 kg). So the seed's 1,500-1,570 kg mixes markets.
+- **Wikipedia errors found and not used:** 2JZ-GTE JDM torque (says 44.3 kgf·m at 3,800; Toyota says 44.0 at 3,600), the claim that the US non-turbo was dropped for 1998 (Toyota USA shows a 225 hp VVT-i base car), and the Australian 200SX torque (161 lb-ft does not match 265 Nm).
+
+### Numbers marked `estimated` (19)
+
+- **Supra curb weights (8):** US base 4AT 1994-96, US base 5MT/4AT 1997 and 1998, US Turbo 4AT 1994-96 and 1997-98, EU Turbo 4AT. Each is a sourced figure plus the automatic's weight difference, or a carry-over. Toyota's US brochures have the exact figures, but the only scans found are too low-resolution to read.
+- **S15 (2):** final drive on the two Australian automatics (3.916, assumed the same as the JDM automatic).
+- **SR20DET (7):** dimensions (Wikipedia's SR20DE figures; axis order assumed, turbo excluded), rear sump (read off the service-manual oil-pan diagram), cast pistons (inferred), S14 and S13 side-mount intercoolers.
+- **SR20DE (2):** firing order (same crank as the DET), and the Autech Version keeping NVCS.
+
+### Known issues and gaps
+
+1. **SR20DET rod material is unresolved.** It's stored as powdered-metal from one retailer page; forum posts say forged, but they couldn't be opened. It matters for the Phase 2 limits, so it should be settled from a primary source.
+2. **Weak single sources to know about:** SR20DET dry weight (166 kg, an enthusiast table of unknown origin), 2JZ-GTE dry weight (230 kg; published figures run from 226 to 270 kg and none say what's included), the reported bottom-end limits for both engines (tuner and forum claims), 2JZ injector sizes (440/550 cc vs 430/540 cc), and all Europe-market Supra figures except final drive and diff (from ultimatespecs, an aggregator).
+3. **Not found, so left out:** S15 stock boost, cam specs and redline; ECU part numbers and rev limits for all engines; gearbox factory codes for the S15; front/rear weight split (the NZ club prints JDM Supra axle loads, which are in the trim notes).
+4. **Shopping list (S15 and Supra):**
+   - No free, stock-bodied S15 exists: every original-looking CC-BY S15 has a kit. The recommended free picks are zhe_kan's S15 (new find, aftermarket bumper and wheels, basic interior) and TinoD2's Supra (stock body, probably no interior). Neither has an engine bay.
+   - The Sketchfab Store has stopped selling (it redirects to Fab), and CGTrader now sells only "Royalty Free (no AI)".
+   - None of the stores' standard licences allows a plain GLB served to the browser; TurboSquid's forbids it outright. TurboSquid and Fab pages couldn't be opened (bot checks).
+5. **350Z, E46 and RX-7 shopping-list entries** are still the unchecked Phase 0 leads.
+6. **Carried over from Phase 0:** the procedural floor (no scanned texture yet), performance unmeasured on real hardware, asset pipeline scope, no floor reflections, and no code licence chosen.
+
+## Next: Phase 1, part 2
+
+- Nissan 350Z (Z33) and BMW E46 (330i and M3) with every trim, plus the VQ35HR (and the VQ35DE as stock-only), S54B32 and M54B30 (stock-only), and re-check their shopping-list entries on the live pages.
+- Part 3: Mazda RX-7 FD3S and 13B-REW, then the remaining swap engines (1JZ-GTE, RB25DET NEO, RB26DETT, LS3, LS1, K24, 20B-REW).
 - Phase 2 should add a `tsconfig` for `src/sim/` with no DOM library, alongside the ESLint guard.
-
-It would help to set these up before Phase 1, which is almost entirely source-checking:
-
-- Allow `polyhaven.com`, `api.polyhaven.com`, `dl.polyhaven.org`, `sketchfab.com` and `api.sketchfab.com` in the environment's network settings.
-- Raise the web-search budget (`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`).
