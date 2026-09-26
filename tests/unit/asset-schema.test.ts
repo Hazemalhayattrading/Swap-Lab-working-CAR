@@ -107,9 +107,11 @@ describe('AssetManifestSchema', () => {
     expect(result.error?.issues ?? []).toEqual([]);
   });
 
-  it('marks the stop-gap HDRI as interim with an estimated origin', () => {
-    const hdri = manifest.assets.find((a) => a.id === 'empty_warehouse_01');
-    expect(hdri?.status).toBe('interim');
-    expect(hdri?.originConfidence).toBe('estimated');
+  it('uses the Poly Haven original as the final HDRI, taken straight from the source', () => {
+    const hdri = manifest.assets.find((a) => a.kind === 'hdri');
+    expect(hdri?.id).toBe('autoshop_01');
+    expect(hdri?.status).toBe('final');
+    expect(hdri?.source.url).toBe('https://polyhaven.com/a/autoshop_01');
+    expect(hdri && 'origin' in hdri).toBe(false);
   });
 });

@@ -3,7 +3,7 @@ import { parseNpmSpec, validateData, type FileFacts } from '../../src/data/valid
 import manifest from '../../src/data/assets.json';
 
 const MB = 1024 * 1024;
-const HDRI = 'public/env/empty_warehouse_01_512.exr';
+const HDRI = 'public/env/autoshop_01_2k.exr';
 const FONTS: Record<string, string> = {
   '@fontsource/barlow-condensed': '5.3.0',
   '@fontsource/ibm-plex-mono': '5.3.0',
@@ -11,7 +11,7 @@ const FONTS: Record<string, string> = {
 
 function facts(overrides: Partial<FileFacts> = {}): FileFacts {
   return {
-    sizeOf: (path) => (path === HDRI ? 160_000 : undefined),
+    sizeOf: (path) => (path === HDRI ? 5_343_571 : undefined),
     dependencyVersion: (name) => FONTS[name],
     dependencies: [...Object.keys(FONTS), 'three', 'zod'],
     publicFiles: [HDRI],
@@ -50,7 +50,7 @@ describe('validateData', () => {
   });
 
   it('flags a data file that no schema claims', () => {
-    const report = validateData([{ path: 'src/data/cars/s15.json', json: {} }], facts());
+    const report = validateData([{ path: 'src/data/parts/turbos/t28.json', json: {} }], facts());
     expect(report.issues[0]?.message).toMatch(/No schema is registered/);
   });
 

@@ -153,17 +153,64 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Why:** Mount-point positions come from the car data (Phase 1), and there are no models to tune against yet.
 - **Alternatives:** Draco instead of Meshopt for geometry. Meshopt decodes faster and also compresses animation data, and Draco input is still accepted.
 
-### Paid models and redistribution: open question
+### Paid models and redistribution: decided by the owner
 
-- **Status:** Not decided. This needs the owner before any paid model is committed.
-- **Issue:** Everything in `public/` is committed to the repo and served as a plain file from GitHub Pages. Store licences (Sketchfab Store, CGTrader Royalty Free, TurboSquid Standard) generally allow use inside a product, but not redistributing the model file itself. A GLB at a public URL, and in the history of a public repo, may count as redistribution. I couldn't read the licence texts from here, so this is flagged, not concluded.
-- **Options:**
-  1. Use CC0/CC-BY models only on the public site.
-  2. Check each paid licence's clause on real-time web delivery before buying.
-  3. Keep paid GLBs out of git and host them elsewhere. That's a hosting change, so it needs your approval (CLAUDE.md rule 10), and even then the served file can be extracted.
+- **Status:** Decided by the owner on 2026-09-26, at the start of Phase 1.
+- **Decision:** Launch with free CC0 or CC-BY models only. Before any paid model is bought, its licence is checked: it must explicitly allow real-time or interactive web use, and it must not be "editorial use only". Those findings go in the shopping list, and the owner decides per model.
+- **Why the question came up:** Everything in `public/` is committed to the repo and served as a plain file from GitHub Pages. Store licences generally allow use inside a product but not redistribution of the model file, and a GLB at a public URL may count as redistribution.
+- **Alternatives:** Keep paid GLBs out of git and host them elsewhere. That's a hosting change and would need approval (CLAUDE.md rule 10), and the served file can still be extracted.
 
 ### Shopping-list research method
 
 - **Decision:** Candidates were found with web search only, because Sketchfab, CGTrader and TurboSquid are blocked here. Every entry says "seen via search" and lists what is still unknown. Nothing is filled in by guesswork.
 - **Consequence:** The session's 200-search budget ran out after the five cars, so engines and parts are not researched yet (see `docs/progress.md`).
 - **Alternatives:** The Sketchfab Data API, which returns licence, face count and price exactly. It needs `api.sketchfab.com` allowed in the environment.
+
+## 2026-09-26 (Phase 1, part 1: S15, Supra, SR20, 2JZ)
+
+### Phase 1 is split across sessions
+
+- **Decision:** At the owner's request, Phase 1 is split because of the web-search limit. This session covers the Nissan Silvia S15 and Toyota Supra JZA80 (every trim) and their engines. The Z33, E46 and FD3S and the other swap engines come next.
+- **Why:** Source-checking every trim takes many page reads. Doing two cars properly beats five cars thinly.
+
+### Numbers are stored in the unit the source prints
+
+- **Decision:** A data file stores `280 PS`, `44.0 kgf·m` or `315 lb-ft` exactly as the source prints it, with a unit from a fixed list per quantity (`src/data/schema/common.ts`). `src/data/units.ts` converts to SI when the data is loaded.
+- **Why:** Anyone can hold the file up against the source page and check it. Converting first would hide rounding, and an unconverted number next to its source is easier to audit (CLAUDE.md rule 2).
+- **Alternatives:** Store SI only (loses the link to the source's own figure), or store both (two numbers that can drift apart).
+
+### The rating standard travels with every output figure
+
+- **Decision:** Each engine variant's rated output records its standard: JIS net, SAE net, DIN 70020, EEC 80/1269, ADR or unknown.
+- **Why:** The 2JZ-GTE is 280 PS in Japan, 320 hp in the US and 330 PS in Europe. Part of that is hardware, and part is how it was measured. The Phase 2 calibration has to know which is which.
+
+### What counts as a trim
+
+- **Decision:** A trim is a market x grade x gearbox x period combination that differs in engine, rated output, gearbox, final drive, differential, tyres or curb weight. Equipment-only packages go in the trim's notes.
+- **Why:** Those are the inputs the simulation and the weight model use. Splitting on trim-level equipment would multiply entries without changing any number.
+
+### Engine variants, and stock-only engines
+
+- **Decision:** An engine file holds what every version shares (bore, stroke, block, firing order, bellhousing, internals). `variants` holds what differs by year or market (compression, turbos, boost, injectors, cams, VVT, rated output). Each trim points at one variant.
+  Engines have a `role`. The 12 launch swap engines are `launch-swap`, and for those the schema also requires weight, dimensions, bellhousing, sump and internals. The SR20DE (S15 Spec-S) and 2JZ-GE (Supra SZ and US base) power stock trims but aren't swap options, so they're `stock-only` with core specs.
+- **Why:** Without the NA engines, "every trim" would leave out the Spec-S and the non-turbo Supras.
+- **Alternatives:** Only list turbo trims (not every trim). Or make every engine a full swap entry, which is research for swaps nobody asked for.
+
+### No volumetric-efficiency curve in the data files
+
+- **Decision:** Engine files carry the published facts: rated output and rpm, compression, cams and turbos where sourced. The VE curve from BUILD_PROMPT 6.1 is fitted in Phase 2 against those figures, and the fit is what the calibration test checks.
+- **Why:** No manufacturer publishes a VE curve. Writing one into a data file now would be invented data wearing a source.
+
+### Mount points and bay envelopes wait for a to-scale model
+
+- **Decision:** Car files have `geometry.status: "pending-model"` and no coordinates. Mount points and the engine-bay envelope will be measured in Phase 4 from a licensed, to-scale 3D model, or from a dimensioned drawing if one turns up. The schema only accepts `measured` geometry with a source for every point.
+- **Why:** No reachable source gives bay dimensions or engine positions for either car, and guessing them would feed made-up numbers into the clearance checks.
+- **Consequence:** Until then, the Phase 3 compatibility engine can only use explicit, sourced fitment rules (documented swap kits, bellhousing and mount patterns), not geometric clearance.
+- **Alternatives:** Estimate the bay from exterior dimensions (would be a guess with a method attached). Measure from photos (no scale reference).
+
+### Poly Haven Autoshop 01 replaces the interim HDRI
+
+- **Decision:** Lighting and reflections now use Poly Haven's _Autoshop 01_ by Oliksiy Yakovlyev (CC0), as the 2k EXR (5.3 MB) downloaded straight from Poly Haven, with its checksum checked against Poly Haven's API. It replaces the 512 x 256 copy of _Empty Warehouse 01_ from an npm package, whose origin had to be marked `estimated`. It's still used only as `scene.environment` at intensity 0.08, never as a backdrop.
+- **Why this one:** It's a car workshop lit by fluorescent strips, and Poly Haven records its white balance as 5050 K, close to our 5000 K strips. The other candidates were `garage` (mostly daylight through windows), `auto_service` (daylight-lit workshop) and `workshop` (a cluttered metal shop, with a 23 MB 2k EXR).
+- **Why 2k:** three.js builds its reflection map at a quarter of the image width, so a 2k image gives 512-pixel cube faces. That keeps reflections on car paint sharp in Phase 4. A 1k image would halve that for a 1.5 MB saving.
+- **Known trade-off:** The shop also has roof skylights, so the floor picks up a faint cool sheen from them, which is slightly off for a night shift. At 0.08 intensity this is subtle; the Phase 4 paint work will decide whether it needs rotating or tinting.

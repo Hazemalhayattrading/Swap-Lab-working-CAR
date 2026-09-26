@@ -96,7 +96,7 @@ export function checkConfidence(
   }
 }
 
-/** A single sourced value, e.g. `{ value: 250, unit: 'PS', confidence, sources }`. */
+/** A single sourced value, e.g. `{ value: 'SR20DET', confidence, sources }`. */
 export function sourced<T extends z.ZodType>(value: T) {
   return z
     .strictObject({
@@ -105,6 +105,31 @@ export function sourced<T extends z.ZodType>(value: T) {
       confidence: ConfidenceSchema,
       sources: z.array(SourceSchema),
       method: z.string().min(1).optional(),
+      /** Disagreements between sources, and which one was preferred and why. */
+      note: z.string().min(1).optional(),
+    })
+    .superRefine(checkConfidence);
+}
+
+/**
+ * A sourced number with a required unit from a fixed list, e.g.
+ * `{ value: 250, unit: 'PS', confidence, sources }`.
+ *
+ * Values are stored in the unit the source prints, so anyone can check the file
+ * against the page. Conversion to SI happens when the data is loaded (units.ts).
+ */
+export function measured<const U extends readonly [string, ...string[]]>(
+  units: U,
+  value: z.ZodNumber = z.number().positive(),
+) {
+  return z
+    .strictObject({
+      value,
+      unit: z.enum(units),
+      confidence: ConfidenceSchema,
+      sources: z.array(SourceSchema),
+      method: z.string().min(1).optional(),
+      note: z.string().min(1).optional(),
     })
     .superRefine(checkConfidence);
 }

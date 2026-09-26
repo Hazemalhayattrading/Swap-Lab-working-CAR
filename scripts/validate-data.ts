@@ -90,6 +90,10 @@ console.log(
   `Checked ${report.checkedFiles.length} data file(s): ${report.checkedFiles.join(', ') || 'none'}`,
 );
 for (const [key, n] of Object.entries(report.counts)) console.log(`  ${key}: ${n}`);
+if (report.estimated.length > 0) {
+  console.log('Values marked estimated:');
+  for (const path of report.estimated) console.log(`  ${path}`);
+}
 
 if (problems.length > 0) {
   console.error(`\n${problems.length} problem(s):`);

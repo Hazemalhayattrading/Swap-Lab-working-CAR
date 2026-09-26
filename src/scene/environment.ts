@@ -3,7 +3,7 @@ import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
 import manifest from '../data/assets.json';
 
 /** The HDRI used for image-based lighting. Its licence and origin live in src/data/assets.json. */
-export const ENVIRONMENT_ASSET_ID = 'empty_warehouse_01';
+export const ENVIRONMENT_ASSET_ID = 'autoshop_01';
 
 export function environmentFileUrl(assetId: string, baseUrl: string): string {
   const asset = manifest.assets.find((a) => a.id === assetId);
