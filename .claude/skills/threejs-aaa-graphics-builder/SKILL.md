@@ -5,6 +5,8 @@ description: "Upgrade Three.js games from prototype visuals to premium browser g
 
 # Three.js AAA Graphics Builder
 
+> **Swap Lab override:** no AI asset generation in this project — never use generated models, images or asset-generation APIs (Tripo, Gemini, etc.); use only real CC0/CC-BY/licensed GLBs and procedural work, per `CLAUDE.md`.
+
 Own the production graphics pass: turn basic screenshots into authored, high-density, performance-aware visuals.
 
 ## References

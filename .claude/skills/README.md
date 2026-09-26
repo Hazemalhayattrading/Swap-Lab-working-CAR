@@ -1,6 +1,6 @@
 # Vendored skills
 
-Copied verbatim from upstream on 2026-09-26. To update, re-copy from the upstream path and bump the commit here.
+Copied from upstream on 2026-09-26, unchanged except where noted below. To update, re-copy from the upstream path and bump the commit here.
 `CLAUDE.md` wins over any skill when they disagree.
 
 | Skill | Upstream | Commit | License |
@@ -13,7 +13,7 @@ Copied verbatim from upstream on 2026-09-26. To update, re-copy from the upstrea
 
 ## Known conflicts with CLAUDE.md
 
-- `threejs-aaa-graphics-builder` recommends AI asset generation (Tripo, Gemini) and a credential probe from `threejs-game-director`. Those sibling skills are not installed, and CLAUDE.md forbids AI-generated 3D models and asset-generation APIs. Use only its procedural, material, lighting, shader and budget guidance.
+- `threejs-aaa-graphics-builder` recommends AI asset generation (Tripo, Gemini) and a credential probe from `threejs-game-director`. Those sibling skills are not installed, and CLAUDE.md forbids AI-generated 3D models and asset-generation APIs. Use only its procedural, material, lighting, shader and budget guidance. A one-line override note at the top of its `SKILL.md` repeats this (the only local edit to any vendored file).
 - `threejs-aaa-graphics-builder` and `threejs-debug-profiler` mention `npm run inspect:canvas` and `threejs-qa-release/scripts/inspect-threejs-canvas.mjs`, which are not installed here.
 - `webapp-testing` is written for Python Playwright. This project uses `@playwright/test` via `npm run e2e`; follow the skill's approach, not its language.
 - `threejs-postprocessing` has a WebGPU section importing from `three/addons/nodes/Nodes.js`, which is outdated. For WebGPU, follow `webgpu-threejs-tsl` (`three/webgpu`, `three/tsl`).
