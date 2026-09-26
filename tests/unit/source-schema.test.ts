@@ -15,8 +15,12 @@ describe('SourceSchema', () => {
     expect(SourceSchema.safeParse(src('https://example.com/spec')).success).toBe(true);
   });
 
-  it('rejects plain http, bad dates and unknown keys', () => {
-    expect(SourceSchema.safeParse(src('http://example.com')).success).toBe(false);
+  it('accepts plain http for sites that only serve http', () => {
+    expect(SourceSchema.safeParse(src('http://example.com/specs.htm')).success).toBe(true);
+  });
+
+  it('rejects other protocols, bad dates and unknown keys', () => {
+    expect(SourceSchema.safeParse(src('ftp://example.com')).success).toBe(false);
     expect(SourceSchema.safeParse(src('https://example.com', '26/09/2026')).success).toBe(false);
     expect(SourceSchema.safeParse({ ...src('https://example.com'), extra: 1 }).success).toBe(false);
   });

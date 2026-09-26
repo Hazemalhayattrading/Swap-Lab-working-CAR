@@ -22,9 +22,14 @@ function isPublicHostname(hostname: string): boolean {
 }
 
 export const SourceSchema = z.strictObject({
-  /** Public HTTPS page where the value or file can be checked. */
+  /**
+   * Public web page where the value or file can be checked. HTTPS where the site
+   * offers it; plain HTTP is allowed because some primary enthusiast references
+   * (e.g. mkiv.supras.org.nz) only serve HTTP, and citing the page actually read
+   * beats citing an archive copy nobody opened.
+   */
   url: z
-    .url({ protocol: /^https$/ })
+    .url({ protocol: /^https?$/ })
     .refine((u) => URL.canParse(u) && isPublicHostname(new URL(u).hostname), {
       message: 'Must be a public website address (not localhost, an IP or a placeholder).',
     }),
