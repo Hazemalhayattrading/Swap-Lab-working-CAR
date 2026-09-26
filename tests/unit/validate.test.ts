@@ -49,6 +49,23 @@ describe('validateData', () => {
     expect(report.checkedFiles).toEqual(['src/data/assets.json']);
   });
 
+  it('lists the files of NoAI assets so every session knows not to open them', () => {
+    const report = run(
+      [
+        asset({
+          licence: 'CC-BY-4.0',
+          licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+          credit: '"Car" by A, CC BY 4.0',
+          restrictions: { ...clean, noAi: true },
+        }),
+      ],
+      { sizeOf: () => 1000, publicFiles: ['public/models/cars/car.glb'] },
+    );
+    expect(report.issues).toEqual([]);
+    expect(report.noAiFiles).toEqual(['public/models/cars/car.glb']);
+    expect(report.counts['asset with NoAI clause']).toBe(1);
+  });
+
   it('flags a data file that no schema claims', () => {
     const report = validateData([{ path: 'src/data/parts/turbos/t28.json', json: {} }], facts());
     expect(report.issues[0]?.message).toMatch(/No schema is registered/);

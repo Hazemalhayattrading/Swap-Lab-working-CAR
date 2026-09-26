@@ -39,6 +39,11 @@ export interface ValidationReport {
   counts: Record<string, number>;
   /** JSON paths of every value marked `estimated` in car and engine files. */
   estimated: string[];
+  /**
+   * Files of assets with a NoAI clause. Scripts may process them; no AI model
+   * may be shown them, their textures or screenshots of them (CLAUDE.md rule 5).
+   */
+  noAiFiles: string[];
 }
 
 interface SchemaRule {
@@ -257,6 +262,7 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
   const issues: ValidationIssue[] = [];
   const counts: Record<string, number> = {};
   const estimated: string[] = [];
+  const noAiFiles: string[] = [];
   const checkedFiles: string[] = [];
   const cars: { path: string; car: Car }[] = [];
   const engines: { path: string; engine: Engine }[] = [];
@@ -292,6 +298,10 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       for (const asset of manifest.assets) {
         const key = `asset status ${asset.status}`;
         counts[key] = (counts[key] ?? 0) + 1;
+        if (asset.restrictions.noAi) {
+          counts['asset with NoAI clause'] = (counts['asset with NoAI clause'] ?? 0) + 1;
+          noAiFiles.push(...asset.files);
+        }
         if (asset.originConfidence) {
           const originKey = `asset origin ${asset.originConfidence}`;
           counts[originKey] = (counts[originKey] ?? 0) + 1;
@@ -300,5 +310,5 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
     }
   }
   issues.push(...checkReferences(cars, engines));
-  return { issues, checkedFiles, counts, estimated };
+  return { issues, checkedFiles, counts, estimated, noAiFiles };
 }

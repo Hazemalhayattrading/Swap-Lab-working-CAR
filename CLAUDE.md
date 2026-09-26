@@ -16,7 +16,10 @@ The owner builds this from his phone and desktop through Claude Code sessions. H
 2. **No invented data.** Every spec and price needs a `source` (URL + date) and a `confidence` of `verified`, `single-source` or `estimated`. If you can't verify something, say so in the summary. Never quietly fill in a gap.
 3. **Calibration gates the UI.** Don't show simulated numbers in the UI for a car unless its stock calibration test passes (±3%).
 4. **Never cartoon.** PBR, HDRI and real GLB models only. Placeholders are grey clay with a visible `PLACEHOLDER` tag.
-5. **Licensing.** Only CC0, CC-BY (credited on `/credits`) or commercially licensed assets. No NoAI or NC assets. No manufacturer logos used as site branding.
+5. **Licensing.** Only CC0, CC-BY (credited on `/credits`) or commercially licensed assets. No NC assets. No manufacturer logos used as site branding.
+   - **NoAI clauses are allowed on CC0 or CC-BY assets**, because we never train AI on them. Mark them `noAi: true` in `src/data/assets.json`.
+   - Process those files only with the asset pipeline scripts (and the build and renderer). Never feed them to an AI model: don't open them or their textures with Read or image tools, and don't upload them to any AI service.
+   - Screenshots count too: when an AI reviews screenshots, NoAI assets are swapped for their grey clay placeholder, and the owner reviews the real render.
 6. **Design guardrails.** Follow Section 8 of the build prompt. No gradient hero, no glass cards, no Inter, no emoji, no purple. The site opens straight into the garage.
 7. **Asset budget.** ≤ 25 MB per car GLB, ≤ 8 MB per engine GLB, and no file over 100 MB. `assets-raw/` is git-ignored. Run `npm run assets` to optimize.
 8. **Performance.** The simulation runs in a Web Worker. Showroom ≥ 60 fps and cutaway ≥ 45 fps on mid-range hardware.

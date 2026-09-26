@@ -64,7 +64,7 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
   - an asset-bearing npm package (`@fontsource/*`, `@pmndrs/assets`) is a dependency but isn't listed, or its installed version differs from the manifest;
   - a listed file is missing, sits in a folder for a different kind (for example `public/models/cars/` must be `model-car`), or is over budget. Car and engine assets are also budgeted as a whole download, not only per file.
 
-  The licence enum can only hold CC0, CC-BY, OFL, MIT, Apache-2.0 or `commercial`. The licence URL must be that licence's canonical page, and any Creative Commons NC, ND or SA URL is rejected. Every asset must also attest `restrictions` (NoAI, editorial-only, game rip, AI-generated) as `false`, because those ride on top of otherwise allowed licences.
+  The licence enum can only hold CC0, CC-BY, OFL, MIT, Apache-2.0 or `commercial`. The licence URL must be that licence's canonical page, and any Creative Commons NC, ND or SA URL is rejected. Every asset must also attest `restrictions` (NoAI, editorial-only, game rip, AI-generated) as `false`, because those ride on top of otherwise allowed licences. (Changed on 2026-09-26: a NoAI clause is now allowed on CC0 or CC-BY assets; see "NoAI clauses allowed on CC0 and CC-BY" below.)
 
 - **Why:** The `/credits` page (Phase 8) can be generated from this list, and nothing can ship without a licence on record.
 - **Alternatives:** A hand-maintained credits page (drifts from what ships). An allowlist of file extensions (the first version did this, and the review showed fonts, SVG and audio slipping through).
@@ -221,3 +221,12 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Decision:** `SourceSchema` now accepts `http:` as well as `https:` citation URLs. The other checks still apply: public host only, no IPs or placeholders, and no future dates. Asset licence URLs stay HTTPS-only. This relaxes the Phase 0 rule "Source URLs must be public HTTPS sites".
 - **Why:** The best enthusiast reference for the JZA80 (mkiv.supras.org.nz, which reproduces Toyota's own spec tables) only serves HTTP. To satisfy the old rule, the 2JZ research cited Wayback Machine copies of it. The Wayback API then showed that no snapshot of that page exists, so 33 citations pointed at nothing. Citing the page that was actually read is the honest option.
 - **Alternatives:** Keep HTTPS-only and drop the source (loses the only published figures for engine size, turbo wheels and cams), or keep the archive links (dead citations).
+
+### NoAI clauses allowed on CC0 and CC-BY
+
+- **Decision (owner, 2026-09-26):** A NoAI clause no longer rules out a model whose licence is otherwise CC0 or CC-BY, because we never train AI on assets. CLAUDE.md rule 5 now says so. In `src/data/assets.json`, `restrictions.noAi` is recorded as `true` or `false`. The schema accepts `true` only on CC0 or CC-BY, and validate-data prints every NoAI file.
+- **Handling (from the owner's instruction):** NoAI files are processed only by the asset pipeline scripts, the build and the renderer. They're never fed to an AI model: not opened with Read or image tools, and not uploaded to AI services.
+- **Screenshots (my reading, flagged to the owner):** Typical NoAI wording, such as the MMC Works M3 listing's "may not be used ... as inputs to generative AI programs", also covers renders. So screenshots that an AI reviews will show NoAI assets as their grey clay placeholder, and the owner reviews the real render. Phase 4 has to build that swap, e.g. a query flag the e2e screenshot run sets. Automated pixel checks, which involve no AI, can run on the real render.
+- **Scope:** Read literally, as "if the licence is otherwise fine (CC0/CC-BY)". A NoAI clause on a paid licence (all of CGTrader's current "Royalty Free No AI") is still excluded. Those models would mostly fail the web-delivery check anyway.
+- **BUILD_PROMPT section 5** still says "skip anything tagged NoAI". CLAUDE.md overrides it.
+- **Alternatives:** Keep excluding NoAI (loses otherwise good free models, such as the MMC Works M3 E46). Accept NoAI on any licence (goes beyond what the owner said).
