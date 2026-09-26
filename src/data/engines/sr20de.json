@@ -163,8 +163,14 @@
   },
   "firingOrder": {
     "value": [1, 3, 4, 2],
-    "confidence": "estimated",
+    "confidence": "single-source",
     "sources": [
+      {
+        "url": "https://drive.google.com/file/d/1c8AEPEoLjPKPgRJeCUbYHLeUhPAIp3S_/view",
+        "accessed": "2026-09-26",
+        "title": "Nissan Sentra (B15) 2000-2003 Service Manual, section EM (Engine Mechanical), SR20DE; PDF on Google Drive, linked from japan-carrepair.com/nissan-infiniti-engine/sr20de-engine/",
+        "note": "EM-143 SDS General Specifications (SR20DE): 'Cylinder arrangement In-line 4 … Firing order 1-3-4-2'. Front-drive US Sentra SR20DE."
+      },
       {
         "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
         "accessed": "2026-09-26",
@@ -178,7 +184,7 @@
         "note": "Crankshaft '12200-60J00 12200-60J10' listed for 'S13/14/15, Primera P10, Serena 90-96' (DE and DET)."
       }
     ],
-    "method": "No opened source prints the SR20DE firing order. The SR20DET service manual gives 1-3-4-2, and the DE and DET share the same crankshaft part numbers and head architecture, so the same order is assumed."
+    "note": "Nissan's B15 Sentra service manual states 1-3-4-2 for the SR20DE; no S15 SR20DE manual could be opened. The S14 SR20DET manual gives the same order and Eat Sleep Boost lists one crankshaft part for the S13/S14/S15 DE and DET, so the order is not in doubt; it is single-source only because one opened page states it for the SR20DE itself."
   },
   "fuelInjection": {
     "value": "port",
@@ -818,22 +824,28 @@
       },
       "variableValveTiming": {
         "value": "intake-on-off",
-        "confidence": "estimated",
+        "confidence": "verified",
         "sources": [
           {
             "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
             "accessed": "2026-09-26",
             "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
-            "note": "'エンジン開発部隊はVVL機構のないSR20DEエンジンに対し古典的とも言える正攻法でのチューナップに挑戦' (the engine team tuned the SR20DE, which has no VVL, by classic methods)."
+            "note": "Page 1 box 'SR20DEチューンドエンジン主な変更点' (main changes to the tuned SR20DE): '圧縮比アップ（10.0→11.7）', '専用エキゾーストシステム', 'カムプロファイル&NVCS専用チューニング' (dedicated cam-profile and NVCS tuning), 'ナトリウム封入排気バルブ' (sodium-filled exhaust valves), '専用コンピュータROMデータ'. Page 2: 'VVL機構のないSR20DEエンジン' (the SR20DE has no variable valve lift)."
+          },
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%B7%E3%83%AB%E3%83%93%E3%82%A2",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia (Japanese): 日産・シルビア (S15 Autech Version section)",
+            "note": "'自然吸気エンジンのNVCS付きSR20DE型専用エンジン' (a dedicated naturally aspirated SR20DE with NVCS), citing the Autech catalogue."
           },
           {
             "url": "https://drycarbon.com/motor/spec.html",
             "accessed": "2026-09-26",
             "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
-            "note": "Base S15 SR20DE: 'NVCS : ON 1050rpm, OFF 8000rpm, 変化量 INのみ20度進角'."
+            "note": "Base S15 SR20DE: 'NVCS : ON 1050rpm, OFF 8000rpm, 変化量 INのみ20度進角' (on/off, intake only, 20° advance)."
           }
         ],
-        "method": "The base S15 SR20DE has on/off intake NVCS (drycarbon.com). Autech's brochure and GAZOO say the tuned engine got new valve timing and lift, but neither says NVCS was removed, so it is assumed retained."
+        "note": "NVCS is kept and retuned for the Autech engine (Autech brochure; Japanese Wikipedia). Autech does not publish the new switching points; the on/off, intake-only mechanism is the base S15 SR20DE's (drycarbon.com), and nothing says Autech changed the hardware type."
       },
       "output": {
         "power": {
@@ -945,7 +957,7 @@
           }
         ]
       },
-      "notes": "Autech brochure: 'このカタログのエンジン出力表示はすべて「ネット値」です' (all outputs are net). Tuning per GAZOO: dedicated high-compression pistons, dedicated ECU/ROM, lower exhaust back pressure, retuned valve timing and lift; the brochure lists an Autech exhaust manifold/front tube and a NISMO lightweight flywheel. Cam figures were not published and are left out."
+      "notes": "Autech brochure: 'このカタログのエンジン出力表示はすべて「ネット値」です' (all outputs are net). Tuning per GAZOO: dedicated high-compression pistons, dedicated ECU/ROM, lower exhaust back pressure, retuned valve timing and lift; the brochure's list of engine changes adds dedicated NVCS tuning and sodium-filled exhaust valves, and lists an Autech exhaust manifold/front tube and a NISMO lightweight flywheel. Cam figures were not published and are left out."
     }
   ]
 }

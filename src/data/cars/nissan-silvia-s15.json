@@ -195,6 +195,25 @@
       "name": "S15 6-speed manual (SR20DET Spec-R, Autech Version)",
       "type": "manual",
       "gears": 6,
+      "code": {
+        "value": "FS6R92A",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/manual-transmission-transaxle-fitting-7816690",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Manual transmission, transaxle & fitting', read at megazip.net",
+            "note": "Group header '(1999-01-01 ~ ; FS6R92A; MT.F6)'; '32010-89F10 Transmission Assy 9901--01 ~ 9908--01; MT.F6; FS6R92A' and '32010-89F11 Transmission Assy 9908--01 ~ ; MT.F6; FS6R92A'."
+          },
+          {
+            "url": "https://www.blackhawkjapan.com/products/hpi-hpkm-fs6r92a",
+            "accessed": "2026-09-26",
+            "title": "Blackhawk Japan: HPI reinforced 6-speed transmission for Nissan Silvia S15 SR (HPKM-FS6R92A)",
+            "note": "Product number 'HPKM-FS6R92A', compatible car 'NISSAN SILVIA S15': 'While retaining the advantages of the standard \"FS6R92A\", by optimizing the strength and gear ratio…'."
+          }
+        ],
+        "note": "The same catalogue lists FS6R92A assemblies (32010-89F00, later 89F11) under the Spec-S-based build (620864), which matches the Autech Version's 6MT. Japanese Wikipedia says Aisin AI builds the gearbox (not independently verified)."
+      },
       "ratios": {
         "value": [3.626, 2.2, 1.541, 1.213, 1.0, 0.767],
         "confidence": "verified",
@@ -218,7 +237,7 @@
             "note": "\"変速比 第1速 3.626 / 第2速 2.200 / 第3速 1.541 / 第4速 1.213 / 第5速 1.000 / 第6速 0.767 / 後退 3.437\" (gear ratios)."
           }
         ],
-        "note": "Same ratios for the Spec-R 6MT and the Autech Version 6MT (Autech brochure and goo-net 1500298 print identical figures). Nissan's launch release calls it a newly developed close-ratio 6MT with triple-cone synchros on 1st-3rd; ja.wikipedia says it is built by Aisin AI (not independently verified, so no `code` is given)."
+        "note": "Same ratios for the Spec-R 6MT and the Autech Version 6MT (Autech brochure and goo-net 1500298 print identical figures). Nissan's launch release calls it a newly developed close-ratio 6MT with triple-cone synchros on 1st-3rd. Factory code FS6R92A (see `code`)."
       },
       "reverse": {
         "value": 3.437,
@@ -250,6 +269,31 @@
       "name": "S15 5-speed manual (SR20DE Spec-S)",
       "type": "manual",
       "gears": 5,
+      "code": {
+        "value": "FS5W71C",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620864/manual-transmission-transaxle-fitting-7816689",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DE 5MT (build 620864), group 'Manual transmission, transaxle & fitting', read at megazip.net",
+            "note": "Group header '(1999-01-01 ~ ; FS5W71C; MT.F5)'; '32010-85F10 Transmission Assy 9901--01 ~ ; MT.F5; FS5W71C'."
+          },
+          {
+            "url": "https://justjap.com/products/os-giken-5-speed-cross-gear-set-fs5w71c-fits-nissan-s13-s14-s15-silvia-180sx-200sx-sr20det-5-speed",
+            "accessed": "2026-09-26",
+            "title": "Just Jap (Australian retailer): OS Giken 5-speed cross gear set (FS5W71C) for S13/S14/S15 Silvia",
+            "note": "'OS Giken 5 Speed Cross Gear Set with Input & Main Shafts (FS5W71C) … Vehicle Compatibility: … Nissan S15 Silvia & 200SX (5M/T Only)'."
+          },
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, section MT (SDS), hosted by sr20tuning.net",
+            "note": "MT-27 SDS General Specifications: 'Transmission model FS5W71C … Gear ratio 1st 3.321, 2nd 1.902, 3rd 1.308, 4th 1.000, 5th 0.838, Reverse 3.382' (S14; identical to the S15 Spec-S ratios)."
+          }
+        ],
+        "note": "The S15 5MT's ratios and reverse match the S14 FS5W71C's exactly (S14 FSM MT-27). Just Jap's '& 200SX' is generic: the Australian 200SX S15 had no 5-speed."
+      },
       "ratios": {
         "value": [3.321, 1.902, 1.308, 1.0, 0.838],
         "confidence": "verified",
@@ -298,6 +342,25 @@
       "name": "S15 4-speed automatic (E-AT, SR20DE and SR20DET)",
       "type": "automatic",
       "gears": 4,
+      "code": {
+        "value": "RE4R01A",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/auto-transmission-transaxle-fitting-7816676",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Auto transmission, transaxle & fitting', read at megazip.net",
+            "note": "'31020-4EX05 Transmission Assy-Automatic 9901--01 ~ 0110--01; SR20DET.AT.F4; RE4R01A' and '31020-4EX72 Transmission Assy-Automatic 0110--01 ~ ; SR20DET.AT.F4; RE4R01A'."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620865/auto-transmission-transaxle-fitting-7816676",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DE 4AT (build 620865), group 'Auto transmission, transaxle & fitting', read at megazip.net",
+            "note": "'31020-4EX04 Transmission Assy-Automatic 9901--01 ~ ; SR20DE.AT.F4; RE4R01A'."
+          }
+        ],
+        "note": "Only Nissan's parts catalogue (one site) was found naming the S15 automatic. The English S14 FSM (GI-36, 'Automatic transmission number RE4R01A') shows the S14 used the same model. The Australian 200SX automatic is not in the JDM catalogue and is assumed to be the same unit."
+      },
       "ratios": {
         "value": [2.785, 1.545, 1.0, 0.694],
         "confidence": "verified",
@@ -321,7 +384,7 @@
             "note": "Spec-R (SR20DET) 4AT prints the same ratios: \"2.785 / 1.545 / 1.000 / 0.694, 後退 2.272\"; only the final drive differs (3.916)."
           }
         ],
-        "note": "The SR20DE and SR20DET automatics share these ratios per goo-net and NEXTAGE; whether they are internally the same unit (torque capacity) is not documented in the sources opened. The factory code is not given because no source opened states it."
+        "note": "The SR20DE and SR20DET automatics share these ratios per goo-net and NEXTAGE. Nissan's parts catalogue gives them different assembly numbers (31020-4EX04 SR20DE; 31020-4EX05/4EX72 SR20DET), both RE4R01A, so internals or calibration may differ; torque capacity is not documented in the sources opened. Factory code: see `code`."
       },
       "reverse": {
         "value": 2.272,
@@ -2827,16 +2890,22 @@
       "transmission": "s15-6mt",
       "finalDrive": {
         "value": 3.692,
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
           {
             "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
             "accessed": "2026-09-26",
             "title": "project200sx.com: Gear Box and Diff (Australian 200SX S15 build)",
             "note": "Table for the car's gearbox: \"SR20DET 6-speed manual ... 1st 3.626, 2nd 2.200, 3rd 1.541, 4th 1.213, 5th 1.000, 6th 0.767, final drive (diff) 3.692\"."
+          },
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – manual – R200H – 3.692 (5 & 6 bolt)'; gearbox table 'S15 SR20DET 6speed 1- 3.626 2- 2.200 3- 1.541 4- 1.213 5- 1.000 6- 0.767'. Not split by market."
           }
         ],
-        "note": "Enthusiast source only (Australian owner's build log). It matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and could not be opened, so it is not cited."
+        "note": "project200sx.com (an Australian owner's build log) and GKTech's ratio guide (Australian parts maker, not split by market) both give 3.692; it matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and is not cited."
       },
       "differential": {
         "value": "helical-lsd",
@@ -2923,7 +2992,7 @@
           "note": "Load/speed index 89V (Australian Car.Reviews)."
         }
       },
-      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com match the JDM Spec-R."
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com (and GKTech's S15 table, not market-specific) match the JDM Spec-R."
     },
     {
       "id": "audm-spec-s-4at",
@@ -2965,9 +3034,16 @@
       "transmission": "s15-4at",
       "finalDrive": {
         "value": 3.916,
-        "confidence": "estimated",
-        "sources": [],
-        "method": "No source for the Australian automatic's final drive was found. Assumed equal to the JDM Spec-R SR20DET E-AT (3.916, goo-net/NEXTAGE/GAZOO), since the Australian car uses the same SR20DET and 4-speed E-AT."
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – auto – R200V – 3.916' (also 'S15 – SR20DET – manual – R200H – 3.692'; the S14 lines are split JDM/EDM/ADM, the S15 lines are not)."
+          }
+        ],
+        "note": "GKTech gives one value for every S15 SR20DET automatic, while it splits the S14 by market, which suggests no Australian difference; it is still an aftermarket source, not a Nissan document. It matches the JDM Spec-R 4AT (goo-net/NEXTAGE/GAZOO) and the English export S14 manual's automatic final drive (PD-35: R200V, A/T 3.916). No Australian factory figure was found."
       },
       "differential": {
         "value": "viscous-lsd",
@@ -3047,7 +3123,7 @@
           "note": "Load/speed index 89V (Australian Car.Reviews)."
         }
       },
-      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found)."
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found; GKTech gives no automatic ratios). Final drive 3.916 per GKTech, not market-specific."
     },
     {
       "id": "audm-spec-r-6mt",
@@ -3089,16 +3165,22 @@
       "transmission": "s15-6mt",
       "finalDrive": {
         "value": 3.692,
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
           {
             "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
             "accessed": "2026-09-26",
             "title": "project200sx.com: Gear Box and Diff (Australian 200SX S15 build)",
             "note": "Table for the car's gearbox: \"SR20DET 6-speed manual ... 1st 3.626, 2nd 2.200, 3rd 1.541, 4th 1.213, 5th 1.000, 6th 0.767, final drive (diff) 3.692\"."
+          },
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – manual – R200H – 3.692 (5 & 6 bolt)'; gearbox table 'S15 SR20DET 6speed 1- 3.626 2- 2.200 3- 1.541 4- 1.213 5- 1.000 6- 0.767'. Not split by market."
           }
         ],
-        "note": "Enthusiast source only (Australian owner's build log). It matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and could not be opened, so it is not cited."
+        "note": "project200sx.com (an Australian owner's build log) and GKTech's ratio guide (Australian parts maker, not split by market) both give 3.692; it matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and is not cited."
       },
       "differential": {
         "value": "helical-lsd",
@@ -3185,7 +3267,7 @@
           "note": "Load/speed index 89V (Australian Car.Reviews)."
         }
       },
-      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com match the JDM Spec-R."
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com (and GKTech's S15 table, not market-specific) match the JDM Spec-R."
     },
     {
       "id": "audm-spec-r-4at",
@@ -3227,9 +3309,16 @@
       "transmission": "s15-4at",
       "finalDrive": {
         "value": 3.916,
-        "confidence": "estimated",
-        "sources": [],
-        "method": "No source for the Australian automatic's final drive was found. Assumed equal to the JDM Spec-R SR20DET E-AT (3.916, goo-net/NEXTAGE/GAZOO), since the Australian car uses the same SR20DET and 4-speed E-AT."
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – auto – R200V – 3.916' (also 'S15 – SR20DET – manual – R200H – 3.692'; the S14 lines are split JDM/EDM/ADM, the S15 lines are not)."
+          }
+        ],
+        "note": "GKTech gives one value for every S15 SR20DET automatic, while it splits the S14 by market, which suggests no Australian difference; it is still an aftermarket source, not a Nissan document. It matches the JDM Spec-R 4AT (goo-net/NEXTAGE/GAZOO) and the English export S14 manual's automatic final drive (PD-35: R200V, A/T 3.916). No Australian factory figure was found."
       },
       "differential": {
         "value": "viscous-lsd",
@@ -3309,7 +3398,7 @@
           "note": "Load/speed index 89V (Australian Car.Reviews)."
         }
       },
-      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found)."
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found; GKTech gives no automatic ratios). Final drive 3.916 per GKTech, not market-specific."
     }
   ],
   "geometry": {

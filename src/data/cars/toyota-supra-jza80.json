@@ -1,5 +1,5 @@
 {
-  "$comment": "Toyota Supra JZA80 (A80 / MK IV), every factory trim found for JDM, USDM and Europe. Researched 2026-09-26. JDM figures come from the goo-net and Car Sensor catalogues (Toyota spec sheets per grade); export figures are thinner and marked as such.",
+  "$comment": "Toyota Supra JZA80 (A80 / MK IV), every factory trim found for JDM, USDM and Europe. Researched 2026-09-26. JDM figures come from the goo-net and Car Sensor catalogues (Toyota spec sheets per grade); export figures are thinner and marked as such. US weights, lengths, gearbox code and final drives were re-checked on 2026-09-26 against Toyota's own 1993 and 1997 New Car Features spec tables and the 1993 and 1998 Supra Product Source books (page scans on mkiv.com).",
   "id": "toyota-supra-jza80",
   "make": "Toyota",
   "model": "Supra",
@@ -46,7 +46,7 @@
           "note": "全長×全幅×全高 4520×1810×1275mm (length x width x height); ホイールベース 2550mm (wheelbase); トレッド前／後 1520/1525mm (track front/rear). Every JZA80 grade page on goo-net prints the same figures."
         }
       ],
-      "note": "JDM figure. US and European cars are listed shorter (177.7-177.8 in / 4515 mm); those trims carry their own length."
+      "note": "JDM figure. Toyota's US New Car Features tables print 4515 mm (177.8 in) for every US and Canadian JZA80L model (1993 NCF p. 256-257, 1997 NCF p. 124-125); the US trims carry that length. European cars are also listed shorter than the JDM car."
     },
     "width": {
       "value": 1810,
@@ -366,8 +366,38 @@
       "gears": 4,
       "code": {
         "value": "A340E",
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Transmission Type row: 'A340E' for the 2JZ-GE automatics (JZA80L-ALPVFA, AJPVFA); ratios 2.804 / 1.531 / 1.000 / 0.705, reverse 2.393."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "'A340E*' for the 2JZ-GTE automatics, footnote '*: Electronically Controlled Transmission with an intelligent sporty control'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/0-index%282%29.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), Table of Contents (Chassis section) (page scan hosted by mkiv.com)",
+            "note": "Chassis chapter heading: 'A340E Automatic Transmission' (Description p. 133)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "MY1997 tables: 'A340E' (p. 124, 2JZ-GE) and 'A340E*1' (p. 125, 2JZ-GTE)."
+          },
+          {
+            "url": "https://www.mkiv.com/manual/manual.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota service publications for the Supra, price list as of 7/10/2000 (mkiv.com)",
+            "note": "'94-98 Automatic Transmission-A340E 00400-RM391' (Toyota's transmission repair manual for the 1994-98 Supra)."
+          },
           {
             "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
             "accessed": "2026-09-26",
@@ -375,7 +405,7 @@
             "note": "Transmission table: 'SZ A340E (ECT-S)', 'GZ/RZ A340E (ECT-iS)', 'RZ-S A340E (ECT-iE)'; the transmission code list also names 'A343E (4 speed auto)'."
           }
         ],
-        "note": "mkivsupra.net labels the same ratio set 'Auto (A343E)'. The A340E/A343E naming is not settled by the sources opened; the ratios are the same either way."
+        "note": "Every Toyota document read calls the Supra automatic A340E: the 1993 and 1997 New Car Features spec tables and chapter title, and the title of Toyota's 1994-98 Supra transmission repair manual (RM391). The 'A343E' label used by mkivsupra.net is not supported by any Toyota document read."
       },
       "ratios": {
         "value": [2.804, 1.531, 1.0, 0.705],
@@ -5301,73 +5331,109 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
-        "value": 3210,
+        "value": 3215,
         "unit": "lb",
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb. The targa top added 40 lb of weight while the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALMVFA (standard roof, W58): 'Front 758 (1670) / Rear 701 (1545) / Total 1458 (3215)' kg (lb)."
           },
           {
-            "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
             "accessed": "2026-09-26",
-            "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-            "note": "Specifications: 'Curb weight: 3212 lb' (C/D's own figure for its test car)."
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) 5M-3215' (note 6: '3275 with sport roof')."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+            "accessed": "2026-09-26",
+            "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1994 Supra Liftback: 'Curb Weight 3215 lbs.' (page shows 'Transmission Type Manual 5 speed'). KBB's 1996 page also gives 3215 lbs."
           }
         ],
-        "note": "US curb weight. Wikipedia's 3,210 lb (manufacturer-style figure) and C/D's 3,212 lb differ by 2 lb, so this is not marked verified. The 1994 and 1997 Toyota brochures have curb-weight tables, but the available scans are too blurred to read the digits reliably."
+        "note": "US curb weight, base 5-speed without Sport Roof, from Toyota's MY1993 (launch) spec tables; no Toyota table for MY1994-96 was found. Toyota lists 1486 kg (3275 lb) with the Sport Roof. Lower figures are for other years or other measurements: Toyota's 1997 NCF gives 3210 lb for the MY1997 car (the figure Wikipedia prints without a year), KBB's 1995 page says 3210 lb, and Car and Driver weighed its 1994 test car at 3212 lb."
       },
       "tyres": {
         "front": {
           "value": "225/50ZR16",
-          "confidence": "single-source",
+          "confidence": "verified",
           "sources": [
             {
               "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
               "accessed": "2026-09-26",
               "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
               "note": "WHEELS/TIRES, base Supra: 'Size front 225/50ZR16, rear 225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
             }
           ],
-          "note": "Read from a low-resolution brochure scan; matches the JDM SZ fitment."
+          "note": "Toyota's '93 Product Source (sharp scan) confirms 225/50ZR16 at the front, on an 8.0 x 16 wheel."
         },
         "rear": {
-          "value": "225/50ZR16",
+          "value": "245/50ZR16",
           "confidence": "single-source",
           "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            },
             {
               "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
               "accessed": "2026-09-26",
               "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
-              "note": "WHEELS/TIRES, base Supra: rear '225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+              "note": "Read as rear '225/50ZR16' from a scan only about 400 px wide. Disagrees with Toyota's '93 Product Source; not followed."
             }
           ],
-          "note": "Read from a low-resolution brochure scan; matches the JDM SZ fitment."
+          "note": "Toyota's '93 Product Source prints a staggered set, 245/50ZR16 at the rear on a 9.0 x 16 wheel. The earlier reading of 225/50ZR16 from the blurred 1994 brochure scan is not followed. This matches the JDM 16-inch GZ/RZ rear (245/50ZR16 on 16x9JJ), not the JDM SZ, which ran 225/50ZR16 on 16x8JJ at both ends (mkiv.supras.org.nz tyre table)."
         }
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
       "performanceTests": [
@@ -5406,7 +5472,179 @@
           "by": "Car and Driver road test (1994 Supra, 5-speed)"
         }
       ],
-      "notes": "MY1994-1996 ('1993.5' launch cars included). Optional Sport Roof (removable targa panel; Wikipedia: +40 lb) and Torsen LSD. Canada sold the same car to 1996/97; no separate Canadian data found."
+      "notes": "MY1994-1996 ('1993.5' launch cars included). Standard roof; the Sport Roof (removable targa panel) version is usdm-base-5mt-sport-roof-1994. Torsen LSD optional. Toyota's 1993 and 1997 NCF tables list Canadian models only as Turbo Sport Roof cars (JZA80L-AJFVZK / AJPVZK); no Canadian base car is listed."
+    },
+    {
+      "id": "usdm-base-5mt-sport-roof-1994",
+      "name": "Supra (base, Sport Roof)",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1993-06",
+          "to": "1996"
+        },
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Model numbers for the non-turbo Supra: '2398/2396/2393/2394', with Sport Roof curb weights in notes 6 and 7."
+          }
+        ],
+        "method": "Same model years as the standard-roof trim usdm-base-5mt-1994. Toyota's MY1993.5-94 documents list this Sport Roof model, and its MY1997-98 documents list the successor; no MY1995-96 line-up was found, so availability in those years is assumed."
+      },
+      "bodyStyle": "targa",
+      "engine": {
+        "id": "2jz-ge",
+        "variant": "jza80-usdm"
+      },
+      "transmission": "w58",
+      "finalDrive": {
+        "value": 4.272,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS: 'differential ratio' 4.272 under both the 5-speed manual and 4-speed automatic base columns. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1996_01/toyotasupra1996_01_026.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1996 Supra brochure (PC6-007), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS: differential ratio 4.272 for the base 5-speed and 4-speed ECT. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          }
+        ],
+        "note": "Consumer Guide says the MY1994 base got a 'numerically higher final-drive ratio' than the first 1993 cars; no source gives the earlier ratio, so 4.272 is used for the whole period."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
+      },
+      "curbWeight": {
+        "value": 3275,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features, 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJMVFA (Sport Roof, 5-speed): 'Front 771 (1700) / Rear 714 (1575) / Total 1486 (3275)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) 5M-3215', note 6: '3275 with sport roof'."
+          }
+        ],
+        "note": "Toyota's MY1993 (launch) tables; no Toyota table for MY1994-96 was found. Both documents are page scans on mkiv.com, so they count as one site."
+      },
+      "tyres": {
+        "front": {
+          "value": "225/50ZR16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+              "note": "WHEELS/TIRES, base Supra: 'Size front 225/50ZR16, rear 225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            }
+          ],
+          "note": "Toyota's '93 Product Source (sharp scan) confirms 225/50ZR16 at the front, on an 8.0 x 16 wheel."
+        },
+        "rear": {
+          "value": "245/50ZR16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            },
+            {
+              "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+              "note": "Read as rear '225/50ZR16' from a scan only about 400 px wide. Disagrees with Toyota's '93 Product Source; not followed."
+            }
+          ],
+          "note": "Toyota's '93 Product Source prints a staggered set, 245/50ZR16 at the rear on a 9.0 x 16 wheel. The earlier reading of 225/50ZR16 from the blurred 1994 brochure scan is not followed. This matches the JDM 16-inch GZ/RZ rear (245/50ZR16 on 16x9JJ), not the JDM SZ, which ran 225/50ZR16 on 16x8JJ at both ends (mkiv.supras.org.nz tyre table)."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "notes": "Sport Roof (removable targa panel) version of usdm-base-5mt-1994; mechanically identical. Model 2393 in Toyota's '93 Product Source line-up."
     },
     {
       "id": "usdm-base-4at-1994",
@@ -5491,70 +5729,278 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
-        "value": 3265,
+        "value": 3255,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "single-source",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb ... the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALPVFA (standard roof, A340E): 'Front 767 (1690) / Rear 710 (1565) / Total 1476 (3255)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) ... 4ECT-3255' (note 7: '3315 with sport roof')."
           }
         ],
-        "method": "No year-specific published figure found for the 1993-96 base 4-speed automatic. Taken as Wikipedia's 3,210 lb base-manual curb weight plus 55 lb (automatic penalty stated by Wikipedia)."
+        "note": "Toyota's MY1993 (launch) figure for the base automatic without Sport Roof (1504 kg / 3315 lb with it). Both documents are hosted on one site, so this counts as one source. Toyota's 1997 NCF lists 1481 kg (3265 lb) for the MY1997 automatic; no Toyota figure for MY1994-96 was found."
       },
       "tyres": {
         "front": {
           "value": "225/50ZR16",
-          "confidence": "single-source",
+          "confidence": "verified",
           "sources": [
             {
               "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
               "accessed": "2026-09-26",
               "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
               "note": "WHEELS/TIRES, base Supra: 'Size front 225/50ZR16, rear 225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
             }
           ],
-          "note": "Read from a low-resolution brochure scan; matches the JDM SZ fitment."
+          "note": "Toyota's '93 Product Source (sharp scan) confirms 225/50ZR16 at the front, on an 8.0 x 16 wheel."
         },
         "rear": {
-          "value": "225/50ZR16",
+          "value": "245/50ZR16",
           "confidence": "single-source",
           "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            },
             {
               "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
               "accessed": "2026-09-26",
               "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
-              "note": "WHEELS/TIRES, base Supra: rear '225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+              "note": "Read as rear '225/50ZR16' from a scan only about 400 px wide. Disagrees with Toyota's '93 Product Source; not followed."
             }
           ],
-          "note": "Read from a low-resolution brochure scan; matches the JDM SZ fitment."
+          "note": "Toyota's '93 Product Source prints a staggered set, 245/50ZR16 at the rear on a 9.0 x 16 wheel. The earlier reading of 225/50ZR16 from the blurred 1994 brochure scan is not followed. This matches the JDM 16-inch GZ/RZ rear (245/50ZR16 on 16x9JJ), not the JDM SZ, which ran 225/50ZR16 on 16x8JJ at both ends (mkiv.supras.org.nz tyre table)."
         }
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
-      "notes": "MY1994-1996. Optional Sport Roof."
+      "notes": "MY1994-1996. Standard roof; the Sport Roof version is usdm-base-4at-sport-roof-1994."
+    },
+    {
+      "id": "usdm-base-4at-sport-roof-1994",
+      "name": "Supra (base, Sport Roof)",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1993-06",
+          "to": "1996"
+        },
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Model numbers for the non-turbo Supra: '2398/2396/2393/2394', with Sport Roof curb weights in notes 6 and 7."
+          }
+        ],
+        "method": "Same model years as the standard-roof trim usdm-base-4at-1994. Toyota's MY1993.5-94 documents list this Sport Roof model, and its MY1997-98 documents list the successor; no MY1995-96 line-up was found, so availability in those years is assumed."
+      },
+      "bodyStyle": "targa",
+      "engine": {
+        "id": "2jz-ge",
+        "variant": "jza80-usdm"
+      },
+      "transmission": "a340e",
+      "finalDrive": {
+        "value": 4.272,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS: 'differential ratio' 4.272 under both the 5-speed manual and 4-speed automatic base columns. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1996_01/toyotasupra1996_01_026.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1996 Supra brochure (PC6-007), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS: differential ratio 4.272 for the base 5-speed and 4-speed ECT. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          }
+        ],
+        "note": "Consumer Guide says the MY1994 base got a 'numerically higher final-drive ratio' than the first 1993 cars; no source gives the earlier ratio, so 4.272 is used for the whole period."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
+      },
+      "curbWeight": {
+        "value": 3315,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features, 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJPVFA (Sport Roof, automatic): 'Front 780 (1720) / Rear 723 (1595) / Total 1504 (3315)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) ... 4ECT-3255', note 7: '3315 with sport roof'."
+          }
+        ],
+        "note": "Toyota's MY1993 (launch) tables; no Toyota table for MY1994-96 was found. Both documents are page scans on mkiv.com, so they count as one site."
+      },
+      "tyres": {
+        "front": {
+          "value": "225/50ZR16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+              "note": "WHEELS/TIRES, base Supra: 'Size front 225/50ZR16, rear 225/50ZR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            }
+          ],
+          "note": "Toyota's '93 Product Source (sharp scan) confirms 225/50ZR16 at the front, on an 8.0 x 16 wheel."
+        },
+        "rear": {
+          "value": "245/50ZR16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+              "note": "Tires 'Size -front/rear 225/50ZR16 / 245/50ZR16'; Wheels 'Alloy, 8.0 x 16 / 9.0 x 16'."
+            },
+            {
+              "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+              "note": "Read as rear '225/50ZR16' from a scan only about 400 px wide. Disagrees with Toyota's '93 Product Source; not followed."
+            }
+          ],
+          "note": "Toyota's '93 Product Source prints a staggered set, 245/50ZR16 at the rear on a 9.0 x 16 wheel. The earlier reading of 225/50ZR16 from the blurred 1994 brochure scan is not followed. This matches the JDM 16-inch GZ/RZ rear (245/50ZR16 on 16x9JJ), not the JDM SZ, which ran 225/50ZR16 on 16x8JJ at both ends (mkiv.supras.org.nz tyre table)."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "notes": "Sport Roof version of usdm-base-4at-1994; mechanically identical. Model 2394 in Toyota's '93 Product Source line-up."
     },
     {
       "id": "usdm-base-5mt-1997",
@@ -5590,8 +6036,14 @@
       "transmission": "w58",
       "finalDrive": {
         "value": 4.083,
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "'Differential Gear Ratio 4.083' for all four US 2JZ-GE models (5MT and 4AT, both roofs); 'Differential Gear Size mm (in.) 205 (8.07)'."
+          },
           {
             "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
             "accessed": "2026-09-26",
@@ -5599,7 +6051,7 @@
             "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
           }
         ],
-        "note": "Only the axle-code table gives the 1997-98 base ratio (A01A/A01B, 4.083); no Toyota document read confirms it."
+        "note": "Toyota's 1997 NCF spec table prints 4.083 for every MY1997 US non-turbo, matching the A01A/A01B axle codes. (The MY1993 table prints 4.272.)"
       },
       "differential": {
         "value": "open",
@@ -5617,16 +6069,16 @@
       "curbWeight": {
         "value": 3210,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "single-source",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb ... the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALMVFA (standard roof, W58): 'Front 762 (1680) / Rear 694 (1530) / Total 1456 (3210)' kg (lb)."
           }
         ],
-        "method": "No year-specific published figure found for the MY1997 base 5-speed manual. Taken as Wikipedia's 3,210 lb base-manual curb weight plus 0 lb (carried over unchanged)."
+        "note": "Toyota's MY1997 figure for the base 5-speed without Sport Roof (1483 kg / 3270 lb with it). Wikipedia's undated '3,210 lb' for the base manual matches but gives no year, and Toyota's MY1993 table says 3215 lb, so it is not counted as a second source."
       },
       "tyres": {
         "front": {
@@ -5658,27 +6110,199 @@
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
-      "notes": "MY1997 facelift year; every 1997 was a 15th Anniversary edition (rear spoiler, badging, stereo). Final drive changed to 4.083."
+      "notes": "MY1997 facelift year; every 1997 was a 15th Anniversary edition (rear spoiler, badging, stereo). Final drive changed to 4.083. Standard roof; the Sport Roof version is usdm-base-5mt-sport-roof-1997."
+    },
+    {
+      "id": "usdm-base-5mt-sport-roof-1997",
+      "name": "Supra (base, Sport Roof, 15th Anniversary)",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1996",
+          "to": "1997"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
+            "note": "'In 1996, for the 1997 model year ...'"
+          },
+          {
+            "url": "https://consumerguide.com/used/1993-98-toyota-supra/",
+            "accessed": "2026-09-26",
+            "title": "Consumer Guide Auto: 1993-98 Toyota Supra used-car review",
+            "note": "'1997 Supra: All 1997 models were 15th Anniversary editions'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "The MY1997 table lists JZA80L-AJMVFA, the Sport Roof 5-speed."
+          }
+        ],
+        "note": "US sales ran by model year, with no month boundaries in the sources; calendar years are used (MY1994 cars went on sale in summer 1993; MY1997 from 1996; MY1998 from 1997; US sales ended in 1998)."
+      },
+      "bodyStyle": "targa",
+      "engine": {
+        "id": "2jz-ge",
+        "variant": "jza80-usdm"
+      },
+      "transmission": "w58",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "'Differential Gear Ratio 4.083' for all four US 2JZ-GE models (5MT and 4AT, both roofs); 'Differential Gear Size mm (in.) 205 (8.07)'."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Toyota's 1997 NCF spec table prints 4.083 for every MY1997 US non-turbo, matching the A01A/A01B axle codes. (The MY1993 table prints 4.272.)"
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
+      },
+      "curbWeight": {
+        "value": 3270,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJMVFA (Sport Roof, 5-speed): 'Front 773 (1705) / Rear 710 (1565) / Total 1483 (3270)' kg (lb)."
+          }
+        ],
+        "note": "Toyota's MY1997 table."
+      },
+      "tyres": {
+        "front": {
+          "value": "225/50R16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1997 Supra brochure, scan via auto-brochures.com",
+              "note": "TIRES, Supra/Supra Sport Roof column: 'Size - front 225/50VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            }
+          ],
+          "note": "Brochure prints a V-rated size (225/50VR16); stored without the speed letter because the schema takes R or ZR only. Low-resolution scan."
+        },
+        "rear": {
+          "value": "245/45R16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1997 Supra brochure, scan via auto-brochures.com",
+              "note": "TIRES, Supra/Supra Sport Roof column: 'rear 245/45VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            }
+          ],
+          "note": "Brochure prints 245/45VR16 (staggered, like the JDM SZ-R from 1996). Low-resolution scan; treat the rear size as uncertain."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "notes": "Sport Roof version of usdm-base-5mt-1997; mechanically identical. Deleted for MY1998 ('Supra (Sport Roof) 5M (2393)' in the 1998 Product Source's deleted models)."
     },
     {
       "id": "usdm-base-4at-1997",
@@ -5714,8 +6338,14 @@
       "transmission": "a340e",
       "finalDrive": {
         "value": 4.083,
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "'Differential Gear Ratio 4.083' for all four US 2JZ-GE models (5MT and 4AT, both roofs); 'Differential Gear Size mm (in.) 205 (8.07)'."
+          },
           {
             "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
             "accessed": "2026-09-26",
@@ -5723,7 +6353,7 @@
             "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
           }
         ],
-        "note": "Only the axle-code table gives the 1997-98 base ratio (A01A/A01B, 4.083); no Toyota document read confirms it."
+        "note": "Toyota's 1997 NCF spec table prints 4.083 for every MY1997 US non-turbo, matching the A01A/A01B axle codes. (The MY1993 table prints 4.272.)"
       },
       "differential": {
         "value": "open",
@@ -5741,16 +6371,16 @@
       "curbWeight": {
         "value": 3265,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "single-source",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb ... the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALPVFA (standard roof, A340E): 'Front 778 (1715) / Rear 703 (1550) / Total 1481 (3265)' kg (lb)."
           }
         ],
-        "method": "No year-specific published figure found for the MY1997 base 4-speed automatic. Taken as Wikipedia's 3,210 lb base-manual curb weight plus 55 lb (automatic penalty stated by Wikipedia)."
+        "note": "Toyota's MY1997 figure for the base automatic without Sport Roof (1508 kg / 3325 lb with it). KBB's 1997 page also gives 3265 lbs for the base Limited Edition but does not tie it to a gearbox, and Toyota repeats 3265 lb for the 1998 automatic (1998 Product Source)."
       },
       "tyres": {
         "front": {
@@ -5782,64 +6412,94 @@
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
-      "notes": "MY1997."
+      "notes": "MY1997. Standard roof; the Sport Roof version is usdm-base-4at-sport-roof-1997."
     },
     {
-      "id": "usdm-base-5mt-1998",
-      "name": "Supra (base)",
+      "id": "usdm-base-4at-sport-roof-1997",
+      "name": "Supra (base, Sport Roof, 15th Anniversary)",
       "market": "USDM",
       "period": {
         "value": {
-          "from": "1997",
-          "to": "1998"
+          "from": "1996",
+          "to": "1997"
         },
         "confidence": "single-source",
         "sources": [
           {
-            "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
-            "accessed": "2026-09-26",
-            "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-            "note": "1998 Toyota Supra review: 'In normally aspirated form, it develops 225 horsepower with the help of new variable camshaft timing'."
-          },
-          {
             "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
             "accessed": "2026-09-26",
             "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'In 1997, for the 1998 model year ...'; 'The 1998 model year was the last year of the Supra in the US'."
+            "note": "'In 1996, for the 1997 model year ...'"
+          },
+          {
+            "url": "https://consumerguide.com/used/1993-98-toyota-supra/",
+            "accessed": "2026-09-26",
+            "title": "Consumer Guide Auto: 1993-98 Toyota Supra used-car review",
+            "note": "'1997 Supra: All 1997 models were 15th Anniversary editions'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "The MY1997 table lists JZA80L-AJPVFA, the Sport Roof automatic."
           }
         ],
-        "note": "US sales ran by model year, with no month boundaries in the sources; calendar years are used (MY1994 cars went on sale in summer 1993; MY1997 from 1996; MY1998 from 1997; US sales ended in 1998). Consumer Guide claims only leftover 1997s were sold in 1998; the contemporary 1998 review (with a 1998 MSRP and the new VVT-i base engine) is preferred."
+        "note": "US sales ran by model year, with no month boundaries in the sources; calendar years are used (MY1994 cars went on sale in summer 1993; MY1997 from 1996; MY1998 from 1997; US sales ended in 1998)."
       },
-      "bodyStyle": "liftback",
+      "bodyStyle": "targa",
       "engine": {
         "id": "2jz-ge",
-        "variant": "jza80-usdm-vvti"
+        "variant": "jza80-usdm"
       },
-      "transmission": "w58",
+      "transmission": "a340e",
       "finalDrive": {
         "value": 4.083,
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "'Differential Gear Ratio 4.083' for all four US 2JZ-GE models (5MT and 4AT, both roofs); 'Differential Gear Size mm (in.) 205 (8.07)'."
+          },
           {
             "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
             "accessed": "2026-09-26",
@@ -5847,7 +6507,7 @@
             "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
           }
         ],
-        "note": "Only the axle-code table gives the 1997-98 base ratio (A01A/A01B, 4.083); no Toyota document read confirms it."
+        "note": "Toyota's 1997 NCF spec table prints 4.083 for every MY1997 US non-turbo, matching the A01A/A01B axle codes. (The MY1993 table prints 4.272.)"
       },
       "differential": {
         "value": "open",
@@ -5863,18 +6523,18 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
-        "value": 3210,
+        "value": 3325,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "single-source",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb ... the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJPVFA (Sport Roof, automatic): 'Front 789 (1740) / Rear 719 (1585) / Total 1508 (3325)' kg (lb)."
           }
         ],
-        "method": "No year-specific published figure found for the MY1998 base 5-speed manual. Taken as Wikipedia's 3,210 lb base-manual curb weight plus 0 lb (carried over unchanged)."
+        "note": "Toyota's MY1997 table."
       },
       "tyres": {
         "front": {
@@ -5906,27 +6566,45 @@
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
-      "notes": "MY1998: VVT-i 2JZ-GE rated 225 hp. Tyres assumed carried over from the 1997 brochure (no 1998 tyre source read)."
+      "notes": "Sport Roof version of usdm-base-4at-1997; mechanically identical."
     },
     {
       "id": "usdm-base-4at-1998",
@@ -5965,18 +6643,11 @@
         "confidence": "single-source",
         "sources": [
           {
-            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
             "accessed": "2026-09-26",
-            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
-            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
-          }
-        ],
-        "note": "Only the axle-code table gives the 1997-98 base ratio (A01A/A01B, 4.083); no Toyota document read confirms it."
-      },
-      "differential": {
-        "value": "open",
-        "confidence": "single-source",
-        "sources": [
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "MY1997 table: 'Differential Gear Ratio 4.083' for every US 2JZ-GE model (MY1998 is not covered by this book)."
+          },
           {
             "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
             "accessed": "2026-09-26",
@@ -5984,21 +6655,64 @@
             "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
           }
         ],
-        "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
+        "note": "Toyota's 1997 NCF confirms 4.083 for MY1997 and the axle-code table gives 4.083 for 1997-1998, but no Toyota document for MY1998 was read, so this stays single-source for 1998."
+      },
+      "differential": {
+        "value": "torsen",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998 / Body Styles and Trim Levels, p. 2 (page scan hosted by mkiv.com)",
+            "note": "New for 1998, All Models: 'Standard torque-sensing (Torsen) limited-slip differential'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Transmissions, Normally Aspirated column: 'Differential -standard Torque-sensing limited-slip; -optional NA'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/98_brochure/index.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+            "note": "'Torsen® limited-slip differential: Standard on Supra and Supra Turbo.'"
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Toyota's 1998 Product Source and brochure make the Torsen LSD standard on every 1998 Supra (two Toyota documents on one hosting site). The open A01A code in the axle-code table would then apply to MY1997 only."
       },
       "curbWeight": {
         "value": 3265,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "verified",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The base model with a manual transmission had a curb weight of 3,210 lb ... the automatic transmission added 55 lb.'"
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lb.) 4ECTi – 3265' (note 6: '3325 with Sport Roof')."
+          },
+          {
+            "url": "https://mkiv.com/specifications/98_brochure/index.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+            "note": "'Curb weights, without/with Sport Roof (lbs.): 4-speed automatic: 3,265/3,325 Supra'."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+            "accessed": "2026-09-26",
+            "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1998 Supra Hatchback Coupe: 'Curb Weight 3265 lbs.', 'Transmission Type Automatic'."
           }
         ],
-        "method": "No year-specific published figure found for the MY1998 base 4-speed automatic. Taken as Wikipedia's 3,210 lb base-manual curb weight plus 55 lb (automatic penalty stated by Wikipedia)."
+        "note": "1998 US non-turbo (automatic only that year) without Sport Roof; 3325 lb with it. Same figure as Toyota's MY1997 table for the automatic."
       },
       "tyres": {
         "front": {
@@ -6006,18 +6720,30 @@
           "confidence": "single-source",
           "sources": [
             {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Tires, Normally Aspirated column: 'Size -front/rear P225/50VR16 / P245/45VR16' (front: P225/50VR16)."
+            },
+            {
               "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
               "accessed": "2026-09-26",
               "title": "Toyota Motor Sales USA 1997 Supra brochure, scan via auto-brochures.com",
               "note": "TIRES, Supra/Supra Sport Roof column: 'Size - front 225/50VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
             }
           ],
-          "note": "Brochure prints a V-rated size (225/50VR16); stored without the speed letter because the schema takes R or ZR only. Low-resolution scan."
+          "note": "Toyota's 1998 Product Source prints P225/50VR16 (V-rated); stored without the speed letter because the schema takes R or ZR only. Same as the 1997 brochure."
         },
         "rear": {
           "value": "245/45R16",
           "confidence": "single-source",
           "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Tires, Normally Aspirated column: 'Size -front/rear P225/50VR16 / P245/45VR16' (rear: P245/45VR16)."
+            },
             {
               "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
               "accessed": "2026-09-26",
@@ -6025,32 +6751,234 @@
               "note": "TIRES, Supra/Supra Sport Roof column: 'rear 245/45VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
             }
           ],
-          "note": "Brochure prints 245/45VR16 (staggered, like the JDM SZ-R from 1996). Low-resolution scan; treat the rear size as uncertain."
+          "note": "Toyota's 1998 Product Source prints P245/45VR16 (V-rated); stored without the speed letter because the schema takes R or ZR only. Same as the 1997 brochure."
         }
       },
       "dimensions": {
         "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
             }
           ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
         }
       },
-      "notes": "MY1998, VVT-i."
+      "notes": "MY1998, VVT-i 2JZ-GE rated 225 hp. Automatic only: Toyota's 1998 Product Source lists 'Supra 5M (2398)' and 'Supra (Sport Roof) 5M (2393)' as deleted models and gives the non-turbo a standard 4-speed ECT-i automatic; Torsen LSD became standard. Standard roof (model 2396); the Sport Roof version is usdm-base-4at-sport-roof-1998."
+    },
+    {
+      "id": "usdm-base-4at-sport-roof-1998",
+      "name": "Supra (base, Sport Roof)",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1997",
+          "to": "1998"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+            "accessed": "2026-09-26",
+            "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+            "note": "1998 Toyota Supra review: 'In normally aspirated form, it develops 225 horsepower with the help of new variable camshaft timing'."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
+            "note": "'In 1997, for the 1998 model year ...'; 'The 1998 model year was the last year of the Supra in the US'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source, Model Line-Up, p. 2 (page scan hosted by mkiv.com)",
+            "note": "Body Styles and Trim Levels: 'Supra (Sport Roof) 4ECTi 3.0 liter 6 225 2394'."
+          }
+        ],
+        "note": "US sales ran by model year, with no month boundaries in the sources; calendar years are used (MY1994 cars went on sale in summer 1993; MY1997 from 1996; MY1998 from 1997; US sales ended in 1998). Consumer Guide claims only leftover 1997s were sold in 1998; the contemporary 1998 review (with a 1998 MSRP and the new VVT-i base engine) is preferred."
+      },
+      "bodyStyle": "targa",
+      "engine": {
+        "id": "2jz-ge",
+        "variant": "jza80-usdm-vvti"
+      },
+      "transmission": "a340e",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+            "note": "MY1997 table: 'Differential Gear Ratio 4.083' for every US 2JZ-GE model (MY1998 is not covered by this book)."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Toyota's 1997 NCF confirms 4.083 for MY1997 and the axle-code table gives 4.083 for 1997-1998, but no Toyota document for MY1998 was read, so this stays single-source for 1998."
+      },
+      "differential": {
+        "value": "torsen",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998 / Body Styles and Trim Levels, p. 2 (page scan hosted by mkiv.com)",
+            "note": "New for 1998, All Models: 'Standard torque-sensing (Torsen) limited-slip differential'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Transmissions, Normally Aspirated column: 'Differential -standard Torque-sensing limited-slip; -optional NA'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/98_brochure/index.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+            "note": "'Torsen® limited-slip differential: Standard on Supra and Supra Turbo.'"
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          }
+        ],
+        "note": "Toyota's 1998 Product Source and brochure make the Torsen LSD standard on every 1998 Supra (two Toyota documents on one hosting site). The open A01A code in the axle-code table would then apply to MY1997 only."
+      },
+      "curbWeight": {
+        "value": 3325,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source, Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lb.) 4ECTi - 3265', note 6: '3325 with Sport Roof'."
+          }
+        ],
+        "note": "Toyota's 1998 dealer specifications."
+      },
+      "tyres": {
+        "front": {
+          "value": "225/50R16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Tires, Normally Aspirated column: 'Size -front/rear P225/50VR16 / P245/45VR16' (front: P225/50VR16)."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1997 Supra brochure, scan via auto-brochures.com",
+              "note": "TIRES, Supra/Supra Sport Roof column: 'Size - front 225/50VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            }
+          ],
+          "note": "Toyota's 1998 Product Source prints P225/50VR16 (V-rated); stored without the speed letter because the schema takes R or ZR only. Same as the 1997 brochure."
+        },
+        "rear": {
+          "value": "245/45R16",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Tires, Normally Aspirated column: 'Size -front/rear P225/50VR16 / P245/45VR16' (rear: P245/45VR16)."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Toyota/Supra/Toyota_US%20Supra_1997.pdf",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales USA 1997 Supra brochure, scan via auto-brochures.com",
+              "note": "TIRES, Supra/Supra Sport Roof column: 'rear 245/45VR16'. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+            }
+          ],
+          "note": "Toyota's 1998 Product Source prints P245/45VR16 (V-rated); stored without the speed letter because the schema takes R or ZR only. Same as the 1997 brochure."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf256.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 256 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "Major Dimensions: 'Overall Length mm (in.) 4515 (177.8)' for JZA80L-ALMVFA/ALPVFA/AJMVFA/AJPVFA."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf124.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 124 (U.S.A., 2JZ-GE models; page scan hosted by mkiv.com)",
+              "note": "'Overall Length mm (in.) 4515 (177.8)' for all four US 2JZ-GE models."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Normally Aspirated column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "notes": "Sport Roof version of usdm-base-4at-1998 (model 2394); mechanically identical. Toyota's 1998 Product Source also makes the 3-in-1 audio, power seats and leather standard on the Sport Roof model."
     },
     {
       "id": "usdm-turbo-6mt-1994",
@@ -6140,24 +7068,42 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
-        "value": 3450,
+        "value": 3415,
         "unit": "lb",
-        "confidence": "verified",
+        "confidence": "single-source",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALFVZA (standard roof, V160): 'Front 841 (1855) / Rear 708 (1560) / Total 1549 (3415)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) 6M-3415' (note 8: '3475 with sport roof')."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+            "accessed": "2026-09-26",
+            "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1994 'Turbo Liftback Hatchback 2D': curb weight 3415 lbs (no gearbox given; the six-speed was the Turbo's standard gearbox)."
+          },
           {
             "url": "https://pressroom.toyota.com/toyota-supra-icon-half-century-in-making/",
             "accessed": "2026-09-26",
             "title": "Toyota USA Newsroom: Toyota Supra: An Icon A Half-Century in the Making",
-            "note": "'At 3,450 pounds, the Turbo model weighed about 125 less than its predecessor'."
+            "note": "'At 3,450 pounds, the Turbo model weighed about 125 less than its predecessor'. Disagrees with the Toyota spec tables."
           },
           {
             "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
             "accessed": "2026-09-26",
             "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The turbo model weighed 3,450 lb with a manual transmission while the automatic added another 10 lb'."
+            "note": "'The turbo model weighed 3,450 lb with a manual transmission while the automatic added another 10 lb'. Disagrees with the Toyota spec tables."
           }
         ],
-        "note": "US curb weight, Turbo 6MT without Sport Roof. Car and Driver weighed its 1993 test car at 3,480 lb."
+        "note": "US curb weight, Turbo 6MT without Sport Roof, from Toyota's MY1993 (launch) New Car Features table and dealer Product Source (1576 kg / 3475 lb with the Sport Roof); KBB's 1994 figure agrees. Marked single-source because Toyota USA's later newsroom history and Wikipedia say 3,450 lb. That is close to Toyota's MY1997 figure for the same model (1563 kg / 3445 lb, 1997 NCF p. 125) and to KBB's 1995 figure (3445 lb), so the weight probably rose during this trim period. Car and Driver weighed its 1993 test car at 3,480 lb."
       },
       "tyres": {
         "front": {
@@ -6197,6 +7143,46 @@
           ]
         }
       },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
       "speedLimiter": {
         "value": 155,
         "unit": "mph",
@@ -6210,28 +7196,6 @@
           }
         ],
         "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
-      },
-      "dimensions": {
-        "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
-          "sources": [
-            {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
-              "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
-            },
-            {
-              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
-              "accessed": "2026-09-26",
-              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
-            }
-          ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
-        }
       },
       "performanceTests": [
         {
@@ -6270,11 +7234,200 @@
           "by": "Car and Driver road test (1993 Supra Turbo, 6-speed)"
         }
       ],
-      "notes": "MY1994-1995. Optional Sport Roof. Traction control standard."
+      "notes": "MY1994-1995 (and the 1993.5 launch cars). Standard roof; the Sport Roof version is usdm-turbo-6mt-sport-roof-1994. Traction control standard. The 1993 NCF also lists Canadian Turbos (Sport Roof only, same weights as the US Sport Roof cars)."
+    },
+    {
+      "id": "usdm-turbo-6mt-sport-roof-1994",
+      "name": "Supra Turbo (Sport Roof)",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1993-06",
+          "to": "1995"
+        },
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Supra Turbo model numbers '2381/2383/2387', with the Sport Roof curb weight in note 8."
+          }
+        ],
+        "method": "Same model years as the standard-roof trim usdm-turbo-6mt-1994. Toyota's MY1993.5-94 documents list this model and its MY1997-98 documents list the Sport Roof Turbo 6MT again; no MY1995 line-up was found, so availability that year is assumed (there was no manual Turbo in MY1996)."
+      },
+      "bodyStyle": "targa",
+      "engine": {
+        "id": "2jz-gte",
+        "variant": "jza80-usdm"
+      },
+      "transmission": "v160",
+      "finalDrive": {
+        "value": 3.133,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS, Turbo 6-speed manual column: differential ratio 3.133. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          }
+        ]
+      },
+      "differential": {
+        "value": "torsen",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          },
+          {
+            "url": "https://consumerguide.com/used/1993-98-toyota-supra/",
+            "accessed": "2026-09-26",
+            "title": "Consumer Guide Auto: 1993-98 Toyota Supra used-car review",
+            "note": "'The Turbo also got traction control and a limited-slip differential'."
+          }
+        ],
+        "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
+      },
+      "curbWeight": {
+        "value": 3475,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features, 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJFVZA (Sport Roof, V160): 'Front 855 (1885) / Rear 721 (1590) / Total 1576 (3475)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) 6M-3415', note 8: '3475 with sport roof'."
+          }
+        ],
+        "note": "Toyota's MY1993 (launch) tables; no Toyota table for MY1994-95 was found. Both documents are page scans on mkiv.com, so they count as one site."
+      },
+      "tyres": {
+        "front": {
+          "value": "235/45ZR17",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.caranddriver.com/reviews/a15142755/toyota-supra-turbo-instrumented-test/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver: Tested: 1993 Toyota Supra Turbo",
+              "note": "'Tires: Bridgestone Potenza RE020, F: 235/45ZR-17 R: 255/40ZR-17'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Tires (F/R) F-235/45ZR17 R-255/40ZR17'."
+            }
+          ]
+        },
+        "rear": {
+          "value": "255/40ZR17",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.caranddriver.com/reviews/a15142755/toyota-supra-turbo-instrumented-test/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver: Tested: 1993 Toyota Supra Turbo",
+              "note": "'F: 235/45ZR-17 R: 255/40ZR-17'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'R-255/40ZR17'."
+            }
+          ]
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "speedLimiter": {
+        "value": 155,
+        "unit": "mph",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/toyota-supra-icon-half-century-in-making/",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA Newsroom: Toyota Supra: An Icon A Half-Century in the Making",
+            "note": "'The Supra Turbo's top track speed was electronically limited to 155 mph'."
+          }
+        ],
+        "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
+      },
+      "notes": "Sport Roof version of usdm-turbo-6mt-1994; mechanically identical. Model 2383 in Toyota's '93 Product Source line-up (Turbo models '2381/2383/2387')."
     },
     {
       "id": "usdm-turbo-4at-1994",
-      "name": "Supra Turbo",
+      "name": "Supra Turbo (Sport Roof)",
       "market": "USDM",
       "period": {
         "value": {
@@ -6304,7 +7457,7 @@
         ],
         "note": "US sales ran by model year, with no month boundaries in the sources; calendar years are used (MY1994 cars went on sale in summer 1993; MY1997 from 1996; MY1998 from 1997; US sales ended in 1998)."
       },
-      "bodyStyle": "liftback",
+      "bodyStyle": "targa",
       "engine": {
         "id": "2jz-gte",
         "variant": "jza80-usdm"
@@ -6354,18 +7507,30 @@
         "note": "200 mm diff, code A02D (Torsen)."
       },
       "curbWeight": {
-        "value": 3460,
+        "value": 3485,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "verified",
         "sources": [
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'The turbo model weighed 3,450 lb with a manual transmission while the automatic added another 10 lb'."
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJPVZA (Sport Roof, A340E): 'Front 855 (1885) / Rear 726 (1600) / Total 1581 (3485)' kg (lb). The standard-roof JZA80L-ALPVZA column reads 'Total 15554 (3425)', a misprint for 1554 kg."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Capacities: 'Curb Weight (lbs.) ... 4ECTi-3475' with note 9: '3485 with sport roof'."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1996/specs/",
+            "accessed": "2026-09-26",
+            "title": "1996 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1996 'Turbo Liftback Hatchback 2D': curb weight 3485 lbs (for 1996 the only US Turbo was the automatic)."
           }
         ],
-        "method": "Wikipedia's 3,450 lb Turbo manual figure (also Toyota USA's) plus the 10 lb it gives for the automatic; no directly printed Turbo-automatic figure could be read."
+        "note": "US curb weight of the Turbo automatic with Sport Roof, the only body Toyota's '93 Product Source lists for it (model 2387). Its '4ECTi-3475' row sits oddly next to note 9 ('3485 with sport roof'); the NCF gives 3425 lb for a standard-roof automatic that the US line-up does not list. KBB's 1996 Turbo figure, 3485 lb, matches."
       },
       "tyres": {
         "front": {
@@ -6405,6 +7570,46 @@
           ]
         }
       },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
       "speedLimiter": {
         "value": 155,
         "unit": "mph",
@@ -6419,29 +7624,7 @@
         ],
         "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
       },
-      "dimensions": {
-        "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
-          "sources": [
-            {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
-              "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
-            },
-            {
-              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
-              "accessed": "2026-09-26",
-              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
-            }
-          ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
-        }
-      },
-      "notes": "MY1994-1996. For MY1996 this was the only US Turbo (six-speed dropped for OBD-II/emissions certification, per Consumer Guide and Toyota USA) and Wikipedia says the Sport Roof became standard on Turbos."
+      "notes": "MY1994-1996 (and the 1993.5 launch cars). Sold only with the Sport Roof: Toyota's '93 Product Source line-up lists the Turbo automatic only as 'Supra Turbo (Sport Roof) 4ECTi' (model 2387), and the 1997 NCF only as JZA80L-AJPVZA. (The 1993 NCF table also has a U.S.A. standard-roof automatic column, JZA80L-ALPVZA, 1,554 kg / 3,425 lb, but the US dealer line-up doesn't offer it.) For MY1996 this was the only US Turbo (six-speed dropped for OBD-II/emissions certification, per Consumer Guide and Toyota USA)."
     },
     {
       "id": "usdm-turbo-6mt-1997",
@@ -6525,18 +7708,42 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
-        "value": 3531,
+        "value": 3505,
         "unit": "lb",
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJFVZA (Sport Roof, V160): 'Front 866 (1910) / Rear 723 (1595) / Total 1589 (3505)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Capacities, Turbo column: 'Curb Weight (lb.) 6M – 3505'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/98_brochure/index.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+            "note": "'6-speed manual: ... 3,445/3,505 Supra Turbo' (without/with Sport Roof)."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1997/specs/",
+            "accessed": "2026-09-26",
+            "title": "1997 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1997 Limited Edition Turbo Liftback: 'Curb Weight 3505 lbs.', 'Transmission Type Manual 6 speed'."
+          },
           {
             "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
             "accessed": "2026-09-26",
             "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-            "note": "Specifications (1998 Supra Turbo, six-speed, Sport Roof): 'Curb Weight 3531 pounds'."
+            "note": "Specifications (1998 Supra Turbo, six-speed, Sport Roof): 'Curb Weight 3531 pounds'. Disagrees with Toyota (3505 lb)."
           }
         ],
-        "note": "1998 figure with the Sport Roof. The 1997 Toyota brochure lists Turbos only 'with Sport Roof'; its digits are too blurred to read."
+        "note": "Toyota's figure for the Turbo 6MT with Sport Roof, the same in the MY1997 NCF and the 1998 Product Source; KBB agrees. The Auto Channel's 3531 lb is not followed. Without the Sport Roof Toyota lists 1563 kg (3445 lb), but the 1998 Product Source line-up has Sport Roof Turbos only."
       },
       "tyres": {
         "front": {
@@ -6576,43 +7783,262 @@
           ]
         }
       },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
       "speedLimiter": {
         "value": 155,
         "unit": "mph",
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
           {
             "url": "https://pressroom.toyota.com/toyota-supra-icon-half-century-in-making/",
             "accessed": "2026-09-26",
             "title": "Toyota USA Newsroom: Toyota Supra: An Icon A Half-Century in the Making",
             "note": "'The Supra Turbo's top track speed was electronically limited to 155 mph'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Performance, Turbo column: 'Max Speed (mph) 155', note 9: 'Actual mph is 180, but is limited to 155 mph in United States'."
           }
         ],
         "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
       },
-      "dimensions": {
-        "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
+      "notes": "MY1997-1998. V160 kept (the V161 was JDM only). 1998 Turbo not sold in California-emission states (Toyota 1998 Product Source; Wikipedia). US Turbo never got VVT-i (Toyota USA chronology, per the engine file). This is the Sport Roof car (JZA80L-AJFVZA); the MY1997 standard-roof Turbo is usdm-turbo-6mt-standard-roof-1997."
+    },
+    {
+      "id": "usdm-turbo-6mt-standard-roof-1997",
+      "name": "Supra Turbo",
+      "market": "USDM",
+      "period": {
+        "value": {
+          "from": "1996",
+          "to": "1997"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "The MY1997 U.S.A. table lists JZA80L-ALFVZA, a standard-roof Turbo 6-speed."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source, Model Line-Up, p. 2 (page scan hosted by mkiv.com)",
+            "note": "1998 Body Styles and Trim Levels list only 'Supra Turbo (Sport Roof)' 6M (2383) and 4ECTi (2387)."
+          }
+        ],
+        "note": "MY1997 only as far as Toyota's documents show. Both documents are page scans on mkiv.com, so they count as one site."
+      },
+      "bodyStyle": "liftback",
+      "engine": {
+        "id": "2jz-gte",
+        "variant": "jza80-usdm"
+      },
+      "transmission": "v160",
+      "finalDrive": {
+        "value": 3.133,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://importarchive.com/brochures/toyota/toyotasupra1994_01/toyotasupra1994_01_032.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales USA 1994 Supra brochure (PC4-033), specifications page, scan via ImportArchive",
+            "note": "GEAR RATIOS, Turbo 6-speed manual column: differential ratio 3.133. The scan is only about 400 px wide, so the small print is blurred; the ratios below were read where the digits match the known Toyota ratio sets, and nothing that could not be read is used from it."
+          },
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          }
+        ]
+      },
+      "differential": {
+        "value": "torsen",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.grannasracing.com/blog/technical-2/toyota-supra-mkiv-jza80-differential-info-12",
+            "accessed": "2026-09-26",
+            "title": "Grannas Racing: Toyota Supra MKIV (JZA80) Differential Info (reproduces the SupraForums 'JZA80 Differential Info' thread)",
+            "note": "US table: '1993-1996 A05A 4.272 OPEN / A05B 4.272 LSD'; '1997-1998 A01A 4.083 OPEN / A01B 4.083 LSD'; '1993-1996 A02D 3.769 LSD'; '1997-1998 A02A 3.769 OPEN'; '1993-1998 B07D 3.133 LSD'; last letter 'D = 2-way torsen LSD'."
+          },
+          {
+            "url": "https://web.archive.org/web/20260311071501/http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "mkiv.supras.org.nz: Toyota Supra MKIV specifications (Wayback copy; live page is http-only and was read directly)",
+            "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
+          },
+          {
+            "url": "https://consumerguide.com/used/1993-98-toyota-supra/",
+            "accessed": "2026-09-26",
+            "title": "Consumer Guide Auto: 1993-98 Toyota Supra used-car review",
+            "note": "'The Turbo also got traction control and a limited-slip differential'."
+          }
+        ],
+        "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
+      },
+      "curbWeight": {
+        "value": 3445,
+        "unit": "lb",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features, Appendix - Supra, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-ALFVZA (standard roof, V160): 'Front 855 (1885) / Rear 708 (1560) / Total 1563 (3445)' kg (lb)."
+          }
+        ],
+        "note": "Toyota's MY1997 table. KBB's 1995 page prints the same 3,445 lb for the standard-roof Turbo manual, which suggests the MY1993.5-94 figure (3,415 lb) rose partway through."
+      },
+      "tyres": {
+        "front": {
+          "value": "235/45ZR17",
+          "confidence": "verified",
           "sources": [
             {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "url": "https://www.caranddriver.com/reviews/a15142755/toyota-supra-turbo-instrumented-test/",
               "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
+              "title": "Car and Driver: Tested: 1993 Toyota Supra Turbo",
+              "note": "'Tires: Bridgestone Potenza RE020, F: 235/45ZR-17 R: 255/40ZR-17'."
             },
             {
               "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
               "accessed": "2026-09-26",
               "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
+              "note": "'Tires (F/R) F-235/45ZR17 R-255/40ZR17'."
             }
-          ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
+          ]
+        },
+        "rear": {
+          "value": "255/40ZR17",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.caranddriver.com/reviews/a15142755/toyota-supra-turbo-instrumented-test/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver: Tested: 1993 Toyota Supra Turbo",
+              "note": "'F: 235/45ZR-17 R: 255/40ZR-17'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'R-255/40ZR17'."
+            }
+          ]
         }
       },
-      "notes": "MY1997-1998. V160 kept (the V161 was JDM only). 1998 Turbo not sold in CARB states (Wikipedia). US Turbo never got VVT-i (Toyota USA chronology, per the engine file)."
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
+      "speedLimiter": {
+        "value": 155,
+        "unit": "mph",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/toyota-supra-icon-half-century-in-making/",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA Newsroom: Toyota Supra: An Icon A Half-Century in the Making",
+            "note": "'The Supra Turbo's top track speed was electronically limited to 155 mph'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Performance, Turbo column: 'Max Speed (mph) 155', note 9: 'Actual mph is 180, but is limited to 155 mph in United States'."
+          }
+        ],
+        "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
+      },
+      "notes": "MY1997 standard-roof Turbo 6MT. Toyota's 1997 NCF lists it (JZA80L-ALFVZA); the 1998 Product Source line-up has only Sport Roof Turbos, so it's treated as MY1997 only."
     },
     {
       "id": "usdm-turbo-4at-1997",
@@ -6675,6 +8101,12 @@
         "confidence": "single-source",
         "sources": [
           {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Transmissions, Turbo column: 'Differential -standard Torque-sensing limited-slip; -optional NA' (MY1998)."
+          },
+          {
             "url": "https://consumerguide.com/used/1993-98-toyota-supra/",
             "accessed": "2026-09-26",
             "title": "Consumer Guide Auto: 1993-98 Toyota Supra used-car review",
@@ -6687,27 +8119,33 @@
             "note": "Axle code list: '05 (4.272)-USA, 07 (3.133)-USA'; comparison table, Export MKIV: 'Torsen LSD: Standard equipment', 'Diff Ratio (TT) 3.133'."
           }
         ],
-        "note": "Conflict: the Grannas/SupraForums table lists a 1997-1998 A02A (3.769, open) code, which could be the 1997-98 Turbo automatic. Consumer Guide and mkiv.supras.org.nz say the export Turbo had the LSD as standard, so Torsen is kept."
+        "note": "Conflict: the Grannas/SupraForums table lists a 1997-1998 A02A (3.769, open) code, which could be the 1997-98 Turbo automatic. Consumer Guide and mkiv.supras.org.nz say the export Turbo had the LSD as standard, so Torsen is kept. Toyota's 1998 Product Source lists the Torsen LSD as standard on the 1998 Turbo (both gearboxes); no Toyota document for MY1997 states the differential type."
       },
       "curbWeight": {
-        "value": 3541,
+        "value": 3515,
         "unit": "lb",
-        "confidence": "estimated",
+        "confidence": "single-source",
         "sources": [
           {
-            "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
             "accessed": "2026-09-26",
-            "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-            "note": "'Curb Weight 3531 pounds' (1998 Turbo six-speed, Sport Roof)."
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "Curb Weight, JZA80L-AJPVZA (Sport Roof, A340E): 'Front 871 (1920) / Rear 723 (1595) / Total 1594 (3515)' kg (lb)."
           },
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "'the automatic added another 10 lb'."
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Capacities, Turbo column: '4ECTi – 3515'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/98_brochure/index.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+            "note": "'4-speed automatic: ... Not applicable/3,515 Supra Turbo' (without/with Sport Roof)."
           }
         ],
-        "method": "1998 Turbo 6MT Sport Roof curb weight (3,531 lb, The Auto Channel) plus the 10 lb automatic penalty Wikipedia gives for the Turbo."
+        "note": "Toyota's figure for the Turbo automatic (Sport Roof only), the same in the MY1997 NCF, the 1998 Product Source and the 1998 brochure. All three are hosted on one site, so this counts as one source."
       },
       "tyres": {
         "front": {
@@ -6747,41 +8185,65 @@
           ]
         }
       },
+      "dimensions": {
+        "length": {
+          "value": 4515,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 256, '4515 (177.8)' mm (in.)) for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+              "note": "Overall Length row: '←' (same as p. 124, '4515 (177.8)') for every US and Canadian 2JZ-GTE model."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Exterior, Turbo column: 'Overall Length (in.) 177.8'."
+            },
+            {
+              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
+              "accessed": "2026-09-26",
+              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
+              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"' (177.8 in = 4516 mm, agrees after conversion)."
+            },
+            {
+              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+              "accessed": "2026-09-26",
+              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+              "note": "Specifications: 'Length: 177.8 in' (agrees after conversion)."
+            }
+          ],
+          "note": "Toyota's own metric figure from the US New Car Features tables (4515 mm = 177.76 in, printed as 177.8 in). Toyota's '93 Product Source, Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1997 NCF, the 1998 Product Source and the other sources print 177.8 in. The US car is 5 mm shorter than the JDM 4520 mm."
+        }
+      },
       "speedLimiter": {
         "value": 155,
         "unit": "mph",
-        "confidence": "single-source",
+        "confidence": "verified",
         "sources": [
           {
             "url": "https://pressroom.toyota.com/toyota-supra-icon-half-century-in-making/",
             "accessed": "2026-09-26",
             "title": "Toyota USA Newsroom: Toyota Supra: An Icon A Half-Century in the Making",
             "note": "'The Supra Turbo's top track speed was electronically limited to 155 mph'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Performance, Turbo column: 'Max Speed (mph) 155', note 9: 'Actual mph is 180, but is limited to 155 mph in United States'."
           }
         ],
         "note": "Car and Driver recorded 160 mph 'governor limited' on its 1993 test car."
-      },
-      "dimensions": {
-        "length": {
-          "value": 177.8,
-          "unit": "in",
-          "confidence": "single-source",
-          "sources": [
-            {
-              "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
-              "accessed": "2026-09-26",
-              "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
-              "note": "Specifications: 'Length: 177.8 in'."
-            },
-            {
-              "url": "https://www.theautochannel.com/vehicles/new/reviews/1998/solo9807.html",
-              "accessed": "2026-09-26",
-              "title": "The Auto Channel: 1998 Toyota Supra new car review (Tom Hagin)",
-              "note": "'Wheelbase/Width/Length 100.4\"/71.3\"/177.8\"'."
-            }
-          ],
-          "note": "Car and Driver's 1993 Turbo test and Consumer Guide print 177.7 in; the 1994 C/D test and the 1998 review print 177.8 in. Either way the US car is listed about 4-5 mm shorter than the JDM 4520 mm."
-        }
       },
       "notes": "MY1997-1998."
     },
@@ -7029,13 +8491,19 @@
             "note": "'Curb Weight : ... 1615 kg' (6-speed manual)."
           },
           {
-            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf257.jpg",
             "accessed": "2026-09-26",
-            "title": "Wikipedia: Toyota Supra (fourth generation A80 section)",
-            "note": "US Turbo: 'the automatic added another 10 lb'."
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series; foreword refers to Repair Manual RM343U1/U2 and Electrical Wiring Diagram EWD174U), 4. Appendix: Major Technical Specifications, p. 257 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "US Turbo with Sport Roof: 6MT (JZA80L-AJFVZA) 'Total 1576 (3475)', automatic (AJPVZA) 'Total 1581 (3485)' kg (lb)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf97/ncf125.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1997 Model New Car Features (Tercel/Paseo, Corolla, Celica, Supra and others; (c) 1996), 12. Appendix - Supra: Major Technical Specifications, p. 125 (U.S.A. and Canada, 2JZ-GTE models; page scan hosted by mkiv.com)",
+            "note": "MY1997 US Turbo with Sport Roof: 6MT 'Total 1589 (3505)', automatic 'Total 1594 (3515)' kg (lb)."
           }
         ],
-        "method": "No published European automatic weight found. Taken as the 1615 kg European 6MT figure plus about 5 kg (the 10 lb automatic penalty Wikipedia gives for the US Turbo), rounded to 1620 kg."
+        "method": "No European automatic weight was found (Toyota's US New Car Features books cover the US and Canada only, and the UK owners' club brochure download needs a login). Taken as the 1615 kg European 6MT figure (ultimatespecs.com) plus 5 kg, the automatic-minus-manual difference in Toyota's US tables for the same export 2JZ-GTE car (1576 to 1581 kg in 1993, 1589 to 1594 kg in 1997)."
       },
       "tyres": {
         "front": {
