@@ -52,7 +52,11 @@ export const TransmissionSchema = z
   .strictObject({
     id: SlugSchema,
     name: z.string().min(1),
-    type: z.enum(['manual', 'automatic']),
+    /**
+     * `automated-manual`: a manual gearbox with computer-controlled clutch and
+     * shifts and no torque converter (BMW SMG / SMG II).
+     */
+    type: z.enum(['manual', 'automatic', 'automated-manual']),
     gears: z.number().int().min(3).max(8),
     /** Factory code, e.g. "V160" or "A340E". */
     code: sourced(z.string().min(1)).optional(),
@@ -89,11 +93,26 @@ export const TrimSchema = z.strictObject({
   name: z.string().min(1),
   market: MarketSchema,
   period: SourcedPeriodSchema,
-  bodyStyle: z.enum(['coupe', 'liftback', 'convertible', 'targa', 'sedan', 'hatchback']),
+  bodyStyle: z.enum(['coupe', 'liftback', 'convertible', 'targa', 'sedan', 'hatchback', 'wagon']),
   engine: z.strictObject({ id: SlugSchema, variant: SlugSchema }),
   transmission: SlugSchema,
   finalDrive: Ratio,
-  differential: sourced(z.enum(['open', 'viscous-lsd', 'helical-lsd', 'torsen', 'clutch-lsd'])),
+  /**
+   * `clutch-lsd` locks in proportion to torque (ramps and preload);
+   * `speed-sensing-clutch-lsd` locks in proportion to the wheel-speed difference,
+   * via a clutch pack pressed by a viscous shear pump (BMW's variable M
+   * differential lock).
+   */
+  differential: sourced(
+    z.enum([
+      'open',
+      'viscous-lsd',
+      'helical-lsd',
+      'torsen',
+      'clutch-lsd',
+      'speed-sensing-clutch-lsd',
+    ]),
+  ),
   /** As the market publishes it; say which standard in the note (JIS 車両重量, US curb weight, EU DIN). */
   curbWeight: Mass,
   /** Front axle share of curb weight, in percent. */

@@ -67,7 +67,13 @@ export const EngineVariantSchema = z.strictObject({
   intercooler: sourced(z.enum(['none', 'air-to-air-front', 'air-to-air-side', 'air-to-water'])),
   injectorFlow: measured(UNITS.flow).optional(),
   cams: Cams.optional(),
-  variableValveTiming: sourced(z.enum(['none', 'intake-on-off', 'intake-continuous'])),
+  /**
+   * Cam phasing. `intake-and-exhaust-continuous` covers BMW double VANOS and
+   * Nissan's CVTCS intake plus eCVTCS exhaust (VQ35HR).
+   */
+  variableValveTiming: sourced(
+    z.enum(['none', 'intake-on-off', 'intake-continuous', 'intake-and-exhaust-continuous']),
+  ),
   output: Output,
   /** Tachometer redline. */
   redline: Rpm.optional(),

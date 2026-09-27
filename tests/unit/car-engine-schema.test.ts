@@ -147,6 +147,22 @@ describe('EngineSchema', () => {
     );
   });
 
+  it('accepts cam phasing on both camshafts (double VANOS, CVTCS + eCVTCS)', () => {
+    const r = EngineSchema.safeParse(
+      engine({
+        variants: [
+          variant({
+            induction: v('naturally-aspirated'),
+            turbos: undefined,
+            intercooler: v('none'),
+            variableValveTiming: v('intake-and-exhaust-continuous'),
+          }),
+        ],
+      }),
+    );
+    expect(messages(r)).toBe('');
+  });
+
   it('rejects a "verified" rating backed by one site', () => {
     const output = {
       ...variant().output,
@@ -183,6 +199,20 @@ describe('CarSchema', () => {
       car({ trims: [trim({ period: v({ from: '1999', to: '2002' }) })] }),
     );
     expect(messages(r)).toBe('');
+  });
+
+  it('accepts automated-manual gearboxes, wagons and speed-sensing clutch LSDs', () => {
+    const transmissions = [
+      { ...car().transmissions[0], id: 'smg', name: '6-speed SMG II', type: 'automated-manual' },
+    ];
+    const trims = [
+      trim({
+        transmission: 'smg',
+        bodyStyle: 'wagon',
+        differential: v('speed-sensing-clutch-lsd'),
+      }),
+    ];
+    expect(messages(CarSchema.safeParse(car({ transmissions, trims })))).toBe('');
   });
 
   it('rejects malformed tyre sizes', () => {
