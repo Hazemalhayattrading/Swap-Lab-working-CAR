@@ -1,0 +1,1542 @@
+{
+  "$comment": "Nissan VQ35HR as fitted to the 2007-2009 Z33 350Z / Fairlady Z (launch swap). Researched 2026-09-27. Primary sources: Nissan's 2007 350Z service manual section EM (Google Drive copy), 2007/2008 owner's manuals, Nissan's VQ35HR tech sheet, Nissan Japan, GB and USA releases. Weight, outline dimensions and internal materials have no reliable source and are estimated (see each method). The bellhousing is not the VQ35DE's.",
+  "id": "vq35hr",
+  "code": "VQ35HR",
+  "manufacturer": "Nissan",
+  "family": "VQ",
+  "role": "launch-swap",
+  "layout": "V",
+  "cylinders": 6,
+  "displacement": {
+    "value": 3498,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-136, SDS General Specifications: \"Displacement cm3 (cu in) 3,498 (213.45)\"."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+        "accessed": "2026-09-27",
+        "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+        "note": "\"エンジン型式 | VQ35HR | / 総排気量 | 3498cc | / 内径×行程 | 95.5mm×81.4mm | / 圧縮比 | 10.6 |\""
+      },
+      {
+        "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+        "accessed": "2026-09-27",
+        "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+        "note": "\"engine_spec[ 0][ 0]=new Array('VQ35HR'); / engine_spec[ 1][ 1]=new Array('95.5×81.4'); / engine_spec[ 1][ 2]=new Array('3.498'); / engine_spec[ 1][ 3]=new Array('10.6');\""
+      }
+    ]
+  },
+  "bore": {
+    "value": 95.5,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-136, SDS General Specifications: \"Bore and stroke mm (in) 95.5 x 81.4 (3.76 x 3.205)\"."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+        "accessed": "2026-09-27",
+        "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+        "note": "\"エンジン型式 | VQ35HR | / 総排気量 | 3498cc | / 内径×行程 | 95.5mm×81.4mm | / 圧縮比 | 10.6 |\""
+      },
+      {
+        "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+        "accessed": "2026-09-27",
+        "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+        "note": "\"engine_spec[ 0][ 0]=new Array('VQ35HR'); / engine_spec[ 1][ 1]=new Array('95.5×81.4'); / engine_spec[ 1][ 2]=new Array('3.498'); / engine_spec[ 1][ 3]=new Array('10.6');\""
+      }
+    ]
+  },
+  "stroke": {
+    "value": 81.4,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-136, SDS General Specifications: \"Bore and stroke mm (in) 95.5 x 81.4 (3.76 x 3.205)\"."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+        "accessed": "2026-09-27",
+        "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+        "note": "\"エンジン型式 | VQ35HR | / 総排気量 | 3498cc | / 内径×行程 | 95.5mm×81.4mm | / 圧縮比 | 10.6 |\""
+      },
+      {
+        "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+        "accessed": "2026-09-27",
+        "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+        "note": "\"engine_spec[ 0][ 0]=new Array('VQ35HR'); / engine_spec[ 1][ 1]=new Array('95.5×81.4'); / engine_spec[ 1][ 2]=new Array('3.498'); / engine_spec[ 1][ 3]=new Array('10.6');\""
+      }
+    ],
+    "note": "Same bore and stroke as the VQ35DE; the extra rpm comes from a taller block with 7.6 mm longer rods, a ladder frame and lighter valvetrain friction."
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-136, SDS General Specifications: \"Valve arrangement DOHC\"."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+        "accessed": "2026-09-27",
+        "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+        "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\"."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+        "accessed": "2026-09-27",
+        "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (Overview, At a Glance)",
+        "note": "At a Glance: \"A next-generation 3.5-liter, 24-valve DOHC V6 (VQ35HR), 306 horsepower @ 6800 RPM, 268 lb-ft of torque @ 4800 RPM\"."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+        "accessed": "2026-09-27",
+        "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+        "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\"."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://usa.nissannews.com/en-US/releases/2008-350z-press-kit",
+        "accessed": "2026-09-27",
+        "title": "Nissan USA newsroom: 2008 Nissan 350Z Press Kit (Overview, At a Glance)",
+        "note": "At a Glance, Engine and Driveline (VQ35HR): \"Small pitch, silent cam chain\"."
+      },
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-53/EM-54, \"TIMING CHAIN\": components \"Timing chain (primary)\", \"Timing chain (secondary)\", \"Timing chain tensioner (primary)\"."
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+        "accessed": "2026-09-27",
+        "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+        "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\"."
+      },
+      {
+        "url": "https://www.engine-specs.net/nissan/vq35hr.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: \"Nissan VQ35HR - Engine Specs\" (spec aggregator)",
+        "note": "\"The VQ35HR features a lightweight aluminum block with a fully balanced four-bearings crankshaft and two aluminum heads with two camshafts (DOHC) and four valves per cylinder.\""
+      }
+    ],
+    "note": "Nissan's own wording is \"aluminum-alloy engine\"; the block-and-heads wording is the aggregator's."
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+        "accessed": "2026-09-27",
+        "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+        "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\"."
+      },
+      {
+        "url": "https://www.engine-specs.net/nissan/vq35hr.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: \"Nissan VQ35HR - Engine Specs\" (spec aggregator)",
+        "note": "\"two aluminum heads with two camshafts (DOHC) and four valves per cylinder\"."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 2, 3, 4, 5, 6],
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-136, SDS General Specifications: \"Firing order 1-2-3-4-5-6\"."
+      }
+    ],
+    "note": "Same order as the VQ35DE (2004 and 2005 manuals)."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+        "note": "EM-34, \"FUEL INJECTOR AND FUEL TUBE\": \"Remove fuel injector (2) from fuel tube (4) as follows\" (the injectors sit in the fuel tube on the intake manifold)."
+      },
+      {
+        "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+        "accessed": "2026-09-27",
+        "title": "Performance Fuel Injection (injector service shop): Nissan 350Z / G35 VQ injectors, Denso 16600-JK20A",
+        "note": "\"Nissan 16600-JK20A\" ... \"Static flow rate: 335cc/min @ 3.5bar – 305cc/min @ 3bar\" (12-hole port injector)."
+      }
+    ]
+  },
+  "dryWeight": {
+    "value": 150,
+    "unit": "kg",
+    "confidence": "estimated",
+    "sources": [
+      {
+        "url": "https://forums.hybridz.org/topic/59025-vq35de-engine-weight/",
+        "accessed": "2026-09-27",
+        "title": "HybridZ forum: \"VQ35DE engine weight?\" (Aug 2007)",
+        "note": "\"VQ30 or VQ35 = 313lbs\""
+      },
+      {
+        "url": "https://www.engine-specs.net/nissan/vq35de.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: Nissan VQ35DE / Renault V4Y - Engine Specs (AGGREGATOR)",
+        "note": "\"Weight 313 lbs (142 kg)\""
+      }
+    ],
+    "method": "No Nissan or measured VQ35HR weight was found (2007 service manual, Nissan USA press kits 2007-2009, Nissan's VQ35HR tech sheet, English and Japanese searches). Started from the only VQ35DE figure, 313 lb (142 kg; one forum weighing, dress level unknown), and added roughly 5-10 kg for the HR's ladder frame, 8.4 mm taller block, longer rods and larger crank journals, which Nissan lists but does not weigh. Rounded to 150 kg; treat it as about +/-20 kg. enginetechspecs.com prints 175 kg \"complete with flywheel, without accessories\" and 190 kg \"with alternator, starter and manifolds\", but that page contradicts the service manual elsewhere (hydraulic VTC on both cams, head-bolt torques), so it was not used."
+  },
+  "dimensions": {
+    "length": {
+      "value": 710,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_vq35hr_technical_data.html",
+          "accessed": "2026-09-27",
+          "title": "enginetechspecs.com: \"Nissan VQ35HR Engine: Technical information and specs\" (aggregator; cites no sources and contradicts the service manual elsewhere)",
+          "note": "\"Length (front of accessory drive to rear of flywheel housing): 710 mm (28.0 in).\""
+        }
+      ],
+      "method": "No Nissan outline dimensions exist in any source found (2007 service manual, press kits, Nissan tech sheet). The only figures are enginetechspecs.com's, a page that contradicts the service manual elsewhere, so they are unreliable and used only as a placeholder envelope. Length here is \"front of accessory drive to rear of flywheel housing\" (710 mm)."
+    },
+    "width": {
+      "value": 790,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_vq35hr_technical_data.html",
+          "accessed": "2026-09-27",
+          "title": "enginetechspecs.com: \"Nissan VQ35HR Engine: Technical information and specs\" (aggregator; cites no sources and contradicts the service manual elsewhere)",
+          "note": "\"Width (overall, across valve covers): 790 mm (31.1 in).\""
+        }
+      ],
+      "method": "No Nissan outline dimensions exist in any source found (2007 service manual, press kits, Nissan tech sheet). The only figures are enginetechspecs.com's, a page that contradicts the service manual elsewhere, so they are unreliable and used only as a placeholder envelope. Width is \"across valve covers\" (790 mm)."
+    },
+    "height": {
+      "value": 720,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_vq35hr_technical_data.html",
+          "accessed": "2026-09-27",
+          "title": "enginetechspecs.com: \"Nissan VQ35HR Engine: Technical information and specs\" (aggregator; cites no sources and contradicts the service manual elsewhere)",
+          "note": "\"Height (from oil pan rail to top of intake manifold): 720 mm (28.3 in).\""
+        }
+      ],
+      "method": "No Nissan outline dimensions exist in any source found (2007 service manual, press kits, Nissan tech sheet). The only figures are enginetechspecs.com's, a page that contradicts the service manual elsewhere, so they are unreliable and used only as a placeholder envelope. Height is \"oil-pan rail to top of intake\" (720 mm), which leaves out the oil pan, so the real overall height is larger."
+    }
+  },
+  "bellhousing": {
+    "value": "nissan-vq-hr",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://tdconversions.com/products/vw-1-9-2-0-tdi-to-nissan-vq35de-cd009-adapter-kit",
+        "accessed": "2026-09-27",
+        "title": "TDConversions: VW TDI to Nissan 350z VQ35DE (CD009, CD00A) transmission adapter kit",
+        "note": "\"***NOT COMPATIBLE with the VQ35HR or VQ37 transmissions. These engines use a JK4xx transmission which has a different bellhousing bolt pattern***\""
+      },
+      {
+        "url": "https://lojkits.com/products/vq35hr-vq37vhr-engine-to-gm-transmission-adapter",
+        "accessed": "2026-09-27",
+        "title": "LOJ Conversions: VQ35HR & VQ37VHR Engine to GM Transmission Adapter",
+        "note": "\"Engine Compatibility: VQ35HR Infiniti G35 Sedan (2007-2008) Nissan 350Z (2007-2009)\""
+      },
+      {
+        "url": "https://grannasracing.com/shop/universal-gr009-nissan-cd009-6-speed-manual-swap-kit-1572",
+        "accessed": "2026-09-27",
+        "title": "Grannas Racing: Universal Nissan CD009 6-speed manual swap kit GR009",
+        "note": "\"CD009 Generation 2003-2006 350Z CD00A (VQ35DE) 2007-2009 350Z JK41B (VQ35HR) + $ 15.00 2010-2020 370Z 1EA0B (VQ37VHR)\""
+      }
+    ],
+    "note": "Shared with the VQ37VHR (370Z), not with the VQ35DE: a VQ35HR needs a 2007-on (JK41B) gearbox or an adapter, and VQ35DE-pattern adapters (Mazworx JZVQ, TDConversions) do not fit. All vendor sources; no Nissan statement was found. The likely cause (not sourced) is the 8.4 mm taller block that sits 15 mm lower."
+  },
+  "sump": {
+    "value": "front",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-26 Oil pan and oil strainer",
+        "note": "\"To remove oil pan (upper), remove engine assembly first.\""
+      },
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-26",
+        "note": "\"When removing oil pan (lower) only, remove engine assembly is not necessary.\""
+      },
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-103 Engine assembly removal",
+        "note": "\"Remove bolts fixing transmission to lower rear side of oil pan (upper).\""
+      },
+      {
+        "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-102",
+        "note": "\"At first, remove engine and transmission assembly with front suspension member from vehicle downward.\""
+      },
+      {
+        "url": "https://cj-motorsports.com/products/active-baffle-oil-pan-hr-vhr",
+        "accessed": "2026-09-27",
+        "title": "CJ Motorsports: Active Baffle Oil Pan, HR/VHR",
+        "note": "\"Vertical longitudinal baffles guide returning oil from the rear of the upper pan directly into the sump.\""
+      },
+      {
+        "url": "https://cj-motorsports.com/products/active-baffle-oil-pan-hr-vhr",
+        "accessed": "2026-09-27",
+        "title": "CJ Motorsports: Active Baffle Oil Pan, HR/VHR",
+        "note": "\"Overall depth remains above the front suspension cross-member, keeping the pan within the factory lower engine shroud and protected from road debris.\""
+      }
+    ],
+    "note": "Read from the factory drawings (EM-26/27, \"Engine front\" arrow): the steel lower pan (sump) is at the front, above the front suspension member; the gearbox bolts to the rear of the aluminium upper pan. CJ Motorsports' baffled HR/VHR pan returns oil \"from the rear of the upper pan directly into the sump\"."
+  },
+  "oilCapacity": {
+    "value": 4.9,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/details/car-service-manuals-nissan-2007-350z",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2007 350Z Owner's Manual (US), p.9-2 Capacities",
+        "note": "\"With oil filter change 5-1/8 qt 4-3/8 qt 4.9\""
+      },
+      {
+        "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/ZCoupe/2008/2008-ZCoupe-owner-manual.pdf",
+        "accessed": "2026-09-27",
+        "title": "Nissan 2008 350Z Owner's Manual (US), Capacities table (PDF p.277, printed 9-2)",
+        "note": "\"With oil filter change 5-1/8 qt 4-3/8 qt 4.9\""
+      }
+    ],
+    "note": "With a filter change. Without a filter change the 2008 owner's manual says 4.6 L and the 2007 one 4.4 L (the VQ35DE figure)."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://8020automotive.com/ultimate-nissan-vq35de-engine-guide/",
+          "accessed": "2026-09-27",
+          "title": "8020 Automotive (tuner blog): Ultimate Nissan VQ35DE Engine Guide",
+          "note": "\"The engine is known to have strong internals, with forged steel connecting rods, a forged crankshaft, and low-friction molybdenum-coated pistons.\""
+        },
+        {
+          "url": "https://www.engine-specs.net/nissan/vq35de.html",
+          "accessed": "2026-09-27",
+          "title": "engine-specs.net: Nissan VQ35DE / Renault V4Y - Engine Specs (AGGREGATOR)",
+          "note": "\"forged steel connecting rods, a micro-finished one-piece forged crankshaft\""
+        }
+      ],
+      "method": "Neither the 2007 service manual (disassembly and SDS) nor Nissan's press material states crank, rod or piston materials for the VQ35HR. The VQ35DE crank is described as forged by 8020 Automotive and engine-specs.net (non-Nissan); the HR crank keeps the stroke with larger main and pin journals, and Nissan's 2009 kit calls it \"micro-finished\". Assumed forged, as the DE."
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://8020automotive.com/ultimate-nissan-vq35de-engine-guide/",
+          "accessed": "2026-09-27",
+          "title": "8020 Automotive (tuner blog): Ultimate Nissan VQ35DE Engine Guide",
+          "note": "\"The engine is known to have strong internals, with forged steel connecting rods, a forged crankshaft, and low-friction molybdenum-coated pistons.\""
+        },
+        {
+          "url": "https://www.motorreviewer.com/engine.php?engine_id=40",
+          "accessed": "2026-09-27",
+          "title": "motorreviewer.com: Nissan 3.5L VQ35DE Engine Specs (AGGREGATOR)",
+          "note": "\"The engine got a forged crankshaft and connecting rods (their length is 144.2 mm), molybdenum coated pistons\""
+        }
+      ],
+      "method": "Neither the 2007 service manual (disassembly and SDS) nor Nissan's press material states crank, rod or piston materials for the VQ35HR. The VQ35DE rods are described as forged steel by non-Nissan sources; the HR rods are 7.6 mm longer (Nissan) with 9 mm bolts instead of 8 mm (engine-specs.net). Assumed forged, as the DE."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Neither the 2007 service manual (disassembly and SDS) nor Nissan's press material states crank, rod or piston materials for the VQ35HR. Nissan mentions only asymmetric skirts (HR) and molybdenum coating (DE). Cast aluminium is assumed because nothing says forged; this is the least certain of the three."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 450,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://mywikimotors.com/vq35de/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: Nissan VQ35DE Engine (VQ35HR) (AGGREGATOR)",
+              "note": "\"And VQ35HR stock internals may endure about 450 horsepower.\""
+            }
+          ],
+          "note": "The page does not say crank or wheel power; stored as crank power."
+        },
+        "context": "Aggregator claim (mywikimotors.com) with no boost, fuel, rpm or duration given. Forum threads that discuss HR stock-internal limits (my350z.com, 350z-tech.com, nicoclub) were blocked, so nothing from them is used. Treat it as a rough community figure, not a tested limit. Known track weak point: oil pick-up starvation under sustained cornering (see notes)."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "z33-jdm",
+      "name": "VQ35HR, Fairlady Z (Japan)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "2007-01",
+          "to": "2008-11"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/070111-01-j",
+            "accessed": "2026-09-27",
+            "title": "Nissan Japan newsroom release 070111-01-j: 「フェアレディZ」を一部改良 (2007/01/11)",
+            "note": "\"日産自動車株式会社（本社：東京都中央区銀座 社長：カルロス ゴーン）は、「フェアレディZ」を一部改良し、1月11日より全国一斉に発売する。 / VQ35HRエンジン [最高出力230kw(313PS)/6800rpm 最大トルク358N・m(36.5kgm)/4800rpm / 最高回転数7500rpm] 採用 / フェアレディZ Version NISMO |\nVQ35HR |\n6MT |\n4,399,500 |\n5M-ATx |\n☆ 4,494,000 |\""
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/080110-01-j",
+            "accessed": "2026-09-27",
+            "title": "Nissan Japan newsroom release 080110-01-j: 「フェアレディZ」にプレミアムカラーを追加 (2008/01/09)",
+            "note": "\"日産自動車株式会社（本社：東京都中央区銀座 社長：カルロス ゴーン）は、「フェアレディZ」にプレミアムカラーを追加し、1月10日より全国一斉に発売する。 / フェアレディZ |\nVQ35HR |\n6MT |\n4,095,000 |\n☆掲載写真車種 |\n5M-ATx |\n4,189,500 |\""
+          },
+          {
+            "url": "https://history.nissan.co.jp/04_sports.html",
+            "accessed": "2026-09-27",
+            "title": "Nissan: Webカタログバックナンバー (sports) dropdown of archived catalogues",
+            "note": "\"http://history.nissan.co.jp/Z/Z33/0701/index.html | ・2008.1 ＊掲載終了 / http://history.nissan.co.jp/Z/Z33/0801/index.html?page=w10 | ・2008.11 ＊掲載終了\""
+          }
+        ],
+        "note": "On sale 11 Jan 2007 (Nissan 070111-01-j) until the Z33 left Nissan's catalogue in 2008-11 (the Z34 went on sale 1 Dec 2008). Same rating for the 6MT and the 5M-ATx."
+      },
+      "fittedTo": ["Z33"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "EM-136, SDS General Specifications: no forced-induction components in section EM."
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+            "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\" (no forced induction listed)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "Naturally aspirated: no intercooler in section EM."
+          },
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (Overview, At a Glance)",
+            "note": "At a Glance: \"A next-generation 3.5-liter, 24-valve DOHC V6 (VQ35HR)\"."
+          }
+        ]
+      },
+      "injectorFlow": {
+        "value": 305,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Static flow rate: 335cc/min @ 3.5bar – 305cc/min @ 3bar\""
+          },
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Nissan 16600-JK20A\""
+          },
+          {
+            "url": "https://www.my4dsc.com/vq-fuel-injector-testing-comparison/",
+            "accessed": "2026-09-27",
+            "title": "my4dsc.com: Nissan VQ Fuel Injector Testing & Comparison (member test, 2018, upd. 2023)",
+            "note": "\"Green Denso – 309.25 cc/min\""
+          }
+        ],
+        "note": "Denso 12-hole injector, Nissan 16600-JK20A: 305 cc/min at 3 bar and 335 cc/min at 3.5 bar (injector shop); an enthusiast bench test (my4dsc.com) measured 309 cc/min at 3 bar. Neither is a Nissan figure; Nissan does not publish flow."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ],
+          "note": "Intake opens 2 deg BTDC and closes 66 deg ABDC; exhaust opens 68 deg BBDC and closes at TDC (intake phaser OFF). engine-specs.net repeats 248/248."
+        },
+        "exhaustDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ]
+        },
+        "intakeLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        },
+        "exhaustLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"Higher compression ratio (10.6:1 versus previous 10.3:1), higher redline, new eCVTCS (electromagnetic variable exhaust cam timing), twin knock sensors, improved cooling and stiffer engine block structure\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"油圧式の吸気カム側に設定された油圧式 のCVTC（Continuously Valiable valve Timing Control）では作動角を拡大する のに加えて、排気側にはe･VTC（電磁 式CVTC)を採用。\""
+          }
+        ],
+        "note": "Hydraulic CVTCS on the intake camshafts plus the electromagnetic eCVTCS (e-VTC) on the exhaust camshafts."
+      },
+      "revLimit": {
+        "value": 7500,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"a higher rev limit (increased to 7,500 rpm)\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"最高回転数7500rpmの実現\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA 2008 350Z brochure",
+            "note": "\"you towards a 7,500 rpm redline\""
+          }
+        ],
+        "note": "Nissan calls 7,500 rpm both the rev limit (press kit, \"最高回転数\") and the redline (brochure)."
+      },
+      "compressionRatio": {
+        "value": 10.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+            "accessed": "2026-09-27",
+            "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+            "note": "\"エンジン型式 | VQ35HR | / 総排気量 | 3498cc | / 内径×行程 | 95.5mm×81.4mm | / 圧縮比 | 10.6 |\""
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/FAIRLADY_Z/200207/10038241/",
+            "accessed": "2026-09-27",
+            "title": "GAZOO catalogue: フェアレディＺ grade page 10038241 (same catalogue ID/dataset as goo-net)",
+            "note": "\"エンジン型式 | VQ35HR | / 圧縮比 | 10.6 |\""
+          },
+          {
+            "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+            "accessed": "2026-09-27",
+            "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+            "note": "\"engine_spec[ 0][ 0]=new Array('VQ35HR'); / engine_spec[ 1][ 1]=new Array('95.5×81.4'); / engine_spec[ 1][ 2]=new Array('3.498'); / engine_spec[ 1][ 3]=new Array('10.6');\""
+          }
+        ],
+        "note": "Nissan's own back-number catalogue prints 10.6."
+      },
+      "output": {
+        "power": {
+          "value": 313,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+              "note": "\"最高出力 | 313ps(230kW)/6800rpm |\""
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/FAIRLADY_Z/200207/10038241/",
+              "accessed": "2026-09-27",
+              "title": "GAZOO catalogue: フェアレディＺ grade page 10038241 (same catalogue ID/dataset as goo-net)",
+              "note": "\"最高出力 | 313ps(230kW)/6800rpm |\""
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/fairlady_z/gradeid/32629/",
+              "accessed": "2026-09-27",
+              "title": "carview! catalogue: フェアレディZ(MT_3.5) (発売年月 2007年1月)",
+              "note": "\"最高出力 | 313ps（230kw）/6,800rpm |\""
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/fairlady_z/F003/M005G002/",
+              "accessed": "2026-09-27",
+              "title": "Car Sensor catalogue: フェアレディZ 3.5 (2007年1月～2008年11月生産モデル)",
+              "note": "\"最高出力 | 313ps |\""
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/070111-01-j",
+              "accessed": "2026-09-27",
+              "title": "Nissan Japan newsroom release 070111-01-j: 「フェアレディZ」を一部改良 (2007/01/11)",
+              "note": "\"VQ35HRエンジン [最高出力230kw(313PS)/6800rpm 最大トルク358N・m(36.5kgm)/4800rpm\""
+            },
+            {
+              "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+              "accessed": "2026-09-27",
+              "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+              "note": "\"engine_spec[ 1][ 4]=new Array('230（313）/6800');\""
+            }
+          ],
+          "note": "230 kW. JIS net (Nissan's catalogue: \"エンジン出力表示はすべて「ネット値」です\")."
+        },
+        "powerRpm": {
+          "value": 6800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+              "note": "\"最高出力 | 313ps(230kW)/6800rpm |\""
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/FAIRLADY_Z/200207/10038241/",
+              "accessed": "2026-09-27",
+              "title": "GAZOO catalogue: フェアレディＺ grade page 10038241 (same catalogue ID/dataset as goo-net)",
+              "note": "\"最高出力 | 313ps(230kW)/6800rpm |\""
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/fairlady_z/gradeid/32629/",
+              "accessed": "2026-09-27",
+              "title": "carview! catalogue: フェアレディZ(MT_3.5) (発売年月 2007年1月)",
+              "note": "\"最高出力 | 313ps（230kw）/6,800rpm |\""
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/070111-01-j",
+              "accessed": "2026-09-27",
+              "title": "Nissan Japan newsroom release 070111-01-j: 「フェアレディZ」を一部改良 (2007/01/11)",
+              "note": "\"VQ35HRエンジン [最高出力230kw(313PS)/6800rpm 最大トルク358N・m(36.5kgm)/4800rpm\""
+            },
+            {
+              "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+              "accessed": "2026-09-27",
+              "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+              "note": "\"engine_spec[ 1][ 4]=new Array('230（313）/6800');\""
+            }
+          ],
+          "note": "Car Sensor prints the power figure without its rpm, so it is not cited for the rpm."
+        },
+        "torque": {
+          "value": 36.5,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+              "note": "\"最大トルク | 36.5kg・m(358N・m)/4800rpm |\""
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/FAIRLADY_Z/200207/10038241/",
+              "accessed": "2026-09-27",
+              "title": "GAZOO catalogue: フェアレディＺ grade page 10038241 (same catalogue ID/dataset as goo-net)",
+              "note": "\"最大トルク | 36.5kg・m(358N・m)/4800rpm |\""
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/fairlady_z/gradeid/32629/",
+              "accessed": "2026-09-27",
+              "title": "carview! catalogue: フェアレディZ(MT_3.5) (発売年月 2007年1月)",
+              "note": "\"最大トルク | 36.5kg・m（358N・m）/4,800rpm |\""
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/fairlady_z/F003/M005G002/",
+              "accessed": "2026-09-27",
+              "title": "Car Sensor catalogue: フェアレディZ 3.5 (2007年1月～2008年11月生産モデル)",
+              "note": "\"最大トルク/回転数 n・m（kg・m）/rpm | 358（36.5）/4800 |\""
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/070111-01-j",
+              "accessed": "2026-09-27",
+              "title": "Nissan Japan newsroom release 070111-01-j: 「フェアレディZ」を一部改良 (2007/01/11)",
+              "note": "\"VQ35HRエンジン [最高出力230kw(313PS)/6800rpm 最大トルク358N・m(36.5kgm)/4800rpm\""
+            },
+            {
+              "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+              "accessed": "2026-09-27",
+              "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+              "note": "\"engine_spec[ 1][ 6]=new Array('358（36.5）/4800');\""
+            }
+          ],
+          "note": "358 N·m."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/FAIRLADY_Z/10038241/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: 日産 フェアレディＺ grade page 10038241",
+              "note": "\"最大トルク | 36.5kg・m(358N・m)/4800rpm |\""
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/FAIRLADY_Z/200207/10038241/",
+              "accessed": "2026-09-27",
+              "title": "GAZOO catalogue: フェアレディＺ grade page 10038241 (same catalogue ID/dataset as goo-net)",
+              "note": "\"最大トルク | 36.5kg・m(358N・m)/4800rpm |\""
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/fairlady_z/gradeid/32629/",
+              "accessed": "2026-09-27",
+              "title": "carview! catalogue: フェアレディZ(MT_3.5) (発売年月 2007年1月)",
+              "note": "\"最大トルク | 36.5kg・m（358N・m）/4,800rpm |\""
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/fairlady_z/F003/M005G002/",
+              "accessed": "2026-09-27",
+              "title": "Car Sensor catalogue: フェアレディZ 3.5 (2007年1月～2008年11月生産モデル)",
+              "note": "\"最大トルク/回転数 n・m（kg・m）/rpm | 358（36.5）/4800 |\""
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/070111-01-j",
+              "accessed": "2026-09-27",
+              "title": "Nissan Japan newsroom release 070111-01-j: 「フェアレディZ」を一部改良 (2007/01/11)",
+              "note": "\"VQ35HRエンジン [最高出力230kw(313PS)/6800rpm 最大トルク358N・m(36.5kgm)/4800rpm\""
+            },
+            {
+              "url": "https://history.nissan.co.jp/Z/Z33/0701/GRADE/main3.html",
+              "accessed": "2026-09-27",
+              "title": "Nissan official web catalogue back-number (history.nissan.co.jp), フェアレディZ 諸元表, listed 2007年1月～2008年1月; data file JS/car_parameter_data.js; column 1 = フェアレディZ; values in ［ ］ are 5M-ATx",
+              "note": "\"engine_spec[ 1][ 6]=new Array('358（36.5）/4800');\""
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "The 2007-06 Version NISMO Type 380RS (3.8 L VQ35HR-based, 350 PS, 300 cars) is a separate NISMO engine and is not modelled."
+    },
+    {
+      "id": "z33-eudm",
+      "name": "VQ35HR, 350Z (Europe, 313 PS)",
+      "markets": ["EUDM", "UKDM"],
+      "period": {
+        "value": {
+          "from": "2007-05",
+          "to": "2009-04"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://uk.nissannews.com/en-GB/releases/nissan-at-the-77th-international-geneva",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) newsroom: Geneva 2007 release (12 Feb 2007)",
+            "note": "\"Sales of the newly revised 350Z will begin in the UK in May.\""
+          },
+          {
+            "url": "https://uk.nissannews.com/en-GB/releases/2007-nissan-350z-prices-announced",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) newsroom: '2007 NISSAN 350Z PRICES ANNOUNCED' (27 Apr 2007)",
+            "note": "\"Vehicle deliveries are expected to start from mid May.\""
+          },
+          {
+            "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/350z/z33-facelift/209656/",
+            "accessed": "2026-09-27",
+            "title": "ADAC Autokatalog, technical data 'Nissan 350Z Coupé (06/07 - 04/09)' (Kategorie: Herstellerangabe)",
+            "note": "\"Modellstart 06/07\""
+          },
+          {
+            "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/350z/z33-facelift/209656/",
+            "accessed": "2026-09-27",
+            "title": "ADAC Autokatalog, technical data 'Nissan 350Z Coupé (06/07 - 04/09)' (Kategorie: Herstellerangabe)",
+            "note": "\"Modellende 04/09\""
+          }
+        ],
+        "note": "UK sales from May 2007 and Germany from June 2007; German sales ended 04/2009 (ADAC). No UK end date was found."
+      },
+      "fittedTo": ["Z33"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "EM-136, SDS General Specifications: no forced-induction components in section EM."
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+            "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\" (no forced induction listed)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "Naturally aspirated: no intercooler in section EM."
+          },
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (Overview, At a Glance)",
+            "note": "At a Glance: \"A next-generation 3.5-liter, 24-valve DOHC V6 (VQ35HR)\"."
+          }
+        ]
+      },
+      "injectorFlow": {
+        "value": 305,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Static flow rate: 335cc/min @ 3.5bar – 305cc/min @ 3bar\""
+          },
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Nissan 16600-JK20A\""
+          },
+          {
+            "url": "https://www.my4dsc.com/vq-fuel-injector-testing-comparison/",
+            "accessed": "2026-09-27",
+            "title": "my4dsc.com: Nissan VQ Fuel Injector Testing & Comparison (member test, 2018, upd. 2023)",
+            "note": "\"Green Denso – 309.25 cc/min\""
+          }
+        ],
+        "note": "Denso 12-hole injector, Nissan 16600-JK20A: 305 cc/min at 3 bar and 335 cc/min at 3.5 bar (injector shop); an enthusiast bench test (my4dsc.com) measured 309 cc/min at 3 bar. Neither is a Nissan figure; Nissan does not publish flow."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ],
+          "note": "Intake opens 2 deg BTDC and closes 66 deg ABDC; exhaust opens 68 deg BBDC and closes at TDC (intake phaser OFF). engine-specs.net repeats 248/248."
+        },
+        "exhaustDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ]
+        },
+        "intakeLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        },
+        "exhaustLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"Higher compression ratio (10.6:1 versus previous 10.3:1), higher redline, new eCVTCS (electromagnetic variable exhaust cam timing), twin knock sensors, improved cooling and stiffer engine block structure\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"油圧式の吸気カム側に設定された油圧式 のCVTC（Continuously Valiable valve Timing Control）では作動角を拡大する のに加えて、排気側にはe･VTC（電磁 式CVTC)を採用。\""
+          }
+        ],
+        "note": "Hydraulic CVTCS on the intake camshafts plus the electromagnetic eCVTCS (e-VTC) on the exhaust camshafts."
+      },
+      "revLimit": {
+        "value": 7500,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"a higher rev limit (increased to 7,500 rpm)\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"最高回転数7500rpmの実現\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA 2008 350Z brochure",
+            "note": "\"you towards a 7,500 rpm redline\""
+          }
+        ],
+        "note": "Nissan calls 7,500 rpm both the rev limit (press kit, \"最高回転数\") and the redline (brochure)."
+      },
+      "compressionRatio": {
+        "value": 10.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://uk.nissannews.com/en-GB/releases/nissan-at-the-77th-international-geneva",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) newsroom: Geneva 2007 release (12 Feb 2007)",
+            "note": "\"an increase in compression ratio from 10.3 to 10.6\""
+          },
+          {
+            "url": "https://www.auto-preisliste.de/download-preislisten-aller-marken/54-nissan/2135-nissan-350z-2002-2009/32213-2007-08-preisliste-nissan-350z-coupe-350z-roadster",
+            "accessed": "2026-09-27",
+            "title": "Nissan Center Europe (Germany) price list 350Z / 350Z Roadster (archive file named 2007-08; document says 'Preise entsprechen dem Stand vom 01.04.08'), page 8 \"Die technischen Daten\" (archived PDF on auto-preisliste.de; quote read from rendered pages de_preislisten/p0708_page8.png / p0708_page9.png, OCR text in the .txt)",
+            "note": "\"Verdichtung | 10,6:1\""
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 230,
+          "unit": "kW",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/nissan-at-the-77th-international-geneva",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: 'NISSAN AT THE 77TH INTERNATIONAL GENEVA MOTOR SHOW 2007' (12 Feb 2007)",
+              "note": "\"power has risen to 313PS (230kW) at 6800rpm and torque is now rated at 358Nm at 4800rpm, while the maximum engine speed has increased by 500rpm to 7500rpm.\""
+            },
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/2007-nissan-350z-prices-announced",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: '2007 NISSAN 350Z PRICES ANNOUNCED' (27 Apr 2007)",
+              "note": "\"Power is increased by 13PS giving a total of 313PS at 6800rpm with a further 500rpm added to the top end of the rev range – now standing at 7500rpm.\""
+            },
+            {
+              "url": "https://www.auto-preisliste.de/download-preislisten-aller-marken/54-nissan/2135-nissan-350z-2002-2009/32213-2007-08-preisliste-nissan-350z-coupe-350z-roadster",
+              "accessed": "2026-09-27",
+              "title": "Nissan Center Europe (Germany) price list 350Z / 350Z Roadster (archive file named 2007-08; document says 'Preise entsprechen dem Stand vom 01.04.08'), page 8 \"Die technischen Daten\" (archived PDF on auto-preisliste.de; quote read from rendered pages de_preislisten/p0708_page8.png / p0708_page9.png, OCR text in the .txt)",
+              "note": "\"Leistung | 230 (313) / 6.800\""
+            },
+            {
+              "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/350z/z33-facelift/209656/",
+              "accessed": "2026-09-27",
+              "title": "ADAC Autokatalog, technical data 'Nissan 350Z Coupé (06/07 - 04/09)' (Kategorie: Herstellerangabe)",
+              "note": "\"Leistung maximal in kW (Systemleistung) 230 Leistung maximal in PS (Systemleistung) 313\""
+            }
+          ],
+          "note": "313 PS. Rated to 1999/99/EC (the amendment of 80/1269/EEC), per the UK brochure footnote. Performance figures were measured on 98 RON."
+        },
+        "powerRpm": {
+          "value": 6800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/nissan-at-the-77th-international-geneva",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: 'NISSAN AT THE 77TH INTERNATIONAL GENEVA MOTOR SHOW 2007' (12 Feb 2007)",
+              "note": "\"power has risen to 313PS (230kW) at 6800rpm and torque is now rated at 358Nm at 4800rpm, while the maximum engine speed has increased by 500rpm to 7500rpm.\""
+            },
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/2007-nissan-350z-prices-announced",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: '2007 NISSAN 350Z PRICES ANNOUNCED' (27 Apr 2007)",
+              "note": "\"Power is increased by 13PS giving a total of 313PS at 6800rpm with a further 500rpm added to the top end of the rev range – now standing at 7500rpm.\""
+            },
+            {
+              "url": "https://www.auto-preisliste.de/download-preislisten-aller-marken/54-nissan/2135-nissan-350z-2002-2009/32213-2007-08-preisliste-nissan-350z-coupe-350z-roadster",
+              "accessed": "2026-09-27",
+              "title": "Nissan Center Europe (Germany) price list 350Z / 350Z Roadster (archive file named 2007-08; document says 'Preise entsprechen dem Stand vom 01.04.08'), page 8 \"Die technischen Daten\" (archived PDF on auto-preisliste.de; quote read from rendered pages de_preislisten/p0708_page8.png / p0708_page9.png, OCR text in the .txt)",
+              "note": "\"Leistung | 230 (313) / 6.800\""
+            }
+          ]
+        },
+        "torque": {
+          "value": 358,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/2007-nissan-350z-prices-announced",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: '2007 NISSAN 350Z PRICES ANNOUNCED' (27 Apr 2007)",
+              "note": "\"90% of the 358Nm torque (up 5Nm) being achieved at just 2000rpm (maximum at 4800rpm)\""
+            },
+            {
+              "url": "https://europe.nissannews.com/en-GB/releases/nissan-at-geneva-motor-show-2007",
+              "accessed": "2026-09-27",
+              "title": "Nissan Europe newsroom: 'Nissan at Geneva Motor Show 2007' (Trappes, 12 Feb 2007)",
+              "note": "\"power has risen to 313PS (230kW) at 6800rpm and torque is now rated at 358Nm at 4800rpm, while the maximum engine speed has increased by 500rpm to 7500rpm.\""
+            },
+            {
+              "url": "https://www.auto-preisliste.de/download-preislisten-aller-marken/54-nissan/2135-nissan-350z-2002-2009/32213-2007-08-preisliste-nissan-350z-coupe-350z-roadster",
+              "accessed": "2026-09-27",
+              "title": "Nissan Center Europe (Germany) price list 350Z / 350Z Roadster (archive file named 2007-08; document says 'Preise entsprechen dem Stand vom 01.04.08'), page 8 \"Die technischen Daten\" (archived PDF on auto-preisliste.de; quote read from rendered pages de_preislisten/p0708_page8.png / p0708_page9.png, OCR text in the .txt)",
+              "note": "\"Maximales Drehmoment | 358 / 4.800\""
+            },
+            {
+              "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/350z/z33-facelift/209656/",
+              "accessed": "2026-09-27",
+              "title": "ADAC Autokatalog, technical data 'Nissan 350Z Coupé (06/07 - 04/09)' (Kategorie: Herstellerangabe)",
+              "note": "\"Drehmoment (Systemleistung) 358 Nm\""
+            }
+          ],
+          "note": "Nissan GB: \"90% of the 358Nm torque (up 5Nm) being achieved at just 2000rpm\"."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://uk.nissannews.com/en-GB/releases/2007-nissan-350z-prices-announced",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor (GB) newsroom: '2007 NISSAN 350Z PRICES ANNOUNCED' (27 Apr 2007)",
+              "note": "\"90% of the 358Nm torque (up 5Nm) being achieved at just 2000rpm (maximum at 4800rpm)\""
+            },
+            {
+              "url": "https://europe.nissannews.com/en-GB/releases/nissan-at-geneva-motor-show-2007",
+              "accessed": "2026-09-27",
+              "title": "Nissan Europe newsroom: 'Nissan at Geneva Motor Show 2007' (Trappes, 12 Feb 2007)",
+              "note": "\"power has risen to 313PS (230kW) at 6800rpm and torque is now rated at 358Nm at 4800rpm, while the maximum engine speed has increased by 500rpm to 7500rpm.\""
+            },
+            {
+              "url": "https://www.auto-preisliste.de/download-preislisten-aller-marken/54-nissan/2135-nissan-350z-2002-2009/32213-2007-08-preisliste-nissan-350z-coupe-350z-roadster",
+              "accessed": "2026-09-27",
+              "title": "Nissan Center Europe (Germany) price list 350Z / 350Z Roadster (archive file named 2007-08; document says 'Preise entsprechen dem Stand vom 01.04.08'), page 8 \"Die technischen Daten\" (archived PDF on auto-preisliste.de; quote read from rendered pages de_preislisten/p0708_page8.png / p0708_page9.png, OCR text in the .txt)",
+              "note": "\"Maximales Drehmoment | 358 / 4.800\""
+            }
+          ]
+        },
+        "standard": "EEC-80/1269"
+      },
+      "notes": "European MY07 coupe (Z33E) and Roadster (Z33T). No factory torque curve was found for this engine."
+    },
+    {
+      "id": "z33-usdm",
+      "name": "VQ35HR, 350Z (USA)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2007-01",
+          "to": "2009"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (incl. NISMO 350Z section)",
+            "note": "\"The 2007 Nissan 350Z, scheduled to go on sale in January 2007\""
+          },
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/the-2009-nissan-line-up-charting-the-changes",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: The 2009 Nissan Line-up - Charting the Changes (July 11, 2008)",
+            "note": "\"The 2009 Nissan 350Z Roadster goes on sale in September 2008.\""
+          }
+        ],
+        "note": "MY2007 on sale January 2007; the coupe ended with MY2008 and the roadster with MY2009 (on sale September 2008). No Nissan end-of-production date was found."
+      },
+      "fittedTo": ["Z33"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "EM-136, SDS General Specifications: no forced-induction components in section EM."
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan North America: 2008 Nissan 350Z brochure (US), specifications page (PDF via auto-brochures.com)",
+            "note": "Specifications: \"VQ35HR – 3.5-liter DOHC 24-valve V6 aluminum-alloy engine\" (no forced induction listed)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+            "note": "Naturally aspirated: no intercooler in section EM."
+          },
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (Overview, At a Glance)",
+            "note": "At a Glance: \"A next-generation 3.5-liter, 24-valve DOHC V6 (VQ35HR)\"."
+          }
+        ]
+      },
+      "injectorFlow": {
+        "value": 305,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Static flow rate: 335cc/min @ 3.5bar – 305cc/min @ 3bar\""
+          },
+          {
+            "url": "https://performancefuelinjection.ca/product/nissan-350z-g35-vq35de-injectors/",
+            "accessed": "2026-09-27",
+            "title": "Performance Fuel Injection (injector service vendor): 6 - Nissan DENSO VQ35HR Fuel injectors",
+            "note": "\"Nissan 16600-JK20A\""
+          },
+          {
+            "url": "https://www.my4dsc.com/vq-fuel-injector-testing-comparison/",
+            "accessed": "2026-09-27",
+            "title": "my4dsc.com: Nissan VQ Fuel Injector Testing & Comparison (member test, 2018, upd. 2023)",
+            "note": "\"Green Denso – 309.25 cc/min\""
+          }
+        ],
+        "note": "Denso 12-hole injector, Nissan 16600-JK20A: 305 cc/min at 3 bar and 335 cc/min at 3.5 bar (injector shop); an enthusiast bench test (my4dsc.com) measured 309 cc/min at 3 bar. Neither is a Nissan figure; Nissan does not publish flow."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ],
+          "note": "Intake opens 2 deg BTDC and closes 66 deg ABDC; exhaust opens 68 deg BBDC and closes at TDC (intake phaser OFF). engine-specs.net repeats 248/248."
+        },
+        "exhaustDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan 2007 350Z Service Manual, Section EM (VQ35HR), Revision 2006 November; EM-136 SDS General Specifications",
+              "note": "\"Valve timing (Intake valve timing con- trol - “OFF”) Unit: degree a b c d e f 248 248 2 66 0 68\""
+            }
+          ]
+        },
+        "intakeLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        },
+        "exhaustLift": {
+          "value": 10.2,
+          "unit": "mm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://drive.google.com/open?id=1nlRdLC43HJC-Gp4wYhBiFuaZTyHcExVq",
+              "accessed": "2026-09-27",
+              "title": "Nissan Motor Co.: 2007 Nissan 350Z Service Manual, section EM \"Engine Mechanical\" (VQ35HR), revision November 2006 (PDF copy on Google Drive, linked from carmanualsclub.com)",
+              "note": "EM-100 and SDS EM-141, valve spring: \"Installation height : 37.0 mm (1.457 in)\" ... \"Height during valve open : 26.8 mm (1.055 in)\"."
+            }
+          ],
+          "method": "Nissan does not publish valve lift. The service manual's valve-spring data (2007 manual EM-100 and EM-141) give the installed height (37.00 mm) and the spring height with the valve fully open (26.8 mm); the difference, 10.2 mm, is the full valve lift the spring is specified for. The same springs are used on intake and exhaust. The lobes (cam height 45.865-46.055 mm intake) are 1 mm taller than the standard VQ35DE's, like the rev-up DE. mywikimotors.com (aggregator) prints 10.54 mm."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"Higher compression ratio (10.6:1 versus previous 10.3:1), higher redline, new eCVTCS (electromagnetic variable exhaust cam timing), twin knock sensors, improved cooling and stiffer engine block structure\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"油圧式の吸気カム側に設定された油圧式 のCVTC（Continuously Valiable valve Timing Control）では作動角を拡大する のに加えて、排気側にはe･VTC（電磁 式CVTC)を採用。\""
+          }
+        ],
+        "note": "Hydraulic CVTCS on the intake camshafts plus the electromagnetic eCVTCS (e-VTC) on the exhaust camshafts."
+      },
+      "revLimit": {
+        "value": 7500,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit",
+            "note": "\"a higher rev limit (increased to 7,500 rpm)\""
+          },
+          {
+            "url": "https://www.nissan-global.com/JP/DOCUMENT/PDF/TECHNOLOGY/TECHNICAL/VQ35HR_JP.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor Co.: technology sheet \"VQ35HRエンジン・VQ25HRエンジン\" (2008-3)",
+            "note": "\"最高回転数7500rpmの実現\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA 2008 350Z brochure",
+            "note": "\"you towards a 7,500 rpm redline\""
+          }
+        ],
+        "note": "Nissan calls 7,500 rpm both the rev limit (press kit, \"最高回転数\") and the redline (brochure)."
+      },
+      "compressionRatio": {
+        "value": 10.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+            "accessed": "2026-09-27",
+            "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (Overview, At a Glance)",
+            "note": "Overview: \"higher compression ratio (from 10.3:1 to 10.6:1)\"."
+          },
+          {
+            "url": "https://www.epa.gov/sites/default/files/2016-07/08tstcar.csv",
+            "accessed": "2026-09-27",
+            "title": "US EPA: Fuel Economy Test Car List data, MY2008 (08tstcar.csv; columns ...,VC_RTD_HP_MSR (rated hp),...,TRNS,DRV_SYS_CD,TOD_CD,VC_DSN_ETW_MSR (ETW),VC_CMPRSN_RAT_MSR,VC_AXLE_RAT_MSR (axle ratio),VC_NV_RAT_MSR (N/V))",
+            "note": "\"2008,380,Nissan,44,FEB04,1,350Z,C,213,N,306,,,,,,102,M6,R,2,3625,10.6,3.54,36.7\""
+          }
+        ],
+        "note": "EPA test-car list, MY2008 350Z 6MT: compression-ratio column 10.6."
+      },
+      "output": {
+        "power": {
+          "value": 306,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (incl. NISMO 350Z section)",
+              "note": "\"Every 350Z offers a new VQ35HR 3.5-liter V6 engine, which for 2007 produces 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-z-receives-306-horsepower-next-generation-3-5-liter-v6-other-refinements",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2007 Nissan Z Receives 306 Horsepower Next-Generation 3.5-liter V6 (release)",
+              "note": "\"* All horsepower ratings are per SAE J1349 JUN1995\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2008-350z-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2008 Nissan 350Z Coupe and Roadster Press Kit",
+              "note": "\"Every 350Z offers a VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2009-nissan-350z-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2009 Nissan 350Z Roadster Press Kit",
+              "note": "\"Every 2009 350Z Roadster features a standard VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+              "accessed": "2026-09-27",
+              "title": "Nissan North America: 2008 Nissan Z Coupe and Z Roadster brochure (auto-brochures.com copy), specifications",
+              "note": "\"Horsepower – 306 hp @ 6,800 rpm Torque – 268 lb-ft @ 4,800 rpm\""
+            },
+            {
+              "url": "https://www.theautochannel.com/news/2007/03/15/040408.html",
+              "accessed": "2026-09-27",
+              "title": "The Auto Channel: 2007 Nissan 350Z Grand Touring Coupe Review, SPECIFICATIONS box (2007 Grand Touring 6MT)",
+              "note": "\"Horsepower 306 @ 6800 rpm Torque (lb-ft) 268 @ 4800 rpm\""
+            },
+            {
+              "url": "https://www.epa.gov/sites/default/files/2016-07/08tstcar.csv",
+              "accessed": "2026-09-27",
+              "title": "US EPA: Fuel Economy Test Car List data, MY2008 (08tstcar.csv; columns ...,VC_RTD_HP_MSR (rated hp),...,TRNS,DRV_SYS_CD,TOD_CD,VC_DSN_ETW_MSR (ETW),VC_CMPRSN_RAT_MSR,VC_AXLE_RAT_MSR (axle ratio),VC_NV_RAT_MSR (N/V))",
+              "note": "\"2008,380,Nissan,44,FEB03,1,350Z,C,213,N,306,,,,,,102,S5\""
+            }
+          ],
+          "note": "SAE J1349 JUN1995 (Nissan footnote). EPA's MY2007 test-car rows still carry 300/287 hp, an apparently stale field; every Nissan MY2007-2009 document says 306 hp."
+        },
+        "powerRpm": {
+          "value": 6800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (incl. NISMO 350Z section)",
+              "note": "\"Every 350Z offers a new VQ35HR 3.5-liter V6 engine, which for 2007 produces 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2008-350z-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2008 Nissan 350Z Coupe and Roadster Press Kit",
+              "note": "\"Every 350Z offers a VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2009-nissan-350z-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2009 Nissan 350Z Roadster Press Kit",
+              "note": "\"Every 2009 350Z Roadster features a standard VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+              "accessed": "2026-09-27",
+              "title": "Nissan North America: 2008 Nissan Z Coupe and Z Roadster brochure (auto-brochures.com copy), specifications",
+              "note": "\"Horsepower – 306 hp @ 6,800 rpm Torque – 268 lb-ft @ 4,800 rpm\""
+            },
+            {
+              "url": "https://www.theautochannel.com/news/2007/03/15/040408.html",
+              "accessed": "2026-09-27",
+              "title": "The Auto Channel: 2007 Nissan 350Z Grand Touring Coupe Review, SPECIFICATIONS box (2007 Grand Touring 6MT)",
+              "note": "\"Horsepower 306 @ 6800 rpm Torque (lb-ft) 268 @ 4800 rpm\""
+            }
+          ]
+        },
+        "torque": {
+          "value": 268,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (incl. NISMO 350Z section)",
+              "note": "\"Every 350Z offers a new VQ35HR 3.5-liter V6 engine, which for 2007 produces 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2008-350z-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2008 Nissan 350Z Coupe and Roadster Press Kit",
+              "note": "\"Every 350Z offers a VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2009-nissan-350z-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2009 Nissan 350Z Roadster Press Kit",
+              "note": "\"Every 2009 350Z Roadster features a standard VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+              "accessed": "2026-09-27",
+              "title": "Nissan North America: 2008 Nissan Z Coupe and Z Roadster brochure (auto-brochures.com copy), specifications",
+              "note": "\"Horsepower – 306 hp @ 6,800 rpm Torque – 268 lb-ft @ 4,800 rpm\""
+            },
+            {
+              "url": "https://www.theautochannel.com/news/2007/03/15/040408.html",
+              "accessed": "2026-09-27",
+              "title": "The Auto Channel: 2007 Nissan 350Z Grand Touring Coupe Review, SPECIFICATIONS box (2007 Grand Touring 6MT)",
+              "note": "\"Horsepower 306 @ 6800 rpm Torque (lb-ft) 268 @ 4800 rpm\""
+            }
+          ],
+          "note": "Nissan: \"more than 90% of torque available between 2,000 and 7,000 RPM\"."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2007-nissan-350z-coupe-and-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2007 Nissan 350Z Coupe and Roadster Press Kit (incl. NISMO 350Z section)",
+              "note": "\"Every 350Z offers a new VQ35HR 3.5-liter V6 engine, which for 2007 produces 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2008-350z-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2008 Nissan 350Z Coupe and Roadster Press Kit",
+              "note": "\"Every 350Z offers a VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://usa.nissannews.com/en-US/releases/2009-nissan-350z-roadster-press-kit",
+              "accessed": "2026-09-27",
+              "title": "Nissan USA newsroom: 2009 Nissan 350Z Roadster Press Kit",
+              "note": "\"Every 2009 350Z Roadster features a standard VQ35HR 3.5-liter V6 engine producing 306 horsepower @ 6,800 RPM and 268 lb-ft of torque @ 4,800 RPM\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Nissan/370Z/Nissan_US%20350Z_2008.pdf",
+              "accessed": "2026-09-27",
+              "title": "Nissan North America: 2008 Nissan Z Coupe and Z Roadster brochure (auto-brochures.com copy), specifications",
+              "note": "\"Horsepower – 306 hp @ 6,800 rpm Torque – 268 lb-ft @ 4,800 rpm\""
+            },
+            {
+              "url": "https://www.theautochannel.com/news/2007/03/15/040408.html",
+              "accessed": "2026-09-27",
+              "title": "The Auto Channel: 2007 Nissan 350Z Grand Touring Coupe Review, SPECIFICATIONS box (2007 Grand Touring 6MT)",
+              "note": "\"Horsepower 306 @ 6800 rpm Torque (lb-ft) 268 @ 4800 rpm\""
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "notes": "Every MY2007-2009 US model and gearbox, NISMO 350Z included. Nissan publishes no separate redline for the automatic."
+    }
+  ]
+}

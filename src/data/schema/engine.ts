@@ -35,6 +35,23 @@ const Output = z.strictObject({
   standard: RatingStandardSchema,
 });
 
+/**
+ * A full-load torque curve as the maker published it: [rpm, torque] pairs in
+ * `unit`, rising rpm. Only where a factory table exists (e.g. Nissan Europe's
+ * 350Z data sheets); Phase 2 calibrates against it as well as the peaks.
+ */
+const TorqueCurve = sourced(
+  z
+    .array(z.tuple([z.number().positive(), z.number().positive()]))
+    .min(3)
+    .refine((pts) => pts.every((p, i) => i === 0 || p[0] > (pts[i - 1]?.[0] ?? 0)), {
+      message: 'Curve points must be in rising rpm order.',
+    }),
+).refine((c) => (UNITS.torque as readonly string[]).includes(c.unit ?? ''), {
+  message: `Torque curve needs a unit: one of ${UNITS.torque.join(', ')}.`,
+  path: ['unit'],
+});
+
 const Turbo = z.strictObject({
   /** Maker and model as published, e.g. "Hitachi HT18" or "Toyota CT12B". */
   model: sourced(z.string().min(1)),
@@ -67,8 +84,15 @@ export const EngineVariantSchema = z.strictObject({
   intercooler: sourced(z.enum(['none', 'air-to-air-front', 'air-to-air-side', 'air-to-water'])),
   injectorFlow: measured(UNITS.flow).optional(),
   cams: Cams.optional(),
-  variableValveTiming: sourced(z.enum(['none', 'intake-on-off', 'intake-continuous'])),
+  /**
+   * Cam phasing. `intake-and-exhaust-continuous` covers BMW double VANOS and
+   * Nissan's CVTCS intake plus eCVTCS exhaust (VQ35HR).
+   */
+  variableValveTiming: sourced(
+    z.enum(['none', 'intake-on-off', 'intake-continuous', 'intake-and-exhaust-continuous']),
+  ),
   output: Output,
+  torqueCurve: TorqueCurve.optional(),
   /** Tachometer redline. */
   redline: Rpm.optional(),
   /** Fuel-cut rev limit, where the factory figure is published. */

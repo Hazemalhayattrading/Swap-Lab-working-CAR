@@ -147,6 +147,38 @@ describe('EngineSchema', () => {
     );
   });
 
+  it('accepts cam phasing on both camshafts (double VANOS, CVTCS + eCVTCS)', () => {
+    const r = EngineSchema.safeParse(
+      engine({
+        variants: [
+          variant({
+            induction: v('naturally-aspirated'),
+            turbos: undefined,
+            intercooler: v('none'),
+            variableValveTiming: v('intake-and-exhaust-continuous'),
+          }),
+        ],
+      }),
+    );
+    expect(messages(r)).toBe('');
+  });
+
+  it('accepts a published torque curve and rejects unsorted or unit-less ones', () => {
+    const curve = (value: unknown, unit?: string) =>
+      EngineSchema.safeParse(
+        engine({ variants: [variant({ torqueCurve: { ...v(value, unit) } })] }),
+      );
+    const points = [
+      [2000, 314],
+      [4800, 363],
+      [6600, 288],
+    ];
+    expect(messages(curve(points, 'Nm'))).toBe('');
+    expect(messages(curve([points[1], points[0], points[2]], 'Nm'))).toContain('rising rpm');
+    expect(messages(curve(points))).toContain('Torque curve needs a unit');
+    expect(curve(points.slice(0, 2), 'Nm').success).toBe(false);
+  });
+
   it('rejects a "verified" rating backed by one site', () => {
     const output = {
       ...variant().output,
@@ -183,6 +215,20 @@ describe('CarSchema', () => {
       car({ trims: [trim({ period: v({ from: '1999', to: '2002' }) })] }),
     );
     expect(messages(r)).toBe('');
+  });
+
+  it('accepts automated-manual gearboxes, wagons and speed-sensing clutch LSDs', () => {
+    const transmissions = [
+      { ...car().transmissions[0], id: 'smg', name: '6-speed SMG II', type: 'automated-manual' },
+    ];
+    const trims = [
+      trim({
+        transmission: 'smg',
+        bodyStyle: 'wagon',
+        differential: v('speed-sensing-clutch-lsd'),
+      }),
+    ];
+    expect(messages(CarSchema.safeParse(car({ transmissions, trims })))).toBe('');
   });
 
   it('rejects malformed tyre sizes', () => {

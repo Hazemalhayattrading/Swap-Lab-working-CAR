@@ -27,6 +27,7 @@ The owner builds this from his phone and desktop through Claude Code sessions. H
 10. **Ask before:** adding paid services, moving assets off GitHub Pages, adding a backend, adding big dependencies (over 200 KB gzipped), or changing the design direction.
 11. **Log decisions** in `docs/decisions.md` (date, decision, why, alternatives considered).
 12. **New feature ideas** go to `docs/ideas.md`. Build them only once they're approved.
+13. **Never accept terms without asking.** Never accept terms of use, licence agreements or download agreements, and never sign up for anything, on any site without asking the owner first. This covers research agents, scripts and browser automation too, so pass the rule on to every agent you start. If a page or file sits behind one of these, stop and ask.
 
 ## Skills (in `.claude/skills/`)
 Use these whenever they apply:
