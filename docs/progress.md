@@ -245,11 +245,11 @@ This part covers the Nissan 350Z / Fairlady Z (Z33) and the BMW E46 330i/330Ci a
 5. **Open questions in the sources:** the US ZHP manual's final drive for 03/2003-02/2004 builds (ETK says the 3.07 part starts 03/2004; BMW NA says 3.07 from launch), the E46 M3 oil capacity (5.5 L training manual vs 5.0 L owner's manual), the S54 Z3 M peak-power rpm, and whether a ZHP convertible automatic existed (not listed).
 6. **Not found, so left out:** JDM 350Z speed limiter figure, 350Z ECU part numbers, VQ35HR cam lift, S54 injector flow at a stated pressure, M54 cam durations and outline dimensions, and 2000-2001 European 330i weights.
 7. **Shopping list (350Z and E46):**
-   - No clean, textured, stock-bodied free 350Z exists. The best body (barking_dogo, CC-BY) is untextured, and its uploader also posts extracted game models, so it's your call. Tahseen's old Blend Swap model is the fallback.
+   - No clean, textured, stock-bodied free 350Z exists. Your decision (2026-09-27): not barking_dogo's model, because its uploader also posts extracted game models. The plan is tahseen's old Blend Swap model, which passed the originality and CC-BY check on the live pages; if it can't be used, the 350Z stays a grey clay placeholder. Paid or commissioned is a later decision.
    - The best free 330i is still Ricy's M Sport sedan, with no interior; the M3 pick is MMC Works' CC-BY model, which carries a NoAI clause (handled per rule 5; no image of it was viewed) and whose author says the proportions are approximate.
    - CGTrader, TurboSquid, Fab, 3DModels.org and cgmood couldn't be opened this session. SQUIR's M3 is Editorial-only.
    - Engine leads: one whole S54 of unknown origin (CC-BY), a VQ35DE block on GrabCAD (non-commercial terms), nothing for the M54 or VQ35HR.
-8. **Terms-of-use note:** a research agent accepted the Nissan Europe newsroom's download agreement to open its spec sheets. Only facts are cited; no files are re-hosted (see decisions).
+8. **Terms-of-use note:** a research agent accepted the Nissan Europe newsroom's download agreement to open its spec sheets. Only facts are cited; no files are re-hosted (see decisions). Since 2026-09-27 that needs your approval first (CLAUDE.md rule 13).
 9. **The 350Z data file is 2.3 MB**, mostly repeated source notes on 126 trims. It isn't loaded by the site yet; a Phase 2 loader should strip provenance for the client bundle.
 10. **Carried over:** the procedural floor, performance unmeasured on real hardware, asset pipeline scope, no floor reflections, and no code licence chosen.
 

@@ -316,3 +316,19 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 
 - **Decision:** `nissan-vq-de` (2003-2006 350Z gearboxes) and `nissan-vq-hr` (2007-on, shared with the VQ37VHR) are separate patterns; `bmw-m54-s54` covers the M54 and S54, which the ETK shows bolting to the same gearbox part numbers.
 - **Why:** Swap vendors (TDConversions, Grannas, LOJ) sell DE and HR adapters separately and say DE-pattern parts don't fit the HR. This matters for the compatibility checker: a VQ35HR swap into a 2003-2006 350Z needs the later gearbox or an adapter.
+
+## 2026-09-27 (owner decisions after Phase 1, part 2)
+
+### 350Z body model
+
+- **Decision (owner):** Don't use barking_dogo's Sketchfab 350Z. Plan on tahseen's Blend Swap 350Z (blend 4442) if it's original and CC0 or CC-BY; otherwise the car uses the grey clay placeholder. Paid or commissioned models are a later decision.
+- **Why:** barking_dogo's account publishes models it says it extracted from a game ("Emperor: Battle for Dune") under CC-BY, so its licence labels can't be trusted, however clean this one model looks.
+- **The check (2026-09-27, on the live pages):** it passes as far as public pages can show. The listing says CC-BY with no NoAI wording. The description says "I modeled it in Blender 2.61", and the comment thread shows other modellers critiquing its edge loops and the uploader answering as the modeller. The uploader's 12 uploads since 2010 are all native Blender files. Their descriptions either say the uploader modelled them or only describe the render, and none mentions a game, a rip or someone else's model. It can't be proven original from public pages (no reverse-image search). Details are in the shopping list.
+- **Alternatives:** barking_dogo's model (rejected by the owner); a paid or commissioned model (a later decision).
+
+### Never accept terms, licence agreements, sign-ups or download agreements without asking (CLAUDE.md rule 13)
+
+- **Decision (owner):** No session, research agent, script or browser automation accepts terms of use, a licence agreement or a download agreement, or signs up on any site, without asking the owner first. If a page or file sits behind one of these, stop and ask. Sessions pass the rule on to every agent they start.
+- **Why:** In part 2 a research agent clicked "Accept" on the Nissan Europe newsroom's download agreement to open the 350Z spec sheets. Accepting terms is an agreement made on the owner's behalf, so it's the owner's call.
+- **Scope:** From 2026-09-27 on. The part 2 facts cited from those spec sheets are unchanged, and no files were re-hosted. The Blend Swap 350Z download probably needs an account (its download link refused an anonymous request), so it waits for the owner.
+- **Alternatives:** Let sessions accept read-only click-through terms and disclose them afterwards, as happened in part 2.
