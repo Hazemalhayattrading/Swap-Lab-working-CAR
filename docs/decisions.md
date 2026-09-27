@@ -332,3 +332,25 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Why:** In part 2 a research agent clicked "Accept" on the Nissan Europe newsroom's download agreement to open the 350Z spec sheets. Accepting terms is an agreement made on the owner's behalf, so it's the owner's call.
 - **Scope:** From 2026-09-27 on. The part 2 facts cited from those spec sheets are unchanged, and no files were re-hosted. The Blend Swap 350Z download probably needs an account (its download link refused an anonymous request), so it waits for the owner.
 - **Alternatives:** Let sessions accept read-only click-through terms and disclose them afterwards, as happened in part 2.
+
+## 2026-09-27 (Phase 1, part 3a: RX-7 FD3S, 13B-REW, 20B-REW)
+
+### Rotary engines get their own schema shape
+
+- **Decision:** `EngineSchema` is now a union on `layout`. Piston engines are unchanged. A rotary (`layout: "rotary"`) has:
+  - `rotors` instead of `cylinders`;
+  - `rotor`: the generating radius R, eccentricity e, rotor housing width B and the maker's chamber displacement, instead of bore and stroke;
+  - optional `ports`: each intake port set (primary, secondary, auxiliary; side or peripheral) and the exhaust port, with the maker's port timing;
+  - `sparkPlugsPerRotor`, and `materials` for the rotor housings, side housings and rotors instead of block and head;
+  - rotary `internals`: eccentric shaft, apex seals and their width, and reported limits whose components are rotary parts (apex seals, side seals, rotor housing, eccentric shaft, rotors, rotor bearings, stationary gear, coolant seals, oil pump).
+
+  Rotary variants have no `cams` or `variableValveTiming`. Every variant may now carry `secondaryInjectorFlow` for staged fuelling (the 13B-REW's primary and secondary injectors).
+
+- **Checks added:** validate-data rejects a rotary whose displacement isn't rotors x chamber displacement (so neither the doubled "piston-equivalent" figure nor a tax-class figure can be entered), a chamber displacement more than 1.5 % away from 3·√3·R·e·B, a firing order that doesn't list every rotor once (rotaries used to be exempt), and secondary injectors without primaries.
+- **Why:** A Wankel has no bore, stroke, valves or cams. Forcing them in would be invented data, and leaving them optional for everyone would weaken the piston checks. The old schema planned to reuse `cylinders` for rotors; a separate `rotors` field means Phase 2 can't mistake a two-rotor 13B for a two-cylinder four-stroke.
+- **Alternatives:** One object with optional piston fields and an optional rotary block (weaker typing, and every consumer has to guess which fields exist). Reusing `cylinders` for rotors (the original plan).
+
+### Trims can record seats
+
+- **Decision:** An optional, sourced `seats` on trims, used where grades of one body differ (the 2-seat Type RZ and Spirit R Type A against the 2+2 grades).
+- **Why:** The Spirit R Type A and Type B differ in seating and weight and nothing else; without the field the two trims look identical apart from the note. It also matters for the cabin view (passenger and rear seats) and weight distribution.

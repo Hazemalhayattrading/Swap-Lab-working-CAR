@@ -2,17 +2,17 @@
 
 One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md section 10.
 
-| #   | Phase                                                                   | Status                                                                                                        |
-| --- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                                                 |
-| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Parts 1 and 2 of 3 done:** S15, Supra, 350Z, E46; SR20DET, 2JZ-GTE, VQ35HR, S54B32 (+ 4 stock-only engines) |
-| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                                                   |
-| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                                                   |
-| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                                                   |
-| 5   | Engine bay and cutaway animation                                        | Not started                                                                                                   |
-| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                                                   |
-| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                                                   |
-| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                                                   |
+| #   | Phase                                                                   | Status                                                                                                                                                                        |
+| --- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                                                                                                                 |
+| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Parts 1 and 2 of 3 done:** S15, Supra, 350Z, E46; SR20DET, 2JZ-GTE, VQ35HR, S54B32 (+ 4 stock-only engines). **Part 3a paused** (rotary schema done, RX-7 research partial) |
+| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                                                                                                                   |
+| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                                                                                                                   |
+| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                                                                                                                   |
+| 5   | Engine bay and cutaway animation                                        | Not started                                                                                                                                                                   |
+| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                                                                                                                   |
+| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                                                                                                                   |
+| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                                                                                                                   |
 
 ## Phase 0: scaffold (2026-09-26)
 
@@ -253,9 +253,68 @@ This part covers the Nissan 350Z / Fairlady Z (Z33) and the BMW E46 330i/330Ci a
 9. **The 350Z data file is 2.3 MB**, mostly repeated source notes on 126 trims. It isn't loaded by the site yet; a Phase 2 loader should strip provenance for the client bundle.
 10. **Carried over:** the procedural floor, performance unmeasured on real hardware, asset pipeline scope, no floor reflections, and no code licence chosen.
 
+## Phase 1, part 3a: RX-7 FD3S, 13B-REW, 20B-REW (paused 2026-09-27)
+
+The owner paused the project part-way through this part. **No RX-7, 13B-REW or 20B-REW data is in `src/data/` yet.** The work is on branch `claude/determined-bell-zhzvab` in a draft PR, not merged.
+
+### Done
+
+- **Rotary engines in the schema** (`src/data/schema/engine.ts`; see decisions):
+  - Engines are now a union on `layout`. A rotary has `rotors`, rotor geometry (R, e, B and the maker's chamber displacement), optional ports with port timing, spark plugs per rotor, housing and rotor materials, and rotary internals with rotary limit components.
+  - Rotary variants have no cams or cam phasing. Any variant can record staged fuelling (`secondaryInjectorFlow`).
+  - Validation rejects a rotary displacement that isn't rotors x chamber displacement, a chamber displacement more than 1.5 % off 3·√3·R·e·B, and a firing order that misses a rotor.
+- **Displacement and cycle convention in code:** `src/data/displacement.ts`.
+  - A rotary draws its whole Mazda-quoted displacement per eccentric-shaft turn (so a 13B breathes like a 2.6-litre four-stroke at the same rpm).
+  - A four-stroke draws half its displacement per crank turn.
+  - Each rotor fires once per shaft turn.
+- **Trims can record `seats`,** for the 2-seat Type RZ and Spirit R Type A.
+- **Tests:** 12 new (135 in all), covering the rotary schema, the checks above and the convention helpers.
+- **Mazda's 1993 US workshop manual, technical data chapter, read by hand:** displacement 654 x 2 cc, compression 9.0, port timing, oil and coolant capacities, both gearboxes' ratios and final drives, tyres and wheels. The figures are in `docs/research-notes/part3a.md`, section 1.
+
+### How it was verified, and what wasn't
+
+- `npm run lint`, `npm run typecheck`, `npm test` (135 tests) and `npm run validate-data` pass.
+- `npm run e2e` was stopped by the pause after 3 of its 6 tests: the three that ran passed (default backend, WebGL 2 fallback, quality presets). The other three never ran, and the screenshots weren't reviewed.
+- So CLAUDE.md rule 9 isn't fully met, and **the schema change is committed as work in progress.** It adds no UI, but run the full e2e suite and look at the screenshots before marking it done.
+
+### Half-done: research
+
+Seven research agents were stopped before any wrote its results. What they had gathered is in `docs/research-notes/part3a.md`, with a source link on every row:
+
+- 59 goo-net grade pages tabled: every JDM grade 1991-2002, plus the Eunos Cosmo.
+- Car Sensor and carview tables for 1991-1997.
+- The US agent's transcription of the 1993 and 1994 technical data chapters.
+- Page lists for Europe, UK, Australia, the 13B-REW and the 20B-REW.
+- The Sketchfab listings opened for the shopping list.
+- New primary sources: several Mazda brochures on archive.org, and Mazda Germany's FC/FD training handbooks.
+
+None of it has been checked against a Mazda brochure yet, apart from the manual pages above.
+
+### Left in part 3a
+
+1. **JDM trims:**
+   - Turn the goo-net tables into trims.
+   - Confirm them against Mazda's brochures, and against Car Sensor or carview for `verified`.
+   - Fill the limited editions whose goo-net pages have no ratios: 1992-10 Type RZ, 1994-08 Type R-II Bathurst, 1995-07 Type R Bathurst X, 1997-01 Type RB Bathurst X, 1997-10 Type RS-R, 2001-08 Type R Bathurst R.
+2. **US and Canada:**
+   - US trims by model year (base, Touring, R1/R2, PEP; manual and automatic), with Mazda curb weights from the brochure or Service Highlights.
+   - Canada not started.
+3. **Europe, UK, Australia (including the RX-7 SP) and New Zealand:** nothing extracted yet. Read the saved pages, the Mazda Germany handbooks and the 1993 _Autocar & Motor_.
+4. **13B-REW:**
+   - Variants per market and series.
+   - Turbos, boost, ECU, weight, dimensions, bellhousing, sump, internals and limits.
+   - Decide which generating radius to store: 105 mm, or 102 mm plus Yamamoto's 3 mm offset (research notes, section 5).
+5. **20B-REW:** finish from the saved Cosmo tables, Mazdatrix parts pages and swap pages.
+6. **Write the data files:** `cars/mazda-rx-7-fd3s.json`, `engines/13b-rew.json` and `engines/20b-rew.json`. Also add roster and headline-figure tests, and pass validate-data.
+7. **Shopping list:** finish the RX-7 re-check (verdicts, originality, NoAI wording), then update `docs/asset-shopping-list.md` and `docs/research/`.
+8. **Decisions and wrap-up:**
+   - Write the "Rotary displacement and cycle convention" decision with its Mazda sources. The code and tests exist; the sourced write-up doesn't.
+   - Run the full checks, e2e and screenshots.
+   - Mark the PR ready and merge it once CI passes.
+
 ## Next: Phase 1, part 3
 
-- Mazda RX-7 FD3S and 13B-REW (every trim), and re-check its shopping-list entries on the live pages.
-- The remaining swap engines: 1JZ-GTE, RB25DET NEO, RB26DETT, LS3, LS1, K24 and 20B-REW.
+- Finish part 3a (list above): the RX-7 FD3S, 13B-REW and 20B-REW data, the shopping-list re-check, and the sourced rotary-convention decision.
+- Part 3b: the remaining swap engines, 1JZ-GTE, RB25DET NEO, RB26DETT, LS3, LS1 and K24.
 - Phase 2 should add a `tsconfig` for `src/sim/` with no DOM library, alongside the ESLint guard, and normalise the weight standards.
 - Phase 4 has to build the NoAI screenshot swap: a flag the AI-reviewed screenshot run sets, which shows NoAI assets as their clay placeholder (CLAUDE.md rule 5).

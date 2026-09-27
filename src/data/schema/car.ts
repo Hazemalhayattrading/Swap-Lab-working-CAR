@@ -94,6 +94,11 @@ export const TrimSchema = z.strictObject({
   market: MarketSchema,
   period: SourcedPeriodSchema,
   bodyStyle: z.enum(['coupe', 'liftback', 'convertible', 'targa', 'sedan', 'hatchback', 'wagon']),
+  /**
+   * Seating capacity, where grades of one body differ (the RX-7's 2-seat Type RZ
+   * and Spirit R Type A against the 2+2 grades). Left out when every trim seats the same.
+   */
+  seats: sourced(z.number().int().min(1).max(9)).optional(),
   engine: z.strictObject({ id: SlugSchema, variant: SlugSchema }),
   transmission: SlugSchema,
   finalDrive: Ratio,
