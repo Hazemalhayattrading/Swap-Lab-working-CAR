@@ -1,0 +1,2050 @@
+{
+  "checked": "2026-09-27",
+  "method": "Listing pages opened directly this session with curl. Sketchfab: Data API (no key) + viewer metadata endpoint (source files, texture names and sizes, download and store state) + the server-rendered model page (licence and NoAI rows) + comments and user-profile APIs. CGTrader could not be opened: it answers curl (and WebFetch) with an empty HTTP 202 WAF challenge, and headless Chromium could not be used this session because it rejected the egress proxy's certificate (not worked around). TurboSquid (DataDome), Fab and 3DModels.org (Cloudflare) were tried once and blocked. Interior, engine bay and body are judged from descriptions, source-file and texture names, comments and cover thumbnails; thumbnails were viewed only for models with no NoAI tag or clause (and not for a suspected re-upload of a NoAI model). No model file was downloaded.",
+  "scope": "Every Nissan 350Z, BMW E46 330i and BMW M3 E46 entry in docs/asset-shopping-list.md (usable, needs-your-call and avoid lists, plus the leads named in its notes and in docs/research/asset-candidates-2026-09-26.json), plus new searches: Sketchfab Data API with license=by and license=cc0, with and without downloadable=true (350z, nissan 350z, z33, fairlady z, 350z roadster, vq35, vq35de, vq35hr, e46, bmw e46, 330i, 330ci, e46 sedan, e46 coupe, m3 e46, e46 m3, bmw m3 2003, m3 csl, s54, s54b32, m54, m54b30, and engine/interior variants); Blend Swap site search; BlenderKit search API; Printables GraphQL API; 5 WebSearches (VQ35DE, S54 and M54 engines; 3DModels.org licence and 350Z listings).",
+  "items": [
+    {
+      "item": "Nissan 350Z (Z33, 2003-2008)",
+      "entries": [
+        {
+          "id": "cgt-hum3d-350z-hq",
+          "title": "Nissan 350Z with HQ interior 2007 (Hum3D)",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/nissan-350z-with-hq-interior-2007",
+          "marketplace": "CGTrader (also 3DModels.org)",
+          "listInOldFile": "usable",
+          "opened": false,
+          "openedHow": "Could not open: www.cgtrader.com answers curl with HTTP 202 and an empty body (AWS WAF JavaScript challenge); WebFetch got the same empty page; headless Chromium could not be used this session (certificate error). Nothing on this listing was re-verified.",
+          "relatedUrl": "https://3dmodels.org/3d-models/nissan-350z-with-hq-interior-2007/",
+          "relatedResult": "3DModels.org (where hum3d.com now redirects) answers 403 'Security check - 3DModels' (Cloudflare). A WebSearch summary (not page text) lists 'Nissan 350Z with HQ interior 2009' there at USD 295.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says. The 3DModels.org licence pages could not be opened; a search summary says models may not be used in projects 'not protected from extraction by other users' (not verified).",
+          "note": "Old fields (USD 399, 1,034,000 polygons / 1,075,000 vertices, Royalty Free) are Phase 0 search summaries and were not re-verified."
+        },
+        {
+          "id": "cgt-hum3d-350z-2007",
+          "title": "Nissan 350Z 2007 (Hum3D)",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/nissan-350z-2007-07cefb2907a350d322fe67e994809494",
+          "marketplace": "CGTrader (also 3DModels.org)",
+          "listInOldFile": "usable",
+          "opened": false,
+          "openedHow": "Could not open: www.cgtrader.com answers curl with HTTP 202 and an empty body (AWS WAF JavaScript challenge); WebFetch got the same empty page; headless Chromium could not be used this session (certificate error). Nothing on this listing was re-verified.",
+          "relatedUrl": "https://3dmodels.org/3d-models/nissan-350z-z33-2007/",
+          "relatedResult": "Blocked (Cloudflare). A WebSearch summary (not page text) lists 'Nissan 350Z (Z33) 2009' at USD 95 (USD 92 with the Pro plan), 'with interior', main parts as separate objects.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says.",
+          "note": "Old fields (USD 129, 476,000 polygons) not re-verified."
+        },
+        {
+          "id": "sf-stecki-350z",
+          "title": "2002-2008 Nissan 350z",
+          "url": "https://sketchfab.com/3d-models/2002-2008-nissan-350z-fd5937a191c640f0b50ebed311a1399b",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/fd5937a191c640f0b50ebed311a1399b + viewer metadata https://sketchfab.com/i/models/fd5937a191c640f0b50ebed311a1399b + model page (curl) + comments and user APIs",
+          "exists": "Page exists (view only). Not for sale or download on Sketchfab (inStore false, downloadType no).",
+          "author": "stecki (@stecki)",
+          "licenceAsShown": "Editorial (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": true,
+          "priceUSD": "Not purchasable (no Buy or Download button: inStore false, downloadType no). API price field 1500 (old store price, USD 15.00).",
+          "triangles": 14168,
+          "vertices": 10334,
+          "geometryDetail": "1,978 quads + 10,196 triangles; 22 materials",
+          "formats": "Source: source/Nissan_350z.fbx (0.9 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "19 files, largest 1024x1024",
+          "published": "2021-11-19",
+          "interior": "Minimal: interior textures int_grey and int_orange plus mph, rpm, temp and steer textures (a game-level cabin). A 2024 commenter: \"low poly interrior\".",
+          "engineBay": "No; not mentioned",
+          "body": "Two versions, \"Stock 350z: 6891 tris\" and \"Track 350z: 7277 tris\" (wheels and spoiler). A 2024 commenter says the body is the 2003-2005 style.",
+          "origin": "The author's own game asset: \"Another old game model I built for an indy developed racing game (racer.nl).\" Not a rip.",
+          "statusNote": "The Phase 0 list called it Royalty Free; the page title still reads \"Buy Royalty Free 3D model\", but the licence in the API and in the page's embedded model JSON is Editorial, and the model is no longer for sale (no Buy button).",
+          "verdict": "avoid",
+          "verdictReason": "Editorial licence (Sketchfab 2.3: no commercial or promotional use) and not purchasable; also far below the photoreal target at 14k triangles.",
+          "quotes": [
+            {
+              "quote": "Another old game model I built for an indy developed racing game (racer.nl)."
+            },
+            {
+              "quote": "Heads up this is 2003-2005."
+            },
+            {
+              "quote": "2002-2008 Nissan 350z - Buy Royalty Free 3D model by stecki [fd5937a] - Sketchfab Store"
+            },
+            {
+              "quote": "\"label\": \"Editorial\""
+            }
+          ]
+        },
+        {
+          "id": "ts-378483",
+          "title": "3ds Nissan 350z (TurboSquid 378483)",
+          "url": "https://www.turbosquid.com/3d-models/3ds-nissan-350z/378483",
+          "marketplace": "TurboSquid",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: www.turbosquid.com answers 403 with a DataDome device check ('geo.captcha-delivery.com'). Nothing on this listing was re-verified.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "TurboSquid 3D Model License 7(b) (read 2026-09-26) only permits WebGL exports from Unity, Unreal and Lumberyard; other open formats are prohibited without written approval, so no for a three.js GLB whatever the listing says. Editorial per the Phase 0 summary (not re-verified), which rules out any commercial, non-news use.",
+          "note": "The Phase 0 summary is the only source for 'includes engine and undercarriage'; unverified."
+        },
+        {
+          "id": "ts-235037",
+          "title": "nissan 350z 3d model (TurboSquid 235037)",
+          "url": "https://www.turbosquid.com/3d-models/nissan-350z-3d-model/235037",
+          "marketplace": "TurboSquid",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: www.turbosquid.com answers 403 with a DataDome device check ('geo.captcha-delivery.com'). Nothing on this listing was re-verified.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "TurboSquid 3D Model License 7(b) (read 2026-09-26) only permits WebGL exports from Unity, Unreal and Lumberyard; other open formats are prohibited without written approval, so no for a three.js GLB whatever the listing says. Editorial per the Phase 0 summary (not re-verified)."
+        },
+        {
+          "id": "sf-car2022-350z",
+          "title": "Nissan 350Z (Z33)",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-z33-0bd921be48f442a7b138c5169b7d0d2f",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "needs-call",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/0bd921be48f442a7b138c5169b7d0d2f + viewer metadata https://sketchfab.com/i/models/0bd921be48f442a7b138c5169b7d0d2f + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Mona x Supercars (@Car2022)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 21751,
+          "vertices": 13737,
+          "geometryDetail": "0 quads + 21,751 triangles; 39 materials",
+          "formats": "Source: 2007 Nissan 350Z.mtl (0.0 MB, Alias/WaveFront Material); 2007 Nissan 350Z.obj (4.6 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "29 files, largest 1024x1024",
+          "published": "2025-01-09",
+          "interior": "Basic at most: textures Interior1_diff, DriverSeat1_diff, PassengerSeat1_diff, SteeringWheel1_diff, Shiftknob1_diff (512 px)",
+          "engineBay": "An Engine1_diff texture exists (512 px); detail unknown",
+          "body": "Description: \"Year: 2007\", RHD, orange. Not viewed in detail.",
+          "origin": "Not stated. Texture names such as Meshpart15_diff/_nmap/_spec and Meshes350zfrontlight350zfrontlight0011_diff look like auto-named extracted meshes rather than an artist's own naming. The account (467 models, biography \"All Supercars that Mona Have\") posts press photos in its descriptions; its 'BMW M3 Coupe Aerokit (E46)' says \"Model from: Need for Speed: Shift & Shift 2: Unleashed\", and its 'Nissan 350Z Nismo (Z33)' reuses the same headlight texture.",
+          "verdict": "avoid",
+          "verdictReason": "Game-derived uploads on the same account and extracted-style texture names make the CC-BY label unreliable; also only 21.8k triangles.",
+          "quotes": [
+            {
+              "quote": "All Supercars that Mona Have"
+            },
+            {
+              "quote": "Model from: Need for Speed: Shift & Shift 2: Unleashed"
+            },
+            {
+              "quote": "Meshes350zfrontlight350zfrontlight0011_diff.png"
+            }
+          ]
+        },
+        {
+          "id": "cgt-bbenedict-350z",
+          "title": "Nissan 350z Japanese Sports Coupe With Interior Model (Bbenedict)",
+          "url": "https://www.cgtrader.com/free-3d-models/car/sport-car/nissan-350z-japanese-sports-coupe-with-interior-model",
+          "marketplace": "CGTrader",
+          "listInOldFile": "avoid",
+          "opened": false,
+          "openedHow": "Could not open: www.cgtrader.com answers curl with HTTP 202 and an empty body (AWS WAF JavaScript challenge); WebFetch got the same empty page; headless Chromium could not be used this session (certificate error). Nothing on this listing was re-verified.",
+          "relatedUrl": "https://www.turbosquid.com/3d-models/2049724",
+          "relatedResult": "TurboSquid copy: 403 DataDome, not opened.",
+          "verdict": "avoid",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says. Free CGTrader models are under the same licence.",
+          "note": "Phase 0 fields (971,702 polygons, interior) not re-verified."
+        },
+        {
+          "id": "sf-ddiaz-350z",
+          "title": "Nissan 350Z",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-05e7604a0f4643ab87c141e244813e9a",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/05e7604a0f4643ab87c141e244813e9a + viewer metadata https://sketchfab.com/i/models/05e7604a0f4643ab87c141e244813e9a + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 46258,
+          "vertices": 31048,
+          "geometryDetail": "0 quads + 46,258 triangles; 23 materials",
+          "formats": "Source: FINAL_MODEL.fbx (2.5 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "20 files, largest 2134x2134",
+          "published": "2024-10-24",
+          "origin": "Description: \"Based on a Need For Speed Heat 3d model\". Texture names Car_Nissan_350Z_2006_* and *.etc.png (mobile texture compression).",
+          "body": "\"2005 Nissan 350Z general body & 2006 350z Front and rear lights\"",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA and a game rip.",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed Heat 3d model"
+            },
+            {
+              "quote": "Los modelos presentes en esta cuenta no son para usos comerciales, solo son referencias."
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-voltex-350z",
+          "title": "2008 Voltex 350Z (Z33) Bodykit Wing Type 2",
+          "url": "https://sketchfab.com/3d-models/2008-voltex-350z-z33-bodykit-wing-type-2-c1c5eb14e492434683381879b468b3f1",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/c1c5eb14e492434683381879b468b3f1 + viewer metadata https://sketchfab.com/i/models/c1c5eb14e492434683381879b468b3f1 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 64988,
+          "vertices": 40321,
+          "geometryDetail": "0 quads + 64,988 triangles; 26 materials",
+          "formats": "Source: FINAL_MODEL_VOLT.fbx (6.8 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "27 files, largest 2134x2134",
+          "published": "2025-09-17",
+          "origin": "\"Based on a Need For Speed Heat 3d model\"",
+          "body": "Voltex body kit and GT wing",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA, game rip, kit.",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed Heat 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-rachel-350z",
+          "title": "Rachel's Nissan 350z NFS Underground 2",
+          "url": "https://sketchfab.com/3d-models/rachels-nissan-350z-nfs-underground-2-5b41f9a218624deaa1202efb6ff5a779",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/5b41f9a218624deaa1202efb6ff5a779 + viewer metadata https://sketchfab.com/i/models/5b41f9a218624deaa1202efb6ff5a779 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 103180,
+          "vertices": 59847,
+          "geometryDetail": "0 quads + 103,180 triangles; 16 materials",
+          "formats": "Source: FINAL_MODEL_U2.fbx (7.3 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "43 files, largest 2048x2048",
+          "published": "2025-02-23",
+          "origin": "\"Based on a Need For Speed Mobile 3d model\"; tags videogame, nfsu2",
+          "body": "NFS Underground 2 game car",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA and a game rip.",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed Mobile 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-santimilos-350z",
+          "title": "Nissan 350Z (SÄNTI MILOS)",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-2f967462b67e4bd8b94c6abde1d1e07a",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/2f967462b67e4bd8b94c6abde1d1e07a + viewer metadata https://sketchfab.com/i/models/2f967462b67e4bd8b94c6abde1d1e07a + model page (curl) + comments and user APIs",
+          "exists": "No. Data API and viewer metadata both answer 404 {\"detail\":\"Not found.\"} (deleted or made private).",
+          "verdict": "avoid",
+          "verdictReason": "Gone. It was CC BY-NC per the Phase 0 summary anyway.",
+          "note": "The model page answers an empty HTTP 202 to curl; the API is the reliable signal.",
+          "quotes": [
+            {
+              "quote": "{\"detail\":\"Not found.\"}"
+            }
+          ]
+        },
+        {
+          "id": "sf-barkingdogo-350z",
+          "title": "Nissan 350Z",
+          "url": "https://sketchfab.com/3d-models/nissan-350z-17ca0ac209fd4823878a013c0dff82bf",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/17ca0ac209fd4823878a013c0dff82bf + viewer metadata https://sketchfab.com/i/models/17ca0ac209fd4823878a013c0dff82bf + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "barking_dogo (@barking_dogo)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1229772,
+          "vertices": 622977,
+          "geometryDetail": "583,146 quads + 10,819 triangles; 26 materials",
+          "formats": "Source: source/Nissssan_19.fbx (34.8 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2024-02-11",
+          "interior": "Unknown: the glass is dark in the cover image and the description doesn't mention a cabin.",
+          "engineBay": "Unknown; not mentioned",
+          "body": "Stock-looking coupe in the cover image: factory bumpers, headlights, mirrors and wheels, red calipers. Year or facelift not identified; not checked in the viewer.",
+          "origin": "No rip indicators on this model: no textures, the author says it isn't UV-unwrapped (\"not uv-wrapped and have problems with topology\"), and it's 1.2M triangles, mostly quads: the opposite of a game asset. But the same account publishes models it says it extracted from a game (\"It's a first pack of extracted model from videogame\" for Emperor: Battle for Dune) under CC-BY, so its licence labels aren't reliable in general. Its other cars (Skoda Fabia Mk.2: \"my first made 3d model of a car\") have the same untextured, un-UV'd style.",
+          "verdict": "owner-call",
+          "verdictReason": "The only stock-looking, high-detail free 350Z found with a clean CC-BY label. Geometry base only: needs UVs, PBR materials, topology clean-up and heavy decimation (1.23M triangles). Your call because of the uploader's other CC-BY uploads of extracted game models.",
+          "quotes": [
+            {
+              "quote": "This model is not optimized for games, not uv-wrapped and have problems with topology.."
+            },
+            {
+              "quote": "It's a first pack of extracted model from videogame \"Emperor: Battle for Dune\"."
+            },
+            {
+              "quote": "It's a bit rough model, because it's my first made 3d model of a car"
+            }
+          ]
+        },
+        {
+          "id": "bs-tahseen-350z",
+          "title": "Nissan 350z (tahseen)",
+          "url": "https://blendswap.com/blend/4442",
+          "marketplace": "Blend Swap",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "curl (Blend Swap page, server-rendered)",
+          "exists": "Yes, free download",
+          "author": "tahseen",
+          "licenceAsShown": "CC-BY (page 'License' field)",
+          "noAi": "No NoAI wording on the page",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": null,
+          "vertices": null,
+          "geometryDetail": "Polycount not shown; the .blend is 1.78 MB, which suggests a low-to-mid detail model",
+          "interior": "Unknown (not mentioned)",
+          "engineBay": "Unknown (not mentioned)",
+          "body": "Stock-looking early 350Z in the preview render (factory bumpers, headlights and wheels). Year not stated.",
+          "origin": "Description: \"I modeled it in Blender 2.61 and then used Cycles to render it.\" No game wording.",
+          "formats": "Blender 2.6x file (Blender Internal materials per the page), 1.78 MB",
+          "textures": "Not stated",
+          "published": "Page says \"Uploaded over 14 years ago\"",
+          "verdict": "usable-free",
+          "verdictReason": "Clean CC-BY licence, the author's own model, stock-looking body. Fallback only: a 2012-era file that will need new PBR materials and probably more detail. Credit on /credits.",
+          "quotes": [
+            {
+              "quote": "I modeled it in Blender 2.61 and then used Cycles to render it."
+            },
+            {
+              "quote": "CC-BY"
+            },
+            {
+              "quote": "Uploaded over 14 years ago"
+            }
+          ]
+        },
+        {
+          "id": "sf-sdc-tuned-350z",
+          "title": "Tuned Nissan 350z",
+          "url": "https://sketchfab.com/3d-models/tuned-nissan-350z-b85bcb7a726d478bb775ca070e3b1fce",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/b85bcb7a726d478bb775ca070e3b1fce + viewer metadata https://sketchfab.com/i/models/b85bcb7a726d478bb775ca070e3b1fce + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "SDC PERFORMANCE™️ (@Lambo_SC04)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 3131128,
+          "vertices": 1611102,
+          "geometryDetail": "1,565,564 quads + 0 triangles; 28 materials",
+          "formats": "Source: source/NISSAN350Z.blend (43.8 MB, Blender). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2020-07-07",
+          "interior": "Unknown (dark glass in the cover image; not mentioned)",
+          "engineBay": "Unknown; not mentioned",
+          "body": "Not stock: mesh wheels, carbon bonnet, side skirts, rear wing, lowered (cover image). The shell and lights look factory.",
+          "origin": "Description: \"Nissan 350z modeled with blender\". The account (SDC PERFORMANCE, 128 models) links an ArtStation page. No game wording or game-style names (no textures at all).",
+          "verdict": "owner-call",
+          "verdictReason": "Clean CC-BY and apparently original, but tuned rather than stock, untextured, and 3.1M triangles, so it needs rematerialing, parts swapped back to stock, and heavy decimation.",
+          "quotes": [
+            {
+              "quote": "Nissan 350z modeled with blender"
+            }
+          ]
+        }
+      ],
+      "consideredNotListed": [
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-afcef7fec3a74f42994cd191a903d539",
+          "who": "Kalihail (@Kalihail)",
+          "licence": "CC Attribution",
+          "tris": 3650097,
+          "why": "Rocket Bunny kit (source 35zRocketBunny.blend); the author says \"There were borrowed ready-made wheel models and some materials\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-tuned-cb58159c4e3f430aa34cd2757b577110",
+          "who": "SDC PERFORMANCE™️ (@Lambo_SC04)",
+          "licence": "CC Attribution",
+          "tris": 928688,
+          "why": "Tuned (big GT wing, aftermarket wheels, skirts in the cover image); commenters say it looks like a real show car. Same author as the tuned entry above."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-rocketbunny-f8cc461d6a484744bb90fcf8a0963eba",
+          "who": "seibold1simon (@seibold1simon)",
+          "licence": "CC Attribution",
+          "tris": 1311648,
+          "why": "Rocket Bunny body kit, \"stil work in progress\", untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/custom-nissan-fairlady-350z-f778c85483f647f9ba4757063b0f1de8",
+          "who": "Socksthecat (@Socksthecat)",
+          "licence": "CC Attribution",
+          "tris": 1278896,
+          "why": "\"Custom\" body, single material, untextured; the same account's S15 had game-mod textures."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/texas-drift-academy-custom-350z-drift-car-234b0731f36747afaa877d4671da9fed",
+          "who": "TEXASDRIFTACADEMY (@TEXASDRIFTACADEMY)",
+          "licence": "CC Attribution",
+          "tris": 958683,
+          "why": "\"Rough 3D model from video/photos\" of a custom drift car; one baked texture."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-nismo-s-tune-z33-2008-3ee5b1ba3e1a4a128455a5fe144659bb",
+          "who": "Merc_TV (@szymonpasterczyk)",
+          "licence": "CC Attribution",
+          "tris": 714645,
+          "why": "Merc_TV account (\"Importing Beamng.Drive,Assetto corsa,GTA San Andreas.\"); the source list contains BeamNG mod files (vehicles/n350z/info.json, art/sound/blends/nis_350z_10_engine.sfxBlend2D.json)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2003-nissan-350z-f6969e47e9734bd5a801ce1510e9bc41",
+          "who": "ffincognito98 (@ffincognito98)",
+          "licence": "CC Attribution",
+          "tris": 207546,
+          "why": "Game-style texture family Nissan_350ZF3_2003_*_DiffuseAOSO (the same naming as Ddiaz's NFS Mobile-based 350Z wheels); no description."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2003-nissan-350z-a41e984a55b64e309e6caa0dc7dc0f3d",
+          "who": "007 (@tangwang920)",
+          "licence": "CC Attribution",
+          "tris": 205864,
+          "why": "Same Nissan_350ZF3_2003 textures and nearly the same mesh as the one above (205,864 vs 207,546 triangles); the uploaded source is scene.gltf, Sketchfab's own download format."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2007-nissan-350z-41aaa67fd7a74f3b990bbe59466b8a56",
+          "who": "Galaxy Car Showroom (@adrianaflak09)",
+          "licence": "CC Attribution",
+          "tris": 49069,
+          "why": "Description: \"Model from Need For Speed Heat\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-2168c8b946864241bfabb9277987488c",
+          "who": "🇷🇴シRuletăシ🇷🇴 (@romanian_guy_0069)",
+          "licence": "CC Attribution",
+          "tris": 46258,
+          "why": "Same 46,258-triangle mesh and Car_Nissan_350Z_2006_* textures as Ddiaz's NFS Heat rip: a re-upload."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-nismo-z33-c7630b11520a45439261cace826a93f0",
+          "who": "Mona x Supercars (@Car2022)",
+          "licence": "CC Attribution",
+          "tris": 68071,
+          "why": "Car2022 account (see sf-car2022-350z); adds anime-livery textures (ShionYorigami1_*)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-rocket-bunny-c881a7e4285c42c2b359abf525fa7c95",
+          "who": "Black Snow (@BlackSnow02)",
+          "licence": "CC Attribution",
+          "tris": 381026,
+          "why": "Rocket Bunny kit; the same account's Supra had Forza-style texture names."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2003-350z-rocketbunny-8151dfe250d5453baca023e613e6261f",
+          "who": "ClumsyLlama (@ClumsyLlama)",
+          "licence": "CC Attribution",
+          "tris": 152594,
+          "why": "Rocket Bunny kit, untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-18c081f765854d249bb8dc580a1e9f7c",
+          "who": "David_Holiday (@David_Holiday)",
+          "licence": "CC Attribution",
+          "tris": 66140,
+          "why": "\"Nissan 350z epic with spoiler\", 66k triangles; Roblox-developer account with 472 uploads; origin not stated."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-0b6b898a28364c389b0ac82e9b476f1a",
+          "who": "Blue3D (@Blueberry12)",
+          "licence": "CC Attribution",
+          "tris": 27476,
+          "why": "Original low-poly (27k triangles, \"based on blueprints and reference images\") but \"No actual interior, just exterior\" and untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/fairlady-350z-nismo-f3b70845e5cf4c57a23c520e99dbf351",
+          "who": "m-11356016moe-dl.edu.my (@m-11356016moe-dl.edu.my)",
+          "licence": "CC Attribution",
+          "tris": 91229,
+          "why": "Crude flat-shaded shell in the cover image; untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/project-n8-z33-e8252dff6bb046038878cf6aba975e83",
+          "who": "AurlC (@waleguene)",
+          "licence": "CC Attribution",
+          "tris": 202399,
+          "why": "Not a car: the cover image shows a robot named N8-Z33."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan350z-free-2e67137ef8a74e3f9a3f107f6a94b2ef",
+          "who": "andywangqe2 (@andywangqe2)",
+          "licence": "CC Attribution",
+          "tris": 21698,
+          "why": "Low-poly (21.7k triangles), untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-a854b19963fa487c81b013ccc33a5378",
+          "who": "Metos (@metehanyilmaz33)",
+          "licence": "CC Attribution",
+          "tris": 20820,
+          "why": "Low-poly (20.8k triangles), \"not have interior\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/nissan-350z-57da43f683ab4b49b56d835f20a2d19d",
+          "who": "code.aggregator (@code.aggregator)",
+          "licence": "CC Attribution",
+          "tris": 16500,
+          "why": "16.5k-triangle \"demo\"."
+        },
+        {
+          "url": "https://blendswap.com/blend/4679",
+          "who": "Neubi",
+          "licence": "CC-BY",
+          "why": "\"Nissan 350z GT\" race-car fan art, 2 days' work, 861 KB file."
+        },
+        {
+          "url": "https://www.printables.com/model/769777",
+          "who": "Pablo Hernández Bernal",
+          "licence": "Creative Commons — Public Domain",
+          "why": "An easy-print toy model, not a render asset."
+        },
+        {
+          "note": "No CC0 350Z was returned by the Sketchfab API for any query (the license=cc0 filter was checked with a generic query, which does return CC0 models). BlenderKit has no 350Z."
+        }
+      ]
+    },
+    {
+      "item": "BMW 3 Series E46 330i (sedan or coupe, 1998-2006)",
+      "entries": [
+        {
+          "id": "sf-ricy-e46-msport",
+          "title": "BMW E46 MSport",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-msport-614c2f1660474178a1d4717b7492d1c7",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/614c2f1660474178a1d4717b7492d1c7 + viewer metadata https://sketchfab.com/i/models/614c2f1660474178a1d4717b7492d1c7 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ricy (@ngon_3d)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 50664,
+          "vertices": 30143,
+          "geometryDetail": "2,374 quads + 45,898 triangles; 27 materials",
+          "formats": "Source: source/e46_no_interior.fbx (4.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "7 files, largest 2400x2400",
+          "published": "2024-12-19",
+          "interior": "No: the uploaded source file is named e46_no_interior.fbx",
+          "engineBay": "No; not mentioned",
+          "body": "Pre-facelift sedan: \"This is based on my 2001 bmw e46 330i (sedan 3 series pre-facelift)\"; the title says MSport. Cover image: black sedan; wheels not identified.",
+          "origin": "The author (Ricy, @ngon_3d, 42 models, ArtStation link) answered \"yes all of my models are my works\" when asked in the comments. Textures are five screenshots (Screenshot_159.png ... Screenshot_164.png), a web BMW logo (bmw-2-logo-png-transparent.png, 2400 px) and a tyre tread: replace them with our own PBR materials.",
+          "verdict": "usable-free",
+          "verdictReason": "Clean CC-BY, own work, right car and trim family. Caveats: mid-poly (50.7k triangles), no interior, no bay, placeholder textures. Credit Ricy on /credits (\"CREDIT ME (Ricy) IF USED\").",
+          "quotes": [
+            {
+              "quote": "CREDIT ME (Ricy) IF USED"
+            },
+            {
+              "quote": "@ToprakM yes all of my models are my works"
+            },
+            {
+              "quote": "source/e46_no_interior.fbx"
+            }
+          ]
+        },
+        {
+          "id": "sf-roh3d-e46",
+          "title": "Low Poly Car - BMW E46 1998",
+          "url": "https://sketchfab.com/3d-models/low-poly-car-bmw-e46-1998-d9bfd8126e754164b48ded833c017bbf",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/d9bfd8126e754164b48ded833c017bbf + viewer metadata https://sketchfab.com/i/models/d9bfd8126e754164b48ded833c017bbf + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "ROH3D (@roh3d)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 18447,
+          "vertices": 9973,
+          "geometryDetail": "8,973 quads + 501 triangles; 1 materials",
+          "formats": "Source: BMW_E46.obj (1.2 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "5 files, largest 4096x4096",
+          "published": "2025-05-25",
+          "interior": "Basic: seats and steering wheel visible through the glass in the cover image (single baked material)",
+          "engineBay": "No; not mentioned",
+          "body": "Stock-looking pre-facelift sedan in the cover image (factory bumpers, amber front indicators, simple alloys). Trim not stated.",
+          "origin": "ROH3D (546 models, roh3d.com). Asked \"i can use this in a game?\", the author replied \"Ya, sure\". No game wording.",
+          "verdict": "usable-free",
+          "verdictReason": "Clean CC-BY, stock body. Low-poly (18.4k triangles, one 4096 px PBR set), so a distant LOD or fallback only. Credit on /credits.",
+          "quotes": [
+            {
+              "quote": "@chocolatebonnie21 Ya, sure"
+            }
+          ]
+        },
+        {
+          "id": "sf-slowpoly-e46",
+          "title": "BMW E46 1998",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-1998-ecc42a37c7e2409b9fd05665512843ce",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (in the ROH3D note)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/ecc42a37c7e2409b9fd05665512843ce + viewer metadata https://sketchfab.com/i/models/ecc42a37c7e2409b9fd05665512843ce + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "slowpoly (@slowpoly)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1420,
+          "vertices": 733,
+          "geometryDetail": "564 quads + 286 triangles; 1 materials",
+          "formats": "Source: source/bmw_e46.obj (0.1 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "1 file, 4096x4096",
+          "published": "2024-06-16",
+          "fabMigrationListingId": "dd5d4be2-452c-418e-a91c-5053b35d85da",
+          "interior": "No",
+          "engineBay": "No",
+          "body": "Very low-poly sedan (1,420 triangles, one 4096 px base-colour texture)",
+          "origin": "slowpoly, a low-poly tutorial seller (311 models). Its description differs from ROH3D's, and the mesh is 1,420 vs 18,447 triangles, so the old note that the two are near-identical listings was wrong.",
+          "verdict": "avoid",
+          "verdictReason": "Far too low-poly (1,420 triangles).",
+          "quotes": [
+            {
+              "quote": "Low poly car with nice geometry and surface flow, realistic looking with high-quality textures."
+            }
+          ]
+        },
+        {
+          "id": "sf-merctv-e46-prefl",
+          "title": "BMW 3-Series E46 1998-2006",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2006-7df0ea780a1b464bba53b515e7fcdbca",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "needs-call",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/7df0ea780a1b464bba53b515e7fcdbca + viewer metadata https://sketchfab.com/i/models/7df0ea780a1b464bba53b515e7fcdbca + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Merc_TV (@szymonpasterczyk)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1096495,
+          "vertices": 583105,
+          "geometryDetail": "0 quads + 1,096,495 triangles; 71 materials",
+          "formats": "Source: source/BMW 3-Series E46 1998-2006 2.glb (53.0 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-10-18",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "body": "\"Version Pre-Facelift\"",
+          "origin": "Uploader biography (Sketchfab users API): \"Importing Beamng.Drive,Assetto corsa,GTA San Andreas.\" (992 models). Two of its other uploads have BeamNG mod files in their source lists (vehicles/n350z/info.json; vehicles/este46/info.json).",
+          "verdict": "avoid",
+          "verdictReason": "The uploader says the account imports models from BeamNG.drive, Assetto Corsa and GTA San Andreas: game rips.",
+          "quotes": [
+            {
+              "quote": "Importing Beamng.Drive,Assetto corsa,GTA San Andreas."
+            },
+            {
+              "quote": "vehicles/este46/info.json"
+            }
+          ]
+        },
+        {
+          "id": "sf-merctv-e46-fl",
+          "title": "BMW 3-Series E46 1998-2006",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2006-2e32a3e273ab482b83970603539de06a",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (in the Merc_TV note)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/2e32a3e273ab482b83970603539de06a + viewer metadata https://sketchfab.com/i/models/2e32a3e273ab482b83970603539de06a + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Merc_TV (@szymonpasterczyk)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 831308,
+          "vertices": 452279,
+          "geometryDetail": "0 quads + 831,308 triangles; 79 materials",
+          "formats": "Source: source/model.glb (33.7 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-10-18",
+          "body": "\"Version Facelift\"",
+          "origin": "Same Merc_TV account (game imports).",
+          "verdict": "avoid",
+          "verdictReason": "Game imports (uploader biography).",
+          "quotes": [
+            {
+              "quote": "Importing Beamng.Drive,Assetto corsa,GTA San Andreas."
+            }
+          ]
+        },
+        {
+          "id": "sf-merctv-e46-9802",
+          "title": "BMW 3 Series (E46) 1998-2002",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2002-7846a8c9431648c1857546632c8ffa3c",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (in the Merc_TV note)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/7846a8c9431648c1857546632c8ffa3c + viewer metadata https://sketchfab.com/i/models/7846a8c9431648c1857546632c8ffa3c + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Merc_TV (@szymonpasterczyk)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1433027,
+          "vertices": 762723,
+          "geometryDetail": "0 quads + 1,433,027 triangles; 76 materials",
+          "formats": "Source: source/BMW 3 Series (E46) 1998-2002.glb (47.0 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-10-06",
+          "body": "Pre-facelift",
+          "origin": "Same Merc_TV account (game imports).",
+          "verdict": "avoid",
+          "verdictReason": "Game imports (uploader biography).",
+          "quotes": [
+            {
+              "quote": "Importing Beamng.Drive,Assetto corsa,GTA San Andreas."
+            }
+          ]
+        },
+        {
+          "id": "3dm-e46-sedan-2006",
+          "title": "BMW 3 Series sedan (E46) 2006 (3DModels.org)",
+          "url": "https://3dmodels.org/360-view/?id=38073",
+          "marketplace": "3DModels.org",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: 403 'Security check - 3DModels' (Cloudflare 'Performing security verification ... Enable JavaScript and cookies to continue') to curl; WebFetch also got 403.",
+          "verdict": "not-verified",
+          "verdictReason": "Licence, price and polycount unknown. The 3DModels.org licence pages are blocked the same way; a WebSearch summary (not page text) says models may not be used in projects 'not protected from extraction by other users', which would rule out a plain GLB if accurate."
+        },
+        {
+          "id": "sf-niev-e46-coupe-touring",
+          "title": "BMW 3 Series E46 Coupe And Touring",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-coupe-and-touring-388d4f257a81451a9ad5677fbfa5ee73",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/388d4f257a81451a9ad5677fbfa5ee73 + viewer metadata https://sketchfab.com/i/models/388d4f257a81451a9ad5677fbfa5ee73 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Nieve5677 (@niev)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 2210868,
+          "vertices": 1135724,
+          "geometryDetail": "0 quads + 2,210,868 triangles; 38 materials",
+          "formats": "Source: source/BMW 3 Series E46 Coupe and Touring.glb (67.6 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-04-01",
+          "origin": "Uploader biography: \"I did not make any of these models but feel free to use them for anything.\"",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed: the uploader isn't the author, so the CC-BY label isn't the author's. Also 2.2M triangles.",
+          "quotes": [
+            {
+              "quote": "I did not make any of these models but feel free to use them for anything."
+            }
+          ]
+        },
+        {
+          "id": "sf-niev-318i",
+          "title": "BMW 318i E46",
+          "url": "https://sketchfab.com/3d-models/bmw-318i-e46-81827129d1f34aa7a13ab1131fd1cf37",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/81827129d1f34aa7a13ab1131fd1cf37 + viewer metadata https://sketchfab.com/i/models/81827129d1f34aa7a13ab1131fd1cf37 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Nieve5677 (@niev)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1088157,
+          "vertices": 559141,
+          "geometryDetail": "0 quads + 1,088,157 triangles; 20 materials",
+          "formats": "Source: source/BMW 318i E46.glb (32.8 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-03-31",
+          "origin": "Same uploader (\"I did not make any of these models\").",
+          "body": "318i",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed (not the author; 318i).",
+          "quotes": [
+            {
+              "quote": "I did not make any of these models but feel free to use them for anything."
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-328i",
+          "title": "1999 BMW E46 328i Sport",
+          "url": "https://sketchfab.com/3d-models/1999-bmw-e46-328i-sport-5fce3b693344450380b0112a4d21cfe5",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/5fce3b693344450380b0112a4d21cfe5 + viewer metadata https://sketchfab.com/i/models/5fce3b693344450380b0112a4d21cfe5 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 35336,
+          "vertices": 22678,
+          "geometryDetail": "8 quads + 35,218 triangles; 17 materials",
+          "formats": "Source: FINAL_MODEL_328i.fbx (5.5 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "21 files, largest 2134x2134",
+          "published": "2025-11-06",
+          "origin": "\"Based on a Need For Speed 3d model\"; textures Car_BMW_E46328i_1999_*.",
+          "body": "Coupe (description), 328i Sport",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA and a game rip.",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-quore-hgk",
+          "title": "BMW E46 HGK",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-hgk-d4e63d61b4a54befbb9daa62c8ff3a4f",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/d4e63d61b4a54befbb9daa62c8ff3a4f + viewer metadata https://sketchfab.com/i/models/d4e63d61b4a54befbb9daa62c8ff3a4f + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Quore (@Quoreder)",
+          "licenceAsShown": "CC Attribution-NonCommercial (API license.label; page row \"License: CC Attribution-NonCommercial Creative Commons Attribution-NonCommercial\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 171507,
+          "vertices": 86113,
+          "geometryDetail": "0 quads + 171,507 triangles; 1 materials",
+          "formats": "Source: hgk.obj (18.7 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "1 file, 2730x2730",
+          "published": "2022-11-02",
+          "body": "HGK widebody drift kit (tags widebody, bodykit, hgk)",
+          "origin": "No description; uploader now shown as Quore (@Quoreder).",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC; widebody kit."
+        },
+        {
+          "id": "sf-imperialblue-e46",
+          "title": "2001 BMW 3-Series (E46)",
+          "url": "https://sketchfab.com/3d-models/2001-bmw-3-series-e46-24a2b709937f4629b9fd2a7afa54e609",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/24a2b709937f4629b9fd2a7afa54e609 + viewer metadata https://sketchfab.com/i/models/24a2b709937f4629b9fd2a7afa54e609 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "ImperialBlue3D (@ImperialBlue3D)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1302,
+          "vertices": 658,
+          "geometryDetail": "364 quads + 410 triangles; 1 materials",
+          "formats": "Source: source/3-Series.obj (0.1 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "1 file, 512x512",
+          "published": "2024-09-11",
+          "interior": "No: \"Doesn't have an Interior or any detail as such\"",
+          "engineBay": "No",
+          "origin": "The author's own game prop, \"created for a game project i have, as a traffic car driven by AI\" (a game NPC car, not an AI-generated model).",
+          "verdict": "avoid",
+          "verdictReason": "CC-BY is fine but it's 1,302 triangles.",
+          "quotes": [
+            {
+              "quote": "This 3D model Unfortunately Doesn't have an Interior or any detail as such"
+            },
+            {
+              "quote": "as a traffic car driven by AI"
+            }
+          ]
+        },
+        {
+          "id": "sf-modception-e46-scan",
+          "title": "BMW 3-series E46 body / chassis 3D scan",
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-body-chassis-3d-scan-11cb6c0433254eb58398cc0732ab0185",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (reference only)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/11cb6c0433254eb58398cc0732ab0185 + viewer metadata https://sketchfab.com/i/models/11cb6c0433254eb58398cc0732ab0185 + model page (curl) + comments and user APIs",
+          "exists": "Page exists (view only). Not for sale or download on Sketchfab (inStore false, downloadType no).",
+          "author": "modception (@modception)",
+          "licenceAsShown": "None (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Not purchasable (no Buy or Download button: inStore false, downloadType no).",
+          "triangles": 4416010,
+          "vertices": 2241394,
+          "geometryDetail": "0 quads + 4,416,010 triangles; 1 materials",
+          "formats": "Source: not listed.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-06-17",
+          "body": "Body/chassis scan, sectioned into chunks",
+          "origin": "3D scan (Revopoint Trackit) by the uploader",
+          "verdict": "avoid",
+          "verdictReason": "No licence and not downloadable (view only); sold on request only, and many comments since 2025 ask how to buy without a visible answer. Reference only.",
+          "quotes": [
+            {
+              "quote": "3D scan data only, no drawings, dimensions."
+            }
+          ]
+        },
+        {
+          "id": "sf-goodscan-e46",
+          "title": "BMW series 3 E46 lidar scan",
+          "url": "https://sketchfab.com/3d-models/bmw-series-3-e46-lidar-scan-dd9b15dad87a46f88080f081c1586800",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (reference only)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/dd9b15dad87a46f88080f081c1586800 + viewer metadata https://sketchfab.com/i/models/dd9b15dad87a46f88080f081c1586800 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (downloadType free)",
+          "author": "GoodScan 3D (@goodscan3d)",
+          "licenceAsShown": "CC Attribution (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 0,
+          "vertices": 3521948,
+          "geometryDetail": "0 quads + 0 triangles; 1 materials",
+          "formats": "Source: source/pointcloud-binary.ply (52.8 MB, Polygon File Format). Sketchfab archives: glTF, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2021-01-15",
+          "body": "Point cloud (0 triangles, 3.5M points)",
+          "origin": "Phone lidar scan by the GoodScan 3D app makers",
+          "verdict": "usable-free",
+          "verdictReason": "CC-BY, but a point cloud: useful only as a rough proportion reference, never as a render asset.",
+          "quotes": [
+            {
+              "quote": "3D point cloud scan of a BMW series 3"
+            }
+          ]
+        }
+      ],
+      "consideredNotListed": [
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-touring-e46-2001-478330312c3d46fd94999c3133ce0366",
+          "who": "Luquita (@speedmodel)",
+          "licence": "CC Attribution",
+          "tris": 1194461,
+          "why": "Touring. A commenter: \"this ain't his/her work. This work is done by hum3d. He/she only edied it a bit\"; the source is BMW_3-series_E46_touring_2001.max (Hum3D-style naming): a re-uploaded commercial model."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46-3-series-894b0e5cc5404646988521d0255552f0",
+          "who": "shreeayaka (@sz00)",
+          "licence": "CC Attribution",
+          "tris": 1163164,
+          "why": "Lowered drift build (aftermarket wheels, splitter, tow hook) linked to a DeviantArt 'Bmw-330i-2jz-Drift-Build'; a commenter's \"its ur work or?\" is unanswered; untextured."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2006-bmw-330i-e0b76d9753fc4f458248c96c79021fdb",
+          "who": "tonielpro520 (@tonielpro520)",
+          "licence": "CC Attribution",
+          "tris": 293127,
+          "why": "445 uploads in under a year by a Roblox-game account; source OBJ named by a UUID; description embeds a Bring a Trailer photo; origin not stated."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46-0bd2f6a9f8b241efacd8d3c1b7ee7c17",
+          "who": "Maroi Mister Let Me Think Official 3D Studio (@homicivan53)",
+          "licence": "CC Attribution",
+          "tris": 49496,
+          "why": "Source db22684e2692_BMW_e46_Car.glb with textures Image_0_0.jpeg / Image_1_1 and one material: the naming pattern of AI 3D generators (not proven)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/e46-unity3d-c59ac3d805554df794435dbd2b01a452",
+          "who": "r34maxpro (@unitygtt34)",
+          "licence": "CC Attribution",
+          "tris": 80238,
+          "why": "Unity car-pack account; its texture set (E46_Carpet, E46_Leather 400x300, E46_Needle) matches ArezaStudios' M3 (Carpet, Leather 400x300, Needle): a shared third-party source."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46-b775274e71114945801a8f4206c9a873",
+          "who": "DragonDev_2026 (@DragonDev_2026)",
+          "licence": "CC Attribution",
+          "tris": 78930,
+          "why": "2-model account from 2026, no description, untextured; origin unknown."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/drift-wide-body-bmw-e46-40ba8e0ee21b4a8b8f4b8a85c9b2ad0e",
+          "who": "karimijannes0 (@karimijannes0)",
+          "licence": "CC Attribution",
+          "tris": 378180,
+          "why": "Drift widebody kit."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/1999-bmw-e46-328i-sport-439b2b2436e14e66ae00d03e8886b33d",
+          "who": "007 (@tangwang920)",
+          "licence": "CC Attribution",
+          "tris": 35336,
+          "why": "Same 35,336-triangle mesh as Ddiaz's NFS-based 328i; source scene.gltf: a re-upload."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46-compact-c6122e7b9c3044caab64c14ba0f2a3db",
+          "who": "Ricy (@ngon_3d)",
+          "licence": "CC Attribution",
+          "tris": 119770,
+          "why": "Ricy's E46 Compact (hatchback, not a sedan or coupe), \"Quickly modeled roughly\", with web-image textures (e.g. s-l640.jpeg, TexturesCom_FabricPlain0051)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/photoscanned-bmw-3-series-e46-7a56b85808504b5f846b102183c97b28",
+          "who": "Spiicy (@spiiiiicy)",
+          "licence": "CC Attribution",
+          "tris": 68773,
+          "why": "Photoscanned 325i sedan, 68.8k triangles, one texture; \"Model has been properly scaled\" and meant \"to be used as a modeling refrence\". Useful as a scale reference only."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-3-series-e46-1998-2005-f11b5fabe86c49afa54f4998dad8777a",
+          "who": "Merc_TV (@szymonpasterczyk)",
+          "licence": "CC Attribution",
+          "tris": 2948188,
+          "why": "Merc_TV (game imports); 2.9M triangles with gltf_embedded_* textures."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/junk-builds-bmw-e46-sedan-330i-f7f80b334d3443ec85e71a8c2b5ab3d2",
+          "who": "Merc_TV (@szymonpasterczyk)",
+          "licence": "CC Attribution",
+          "tris": 839702,
+          "why": "Merc_TV 'Junk Builds' 330i (game imports); textures include 2jz_suspension_diff and #junkbuilds decals."
+        },
+        {
+          "note": "Other Merc_TV E46s returned by the search (all avoid for the same reason): a686e22868bf43289f8d4fad6487fd6c, c4a7c1b7dc564c2bb408dda4880e8723, 7107678acf7b4e0f8ebd7d8b5f2f6da9, 29b3d481cf3f438e8a7f1ddea33de727, 2741522991f743f28cd6c76e495b7f78, c906c6f25c34466cbdd59b226d0558ba, f097e2a0e8e24e7ca18740c476d3765a, ba8678a98e42494dacf4cbe22709fc57, 06c82112c0684db5bbb2c21ab28fc3fc, 1ce5c3824bf9490da355e0e54f01ea00 (Sketchfab UIDs)."
+        },
+        {
+          "title": "BMW E46 Engine bay Scan (z0ne, Cults3D; Phase 0 lead)",
+          "url": "https://cults3d.com",
+          "why": "Not checked: cults3d.com answers a Cloudflare 'Just a moment...' challenge (403)."
+        },
+        {
+          "note": "No CC0 E46 on Sketchfab (API). BlenderKit's only E46 is the M3 GTR 'Most Wanted edition' (royalty_free, paid plan)."
+        }
+      ]
+    },
+    {
+      "item": "BMW M3 E46 coupe (2000-2006)",
+      "entries": [
+        {
+          "id": "sf-pixel183-m3",
+          "title": "BMW M3 E46",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-5399b1833e6a4c06af6b11b03832aed7",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/5399b1833e6a4c06af6b11b03832aed7 + viewer metadata https://sketchfab.com/i/models/5399b1833e6a4c06af6b11b03832aed7 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "pIxEL183 (@vladislav.varankin)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 352208,
+          "vertices": 178832,
+          "geometryDetail": "176,038 quads + 20 triangles; 17 materials",
+          "formats": "Source: source/HP_!.fbx (8.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2025-01-26",
+          "interior": "Unknown: dark glass in the cover image; not mentioned",
+          "engineBay": "Unknown; not mentioned",
+          "body": "Cover image: stock-looking M3 coupe body (M3 bumpers, side gills, bonnet bulge) on multi-spoke wheels (not identified); year not stated.",
+          "origin": "Not stated: the page says \"No description provided.\" The account has 3 uploads ('Barrel', this car, 'Gun STALKER - M 906') and no biography. No game or rip indicators either: no textures, material colours only.",
+          "verdict": "usable-free",
+          "verdictReason": "Clean CC-BY with no NoAI tag, 352k triangles (workable after decimation). Caveats: no textures, provenance unknown, interior and bay unknown. Credit on /credits.",
+          "quotes": [
+            {
+              "quote": "No description provided."
+            }
+          ]
+        },
+        {
+          "id": "sf-mmcworks-m3",
+          "title": "BMW M3 E46",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-f1b00ff37d504629b10031da32bc7497",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable (NoAI)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/f1b00ff37d504629b10031da32bc7497 + viewer metadata https://sketchfab.com/i/models/f1b00ff37d504629b10031da32bc7497 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "MMC Works (@mmcworks)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 846922,
+          "vertices": 442401,
+          "geometryDetail": "413,484 quads + 5,610 triangles; 39 materials",
+          "formats": "Source: source/mmc-bmw-m3-e46-v1-EEVEE.blend (40.0 MB, Blender). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "5 files, largest 2048x2048",
+          "published": "2021-07-19",
+          "fabMigrationListingId": "15884b03-d055-453d-b6bc-840e71590a38",
+          "interior": "Rough: the description says \"Rough interior\"",
+          "engineBay": "Not mentioned",
+          "body": "Not viewed: the model is NoAI, so no thumbnail or render was opened. The description and tags mention no kit or year. The author says the proportions were kept but \"the measurements are not accurate\".",
+          "origin": "Own work: \"3D modeled using Blender 3D just for practicing and personal improvement on automotive design\", with a modelling timelapse on YouTube and the native .blend as the source. The stainless-steel texture is named MetalStainlessSteelBrushedElongated005 (a texture-library naming style): replace it. An uncredited near-copy exists (mahdiadib99 'bmw-m3-e46', see consideredNotListed).",
+          "verdict": "usable-free",
+          "verdictReason": "CC-BY with a NoAI clause, which rule 5 allows: record noAi true, process it only with the asset scripts, never show it to an AI model. Caveats: 847k triangles (decimate), rough interior, dimensions not accurate per the author. Credit on /credits.",
+          "quotes": [
+            {
+              "quote": "Rough interior"
+            },
+            {
+              "quote": "3D modeled using Blender 3D just for practicing and personal improvement on automotive design"
+            },
+            {
+              "quote": "the measurements are not accurate, I've used a blueprint that was slightly different on views and made some adjustments."
+            },
+            {
+              "quote": "NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs."
+            }
+          ]
+        },
+        {
+          "id": "cgt-lowpoly-m3",
+          "title": "Low Poly Gameready BMW M3 E46 (CGTrader)",
+          "url": "https://www.cgtrader.com/3d-models/car/racing-car/low-poly-sport-car-600aa237-d74b-4b96-a5f4-09a406a0b855",
+          "marketplace": "CGTrader",
+          "listInOldFile": "usable",
+          "opened": false,
+          "openedHow": "Could not open: www.cgtrader.com answers curl with HTTP 202 and an empty body (AWS WAF JavaScript challenge); WebFetch got the same empty page; headless Chromium could not be used this session (certificate error). Nothing on this listing was re-verified.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says. It was also only 6,766 triangles per the Phase 0 summary."
+        },
+        {
+          "id": "squir-m3-e46",
+          "title": "BMW M3 e46 2000-2005 3D Model (SQUIR)",
+          "url": "https://squir.com/bmw-m3-e46-2000-2005-3d-model.html",
+          "marketplace": "SQUIR",
+          "listInOldFile": "needs-call",
+          "opened": true,
+          "openedHow": "curl (page and the SQUIR 'About us' page)",
+          "exists": "Page exists with a price and Add to Cart, but it carries a notice that BMW models are not sold (custom job on demand only)",
+          "author": "SQUIR (in-house studio)",
+          "licenceAsShown": "Editorial (SQUIR's About us page: \"The models are sold under general Editorial license\")",
+          "noAi": "Not mentioned",
+          "editorial": true,
+          "priceUSD": "Shown as EUR 99.00",
+          "triangles": null,
+          "vertices": 320000,
+          "geometryDetail": "\"Polygons: 320000 Vertices: 320000\"; \"Textures: Yes Materials: No\"",
+          "interior": "Not stated",
+          "engineBay": "Not stated",
+          "body": "M3 E46 2000-2005",
+          "origin": "SQUIR's own studio (\"All contents at squir.com website was created in-hause by our studio.\")",
+          "formats": "3DS 5.6 MB, C4D 8.3 MB, FBX 11.8 MB, LWO 7.2 MB, MAX 2009 14.5 MB, OBJ 14.1 MB",
+          "relatedUrl": "https://squir.com/bmw-m3-e46-csl.html",
+          "relatedResult": "The CSL page: EUR 99.00, \"Polygons: 500000 Vertices: 500000\", materials \"3dsmax mentalray\", same BMW notice.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "Editorial, and SQUIR forbids \"Provide any free download of the models at any website or throgh any app\"; sharing online or use in a game \"would need a special licensing agreement\". The product page also says \"BMW group refuse to grant a license to sell BMW/Mini/Rolls 3d models\".",
+          "quotes": [
+            {
+              "quote": "As you might know, BMW group refuse to grant a license to sell BMW/Mini/Rolls 3d models."
+            },
+            {
+              "quote": "Polygons: 320000 Vertices: 320000"
+            },
+            {
+              "quote": "€99.00"
+            },
+            {
+              "quote": "The models are sold under general Editorial license"
+            },
+            {
+              "quote": "Provide any free download of the models at any website or throgh any app."
+            },
+            {
+              "quote": "Polygons: 500000 Vertices: 500000"
+            }
+          ]
+        },
+        {
+          "id": "cgmood-m3-csl",
+          "title": "BMW M3 E46 CSL (cgmood)",
+          "url": "https://cgmood.com/3d-model/bmw-m3-e46-csl",
+          "marketplace": "cgmood",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: HTTP 403 Forbidden (nginx) to curl; a hard block, not retried.",
+          "verdict": "not-verified",
+          "verdictReason": "Licence, price and polycount not seen. It's the CSL variant anyway (Phase 0: 650,000 polygons, Corona/V-Ray materials)."
+        },
+        {
+          "id": "bs-10588-m3",
+          "title": "BMW M3 E46 (Blend Swap 10588)",
+          "url": "https://blendswap.com/blend/10588",
+          "marketplace": "Blend Swap",
+          "listInOldFile": "needs-call",
+          "opened": true,
+          "openedHow": "curl (server-rendered page)",
+          "exists": "Yes, free download",
+          "author": "BlenderCentral (uploader; the description matches Andrei Maximov's Sketchfab upload)",
+          "licenceAsShown": "CC-BY-SA (page 'License' field)",
+          "noAi": "Not mentioned",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": null,
+          "vertices": null,
+          "geometryDetail": "Not shown; 5.96 MB .blend",
+          "formats": "Blender 2.6x, Cycles",
+          "published": "Page: \"Uploaded almost 13 years ago\"",
+          "relatedUrl": "https://sketchfab.com/3d-models/bmw-m3-e46-6c1b23073ba34b5c9ef86152092a7af5",
+          "relatedResult": "Andrei Maximov's Sketchfab copy: view only (downloadType no), no licence, 445,616 triangles, 2013.",
+          "verdict": "avoid",
+          "verdictReason": "ShareAlike (CC-BY-SA) is never allowed (rule 5).",
+          "quotes": [
+            {
+              "quote": "CC-BY-SA"
+            },
+            {
+              "quote": "The model was created in Blender 2.68 and rendered entirely in Cycles"
+            }
+          ]
+        },
+        {
+          "id": "sf-lexyc16-m3",
+          "title": "BMW M3 E46",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-a067132c75f5456daa4f60c4001337d7",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/a067132c75f5456daa4f60c4001337d7 + viewer metadata https://sketchfab.com/i/models/a067132c75f5456daa4f60c4001337d7 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Lexyc16 (@Lexyc16)",
+          "licenceAsShown": "CC Attribution-NonCommercial (API license.label; page row \"License: CC Attribution-NonCommercial Creative Commons Attribution-NonCommercial\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 32822,
+          "vertices": 19309,
+          "geometryDetail": "14,439 quads + 2,187 triangles; 26 materials",
+          "formats": "Source: m3e46.obj (2.6 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "7 files, largest 2850x2800",
+          "published": "2024-01-06",
+          "origin": "Textures include web images (e.g. oem-line-led-tail-lights-for-bmw-3-series-.png) and a hash-named PNG.",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC."
+        },
+        {
+          "id": "sf-ddiaz-2003-m3",
+          "title": "2003 BMW M3 E46 Coupé",
+          "url": "https://sketchfab.com/3d-models/2003-bmw-m3-e46-coupe-7b43e776153f4dc199f564469cedbaa0",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/7b43e776153f4dc199f564469cedbaa0 + viewer metadata https://sketchfab.com/i/models/7b43e776153f4dc199f564469cedbaa0 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 49659,
+          "vertices": 31889,
+          "geometryDetail": "0 quads + 49,659 triangles; 28 materials",
+          "formats": "Source: FINAL_MODEL.fbx (4.6 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "22 files, largest 1024x1024",
+          "published": "2025-04-25",
+          "origin": "\"Based on a Need For Speed Heat 3d model\"; textures Car_BMW_M3E46_2003_*.",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed game rip, and the licence is CC BY-NC-SA (the old list only named the rip).",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed Heat 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-2005-m3",
+          "title": "2005 BMW M3 (E46)",
+          "url": "https://sketchfab.com/3d-models/2005-bmw-m3-e46-50549fe15a294acd8a8340988a943eae",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/50549fe15a294acd8a8340988a943eae + viewer metadata https://sketchfab.com/i/models/50549fe15a294acd8a8340988a943eae + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 34240,
+          "vertices": 22151,
+          "geometryDetail": "117 quads + 33,909 triangles; 15 materials",
+          "formats": "Source: FINAL_MODEL_05.fbx (1.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "10 files, largest 1024x1024",
+          "published": "2025-09-24",
+          "origin": "\"Based on a Forza Motorsport 4 3d model\"; credits a SketchUp 3D Warehouse user.",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA and a game rip.",
+          "quotes": [
+            {
+              "quote": "Based on a Forza Motorsport 4 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-gtr-mw",
+          "title": "2005 BMW M3 E46 GTR - NFS Most Wanted",
+          "url": "https://sketchfab.com/3d-models/2005-bmw-m3-e46-gtr-nfs-most-wanted-2999936a393340c0a389c6bd31961a63",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/2999936a393340c0a389c6bd31961a63 + viewer metadata https://sketchfab.com/i/models/2999936a393340c0a389c6bd31961a63 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licenceAsShown": "CC Attribution-NonCommercial-ShareAlike (API license.label; page row \"License: CC Attribution-NonCommercial-ShareAlike CC Attribution-NonCommercial-ShareAlike\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 83754,
+          "vertices": 48789,
+          "geometryDetail": "0 quads + 83,754 triangles; 14 materials",
+          "formats": "Source: FINAL_MODEL_MW.fbx (5.2 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "32 files, largest 2048x2048",
+          "published": "2025-02-22",
+          "origin": "\"Based on a Need For Speed Mobile 3d model\"",
+          "body": "M3 GTR race car (NFS Most Wanted)",
+          "verdict": "avoid",
+          "verdictReason": "Confirmed CC BY-NC-SA, game rip, race car.",
+          "quotes": [
+            {
+              "quote": "Based on a Need For Speed Mobile 3d model"
+            }
+          ]
+        },
+        {
+          "id": "sf-allay-gtr-mw",
+          "title": "BMW M3 GTR - E46 (Need for Speed - Mostwanted)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-gtr-e46-need-for-speed-mostwanted-dc847838a5c84d94ab3a138c0f89191b",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/dc847838a5c84d94ab3a138c0f89191b + viewer metadata https://sketchfab.com/i/models/dc847838a5c84d94ab3a138c0f89191b + model page (curl) + comments and user APIs",
+          "exists": "Page exists (view only). Not for sale or download on Sketchfab (inStore false, downloadType no).",
+          "author": "Allay Design (@Alister.Dsa)",
+          "licenceAsShown": "Editorial (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": true,
+          "priceUSD": "Not purchasable (no Buy or Download button: inStore false, downloadType no). API price field 6999 (old store price, USD 69.99).",
+          "triangles": 277461,
+          "vertices": 152838,
+          "geometryDetail": "0 quads + 277,461 triangles; 10 materials",
+          "formats": "Source: source/model.fbx (12.6 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "52 files, largest 4096x4096",
+          "published": "2024-01-18",
+          "body": "M3 GTR race car in NFS Most Wanted livery",
+          "origin": "Description only points to an ArtStation listing. Not viewed (NoAI).",
+          "verdict": "avoid",
+          "verdictReason": "Editorial licence, tagged noai, not for sale on Sketchfab; a game-car replica, not the road M3.",
+          "quotes": [
+            {
+              "quote": "Get the BMW M3 GTR 3D model here: https://artstn.co/m/1W5oK"
+            }
+          ]
+        },
+        {
+          "id": "sf-nikkist-csl",
+          "title": "BMW E46 M3 CSL",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-m3-csl-4fcff8ef8e31483d85a044ae5142850e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/4fcff8ef8e31483d85a044ae5142850e + viewer metadata https://sketchfab.com/i/models/4fcff8ef8e31483d85a044ae5142850e + model page (curl) + comments and user APIs",
+          "exists": "Page exists (view only). Not for sale or download on Sketchfab (inStore false, downloadType no).",
+          "author": "nikki_st (@nikki_st)",
+          "licenceAsShown": "Editorial (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": true,
+          "priceUSD": "Not purchasable (no Buy or Download button: inStore false, downloadType no). API price field 999 (old store price, USD 9.99).",
+          "triangles": 10779,
+          "vertices": 5872,
+          "geometryDetail": "4,636 quads + 1,239 triangles; 10 materials",
+          "formats": "Source: M3 CSL Textured 2.fbx (0.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "4 files, largest 1024x1024",
+          "published": "2020-06-28",
+          "body": "Stylised CSL",
+          "origin": "\"This model is a recreation of this masterpiece in a stylized 2D-like look.\"",
+          "verdict": "avoid",
+          "verdictReason": "Licence now seen: Editorial, and not for sale; stylised (no-cartoon rule).",
+          "quotes": [
+            {
+              "quote": "This model is a recreation of this masterpiece in a stylized 2D-like look."
+            }
+          ]
+        },
+        {
+          "id": "sf-brikker-m3",
+          "title": "BMW M3 E46",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-a0cc623fe4ec4b96bc0137b152279321",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/a0cc623fe4ec4b96bc0137b152279321 + viewer metadata https://sketchfab.com/i/models/a0cc623fe4ec4b96bc0137b152279321 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "BRIKKER (@daniklyz)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 8038,
+          "vertices": 4682,
+          "geometryDetail": "3,322 quads + 960 triangles; 15 materials",
+          "formats": "Source: source/bmw.fbx (0.2 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2022-05-21",
+          "interior": "\"The interior is not designed for a first-person game.\"",
+          "origin": "Own low-poly model (\"Made in Blender\"); tags nfs, nfsmw.",
+          "verdict": "avoid",
+          "verdictReason": "Licence now seen (CC-BY), but 8,038 triangles with no textures.",
+          "quotes": [
+            {
+              "quote": "Low poly BMW M3 e46. Made in Blender. 7410 triangles. No textures, only materials."
+            }
+          ]
+        },
+        {
+          "id": "sf-baseoptimal-red",
+          "title": "BMW E46 M3 Sports Car Red",
+          "url": "https://sketchfab.com/3d-models/bmw-e46-m3-sports-car-red-74916396475b414f8dbcb580621a5010",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/74916396475b414f8dbcb580621a5010 + viewer metadata https://sketchfab.com/i/models/74916396475b414f8dbcb580621a5010 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "BaseOptimal (@BaseOptimal)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 70612,
+          "vertices": 42153,
+          "geometryDetail": "32,633 quads + 5,122 triangles; 4 materials",
+          "formats": "Source: source/46m3red.fbx (2.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "15 files, largest 4096x4096",
+          "published": "2024-01-20",
+          "fabMigrationListingId": "79013d57-c4be-4427-ae24-3d5b4e9b68f4",
+          "origin": "Built from another uploader's M3 GTR (https://sketchfab.com/3d-models/bmw-m3-e46-gtr-66314ceeeaf24508824dd574ad04aed2, now 404) plus \"extra parts from this model, maily interior\" from a SketchUp 3D Warehouse StanceNation model.",
+          "statusNote": "The licence label is now CC Attribution (API and page), but the description still says use is \"within the bounds of the Editorial License\".",
+          "verdict": "avoid",
+          "verdictReason": "Contradictory licence wording and parts taken from other people's models, so the uploader can't grant CC-BY for all of it.",
+          "quotes": [
+            {
+              "quote": "Feel free to use in your personal projects within the bounds of the Editorial License"
+            },
+            {
+              "quote": "I used extra parts from this model, maily interior"
+            },
+            {
+              "quote": "{\"detail\":\"Not found.\"}"
+            }
+          ]
+        },
+        {
+          "id": "sf-baseoptimal-cr",
+          "title": "CR's BMW E46 M3 Sports Car",
+          "url": "https://sketchfab.com/3d-models/crs-bmw-e46-m3-sports-car-b99dd46e63fa4f6cbb952e41695c079e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/b99dd46e63fa4f6cbb952e41695c079e + viewer metadata https://sketchfab.com/i/models/b99dd46e63fa4f6cbb952e41695c079e + model page (curl) + comments and user APIs",
+          "exists": "Page exists (view only). Not for sale or download on Sketchfab (inStore false, downloadType no).",
+          "author": "BaseOptimal (@BaseOptimal)",
+          "licenceAsShown": "Editorial (API license.label; no licence row on the page, the page's embedded model JSON has the same label)",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": true,
+          "priceUSD": "Not purchasable (no Buy or Download button: inStore false, downloadType no). API price field 399 (old store price, USD 3.99).",
+          "triangles": 70612,
+          "vertices": 42153,
+          "geometryDetail": "32,633 quads + 5,122 triangles; 4 materials",
+          "formats": "Source: source/46m3mix.fbx (2.4 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "17 files, largest 4096x4096",
+          "published": "2024-01-20",
+          "origin": "Same derived-parts statement as the red car. Not viewed (NoAI).",
+          "statusNote": "The old list said Sketchfab Store royalty-free; the licence is Editorial, it's tagged noai, and it's not for sale.",
+          "verdict": "avoid",
+          "verdictReason": "Editorial, not purchasable, built from other people's models.",
+          "quotes": [
+            {
+              "quote": "I used extra parts from this model, maily interior"
+            }
+          ]
+        },
+        {
+          "id": "bk-m3-mw",
+          "title": "BMW M3 E46 (Most Wanted edition) (BlenderKit)",
+          "url": "https://www.blenderkit.com/asset-gallery-detail/2c049d4b-6acb-47e6-bef2-b2f3325124b2/",
+          "marketplace": "BlenderKit",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "curl: www.blenderkit.com now answers HTTP 301 to www.blendkit.com; asset read through the public search API https://www.blenderkit.com/api/v1/search/?query=asset_base_id:2c049d4b-6acb-47e6-bef2-b2f3325124b2",
+          "exists": "Yes",
+          "author": "Pavel Konovalov",
+          "licenceAsShown": "royalty_free (API); isFree false, so it needs the paid Full plan",
+          "noAi": "Not stated",
+          "editorial": false,
+          "priceUSD": "Paid plan",
+          "triangles": null,
+          "vertices": null,
+          "geometryDetail": "faceCount 173,894; 158 objects; textures up to 4096 px",
+          "body": "\"BMW M3 E46 GTR(Most Wanted edition)\"",
+          "published": "2023-10-29",
+          "verdict": "avoid",
+          "verdictReason": "The GTR race car in NFS livery, not the road M3; royalty-free on a paid plan, not CC0/CC-BY.",
+          "quotes": [
+            {
+              "quote": "BMW M3 E46 GTR(Most Wanted edition)"
+            }
+          ]
+        },
+        {
+          "id": "sf-badkarma-m3",
+          "title": "BMW M3 E46 (BadKarma)",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-c2b0331b64574e03b63d28d3350d522f",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (unchecked in Phase 0)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/c2b0331b64574e03b63d28d3350d522f + viewer metadata https://sketchfab.com/i/models/c2b0331b64574e03b63d28d3350d522f + model page (curl) + comments and user APIs",
+          "exists": "No. Data API and viewer metadata both answer 404 {\"detail\":\"Not found.\"} (deleted or made private).",
+          "verdict": "avoid",
+          "verdictReason": "Gone (API and viewer 404)."
+        },
+        {
+          "id": "sf-disneycars-m3",
+          "title": "2002 BMW M3 (E46)",
+          "url": "https://sketchfab.com/3d-models/2002-bmw-m3-e46-cc948b0e391b42c1bae76daaebd2f219",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (unchecked in Phase 0)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/cc948b0e391b42c1bae76daaebd2f219 + viewer metadata https://sketchfab.com/i/models/cc948b0e391b42c1bae76daaebd2f219 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "DisneyCars (@supercarmodels)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 27946,
+          "vertices": 18046,
+          "geometryDetail": "0 quads + 27,946 triangles; 58 materials",
+          "formats": "Source: source/bmw_m3_e46_gtr.glb (2.6 MB, GL Transmission Format). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "15 files, largest 512x512",
+          "published": "2024-04-29",
+          "origin": "No description. The source is bmw_m3_e46_gtr.glb with gltf_embedded_* textures, and the mesh (27,946 triangles / 18,046 vertices) is identical to Car2022's 'BMW M3 Coupe Aerokit (E46)', which says \"Model from: Need for Speed: Shift & Shift 2: Unleashed\".",
+          "verdict": "avoid",
+          "verdictReason": "Game rip (NFS Shift mesh).",
+          "quotes": [
+            {
+              "quote": "Model from: Need for Speed: Shift & Shift 2: Unleashed"
+            }
+          ]
+        },
+        {
+          "id": "ts-1690326",
+          "title": "bmw-m3-e46-model (TurboSquid 1690326)",
+          "url": "https://www.turbosquid.com/3d-models/bmw-m3-e46-model-1690326",
+          "marketplace": "TurboSquid",
+          "listInOldFile": "lead (unchecked in Phase 0)",
+          "opened": false,
+          "openedHow": "Could not open: www.turbosquid.com answers 403 with a DataDome device check ('geo.captcha-delivery.com'). Nothing on this listing was re-verified.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "TurboSquid 3D Model License 7(b) (read 2026-09-26) only permits WebGL exports from Unity, Unreal and Lumberyard; other open formats are prohibited without written approval, so no for a three.js GLB whatever the listing says."
+        }
+      ],
+      "consideredNotListed": [
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-d7ddeecd902b4f82a4b0b9c43572b973",
+          "who": "mahdiadib99 (@mahdiadib99)",
+          "licence": "CC Attribution",
+          "tris": 847210,
+          "why": "Near-copy of MMC Works' NoAI model without credit: the same 413,484 quads and 1,306 n-gons (847,210 vs 846,922 triangles), the same stainless-steel texture set, source bmw-m3-e46-v2.blend, published six months later, no description. Not viewed (treated as NoAI)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-325f74ef4f44457fad28f66fcbb7b32f",
+          "who": "Fratzica (@vasilebetivu62)",
+          "licence": "CC Attribution",
+          "tris": 157195,
+          "why": "GTA San Andreas mod: tags gta, sanandreas; textures remap, lights_lod0, nodamage_lod0; a commenter: \"he didnt its a gta san anderas mod\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-6ffb51fa88c2460ead9403c8f3dfc976",
+          "who": "🇷🇴シRuletăシ🇷🇴 (@romanian_guy_0069)",
+          "licence": "CC Attribution",
+          "tris": 157195,
+          "why": "Same GTA SA mesh as above (157,195 triangles, same textures)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/m3-e46-3d-models-95d1e9ab927f461fa368407e439373fe",
+          "who": "RedFinals Studio (@ArezaStudios)",
+          "licence": "CC Attribution",
+          "tris": 111121,
+          "why": "A car from the uploader's Unity game; its texture set matches another Unity-pack E46 (shared third-party source)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-coupe-e46-f5f00aecf89845709d02be03a8007752",
+          "who": "Mona x Supercars (@Car2022)",
+          "licence": "CC Attribution",
+          "tris": 68404,
+          "why": "Car2022; textures M305_int, M305_luz, llanta, parrilla are the Forza 4-based Ddiaz 2005 M3's set."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-coupe-aerokit-e46-0e75004e32764755b9ea2b53fd93c2e8",
+          "who": "Mona x Supercars (@Car2022)",
+          "licence": "CC Attribution",
+          "tris": 27946,
+          "why": "Car2022: \"Model from: Need for Speed: Shift & Shift 2: Unleashed\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2003-bmw-m3-e46-coupe-a59cde59ed614dd3b304a8d7a4f13582",
+          "who": "b4_cobra (@B4_Cobra)",
+          "licence": "CC Attribution",
+          "tris": 49659,
+          "why": "Same 49,659-triangle mesh as Ddiaz's NFS Heat-based 2003 coupe; gltf_embedded textures: a re-upload."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/2015-pandem-bmw-e46-m3-with-duckbill-afbb5b4d6d5146e0a24726f99a8b42d2",
+          "who": "Ddiaz Design (@ddiaz-design)",
+          "licence": "CC Attribution",
+          "tris": 70460,
+          "why": "Ddiaz Pandem widebody labelled CC-BY, but \"Based on a Need For Speed Heat 3d model\"."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-gtr-85b9578c12444301a56b8c7489aec02d",
+          "who": "zaxo (@zaxo)",
+          "licence": "CC Attribution",
+          "tris": 1109936,
+          "why": "M3 GTR (tag nfsmostwanted), 1.1M triangles, CC-BY label but the description asks \"Interested to buy this model?\"; race car."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46m3-series-3-2004-908303b4a6f848469b9c58d448c977c5",
+          "who": "Merc_TV (@szymonpasterczyk)",
+          "licence": "CC Attribution",
+          "tris": 313906,
+          "why": "Merc_TV; source vehicles/este46/este46.dae + info.json (a BeamNG mod)."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-e46-m3-nightryder-sports-car-b28c766ffa714a1f9fc96392662e18a0",
+          "who": "BaseOptimal (@BaseOptimal)",
+          "licence": "CC Attribution",
+          "tris": 41178,
+          "why": "BaseOptimal 'NightRyder': same Editorial wording and derived parts as the red car."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-m3-e46-46eede26be684003840f7dde8730178d",
+          "who": "timotej.zalokar (@timotej.zalokar)",
+          "licence": "CC Attribution",
+          "tris": 3778,
+          "why": "3.8k-triangle first project."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/none-25895f9a6b9f45b7a5bc070bd35ac270",
+          "who": "Teguh.Agung (@Teguh.Agung)",
+          "licence": "CC Attribution",
+          "tris": 1632320,
+          "why": "\"M3 E46 WAGON X CONCEPT\": a fantasy wagon, not the coupe."
+        },
+        {
+          "url": "https://blendswap.com/blend/1626",
+          "who": "tahseen",
+          "licence": "CC0",
+          "why": "Titled 'BMW M3' but the preview shows an E92-generation M3, not an E46."
+        },
+        {
+          "url": "https://blendswap.com/blend/3697",
+          "who": "Neubi",
+          "licence": "CC0",
+          "why": "\"BMW M3 GT3 model inspiration by PS3 game\": DTM/GT3 race-car fan art."
+        },
+        {
+          "url": "https://www.printables.com/model/310926",
+          "who": "Schoberaeder",
+          "licence": "Creative Commons — Attribution",
+          "why": "\"BMW E46 M3 for your keychain\": a print toy."
+        },
+        {
+          "note": "About 25 more 'M3 GTR' uploads (NFS Most Wanted race car and its re-uploads, e.g. by B4_Cobra, Tyler_Dave, sohyalebret, huntrixhalo) were skipped: race car, mostly game-derived. No CC0 E46 M3 on Sketchfab (API)."
+        }
+      ]
+    },
+    {
+      "item": "Engines (not researched before): VQ35DE / VQ35HR (350Z), M54B30 (330i), S54B32 (M3)",
+      "entries": [
+        {
+          "id": "sf-rezasaffar-s54",
+          "title": "S54-presentation",
+          "url": "https://sketchfab.com/3d-models/s54-presentation-8e75841b9852413d86bf14ed3a540d47",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/8e75841b9852413d86bf14ed3a540d47 + viewer metadata https://sketchfab.com/i/models/8e75841b9852413d86bf14ed3a540d47 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "rezasaffar (@rezasaffar)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 1766969,
+          "vertices": 883511,
+          "geometryDetail": "0 quads + 1,766,969 triangles; 1 materials",
+          "formats": "Source: S54-presentation.stl (88.3 MB, Stereolithography). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2024-08-27",
+          "body": "Titled S54 (M3 E46 engine). The cover image is uninformative (the camera frames a white blob), so what's modelled wasn't seen.",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "origin": "Not stated: no description, no UVs, one material, STL source (a CAD or print export). The account was created the same day (5 uploads).",
+          "verdict": "owner-call",
+          "verdictReason": "The only whole S54 found under CC-BY. Open it in the Sketchfab viewer to see whether it's a full engine and how accurate it is; it needs retopology and materials, and its origin is unknown."
+        },
+        {
+          "id": "sf-altrous-s54-piston",
+          "title": "BMW M3 S54 Piston",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-s54-piston-e2f54827ddfd435f9f60a5d371017638",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/e2f54827ddfd435f9f60a5d371017638 + viewer metadata https://sketchfab.com/i/models/e2f54827ddfd435f9f60a5d371017638 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Altrous (@altrous)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 33141,
+          "vertices": 20480,
+          "geometryDetail": "0 quads + 33,141 triangles; 1 materials",
+          "formats": "Source: source/Automotive Piston .igs (5.3 MB, IGES). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2021-11-23",
+          "body": "S54 piston only",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "origin": "\"3D scanned and measuremnts taken from actual part.\" Altrous is a 3D-scanning company (179 models). Not viewed (NoAI).",
+          "verdict": "usable-free",
+          "verdictReason": "CC-BY with NoAI (allowed; record noAi true). A measured S54 piston for the cutaway; IGES source, so it needs tessellation.",
+          "quotes": [
+            {
+              "quote": "Automotive piston from a BMW M3 S54 engine."
+            }
+          ]
+        },
+        {
+          "id": "sf-altrous-s54-timing-cover",
+          "title": "BMW M3 S54 Front Timing Cover",
+          "url": "https://sketchfab.com/3d-models/bmw-m3-s54-front-timing-cover-9c981e3ef78a4c03a7d798dac5da0552",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/9c981e3ef78a4c03a7d798dac5da0552 + viewer metadata https://sketchfab.com/i/models/9c981e3ef78a4c03a7d798dac5da0552 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Altrous (@altrous)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 25216,
+          "vertices": 12578,
+          "geometryDetail": "0 quads + 25,216 triangles; 1 materials",
+          "formats": "Source: Front Timing Cover.stl (1.3 MB, Stereolithography). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2021-11-19",
+          "body": "S54 front timing cover only",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "origin": "\"Measurements taken from actual part and 3D Scanned.\" Not viewed (NoAI).",
+          "verdict": "usable-free",
+          "verdictReason": "CC-BY with NoAI (allowed). A single part.",
+          "quotes": [
+            {
+              "quote": "Front Timing Cover for 2005 BMW M3."
+            }
+          ]
+        },
+        {
+          "id": "sf-altrous-e36-bay",
+          "title": "1994 BMW 325i (E36) Engine Bay/Front End",
+          "url": "https://sketchfab.com/3d-models/1994-bmw-325i-e36-engine-bayfront-end-ed7ffe5a3a1c4add8beeb36691a8dd24",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/ed7ffe5a3a1c4add8beeb36691a8dd24 + viewer metadata https://sketchfab.com/i/models/ed7ffe5a3a1c4add8beeb36691a8dd24 + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Altrous (@altrous)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "Yes: tag \"noai\"; page shows \"NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.\"",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 821170,
+          "vertices": 411243,
+          "geometryDetail": "0 quads + 821,170 triangles; 1 materials",
+          "formats": "Source: E36 Engine Bay 2.obj (69.9 MB, OBJ). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2022-01-27",
+          "body": "1994 325i (E36, M50 engine) front end and engine bay, scanned",
+          "interior": "n/a",
+          "engineBay": "Yes, but E36 with the M50, not an E46",
+          "origin": "\"This was done using photogrammetry combined with 3D scanning.\" Not viewed (NoAI).",
+          "verdict": "owner-call",
+          "verdictReason": "CC-BY with NoAI; a real scanned BMW bay, but the wrong chassis and engine. Reference only.",
+          "quotes": [
+            {
+              "quote": "1994 BMW 325i front end. This was done using photogrammetry combined with 3D scanning."
+            }
+          ]
+        },
+        {
+          "id": "cadcrowd-vq35de",
+          "title": "Nissan 350Z VQ35DE Engine Block and Components (CadCrowd)",
+          "url": "https://www.cadcrowd.com/3d-models/nissan-350z-vq35de-engine-block-and-components",
+          "marketplace": "CadCrowd",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "curl (server-rendered page; the file list loads dynamically and wasn't read)",
+          "exists": "Yes, free download ('Download all files')",
+          "author": "InnovativeDesignSolutions",
+          "licenceAsShown": "\"License:\" \"CC - Attribution\" (links creativecommons.org/licenses/by/4.0)",
+          "noAi": "Not mentioned",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": null,
+          "vertices": null,
+          "geometryDetail": "CAD (tagged Autodesk Inventor); 'Files (12)'",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "body": "VQ35DE block and components (tags engine-block, engine-full-parts); the one gallery image shows the bare block",
+          "origin": "Not stated. The gallery image looks like the block in kev's 2014 GrabCAD model 'Nissan 350Z VQ35DE Engine Block' (also Inventor), whose rendering shows block, crank, pistons, rods, rings and bearings. If this is a re-upload, the CC-BY label isn't the author's: GrabCAD only licenses models for non-commercial, internal use. Not proven.",
+          "published": "\"Published Dec 11, 2020\"",
+          "verdict": "owner-call",
+          "verdictReason": "CC-BY on the page and possibly a full VQ35DE short block, but the provenance question has to be settled (compare the 12 files with the GrabCAD model, or ask).",
+          "quotes": [
+            {
+              "quote": "CC - Attribution"
+            },
+            {
+              "quote": "Published Dec 11, 2020"
+            }
+          ]
+        },
+        {
+          "id": "grabcad-kev-vq35de",
+          "title": "Nissan 350Z VQ35DE Engine Block (GrabCAD, kev)",
+          "url": "https://grabcad.com/library/nissan-350z-vq35de-engine-block-1",
+          "marketplace": "GrabCAD",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "GrabCAD community API https://grabcad.com/community/api/v1/models/nissan-350z-vq35de-engine-block-1 (+ /files) and https://grabcad.com/terms (curl)",
+          "exists": "Yes",
+          "author": "kev (United Kingdom, 19 models)",
+          "licenceAsShown": "No licence field; GrabCAD's terms apply",
+          "noAi": "n/a",
+          "editorial": false,
+          "priceUSD": "Free",
+          "geometryDetail": "Autodesk Inventor part 'VQ BLOCK.ipt' plus a render; 93 likes, 1,501 downloads",
+          "body": "The render shows an exploded short block: block, crankshaft, pistons, rods, rings, bearings, bedplate and oil pan",
+          "published": "2014-12-19",
+          "verdict": "avoid",
+          "verdictReason": "GrabCAD terms 6.2 license other users only \"for such user's own benefit and non-commercial, internal use\". Usable only if kev grants a licence directly (worth asking: it's the most complete free VQ35DE internals found).",
+          "quotes": [
+            {
+              "quote": "for such user's own benefit and non-commercial, internal use"
+            },
+            {
+              "quote": "VQ BLOCK.ipt"
+            }
+          ]
+        },
+        {
+          "id": "cgt-vq35de-350z",
+          "title": "Nissan 350z VQ35DE engine (CGTrader)",
+          "url": "https://www.cgtrader.com/3d-models/vehicle/vehicle-part/nissan-350z-vq35de-engine",
+          "marketplace": "CGTrader",
+          "listInOldFile": "lead (Engines section)",
+          "opened": false,
+          "openedHow": "Could not open: www.cgtrader.com answers curl with HTTP 202 and an empty body (AWS WAF JavaScript challenge); WebFetch got the same empty page; headless Chromium could not be used this session (certificate error). Nothing on this listing was re-verified.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says."
+        },
+        {
+          "id": "cgt-vq35de-g35",
+          "title": "Infiniti G35 VQ35DE engine (CGTrader)",
+          "url": "https://www.cgtrader.com/3d-models/vehicle/vehicle-part/infiniti-g35-vq35de-engine",
+          "marketplace": "CGTrader",
+          "listInOldFile": "new (search result only)",
+          "opened": false,
+          "openedHow": "Not opened (same CGTrader block); seen only in a WebSearch result.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "CGTrader sells to ordinary buyers only under \"Royalty Free License, No AI\" (T&C 21A.7, read 2026-09-26): a No AI clause on a non-CC licence, which CLAUDE.md rule 5 excludes; 21A.3 also requires protecting the file from extraction. This holds whatever the listing says."
+        },
+        {
+          "id": "ts-1480000",
+          "title": "3D Parts Nissan 350z Vq35de (TurboSquid 1480000)",
+          "url": "https://www.turbosquid.com/3d-models/3d-parts-nissan-350z-vq35de-1480000",
+          "marketplace": "TurboSquid",
+          "listInOldFile": "lead (Engines section)",
+          "opened": false,
+          "openedHow": "Could not open: www.turbosquid.com answers 403 with a DataDome device check ('geo.captcha-delivery.com'). Nothing on this listing was re-verified.",
+          "relatedUrl": "https://www.turbosquid.com/3d-models/infiniti-g35-vq35de-3-3d-model-1480006",
+          "relatedResult": "'Infiniti G35 Vq35de 3' (1480006), seen only in search; a search summary mentions 67 parts. Not opened.",
+          "verdict": "paid-licence-no",
+          "verdictReason": "TurboSquid 3D Model License 7(b) (read 2026-09-26) only permits WebGL exports from Unity, Unreal and Lumberyard; other open formats are prohibited without written approval, so no for a three.js GLB whatever the listing says."
+        },
+        {
+          "id": "sf-lagrekula-m52",
+          "title": "6 cylinder turbo-engine",
+          "url": "https://sketchfab.com/3d-models/6-cylinder-turbo-engine-53d65ac13e474b4b97d93e7f64635c9f",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/53d65ac13e474b4b97d93e7f64635c9f + viewer metadata https://sketchfab.com/i/models/53d65ac13e474b4b97d93e7f64635c9f + model page (curl) + comments and user APIs",
+          "exists": "Yes, free download (Download 3D Model button in the page HTML; downloadType free)",
+          "author": "Lauri Grekula (@La_Grekula)",
+          "licenceAsShown": "CC Attribution (API license.label; page row \"License: CC Attribution Creative Commons Attribution\")",
+          "noAi": "No noai tag and no NoAI notice on the page; isAiGenerated false",
+          "editorial": false,
+          "priceUSD": "Free",
+          "triangles": 92471,
+          "vertices": 45084,
+          "geometryDetail": "45,227 quads + 702 triangles; 12 materials",
+          "formats": "Source: source/M52B25.fbx (2.8 MB, Autodesk FBX). Sketchfab archives: glTF, USDZ, GLB.",
+          "textures": "No image textures (only Sketchfab's generated ground AO, if any)",
+          "published": "2023-06-01",
+          "body": "M52B25 with an added turbo; has internals (cylinders, crankshaft, timing drive)",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "origin": "\"The model is based of of the m52b25 bmw engine.\" and \"the turbo setup is 100% not correct\".",
+          "verdict": "avoid",
+          "verdictReason": "Wrong engine (M52, not the M54 or S54) with an invented turbo; not accurate enough.",
+          "quotes": [
+            {
+              "quote": "The model is based of of the m52b25 bmw engine."
+            },
+            {
+              "quote": "Note that i am not a mechanic and the turbo setup is 100% not correct but it manages ok."
+            }
+          ]
+        }
+      ],
+      "consideredNotListed": [
+        {
+          "url": "https://sketchfab.com/3d-models/bmw-engine-175a64f53ad948229de4ae8b653c45da",
+          "who": "lfaltran (@lfaltran)",
+          "licence": "CC Attribution",
+          "tris": 486485,
+          "why": "\"bmw engine for test\": a toy four-piston crank assembly, not a real engine."
+        },
+        {
+          "note": "No M54 (330i) engine model found: Sketchfab API (m54, m54b30, m54 engine, bmw engine, bmw inline 6), Printables API and a WebSearch return only parts (gaskets, adapters, tools)."
+        },
+        {
+          "note": "No VQ35HR engine model found (Sketchfab, Printables, BlenderKit)."
+        },
+        {
+          "url": "https://www.printables.com/model/1057081",
+          "who": "JustTheOtherDave",
+          "licence": "Creative Commons — Attribution — Share Alike",
+          "why": "'OEM VQ35DE Intake Plenum' (part only; ShareAlike not allowed)."
+        },
+        {
+          "url": "https://cults3d.com/en/tags/s54",
+          "why": "A search summary mentions 'S54 B32 BMW Engine Head' and 'S54 B32 BMW Engine Block' on Cults3D; not opened (Cloudflare challenge)."
+        }
+      ]
+    }
+  ],
+  "licenceTerms": {
+    "squir": {
+      "url": "https://squir.com/about-us",
+      "fetched": "2026-09-27",
+      "openedHow": "curl",
+      "explicitRealTimeWebPermission": false,
+      "answer": "No. SQUIR sells under an Editorial licence, forbids free downloads through any website or app, and says online or game use needs a special agreement. Its BMW pages add that BMW refuses to license BMW models.",
+      "quotes": [
+        {
+          "quote": "The models are sold under general Editorial license, The same like you'll have at other shops like CGtrader for example."
+        },
+        {
+          "quote": "But would you share it online, play in a commercial karaoke club, or use it as a soundtrack in a game?"
+        },
+        {
+          "quote": "- No, becuase that would need a special licensing agreement."
+        },
+        {
+          "quote": "2. Provide any free download of the models at any website or throgh any app."
+        },
+        {
+          "quote": "Of course we can discuss a custom copyright agreement if you need to use the models in a commercial project."
+        }
+      ]
+    },
+    "grabcad": {
+      "url": "https://grabcad.com/terms",
+      "fetched": "2026-09-27",
+      "openedHow": "curl",
+      "explicitRealTimeWebPermission": false,
+      "answer": "No. Other users get a licence to User Submissions only for their own non-commercial, internal use.",
+      "quotes": [
+        {
+          "quote": "each user of the Site a worldwide, non-exclusive, royalty-free, fully-paid, perpetual, irrevocable, non-sublicensable, non-assignable, and non-transferable license to use, reproduce, copy, modify, adapt, arrange, translate, and create derivative works of such User Submissions for such user's own benefit and non-commercial, internal use"
+        }
+      ]
+    },
+    "3dmodels.org": {
+      "url": "https://3dmodels.org/license/ and https://3dmodels.org/license-terms/",
+      "fetched": "2026-09-27",
+      "opened": false,
+      "answer": "Could not open (Cloudflare security check). A WebSearch summary, not page text, says models may not be used in projects that aren't protected from extraction by other users, and may not be distributed outside the purchasing organisation without written permission. If accurate: no for a plain GLB. hum3d.com now redirects to 3dmodels.org."
+    },
+    "blendswap": {
+      "answer": "Each blend shows its own licence on the page (seen: CC-BY, CC-BY-SA, CC0). Only CC0 and CC-BY are allowed.",
+      "fetched": "2026-09-27"
+    },
+    "cadcrowd": {
+      "answer": "Each listing shows its own licence ('CC - Attribution' on the VQ35DE listing, linking CC BY 4.0). CadCrowd's own terms weren't read.",
+      "fetched": "2026-09-27"
+    },
+    "blenderkit": {
+      "answer": "Branded cars there are 'royalty_free' (not CC0/CC-BY) and mostly on the paid plan (API fields license and isFree). www.blenderkit.com now 301-redirects to www.blendkit.com. The licence text itself wasn't read.",
+      "fetched": "2026-09-27"
+    },
+    "printables": {
+      "answer": "Per-model licences via the GraphQL API (e.g. 'Creative Commons — Attribution', '— Noncommercial', 'Standard Digital File License'). No whole engine or render-grade car found.",
+      "fetched": "2026-09-27"
+    }
+  },
+  "blocked": [
+    "Headless Chromium (Playwright): navigation fails with net::ERR_CERT_AUTHORITY_INVALID (the browser doesn't trust the egress proxy's certificate); not worked around",
+    "www.cgtrader.com (all 5 listings tried): HTTP 202 with an empty body to curl (AWS WAF challenge); WebFetch got the same empty page",
+    "www.turbosquid.com (5 listings): 403 DataDome device check",
+    "www.fab.com (2 listings: MMC Works' and slowpoly's Fab migrations): 403 Cloudflare challenge",
+    "3dmodels.org, including hum3d.com, which redirects there, and its licence pages: 403 'Security check - 3DModels' (Cloudflare); WebFetch 403",
+    "cgmood.com: 403 Forbidden (hard block)",
+    "cults3d.com: 403 Cloudflare 'Just a moment...'",
+    "www.stlfinder.com: 403 Cloudflare 'Sorry, you have been blocked' (hard block)",
+    "www.printables.com web pages: 403 (its GraphQL API worked)",
+    "sketchfab.com model pages: intermittent empty HTTP 202 to curl; all cited pages were fetched on a retry"
+  ]
+}

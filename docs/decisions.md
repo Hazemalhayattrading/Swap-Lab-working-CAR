@@ -230,3 +230,89 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Scope:** Read literally, as "if the licence is otherwise fine (CC0/CC-BY)". A NoAI clause on a paid licence (all of CGTrader's current "Royalty Free No AI") is still excluded. Those models would mostly fail the web-delivery check anyway.
 - **BUILD_PROMPT section 5** still says "skip anything tagged NoAI". CLAUDE.md overrides it.
 - **Alternatives:** Keep excluding NoAI (loses otherwise good free models, such as the MMC Works M3 E46). Accept NoAI on any licence (goes beyond what the owner said).
+
+## 2026-09-27 (Phase 1, part 2: 350Z, E46, VQ35DE/HR, M54B30, S54B32)
+
+### E46 scope: 330i/330Ci and M3 in one car file
+
+- **Decision:** `bmw-3-series-e46.json` holds every 330i/330Ci trim (sedan, Touring, coupe, convertible; Europe and US, including the US ZHP Performance Package) and every M3 trim (coupe, convertible, CSL, Competition Package/ZCP, each with manual and SMG II). Left out: other E46 engines, the 330xi/330xd AWD cars, diesels, the UK-only 330Ci Clubsport, and the S54 in the Z3 M and Z4 M (their ratings are noted in the S54 file, not modelled).
+- **Why:** The brief asks for the E46 "330i and M3, all trims". One chassis file keeps the shared body data (base dimensions, gearbox families) in one place, as the schema intends.
+- **Alternatives:** Separate files for the 330i and the M3 (duplicates the chassis and the production window).
+
+### Markets covered
+
+- **Decision:** The 350Z has Japanese, US and European (UK and Germany) trims; the E46 has European (BMW AG's German data, which BMW GB repeats) and US trims. The Australian 350Z is left out.
+- **Why:** Those are the markets with factory or near-factory sources. The only Australian source found is Redbook through carsales, and its kerb and tare weights contradict each other.
+- **Alternatives:** Add AUDM from Redbook as single-source (weights would be unreliable).
+
+### Schema additions for these cars
+
+- **Decision:**
+  - Gearbox type `automated-manual` for BMW's SMG and SMG II (computer-controlled clutch, no torque converter).
+  - Body style `wagon` (330i Touring).
+  - Differential `speed-sensing-clutch-lsd`: BMW's variable M differential lock, a clutch pack pressed by a viscous shear pump in proportion to the left-right speed difference.
+  - VVT value `intake-and-exhaust-continuous`: BMW double VANOS, and Nissan's intake CVTCS plus electromagnetic exhaust e-VTC (VQ35HR and the 2005-on rev-up VQ35DE).
+  - An optional `torqueCurve` on engine variants: [rpm, torque] pairs in rising rpm, at least three points, with a torque unit. Only where the maker published a table: Nissan Europe's 350Z engine sheets (280 PS and 300 PS engines).
+- **Why:** Each is a real difference that changes the simulation. Forcing an SMG into `manual` or the M differential into `clutch-lsd` would misdescribe it. A published curve is better calibration data than two peak figures.
+- **Alternatives:** Put these in notes only (the simulation couldn't use them).
+
+### Special editions left out
+
+- **Decision:** The Fairlady Z Version NISMO Type 380RS (a 3.8-litre NISMO engine, 350 PS, 300 cars) and NISMO's S-tune GT complete car are recorded in the research but not modelled as trims.
+- **Why:** Both are NISMO complete cars with their own engines or builds, not Nissan catalogue grades, and the 380RS engine would need its own engine file.
+
+### Nissan's valve-timing table
+
+- **Decision:** In Nissan's service-manual valve-timing table (diagram PBIC0187E), `a` is the exhaust duration, `b` the intake duration, `c` intake opening BTDC, `d` intake closing ABDC, `e` exhaust closing ATDC and `f` exhaust opening BBDC. Durations are read that way: VQ35DE 238° intake / 240° exhaust, rev-up and VQ35HR 248°/248°.
+- **Why:** The identities c + 180 + d = b and f + 180 + e = a hold for all three engines, and the diagram was checked by eye on the 2004 manual's page image.
+
+### M3 final drive: 3.62, not 3.64
+
+- **Decision:** Every E46 M3 trim uses 3.62:1.
+- **Why:** BMW's parts catalogue (ETK) lists one final-drive part, 33 10 2 282 480 "I=3,62", for every E46 M3 in every market and year, including the CSL, and BMW NA's own MY2002-2003 sheets print 3.62. BMW NA printed 3.64 from MY2004 on with the same wording, which reads as a documentation slip.
+- **Alternatives:** 3.64 for the US MY2004-2006 cars (no hardware change supports it).
+
+### Japanese catalogue databases: goo-net and GAZOO count as one source
+
+- **Decision:** For JDM confidence, goo-net and GAZOO are treated as one source even though they are different sites. carview and Car Sensor count separately.
+- **Why:** GAZOO uses goo-net's catalogue IDs and identical values, so two matching pages are one dataset, not independent confirmation.
+
+### Mirrors of factory manuals are cited as such
+
+- **Decision:** Where Nissan's own service manuals are only reachable as third-party copies (the 2005 and 2007 section EM files on Google Drive linked from carmanualsclub.com; the MY2003-2007 sections on pdf.textfiles.com), they are cited with the mirror named in the source title. Only facts are cited; no manual files are redistributed.
+- **Why:** They are the only copies of the 2005-2007 manuals found, and they carry the factory data (valve timing, gear ratios, final drives, capacities).
+
+### Terms of use on newsroom downloads
+
+- **Decision:** Facts are quoted and linked, never re-hosted. One research agent clicked "Accept" on the Nissan Europe newsroom's download agreement to open the 350Z spec-sheet attachments; the files themselves are not in the repository.
+- **Why:** Disclosed so the owner can judge it. Citing a published figure with its source is normal use; redistributing the attachments would not be.
+
+### Weight conventions are kept as each market prints them
+
+- **Decision:** Japanese weights are JIS 車両重量 (full fuel, no driver). Nissan Europe/GB weights are the no-driver kerb weight, stored as the minimum of the published range. BMW AG weights are stored as printed, "Leergewicht nach EU" = DIN kerb weight + 75 kg for driver and luggage (the DIN figure is in each note); the M3 uses BMW's DIN figure where BMW printed one. US weights are curb weights. Each trim's note says which it is.
+- **Why:** The numbers stay checkable against the source (rule: values as printed). Phase 2 has to normalise them before comparing cars.
+- **Alternatives:** Store derived DIN weights for BMW AG (every one would become `estimated`, although the arithmetic is exact).
+
+### Merging catalogue periods and model years
+
+- **Decision:** Consecutive Japanese catalogue periods of the same body, grade and gearbox are one trim when every stored number is identical; a model-code change (UA- to CBA-) or a tax-inclusive price display is not a trim change. US 350Z model years are merged the same way. US model-year windows are marked `estimated`: Nissan gives on-sale months for only some model years (MY2003 August 2002, MY2007 January 2007, NISMO July 2007, MY2009 roadster September 2008), so the other ends use calendar-year precision.
+- **Why:** Keeps the trim list to real differences without inventing sale months.
+
+### SMG, Competition Package and ZHP weights
+
+- **Decision:** Where BMW prints no weight for the SMG, the Competition Package/ZCP or the ZHP, the trim uses the matching manual or standard car's weight, marked `estimated` with the reason.
+- **Why:** BMW publishes one weight per body (and gearbox type for automatics). The manual weight is a lower bound for the SMG (the ETK SMG box is heavier).
+
+### Rating standards
+
+- **Decision:** US ratings are SAE net: Nissan prints "SAE J1349 JUN1995" from its MY2006 kit on, and for earlier Nissan and all BMW NA figures SAE net is the US convention of the period (noted). Nissan Europe's are EEC 80/1269 (its UK brochure footnotes 1999/99/EC). Japanese catalogues say every figure is net (JIS). BMW AG and BMW GB print no standard, so European BMW ratings are `unknown`, as the European Supra was in part 1.
+
+### Estimated swap hardware for the VQ35HR and S54
+
+- **Decision:** No trustworthy weight, outline dimensions or (for the VQ35HR) internal materials exist, so they are estimated with methods: VQ35HR 150 kg (the one VQ35DE weighing plus the HR's structural additions), outline 710 x 790 x 720 mm (an unreliable aggregator used as a placeholder, cited), forged crank and rods and cast pistons by analogy with the VQ35DE; S54 217 kg (BMW's 2007 statement that its V8 is "some 15 kg" lighter at 202 kg) and about 780 x 700 x 650 mm from BMW's own bore spacing, stroke and rod length. Valve lifts for the VQ engines are estimated from the service manuals' valve-spring heights (installed height minus height at full lift).
+- **Why:** Launch-swap engines must carry these fields (Phase 3 fitment), and each value says exactly how it was made. They should be replaced by measurements from the engine models in Phase 4.
+
+### Bellhousing ids
+
+- **Decision:** `nissan-vq-de` (2003-2006 350Z gearboxes) and `nissan-vq-hr` (2007-on, shared with the VQ37VHR) are separate patterns; `bmw-m54-s54` covers the M54 and S54, which the ETK shows bolting to the same gearbox part numbers.
+- **Why:** Swap vendors (TDConversions, Grannas, LOJ) sell DE and HR adapters separately and say DE-pattern parts don't fit the HR. This matters for the compatibility checker: a VQ35HR swap into a 2003-2006 350Z needs the later gearbox or an adapter.
