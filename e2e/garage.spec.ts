@@ -65,7 +65,7 @@ test('opens straight into the lit garage on the best available backend', async (
 
   await expect(html).toHaveAttribute('data-backend', hasWebGPU ? 'webgpu' : 'webgl2');
   await expect(page.locator('#readout-backend')).toHaveText(hasWebGPU ? 'WebGPU' : 'WebGL 2');
-  await expect(html).toHaveAttribute('data-environment', 'empty_warehouse_01');
+  await expect(html).toHaveAttribute('data-environment', 'autoshop_01');
 
   // No landing page: the 3D view fills the window and the empty-bay note is up.
   const canvas = await page.locator('#viewport').boundingBox();
@@ -82,7 +82,7 @@ test('falls back to WebGL 2 and renders the same garage', async ({ page }) => {
   const problems = await openGarage(page, '?renderer=webgl');
   await expect(page.locator('html')).toHaveAttribute('data-backend', 'webgl2');
   await expect(page.locator('#readout-backend')).toHaveText('WebGL 2 (forced)');
-  await expect(page.locator('html')).toHaveAttribute('data-environment', 'empty_warehouse_01');
+  await expect(page.locator('html')).toHaveAttribute('data-environment', 'autoshop_01');
   expectLitGarage(await viewportStats(page, 'garage-webgl2-forced.png'));
   expect(problems).toEqual([]);
 });

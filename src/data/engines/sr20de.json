@@ -1,0 +1,963 @@
+{
+  "$comment": "Nissan SR20DE as fitted to the S15 Silvia (stock-only). Researched 2026-09-26. The Spec-S 4AT is rated lower than the 5MT, so it is a separate variant (s15-jdm-at). The Autech Version's tuned SR20DE (11.7:1, 200 PS) is a real separate rating.",
+  "id": "sr20de",
+  "code": "SR20DE",
+  "manufacturer": "Nissan",
+  "family": "SR",
+  "role": "stock-only",
+  "layout": "inline",
+  "cylinders": 4,
+  "displacement": {
+    "value": 1998,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'エンジン型式 SR20DE … 総排気量 1998cc'."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+        "note": "'総排気量 1998cc'."
+      },
+      {
+        "url": "https://drycarbon.com/motor/spec.html",
+        "accessed": "2026-09-26",
+        "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+        "note": "'総排気量 : 1998cc'."
+      }
+    ]
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'内径×行程 86.0mm×86.0mm'."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+        "note": "'内径×行程 86.0×86.0mm'."
+      },
+      {
+        "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+        "accessed": "2026-09-26",
+        "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+        "note": "Engine specs (Autech tuned SR20DE): 'シリンダー内径×行程(mm)：86.0×86.0'."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'内径×行程 86.0mm×86.0mm'."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+        "note": "'内径×行程 86.0×86.0mm'."
+      },
+      {
+        "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+        "accessed": "2026-09-26",
+        "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+        "note": "'シリンダー内径×行程(mm)：86.0×86.0'."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'種類 水冷直列4気筒DOHC16バルブ'."
+      },
+      {
+        "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+        "accessed": "2026-09-26",
+        "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+        "note": "'種類・シリンダー数：水冷直列4気筒DOHC'; '型式：ツインカムSR20DE'."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'水冷直列4気筒DOHC16バルブ': 16 valves over 4 cylinders."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR engine",
+        "note": "SR20DE specification table: 'Valve mechanism: DOHC, 4 valves per cylinder, chain drive'."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR engine",
+        "note": "SR20DE specification table (SAE, 1991): 'Valve mechanism: DOHC, 4 valves per cylinder, chain drive'."
+      }
+    ],
+    "note": "The SR20DET sources (MotorTrend, eatsleepboost) describe the shared SR20 chain drive too."
+  },
+  "blockMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.qsha-oh.com/historia/article/sr20-engine/",
+        "accessed": "2026-09-26",
+        "title": "旧車王マガジン: 日産が誇る4気筒の名機！SR20型エンジンの魅力とは",
+        "note": "On the SR20 family replacing the cast-iron CA18: 'アルミブロック製で軽量コンパクト' (aluminium block, light and compact)."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR engine",
+        "note": "Infobox for the SR family: 'block = Aluminum' (citing MotorTrend)."
+      }
+    ]
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR engine",
+        "note": "Infobox for the SR family: 'head = Aluminum' (citing MotorTrend)."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 3, 4, 2],
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://drive.google.com/file/d/1c8AEPEoLjPKPgRJeCUbYHLeUhPAIp3S_/view",
+        "accessed": "2026-09-26",
+        "title": "Nissan Sentra (B15) 2000-2003 Service Manual, section EM (Engine Mechanical), SR20DE; PDF on Google Drive, linked from japan-carrepair.com/nissan-infiniti-engine/sr20de-engine/",
+        "note": "EM-143 SDS General Specifications (SR20DE): 'Cylinder arrangement In-line 4 … Firing order 1-3-4-2'. Front-drive US Sentra SR20DE."
+      },
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "SR20DET: 'Firing order 1-3-4-2'."
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+        "accessed": "2026-09-26",
+        "title": "Eat sleep BOOST: SR20DET tech info",
+        "note": "Crankshaft '12200-60J00 12200-60J10' listed for 'S13/14/15, Primera P10, Serena 90-96' (DE and DET)."
+      }
+    ],
+    "note": "Nissan's B15 Sentra service manual states 1-3-4-2 for the SR20DE; no S15 SR20DE manual could be opened. The S14 SR20DET manual gives the same order and Eat Sleep Boost lists one crankshaft part for the S13/S14/S15 DE and DET, so the order is not in doubt; it is single-source only because one opened page states it for the SR20DE itself."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+        "note": "'燃料供給装置 ニッサンEGI（ECCS）電子制御燃料噴射装置' (Nissan EGI/ECCS electronic fuel injection)."
+      },
+      {
+        "url": "https://drycarbon.com/motor/spec.html",
+        "accessed": "2026-09-26",
+        "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+        "note": "'燃料供給装置 : ニッサンEGI(ECCS)電子制御燃料噴射装置 … インジェクター容量 : 259cc'."
+      }
+    ],
+    "note": "The sources say 'electronic fuel injection' with one injector per cylinder; 'port' (not direct) is inferred from that and from the SR20DET manual's 'sequential multiport' description."
+  },
+  "oilCapacity": {
+    "value": 3.5,
+    "unit": "L",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://drycarbon.com/motor/spec.html",
+        "accessed": "2026-09-26",
+        "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+        "note": "'エンジンオイル量 : （オイルのみ交換時）約3.3L, （オイルとフィルター交換時）約3.5L, （全容量）3.8L' (oil only 3.3 L, oil and filter 3.5 L, total 3.8 L)."
+      }
+    ],
+    "note": "Oil-and-filter change quantity for the S15 SR20DE; total (dry-fill) capacity 3.8 L."
+  },
+  "variants": [
+    {
+      "id": "s15-jdm",
+      "name": "S15 Silvia Spec-S (5MT)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S15 grade list (1999-01 to 2002-08 production model)",
+            "note": "Spec-S grades listed '1999年1月～2002年8月'."
+          },
+          {
+            "url": "https://cartune.co.jp/magazine/articles/1271",
+            "accessed": "2026-09-26",
+            "title": "CARTUNE magazine: シルビアS15の魅力に迫ります",
+            "note": "'1999年1月の発売から僅か3年7か月後の2002年8月に生産終了' (released January 1999, production ended August 2002)."
+          }
+        ]
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 10.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+            "note": "'圧縮比 10.0'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+            "note": "'圧縮比 10.0'."
+          },
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "'圧縮比 : 10.0:1'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+            "note": "'過給機 なし' (forced induction: none)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+            "note": "'過給機 なし' (no forced induction, so no intercooler)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "injectorFlow": {
+        "value": 259,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "'インジェクター容量 : 259cc' (injector capacity)."
+          }
+        ],
+        "note": "Owner's transcription; the page does not state the test pressure. The 'cc' is taken as cc/min."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 248,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://drycarbon.com/motor/spec.html",
+              "accessed": "2026-09-26",
+              "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+              "note": "'カム作用角 : IN 248度, EX 240度' (cam duration)."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'(RWD SR20DE uses 248° 10mm INLET cam)'."
+            }
+          ]
+        },
+        "exhaustDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drycarbon.com/motor/spec.html",
+              "accessed": "2026-09-26",
+              "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+              "note": "'カム作用角 : IN 248度, EX 240度'."
+            }
+          ],
+          "note": "Eat sleep BOOST implies the RWD SR20DE exhaust cam is the SR20DET's 240°/9.2 mm, which agrees."
+        },
+        "intakeLift": {
+          "value": 10.0,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://drycarbon.com/motor/spec.html",
+              "accessed": "2026-09-26",
+              "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+              "note": "'リフト量 : IN 10mm, EX 9.2mm' (valve lift)."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'RWD SR20DE uses 248° 10mm INLET cam'."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://drycarbon.com/motor/spec.html",
+              "accessed": "2026-09-26",
+              "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+              "note": "'リフト量 : IN 10mm, EX 9.2mm'."
+            }
+          ]
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "'NVCS : ON 1050rpm, OFF 8000rpm, 変化量 INのみ20度進角' (NVCS on at 1050 rpm, off at 8000 rpm, intake only, 20° advance)."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 165,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+              "note": "'最高出力 165ps(121kW)/6400rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+              "note": "'最高出力 165ps(121kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (MT) (gradeid 17082)",
+              "note": "'最高出力 165ps（-kw）/6,400rpm'."
+            },
+            {
+              "url": "https://www.webcg.net/articles/-/20250",
+              "accessed": "2026-09-26",
+              "title": "webCG news: 日産、5ナンバー後輪駆動の新型「シルビア」発売 (1999-01-20)",
+              "note": "'165馬力（MT）を発生するノンターボのSR20DEと、250馬力（同）のターボ付SR20DET' (165 PS NA SR20DE for the MT, 250 PS SR20DET for the MT); released 1月19日 (19 January)."
+            }
+          ],
+          "note": "Nissan's 1999 Japanese release marks the SR20DE output gain '＊６：５ＭＴ車' (5MT cars only)."
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+              "note": "'165ps(121kW)/6400rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+              "note": "'165ps(121kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (MT) (gradeid 17082)",
+              "note": "'165ps（-kw）/6,400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 19.6,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+              "note": "'最大トルク 19.6kg・m(192.2N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+              "note": "'最大トルク 19.6kg・m(192.2N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (MT) (gradeid 17082)",
+              "note": "'最大トルク 19.6kg・m（-N・m）/4,800rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 5MT (1999-01) (1502003)",
+              "note": "'19.6kg・m(192.2N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502003/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 5MT (1999-01)",
+              "note": "'19.6kg・m(192.2N・m)/4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "redline": {
+        "value": 7200,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://gazoo.com/ilovecars/introduce/2000s/nissan/24/01/05/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO I love cars: 2002 Nissan Silvia Autech Version (S15) owner feature",
+            "note": "'レッドゾーンは7500回転(ベースモデルは7200回転)' (Autech red zone 7500 rpm; base model 7200 rpm)."
+          }
+        ]
+      },
+      "notes": "Rated output is a Japanese catalogue net figure (post-1985 JIS net; Autech's 1999 S15 brochure states 'このカタログのエンジン出力表示はすべて「ネット値」です' = all outputs are net)."
+    },
+    {
+      "id": "s15-jdm-at",
+      "name": "S15 Silvia Spec-S (4AT)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S15 grade list (1999-01 to 2002-08 production model)",
+            "note": "Spec-S AT grades listed '1999年1月～2002年8月'."
+          },
+          {
+            "url": "https://cartune.co.jp/magazine/articles/1271",
+            "accessed": "2026-09-26",
+            "title": "CARTUNE magazine: シルビアS15の魅力に迫ります",
+            "note": "'1999年1月の発売から僅か3年7か月後の2002年8月に生産終了' (released January 1999, production ended August 2002)."
+          }
+        ]
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 10.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+            "note": "'圧縮比 10.0'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+            "note": "'圧縮比 10.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+            "note": "'過給機 なし'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+            "note": "'過給機 なし'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "injectorFlow": {
+        "value": 259,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "'インジェクター容量 : 259cc'; the page covers both the 5MT and the E-AT S15 SR20DE."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "'NVCS : ON 1050rpm, OFF 8000rpm, 変化量 INのみ20度進角'; the page covers both gearboxes."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 160,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+              "note": "'最高出力 160ps(118kW)/6400rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+              "note": "'最高出力 160ps(118kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (AT) (gradeid 17083)",
+              "note": "'最高出力 160ps（-kw）/6,400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G012/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 Spec-S (4AT)",
+              "note": "'最高出力 160ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+              "note": "'160ps(118kW)/6400rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+              "note": "'160ps(118kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (AT) (gradeid 17083)",
+              "note": "'160ps（-kw）/6,400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 19.2,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+              "note": "'最大トルク 19.2kg・m(188.3N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+              "note": "'最大トルク 19.2kg・m(188.3N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-S (AT) (gradeid 17083)",
+              "note": "'最大トルク 19.2kg・m（-N・m）/4,800rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-S 4AT (1999-01) (1502000)",
+              "note": "'19.2kg・m(188.3N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502000/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-S 4AT (1999-01)",
+              "note": "'19.2kg・m(188.3N・m)/4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Rated output is a Japanese catalogue net figure (post-1985 JIS net; Autech's 1999 S15 brochure states 'このカタログのエンジン出力表示はすべて「ネット値」です' = all outputs are net). Nissan's release attributes the lower-back-pressure exhaust (and so the 165 PS) to manual cars only, which is the likely reason for the lower AT rating."
+    },
+    {
+      "id": "s15-jdm-autech",
+      "name": "S15 Silvia Autech Version (6MT, Autech-tuned SR20DE)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+            "note": "Catalogue entry dated '1999年10月'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199910/1500298/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Autech Version",
+            "note": "Page title 'シルビア(1999年10月～2002年11月) オーテックバージョン'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S15 grade list",
+            "note": "'2.0 オーテックバージョン' listed in the '1999年1月～2002年8月' S15 production model."
+          }
+        ],
+        "note": "Start verified (goo-net, GAZOO). End: S15 production ended 2002-08 (Car Sensor, CARTUNE); GAZOO's catalogue window runs to 2002-11, probably the sales end. Stored the production end."
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 11.7,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+            "note": "Engine specs: '圧縮比：11.7'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+            "note": "'圧縮比 11.7'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199910/1500298/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Autech Version",
+            "note": "'圧縮比 11.7'."
+          }
+        ],
+        "note": "GAZOO I love cars: '専用のハイコンプピストンが組み込まれ、圧縮比を11.7(ベースモデルは10.0)に向上' (dedicated high-compression pistons raise compression to 11.7, base 10.0)."
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+            "note": "'過給機 なし'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199910/1500298/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Autech Version",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+            "note": "'過給機 なし'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199910/1500298/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Autech Version",
+            "note": "'過給機 なし'."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+            "note": "Page 1 box 'SR20DEチューンドエンジン主な変更点' (main changes to the tuned SR20DE): '圧縮比アップ（10.0→11.7）', '専用エキゾーストシステム', 'カムプロファイル&NVCS専用チューニング' (dedicated cam-profile and NVCS tuning), 'ナトリウム封入排気バルブ' (sodium-filled exhaust valves), '専用コンピュータROMデータ'. Page 2: 'VVL機構のないSR20DEエンジン' (the SR20DE has no variable valve lift)."
+          },
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%B7%E3%83%AB%E3%83%93%E3%82%A2",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia (Japanese): 日産・シルビア (S15 Autech Version section)",
+            "note": "'自然吸気エンジンのNVCS付きSR20DE型専用エンジン' (a dedicated naturally aspirated SR20DE with NVCS), citing the Autech catalogue."
+          },
+          {
+            "url": "https://drycarbon.com/motor/spec.html",
+            "accessed": "2026-09-26",
+            "title": "DryCarbon.com: S15 SR20DE(NA)車の仕様 (owner's transcription of the S15 SR20DE service data)",
+            "note": "Base S15 SR20DE: 'NVCS : ON 1050rpm, OFF 8000rpm, 変化量 INのみ20度進角' (on/off, intake only, 20° advance)."
+          }
+        ],
+        "note": "NVCS is kept and retuned for the Autech engine (Autech brochure; Japanese Wikipedia). Autech does not publish the new switching points; the on/off, intake-only mechanism is the base S15 SR20DE's (drycarbon.com), and nothing says Autech changed the hardware type."
+      },
+      "output": {
+        "power": {
+          "value": 200,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+              "note": "'SR20DEチューンドエンジン（最高出力200PS／7200rpm・最大トルク21.8kgm／4800rpm）'; spec table '最高出力(PS/rpm)：200/7200'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+              "note": "'最高出力 200ps(147kW)/7200rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/11711/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia Autech Version (MT) (gradeid 11711)",
+              "note": "'最高出力 200ps（-kw）/7,200rpm'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+              "note": "'最高出力(PS/rpm)：200/7200'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+              "note": "'200ps(147kW)/7200rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199910/1500298/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Autech Version",
+              "note": "'200ps(147kW)/7200rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 21.8,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+              "note": "'最大トルク(kgm/rpm)：21.8/4800'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+              "note": "'最大トルク 21.8kg・m(213.8N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/11711/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia Autech Version (MT) (gradeid 11711)",
+              "note": "'最大トルク 21.8kg・m（-N・m）/4,800rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure: Silvia Autech Version (catalogue dated 1999-11, AJ-SI1-9911N1)",
+              "note": "'最大トルク(kgm/rpm)：21.8/4800'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Autech Version (1999-10) (1500298)",
+              "note": "'21.8kg・m(213.8N・m)/4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "redline": {
+        "value": 7500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://gazoo.com/ilovecars/introduce/2000s/nissan/24/01/05/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO I love cars: 2002 Nissan Silvia Autech Version (S15) owner feature",
+            "note": "'レッドゾーンは7500回転(ベースモデルは7200回転)' (red zone 7500 rpm, base model 7200 rpm)."
+          }
+        ]
+      },
+      "notes": "Autech brochure: 'このカタログのエンジン出力表示はすべて「ネット値」です' (all outputs are net). Tuning per GAZOO: dedicated high-compression pistons, dedicated ECU/ROM, lower exhaust back pressure, retuned valve timing and lift; the brochure's list of engine changes adds dedicated NVCS tuning and sodium-filled exhaust valves, and lists an Autech exhaust manifold/front tube and a NISMO lightweight flywheel. Cam figures were not published and are left out."
+    }
+  ]
+}

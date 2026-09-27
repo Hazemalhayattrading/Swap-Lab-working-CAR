@@ -1,0 +1,2085 @@
+{
+  "$comment": "Nissan SR20DET, the S-chassis launch swap. Researched 2026-09-26. Top-level hardware is shared by the S13/S14/S15 longitudinal SR20DET; per-market and per-gearbox ratings are variants. The S15 automatic (225 PS) and the Australian 200SX (147 kW) are real, separately rated variants. Primary engine data comes from the Japanese catalogue databases, Nissan's 1999 launch release, the English S14 service manual and Nissan's parts catalogue (EPC, read at megazip.net, Japan-market builds only). No S15 service manual could be opened (the English S15 workshop manual on silviaoc.com needs a login, and no Japanese 整備要領書 or 新型車解説書 was found online), so S14 FSM values are labelled as such; where the EPC shows the S15 uses the same Nissan part as the S14 (camshafts, automatic injectors), the note says so.",
+  "id": "sr20det",
+  "code": "SR20DET",
+  "manufacturer": "Nissan",
+  "family": "SR",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 4,
+  "displacement": {
+    "value": 1998,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'エンジン型式 SR20DET … 総排気量 1998cc' (total displacement)."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+        "note": "'総排気量 1998cc' (total displacement)."
+      },
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EM-72 Service Data and Specifications, General Specifications: 'Displacement cm3 (cu in) 1,998 (121.92)'."
+      }
+    ]
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EM-72: 'Bore and stroke mm (in) 86 X 86 (3.39 X 3.39)'."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EM-72: 'Bore and stroke mm (in) 86 X 86 (3.39 X 3.39)'."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'種類 水冷直列4気筒DOHC16バルブICターボ' (water-cooled inline 4, DOHC 16-valve, intercooled turbo)."
+      },
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EM-72: 'Valve arrangement DOHC'."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'水冷直列4気筒DOHC16バルブICターボ': 16 valves over 4 cylinders = 4 per cylinder."
+      },
+      {
+        "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+        "accessed": "2026-09-26",
+        "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+        "note": "'種類 水冷直列4気筒DOHC16バルブICターボ'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR20DET",
+        "note": "Infobox: 'valvetrain = DOHC 4 valves x cyl.'"
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+        "accessed": "2026-09-26",
+        "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+        "note": "'the 16-valve cylinder head features chain-driven, dual overhead camshafts'."
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+        "accessed": "2026-09-26",
+        "title": "Eat sleep BOOST: SR20DET tech info",
+        "note": "'Timing chain: 124 links, 20+48+56 rollers'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR20DET",
+        "note": "'DOHC 4 valves per cylinder, Chain driven cam sprockets'."
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+        "accessed": "2026-09-26",
+        "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+        "note": "'Block: Closed-deck cast aluminium construction, forged crank'."
+      },
+      {
+        "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+        "accessed": "2026-09-26",
+        "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+        "note": "'Nissan engineered its turbocharged, all-aluminum SR20DET engine … The block features a closed deck with alloy cylinder liners'."
+      },
+      {
+        "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+        "accessed": "2026-09-26",
+        "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+        "note": "'The SR20DET engine had an aluminium block and cylinder head'."
+      }
+    ]
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+        "accessed": "2026-09-26",
+        "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+        "note": "'Head: Aluminium 16-valve twin cam (VTC variable timing control added 1994)'."
+      },
+      {
+        "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+        "accessed": "2026-09-26",
+        "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+        "note": "'The SR20DET engine had an aluminium block and cylinder head'."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 3, 4, 2],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EM-72 General Specifications: 'Firing order 1-3-4-2'."
+      },
+      {
+        "url": "https://low-offset.com/nissan/sr20det-engine/",
+        "accessed": "2026-09-26",
+        "title": "Low Offset: Nissan SR20DET: Engine Specs, Horsepower & Reliability",
+        "note": "SR20DET spec list: 'Firing Order : 1-3-4-2'. Aggregator page; the same list has errors elsewhere (e.g. '250 hp (at 6,800 rpm)'), so it is only the second site here."
+      },
+      {
+        "url": "https://drive.google.com/file/d/1c8AEPEoLjPKPgRJeCUbYHLeUhPAIp3S_/view",
+        "accessed": "2026-09-26",
+        "title": "Nissan Sentra (B15) 2000-2003 Service Manual, section EM (Engine Mechanical), SR20DE; PDF on Google Drive, linked from japan-carrepair.com/nissan-infiniti-engine/sr20de-engine/",
+        "note": "EM-143 SDS General Specifications (SR20DE): 'Firing order 1-3-4-2'. Front-drive SR20DE; cited as same-family corroboration, not as an SR20DET source."
+      }
+    ],
+    "note": "Nissan's S14 manual and low-offset.com print 1-3-4-2 for the SR20DET; Nissan's B15 Sentra manual prints the same for the SR20DE, which shares the crankshaft (Eat Sleep Boost lists 12200-60J00/60J10 for S13/S14/S15)."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "EC-21: 'Sequential multiport fuel injection system … Fuel is injected into each cylinder during each engine cycle according to the firing order'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+        "accessed": "2026-09-26",
+        "title": "Wikipedia: Nissan SR20DET",
+        "note": "Code breakdown: 'E - Multi-port fuel injection'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+        "note": "'燃料供給装置 ニッサンEGI（ECCS）電子制御燃料噴射装置' (Nissan EGI/ECCS electronic fuel injection)."
+      }
+    ]
+  },
+  "dryWeight": {
+    "value": 166,
+    "unit": "kg",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://minkara.carview.co.jp/userid/258264/blog/5355813/",
+        "accessed": "2026-09-26",
+        "title": "minkara blog: エンジン重量 (2007-06-27)",
+        "note": "Table of engine weights: 'シルビア(Ｓ15) SR20DET 250ps 166kg'. The author says the list was 'picked up somewhere years ago' (数年前、どっかから拾ってきたデータ)."
+      }
+    ],
+    "note": "Weak source: an enthusiast blog quoting a table of unknown origin (the same table is re-posted on ameblo.jp/blogorido, which says it probably includes ancillaries such as the turbo). It is not stated whether this is dry or with fluids. The English S14 service manual gives no engine weight (searched in full), and the S15 manual could not be opened. enginetechspecs.com prints 140 kg but that page contains clear errors (e.g. six main bearings; the FSM says five), and low-offset.com says only 'the SR20 is 400 lbs' with no source or condition, so neither was used. No Nissan figure was found; treat this as the best available, not as fact."
+  },
+  "dimensions": {
+    "length": {
+      "value": 685,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+          "accessed": "2026-09-26",
+          "title": "Wikipedia: Nissan SR engine",
+          "note": "SR20DE specification table (headed 'SAE, 1991'): 'Dimensions: 685 mm x 610 mm x 615 mm'."
+        }
+      ],
+      "method": "No SR20DET outline dimensions were found in any Nissan source that could be opened: the English S14 service manual (GI, MA, EM, LC and EC sections searched) gives none, the S15 manual could not be opened, and no Nissan Technical Review or SAE paper text was reachable. Used the SR20DE base-engine envelope from Wikipedia's SR20DE table (credited to SAE, 1991), taking the three figures in the order printed as length x width x height. The order is not labelled in the source, the SR20DE is an early transverse NA engine, and the RWD SR20DET adds a turbo and exhaust manifold on one side, so width in particular is likely larger. enginetechspecs.com prints 610 x 640 x 680 mm for the SR20DET with no source (and errors elsewhere on the page), so it was not used."
+    },
+    "width": {
+      "value": 610,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+          "accessed": "2026-09-26",
+          "title": "Wikipedia: Nissan SR engine",
+          "note": "SR20DE specification table (headed 'SAE, 1991'): 'Dimensions: 685 mm x 610 mm x 615 mm'."
+        }
+      ],
+      "method": "Second figure of the SR20DE 'Dimensions' entry (Wikipedia, credited to SAE 1991), assumed to be width. No Nissan SR20DET figure was found (S14 FSM searched; S15 manual not openable). The SR20DET's turbo, exhaust manifold and intake plenum are not included, so the real SR20DET width is probably larger. enginetechspecs.com (unsourced, unreliable) prints 640 mm."
+    },
+    "height": {
+      "value": 615,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+          "accessed": "2026-09-26",
+          "title": "Wikipedia: Nissan SR engine",
+          "note": "SR20DE specification table (headed 'SAE, 1991'): 'Dimensions: 685 mm x 610 mm x 615 mm'."
+        }
+      ],
+      "method": "Third figure of the SR20DE 'Dimensions' entry (Wikipedia, credited to SAE 1991), assumed to be height. No Nissan SR20DET figure was found. An owner measurement of an SR20DE Autech on locostusa.com (http only, so not citable here) gave about 641 mm pan-to-cam-cover, so this may be low; enginetechspecs.com (unsourced, unreliable) prints 680 mm."
+    }
+  },
+  "bellhousing": {
+    "value": "nissan-sr20",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://thrashgaragenz.com/products/nissan-sr20-rwd-bell-housing-bolt-kit",
+        "accessed": "2026-09-26",
+        "title": "Thrash Garage NZ: Nissan SR20 RWD Bell Housing Bolt Kit",
+        "note": "'This kit suits the following vehicles: Nissan Silvia S13 / S14 / S15 with an SR20DE or SR20DET & 5 speed Transmission … its Engine / Transmission specific, not chassis specific.'"
+      },
+      {
+        "url": "https://www.bremar3dscanstore.com/all-scan-files/p/nissan-gearbox-fs5w71c-s13-s14-sr20det",
+        "accessed": "2026-09-26",
+        "title": "Bremar Automotion 3D Scan Store: Nissan Gearbox FS5W71C (S13, S14, SR20DET)",
+        "note": "'This gearbox is found is S13, S14, 240SX and other Nissan vehicles. The bell housing on this gear box is suited to the SR20DET engine.'"
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-sr20ca18ka24-gearbox-info-fs5w71c/",
+        "accessed": "2026-09-26",
+        "title": "Eat sleep BOOST: Nissan SR20/CA18/KA24 gearbox info - FS5W71C",
+        "note": "The FS5W71C gearbox family is used behind S13 CA18DET, S13/S14 KA24 and S14 SR20DET (different 3-4 selector forks and synchros listed per engine)."
+      }
+    ],
+    "note": "The RWD SR20 bell pattern is shared by the SR20DE and SR20DET (Thrash Garage). The FS5W71C gearbox itself is also used behind the CA18DET and KA24, but with each engine's own bellhousing; search snippets from nicoclub/240sxforums say swapping the bellhousing makes them interchange, but those pages could not be opened, so compatibility with other engine families is not claimed here. The S15 6-speed is a different gearbox with the same engine-side pattern (not separately sourced)."
+  },
+  "sump": {
+    "value": "front",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, section EM (Oil pan; Cylinder block), hosted by sr20tuning.net",
+        "note": "EM-14, figure SEM976E (underside view, 'Engine front' arrow pointing left): the steel oil pan opening, with the baffle plate and the oil strainer, sits directly behind the crankshaft pulley. EM-57, figure SEM036F: the oil strainer (5) bolts up beside the front cover with oil pump (4). EM-13, figure SEM974E: the deep section of the aluminium upper pan is drawn at the alternator-bracket (front) end, with the transmission-mounting flange at the other end. EM-14 text: removing the aluminium pan needs the front suspension member lowered 'by around 60 mm'; the steel pan comes off without that."
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+        "accessed": "2026-09-26",
+        "title": "Eat sleep BOOST: SR20DET tech info",
+        "note": "'S14/S15 updated oil pickup – 15050-65F01': the S14 and S15 SR20DET share the oil pickup, so the S14 pan layout applies to the S15. (This page does not state the sump position.)"
+      }
+    ],
+    "note": "Read from labelled FSM drawings; the manual never says 'front sump' in words, and the S15 manual could not be opened. This corrects an earlier reading of the same manual as a rear sump: in the EM-13 exploded view the steel pan and baffle plate are drawn off to one side, but the EM-14 underside view shows them fitted right behind the crank pulley. A front sump also fits the aftermarket selling 'rear sump' SR20DET pans for 240Z/510 swaps (seen in search results only; those pages returned 403 and are not cited)."
+  },
+  "oilCapacity": {
+    "value": 3.7,
+    "unit": "L",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+        "accessed": "2026-09-26",
+        "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+        "note": "MA-15 Changing Engine Oil: 'Refill oil capacity (Approximate): With oil filter change 3.7 ℓ (3-1/4 Imp qt); Without oil filter change 3.5 ℓ'. MA-10 Recommended fluids and lubricants and the MA service data table give the same 3.7 (with filter) / 3.5 (without)."
+      }
+    ],
+    "note": "From the S14 (1994, English export) service manual. No S15 SR20DET figure was found: the S15 manual could not be opened. The S15 SR20DE figure is 3.5 L with filter (drycarbon.com)."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+          "accessed": "2026-09-26",
+          "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+          "note": "'Block: Closed-deck cast aluminium construction, forged crank' and, under Pros, 'Forged crankshaft from factory.'"
+        }
+      ],
+      "note": "Search snippets from nicoclub/sr20forum say the same, but those pages could not be opened (403 / paywall). The S14 service manual gives crankshaft dimensions only, no material. Eat Sleep Boost lists one crankshaft part for S13/S14/S15 ('12200-60J00 12200-60J10 full counterweighted') without a material."
+    },
+    "rods": {
+      "value": "powdered-metal",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.nsbconcept.com/en/0l-16v-sr20dedet/147945-forged-connecting-rods-nissan-2-0l-16v-turbo-sr20det-for-forged-pistons-1.html",
+          "accessed": "2026-09-26",
+          "title": "NSB Concept: Forged connecting rods Nissan 2.0L 16V Turbo SR20DET",
+          "note": "'as soon as boost pressure and engine speed rise, the factory sintered-steel rods become the first weak link to address.'"
+        }
+      ],
+      "note": "UNRESOLVED. What each source says: NSB Concept (French parts retailer, the only opened page that names a material) says 'factory sintered-steel rods'. The S14 service manual gives rod dimensions and bearing clearances but no material. The RODEX engine-builder blog (rodex.blog.fc2.com, entry 229, the source Japanese Wikipedia cites) says S15 engines built in 2002 switched to the X-Trail SR20VET rod (different small end) and that the X-Trail rod is machined rather than left as-cast, but does not say forged or sintered. Forum snippets claiming forged rods (nicoclub.com, sr20forum.com) could not be opened. No Nissan document was found. Check before the sim uses rod material for strength."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.tomei-p.co.jp/catalogue/piston_sr20/",
+          "accessed": "2026-09-26",
+          "title": "Tomei Powered: SR20DET forged piston kit catalogue",
+          "note": "'生産性を最優先させた鋳造（ちゅうぞう）素材では必要な温度強度を確保できません' (cast material, chosen for productivity, cannot give the needed high-temperature strength); 'ノーマルピストンは生産性・コスト…' (stock pistons are made for productivity and cost)."
+        },
+        {
+          "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+          "accessed": "2026-09-26",
+          "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+          "note": "'Factory SR20DET pistons are only good for around 400hp at the wheels'; 'the stock pistons are fairly weak'."
+        }
+      ],
+      "method": "No opened source states the stock SR20DET piston material outright; the S14 service manual gives piston dimensions only. Tomei's SR20DET piston page contrasts its forged pistons with productivity-first cast production pistons, and HPA calls the stock pistons weak. RODEX says the piston design changed along with the 2002 rod change. Search snippets (not openable) describe them as cast hypereutectic. 'cast' is inferred from these, not read from a Nissan document."
+    },
+    "reportedLimits": [
+      {
+        "component": "pistons",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 400,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+              "accessed": "2026-09-26",
+              "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+              "note": "'Factory SR20DET pistons are only good for around 400hp at the wheels.'"
+            }
+          ]
+        },
+        "context": "HP Academy (tuning school) general guidance for the SR20DET; no fuel, boost or duration stated. Recommends a built motor at 'say 400hp at the wheels and above'."
+      },
+      {
+        "component": "block",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 600,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+              "accessed": "2026-09-26",
+              "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+              "note": "'The stock cast main bearing caps are weak and will destroy themselves if you try for 600hp at the wheels and above.'"
+            }
+          ]
+        },
+        "context": "HP Academy: the failure point named is the cast main bearing caps, at 600 whp and above."
+      },
+      {
+        "component": "bottom-end",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 400,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.sr20-forum.com/general-sr20/!23398-sr20det-bottom-end-question.html",
+              "accessed": "2026-09-26",
+              "title": "SR20 forum (sr20-forum.com): SR20DET Bottom End Question (2009-10)",
+              "note": "Reply by member 'Cliff' (2009-10-19): 'stock bottom ends will hold 400whp no problem. Some even handle much more on factory bottom ends.'"
+            }
+          ]
+        },
+        "context": "Forum opinion (2009), US-market swaps, no fuel or tune stated. Other posts in the same thread report 400-460 whp on stock rotating assemblies."
+      },
+      {
+        "component": "rods",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 350,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.sr20-forum.com/general-sr20/!23398-sr20det-bottom-end-question.html",
+              "accessed": "2026-09-26",
+              "title": "SR20 forum (sr20-forum.com): SR20DET Bottom End Question (2009-10)",
+              "note": "Reply by an 'SR20 E.P.P.' member (2009-10-19): 'For 300-350 whp stock det pistons and rods will hold up fine on a good tune, but a stock rebuild will help it last. … if you ever plan on going higher than lets say......420whp then maybe you should consider throwing in some forged pistons and rods.'"
+            }
+          ]
+        },
+        "context": "Forum opinion (2009): 300-350 whp is called safe for the stock rods and pistons 'on a good tune'; forged parts advised above about 420 whp. The more conservative of the forum figures."
+      },
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 400,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+              "accessed": "2026-09-26",
+              "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+              "note": "On the S13/180SX red-top and black-top SR20DET: 'This engine produced 200 horsepower in stock trim but could support approximately 400 hp safely on a stock bottom end, the right combination of bolt-on parts, turbo upgrade, fuel delivery improvements, and calibration.'"
+            }
+          ]
+        },
+        "context": "MotorTrend/Hot Rod (2018). The article does not say crank or wheel; stored as crank-power because it is set against the 200 hp factory (crank) rating. Applies to the non-VTC S13 engine."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "s15-jdm",
+      "name": "S15 Silvia Spec-R (6MT)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S15 grade list (1999-01 to 2002-08 production model)",
+            "note": "Spec-R grades listed '1999年1月～2002年8月' (January 1999 to August 2002)."
+          },
+          {
+            "url": "https://cartune.co.jp/magazine/articles/1271",
+            "accessed": "2026-09-26",
+            "title": "CARTUNE magazine: シルビアS15の魅力に迫ります",
+            "note": "'1999年1月の発売から僅か3年7か月後の2002年8月に生産終了' (released January 1999, production ended August 2002)."
+          }
+        ]
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+            "note": "'圧縮比 8.5' (compression ratio)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+            "note": "'過給機 ＩＣ付きターボ' (turbocharger with intercooler)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Garrett T28 ball-bearing (Nissan 14411-91F00)",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO",
+                "accessed": "2026-09-26",
+                "title": "ATP Turbo: OEM Nissan Silvia S15 SR20DET Ball Bearing T28 Turbo",
+                "note": "'OEM Nissan Silvia S15 SR20DET ball Bearing T28 Turbo, Nissan P/N: 14411-91F00 … Compressor Wheel Inducer: 46 mm, Exducer: 60 mm … Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62'."
+              },
+              {
+                "url": "https://www.factionmotorsports.com/nissan-s15-spec-r-t28-turbo/",
+                "accessed": "2026-09-26",
+                "title": "Faction Motorsports: Nissan S15 Spec R T28 Turbo",
+                "note": "SKU 14411-91F00: 'This is the actual turbo used in the Nissan OEM S15 SR20DET Spec-R engine … This turbo features a dual ball bearing construction'."
+              },
+              {
+                "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-garrett-turbo-models/",
+                "accessed": "2026-09-26",
+                "title": "Eat sleep BOOST: Nissan Garrett turbo models",
+                "note": "'14411-91F00 GT28r S15 MT turbo – Ball bearing'."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "HPA and MotorTrend call it a T28R/GT28R. Compressor 46/60 mm (60 trim), turbine 52.9/46.3 mm (62 trim) per ATP Turbo. Ball-bearing turbos use a 6-bolt hot-side plate and 38 mm oil drain (eatsleepboost)."
+        }
+      ],
+      "boost": {
+        "value": 9,
+        "unit": "psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+            "accessed": "2026-09-26",
+            "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine",
+            "note": "Page 2: 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first.' Page 3: 'closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi.' Page 1 describes the engine as the one 'Nissan rated … to produce 250PS' (the 6MT rating)."
+          }
+        ],
+        "note": "One magazine test of one JDM 2001 S15 (gearbox not stated), not a Nissan figure; Nissan releases give no boost and the S15 manual could not be opened. English Wikipedia's table says '7psi stock' without a citation; Australian Car.Reviews gives 0.73 bar (10.6 psi) peak for the Australian 200SX (see s15-audm). The ECU sets boost through a duty-controlled wastegate solenoid with maps chosen by fuel octane and gear (S14 FSM EC-30, same system), so the figure varies with conditions."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.silviaoc.com/discuss/threads/arc-sidemount-intercooler.1501/",
+            "accessed": "2026-09-26",
+            "title": "Silvia Owners Club (UK S15 forum): ARC sidemount intercooler (2007)",
+            "note": "Thread about replacing the S15's intercooler with ARC's S15 side-mount unit ('There's actually 2 part numbers from ARC, the one for the S15 has the thickest core'); later posts compare it with going front-mount."
+          },
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+            "accessed": "2026-09-26",
+            "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15",
+            "note": "\"The factory issued intercooler on the S15 is a side-mount. This configuration positions the intercooler neatly beneath the headlight in front of the left tire.\""
+          }
+        ],
+        "note": "Side-mount beneath the left headlight, in front of the left front tyre (DSPORT magazine test of a JDM S15, corroborated by the silviaoc.com owner thread). Nissan's own releases say only 'intercooler turbo', without the position."
+      },
+      "injectorFlow": {
+        "value": 480,
+        "unit": "cc/min",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sr20tuning.net/mods/larger-injectors/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: Larger Injectors",
+            "note": "'S15 SR20DETs have 480cc injectors standard'."
+          },
+          {
+            "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+            "note": "'Fueling: 370cc injectors (S13/S14/U12/U13/W10/W11), 444cc injectors (N14), 480cc injectors (S15)'."
+          },
+          {
+            "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+            "note": "'The SR20DET that powered the S15 Spec R … came equipped with a Garrett GT28R ball bearing turbocharger and larger, 480cc/min injectors.'"
+          }
+        ],
+        "note": "480 cc/min is the nominal rating. Forum posts (sr20-forum.com, 'S15 injectors actual size???', 2010) say JWT flow-tested them at about 444 cc/min at 3 bar and suggest 480 is quoted at the S15's higher fuel pressure; DSPORT Issue #57 calls them 'the factory 448cc/min injectors'; English Wikipedia prints both 444 and 480. Nissan's parts catalogue (megazip.net) lists injector 16600-91F00 for 'SR20DET.MT.F6' only; the automatic uses the S14's 16600-21U01 (see s15-jdm-at)."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/",
+              "accessed": "2026-09-26",
+              "title": "DSPORT Issue #60, Test & Tune Part 3: Nissan Silvia S15, camshafts, manifold and 100-octane fuel",
+              "note": "On the magazine's 2001 JDM S15 SR20DET: 'The stock camshaft profile is only 240-degrees of duration and 9.2mm of lift.'"
+            },
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': a (intake duration) 240°, b (exhaust duration) 240°. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Same camshafts as the S14 (Nissan part numbers 13020-69F00 intake, 13020-65F10 exhaust), so the S15 does not differ from the S14 240°/9.2 mm. Durations are the FSM figures with the VTC solenoid off."
+        },
+        "exhaustDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/",
+              "accessed": "2026-09-26",
+              "title": "DSPORT Issue #60, Test & Tune Part 3: Nissan Silvia S15, camshafts, manifold and 100-octane fuel",
+              "note": "On the magazine's 2001 JDM S15 SR20DET: 'The stock camshaft profile is only 240-degrees of duration and 9.2mm of lift.'"
+            },
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': a (intake duration) 240°, b (exhaust duration) 240°. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Same camshafts as the S14 (Nissan part numbers 13020-69F00 intake, 13020-65F10 exhaust), so the S15 does not differ from the S14 240°/9.2 mm. Durations are the FSM figures with the VTC solenoid off."
+        },
+        "intakeLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/",
+              "accessed": "2026-09-26",
+              "title": "DSPORT Issue #60, Test & Tune Part 3: Nissan Silvia S15, camshafts, manifold and 100-octane fuel",
+              "note": "On the magazine's 2001 JDM S15 SR20DET: 'The stock camshaft profile is only 240-degrees of duration and 9.2mm of lift.'"
+            },
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS: 'Valve lift Intake 9.2 (0.362) Exhaust 9.2 (0.362)'. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Same camshafts as the S14 (Nissan part numbers 13020-69F00 intake, 13020-65F10 exhaust), so the S15 does not differ from the S14 240°/9.2 mm. Durations are the FSM figures with the VTC solenoid off."
+        },
+        "exhaustLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/",
+              "accessed": "2026-09-26",
+              "title": "DSPORT Issue #60, Test & Tune Part 3: Nissan Silvia S15, camshafts, manifold and 100-octane fuel",
+              "note": "On the magazine's 2001 JDM S15 SR20DET: 'The stock camshaft profile is only 240-degrees of duration and 9.2mm of lift.'"
+            },
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS: 'Valve lift Intake 9.2 (0.362) Exhaust 9.2 (0.362)'. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Same camshafts as the S14 (Nissan part numbers 13020-69F00 intake, 13020-65F10 exhaust), so the S15 does not differ from the S14 240°/9.2 mm. Durations are the FSM figures with the VTC solenoid off."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "S15 200SX: 'Nissan's variable intake valve timing control system (NVCS)'."
+          },
+          {
+            "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+            "note": "'The SR20DET that powered the S15 Spec R continued to benefit from the VTC cylinder head'."
+          },
+          {
+            "url": "https://sr20tuning.net/mods/vtc-blacktop-sr20det-into-s13/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: VTC Black Top SR20DET into S13",
+            "note": "S14/S15 black top: 'From between 1050 and 5700 rpm, a solenoid is triggered by the ECU which allows the flow of oil into a mechanism at the front of the inlet cam, advancing the timing by 20 degrees. At idle and above 5700 rpm, the oil gallery closes and the timing returns to normal.'"
+          },
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+            "note": "EC-27/28 Valve Timing Control: intake cam pulley position regulated by oil pressure via a solenoid valve, ON (advance) between 1,050 and 5,700 rpm (S14)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, about 20° advance. The switching rpm quoted is from S14 documents; the S15 calibration was not found."
+      },
+      "output": {
+        "power": {
+          "value": 250,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+              "note": "'最高出力 250ps(184kW)/6400rpm' (max power)."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+              "note": "'最高出力 250ps(184kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (MT) (gradeid 17076)",
+              "note": "'最高出力 250ps（-kw）/6,400rpm'."
+            },
+            {
+              "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+              "accessed": "2026-09-26",
+              "title": "Nissan press release: Nissan Releases All-New Silvia (1999-01-19)",
+              "note": "'SR20DET … delivers improved power output of 250 PS … This output figure applies to models on which the SR20DET engine is mated to a new 6-speed manual transmission'."
+            }
+          ],
+          "note": "Sources in kW agree after conversion (184 kW)."
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+              "note": "'250ps(184kW)/6400rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+              "note": "'250ps(184kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (MT) (gradeid 17076)",
+              "note": "'250ps（-kw）/6,400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 28.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm' (max torque)."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (MT) (gradeid 17076)",
+              "note": "'最大トルク 28.0kg・m（-N・m）/4,800rpm'."
+            }
+          ],
+          "note": "274.6 N·m per the same sources."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 6MT (1999-01) (1502079)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502079/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 6MT (1999-01)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G005/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 Spec-R (6MT)",
+              "note": "'最大トルク/回転数 kg・m/rpm 28/4800'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "Nissan ECCS ECM 23710-91F01 (1999-01 to 1999-07), 23710-91F05 (1999-07 to 2000-07), 23710-91F06 (2000-07 to 2000-12), 23713-91F07 (from 2000-12)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/engine-control-module-7816590",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Engine control module', read at megazip.net",
+            "note": "'23710-91F01 Engine Control Module 9901--01 ~ 9907--01; SR20DET.MT.F6', '23710-91F05 … 9907--01 ~ 0007--01', '23710-91F06 … 0007--01 ~ 0012--01', '23713-91F07 … 0012--01 ~'."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+            "accessed": "2026-09-26",
+            "title": "Eat sleep BOOST: SR20DET tech info",
+            "note": "SR20DET ECU list: 'S15 SR20DET MT : 23710-91F00 / 23710-91F01 / 23710-91F05 / 23710-91F06 / 23710-91F07 / 23710-93F00'."
+          }
+        ],
+        "note": "The EPC dates each number by build month. Eat Sleep Boost agrees on 23710-91F01, -91F05 and -91F06, writes the last one with the 23710 prefix, and also lists 23710-91F00 and 23710-93F00, which the JDM EPC does not show (possibly pre-production or another market; not confirmed)."
+      },
+      "notes": "Rated output is a Japanese catalogue net figure (post-1985 JIS net; Autech's 1999 S15 brochure states 'このカタログのエンジン出力表示はすべて「ネット値」です' = all outputs are net). Tach redline and fuel-cut rpm for the S15 SR20DET were not found in any source that could be opened, so they are left out: the S14 FSM (EC-21) says only that fuel is cut 'at excessively high speeds', and the S15 manual could not be opened. Cams and ECU numbers come from Nissan's parts catalogue (EPC) with the S14 FSM, DSPORT and Eat Sleep Boost; boost is one magazine measurement. Japanese Wikipedia and the RODEX engine-builder blog it cites say engines built in 2002 (serial numbers starting 5, and some 4) switched to the X-Trail SR20VET connecting rod and a matching piston design."
+    },
+    {
+      "id": "s15-jdm-at",
+      "name": "S15 Silvia Spec-R (4AT)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S15 grade list (1999-01 to 2002-08 production model)",
+            "note": "Spec-R AT grades listed '1999年1月～2002年8月' (January 1999 to August 2002)."
+          },
+          {
+            "url": "https://cartune.co.jp/magazine/articles/1271",
+            "accessed": "2026-09-26",
+            "title": "CARTUNE magazine: シルビアS15の魅力に迫ります",
+            "note": "'1999年1月の発売から僅か3年7か月後の2002年8月に生産終了' (released January 1999, production ended August 2002)."
+          }
+        ]
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+            "note": "'圧縮比 8.5' (compression ratio)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+            "note": "'過給機 ＩＣ付きターボ' (turbocharger with intercooler)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Garrett T28 (Nissan 14411-69F00)",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.gspec.com/p-10941-s15-t28-turbo-full-ball-bearing.aspx",
+                "accessed": "2026-09-26",
+                "title": "G Spec: S15 T28 turbo brand new OEM Nissan 14411-91F00",
+                "note": "'The Difference between this turbo and the S15 Automatic Transmission Turbo (Nisan_14411-69F00/Garrett_466541-5001) is the Hi Nickel \"NiResist\" turbine housing and inconel blade materials for extreme heat resistance.'"
+              },
+              {
+                "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-garrett-turbo-models/",
+                "accessed": "2026-09-26",
+                "title": "Eat sleep BOOST: Nissan Garrett turbo models",
+                "note": "'14411-69F00 GT28r JDM S14, S15 AT turbo – Ball bearing'."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Garrett 466541-5001 per G Spec. Eat sleep BOOST says ball bearing and shared with the JDM S14; G Spec says the MT turbo (14411-91F00) differs by a Ni-Resist turbine housing and Inconel turbine blades."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.silviaoc.com/discuss/threads/arc-sidemount-intercooler.1501/",
+            "accessed": "2026-09-26",
+            "title": "Silvia Owners Club (UK S15 forum): ARC sidemount intercooler (2007)",
+            "note": "Thread about replacing the S15's factory side-mount intercooler with ARC's S15 side-mount unit."
+          }
+        ],
+        "note": "Assumed to be the same body-side intercooler as the MT car; forum evidence only."
+      },
+      "injectorFlow": {
+        "value": 370,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BBSR20DET",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia (Japanese): 日産・SR20DET",
+            "note": "'MT車のインジェクターは480ccインジェクターを採用し、AT車はS14の370ccを採用' (MT cars use 480 cc injectors, AT cars keep the S14's 370 cc)."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/fuel-strainer-fuel-hose-7816931",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Fuel strainer & fuel hose', read at megazip.net",
+            "note": "'16600-21U01 Injector Assy-Fuel 9901--01 ~ ; SR20DET.AT.F4' (the 6MT build lists 16600-91F00)."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s14-6129/s14-620858/fuel-strainer-fuel-hose-7816398",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S14 SR20DET MT (build 620858), group 'Fuel strainer & fuel hose', read at megazip.net",
+            "note": "'16600-21U00 Injector Assy-Fuel 9310--01 ~ 9610--01; SR20DET' and '16600-21U01 Injector Assy-Fuel 9610--01 ~ ; SR20DET': the S15 automatic's injector is the late S14 SR20DET part."
+          },
+          {
+            "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+            "note": "'Fueling: 370cc injectors (S13/S14/U12/U13/W10/W11)'."
+          }
+        ],
+        "note": "Two independent lines of evidence: Japanese Wikipedia says the AT keeps the S14's 370 cc injectors; Nissan's parts catalogue shows the S15 AT injector (16600-21U01) is the same part as the S14 SR20DET from 1996-10, which HPA (and sr20tuning.net) give as 370 cc. No page prints 'S15 AT 370 cc' other than Wikipedia. Kept as single-source: only Japanese Wikipedia states '370 cc' for the S15 automatic directly. The other sources support it through a part-number match (the parts catalogue fits the S14's 16600-21U01 injector, which HP Academy rates at 370 cc)."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm' (SR20DET, all versions)."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': a (intake duration) 240°, b (exhaust duration) 240°. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Nissan parts catalogue: the S15 automatic uses the same camshafts as the S15 6MT and the S14 (13020-69F00 intake, 13020-65F10 exhaust), so the S14 FSM figures apply. Durations are with the VTC solenoid off."
+        },
+        "exhaustDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm' (SR20DET, all versions)."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': a (intake duration) 240°, b (exhaust duration) 240°. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Nissan parts catalogue: the S15 automatic uses the same camshafts as the S15 6MT and the S14 (13020-69F00 intake, 13020-65F10 exhaust), so the S14 FSM figures apply. Durations are with the VTC solenoid off."
+        },
+        "intakeLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm' (SR20DET, all versions)."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS: 'Valve lift Intake 9.2 (0.362) Exhaust 9.2 (0.362)'. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Nissan parts catalogue: the S15 automatic uses the same camshafts as the S15 6MT and the S14 (13020-69F00 intake, 13020-65F10 exhaust), so the S14 FSM figures apply. Durations are with the VTC solenoid off."
+        },
+        "exhaustLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/camshaft-valve-mechanism-7816913",
+              "accessed": "2026-09-26",
+              "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Camshaft & valve mechanism', read at megazip.net",
+              "note": "'13020-69F00 Camshaft Assy … SR20DET; ｲﾝﾃ-ｸ ｶﾞﾜ' (intake side) and '13020-65F10 Camshaft Assy … SR20DET; ｴｷｿﾞ-ｽﾄ ｶﾞﾜ' (exhaust side). The S14 SR20DET groups (build 620858) list the same two numbers from 1993-10 ('9310--01 ~'), so the S15 carried over the S14 camshafts."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm' (SR20DET, all versions)."
+            },
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS: 'Valve lift Intake 9.2 (0.362) Exhaust 9.2 (0.362)'. S14 manual; applies to the S15 because the EPC shows the same camshaft parts."
+            }
+          ],
+          "note": "Nissan parts catalogue: the S15 automatic uses the same camshafts as the S15 6MT and the S14 (13020-69F00 intake, 13020-65F10 exhaust), so the S14 FSM figures apply. Durations are with the VTC solenoid off."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "The S15 200SX range, sold with '4sp auto, 6sp man.', has 'Nissan's variable intake valve timing control system (NVCS)'."
+          }
+        ],
+        "note": "No JDM AT-specific statement found; the Australian range (both gearboxes) confirms NVCS on the S15 engine with an automatic."
+      },
+      "output": {
+        "power": {
+          "value": 225,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+              "note": "'最高出力 225ps(165kW)/6000rpm' (max power)."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+              "note": "'最高出力 225ps(165kW)/6000rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (AT) (gradeid 17077)",
+              "note": "'最高出力 225ps（-kw）/6,000rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G006/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 Spec-R (4AT)",
+              "note": "'最高出力 225ps'."
+            }
+          ],
+          "note": "Sources in kW agree after conversion (165 kW)."
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+              "note": "'225ps(165kW)/6000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+              "note": "'225ps(165kW)/6000rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (AT) (gradeid 17077)",
+              "note": "'225ps（-kw）/6,000rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 28.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia spec-R (AT) (gradeid 17077)",
+              "note": "'最大トルク 28.0kg・m（-N・m）/4,800rpm'."
+            }
+          ],
+          "note": "Same torque as the 6MT car."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia Spec-R 4AT (1999-01) (1502035)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia Spec-R 4AT (1999-01)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G006/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 Spec-R (4AT)",
+              "note": "'最大トルク/回転数 kg・m/rpm 28/4800'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "Nissan ECCS ECM 23710-91F10 (1999-01 to 1999-07), 23710-91F15 (1999-07 to 2000-07), 23710-91F16 (2000-07 to 2000-12), 23713-91F17 (from 2000-12)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/engine-control-module-7816590",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Engine control module', read at megazip.net",
+            "note": "'23710-91F10 Engine Control Module 9901--01 ~ 9907--01; SR20DET.AT.F4', '23710-91F15 … 9907--01 ~ 0007--01', '23710-91F16 … 0007--01 ~ 0012--01', '23713-91F17 … 0012--01 ~'."
+          }
+        ],
+        "note": "Eat Sleep Boost lists only '23710-93F10' for an 'S15 SR20DET AT', a number the JDM EPC does not show (possibly another market; not confirmed), so this stays single-source."
+      },
+      "notes": "Rated output is a Japanese catalogue net figure (post-1985 JIS net; Autech's 1999 S15 brochure states 'このカタログのエンジン出力表示はすべて「ネット値」です' = all outputs are net). Nissan's 1999 release says the 250 PS figure applies only to 6MT cars ('＊５：６ＭＴ車'); the AT is rated 225 PS. Stock boost, tach redline and fuel-cut rpm for the automatic were not found and are left out."
+    },
+    {
+      "id": "s15-audm",
+      "name": "Nissan 200SX S15 (Australia, Spec S / Spec R)",
+      "markets": ["AUDM"],
+      "period": {
+        "value": {
+          "from": "2000-11",
+          "to": "2002"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "'Released in November 2000, the Nissan S15 200SX …'; review title 'Nissan S15 200SX (2000-02)'; 'GT editions were released in May 2002'."
+          }
+        ],
+        "note": "End given only as a year (2002) by the review's title."
+      },
+      "fittedTo": ["S15"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "'… and a compression ratio of 8.5:1'."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+            "note": "'Compression ratio 8.5 … Engine Code SR20DET'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "'a Garrett T28 turbocharger … an intercooler'."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+            "note": "'Induction Turbo Intercooled'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Garrett T28",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+                "accessed": "2026-09-26",
+                "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+                "note": "'a Garrett T28 turbocharger which provided peak boost pressure of 0.73 bar (10.6 psi)'."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+                "accessed": "2026-09-26",
+                "title": "Wikipedia: Nissan SR20DET",
+                "note": "'1999–2002 \"Black top\" … (Garrett Journal Bearing T28 for Europe and Australia and Ball Bearing T28 turbo for Japan)'."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Bearing type: English Wikipedia (citing a dead SilviaWA forum thread) says journal-bearing for Australia/Europe; no primary source confirms it, and no part number was found."
+        }
+      ],
+      "boost": {
+        "value": 0.73,
+        "unit": "bar",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "'a Garrett T28 turbocharger which provided peak boost pressure of 0.73 bar (10.6 psi)'."
+          }
+        ],
+        "note": "English Wikipedia's table gives '7psi stock' for the Australian 200SX without a citation; DSPORT reports 9 psi (0.65 bar) stock on a JDM S15 (see s15-jdm). No Nissan Australia figure was found."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.silviaoc.com/discuss/threads/arc-sidemount-intercooler.1501/",
+            "accessed": "2026-09-26",
+            "title": "Silvia Owners Club (UK S15 forum): ARC sidemount intercooler (2007)",
+            "note": "Thread about replacing the S15's factory side-mount intercooler with ARC's S15 side-mount unit."
+          }
+        ],
+        "note": "Assumed same body-side intercooler as the JDM S15; forum evidence only."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "'Nissan's variable intake valve timing control system (NVCS)'."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+            "note": "'Camshaft DOHC with VVT'."
+          }
+        ],
+        "note": "On/off operation taken from the S14 FSM and sr20tuning.net description of the VTC black top (see s15-jdm)."
+      },
+      "output": {
+        "power": {
+          "value": 147,
+          "unit": "kW",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+              "note": "Specifications table: 'Spec S, Spec R … 4sp auto, 6sp man. … 147 kW at 6400 rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+              "note": "'Power 147.0kW @ 6400rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 4sp auto",
+              "note": "'Power 147.0kW @ 6400rpm' (automatic, same rating)."
+            }
+          ],
+          "note": "Same rating for the 6MT and 4AT. English Wikipedia's table gives '197 hp @ 6400 rpm' (= 147 kW) but '161 lb-ft', which does not match 265 Nm (195 lb-ft) and is taken as an error."
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+              "note": "'147 kW at 6400 rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+              "note": "'147.0kW @ 6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 265,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+              "note": "'265 Nm at 4800 rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+              "note": "'Torque 265Nm @ 4800rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 4sp auto",
+              "note": "'Torque 265Nm @ 4800rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+              "note": "'265 Nm at 4800 rpm'."
+            },
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales.com.au research: 2000 Nissan 200SX Spec R 6sp manual",
+              "note": "'265Nm @ 4800rpm'."
+            }
+          ]
+        },
+        "standard": "unknown"
+      },
+      "notes": "Whether the Australian engine differs in hardware or only in calibration is NOT settled by any primary source. Reported differences (journal-bearing T28, different ECU map) come from Wikipedia and forums. The Nissan parts catalogue opened (megazip.net) covers Japan-market builds only, so the Australian car's ECU, injector and camshaft part numbers were not found: injector size and cams are left out here even though the JDM S15 uses the S14 camshafts. Eat Sleep Boost lists S15 SR20DET ECUs 23710-93F00 (MT) and 23710-93F10 (AT) that the JDM catalogue does not show; which market they belong to is not stated. The rating standard is not stated by the sources."
+    },
+    {
+      "id": "s14-jdm",
+      "name": "S14 Silvia K's (black top with NVCS)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1993-10",
+          "to": "1998-12"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F002/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S14 generation (1993-10 to 1998-12 production model)",
+            "note": "Page title: 'シルビア（日産）1993年10月～1998年12月生産モデルのカタログ' (Silvia, October 1993 to December 1998 production model)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+            "note": "Earliest S14 K's catalogue entry is dated '1993年10月' (type E-S14)."
+          }
+        ],
+        "note": "Start verified (goo-net + Car Sensor); end from Car Sensor only."
+      },
+      "fittedTo": ["S14"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+            "note": "'圧縮比 8.5' (compression ratio)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+            "note": "'圧縮比 8.5'."
+          },
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+            "note": "EM-72: 'Compression ratio 8.5' (English-market S14 manual)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Garrett T28 ball-bearing",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-garrett-turbo-models/",
+                "accessed": "2026-09-26",
+                "title": "Eat sleep BOOST: Nissan Garrett turbo models",
+                "note": "'14411-69F00 GT28r JDM S14, S15 AT turbo – Ball bearing'; also lists '14411-75F00 T28 S14 turbo' and '14411-82F01 T28 S14a turbo'."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+                "accessed": "2026-09-26",
+                "title": "Wikipedia: Nissan SR20DET",
+                "note": "'1994–1998 \"Black top VCT\" … Garrett T28 journal bearing turbo for Australian and European markets and Garrett T28 Ball Bearing turbo for the Japanese market'."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Eat sleep BOOST gives 14411-69F00 for the JDM S14; which of 69F00 / 75F00 / 82F01 went on which JDM build (zenki/kouki) was not confirmed."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, section EC (ECCS Component Parts Location), hosted by sr20tuning.net",
+            "note": "EC-5, figure SEF965P (top view of the engine bay, front of the car at the bottom): 'Charge air cooler' is marked low in the front corner of the bay on the turbocharger side, outboard of the radiator behind the bumper corner, not across the face of the radiator. The EC-9 system diagram shows the path turbocharger → charge air cooler → throttle body."
+          }
+        ],
+        "note": "Front-corner side mount per the S14 FSM drawing. That manual is the English export (LHD/RHD) 200SX edition, not the JDM Silvia manual; the JDM K's shares the body and engine bay. DSPORT describes the same place for the S15 ('beneath the headlight in front of the left tire')."
+      },
+      "injectorFlow": {
+        "value": 370,
+        "unit": "cc/min",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sr20tuning.net/mods/vtc-blacktop-sr20det-into-s13/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: VTC Black Top SR20DET into S13",
+            "note": "Comparison table, S14 SR20DET 'black top': '-370cc injectors -5 speed'."
+          },
+          {
+            "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+            "note": "'Fueling: 370cc injectors (S13/S14/U12/U13/W10/W11)'."
+          }
+        ]
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': a (intake duration) 240°, b (exhaust duration) 240°, c -6°, d 66°, e 7°, f 53°."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm (RWD SR20DE uses 248° 10mm INLET cam)'."
+            }
+          ]
+        },
+        "exhaustDuration": {
+          "value": 240,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77 SDS 'Valve timing (VTC solenoid valve OFF)': b (exhaust duration) 240°."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm'."
+            }
+          ]
+        },
+        "intakeLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77: 'Valve lift Intake 9.2 (0.362) Exhaust 9.2 (0.362)'."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm'."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 9.2,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+              "accessed": "2026-09-26",
+              "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+              "note": "EM-77: 'Valve lift … Exhaust 9.2 (0.362)'."
+            },
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/sr20det-tech-info/",
+              "accessed": "2026-09-26",
+              "title": "Eat sleep BOOST: SR20DET tech info",
+              "note": "'Camshaft lift and duration 240° 9.2mm'."
+            }
+          ]
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, hosted by sr20tuning.net",
+            "note": "EC-27/28 Valve Timing Control: 'Intake valve opening and closing time is controlled … The intake camshaft pulley position is regulated by oil pressure, which is controlled by the valve timing control solenoid valve'; solenoid ON (advance) between 1,050 and 5,700 rpm."
+          },
+          {
+            "url": "https://sr20tuning.net/mods/vtc-blacktop-sr20det-into-s13/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: VTC Black Top SR20DET into S13",
+            "note": "'From between 1050 and 5700 rpm, a solenoid is triggered by the ECU … advancing the timing by 20 degrees.'"
+          },
+          {
+            "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+            "note": "'Later, Nissan released an updated SR20DET engine with Valve Timing Control (VTC) … This engine first appeared in the S14 Silvia at the end of 1993 … Calibrated with the VTC on the intake camshaft'."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Nissan_SR20DET",
+            "accessed": "2026-09-26",
+            "title": "Wikipedia: Nissan SR20DET",
+            "note": "'1994–1998 \"Black top VCT\" - 94–98 Silvias - Variable Cam Timing or VCT was introduced on the intake cam'."
+          }
+        ],
+        "note": "The FSM PDF is hosted on sr20tuning.net, so it and the sr20tuning.net article count as one site; MotorTrend and Wikipedia are the independent sources."
+      },
+      "output": {
+        "power": {
+          "value": 220,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+              "note": "'最高出力 220ps(162kW)/6000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+              "note": "'最高出力 220ps(162kW)/6000rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17060/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia K's (MT) (gradeid 17060)",
+              "note": "'最高出力 220ps（-kw）/6,000rpm'."
+            }
+          ],
+          "note": "goo-net shows the same 220 PS for the 1996-06 and 1998-05 K's (MT and AT), so zenki and kouki share the rating. Nissan's 1999 release says the S15 gained 30 PS over it."
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+              "note": "'220ps(162kW)/6000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+              "note": "'220ps(162kW)/6000rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 28.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17060/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Nissan Silvia K's (MT) (gradeid 17060)",
+              "note": "'最大トルク 28.0kg・m（-N・m）/4,800rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502045/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1993-10) (1502045)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199310/1502045/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1993-10)",
+              "note": "'28.0kg・m(274.6N・m)/4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Cam figures are from the English-market S14 service manual; Eat sleep BOOST gives the same 240°/9.2 mm for the SR20DET generally. Both the MT and AT K's carry the same 220 PS rating."
+    },
+    {
+      "id": "s13-jdm",
+      "name": "S13 Silvia K's (red top)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1991-01",
+          "to": "1993-09"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+            "note": "First SR20DET K's catalogue entry dated '1991年1月' (type E-PS13)."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+            "note": "'シルビア(1991年1月～1992年1月) Ｋ’ｓ' with engine SR20DET."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F001/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Nissan Silvia S13 generation (1988-05 to 1993-09 production model)",
+            "note": "Page title: 'シルビア（日産）1988年5月～1993年9月生産モデル'; the 2.0 K's grades are SR20DET."
+          }
+        ],
+        "note": "Start verified (goo-net + GAZOO); end is the S13 Silvia's production end per Car Sensor. The 180SX kept the SR20DET to 1998 but is not covered by this variant."
+      },
+      "fittedTo": ["S13"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+            "note": "'圧縮比 8.5'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Garrett T25G (Nissan 14411-50F00)",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-garrett-turbo-models/",
+                "accessed": "2026-09-26",
+                "title": "Eat sleep BOOST: Nissan Garrett turbo models",
+                "note": "'14411-50F00 T25g S13 SR20DET turbo'."
+              },
+              {
+                "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+                "accessed": "2026-09-26",
+                "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+                "note": "'Turbocharger: Garrett T25G (U12, S13)'."
+              },
+              {
+                "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+                "accessed": "2026-09-26",
+                "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+                "note": "Red Top / Black Top S13 engines use 'a Garrett T25G journal bearing turbocharger for boost pressure'."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Journal bearing (MotorTrend)."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "No opened source states the S13 factory intercooler position (the English S13 workshop manuals on silviaoc.com need a login). Estimated as a front-corner side mount from the S14 FSM drawing (EC-5, SEF965P: charge air cooler in the front corner of the bay), the S15 evidence (DSPORT, silviaoc.com) and a nicoclub thread titled 'Stock S13 sidemount intercooler good/bad' (seen in search results, page blocked)."
+      },
+      "injectorFlow": {
+        "value": 370,
+        "unit": "cc/min",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sr20tuning.net/mods/vtc-blacktop-sr20det-into-s13/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: VTC Black Top SR20DET into S13",
+            "note": "Comparison table, S13 SR20DET 'red top': '-370cc injectors -5 speed'."
+          },
+          {
+            "url": "https://www.hpacademy.com/blog/everything-you-need-to-know-about-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "High Performance Academy: Everything You Need to Know About the SR20DET",
+            "note": "'Fueling: 370cc injectors (S13/S14/U12/U13/W10/W11)'."
+          },
+          {
+            "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+            "note": "'They use 370cc/min fuel injectors'."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.motortrend.com/how-to/1808-the-sr20det/",
+            "accessed": "2026-09-26",
+            "title": "MotorTrend / Hot Rod: The SR20DET (2018-08-31)",
+            "note": "'The Flat Top cylinder head features fixed cam timing.' (red top / black top S13 engines)"
+          },
+          {
+            "url": "https://sr20tuning.net/mods/vtc-blacktop-sr20det-into-s13/",
+            "accessed": "2026-09-26",
+            "title": "SR20 Tuning: VTC Black Top SR20DET into S13",
+            "note": "S13 red top: '-Flat rocker cover -No bulge at front of rocker cover for VTC'."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 205,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+              "note": "'最高出力 205ps(151kW)/6000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+              "note": "'最高出力 205ps(151kW)/6000rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F001/M002G001/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 K's (5MT)",
+              "note": "'最高出力 205ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+              "note": "'205ps(151kW)/6000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+              "note": "'205ps(151kW)/6000rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 28.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+              "note": "'最大トルク 28.0kg・m(274.6N・m)/4000rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F001/M002G001/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Nissan Silvia 2.0 K's (5MT)",
+              "note": "'最大トルク/回転数 kg・m/rpm 28/4000'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502068/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Nissan Silvia K's 5MT (1991-01) (1502068)",
+              "note": "'28.0kg・m(274.6N・m)/4000rpm'."
+            },
+            {
+              "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199101/1502068/",
+              "accessed": "2026-09-26",
+              "title": "GAZOO catalogue (Toyota-run): Nissan Silvia K's 5MT (1991-01)",
+              "note": "'28.0kg・m(274.6N・m)/4000rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Non-VTC 'high port' red-top head. MT and AT K's carry the same 205 PS rating (goo-net 1502072, Car Sensor M002G002). S13 cam specs were not found and are left out."
+    }
+  ]
+}

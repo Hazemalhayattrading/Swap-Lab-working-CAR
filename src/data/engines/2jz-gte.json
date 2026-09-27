@@ -1,0 +1,1920 @@
+{
+  "$comment": "Toyota 2JZ-GTE (JZA80 Supra). Researched 2026-09-26. Variants that do not exist were left out: there is no US VVT-i 2JZ-GTE (Toyota USA gives VVT-i to the 1998 non-turbo only). Toyota's 1993 US Supra New Car Features (page scans on mkiv.com) is the primary source for the export engine's cams, firing order, compression, rods, pistons and oil jets; US boost is from Toyota's 1993 and 1998 Product Source books.",
+  "id": "2jz-gte",
+  "code": "2JZ-GTE",
+  "manufacturer": "Toyota",
+  "family": "JZ",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 2997,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Grade table: engine code 2JZ-GTE, 'Displacement(cm3) 2997'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'総排気量 2997cc' (total displacement)."
+      }
+    ]
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+        "accessed": "2026-09-26",
+        "title": "Toyota認定中古車 catalogue: Supra RZ (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+        "accessed": "2026-09-26",
+        "title": "Toyota認定中古車 catalogue: Supra RZ (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Grade table: 2JZ-GTE 'Engine type: In-line 6-cylinder, DOHC'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'種類 直列6気筒DOHC24バルブICツインターボ' (type: inline-6 DOHC 24-valve)."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'種類 直列6気筒DOHC24バルブICツインターボ': 24 valves on 6 cylinders = 4 per cylinder."
+      },
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Text: '3,000 cc inline 6-cylinder DOHC 24-valve 225 PS unit ... or its twin-turbo version producing 280 PS'."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "belt",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "2JZ-GTE section: 'belt-driven dual overhead camshaft ... cast-iron block, aluminium cylinder head engine'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'Camshafts are made of specially cast steel and are driven by a timing belt.'"
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "cast-iron",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox 'Block: Cast iron'; 2JZ-GE section: 'aluminium head ... along with a cast-iron cylinder block'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The Toyota 2JZ-GTE engine features a cast-iron block, aluminum cylinder head'."
+      }
+    ]
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox 'Head: Aluminium'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The cylinder head is made of a light, strong aluminum alloy'."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://mkiv.com/specifications/ncf/ncf93/ncf077.jpg",
+        "accessed": "2026-09-26",
+        "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Specifications and Performance Curve, p. 77 (page scan hosted by mkiv.com)",
+        "note": "2JZ-GTE column: 'Firing Order 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "Spec table: 'Firing order 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "Spec table: 'Firing order 1-5-3-6-2-4'."
+      }
+    ],
+    "note": "Toyota's 1993 Supra New Car Features prints the firing order in its 2JZ-GTE and 2JZ-GE specification tables (pp. 77 and 33); the two spec aggregators agree."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra RZ (1993-05) (1000910)",
+        "note": "'燃料供給装置 EFI' (fuel supply: electronic fuel injection, port type)."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'equipped with multiport sequential fuel injection system'."
+      }
+    ]
+  },
+  "dryWeight": {
+    "value": 230,
+    "unit": "kg",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "Spec table: 'Weight 230 kg (507 lbs)'."
+      },
+      {
+        "url": "https://www.speedwaymotors.com/the-toolbox/2jz-engine-specs-gte-vs-ge-what-cars-have-a-2jz-engine/145774",
+        "accessed": "2026-09-26",
+        "title": "2JZ Engine Specs: GTE vs GE (Speedway Motors)",
+        "note": "'All in, a complete 2JZ tips the scales at around 498 pounds' (about 226 kg; GE/GTE not separated)."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "Spec table: 'Engine weight 595 lbs (270 kg) - 2JZ-GTE; 507 lbs (230 kg) - 2JZ-GE'. Disagrees."
+      },
+      {
+        "url": "https://www.mkivsupra.net/topic/36765-supra-engine-weight/",
+        "accessed": "2026-09-26",
+        "title": "The mkiv Supra Owners Club (mkivsupra.net): Supra engine weight (forum thread, 2006)",
+        "note": "Reply quoting an older thread about the J-spec non-VVT-i engine: 'The whole engine without the turbos and intake weighs 280kg The intake weight is 7.5kg ... Turbos 24 kg'. Disagrees; hearsay, conditions unknown."
+      }
+    ],
+    "note": "Published figures range from about 226 kg (498 lb, Speedway Motors) to 270 kg (595 lb, motorreviewer.com), and none says what is included (turbos and manifolds, flywheel, fluids). engine-specs.net gives 230 kg for both the GE and GTE, which looks copied. 230 kg is stored as the middle of the cluster; treat it as roughly +/-20 kg. No Toyota figure was found. A UK owners' club post even gives 280 kg without turbos and intake. Toyota's 1993 New Car Features gives no engine weight."
+  },
+  "dimensions": {
+    "length": {
+      "value": 865,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "'Engine Size (mm)': 2JZ-GTE '1993-96 - 865x700x675 (MT) 830x705x675 (AT) 1997+ VVTi - 865x700x675 (MT) 835x700x675 (AT)'."
+        }
+      ],
+      "note": "Manual-gearbox engine. The source does not label the axes; length x width x height is assumed from the order. Automatic engines are listed as 830 mm (1993-96) or 835 mm (VVT-i) long."
+    },
+    "width": {
+      "value": 700,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "'865x700x675 (MT)' for 2JZ-GTE."
+        }
+      ],
+      "note": "Axis order assumed (L x W x H). 705 mm for the 1993-96 automatic."
+    },
+    "height": {
+      "value": 675,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "'865x700x675 (MT)' for 2JZ-GTE."
+        }
+      ],
+      "note": "Axis order assumed (L x W x H)."
+    }
+  },
+  "bellhousing": {
+    "value": "toyota-jz",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.driftmotion.com/1JZ-2JZ-R154-Bell-Housing-p/dm3.htm",
+        "accessed": "2026-09-26",
+        "title": "1JZ/2JZ to R154 Bell Housing (Driftmotion)",
+        "note": "'New 1JZ Bell Housing for R154 transmission. Use for 1JZ or 2JZ engine with an R154.'"
+      },
+      {
+        "url": "https://www.supramania.com/threads/r154-2jzgte.129370/",
+        "accessed": "2026-09-26",
+        "title": "R154 2jzgte (Supramania forum)",
+        "note": "'The 2JZ was never offered with the R154, but the 1JZ was. The 1JZ and 2JZ share bellhousing bolt patterns.'"
+      }
+    ],
+    "note": "The engine-side bolt pattern is shared across 1JZ and 2JZ. Gearbox bellhousings and flywheels still differ by gearbox (V160/V161, A340E, W58, R154)."
+  },
+  "sump": {
+    "value": "rear",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://xatracing.com/JZ-rear-sump-oil-pan.html",
+        "accessed": "2026-09-26",
+        "title": "Rear Sump JZ Oil Pan Kit Conversion (XAT Racing)",
+        "note": "'Rear sump oil pan is needed for fitment in the following chassis: Mk3 Supra A70 MkIV Supra A80 SC300/SC400 ... Front sump oil pan is typically needed for fitment in ... Nissan 240SX (S13 or S14) ... Lexus GS300/GS400 Lexus IS300'."
+      },
+      {
+        "url": "https://www.suprastore.com/1j2jresucooi.html",
+        "accessed": "2026-09-26",
+        "title": "Front to Rear Sump Conversion Supra 1JZGTE 2JZGTE Oil Pan Kit (SupraStore)",
+        "note": "'...trying to swap it into a MK3 or MKIV Supra and have found out the oil pan has to be a rear sump, not a front sump'."
+      }
+    ],
+    "note": "Applies to the Supra-fitted engine. Swap relevance: S13/S14 Silvia/240SX swaps need a front-sump pan, and many imported JDM engines (Aristo, Crown) come with front-sump pans."
+  },
+  "oilCapacity": {
+    "value": 5.0,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "http://mkiv.supras.org.nz/specs.htm",
+        "accessed": "2026-09-26",
+        "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+        "note": "Japanese specifications, 2JZ-GTE column: 'Oil Capicity (L) 5.0' (2JZ-GE column 5.2)."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "'Engine oil capacity, liter 5.0 l (5.3 qt) - 2JZ-GTE Supra; 5.2 l (5.5 qt) - 2JZ-GE Supra'."
+      }
+    ],
+    "note": "Neither source says whether this includes the filter. engine-specs.net gives 5.3 L without / 5.6 L with filter (not Supra-specific), ultimatespecs.com 5 L with filter for the European car."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.treadmagazine.com/features/the-legendary-toyota-2jz-gte-engine-everything-you-need-to-know/",
+          "accessed": "2026-09-26",
+          "title": "The Legendary Toyota 2JZ-GTE Engine (Tread Magazine)",
+          "note": "'The factory-fit forged steel crankshaft is held steady by seven main caps'."
+        },
+        {
+          "url": "https://www.speedwaymotors.com/the-toolbox/2jz-engine-specs-gte-vs-ge-what-cars-have-a-2jz-engine/145774",
+          "accessed": "2026-09-26",
+          "title": "2JZ Engine Specs: GTE vs GE (Speedway Motors)",
+          "note": "'The cast-iron block, forged steel crankshaft, and robust cylinder head design...'."
+        }
+      ],
+      "note": "engine-specs.net (reproducing Toyota's description) adds: seven journals, twelve counterweights, pins and journals induction-hardened."
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf037.jpg",
+          "accessed": "2026-09-26",
+          "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GE Engine: Engine Proper, 6. Connecting Rod, p. 37 (page scan hosted by mkiv.com)",
+          "note": "'A hot-forged connecting rod is used having high strength and little weight imbalance.'"
+        },
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf080.jpg",
+          "accessed": "2026-09-26",
+          "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Proper, 6. Connecting Rods, Crankshaft and Crankshaft Pulley, p. 80 (page scan hosted by mkiv.com)",
+          "note": "'The connecting rods, crankshaft, and crankshaft pulley of the 2JZ-GTE engine are the same as those of the 2JZ-GE engine.'"
+        },
+        {
+          "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+          "accessed": "2026-09-26",
+          "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+          "note": "'A new crankshaft with increased stroke also required longer connecting rods (they are hot-forged).' and the 2JZ-GTE 'uses a 2JZ-GE engine block, crankshaft, and connecting rods'."
+        },
+        {
+          "url": "https://autopartswd.com/toyota-2jz-engine-guide/",
+          "accessed": "2026-09-26",
+          "title": "Toyota 2JZ Engine Guide (autopartswd.com)",
+          "note": "'Forged crankshaft and rods (in GTE): These components are stout enough for 600+ hp even without upgrades.'"
+        }
+      ],
+      "note": "Toyota's 1993 New Car Features (covering the first, non-VVT-i engine) calls the rod hot-forged and says the 2JZ-GTE shares the 2JZ-GE's rods and crank. Wikipedia: 'The engine block, crankshaft, and connecting rods of the Supra's 2JZ-GE and 2JZ-GTE are the same'. Wikipedia and motorreviewer.com both say the later VVT-i engines use weaker rods (different part number); no Toyota document on that was read."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf080.jpg",
+          "accessed": "2026-09-26",
+          "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Proper, 5. Pistons, p. 80 (page scan hosted by mkiv.com)",
+          "note": "'Pistons are made of aluminum alloy having outstanding high-temperature strength.' 'An oil gallery in the form of an aluminum pipe is cast into the upper part of the piston in order to improve the piston's cooling performance.'"
+        },
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf083.jpg",
+          "accessed": "2026-09-26",
+          "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Lubrication System, 3. Oil Jets, p. 83 (page scan hosted by mkiv.com)",
+          "note": "'there is an oil jet provided for each cylinder. The oil that is sprayed onto the bottom of the piston ... flows into the oil gallery (an aluminum pipe which is cast into the piston) to cool the piston from the inside.'"
+        },
+        {
+          "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+          "accessed": "2026-09-26",
+          "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+          "note": "'The pistons are special aluminum casting. Each piston is fitted with two compression rings and a single oil ring.' 'The 2JZ-GTE has an oil spray nozzles to aid in cooling the pistons'."
+        }
+      ],
+      "note": "Toyota does not use the word 'cast' for the piston itself, but it says the cooling-gallery pipe is cast into the piston, which only a cast piston allows; engine-specs.net says 'special aluminum casting'. Oil squirters: Toyota confirms 'oil jets are provided in the cylinder block to cool the pistons' (1993 NCF p. 82), one per cylinder (p. 83). Some tuner pages loosely say 'forged internals'; the piston is a casting. Whether the alloy is hypereutectic is not stated."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 550,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://jspec-garage.com/blogs/jdm-build-guides/2jz-gte-build-guide",
+              "accessed": "2026-09-26",
+              "title": "2JZ-GTE Build Guide (J-Spec Garage, parts retailer)",
+              "note": "'Stock bottom end ceiling: 550–600whp with proper tuning on a healthy engine. Beyond that, you are taking a real risk.' FAQ: 'Sustained high-power use will destroy OEM pistons and rod bolts above 600whp.'"
+            }
+          ],
+          "note": "Lower end of the quoted 550-600 whp range."
+        },
+        "context": "Retailer build guide; assumes proper tuning on a healthy engine. Names OEM rod bolts as the first failure point and OEM pistons as limited above about 35 psi."
+      },
+      {
+        "component": "pistons",
+        "quantity": "crank-power",
+        "value": {
+          "value": 600,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://autopartswd.com/toyota-2jz-engine-guide/",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ Engine Guide (autopartswd.com)",
+              "note": "'With upgraded fueling, a standalone ECU, and a proper tune, many tuners safely push 600–700 horsepower on stock pistons and rods. Some even go higher, though reliability starts to taper off beyond that range.'"
+            }
+          ],
+          "note": "Lower end of the quoted 600-700 hp range; the article does not say crank or wheel horsepower."
+        },
+        "context": "Parts-supplier article; needs upgraded fuel system and a standalone ECU; covers stock pistons and rods together. Not corroborated by an independent tuner test."
+      },
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 700,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.treadmagazine.com/features/the-legendary-toyota-2jz-gte-engine-everything-you-need-to-know/",
+              "accessed": "2026-09-26",
+              "title": "The Legendary Toyota 2JZ-GTE Engine (Tread Magazine)",
+              "note": "'Many enthusiasts find that 600–700 hp is the sweet spot for balancing power and durability' and 'Many tuners push 700–1,000 horsepower without opening the block'."
+            }
+          ],
+          "note": "Upper end of the quoted 600-700 hp 'sweet spot'."
+        },
+        "context": "Magazine feature, not a measured test; the 700-1,000 hp 'without opening the block' claim is anecdotal and contradicted by J-Spec Garage's FAQ, which says 1,000 hp claims on stock internals are 'mostly short-duration dyno pulls or unverified numbers'."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "jza80-jdm",
+      "name": "2JZ-GTE, JDM Supra RZ/RZ-S/GZ, 1993-1997 (fixed cam timing)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1993-05",
+          "to": "1997-07"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+            "accessed": "2026-09-26",
+            "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+            "note": "'Released date : 1993/ 5/24'; grades RZ and GZ with 2JZ-GTE."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M001G003/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1993-05 to 1994-07 build)",
+            "note": "Page header '1993年5月～1994年7月生産モデル' (built May 1993 to July 1994): 2JZ-GTE 280ps, 44 kg・m/3600rpm."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M004G001/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1996-04 to 1997-07 build)",
+            "note": "Page header '1996年4月～1997年7月生産モデル': still 44 kg・m/3600rpm, i.e. the last non-VVT-i build window."
+          }
+        ],
+        "note": "Catalogue windows are sales/build model periods. The NZ MKIV club dates the VVT-i change to production in Sept 1997 (frame 1000849), while the catalogues start the VVT-i model in Aug 1997."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra RZ 6MT (1993-05) (1000910)",
+            "note": "'圧縮比 8.5' (compression ratio)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "twin-turbo-sequential",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+            "accessed": "2026-09-26",
+            "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+            "note": "Grade names '3000 Twin Cam 24 Two Way Twin Turbo_RZ / _GZ' ('Two Way Twin Turbo' is Toyota's name for the sequential system)."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT20",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+                "accessed": "2026-09-26",
+                "title": "Toyota JZ engine (Wikipedia)",
+                "note": "'the Japanese-specification CT20 turbine and export-specification CT12B'; 'Multiple variants of the Japanese CT20 turbine exist ... identified with the B, R, and A part number suffixes (e.g.: CT20A)'."
+              },
+              {
+                "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+                "accessed": "2026-09-26",
+                "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'For Japan market: Twin-turbochargers CT20 with intercooler'."
+              },
+              {
+                "url": "http://mkiv.supras.org.nz/specs.htm",
+                "accessed": "2026-09-26",
+                "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+                "note": "Comparison table lists the Japanese turbos as 'CT20A (Ceramic)', 600 mm^2 scroll, A/R 0.42."
+              }
+            ],
+            "note": "The NZ club lists the suffix as CT20A; Wikipedia says several CT20 suffixes exist. The exact suffix on the Supra units was not confirmed from a Toyota parts catalogue."
+          },
+          "count": 2,
+          "notes": "Sequential pair. Ceramic turbine wheels on the Japanese turbos (Wikipedia: 'ceramic for Japanese models'; NZ club: 'Ceramic (exhaust side only)'), which are known to shed blades at raised boost. NZ club: turbine 60/48 mm, compressor 62/37 mm (inducer/exducer; a second table on the same page says 62/39 mm), A/R 0.42."
+        }
+      ],
+      "boost": {
+        "value": 11,
+        "unit": "psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://mkiv.supras.org.nz/techo.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: Technical (mkiv.supras.org.nz)",
+            "note": "'Boost Cut - occurs at around 16psi ... if you try turning the boost above the stock level of 11psi' (written about the Japanese twin turbo)."
+          }
+        ],
+        "note": "Owner-club figure, not a Toyota specification. Toyota does not publish stock boost in the JDM catalogues. The same page puts the factory boost cut at about 16 psi."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The first generation of the Toyota 2JZ-GTE used sequential twin turbochargers CT20, an air-to-air side-mounted intercooler and 440 cc/min injector.'"
+          },
+          {
+            "url": "https://www.suprastore.com/tosustmkttsi.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra Stock MKIV TT Side Mount Intercooler (SupraStore used-part listing)",
+            "note": "Listing title 'Toyota Supra Stock MKIV TT Side Mount Intercooler'; description: 'We took this off our 97TT' (a US 1997 Supra Turbo)."
+          }
+        ],
+        "note": "The factory intercooler sits low in the front bumper on one side, fed by a bumper duct, which is why sources call it side-mounted rather than a front-mount across the radiator. The NZ MKIV club measured the core at 270 x 125 x 220 mm (mkiv.supras.org.nz/articles/intercol.htm, not opened over HTTPS). The 1997 JDM brochure (p.12-13) says the 'フロント＆サイドインテーク' (front and side intakes) feed 'ターボのインタークーラー' (the turbo intercooler)."
+      },
+      "injectorFlow": {
+        "value": 440,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "'larger injectors (550 cc/min for export, 440 cc/min for Japanese)'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'...an air-to-air side-mounted intercooler and 440 cc/min injector.'"
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Comparison table 'Injectors': Japanese 430 cc (high impedance), Export 540 cc (low impedance). Disagrees."
+          }
+        ],
+        "note": "Sources disagree: Wikipedia and engine-specs.net say 440 cc/min, the NZ MKIV club says 430 cc/min (and repeats 430 cc in its injector article). 440 kept as the more widely published figure; neither is a Toyota document, so treat the last 10 cc as uncertain."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 224,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Duration': Japanese 224 deg; timing 'In Open 3 BTDC, Close 41 ABDC'."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'1-st generation of the 2JZ-GTE engine for JDM has an intake duration of 224°... intake valve lift is 7.8 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "JDM camshafts: 'duration - 224/233 deg (intake/exhaust), valve lift 7.8/8.25 mm'."
+            }
+          ],
+          "note": "Advertised (seat-to-seat) duration; the checking height is not stated by any source."
+        },
+        "exhaustDuration": {
+          "value": 236,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "JDM: 'exhaust duration of 236°'; North American and European: 'exhaust duration of 236°'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve timing row 'Ex Open 52 BBDC, Close 4 ATDC' for both Japanese and export (52 + 180 + 4 = 236 deg)."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 233 deg exhaust for both JDM and USDM/EURO (disagrees)."
+            }
+          ],
+          "note": "Sources disagree. 236°: engine-specs.net and the NZ club's spec table (exhaust opens 52° BBDC, closes 4° ATDC for both the Japanese and export engines, 52 + 180 + 4 = 236°). 233°: motorreviewer.com (JDM '224/233 deg') and the NZ club's own tech page ('the Japanese stock exhaust cam has 233deg duration and 8.25mm lift', the same as the US inlet cam). Toyota's 1993 US New Car Features gives the export engine 52°/4° (236°) and 8.40 mm (pp. 77, 81), which supports 236°, but no Toyota document for the JDM engine was read, so the JDM exhaust cam stays uncertain."
+        },
+        "intakeLift": {
+          "value": 7.8,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Lift': Japanese 7.8mm."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'intake valve lift is 7.8 mm (0.31 in)' (1st-generation JDM)."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "JDM 'valve lift 7.8/8.25 mm (intake/exhaust)'."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 8.4,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'exhaust valve lift is 8.4 mm (0.33 in)' for both JDM and export."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve table 'Exhaust valve lift 8.4 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 8.25 mm exhaust lift (disagrees)."
+            }
+          ],
+          "note": "Sources disagree: engine-specs.net and the NZ club's valve table give 8.4 mm; motorreviewer.com and the NZ club's tech page give 8.25 mm for the Japanese exhaust cam. Toyota's 1993 US New Car Features gives 8.40 mm for the export engine (p. 81), which supports 8.4 mm, but no Toyota document for the JDM engine was read."
+        }
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "'Toyota's VVT-i variable valve timing technology was added to the engine beginning in September 1997'."
+          },
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%82%B9%E3%83%BC%E3%83%97%E3%83%A9",
+            "accessed": "2026-09-26",
+            "title": "トヨタ・スープラ (Japanese Wikipedia)",
+            "note": "'1997年8月に最後のマイナーチェンジ ... A80系スープラもエンジンがVVT-i化された' (at the final minor change in Aug 1997 the A80's engine gained VVT-i), so earlier engines had fixed timing."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Japanese production changes: 'Sept 1997 | 1000849 | VVTi engine (now BEAMS previously LASRE), hot wire type air flow meter...'."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+              "accessed": "2026-09-26",
+              "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+              "note": "RZ and GZ: 'Max. output kW(PS)/r.p.m. -/280/5600'; footnote 'Max. output represents a net rating.'"
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最高出力 280ps(206kW)/5600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1993-05) (1000910)",
+              "note": "'最高出力 280ps(206kW)/5600rpm' (max output)."
+            }
+          ],
+          "note": "Japanese sources also print 206 kW, which agrees after conversion."
+        },
+        "powerRpm": {
+          "value": 5600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+              "accessed": "2026-09-26",
+              "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+              "note": "'-/280/5600'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'280ps(206kW)/5600rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 44.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最大トルク 44.0kg・m(431.5N・m)/ 3600rpm' (max torque)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1993-05) (1000910)",
+              "note": "'最大トルク 44.0kg・m(431.5N・m)/3600rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M001G003/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1993-05 to 1994-07 build)",
+              "note": "'最大トルク/回転数 kg・m/rpm 44/3600'."
+            }
+          ],
+          "note": "Wikipedia's JZ engine article says 44.3 kgf·m at 3800 rpm; every Japanese catalogue source, including Toyota's own toyota.jp, prints 44.0 kgf·m at 3600 rpm, so that is stored."
+        },
+        "torqueRpm": {
+          "value": 3600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000910/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'44.0kg・m(431.5N・m)/ 3600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000910/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1993-05) (1000910)",
+              "note": "'44.0kg・m(431.5N・m)/3600rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "89661-14500 / 89661-14501 / 89661-14770 (6MT, by build date); 89661-14490 / 89661-14491 (4AT)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://suprapartimport.com/products/mint-jza80-supra-genuine-oem-j-spec-s1-rhd-2jz-gte-non-vvti-ecu-89661-14500",
+            "accessed": "2026-09-26",
+            "title": "Supra Part Import (Supra parts importer, retail listing): JZA80 Supra Genuine OEM J-Spec S1 RHD M/T 2JZ-GTE Non-VVTi ECU (89661-14500)",
+            "note": "'89661-14500 - Toyota - COMPUTER, ENGINE CONTROL'. Reference list on the page: 'Supra ECU Part Numbers (6Spd, J-Spec, TT): 89661-14500 (9305-9310), 89661-14501 (9310-9605), 89661-14770 (9605-9709), 89661-14830 (9709-)'; '(Auto, J-Spec, TT): 89661-14490 (9305-9310), 89661-14491 (9310-9605)'."
+          },
+          {
+            "url": "https://enginelandinc.com/en/accessories/maf-ecu-ignition-coil-pack-washer-reservoir-distributor/828/jdm-toyota-jza80-supra-2jz-gte-manual-ecu-engine-computer-control-89661-14500/",
+            "accessed": "2026-09-26",
+            "title": "Engine Land (used JDM parts retailer): JDM Toyota JZA80 Supra 2JZ-GTE manual ECU 89661-14500",
+            "note": "'Serial number 89661-14500'; 'APPLICATIONS TOYOTA SUPRA 2JZA80 SUPRA 6SPEED M/T ECU'."
+          }
+        ],
+        "note": "Toyota part name 'COMPUTER, ENGINE CONTROL'. From a Supra parts importer's reference list (retail, not a Toyota parts catalogue; the Toyota EPC sites tried were blocked). A second retailer confirms 89661-14500 for the 6MT. The same importer titles an 89661-14770 unit 'S2 ... VVTi', which contradicts its own date list (1996-05 to 1997-09, before VVT-i); the date list is followed. No number was found for the 1996-05 to 1997-07 automatic."
+      },
+      "notes": "Catalogue sources say 'ネット' (net) rating. Compared with the export engine: ceramic-wheel CT20 turbos, smaller injectors, a milder intake cam and MAP-sensor fuelling (NZ club), which is how Toyota held it to the 280 PS domestic ceiling. The Aristo 3.0V (JZS147) also carried a 2JZ-GTE rated 280 PS / 44.0 kgf·m at 3600 rpm with 8.5:1 compression (goo-net Aristo catalogue), but it is not listed in fittedTo because the NZ club says the Aristo turbos use steel turbine shafts, so it is not verified to be the same hardware."
+    },
+    {
+      "id": "jza80-jdm-vvti",
+      "name": "2JZ-GTE VVT-i, JDM Supra RZ/RZ-S, 1997-2002",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1997-08",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M005G001/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1997-08 to 1999-07 build)",
+            "note": "Header '1997年8月～1999年7月生産モデル'; 2JZ-GTE 280ps, 46 kg・m/3600rpm."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M006G001/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1999-08 to 2002-08 build)",
+            "note": "Header '1999年8月～2002年8月生産モデル'."
+          },
+          {
+            "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+            "accessed": "2026-09-26",
+            "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+            "note": "'The Supra remained active in motor sports until 2005, long after its production ended in August 2002.'"
+          }
+        ],
+        "note": "The NZ MKIV club says the last car was built in July 2002 and dates the VVT-i production change to Sept 1997; Toyota's heritage page and the catalogues say production ended in Aug 2002."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+            "note": "'圧縮比 8.5'."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000971/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "twin-turbo-sequential",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+            "note": "'種類 直列6気筒DOHC24バルブICツインターボ' (intercooled twin turbo)."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          }
+        ],
+        "note": "The catalogues say twin turbo; the sequential layout is from Wikipedia and applies to all Supra 2JZ-GTEs."
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT20",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+                "accessed": "2026-09-26",
+                "title": "Toyota JZ engine (Wikipedia)",
+                "note": "'the Japanese-specification CT20 turbine and export-specification CT12B'; 'Multiple variants of the Japanese CT20 turbine exist ... identified with the B, R, and A part number suffixes (e.g.: CT20A)'."
+              },
+              {
+                "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+                "accessed": "2026-09-26",
+                "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'For Japan market: Twin-turbochargers CT20 with intercooler'."
+              },
+              {
+                "url": "http://mkiv.supras.org.nz/specs.htm",
+                "accessed": "2026-09-26",
+                "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+                "note": "Comparison table lists the Japanese turbos as 'CT20A (Ceramic)', 600 mm^2 scroll, A/R 0.42."
+              }
+            ],
+            "note": "The NZ club lists the suffix as CT20A; Wikipedia says several CT20 suffixes exist. The exact suffix on the Supra units was not confirmed from a Toyota parts catalogue. No source distinguishes the VVT-i engine's turbos from the 1993-1997 ones; stored as the same model."
+          },
+          "count": 2,
+          "notes": "Sequential pair. Ceramic turbine wheels on the Japanese turbos (Wikipedia: 'ceramic for Japanese models'; NZ club: 'Ceramic (exhaust side only)'), which are known to shed blades at raised boost. NZ club: turbine 60/48 mm, compressor 62/37 mm (inducer/exducer; a second table on the same page says 62/39 mm), A/R 0.42."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The first generation of the Toyota 2JZ-GTE used sequential twin turbochargers CT20, an air-to-air side-mounted intercooler and 440 cc/min injector.'"
+          },
+          {
+            "url": "https://www.suprastore.com/tosustmkttsi.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra Stock MKIV TT Side Mount Intercooler (SupraStore used-part listing)",
+            "note": "Listing title 'Toyota Supra Stock MKIV TT Side Mount Intercooler'; description: 'We took this off our 97TT' (a US 1997 Supra Turbo)."
+          }
+        ],
+        "note": "The factory intercooler sits low in the front bumper on one side, fed by a bumper duct, which is why sources call it side-mounted rather than a front-mount across the radiator. The NZ MKIV club measured the core at 270 x 125 x 220 mm (mkiv.supras.org.nz/articles/intercol.htm, not opened over HTTPS). The 1997 JDM brochure (p.12-13) says the 'フロント＆サイドインテーク' (front and side intakes) feed 'ターボのインタークーラー' (the turbo intercooler)."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The second generation used VVT-i system on the inlet camshaft and was manufactured since 1997. The output power remained the same, but peak torque was increased to 451 Nm (46.0 kg·m)'."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "VVT-i 'added to the engine beginning in September 1997'; the 1JZ-GTE section describes VVT-i as a 'continuously variable valve timing mechanism'."
+          },
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%82%B9%E3%83%BC%E3%83%97%E3%83%A9",
+            "accessed": "2026-09-26",
+            "title": "トヨタ・スープラ (Japanese Wikipedia)",
+            "note": "'エンジンがVVT-i化された（NAの2JZ-GEは変更なし）。これにより最高出力はそのままながら、最大トルクは46kg-mへ増加' (engine got VVT-i, NA 2JZ-GE unchanged; power unchanged, torque up to 46 kgf·m)."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000971/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最高出力 280ps(206kW)/5600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+              "note": "'最高出力 280ps(206kW)/5600rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M005G001/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1997-08 to 1999-07 build)",
+              "note": "'最高出力 280ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 5600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000971/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'280ps(206kW)/5600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+              "note": "'280ps(206kW)/5600rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 46.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000971/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最大トルク 46.0kg・m(451.1N・m)/ 3600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+              "note": "'最大トルク 46.0kg・m(451.1N・m)/3600rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M005G001/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Toyota Supra 3.0 RZ 6MT (1997-08 to 1999-07 build)",
+              "note": "'最大トルク/回転数 kg・m/rpm 46/3600'."
+            }
+          ],
+          "note": "Unchanged through the 2001-09 update: goo-net RZ (2001-09, 1010961) prints '46.0kg・m(451N・m)/3600rpm'."
+        },
+        "torqueRpm": {
+          "value": 3600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000971/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra RZ 6MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'46.0kg・m(451.1N・m)/ 3600rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000971/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra RZ 6MT (1997-08) (1000971)",
+              "note": "'46.0kg・m(451.1N・m)/3600rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "89661-14830 (6MT)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://suprapartimport.com/products/mint-jza80-supra-genuine-oem-j-spec-s1-rhd-2jz-gte-non-vvti-ecu-89661-14500",
+            "accessed": "2026-09-26",
+            "title": "Supra Part Import (Supra parts importer, retail listing): JZA80 Supra Genuine OEM J-Spec S1 RHD M/T 2JZ-GTE Non-VVTi ECU (89661-14500)",
+            "note": "'89661-14500 - Toyota - COMPUTER, ENGINE CONTROL'. Reference list on the page: 'Supra ECU Part Numbers (6Spd, J-Spec, TT): 89661-14500 (9305-9310), 89661-14501 (9310-9605), 89661-14770 (9605-9709), 89661-14830 (9709-)'; '(Auto, J-Spec, TT): 89661-14490 (9305-9310), 89661-14491 (9310-9605)'."
+          }
+        ],
+        "note": "The importer's list gives 89661-14830 for the J-spec twin-turbo 6-speed from 1997-09, i.e. the VVT-i car. Retail source only. The automatic's number was not found in a page read."
+      },
+      "notes": "Same rated power as the 1993-1997 engine, +2.0 kgf·m torque. The NZ club says the VVT-i car also switched from a MAP sensor to a hot-wire air-flow meter. Injector size and cam specs for the VVT-i engine were not found in a source, so they are left out. Wikipedia and motorreviewer.com claim the VVT-i 2JZ-GTE has weaker connecting rods than the non-VVT-i engine (not verified from a Toyota source). The Aristo V300 (JZS161) carried a 2JZ-GTE with the same 280 PS / 46.0 kgf·m at 3600 rpm rating (goo-net Aristo catalogue); it is not listed in fittedTo because identical hardware was not confirmed."
+    },
+    {
+      "id": "jza80-usdm",
+      "name": "2JZ-GTE, US/Canada Supra Turbo, 1993-1998",
+      "markets": ["USDM", "CDM"],
+      "period": {
+        "value": {
+          "from": "1993-05",
+          "to": "1998"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "Powertrain table: 2JZ-GTE 320 hp, 'May 1993 – August 1998', 'Canada (until September 1997) and United States'."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "'The Export version of the Mkiv Supra ceased production around October 1998'."
+          },
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "'1993 – 4th generation'; '1999 – Supra production ceases'."
+          }
+        ],
+        "note": "End month disagrees (Wikipedia Aug 1998, NZ club about Oct 1998), so only the year is stored. Model years 1993-1998 in the US; Canada dropped the Supra after the 1997 model year per Wikipedia."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf077.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Specifications and Performance Curve, p. 77 (page scan hosted by mkiv.com)",
+            "note": "2JZ-GTE column: 'Compression Ratio 8.5 : 1'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Supra Turbo column: 'Compression ratio 8.5:1'."
+          },
+          {
+            "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+            "note": "Spec table 'Compression Ratio ... 8.5:1 - 2JZ-GTE' (not split by market)."
+          }
+        ],
+        "note": "Toyota's US New Car Features and Product Source print 8.5:1 for the US engine (also the 1997 NCF p. 125 and the 1998 Product Source p. 7), the same as the JDM figure."
+      },
+      "induction": {
+        "value": "twin-turbo-sequential",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "A80 section: 'The twin turbochargers operated in sequential mode instead of parallel'; export models got 'smaller, steel wheeled turbochargers'."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Export column of the 'Mkiv Supra TT Comparisons' table under 'Sequential Turbo's': CT12B (Steel)."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT12B",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+                "accessed": "2026-09-26",
+                "title": "Toyota JZ engine (Wikipedia)",
+                "note": "'the export-exclusive CT12B turbine received more durable turbine housings and stainless steel turbine and impeller fins'."
+              },
+              {
+                "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+                "accessed": "2026-09-26",
+                "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'For American and Europe marcet: Twin-turbochargers CT12B with intercooler'."
+              },
+              {
+                "url": "http://mkiv.supras.org.nz/specs.htm",
+                "accessed": "2026-09-26",
+                "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+                "note": "Comparison table: Export 'CT12B (Steel)', 740 mm^2 scroll, A/R 0.53."
+              }
+            ]
+          },
+          "count": 2,
+          "notes": "Sequential pair with steel turbine wheels (export). NZ club: turbine 52/44 mm, compressor 58/39 mm (inducer/exducer), A/R 0.53."
+        }
+      ],
+      "boost": {
+        "value": 11.6,
+        "unit": "psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Mechanical, Supra Turbo column: 'Turbo boost pressure (psi) 11.6', note 2: 'Combined boost pressure with both turbos operating'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Turbo column: 'Turbo Boost Pressure (PSI) 11.6', note 2: 'Combined boost pressure with both turbos operating'."
+          }
+        ],
+        "note": "Toyota Motor Sales' own figure for the US Turbo, printed in the 1993 and 1998 dealer product guides (two Toyota documents on one hosting site, so one source); read as gauge boost. The repair manual's overboost fail-safe (DTC 34) stops fuel injection when manifold absolute pressure stays at 200 kPa (2.0 kgf/cm², 29 psi absolute, roughly 14 psi of boost at sea level) or more for 2 s with the throttle open 20° or more above 2,400 rpm (US Supra repair manual, 2JZ-GTE Engine Troubleshooting, p. EG-546, archive.org item manualzilla-id-6877352)."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The first generation of the Toyota 2JZ-GTE used sequential twin turbochargers CT20, an air-to-air side-mounted intercooler and 440 cc/min injector.'"
+          },
+          {
+            "url": "https://www.suprastore.com/tosustmkttsi.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra Stock MKIV TT Side Mount Intercooler (SupraStore used-part listing)",
+            "note": "Listing title 'Toyota Supra Stock MKIV TT Side Mount Intercooler'; description: 'We took this off our 97TT' (a US 1997 Supra Turbo)."
+          }
+        ],
+        "note": "The factory intercooler sits low in the front bumper on one side, fed by a bumper duct, which is why sources call it side-mounted rather than a front-mount across the radiator. The NZ MKIV club measured the core at 270 x 125 x 220 mm (mkiv.supras.org.nz/articles/intercol.htm, not opened over HTTPS). The 1997 JDM brochure (p.12-13) says the 'フロント＆サイドインテーク' (front and side intakes) feed 'ターボのインタークーラー' (the turbo intercooler)."
+      },
+      "injectorFlow": {
+        "value": 550,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "'larger injectors (550 cc/min for export, 440 cc/min for Japanese)'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "Export North American and European engines: 'larger injectors (550 cc/min)'."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Comparison table 'Injectors': Export 540 cc, low impedance. Disagrees."
+          }
+        ],
+        "note": "Sources disagree: Wikipedia, engine-specs.net and motorreviewer.com say 550 cc/min, the NZ MKIV club says 540 cc. 550 kept as the more widely published figure. Toyota's 1993 US New Car Features (p. 95) describes 'side-feed type low resistance fuel injectors' with two holes but gives no flow figure, and no Toyota document with a flow rate was found, so the 540/550 conflict stays open."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 233,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf077.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Specifications and Performance Curve, p. 77 (page scan hosted by mkiv.com)",
+              "note": "2JZ-GTE valve timing: 'Intake Open 3° BTDC, Close 50° ABDC; Exhaust Open 52° BBDC, Close 4° ATDC'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Duration': Japanese 224 deg, Export 233 deg; timing 'In Open 3 BTDC, Close 50 ABDC' for export."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'For North American and European markets intake duration is 233°... intake valve lift is 8.25 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "'USDM/EURO camshafts specs: duration - 233/233 deg (intake/exhaust), valve lift 8.25/8.25 mm'."
+            }
+          ],
+          "note": "Toyota's valve timing gives 3 + 180 + 50 = 233° (seat timing as Toyota defines it; the checking height is not stated)."
+        },
+        "exhaustDuration": {
+          "value": 236,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf077.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Engine Specifications and Performance Curve, p. 77 (page scan hosted by mkiv.com)",
+              "note": "2JZ-GTE valve timing: 'Intake Open 3° BTDC, Close 50° ABDC; Exhaust Open 52° BBDC, Close 4° ATDC'."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "JDM: 'exhaust duration of 236°'; North American and European: 'exhaust duration of 236°'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve timing row 'Ex Open 52 BBDC, Close 4 ATDC' for both Japanese and export (52 + 180 + 4 = 236 deg)."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 233 deg exhaust for both JDM and USDM/EURO (disagrees)."
+            }
+          ],
+          "note": "Toyota's 1993 US New Car Features gives exhaust opening 52° BBDC and closing 4° ATDC (52 + 180 + 4 = 236°), agreeing with engine-specs.net and the NZ club. motorreviewer.com's 233° repeats its intake figure and is not followed."
+        },
+        "intakeLift": {
+          "value": 8.25,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf081.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Valve Mechanism, 2. Camshafts, Specifications, p. 81 (page scan hosted by mkiv.com)",
+              "note": "'Valve Lift mm (in.) IN 8.25 (0.325), EX 8.40 (0.331)'; 'Valve Timing IN Open 3° BTDC, Close 50° ABDC; EX Open 52° BBDC, Close 4° ATDC'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Lift': Japanese 7.8mm, Export 8.25mm."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'intake valve lift is 8.25 mm (0.32 in)' for North American and European markets."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "'valve lift 8.25/8.25 mm (intake/exhaust)' for USDM/EURO."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 8.4,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/ncf/ncf93/ncf081.jpg",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GTE Engine: Valve Mechanism, 2. Camshafts, Specifications, p. 81 (page scan hosted by mkiv.com)",
+              "note": "'Valve Lift mm (in.) IN 8.25 (0.325), EX 8.40 (0.331)'; 'Valve Timing IN Open 3° BTDC, Close 50° ABDC; EX Open 52° BBDC, Close 4° ATDC'."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'exhaust valve lift is 8.4 mm (0.33 in)' for both JDM and export."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve table 'Exhaust valve lift 8.4 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 8.25 mm exhaust lift (disagrees)."
+            }
+          ],
+          "note": "Toyota's 1993 US New Car Features gives 8.40 mm (0.331 in), agreeing with engine-specs.net and the NZ club; motorreviewer.com's 8.25 mm repeats its intake lift and is not followed."
+        }
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "Model list: '1998 – VVT-i on non-turbo models'; text: 'Variable Valve Timing with intelligence adds five horsepower to the non-turbo engine, bringing it to 225.' Nothing about VVT-i on the Turbo."
+          }
+        ],
+        "note": "Toyota USA gives VVT-i to the 1998 non-turbo only. Wikipedia's JZ engine article has an ambiguous sentence suggesting the US 2JZ-GTE also got VVT-i for 1998; Toyota's own chronology is preferred, so no jza80-usdm-vvti variant exists."
+      },
+      "output": {
+        "power": {
+          "value": 320,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://pressroom.toyota.com/supra-chronology/",
+              "accessed": "2026-09-26",
+              "title": "Supra Chronology (Toyota USA Newsroom)",
+              "note": "'The Turbo model was hailed by all major magazines as a true world beater. With 320-horsepower...'."
+            },
+            {
+              "url": "https://www.kbb.com/toyota/supra/1997/specs/",
+              "accessed": "2026-09-26",
+              "title": "1997 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "Turbo 6-speed: 'Horsepower 320 @ 5600 RPM | Torque 315 @ 4000 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "Powertrain table: 2JZ-GTE '320 hp', Canada and United States."
+            }
+          ],
+          "note": "Wikipedia's running text converts 239 kW to 321 hp; its table and Toyota USA say 320 hp."
+        },
+        "powerRpm": {
+          "value": 5600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1997/specs/",
+              "accessed": "2026-09-26",
+              "title": "1997 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'320 @ 5600 RPM'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'239 kW ... at 5,600 rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 315,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1997/specs/",
+              "accessed": "2026-09-26",
+              "title": "1997 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'Torque 315 @ 4000 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'...and 315 lb⋅ft (427 N⋅m) of torque at 4,000 rpm'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Torque': Export 315 ft/lb."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1997/specs/",
+              "accessed": "2026-09-26",
+              "title": "1997 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'315 @ 4000 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'at 4,000 rpm'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 6800,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.caranddriver.com/reviews/a15142755/toyota-supra-turbo-instrumented-test/",
+            "accessed": "2026-09-26",
+            "title": "Car and Driver: 1993 Toyota Supra Turbo instrumented test",
+            "note": "'The new instrument cluster's centerpiece is a massive tach, redlined at 6800 rpm.'"
+          },
+          {
+            "url": "https://rememberroad.com/review-1994-toyota-supra/",
+            "accessed": "2026-09-26",
+            "title": "Remember Road: Review, 1994 Toyota Supra (originally published in Road & Track Specials 1994 Buyer's Guide, republished by the author, John Matras)",
+            "note": "'The speedometer of the Toyota Supra Turbo reads to 180 mph while the tach is redlined at 6800 rpm.'"
+          }
+        ],
+        "note": "Tachometer redline of the US Supra Turbo, from two magazine tests. No Toyota document read states it (the New Car Features and repair manual pages read do not). The factory fuel-cut rev limit was not found in any readable source: forum claims (7000-7200 rpm) were either unreachable or from memory."
+      },
+      "notes": "Rating standard not printed by these sources; US ratings of the period are SAE net, and Toyota's 1993 New Car Features prints '[SAE-NET]'. Export hardware per the NZ club and Wikipedia: steel-wheel CT12B turbos, larger low-impedance injectors, a longer intake cam and a hot-wire air-flow meter; Toyota's 1993 NCF confirms the hot-wire mass air flow meter (p. 100), the low-resistance side-feed injectors (p. 95) and the 233° intake timing (p. 77). Canada: the 1993 and 1997 NCF tables list Canadian Turbos (Sport Roof only). The 1998 US Turbo was not sold in California-emissions states (Toyota USA). NZ club: 'Do NOT use the free fuel cut (as used on the USA spec mkiv's)'."
+    },
+    {
+      "id": "jza80-eudm",
+      "name": "2JZ-GTE, European Supra 3.0 Turbo, 1993-1996",
+      "markets": ["EUDM"],
+      "period": {
+        "value": {
+          "from": "1993-05",
+          "to": "1996-01"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "Powertrain table: 2JZ-GTE 330 PS / 441 Nm, 'May 1993 – January 1996', Europe; text: 'The Supra was discontinued in Europe at the beginning of 1996.'"
+          }
+        ],
+        "note": "automobile-catalog.com (blocked from this session) titles its European Supra Turbo page 'since September 1993 for Europe', so European sales may have started later than May 1993."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.ultimatespecs.com/car-specs/Toyota/5400/Toyota-Supra-MK4-30i-Turbo.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MK4 3.0i Turbo specs (ultimatespecs.com, spec aggregator)",
+            "note": "'Compression Ratio : 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "twin-turbo-sequential",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "A80 section: sequential twin turbos; export (American/European) models got 'smaller, steel wheeled turbochargers'."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Export column under 'Sequential Turbo's': CT12B (Steel)."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT12B",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+                "accessed": "2026-09-26",
+                "title": "Toyota JZ engine (Wikipedia)",
+                "note": "'the export-exclusive CT12B turbine received more durable turbine housings and stainless steel turbine and impeller fins'."
+              },
+              {
+                "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+                "accessed": "2026-09-26",
+                "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'For American and Europe marcet: Twin-turbochargers CT12B with intercooler'."
+              },
+              {
+                "url": "http://mkiv.supras.org.nz/specs.htm",
+                "accessed": "2026-09-26",
+                "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+                "note": "Comparison table: Export 'CT12B (Steel)', 740 mm^2 scroll, A/R 0.53."
+              }
+            ]
+          },
+          "count": 2,
+          "notes": "Sequential pair with steel turbine wheels (export). NZ club: turbine 52/44 mm, compressor 58/39 mm (inducer/exducer), A/R 0.53."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "2JZ-GTE section: 'differed in its use of sequential twin turbochargers and an air-to-air side-mounted intercooler'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The first generation of the Toyota 2JZ-GTE used sequential twin turbochargers CT20, an air-to-air side-mounted intercooler and 440 cc/min injector.'"
+          },
+          {
+            "url": "https://www.suprastore.com/tosustmkttsi.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra Stock MKIV TT Side Mount Intercooler (SupraStore used-part listing)",
+            "note": "Listing title 'Toyota Supra Stock MKIV TT Side Mount Intercooler'; description: 'We took this off our 97TT' (a US 1997 Supra Turbo)."
+          }
+        ],
+        "note": "The factory intercooler sits low in the front bumper on one side, fed by a bumper duct, which is why sources call it side-mounted rather than a front-mount across the radiator. The NZ MKIV club measured the core at 270 x 125 x 220 mm (mkiv.supras.org.nz/articles/intercol.htm, not opened over HTTPS). The 1997 JDM brochure (p.12-13) says the 'フロント＆サイドインテーク' (front and side intakes) feed 'ターボのインタークーラー' (the turbo intercooler)."
+      },
+      "injectorFlow": {
+        "value": 550,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "'larger injectors (550 cc/min for export, 440 cc/min for Japanese)'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "Export North American and European engines: 'larger injectors (550 cc/min)'."
+          },
+          {
+            "url": "http://mkiv.supras.org.nz/specs.htm",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+            "note": "Comparison table 'Injectors': Export 540 cc, low impedance. Disagrees."
+          }
+        ],
+        "note": "Sources disagree: Wikipedia, engine-specs.net and motorreviewer.com say 550 cc/min, the NZ MKIV club says 540 cc. 550 kept as the more widely published figure."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 233,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Duration': Japanese 224 deg, Export 233 deg; timing 'In Open 3 BTDC, Close 50 ABDC' for export."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'For North American and European markets intake duration is 233°... intake valve lift is 8.25 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "'USDM/EURO camshafts specs: duration - 233/233 deg (intake/exhaust), valve lift 8.25/8.25 mm'."
+            }
+          ],
+          "note": "Advertised (seat-to-seat) duration; the checking height is not stated by any source."
+        },
+        "exhaustDuration": {
+          "value": 236,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "JDM: 'exhaust duration of 236°'; North American and European: 'exhaust duration of 236°'."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve timing row 'Ex Open 52 BBDC, Close 4 ATDC' for both Japanese and export (52 + 180 + 4 = 236 deg)."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 233 deg exhaust for both JDM and USDM/EURO (disagrees)."
+            }
+          ],
+          "note": "engine-specs.net and the NZ club's valve timing (52° BBDC / 4° ATDC, export engine) agree on 236°. Toyota's 1993 US New Car Features gives the same timing for the export engine it covers (pp. 77, 81), so motorreviewer.com's 233° (its intake figure repeated) is not followed. No Toyota Europe document was read."
+        },
+        "intakeLift": {
+          "value": 8.25,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Comparison table 'Inlet Cam Lift': Japanese 7.8mm, Export 8.25mm."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'intake valve lift is 8.25 mm (0.32 in)' for North American and European markets."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "'valve lift 8.25/8.25 mm (intake/exhaust)' for USDM/EURO."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 8.4,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'exhaust valve lift is 8.4 mm (0.33 in)' for both JDM and export."
+            },
+            {
+              "url": "http://mkiv.supras.org.nz/specs.htm",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+              "note": "Valve table 'Exhaust valve lift 8.4 mm'."
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+              "accessed": "2026-09-26",
+              "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "Gives 8.25 mm exhaust lift (disagrees)."
+            }
+          ],
+          "note": "engine-specs.net and the NZ club agree on 8.4 mm; Toyota's 1993 US New Car Features gives 8.40 mm for the export engine (p. 81). motorreviewer.com's 8.25 mm (its intake lift repeated) is not followed."
+        }
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "European 2JZ-GTE sold 'May 1993 – January 1996'; the VVT-i 2JZ-GTE row is Japan only, from September 1997."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-gte.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The second generation used VVT-i system on the inlet camshaft and was manufactured since 1997.'"
+          }
+        ],
+        "note": "Inferred from dates: European sales ended before VVT-i was introduced."
+      },
+      "output": {
+        "power": {
+          "value": 330,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.ultimatespecs.com/car-specs/Toyota/5400/Toyota-Supra-MK4-30i-Turbo.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MK4 3.0i Turbo specs (ultimatespecs.com, spec aggregator)",
+              "note": "'Horsepower : 326 HP / 330 PS / 243 kW @ 5600 rpm'."
+            },
+            {
+              "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-t-turbo-330hp-3454",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra IV (A80) 3.0i 24V T-turbo (330 Hp) (auto-data.net, spec aggregator)",
+              "note": "'Power 330 Hp @ 5600 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "Powertrain table: '330 PS', Europe."
+            }
+          ],
+          "note": "Wikipedia's text gives 243 kW (326 hp), which agrees after conversion."
+        },
+        "powerRpm": {
+          "value": 5600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.ultimatespecs.com/car-specs/Toyota/5400/Toyota-Supra-MK4-30i-Turbo.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MK4 3.0i Turbo specs (ultimatespecs.com, spec aggregator)",
+              "note": "'@ 5600 rpm'."
+            },
+            {
+              "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-t-turbo-330hp-3454",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra IV (A80) 3.0i 24V T-turbo (330 Hp) (auto-data.net, spec aggregator)",
+              "note": "'330 Hp @ 5600 rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 441,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.ultimatespecs.com/car-specs/Toyota/5400/Toyota-Supra-MK4-30i-Turbo.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MK4 3.0i Turbo specs (ultimatespecs.com, spec aggregator)",
+              "note": "'Maximum torque : 325 lb-ft / 441 Nm @ 4800 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "Powertrain table: '441 N⋅m', Europe."
+            },
+            {
+              "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-t-turbo-330hp-3454",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra IV (A80) 3.0i 24V T-turbo (330 Hp) (auto-data.net, spec aggregator)",
+              "note": "'Torque 440 Nm @ 4800 rpm. 325 lb.-ft.' (1 Nm lower, rounding)."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.ultimatespecs.com/car-specs/Toyota/5400/Toyota-Supra-MK4-30i-Turbo.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra MK4 3.0i Turbo specs (ultimatespecs.com, spec aggregator)",
+              "note": "'441 Nm @ 4800 rpm'."
+            },
+            {
+              "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-t-turbo-330hp-3454",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra IV (A80) 3.0i 24V T-turbo (330 Hp) (auto-data.net, spec aggregator)",
+              "note": "'440 Nm @ 4800 rpm'."
+            }
+          ]
+        },
+        "standard": "unknown"
+      },
+      "notes": "No Toyota Europe document was found this session; figures come from spec aggregators and Wikipedia, and the rating standard (DIN vs EEC) is not stated. ultimatespecs.com lists the European turbos as CT20A, which contradicts Wikipedia and engine-specs.net (export = CT12B); CT12B is stored. UK cars (UKDM) are not covered by any source opened here."
+    }
+  ]
+}

@@ -2,26 +2,28 @@
 
 Candidate 3D models for you to buy or download. I don't download or buy anything; you pick, and the files go in `assets-raw/` (see "When you buy one" below).
 
-**Accessed 2026-09-26. Read this before buying anything:**
+**Read this before buying anything:**
 
-- **Everything here was seen through web-search result summaries, not on the listing pages.** This environment's network policy blocks sketchfab.com, cgtrader.com and turbosquid.com, so no page was opened directly. Treat every field as a lead, not a fact.
-- **This is one research pass with no independent second check.** The planned adversarial re-check didn't run, because the session's web-search budget (200 searches) ran out after the cars.
-- **Engines and parts are not researched yet** (same reason). Those sections list what's still needed.
-- "Unknown" means the search results didn't say. Nothing is guessed. Polycounts are exactly as listed, and listings mix triangles, polygons (quads) and vertices.
+- **Your licence decision (2026-09-26):** launch with free CC0 or CC-BY models only. A paid model is only considered if its licence explicitly allows real-time or interactive web use and isn't editorial-only; you decide per model. The terms of each store are summarised under "Paid licence terms" below. In short, none of them allows a plain GLB served to the browser.
+- **S15 and Supra: re-checked on the listing pages on 2026-09-26** (Sketchfab Data API and pages; CGTrader in a headless browser). TurboSquid (DataDome bot check) and Fab (Cloudflare) couldn't be opened. Evidence: `docs/research/asset-recheck-silvia-supra-2026-09-26.json`.
+- **350Z, E46 and RX-7: still the Phase 0 leads**, seen only through search summaries and not re-checked. Treat every field there as a lead, not a fact. They get re-checked in the session that does their data.
+- **The Sketchfab Store has stopped selling.** `/store` redirects to Fab, and every paid Sketchfab model checked shows no Buy button. Prices from the Phase 0 list for Sketchfab paid models are out of date.
+- **NoAI is now allowed on CC0 and CC-BY models** (your decision, 2026-09-26), because we never train AI on them. Those files are processed only by the asset scripts and are never shown to an AI model (CLAUDE.md rule 5).
+- **CGTrader now sells to ordinary buyers only under "Royalty Free License (no AI)".** That licence isn't CC0 or CC-BY, so the No AI clause still keeps it out. Its extraction clause (21A.3) would anyway, unless you approve a model.
+- **Commissioning original models** is costed under "Commissioned models" below, for you to decide later.
+- **Engines and parts are not researched yet.**
+- "Unknown" means the page didn't say. Nothing is guessed. Polycounts are as listed, and listings mix triangles, polygons (quads) and vertices.
 
 ## Licence rules (CLAUDE.md rule 5)
 
-- **OK:** CC0, and CC Attribution (credit it on /credits).
-- **OK only if the licence allows it:** paid commercial licences (Sketchfab Store "Standard" or royalty-free, CGTrader "Royalty Free", TurboSquid "Standard").
-  - Everything in `public/` is committed to the repo and served as a downloadable file from GitHub Pages.
-  - Store licences usually forbid redistributing the model file itself, so check the clause on real-time or web delivery before buying.
-  - See the open question in `docs/decisions.md` ("Paid models and redistribution").
-- **Needs your decision:** "Editorial" licences, which are common for branded cars. They usually allow news or illustrative use but not products, and a public web tool may not qualify.
+- **OK:** CC0, and CC Attribution (credit it on /credits), including models with a NoAI clause. Record the clause as `noAi: true` in `src/data/assets.json`. Those files are processed only by the asset scripts, never shown to an AI model, and swapped for clay placeholders in screenshots an AI reviews (CLAUDE.md rule 5).
+- **Paid: only with your per-model approval,** and only if the licence explicitly allows real-time or interactive web use (the GLB is served to the browser from GitHub Pages and sits in a public repo). See "Paid licence terms" below: as checked on 2026-09-26, none of the three stores' standard licences does.
+- **Editorial: no.** Every editorial licence checked limits use to news, commentary or academic work (see "Paid licence terms").
 - **Never:**
   - NonCommercial (NC);
   - NoDerivatives (ND), because we must optimise and edit the files;
   - ShareAlike (SA);
-  - any NoAI tag, including CGTrader's "Royalty Free No AI";
+  - a NoAI clause on anything other than a CC0 or CC-BY licence (so CGTrader's "Royalty Free No AI" is still out);
   - game rips (Forza, NFS, GT, Assetto Corsa, GTA, BeamNG, CSR2, Grid);
   - AI-generated models.
 
@@ -29,11 +31,12 @@ Candidate 3D models for you to buy or download. I don't download or buy anything
 
 - only allowed licences can be recorded;
 - the licence URL must match the licence;
-- every asset has to attest no NoAI, editorial, game-rip or AI-generated restriction.
+- every asset has to attest its NoAI, editorial, game-rip and AI-generated status. Only NoAI may be true, and only on a CC0 or CC-BY asset;
+- validate-data lists the NoAI files, so every session knows which files it must not open.
 
 ## Before you buy, check on the listing page
 
-1. The licence is exactly as listed here, with no NoAI tag or clause.
+1. The licence is exactly as listed here. Note any NoAI tag or clause: it's fine on CC0 or CC-BY, and it has to be recorded.
 2. The description doesn't say it's based on or ported from a game, and the uploader actually made it.
 3. Whether the interior and engine bay are modelled (screenshots or the viewer).
 4. The real polycount and texture sizes. A car GLB must fit in 25 MB after `npm run assets`; anything above about 1M triangles will need decimating.
@@ -44,63 +47,284 @@ Candidate 3D models for you to buy or download. I don't download or buy anything
 1. Put the original file in `assets-raw/cars/`, `assets-raw/engines/` or `assets-raw/parts/`. That folder is git-ignored and never committed.
 2. Tell the session the listing URL, the licence as shown, the price paid, the date, and whether the page shows any NoAI or editorial restriction. It goes into `src/data/assets.json`, and CC-BY credits go on /credits.
 3. `npm run assets` writes the optimised GLB to `public/models/` and fails if it's over budget.
-4. For a paid model, don't commit that GLB until the redistribution question in `docs/decisions.md` is settled.
+4. For a paid model, don't commit that GLB until you've approved that model's licence for web delivery (decision of 2026-09-26 in `docs/decisions.md`).
+
+## Paid licence terms (checked 2026-09-26)
+
+Question for each licence: may a paid model ship inside a public web app where the browser downloads the GLB?
+
+**Short answer:**
+
+- None of the three licences explicitly allows a plain GLB served to the browser.
+- TurboSquid explicitly forbids it without written approval.
+- Sketchfab forbids anything that lets others download or extract the file.
+- CGTrader requires protecting the model from extraction.
+
+That supports launching with CC0 and CC-BY only.
+
+- **Sketchfab Store, Standard licence** ([sketchfab.com/licenses](https://sketchfab.com/licenses)). No explicit real-time or web permission.
+  - 2.2(b): you agree not to "make available the Licensed Material as a stand-alone file (or group of files) or in a way that allows third parties to use, download, extract or access the Licensed Material as a stand-alone file".
+  - 2.2(h): not to "make the Licensed Material available in a manner intended to allow or invite a third party to download, extract, redistribute or access the Licensed Material as a stand-alone file".
+  - 2.7: "Licensee shall post terms and conditions on its permitted websites that prohibit, republication, retransmission, reproduction or other use of the Licensed Material as a stand-alone file".
+  - 12: "Licensee shall maintain a robust firewall to safeguard against unauthorized third-party access to the Licensed Material."
+
+  **Verdict: no** for a public GLB.
+
+  Note that the Sketchfab Store no longer sells: `/store` redirects to a "Buy & sell 3D models on Fab" page, and every paid model checked shows `inStore: false`. **Fab's own licence (fab.com/eula) couldn't be opened** (Cloudflare challenge), so any ex-Sketchfab model offered on Fab needs its Fab terms read before buying.
+
+- **Sketchfab Editorial licence** (same page). 2.3: no "commercial, promotional, endorsement, advertising or merchandising use", and no "purpose other than to create a Licensee Work that comments on or criticizes (i) the subject matter ... or (ii) newsworthy or public interest events". The summary says editorial assets "can be used in only works that comment on or criticize the subject matter". **Verdict: no.**
+- **CGTrader Royalty Free / Royalty Free No AI** ([Terms & Conditions, sections 21A to 22](https://www.cgtrader.com/pages/terms-and-conditions)). Web delivery is not explicitly allowed.
+  - Games are allowed "if the Product is contained inside a proprietary format".
+  - Apps and platforms are allowed only if the "Product is not downloadable by users ... in the form in which it is downloaded from the Site" (21A.2).
+  - 21A.3: "you must take all commercially reasonable measures to prevent the end user from gaining access to the Product", for example with "a proprietary Product format", "a proprietary and/or password protected database or resource file", or "encrypting the Product data".
+
+  **Verdict: unclear, leaning no** for an open GLB in a public repo.
+
+  Two facts matter for the rules:
+  - 21A.7: ordinary buyers now only get "Royalty Free License, No AI"; plain Royalty Free is for enterprise deals.
+  - 21B.1: No AI means the "same licensing terms ... except that Product use for machine learning or training of neural network models ... is not permitted".
+
+  Rule 5 now accepts a NoAI clause only on CC0 or CC-BY models, so CGTrader's "No AI" licence still keeps its models out, and 21A.3 would too.
+
+- **CGTrader Editorial** (22.2): "Buyers may only use Products marked 'editorial' ... for legitimate, editorial purposes on some issue of journalistic, editorial, cultural or otherwise newsworthy value." **Verdict: no.**
+- **TurboSquid 3D Model License** ([blog.turbosquid.com/turbosquid-3d-model-license](https://blog.turbosquid.com/turbosquid-3d-model-license/), effective 16 March 2023). Web applications are a permitted use (7: "mobile, desktop and web applications"), but 7(b) says:
+
+  > "3D Models must be contained in proprietary formats so that they cannot be opened or imported in a publicly available software application or framework, or extracted without reverse engineering. WebGL exports from Unity, Unreal, and Lumberyard are permitted. Any other open format ... or other WebGL programs not listed here) are prohibited."
+
+  The FAQ adds that other WebGL use needs a non-standard format or a substantially modified mesh, and "must be approved in advance". **Verdict: no** for three.js with GLB, unless TurboSquid approves it in writing.
+
+  Editorial (4): "limited to news reporting ... A second permitted use is use within an academic setting". The FAQ says: "No commercial, non-news related purpose." **Verdict: no.** (The TurboSquid listing pages themselves couldn't be opened; the licence pages on blog.turbosquid.com could.)
+
+## Commissioned models
+
+For you to decide later. Commissioning means paying a 3D artist or studio to build original models to our spec, under a licence written for this site. It's the route to consider because of what the store search found:
+
+- no free, stock-bodied S15 exists;
+- the best free Supra has no interior;
+- neither free pick has an engine bay;
+- no store's standard licence allows a plain GLB served to the browser.
+
+### What the artist would build (per car: S15 Spec-R, Supra RZ/Turbo)
+
+The camera modes in BUILD_PROMPT section 8 decide the scope. Each block below can be quoted and ordered separately.
+
+**1. Exterior (showroom)**
+
+- Stock body, to scale, matching our verified data files:
+  - S15: 4,445 x 1,695 x 1,285 mm, wheelbase 2,525 mm, tracks 1,470 / 1,460 mm.
+  - Supra: 4,520 x 1,810 x 1,275 mm, wheelbase 2,550 mm, tracks 1,520 / 1,525 mm.
+- Separate objects with real pivot points:
+  - four wheels, with brake discs and calipers separate so the wheels can turn while the calipers stay;
+  - bonnet on its real hinge axis (the bay view opens it), plus doors and bootlid or hatch;
+  - glass, and lights with emissive materials.
+- Badges as separate meshes, so they can be hidden (CLAUDE.md rule 5: no manufacturer logos as site branding).
+- Paint as its own material, so the colour can change.
+- Optional extras, quoted separately:
+  - S15: Spec-S 15-inch wheels; the Aero rear wing.
+  - Supra: 16-inch (JDM 1993-96) and 17-inch wheels; the removable targa roof (Aero Top in Japan, Sport Roof in the US).
+
+**2. Interior (cabin view)**
+
+- A full cabin that holds up from the driver's eye point.
+- Every gauge needle as a separate object, so the sim can drive them (tach, speed, boost, oil pressure, water temperature). That includes the S15 Spec-R's A-pillar boost gauge (in Nissan's 1999 launch release).
+- A separate steering wheel, pedals and gear lever.
+- Seats as separate objects on `mount_seat_driver` and `mount_seat_passenger`, so bucket seats can replace them.
+
+**3. Engine bay**
+
+- The bay structure: strut towers, firewall, frame rails, radiator support, inner wings, brake booster, battery, loom and the underside of the bonnet.
+- Built so that it still looks right with the stock engine taken out, because swapped engines sit in the same bay.
+- Our `mount_*` empties placed at the real positions: `mount_engine`, `mount_trans`, `mount_intake`, `mount_turbo`, `mount_exhaust`, `mount_radiator`, `mount_intercooler`, `mount_oilcooler`.
+  A to-scale bay is also what the car files' `geometry` is waiting for: the mount points and bay envelope get measured from it in Phase 4.
+- The underside at least along the transmission tunnel and exhaust route, for the dyno and cutaway views.
+
+**4. Separate engines: SR20DET and 2JZ-GTE (8 MB budget each)**
+
+- Exterior: block, head, cam cover, intake and plenum, throttle body, exhaust manifold, the turbo (two sequential turbos on the 2JZ-GTE), intercooler piping, and accessories and belts.
+- The cutaway set as separate, correctly pivoted objects, so the renderer can animate them in time with rpm and firing order:
+  - pistons, rods, crankshaft;
+  - camshafts, valves and springs;
+  - turbine and compressor wheels;
+  - a sectioned block and head for the X-ray view.
+- Real geometry from our data: 86.0 x 86.0 mm bore and stroke on both engines; firing orders 1-3-4-2 and 1-5-3-6-2-4.
+
+**Technical spec for every model**
+
+- glTF 2.0 (GLB) plus the editable source file (Blender preferred).
+- Metres, Y-up, real-world pivots.
+- Our part names and `mount_*` empties.
+- PBR metal/roughness textures.
+- It must fit the budgets after `npm run assets`: car 25 MB, engine 8 MB. Two levels of detail per car (a light showroom version and a detailed close-up version), sized to the performance targets (60 fps showroom, 45 fps cutaway on mid-range hardware).
+- References: blueprints and photos, which the artist usually sources; our data files give the dimensions.
+
+### Licence terms we'd need
+
+The contract must explicitly grant:
+
+1. **Real-time web use:** rendering the models in a public website, where the optimised GLB is downloaded by every visitor's browser, served from GitHub Pages and stored in a public git repository. This is exactly what store licences forbid.
+2. **Modification:** optimising, decimating, renaming, re-materialing, adding mount points and cutting sections.
+3. **Perpetual and worldwide rights, including commercial use,** in case the site ever earns money.
+4. **Warranties:** original work; no game rips; no AI tools used (one marketplace's terms allow AI tools unless the brief forbids them); no parts from other models, except CC0 or CC-BY items listed in a bill of materials.
+5. **No NoAI clause.** CLAUDE.md rule 5 only accepts NoAI on CC0/CC-BY assets, so a commissioned licence with one would need your sign-off.
+
+What we can accept in return:
+
+- **We don't redistribute the source files** (the .blend and texture masters). They stay out of the repo, since `assets-raw/` is git-ignored.
+- **We don't resell the models as standalone assets.**
+
+Ownership options, from most to least control:
+
+- **Copyright assignment:** we own the model.
+  - Upwork's optional contract terms (6.4) and Fiverr's terms (section 10) assign copyright to the buyer on payment by default. Some Fiverr gigs charge extra for a "Commercial Use License" instead, under which the seller keeps ownership.
+  - A US "work made for hire" needs a signed agreement and one of nine qualifying categories. A web-app model doesn't clearly qualify, so contracts assign copyright as well (US Copyright Office Circular 30). Saudi law wasn't researched.
+- **Exclusive licence:** the artist keeps copyright but can't license the model to anyone else. CGTrader's exclusive project licence (3D Projects terms 6.5) explicitly covers "making available to the public ... over computer networks (on the Internet)".
+- **Non-exclusive licence:** usually the cheapest, and the artist may sell the same model elsewhere. It only works for us if it explicitly allows the unprotected public GLB. CGTrader's non-exclusive project licence falls back to its general terms, including the anti-extraction clause 21A.3, which is the same problem as with stock models. On CGTrader, don't tick the box that lets the designer resell the result.
+
+Other contract points the research supports:
+
+- Source files named by type (.blend or .max, Substance files, full-resolution textures), delivered on payment.
+- Payment by milestone.
+- Acceptance tested in our pipeline (it loads, fits the budget, uses our names). Note that CGTrader deems a delivery accepted after 10 business days without an objection.
+- Portfolio use agreed up front.
+
+### Rough prices (checked 2026-09-26)
+
+Specialist car-model studios don't publish commission prices: Squir, and 3DModels.org (which Hum3D now redirects to), quote on request. These are the published figures found:
+
+| Source                                                       | Published figure                                                                                                                                     |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RocketBrush, game-art studio (prices updated September 2025) | "Vehicle (optimized) $4,000–8,000+" at "$35–37/h". Doesn't say whether an interior is included.                                                      |
+| Pixune, game-art studio                                      | Vehicles and props "$500 to $2,500 per asset"; studios "$40 and $150 per hour".                                                                      |
+| Yord Studio, web car configurators                           | "From €20,000" for one vehicle including the configurator app, "+€5,000 per model". This assumes manufacturer CAD data, which we don't have.         |
+| Visartech, WebGL car interior                                | 56–80 hours to model an interior from scratch.                                                                                                       |
+| Fiverr (107 car gigs read)                                   | Detailed exterior plus interior tiers: median $180 (quartiles $120–$275, highest $800), median 7 days. Engine bays: "message me for a custom quote". |
+| CGTrader 3D Projects (budgets set by clients)                | Mostly $50–$800 per car, e.g. $200 for a stock exterior.                                                                                             |
+| Hourly rates                                                 | Upwork profiles: 3D modellers $17–30/h, 3D artists $25–40/h. Polycount members' averages: US individual contractors $34.50–62.50/h.                  |
+| Engine with moving internals                                 | No commission price published anywhere. For scale, a stock rigged 2JZ-GTE on CGTrader costs $48 (90 parts, 35.8k polygons, "No AI" licence).         |
+
+I spot-checked the RocketBrush and Polycount figures on the live pages.
+
+**Estimate for our scope.** This is not a quote. The hours are inferred from the published anchors above (RocketBrush's price divided by its rate for the exterior, Visartech for the interior, analogy for the bay and engine), at $30–50/h for a vetted vehicle artist:
+
+| Deliverable                                             | Hours         | Cost                                     |
+| ------------------------------------------------------- | ------------- | ---------------------------------------- |
+| Exterior only, per car                                  | 80–200        | $2,400–$10,000                           |
+| Exterior plus cabin, per car                            | 140–320       | $4,200–$16,000                           |
+| Engine bay (add-on), per car                            | 40–100        | $1,200–$5,000                            |
+| Engine with internals, each                             | 60–150        | $1,800–$7,500                            |
+| **Both cars, everything, plus the SR20DET and 2JZ-GTE** | **480–1,140** | **$14,000–$57,000 (SAR 54,000–214,000)** |
+
+One artist would need about 4.5–10.5 weeks per car and 1.5–4 weeks per engine. A studio at RocketBrush-type rates lands at roughly $19,000–$60,000 for the lot.
+
+What to take from it:
+
+- **Fiverr tiers are 10 to 50 times below the studio figures.** At those prices they can't meet a reference-accurate, real-time spec with a clickable bay, so treat them as a floor. Several Fiverr car sellers work on GTA V and FiveM mods, which is one more reason for the originality warranty.
+- **The engine bay and the moving internals are the least certain lines.** Nobody publishes a price for them.
+- **Cheaper hybrid:** keep the free CC-BY exteriors (TinoD2's Supra, zhe_kan's S15) and commission only the cabin, the bay and the engines. That's about 160–370 hours, or $4,800–$18,500 per car. The catch: that S15 isn't stock-bodied, and the CC-BY credit stays.
+
+### Carmaker rights (caution, not legal advice)
+
+- Commissioning a model doesn't clear Nissan's or Toyota's rights in the car's design. TurboSquid's brand policy says the responsibility "applies equally whether you license a 3D model or create it yourself". Its generic-content policy says removing logos "may not be enough", because the body shape can itself be trade dress. A US court held exactly that for Ferrari body shapes (Ferrari v. Roberts, 1991).
+- This applies just as much to the free CC-BY models.
+- CLAUDE.md's rules (descriptive names, no logos as site branding, no implied endorsement) are the right stance. Badges as separate meshes, so they can be hidden, help.
+- If the site ever earns money, get a lawyer's view for your jurisdiction.
+
+### References the artist needs
+
+- No stock-body blueprints were found for either car. The first catalogue pages at the-blueprints.com only showed race-car versions; the full catalogue wasn't paged through.
+- An accurate body may need photos plus measurements, or a scan of a local car. One UK studio quotes £800–£1,000 for a full-car scan (2024); Saudi scanning prices weren't researched.
+
+Full evidence with every quote and link: `docs/research/commissioned-models-2026-09-26.md`, plus the Fiverr tiers and CGTrader job budgets as CSV files next to it.
 
 ## Cars
 
 ### Nissan Silvia S15 (Spec-R, 1999-2002)
 
-Licence looks usable (still confirm on the page):
+Re-checked on 2026-09-26 by opening the listing pages. Sketchfab was read through its Data API and the rendered model page, CGTrader in a headless browser. TurboSquid is behind a DataDome bot check and could not be opened at all. Evidence is in `docs/research/asset-recheck-silvia-supra-2026-09-26.json`. Interior and engine bay are judged from the description, texture and material names, comments and thumbnails; no file was downloaded.
 
-| Model                                                                                                             | Where, by                               | Licence as listed              | Price     | Polycount                           | Interior | Engine bay | Notes                                                                                                                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------ | --------- | ----------------------------------- | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Nissan Silvia S15](https://sketchfab.com/3d-models/nissan-silvia-s15-6570ef4cef894f38af4ac7be7d558e36)           | Sketchfab, NLM (@NLM-Group)             | Royalty Free (Sketchfab Store) | unknown   | 664.8k triangles / 338.7k vertices  | Yes      | Unknown    | Best S15 lead on interior detail. It is far over a real-time budget, so it needs heavy decimation to fit 25 MB. Engine bay not mentioned. The description does not say which trim or body it shows, so check it is a stock Spec-R before buying. Provenance is not stated. |
-| [Nissan Silvia S15](https://sketchfab.com/3d-models/nissan-silvia-s15-c3653a18842242edb52a26d47c82647d)           | Sketchfab, Muhammad Seno Aji (@senoaji) | Royalty Free (Sketchfab Store) | unknown   | 251.5k triangles / 131.3k vertices  | Unknown  | Unknown    | Mid-size polycount is easier to fit the budget. Interior and engine bay status must be checked on the page.                                                                                                                                                                |
-| [Nissan silvia S15](https://sketchfab.com/3d-models/nissan-silvia-s15-484b546f73774673b78fb6376e4956bf)           | Sketchfab, Mfdoom (@MF_doom)            | CC Attribution                 | Free      | 386.6k triangles / 203.4k vertices  | Unknown  | Unknown    | Free CC-BY, so it needs a credit on /credits. The model description was not visible, so I could not confirm it is original work rather than a game port. Check the description and the look of the interior before use.                                                    |
-| [Nissan S15 Drift [FREE]](https://sketchfab.com/3d-models/nissan-s15-drift-free-18348c1698f74d9db1497a791bd21a2f) | Sketchfab, autoNgraphic                 | CC Attribution                 | Free      | 539.8k triangles / 291.6k vertices  | Unknown  | Unknown    | Not stock: it has Origin Labo widebody fenders (a real aftermarket kit). The description names the SR20DET engine, which hints an engine may be modelled, but that is not confirmed. Heavy polycount.                                                                      |
-| [Nissan silvia s15 collection](https://www.cgtrader.com/3d-model-collections/nissan-silvia-s15-collection)        | CGTrader, unknown                       | Royalty Free                   | unknown   | unknown                             | Yes      | Unknown    | The basic version may be close to stock. Confirm there is no 'No AI' tag, because the snippet only said 'Royalty Free', and check the price and author on the page.                                                                                                        |
-| [Nissan Silvia S15 Spec-R AERO](https://www.cgtrader.com/3d-models/car/sport-car/nissan-silvia-s15-spec-r-aero)   | CGTrader, unknown                       | Royalty Free                   | USD 15.00 | 663,000 polygons / 567,000 vertices | Partial  | Unknown    | Right trim (Spec-R Aero, a factory option). The interior is only a silhouette and the listing appears delisted, so it may not be buyable.                                                                                                                                  |
+**No stock-bodied S15 with a clean free licence was found.** Every free CC-BY S15 that looks original has an aftermarket kit. No CC0 S15 exists on Sketchfab.
 
-Needs your call (Editorial licence, or licence not seen):
+Free, licence allowed (CC0/CC-BY):
 
-| Model                                                                                                                   | Where, by           | Licence as listed | Price   | Polycount                               | Interior | Engine bay | Notes                                                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------- | ------- | --------------------------------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Nissan Silvia S15 Spec-r Aero 1999](https://www.turbosquid.com/3d-models/nissan-silvia-s15-specr-aero-1999-3d-2217169) | TurboSquid, unknown | unknown           | USD 80  | unknown                                 | Unknown  | Unknown    | Exact trim and year match. The licence was not seen. Branded cars on TurboSquid often carry an Editorial label, so the owner must check the licence on the page before buying. |
-| [Nissan Silvia S15 (TurboSquid 1519405)](https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-1519405)             | TurboSquid, unknown | unknown           | unknown | 1,235,000 polygons / 1,268,000 vertices | Yes      | Unknown    | Not stock: it has a racing interior and Work Meister wheels. The polycount is very high. Licence not seen.                                                                     |
+| Model                                                                                                   | Where, by                     | Licence as seen                 | Price | Polycount                          | Interior                             | Engine bay                        | Notes                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------- | ----------------------------- | ------------------------------- | ----- | ---------------------------------- | ------------------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Nissan Silvia](https://sketchfab.com/3d-models/nissan-silvia-30e45aa381ca4fac8dc91f52e781124d) (new)   | Sketchfab, zhe_kan (@zhe_kan) | CC Attribution 4.0, no noai tag | Free  | 271.8k triangles / 143.2k vertices | Basic (seats and wheel visible)      | Probably not (no engine textures) | Verified on the listing page 2026-09-26. **Recommended free S15.** Published 2026-02-02. Substance Painter PBR texture sets per material, up to 4096 px; source is a 20 MB GLB. No game or "based on" wording, and no game-style texture names. The author has a large, varied portfolio. **Not stock:** aftermarket front bumper and wheels. The origin is not stated. Credit on /credits. |
+| [Nissan silvia S15](https://sketchfab.com/3d-models/nissan-silvia-s15-484b546f73774673b78fb6376e4956bf) | Sketchfab, Mfdoom (@MF_doom)  | CC Attribution 4.0, no noai tag | Free  | 386.6k triangles / 203.4k vertices | Unknown (not visible, not mentioned) | Unknown                           | Verified on the listing page 2026-09-26. Published 2023-03-23. The description only says "Nissan silvia s15 made by blender 3d". **No image textures** (colour-only materials), so every surface needs new PBR materials. **Not stock:** big wing, mesh wheels, lowered. The account has only 4 uploads, so provenance is hard to judge. Fallback only.                                     |
+
+Paid: licence check for real-time web use:
+
+| Model                                                                                                   | Where, by                   | Licence as seen            | Price                                                    | Polycount                          | Interior                         | Engine bay    | Real-time web use allowed?                                                                                                                          | Notes                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------------- | -------------------------------------------------------- | ---------------------------------- | -------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Nissan Silvia S15](https://sketchfab.com/3d-models/nissan-silvia-s15-6570ef4cef894f38af4ac7be7d558e36) | Sketchfab, NLM (@NLM-Group) | Standard (Sketchfab Store) | **Not for sale** (the API still shows the old USD 39.99) | 664.8k triangles / 338.7k vertices | Yes ("Highly detailed interior") | Not mentioned | **No / unclear.** Sketchfab Standard 2.2(b), 2.2(h): no making it available so others can "download, extract or access" it "as a stand-alone file". | Verified on the listing page 2026-09-26. The page has no Buy button (`inStore: false`), because the Sketchfab Store now points to Fab, and no Fab migration is recorded. **Not stock:** aftermarket bumper, wheels, bucket seats. Textures only 1024 px. Published 2022-08-23. |
 
 Avoid:
 
-- [2002 Nissan Silvia S15 Spec R Aero (Ddiaz Design)](https://sketchfab.com/3d-models/2002-nissan-silvia-s15-spec-r-aero-8afd07698ca6414dad100af12dfd0d62): Licensed CC Attribution-NonCommercial-ShareAlike, and the summary says it is based on a Need For Speed Heat 3D model, so it is a game rip.
-- [2000 Nissan Silvia Spec-R (OUTPISTON)](https://sketchfab.com/3d-models/2000-nissan-silvia-spec-r-dd63ddbf2a504990b93cee5ebb052a79): The summary describes the OUTPISTON account's models as 'sourced from various games and other sources for non-commercial use', so it is a game-sourced NC upload. The same applies to that account's S15 Spec-S Aero and Varietta uploads.
-- [Free Nissan Silvia S15 3D Model (TurboSquid 1230532)](https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-model-1230532): The summary says it is under a CC-BY-NC licence for non-commercial purposes.
-- [Nissan Silvia S15 Dmax Gripex Garage](https://www.cgtrader.com/3d-models/car/racing-car/nissan-silvia-s15-dmax-gripex-garage): A GTA San Andreas mod with the identical name and spec exists (Dmax kit, 2JZ-GTE swap), so this is probably a game-mod port. I could not confirm that. It is also a heavy kit with an engine swap, not stock.
-- [Nissan Silvia S15 2001 Tuning Body For Print](https://www.cgtrader.com/3d-print-models/hobby-diy/automotive/nissan-silvia-s15-2001-tuning-body-for-print): Licence is Royalty Free (no AI), which the project's rules exclude. It is also an STL print body with a tuning kit.
+- [Nissan S15 Drift [FREE] (autoNgraphic)](https://sketchfab.com/3d-models/nissan-s15-drift-free-18348c1698f74d9db1497a791bd21a2f): Moved from the usable list. It's CC-BY with 539.8k triangles, and it has the only modelled SR20DET bay and full interior among the free S15s. But the provenance is doubtful:
+  - the author says it was made with "3dsmax, zmodeler and photoshop";
+  - a commenter wrote "my steering wheel", and the author replied "@RomGER Mine now, thanks";
+  - the texture names (`vehicle_generic_detail2`, `remap`, `lights_lod0`, `nfsframe`) match GTA V mod conventions.
+
+  It's also an Origin Labo widebody, not stock. Verified 2026-09-26. Five re-uploads exist at 537,142 triangles, plus an "India spec" re-skin; avoid those too.
+
+- [Nissan Silvia S15 (Muhammad Seno Aji)](https://sketchfab.com/3d-models/nissan-silvia-s15-c3653a18842242edb52a26d47c82647d): The licence is **Editorial**, not Royalty Free as the old list said. It is not for sale any more (no Buy button), and it's a modified car (the source file is "Nissan Silvia V2 Modifikasi"). Verified 2026-09-26.
+- [Nissan silvia s15 collection (CGTrader pack)](https://www.cgtrader.com/3d-model-collections/nissan-silvia-s15-collection): Falkon9, USD 12.60. The page shows **Royalty Free License (no AI)**: a No AI clause on a non-CC licence, which rule 5 still excludes, and 21A.3 requires protecting the file from extraction. The interior is modelled ("both car have the same interior"); the polycount isn't shown. Formats are BLEND, OBJ, FBX and DAE. Published 2023-07-17. Verified 2026-09-26.
+- [Nissan Silvia S15 Spec-R AERO (CGTrader)](https://www.cgtrader.com/free-3d-models/car/sport-car/nissan-silvia-s15-spec-r-aero): jara-nov. It is now a **free** download (not delisted, as the old list said), but it's under CGTrader's **Royalty Free License (no AI)**, not CC-BY, so rule 5 still excludes it (and 21A.3 applies to free CGTrader models too). It has 663,000 polygons and 567,000 vertices and comes as OBJ only. The interior is "Low detail ... made only for the silouette purposes". Verified 2026-09-26.
+- [Nissan Silvia S15 Spec-r Aero 1999 (TurboSquid 2217169)](https://www.turbosquid.com/3d-models/nissan-silvia-s15-specr-aero-1999-3d-2217169) and [Nissan Silvia S15 (TurboSquid 1519405)](https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-1519405): **Couldn't be opened** (403, DataDome bot check), so the licence, price and polycount were not re-verified. Whatever the listing says, the TurboSquid licence 7(b) forbids open formats in WebGL other than Unity, Unreal or Lumberyard exports without written approval, so they don't fit Swap Lab's GLB pipeline.
+- [2002 Nissan Silvia S15 Spec R Aero (Ddiaz Design)](https://sketchfab.com/3d-models/2002-nissan-silvia-s15-spec-r-aero-8afd07698ca6414dad100af12dfd0d62): Confirmed CC BY-NC-SA, and the description says "Based on a Need For Speed Heat 3d model". Verified 2026-09-26.
+- [2000 Nissan Silvia Spec-R (OUTPISTON)](https://sketchfab.com/3d-models/2000-nissan-silvia-spec-r-dd63ddbf2a504990b93cee5ebb052a79): Confirmed CC BY-NC-SA. The account biography reads "Vehicle 3D Models from Gran Turismo, Forza, Real Racing, Need For Speed, CSR2 ... Non-Commercial Use Only". Verified 2026-09-26.
+- [Free Nissan Silvia S15 (TurboSquid 1230532)](https://www.turbosquid.com/3d-models/nissan-silvia-s15-3d-model-1230532): Couldn't be opened (DataDome), so it was not re-verified. Kept on Avoid from the earlier CC-BY-NC summary.
+- [Nissan Silvia S15 Dmax Gripex Garage (CGTrader)](https://www.cgtrader.com/3d-models/car/racing-car/nissan-silvia-s15-dmax-gripex-garage): Strykke, USD 19.99. **Royalty Free License (no AI)**. It's a D-Max kit with a "2jz-gte under the hood" swap. A buyer review says "Horrible quality with errors everywhere." Verified 2026-09-26.
+- [Nissan Silvia S15 2001 Tuning Body For Print (CGTrader)](https://www.cgtrader.com/3d-print-models/hobby-diy/automotive/nissan-silvia-s15-2001-tuning-body-for-print): USD 5.00 and **Royalty Free License (no AI)**. It's an STL print shell. Verified 2026-09-26.
+- Other free S15s checked this session and rejected:
+  - DR1KING100K "Nissan S15": hash-named, extracted-style textures;
+  - DR1KING100K "Fast And Furious": a movie car with game-style texture names;
+  - ivan123.nola uploads;
+  - Socksthecat "Custom": `grille1_s_lod0` game-mod textures;
+  - ZapupaNekra: loose kit parts, untextured;
+  - doroni.af: untextured;
+  - mayphyuhan.st: tagged `noai` and `createdwithai`.
+
+  The URLs are in the JSON.
 
 ### Toyota Supra JZA80 (MK4, 1993-2002)
 
-Licence looks usable (still confirm on the page):
+Re-checked on 2026-09-26 by opening the listing pages (same method as the S15). TurboSquid could not be opened. No CC0 Supra A80 exists on Sketchfab.
 
-| Model                                                                                                                 | Where, by                                     | Licence as listed              | Price     | Polycount                                                                                   | Interior | Engine bay | Notes                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------ | --------- | ------------------------------------------------------------------------------------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Toyota Supra mk IV](https://sketchfab.com/3d-models/toyota-supra-mk-iv-6e42a10b2019416996a35972e0537817)             | Sketchfab, Render at Night (@Render_at_Night) | Royalty Free (Sketchfab Store) | unknown   | Low poly 132,952 polygons / 134,583 vertices; High poly 815,702 polygons / 819,540 vertices | Unknown  | Unknown    | The low-poly version is a sensible real-time starting point. Interior and engine bay must be checked on the page.                                                        |
-| [Toyota Supra MK IV (1994)](https://sketchfab.com/3d-models/toyota-supra-mk-iv-1994-eb9bb1eb41db431cb078088ae1ce45f8) | Sketchfab, Martin Trafas (@TinoD2)            | CC Attribution                 | Free      | 262k triangles / 137.3k vertices                                                            | Unknown  | Unknown    | Free CC-BY, so it needs a credit on /credits. Popular and made in Blender. I could not confirm it is original work rather than a port. Check the description.            |
-| [Toyota Supra MK IV A80 1993](https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-mk-iv-a80-1993)           | CGTrader, unknown                             | Royalty Free                   | USD 20.00 | unknown                                                                                     | Yes      | Unknown    | The interior claim comes from a buyer comment, not the seller's spec. Confirm there is no 'No AI' tag, because the snippet only said 'Royalty Free'. Polycount not seen. |
+Free, licence allowed (CC0/CC-BY):
 
-Needs your call (Editorial licence, or licence not seen):
+| Model                                                                                                                 | Where, by                          | Licence as seen                 | Price | Polycount                        | Interior                 | Engine bay | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------- | ----- | -------------------------------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Toyota Supra MK IV (1994)](https://sketchfab.com/3d-models/toyota-supra-mk-iv-1994-eb9bb1eb41db431cb078088ae1ce45f8) | Sketchfab, Martin Trafas (@TinoD2) | CC Attribution 4.0, no noai tag | Free  | 262k triangles / 137.3k vertices | Probably none or minimal | No         | Verified on the listing page 2026-09-26. **Recommended free Supra.** Sketchfab Staff Pick (2021-07-23), published 2021-07-19. **Stock-looking body:** factory bumpers, wing and 5-spoke wheels. Proper PBR sets (base colour, metallic, roughness, normal, AO) up to 2048 px; source is OBJ. The author has a long record of original cars and his own ArtStation renders, with no rip indicators. There are no interior texture sets, and a 2023 comment says "$30 for a car without a interior?", so plan to build or source the cabin. Credit on /credits. |
 
-| Model                                                                                                                       | Where, by                                           | Licence as listed | Price   | Polycount                                                                             | Interior | Engine bay | Notes                                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------- | ------- | ------------------------------------------------------------------------------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Supra A80 Mk4 (TurboSquid 1639507)](https://www.turbosquid.com/3d-models/3d-model-supra-a80-mk4-cars-1639507)              | TurboSquid, PhinDev                                 | Editorial         | unknown | unknown                                                                               | Unknown  | Unknown    | Stock body, which is preferred. It carries an Editorial restriction, so the owner must decide. Procedural Blender materials must be baked to textures for GLB. Crack sites also host this model; only buy it from TurboSquid.  |
-| [Toyota Supra 1993 (Hum3D)](https://www.turbosquid.com/3d-models/3d-toyota-supra-1993/1130282)                              | TurboSquid, Hum3D                                   | Editorial         | USD 149 | 668,000 polygons / 677,000 vertices (figure from the CGTrader copy of the same model) | Unknown  | Unknown    | Hum3D builds accurate stock bodies, but it is Editorial on TurboSquid and the Royalty Free CGTrader copy appears delisted. Hum3D base (non-HQ-interior) models usually have a simple interior, but that is not confirmed here. |
-| [Toyota Supra A80 (Ashminggu)](https://sketchfab.com/3d-models/toyota-supra-a80-ashminggu-9178fa9d53e04bf4bfe1d7761cfa2f74) | Sketchfab, riftocloes (original model by Ashminggu) | CC Attribution    | Free    | unknown                                                                               | Unknown  | Unknown    | This is a re-upload of another creator's model. It is unclear whether the uploader had the right to relicense it, and where Ashminggu's original came from, so the owner should check before relying on the CC-BY licence.     |
+No new free Supra met the bar. The closest was [MiguelG19 "Toyota Supra Mk4"](https://sketchfab.com/3d-models/toyota-supra-mk4-7b814545bf7148aba70b7af03b0f2817). It's CC-BY with 710k triangles and "Stock interior included", but it has no textures and its origin isn't stated, so it's only useful as a geometry base.
+
+Paid: licence check for real-time web use:
+
+| Model                                                                                                       | Where, by          | Licence as seen                  | Price                                                        | Polycount                           | Interior                                                 | Engine bay                                             | Real-time web use allowed?                                                                                                                                                                                             | Notes                                                                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------- | ------------------------------------------------------------ | ----------------------------------- | -------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Toyota Supra MK IV A80 1993](https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-mk-iv-a80-1993) | CGTrader, xtreme85 | **Royalty Free License (no AI)** | USD 20.00 (USD 14.00 also shown beside "Subscribe and save") | 377,206 polygons / 286,857 vertices | Yes (buyer: "one of the best ... interiors for the mk4") | No (buyer: "engine bay etc would have been very nice") | **Unclear, leaning no.** CGTrader 21A.3: "take all commercially reasonable measures to prevent the end user from gaining access to the Product". **Also still blocked by rule 5:** NoAI is only accepted on CC0/CC-BY. | Verified on the listing page 2026-09-26. Formats: MAX (V-Ray 5), OBJ, FBX, 3DS. Published 2022-01-16. The best-documented paid A80 found, but CGTrader now sells to normal buyers only under "No AI" (T&C 21A.7). |
 
 Avoid:
 
-- [TOYOTA SUPRA MK4 (A80) (temich)](https://sketchfab.com/3d-models/toyota-supra-mk4-a80-61d402d6de904374bfe5a98907c85b1d): The description says it is 'based on CSR2 model' (a mobile racing game), and the summary says it is not for commercial use. It is a game rip with an NC restriction.
-- [Toyota Supra (A80) 1993 (Lexyc16)](https://sketchfab.com/3d-models/toyota-supra-a80-1993-dd897d7823784bc5893c183c1328e8cb): Licensed CC Attribution-NonCommercial (BY-NC).
-- [1998 Toyota Supra (BHP3D)](https://sketchfab.com/3d-models/1998-toyota-supra-b9ee69e17af947c0bce1c54d34195187): The summary says it was 'exported from a BeamNG mod' (model and textures by StivgGames, retextured by BHP3D). It is a game-mod rip, even though it is labelled CC-BY.
-- [Toyota Supra MK4 RZ 1998 (CGTrader low-poly)](https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-rz-1998-8b0e93ff-9c06-4cf6-88f3-cd2ad3896131): Licence is Royalty Free (no AI), which the project's rules exclude.
-- [Toyota Supra mk4 low poly free (CGTrader)](https://www.cgtrader.com/free-3d-models/car/racing-car/toyota-supra-mk4-6edf7cda-4a65-4ea0-8503-b7db477b5e9f): Licence is Royalty Free No AI, which the project's rules exclude.
+- [Toyota Supra mk IV (Render at Night)](https://sketchfab.com/3d-models/toyota-supra-mk-iv-6e42a10b2019416996a35972e0537817): The licence is **Editorial**, not Royalty Free as the old list said. It is not for sale on Sketchfab. The description now says "Now available on Fab", but the [Fab listing](https://www.fab.com/listings/9227d414-b7c2-4855-ac70-3b020be3ef88) couldn't be opened (Cloudflare), so its Fab licence is unknown. The Sketchfab viewer mesh is 1.63M triangles; the description lists a 132,952-polygon low version and an 815,702-polygon high version. Verified 2026-09-26.
+- [Toyota Supra A80 (Ashminggu), riftocloes](https://sketchfab.com/3d-models/toyota-supra-a80-ashminggu-9178fa9d53e04bf4bfe1d7761cfa2f74): The licence question is resolved: Ashminggu's [original](https://sketchfab.com/3d-models/93-supra-mk4-ff-4a391fdb930b4bada40486479436b2ed) is also CC-BY, so the re-upload with credit is allowed. But this upload is only 9,144 triangles, and the original is a Blockbench/Minecraft-style model (tags minecraft, mcpe). Far below the photoreal target. Verified 2026-09-26.
+- [Supra A80 Mk4 (TurboSquid 1639507, PhinDev)](https://www.turbosquid.com/3d-models/3d-model-supra-a80-mk4-cars-1639507) and [Toyota Supra 1993 (Hum3D, TurboSquid 1130282)](https://www.turbosquid.com/3d-models/3d-toyota-supra-1993/1130282): **Couldn't be opened** (403, DataDome), so the Editorial label from the old search summary is not re-verified. Either way, the TurboSquid licence 7(b) forbids open-format WebGL use outside Unity, Unreal or Lumberyard without written approval, and its Editorial terms rule out "commercial, non-news related purpose". The Hum3D [CGTrader copy](https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-1993) is gone (HTTP 410, "The page you requested could not be found").
+- [TOYOTA SUPRA MK4 (A80) (temich)](https://sketchfab.com/3d-models/toyota-supra-mk4-a80-61d402d6de904374bfe5a98907c85b1d): Confirmed CC BY-NC. The description says "Based on CSR2 model + some tuning stuff. NOT FOR COMMERCIAL USE!" Verified 2026-09-26.
+- [Toyota Supra (A80) 1993 (Lexyc16)](https://sketchfab.com/3d-models/toyota-supra-a80-1993-dd897d7823784bc5893c183c1328e8cb): Confirmed CC BY-NC, tagged `noai`, and only 30k triangles. Verified 2026-09-26.
+- [1998 Toyota Supra (BHP3D)](https://sketchfab.com/3d-models/1998-toyota-supra-b9ee69e17af947c0bce1c54d34195187): The label is CC-BY, but the description says "exported from a BeamNG mod. Credits: StivgGames:model, textures". The tags include `rip` and `noai1`. Verified 2026-09-26.
+- [Toyota Supra MK4 RZ 1998 low-poly (CGTrader)](https://www.cgtrader.com/3d-models/car/sport-car/toyota-supra-rz-1998-8b0e93ff-9c06-4cf6-88f3-cd2ad3896131): kerubimpatabang, USD 3.50. **Royalty Free License (no AI)**. The listing gives "705 polygons / 378,930 vertices", which don't agree. Verified 2026-09-26.
+- [Toyota Supra mk4 low poly free (CGTrader)](https://www.cgtrader.com/free-3d-models/car/racing-car/toyota-supra-mk4-6edf7cda-4a65-4ea0-8503-b7db477b5e9f): cgeus, free. **Royalty Free License (no AI)**, with 17,357 polygons. Verified 2026-09-26.
+- Other free Supras checked this session and rejected:
+  - BlackSnow02: Forza-style `toy_suprarz_98_*` texture names;
+  - iftikharsol765: GTA-style textures borrowed from a 240SX;
+  - nolimitsofficial: game-style `*gmtsub*` textures;
+  - ShaheerHashmi: the uploaded source is Sketchfab's own `scene.gltf`, so probably a re-upload;
+  - a.m18110665: untextured, 424 MB, big-wing kit;
+  - Blueberry12: "no interior";
+  - xray_collection: kit;
+  - Car2022: wrong engine spec.
+
+  The URLs are in the JSON.
 
 ### Nissan 350Z (Z33, 2003-2008)
 
@@ -122,7 +346,7 @@ Needs your call (Editorial licence, or licence not seen):
 
 Avoid:
 
-- [Nissan 350z Japanese Sports Coupe With Interior Model (Bbenedict)](https://www.cgtrader.com/free-3d-models/car/sport-car/nissan-350z-japanese-sports-coupe-with-interior-model): Licence is 'Royalty Free No Ai License', which the project's rules exclude, despite 971,702 polygons and an interior. The TurboSquid copy (2049724) is probably the same author's; its licence was not checked.
+- [Nissan 350z Japanese Sports Coupe With Interior Model (Bbenedict)](https://www.cgtrader.com/free-3d-models/car/sport-car/nissan-350z-japanese-sports-coupe-with-interior-model): Licence is CGTrader's 'Royalty Free No Ai License'. That's a No AI clause on a non-CC licence, which rule 5 still excludes, despite 971,702 polygons and an interior (Phase 0 lead, not re-checked). The TurboSquid copy (2049724) is probably the same author's; its licence was not checked.
 - [Nissan 350Z (Ddiaz Design)](https://sketchfab.com/3d-models/nissan-350z-05e7604a0f4643ab87c141e244813e9a): The summary says it is based on a Need For Speed Heat 3D model and licensed CC Attribution-NonCommercial-ShareAlike.
 - [2008 Voltex 350Z (Z33) Bodykit Wing Type 2 (Ddiaz Design)](https://sketchfab.com/3d-models/2008-voltex-350z-z33-bodykit-wing-type-2-c1c5eb14e492434683381879b468b3f1): The summary says it is based on a Need For Speed Heat model, licensed CC BY-NC-SA.
 - [Rachel's Nissan 350z NFS Underground 2 (Ddiaz Design)](https://sketchfab.com/3d-models/rachels-nissan-350z-nfs-underground-2-5b41f9a218624deaa1202efb6ff5a779): The summary says it is based on a Need For Speed Mobile model, licensed CC BY-NC-SA.
@@ -156,10 +380,11 @@ Avoid:
 
 Licence looks usable (still confirm on the page):
 
-| Model                                                                                                                                      | Where, by                                 | Licence as listed | Price    | Polycount                                      | Interior | Engine bay | Notes                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ----------------- | -------- | ---------------------------------------------- | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [BMW M3 E46](https://sketchfab.com/3d-models/bmw-m3-e46-5399b1833e6a4c06af6b11b03832aed7)                                                  | Sketchfab, pIxEL183 (@vladislav.varankin) | CC Attribution    | Free     | 352.2k triangles / 178.8k vertices             | Unknown  | Unknown    | The licence as listed is acceptable, but there's no description, so its origin, the interior, the engine bay and the exact year aren't stated. Look at the model in the Sketchfab viewer before relying on it, and check for a NoAI tag. The polycount is workable after decimation for the 25 MB budget. It needs a credit on /credits. |
-| [Low Poly Gameready BMW M3 E46](https://www.cgtrader.com/3d-models/car/racing-car/low-poly-sport-car-600aa237-d74b-4b96-a5f4-09a406a0b855) | CGTrader, unknown                         | Royalty Free      | USD 2.00 | 3,606 faces / 6,766 triangles / 3,504 vertices | Unknown  | Unknown    | The licence is fine, but at about 6.8k triangles it's far too simple for photoreal close-ups. It could work as a distant LOD at most. The listing may no longer be for sale.                                                                                                                                                             |
+| Model                                                                                                                                      | Where, by                                 | Licence as listed                      | Price    | Polycount                                      | Interior                                      | Engine bay | Notes                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | -------------------------------------- | -------- | ---------------------------------------------- | --------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [BMW M3 E46](https://sketchfab.com/3d-models/bmw-m3-e46-5399b1833e6a4c06af6b11b03832aed7)                                                  | Sketchfab, pIxEL183 (@vladislav.varankin) | CC Attribution                         | Free     | 352.2k triangles / 178.8k vertices             | Unknown                                       | Unknown    | The licence as listed is acceptable, but there's no description, so its origin, the interior, the engine bay and the exact year aren't stated. Look at the model in the Sketchfab viewer before relying on it, and check for a NoAI tag. The polycount is workable after decimation for the 25 MB budget. It needs a credit on /credits.                                                                        |
+| [BMW M3 E46 (MMC Works)](https://sketchfab.com/3d-models/bmw-m3-e46-f1b00ff37d504629b10031da32bc7497)                                      | Sketchfab, MMC Works                      | CC Attribution, **with a NoAI clause** | Free     | 846.9k triangles                               | Rough (the description says 'rough interior') | Unknown    | Moved here from Avoid on 2026-09-26 after your NoAI decision; a Phase 0 lead, not re-checked. The clause says it 'may not be used in datasets for, in the development of, or as inputs to generative AI programs', so the file is processed only by the asset scripts and never shown to an AI model, including in screenshots (CLAUDE.md rule 5). Heavy, so it needs decimating for 25 MB. Credit on /credits. |
+| [Low Poly Gameready BMW M3 E46](https://www.cgtrader.com/3d-models/car/racing-car/low-poly-sport-car-600aa237-d74b-4b96-a5f4-09a406a0b855) | CGTrader, unknown                         | Royalty Free                           | USD 2.00 | 3,606 faces / 6,766 triangles / 3,504 vertices | Unknown                                       | Unknown    | The licence is fine, but at about 6.8k triangles it's far too simple for photoreal close-ups. It could work as a distant LOD at most. The listing may no longer be for sale.                                                                                                                                                                                                                                    |
 
 Needs your call (Editorial licence, or licence not seen):
 
@@ -171,12 +396,11 @@ Needs your call (Editorial licence, or licence not seen):
 
 Avoid:
 
-- [BMW M3 E46 (MMC Works)](https://sketchfab.com/3d-models/bmw-m3-e46-f1b00ff37d504629b10031da32bc7497): It's CC-BY, but it carries the NoAI restriction ('may not be used in datasets for, in the development of, or as inputs to generative AI programs'). It's also 846.9k triangles with a 'rough interior'.
 - [BMW M3 E46 (Lexyc16)](https://sketchfab.com/3d-models/bmw-m3-e46-a067132c75f5456daa4f60c4001337d7): Licence is CC Attribution-NonCommercial.
 - [2003 BMW M3 E46 Coupé](https://sketchfab.com/3d-models/2003-bmw-m3-e46-coupe-7b43e776153f4dc199f564469cedbaa0): The listing says it's based on a Need For Speed Heat 3D model (game rip).
 - [2005 BMW M3 (E46)](https://sketchfab.com/3d-models/2005-bmw-m3-e46-50549fe15a294acd8a8340988a943eae): The listing says it's based on a Forza Motorsport 4 model (game rip), and it's licensed CC Attribution-NonCommercial-ShareAlike.
 - [2005 BMW M3 E46 GTR - NFS Most Wanted](https://sketchfab.com/3d-models/2005-bmw-m3-e46-gtr-nfs-most-wanted-2999936a393340c0a389c6bd31961a63): A Need for Speed Most Wanted car (game-derived), and a GTR race car rather than the road M3.
-- [BMW M3 GTR - E46 (Need for Speed - Mostwanted)](https://sketchfab.com/3d-models/bmw-m3-gtr-e46-need-for-speed-mostwanted-dc847838a5c84d94ab3a138c0f89191b): The Sketchfab Store listing has a NoAI restriction. It's also the NFS Most Wanted GTR race car, not a stock M3, even though it has an interior and engine (277.5k triangles).
+- [BMW M3 GTR - E46 (Need for Speed - Mostwanted)](https://sketchfab.com/3d-models/bmw-m3-gtr-e46-need-for-speed-mostwanted-dc847838a5c84d94ab3a138c0f89191b): Game-derived: it's the NFS Most Wanted GTR race car, not a stock M3, even though it has an interior and engine (277.5k triangles).
 - [BMW E46 M3 CSL (nikki_st)](https://sketchfab.com/3d-models/bmw-e46-m3-csl-4fcff8ef8e31483d85a044ae5142850e): A stylised low-poly '2D-like' recreation, which breaks the no-cartoon rule.
 - [BMW M3 E46 (BRIKKER)](https://sketchfab.com/3d-models/bmw-m3-e46-a0cc623fe4ec4b96bc0137b152279321): 7,410 triangles with no textures (materials only), and the creator says the interior isn't built for first-person views. Too simple; licence not seen.
 - [BMW E46 M3 Sports Car Red (and 'NightRyder')](https://sketchfab.com/3d-models/bmw-e46-m3-sports-car-red-74916396475b414f8dbcb580621a5010): The listing only allows use 'in personal projects within the bounds of the Editorial License' (effectively non-commercial). It's also built from a now-deleted Sketchfab 'BMW M3 E46 GTR' model plus interior parts from a StanceNation SketchUp model.
@@ -228,4 +452,5 @@ The brief opens on "the car on the lift", so a **two-post lift** model is needed
 
 ## Raw research data
 
-`docs/research/asset-candidates-2026-09-26.json` has every candidate with the search evidence behind each field.
+- `docs/research/asset-candidates-2026-09-26.json`: the Phase 0 search pass, with the search evidence behind each field.
+- `docs/research/asset-recheck-silvia-supra-2026-09-26.json`: the S15 and Supra re-check on the live pages, including rejected candidates, licence quotes and the hosts that couldn't be opened.

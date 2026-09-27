@@ -1,0 +1,3408 @@
+{
+  "$comment": "Nissan Silvia S15 (1999-2002), JDM and Australian 200SX. Researched 2026-09-26 for Swap Lab Phase 1. Values are stored in the units the sources print (JIS kgf·m, PS, mm, kg). JIS 車両重量 = full fuel, no driver.",
+  "id": "nissan-silvia-s15",
+  "make": "Nissan",
+  "model": "Silvia",
+  "chassis": "S15",
+  "layout": "FR",
+  "production": {
+    "value": {
+      "from": "1999-01",
+      "to": "2002-08"
+    },
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+        "accessed": "2026-09-26",
+        "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+        "note": "\"スポーティクーペ「シルビア」をフルモデルチェンジし、１月１９日より全国一斉に発売する\" (on sale nationwide from 19 January 1999)."
+      },
+      {
+        "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+        "accessed": "2026-09-26",
+        "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+        "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+      },
+      {
+        "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+        "accessed": "2026-09-26",
+        "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+        "note": "\"日産 シルビア 1999年1月～2002年8月生産モデル\" (produced January 1999 to August 2002)."
+      }
+    ],
+    "note": "Launch (sale) date 19 Jan 1999 and end of production Aug 2002 per Nissan. ja.wikipedia notes a handful of cars registered in December 1998 (pre-launch production) and gives the sales period as ending November 2002 (citing GAZOO), i.e. sales from stock continued after production ended."
+  },
+  "dimensions": {
+    "length": {
+      "value": 4445,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Overall Length (mm) 4,445\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"全長×全幅×全高 4445×1695×1285mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"全長4,445mm\"."
+        }
+      ],
+      "note": "Same for every S15 except the Autech style-A (4500 mm)."
+    },
+    "width": {
+      "value": 1695,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Overall Width (mm) 1,695\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"4445×1695×1285mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"全幅1,695mm\"."
+        }
+      ],
+      "note": "5-number (compact class) width, per Nissan's launch release."
+    },
+    "height": {
+      "value": 1285,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Overall Height (mm) 1,285\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"4445×1695×1285mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"全高1,285mm\"."
+        }
+      ],
+      "note": "Also 1285 mm for the Varietta convertible (Autech brochure)."
+    },
+    "wheelbase": {
+      "value": 2525,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Wheel base (mm) 2,525\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"ホイールベース 2525mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"ホイールベース 2,525mm\"."
+        }
+      ]
+    },
+    "trackFront": {
+      "value": 1470,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Track Front (mm) 1,470\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"トレッド前／後 1470/1460mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"トレッド前 1,470mm\"."
+        }
+      ],
+      "note": "Base figures are the 16-inch-wheel cars (Spec-R, Autech Version, Varietta, Australian 200SX). SR20DE cars on 15-inch wheels are 1480/1470; those trims override it."
+    },
+    "trackRear": {
+      "value": 1460,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+          "accessed": "2026-09-26",
+          "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+          "note": "\"Rear (mm) 1,460\"."
+        },
+        {
+          "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+          "accessed": "2026-09-26",
+          "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+          "note": "\"トレッド前／後 1470/1460mm\"."
+        },
+        {
+          "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+          "accessed": "2026-09-26",
+          "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+          "note": "\"トレッド後 1,460mm\"."
+        }
+      ]
+    }
+  },
+  "transmissions": [
+    {
+      "id": "s15-6mt",
+      "name": "S15 6-speed manual (SR20DET Spec-R, Autech Version)",
+      "type": "manual",
+      "gears": 6,
+      "code": {
+        "value": "FS6R92A",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620868/manual-transmission-transaxle-fitting-7816690",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 6MT (build 620868), group 'Manual transmission, transaxle & fitting', read at megazip.net",
+            "note": "Group header '(1999-01-01 ~ ; FS6R92A; MT.F6)'; '32010-89F10 Transmission Assy 9901--01 ~ 9908--01; MT.F6; FS6R92A' and '32010-89F11 Transmission Assy 9908--01 ~ ; MT.F6; FS6R92A'."
+          },
+          {
+            "url": "https://www.blackhawkjapan.com/products/hpi-hpkm-fs6r92a",
+            "accessed": "2026-09-26",
+            "title": "Blackhawk Japan: HPI reinforced 6-speed transmission for Nissan Silvia S15 SR (HPKM-FS6R92A)",
+            "note": "Product number 'HPKM-FS6R92A', compatible car 'NISSAN SILVIA S15': 'While retaining the advantages of the standard \"FS6R92A\", by optimizing the strength and gear ratio…'."
+          }
+        ],
+        "note": "The same catalogue lists FS6R92A assemblies (32010-89F00, later 89F11) under the Spec-S-based build (620864), which matches the Autech Version's 6MT. Japanese Wikipedia says Aisin AI builds the gearbox (not independently verified)."
+      },
+      "ratios": {
+        "value": [3.626, 2.2, 1.541, 1.213, 1.0, 0.767],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"6-speed Manual Transmission / Gear ratio 1st 3.626, 2nd 2.200, 3rd 1.541, 4th 1.213, 5th 1.000, 6th 0.767, Reverse 3.437\" (spec-R 6MT)."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+            "note": "\"変速比（第1速/第2速/第3速/第4速/第5速/第6速/後退）: 3.626/2.200/1.541/1.213/1.000/0.767/3.437\" (gear ratios 1st-6th/reverse), Autech Version 6MT."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (1999年1月) (GF-S15)",
+            "note": "\"変速比 第1速 3.626 / 第2速 2.200 / 第3速 1.541 / 第4速 1.213 / 第5速 1.000 / 第6速 0.767 / 後退 3.437\" (gear ratios)."
+          }
+        ],
+        "note": "Same ratios for the Spec-R 6MT and the Autech Version 6MT (Autech brochure and goo-net 1500298 print identical figures). Nissan's launch release calls it a newly developed close-ratio 6MT with triple-cone synchros on 1st-3rd. Factory code FS6R92A (see `code`)."
+      },
+      "reverse": {
+        "value": 3.437,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"Reverse 3.437\"."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+            "note": "\"...0.767/3.437\" (last figure = 後退, reverse)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (1999年1月) (GF-S15)",
+            "note": "\"後退 3.437\" (reverse)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s15-5mt",
+      "name": "S15 5-speed manual (SR20DE Spec-S)",
+      "type": "manual",
+      "gears": 5,
+      "code": {
+        "value": "FS5W71C",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620864/manual-transmission-transaxle-fitting-7816689",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DE 5MT (build 620864), group 'Manual transmission, transaxle & fitting', read at megazip.net",
+            "note": "Group header '(1999-01-01 ~ ; FS5W71C; MT.F5)'; '32010-85F10 Transmission Assy 9901--01 ~ ; MT.F5; FS5W71C'."
+          },
+          {
+            "url": "https://justjap.com/products/os-giken-5-speed-cross-gear-set-fs5w71c-fits-nissan-s13-s14-s15-silvia-180sx-200sx-sr20det-5-speed",
+            "accessed": "2026-09-26",
+            "title": "Just Jap (Australian retailer): OS Giken 5-speed cross gear set (FS5W71C) for S13/S14/S15 Silvia",
+            "note": "'OS Giken 5 Speed Cross Gear Set with Input & Main Shafts (FS5W71C) … Vehicle Compatibility: … Nissan S15 Silvia & 200SX (5M/T Only)'."
+          },
+          {
+            "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+            "accessed": "2026-09-26",
+            "title": "Nissan Service Manual, Model S14 Series (English, (c)1994 Nissan), SR20DET, section MT (SDS), hosted by sr20tuning.net",
+            "note": "MT-27 SDS General Specifications: 'Transmission model FS5W71C … Gear ratio 1st 3.321, 2nd 1.902, 3rd 1.308, 4th 1.000, 5th 0.838, Reverse 3.382' (S14; identical to the S15 Spec-S ratios)."
+          }
+        ],
+        "note": "The S15 5MT's ratios and reverse match the S14 FS5W71C's exactly (S14 FSM MT-27). Just Jap's '& 200SX' is generic: the Australian 200SX S15 had no 5-speed."
+      },
+      "ratios": {
+        "value": [3.321, 1.902, 1.308, 1.0, 0.838],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "変速比・最終減速比 table, SR20DE 5速マニュアル column: \"第1速 3.321, 第2速 1.902, 第3速 1.308, 第4速 1.000, 第5速 0.838, 後退 3.382\" (Varietta uses the Spec-S drivetrain)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (1999年1月) (GF-S15)",
+            "note": "\"変速比 第1速 3.321 / 第2速 1.902 / 第3速 1.308 / 第4速 1.000 / 第5速 0.838 / 後退 3.382\"."
+          },
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff",
+            "note": "Table \"SR20DE 5-speed manual: 1st 3.321, 2nd 1.902, 3rd 1.308, 4th 1.000, 5th 0.838, final drive 4.083\" (enthusiast site, agrees)."
+          }
+        ]
+      },
+      "reverse": {
+        "value": 3.382,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "5速マニュアル column \"後退 3.382\" (reverse)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (1999年1月) (GF-S15)",
+            "note": "\"後退 3.382\"."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s15-4at",
+      "name": "S15 4-speed automatic (E-AT, SR20DE and SR20DET)",
+      "type": "automatic",
+      "gears": 4,
+      "code": {
+        "value": "RE4R01A",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620869/auto-transmission-transaxle-fitting-7816676",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DET 4AT (build 620869), group 'Auto transmission, transaxle & fitting', read at megazip.net",
+            "note": "'31020-4EX05 Transmission Assy-Automatic 9901--01 ~ 0110--01; SR20DET.AT.F4; RE4R01A' and '31020-4EX72 Transmission Assy-Automatic 0110--01 ~ ; SR20DET.AT.F4; RE4R01A'."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/silvia-2084/s15-6130/s15-620865/auto-transmission-transaxle-fitting-7816676",
+            "accessed": "2026-09-26",
+            "title": "Nissan parts catalogue (EPC), JDM Silvia S15 SR20DE 4AT (build 620865), group 'Auto transmission, transaxle & fitting', read at megazip.net",
+            "note": "'31020-4EX04 Transmission Assy-Automatic 9901--01 ~ ; SR20DE.AT.F4; RE4R01A'."
+          }
+        ],
+        "note": "Only Nissan's parts catalogue (one site) was found naming the S15 automatic. The English S14 FSM (GI-36, 'Automatic transmission number RE4R01A') shows the S14 used the same model. The Australian 200SX automatic is not in the JDM catalogue and is assumed to be the same unit."
+      },
+      "ratios": {
+        "value": [2.785, 1.545, 1.0, 0.694],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "変速比 table, フルレンジ電子制御4速オートマチック column: \"第1速 2.785, 第2速 1.545, 第3速 1.000, 第4速 0.694, 後退 2.272\" (SR20DE)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (1999年1月) (GF-S15)",
+            "note": "\"変速比 第1速 2.785 / 第2速 1.545 / 第3速 1.000 / 第4速 0.694 / 後退 2.272\"."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 4AT (1999年1月) (GF-S15)",
+            "note": "Spec-R (SR20DET) 4AT prints the same ratios: \"2.785 / 1.545 / 1.000 / 0.694, 後退 2.272\"; only the final drive differs (3.916)."
+          }
+        ],
+        "note": "The SR20DE and SR20DET automatics share these ratios per goo-net and NEXTAGE. Nissan's parts catalogue gives them different assembly numbers (31020-4EX04 SR20DE; 31020-4EX05/4EX72 SR20DET), both RE4R01A, so internals or calibration may differ; torque capacity is not documented in the sources opened. Factory code: see `code`."
+      },
+      "reverse": {
+        "value": 2.272,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "4速オートマチック column \"後退 2.272\"."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (1999年1月) (GF-S15)",
+            "note": "\"後退 2.272\"."
+          }
+        ]
+      }
+    }
+  ],
+  "trims": [
+    {
+      "id": "jdm-spec-s-5mt",
+      "name": "Spec-S",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"スポーティクーペ「シルビア」をフルモデルチェンジし、１月１９日より全国一斉に発売する\" (on sale nationwide from 19 January 1999)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+            "note": "Catalogue entry \"日産 シルビア 1999(平成11)年1月 発売モデル\" (model released January 1999)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Grade list for \"1999年1月～2002年8月生産モデル\" (production January 1999 to August 2002) includes this grade."
+          }
+        ],
+        "note": "`to` is the end of S15 production: Nissan's 24 Jan 2002 release says \"シルビアは2002年8月をもって生産を終了する\" (Silvia production ends August 2002). The grade stayed in the range to the end under package names (G/b/L/V package, Aero, Type-B); see notes."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-5mt",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (1999年1月) (GF-S15)",
+            "note": "\"最終減速比 4.083\"."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"最終減速比 4.083 (5速マニュアル) / 4.083 (4速オートマチック)\" for the Spec-S-based SR20DE Varietta."
+          },
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff",
+            "note": "\"final drive (diff) ... SR20DE 5-speed manual 4.083\" (enthusiast site)."
+          }
+        ],
+        "note": "The Varietta brochure and goo-net give 4.083 for both the SR20DE 5MT and 4AT."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+            "note": "\"LSD オプション\" (LSD is an option, so the standard differential is open)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G011/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックS 5MT",
+            "note": "\"LSD（リミテッドスリップデフ） △\" (△ = option)."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "Spec-S-based style-A price list: \"寒冷地仕様付＋ビスカスLSD付\" (cold-climate pack + viscous LSD) is an extra-cost option, i.e. the standard SR20DE car has no LSD."
+          }
+        ],
+        "note": "Open differential as standard. The factory option was a rear viscous LSD bundled with the cold-climate pack; the Spec-S Aero 5MT 'Handling package' instead got the helical LSD (Nissan launch release)."
+      },
+      "curbWeight": {
+        "value": 1200,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+            "note": "\"車両重量 1200kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G011/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックS 5MT",
+            "note": "\"車両重量 1200kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-S (MT)",
+            "note": "\"車両重量 1,200kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S / (後) 195/65R15 91S\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G011/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックS 5MT",
+              "note": "\"タイヤサイズ 前 195/65R15 後 195/65R15\"."
+            }
+          ],
+          "note": "Load/speed index 91S. A dealer 'Handling package' on the Spec-S Aero 5MT fitted 16-inch tyres (see notes)."
+        },
+        "rear": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S / (後) 195/65R15 91S\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G011/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックS 5MT",
+              "note": "\"タイヤサイズ 前 195/65R15 後 195/65R15\"."
+            }
+          ],
+          "note": "Load/speed index 91S. A dealer 'Handling package' on the Spec-S Aero 5MT fitted 16-inch tyres (see notes)."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "15x6J +40",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100472.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-S・5MT",
+              "note": "\"標準装着ホイールは、リム径がフロント15インチ、リヤ15インチ、オフセットは、フロント+40 mm、リヤ+40 mm、リム幅がフロント6、リヤ6\" (15-inch, offset +40, rim width 6)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"スタッドレス用は純正同等の15インチ・6.0J＋40mm（195/65R15...）が定番\" (15 x 6.0J +40 is the factory-equivalent size)."
+            }
+          ],
+          "note": "Secondary sources only; flange letter printed as COBBY prints it (J). Wheel material conflicts: goo-net lists alloy wheels as not available on the base Spec-S (steel wheels) and standard 15-inch alloys on the G package / Aero, while ja.wikipedia says the Spec-S has 15-inch alloys. The size is the same either way per these sources."
+        },
+        "rear": {
+          "value": "15x6J +40",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100472.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-S・5MT",
+              "note": "\"標準装着ホイールは、リム径がフロント15インチ、リヤ15インチ、オフセットは、フロント+40 mm、リヤ+40 mm、リム幅がフロント6、リヤ6\" (15-inch, offset +40, rim width 6)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"スタッドレス用は純正同等の15インチ・6.0J＋40mm（195/65R15...）が定番\" (15 x 6.0J +40 is the factory-equivalent size)."
+            }
+          ],
+          "note": "Secondary sources only; flange letter printed as COBBY prints it (J). Wheel material conflicts: goo-net lists alloy wheels as not available on the base Spec-S (steel wheels) and standard 15-inch alloys on the G package / Aero, while ja.wikipedia says the Spec-S has 15-inch alloys. The size is the same either way per these sources."
+        }
+      },
+      "dimensions": {
+        "trackFront": {
+          "value": 1480,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-S (MT)",
+              "note": "\"トレッド前 1,480mm / トレッド後 1,470mm\"."
+            }
+          ],
+          "note": "SR20DE trims on 15-inch wheels; 16-inch trims are 1470/1460."
+        },
+        "trackRear": {
+          "value": 1470,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502003/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 5MT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17082/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-S (MT)",
+              "note": "\"トレッド前 1,480mm / トレッド後 1,470mm\"."
+            }
+          ]
+        }
+      },
+      "notes": "Base NA grade, JIS 165 PS (5MT). Same mechanicals across the Spec-S family, so these are one trim: Spec-S (Jan 1999), Spec-S G package (Jan 1999, more equipment, 15-inch alloys), Spec-S Aero (Jan 1999, aero kit, oil-pressure gauge), Spec-S b package (Oct 1999, blue interior), Spec-S L package (Oct 2000, leather), Spec-S V package (Jan 2002, 'final' model); goo-net lists the same 1200 kg / 5MT / 4.083 figures for each. Option not modelled as a trim: the Spec-S Aero 5MT 'Handling package' (Nissan launch release) added 16-inch tyres, the helical LSD and the 'sports-tuned body' bracing; no catalogue weight for it was found."
+    },
+    {
+      "id": "jdm-spec-s-4at",
+      "name": "Spec-S",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"スポーティクーペ「シルビア」をフルモデルチェンジし、１月１９日より全国一斉に発売する\" (on sale nationwide from 19 January 1999)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+            "note": "Catalogue entry \"日産 シルビア 1999(平成11)年1月 発売モデル\" (model released January 1999)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Grade list for \"1999年1月～2002年8月生産モデル\" (production January 1999 to August 2002) includes this grade."
+          }
+        ],
+        "note": "`to` is the end of S15 production: Nissan's 24 Jan 2002 release says \"シルビアは2002年8月をもって生産を終了する\" (Silvia production ends August 2002). The grade stayed in the range to the end under package names (G/b/L/V package, Aero, Type-B); see notes."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm-at"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (1999年1月) (GF-S15)",
+            "note": "\"最終減速比 4.083\"."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"最終減速比 4.083 (5速マニュアル) / 4.083 (4速オートマチック)\" for the Spec-S-based SR20DE Varietta."
+          },
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff",
+            "note": "\"final drive (diff) ... SR20DE 5-speed manual 4.083\" (enthusiast site)."
+          }
+        ],
+        "note": "The Varietta brochure and goo-net give 4.083 for both the SR20DE 5MT and 4AT."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+            "note": "\"LSD オプション\" (LSD is an option, so the standard differential is open)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G012/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックS 4AT",
+            "note": "\"LSD（リミテッドスリップデフ） △\" (△ = option)."
+          },
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "Spec-S-based style-A price list: \"寒冷地仕様付＋ビスカスLSD付\" (cold-climate pack + viscous LSD) is an extra-cost option, i.e. the standard SR20DE car has no LSD."
+          }
+        ],
+        "note": "Open differential as standard. The factory option was a rear viscous LSD bundled with the cold-climate pack; the Spec-S Aero 5MT 'Handling package' instead got the helical LSD (Nissan launch release)."
+      },
+      "curbWeight": {
+        "value": 1230,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+            "note": "\"車両重量 1230kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G012/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックS 4AT",
+            "note": "\"車両重量 1230kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-S (AT)",
+            "note": "\"車両重量 1,230kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S / (後) 195/65R15 91S\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G012/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックS 4AT",
+              "note": "\"タイヤサイズ 前 195/65R15 後 195/65R15\"."
+            }
+          ],
+          "note": "Load/speed index 91S. A dealer 'Handling package' on the Spec-S Aero 5MT fitted 16-inch tyres (see notes)."
+        },
+        "rear": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S / (後) 195/65R15 91S\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G012/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックS 4AT",
+              "note": "\"タイヤサイズ 前 195/65R15 後 195/65R15\"."
+            }
+          ],
+          "note": "Load/speed index 91S. A dealer 'Handling package' on the Spec-S Aero 5MT fitted 16-inch tyres (see notes)."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "15x6J +40",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100472.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-S・5MT",
+              "note": "\"標準装着ホイールは、リム径がフロント15インチ、リヤ15インチ、オフセットは、フロント+40 mm、リヤ+40 mm、リム幅がフロント6、リヤ6\" (15-inch, offset +40, rim width 6)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"スタッドレス用は純正同等の15インチ・6.0J＋40mm（195/65R15...）が定番\" (15 x 6.0J +40 is the factory-equivalent size)."
+            }
+          ],
+          "note": "Secondary sources only; flange letter printed as COBBY prints it (J). Wheel material conflicts: goo-net lists alloy wheels as not available on the base Spec-S (steel wheels) and standard 15-inch alloys on the G package / Aero, while ja.wikipedia says the Spec-S has 15-inch alloys. The size is the same either way per these sources."
+        },
+        "rear": {
+          "value": "15x6J +40",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100472.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-S・5MT",
+              "note": "\"標準装着ホイールは、リム径がフロント15インチ、リヤ15インチ、オフセットは、フロント+40 mm、リヤ+40 mm、リム幅がフロント6、リヤ6\" (15-inch, offset +40, rim width 6)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"スタッドレス用は純正同等の15インチ・6.0J＋40mm（195/65R15...）が定番\" (15 x 6.0J +40 is the factory-equivalent size)."
+            }
+          ],
+          "note": "Secondary sources only; flange letter printed as COBBY prints it (J). Wheel material conflicts: goo-net lists alloy wheels as not available on the base Spec-S (steel wheels) and standard 15-inch alloys on the G package / Aero, while ja.wikipedia says the Spec-S has 15-inch alloys. The size is the same either way per these sources."
+        }
+      },
+      "dimensions": {
+        "trackFront": {
+          "value": 1480,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-S (AT)",
+              "note": "\"トレッド前 1,480mm / トレッド後 1,470mm\"."
+            }
+          ],
+          "note": "SR20DE trims on 15-inch wheels; 16-inch trims are 1470/1460."
+        },
+        "trackRear": {
+          "value": 1470,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502000/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックS 4AT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17083/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-S (AT)",
+              "note": "\"トレッド前 1,480mm / トレッド後 1,470mm\"."
+            }
+          ]
+        }
+      },
+      "notes": "SR20DE with the E-AT is rated lower than the 5MT car: goo-net, Car Sensor and carview all print 160 PS / 19.2 kgf·m for the AT (165 PS / 19.6 kgf·m for the MT); Nissan's launch release says the SR20DE output increase applies to 5MT cars (＊６：５ＭＴ車). The engine variant id `s15-jdm-at` for sr20de is NOT in the shared id table and must be created by the SR20DE agent or reconciled by the lead. Packages as for the 5MT (G, Aero, b, L, V); all share the same weight and gearing."
+    },
+    {
+      "id": "jdm-spec-r-6mt",
+      "name": "Spec-R",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"スポーティクーペ「シルビア」をフルモデルチェンジし、１月１９日より全国一斉に発売する\" (on sale nationwide from 19 January 1999)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+            "note": "Catalogue entry \"日産 シルビア 1999(平成11)年1月 発売モデル\" (model released January 1999)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Grade list for \"1999年1月～2002年8月生産モデル\" (production January 1999 to August 2002) includes this grade."
+          }
+        ],
+        "note": "`to` is the end of S15 production: Nissan's 24 Jan 2002 release says \"シルビアは2002年8月をもって生産を終了する\" (Silvia production ends August 2002). The grade stayed in the range to the end under package names (G/b/L/V package, Aero, Type-B); see notes."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 3.692,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"Final 3.692\" (spec-R 6MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (1999年1月) (GF-S15)",
+            "note": "\"最終減速比 3.692\" (final drive)."
+          }
+        ]
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"旋回時のレスポンスとコントロール性に優れたヘリカルＬＳＤを採用した。（spec-Ｒシリーズ6ＭＴ車、spec-Ｓエアロ ハンドリングパッケージ装着5ＭＴ車）\" (helical LSD on spec-R 6MT and Spec-S Aero handling-package 5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+            "note": "\"LSD 標準\" (LSD standard)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Model overview: \"一部にスポーツチューンドサスペンションやヘリカルLSDを採用\" (helical LSD on some grades)."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1240,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"Curb Weight (kg) 1,240\" (spec-R 6MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+            "note": "\"車両重量 1240kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G005/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックR 6MT",
+            "note": "\"車両重量 1240kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17076/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-R (MT_2.0)",
+            "note": "\"車両重量 1,240kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+              "accessed": "2026-09-26",
+              "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+              "note": "\"Tires Front 205/55R16 89V / Rear 205/55R16 89V\" (spec-R 6MT)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G005/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックR 6MT",
+              "note": "\"タイヤサイズ 前 205/55R16 後 205/55R16\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+              "accessed": "2026-09-26",
+              "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+              "note": "\"Tires Front 205/55R16 89V / Rear 205/55R16 89V\" (spec-R 6MT)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502079/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 6MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G005/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックR 6MT",
+              "note": "\"タイヤサイズ 前 205/55R16 後 205/55R16\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        },
+        "rear": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        }
+      },
+      "notes": "The seed car. JIS 250 PS / 28.0 kgf·m (6MT only). Mechanically identical packages folded into this trim (goo-net: same 1240 kg, 6MT, 3.692): Spec-R (Jan 1999), Spec-R Aero (Jan 1999, aero kit and fog lamps), Spec-R b package (Oct 1999, blue interior, chrome-coated 16x6.5JJ wheels), Spec-R L package (Oct 2000, leather), Spec-R Type-B (Oct 2000, stripped 'customize base' with simplified equipment; goo-net lists alloy wheels as an option on it), Spec-R V package (Jan 2002). Spec-R cars also have opposed 4-piston front calipers and the 'sports-tuned body' bracing (Nissan launch release). The Electric SUPER HICAS package is a separate trim because it weighs 10 kg more."
+    },
+    {
+      "id": "jdm-spec-r-4at",
+      "name": "Spec-R",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"スポーティクーペ「シルビア」をフルモデルチェンジし、１月１９日より全国一斉に発売する\" (on sale nationwide from 19 January 1999)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 4AT (GF-S15)",
+            "note": "Catalogue entry \"日産 シルビア 1999(平成11)年1月 発売モデル\" (model released January 1999)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Grade list for \"1999年1月～2002年8月生産モデル\" (production January 1999 to August 2002) includes this grade."
+          }
+        ],
+        "note": "`to` is the end of S15 production: Nissan's 24 Jan 2002 release says \"シルビアは2002年8月をもって生産を終了する\" (Silvia production ends August 2002). The grade stayed in the range to the end under package names (G/b/L/V package, Aero, Type-B); see notes."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-jdm-at"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 3.916,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 4AT (1999年1月) (GF-S15)",
+            "note": "\"最終減速比 3.916\" (final drive), Spec-R E-AT."
+          },
+          {
+            "url": "https://www.nextage.jp/carcatalog/nissan/silvia/gf-s15/1502035/",
+            "accessed": "2026-09-26",
+            "title": "NEXTAGE catalogue: Silvia スペックR 4AT (1999年1月) (GF-S15)",
+            "note": "\"最終減速比 3.916\"."
+          },
+          {
+            "url": "https://gazoo.com/catalog/maker/NISSAN/SILVIA/199901/1502035/",
+            "accessed": "2026-09-26",
+            "title": "GAZOO catalogue: Silvia スペックR 4AT (1999年1月)",
+            "note": "\"トランスミッション フルレンジ電子制御4速オートマチック＜Ｅ－ＡＴ＞ ... 最終減速比 3.916\"."
+          }
+        ],
+        "note": "Caution: goo-net, NEXTAGE and GAZOO use the same grade ids (1502035), so they very likely license one catalogue database; they are separate sites but not fully independent. No Nissan document for the Spec-R AT final drive was found."
+      },
+      "differential": {
+        "value": "viscous-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 4AT (1999年1月) (GF-S15)",
+            "note": "\"LSD 標準\" (an LSD is standard on the Spec-R 4AT; type not stated)."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/chiebukuro/detail/?qid=10127343395",
+            "accessed": "2026-09-26",
+            "title": "Yahoo! Chiebukuro Q&A (via carview): S15 LSD question",
+            "note": "Best answer: \"スペックRの場合、MTはヘリカルLSD、ATはビスカスLSDが標準装備です\" (Spec-R: MT has helical, AT has viscous LSD as standard). Forum answer, not a factory document."
+          },
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "For the Australian car: \"models with automatic transmissions had a viscous limited slip differential\" (corroborates the AT type for the export model only)."
+          }
+        ],
+        "note": "Nissan's launch release limits the helical LSD to 6MT cars, and goo-net says an LSD is standard on the Spec-R AT, so it is a different type; the only statement that it is a viscous LSD is a Q&A answer (JDM) and an Australian review (AUDM). Kept as single-source."
+      },
+      "curbWeight": {
+        "value": 1270,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 4AT (GF-S15)",
+            "note": "\"車両重量 1270kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G006/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックR 4AT",
+            "note": "\"車両重量 1270kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-R (AT_2.0)",
+            "note": "\"車両重量 1,270kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G006/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックR 4AT",
+              "note": "\"タイヤサイズ 前 205/55R16 後 205/55R16\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-R (AT_2.0)",
+              "note": "\"タイヤサイズ（前）205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1502035/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G006/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Silvia 2.0 スペックR 4AT",
+              "note": "\"タイヤサイズ 前 205/55R16 後 205/55R16\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17077/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-R (AT_2.0)",
+              "note": "\"タイヤサイズ（前）205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        },
+        "rear": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        }
+      },
+      "notes": "The automatic Spec-R is rated 225 PS at 6000 rpm (torque unchanged at 28.0 kgf·m / 4800 rpm) by goo-net, Car Sensor and carview; Nissan's launch release says the 250 PS figure applies to 6MT cars (＊２：6ＭＴ車). Engine variant `s15-jdm-at`. Packages folded in: Aero, b, L, Type-B, V (same 1270 kg / 3.916 on goo-net). Wheels assumed the same 16-inch design as the 6MT (Spec Tank lists only the 6MT; Nissan's b package release applies the 16x6.5JJ wheel to all turbo cars)."
+    },
+    {
+      "id": "jdm-spec-r-hicas-6mt",
+      "name": "Spec-R Electric SUPER HICAS package",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-01",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (1999年1月) (GF-S15)",
+            "note": "Catalogue entry under \"1999(平成11)年1月 発売モデル\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17075/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-R_SUPER_HICAS (MT_2.0)",
+            "note": "\"発売年月 1999年1月\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/type",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 24 Oct 2000: シルビアに「Lパッケージ」、「Type-B」を追加 (and style-A)",
+            "note": "Price list includes \"spec-R Type-B ハイキャス付 ... 6MT 2,445\" with \"※ハイキャス付は電動SUPER HICASパッケージ装着車\" (still offered Oct 2000)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month the HICAS package was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 3.692,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (GF-S15)",
+            "note": "\"最終減速比 3.692\"."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"Final 3.692\" (spec-R 6MT, the base of the HICAS package)."
+          }
+        ]
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"旋回時のレスポンスとコントロール性に優れたヘリカルＬＳＤを採用した。（spec-Ｒシリーズ6ＭＴ車、spec-Ｓエアロ ハンドリングパッケージ装着5ＭＴ車）\" (helical LSD on spec-R 6MT and Spec-S Aero handling-package 5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (GF-S15)",
+            "note": "\"LSD 標準\" (LSD standard)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Model overview: \"一部にスポーツチューンドサスペンションやヘリカルLSDを採用\" (helical LSD on some grades)."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1250,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (GF-S15)",
+            "note": "\"車両重量 1250kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G001/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 スペックR スーパーハイキャス",
+            "note": "\"4WS ◯ ... 車両重量 1250kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17075/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia spec-R_SUPER_HICAS (MT_2.0)",
+            "note": "\"車両重量 1,250kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17075/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-R_SUPER_HICAS (MT_2.0)",
+              "note": "\"タイヤサイズ（前）205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1501997/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スペックR 電動スーパーハイキャスパッケージ (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V / (後) 205/55R16 89V\"."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/17075/",
+              "accessed": "2026-09-26",
+              "title": "carview! catalogue: Silvia spec-R_SUPER_HICAS (MT_2.0)",
+              "note": "\"タイヤサイズ（前）205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        },
+        "rear": {
+          "value": "16x6.5JJ +45",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://spectank.jp/whl/002100469.html",
+              "accessed": "2026-09-26",
+              "title": "Spec Tank: シルビアのホイールサイズ [GF-S15] Spec-R・6MT",
+              "note": "\"標準装着ホイールは、リム径がフロント16インチ、リヤ16インチ、オフセットは、フロント+45 mm、リヤ+45 mm、リム幅がフロント6.5、リヤ6.5\" (standard wheel 16-inch, offset +45, rim width 6.5)."
+            },
+            {
+              "url": "https://cobby.jp/silvia-wheel.html",
+              "accessed": "2026-09-26",
+              "title": "COBBY: S15 純正サイズ一覧",
+              "note": "\"16インチ化したい場合は205/55R16・6.5J＋45mmが現実的な選択肢で、純正夏ホイールと同じインセット\" (16 x 6.5J +45 has the same inset as the factory summer wheel)."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "b package: \"ターボ車には、クロームカラーコートの16×6.5JJアルミロードホイールを標準装備\" (turbo cars get chrome-coated 16x6.5JJ alloys), which gives Nissan's JJ flange designation for the 16-inch size."
+            }
+          ],
+          "note": "Size and offset from Spec Tank and COBBY (both secondary sites); the JJ flange letter is Nissan's for the 16x6.5 turbo wheel (b package release). No Nissan document with the offset was found."
+        }
+      },
+      "notes": "Factory option package with electric SUPER HICAS rear-wheel steering (4WS), 6MT only, on the Spec-R, Spec-R Aero (both Jan 1999, 1250 kg) and Spec-R Type-B (Oct 2000, 1250 kg per goo-net 1506000). Kept separate from the plain Spec-R because it weighs 10 kg more and has active rear steer."
+    },
+    {
+      "id": "jdm-autech-version-6mt",
+      "name": "Autech Version",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "1999-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/b",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+            "note": "\"特別仕様車「オーテックバージョン」を10月7日より全国一斉に発売する\" (Autech Version on sale from 7 October 1999)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia オーテックバージョン (1999年10月) (GF-S15)",
+            "note": "Catalogue entry under \"1999(平成11)年10月 発売モデル\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/11711/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia オーテックバージョン (MT)",
+            "note": "\"発売年月 1999年10月\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month the Autech Version was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm-autech"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+            "note": "\"最終減速比：4.083\" (final drive)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia オーテックバージョン (GF-S15)",
+            "note": "\"最終減速比 4.083\"."
+          }
+        ],
+        "note": "Autech Version pairs the Spec-R 6MT ratios with the shorter SR20DE final drive 4.083 (not the Spec-R's 3.692)."
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+            "note": "特別装備: \"●リヤヘリカルLSD（リミテッドスリップデフ）\" (rear helical LSD)."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/b",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+            "note": "Autech Version equipment: \"・リヤヘリカルLSD\"."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1200,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+            "note": "\"車両重量：1200kg\"."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia オーテックバージョン (GF-S15)",
+            "note": "\"車両重量 1200kg\"."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003/M001G028/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Silvia 2.0 オーテックバージョン",
+            "note": "\"車両重量 1200kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/gradeid/11711/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia オーテックバージョン (MT)",
+            "note": "\"車両重量 1,200kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+              "note": "\"タイヤ 前・後：205/55R16 89V\"; 特別装備 \"205/55R16 89Vブリヂストン製ポテンザRE711\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "\"205/55R16 89Vタイヤ（ブリヂストン製ポテンザRE711）\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia オーテックバージョン (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+              "note": "\"タイヤ 前・後：205/55R16 89V\"; 特別装備 \"205/55R16 89Vブリヂストン製ポテンザRE711\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "\"205/55R16 89Vタイヤ（ブリヂストン製ポテンザRE711）\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1500298/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia オーテックバージョン (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+              "note": "\"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "\"・16x6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated by Autech or Nissan."
+        },
+        "rear": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_autech_1999.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (1999): シルビア オーテックバージョン, 主要諸元 (main specifications)",
+              "note": "\"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/b",
+              "accessed": "2026-09-26",
+              "title": "Nissan / Autech Japan press release, 7 Oct 1999: シルビアに「bパッケージ」を追加 (b package added; Autech Version launched)",
+              "note": "\"・16x6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated by Autech or Nissan."
+        }
+      },
+      "notes": "Autech Japan special based on the Spec-S: SR20DE tuned to 200 PS / 7200 rpm and 21.8 kgf·m / 4800 rpm (compression 11.7, cam and exhaust-valve changes, 4-into-1 stainless exhaust manifold, Fujitsubo front pipe, Nismo lightweight flywheel), 6MT, rear helical LSD, opposed 4-piston front brakes with 8+9 inch booster, sports-tuned suspension and body (Autech brochure; Nissan/Autech 7 Oct 1999 release). Tracks 1470/1460 as the 16-inch cars (brochure), so no dimension override. Engine variant `s15-jdm-autech`."
+    },
+    {
+      "id": "jdm-style-a-spec-s-5mt",
+      "name": "style-A (Spec-S base)",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/type",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 24 Oct 2000: シルビアに「Lパッケージ」、「Type-B」を追加 (and style-A)",
+            "note": "\"特別仕様車「style-A」を１０月２４日より全国一斉に発売する\" (style-A on sale from 24 October 2000); base cars spec-R (SR20DET, E-AT/6MT) and spec-S (SR20DE, E-AT/5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (2000年10月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年10月 発売モデル\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month style-A was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-5mt",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+            "note": "\"最終減速比 4.083\"."
+          }
+        ],
+        "note": "Same as the Spec-S 5MT (verified there); only goo-net prints it for the style-A."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "\"style-A SR20DE車（5速マニュアル） 寒冷地仕様付＋ビスカスLSD付 2,256,000円\" (viscous LSD only as an option)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+            "note": "\"LSD オプション\"."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1200,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "\"車両重量 kg 1240(1270) [SR20DET] / 1200(1230) [SR20DE]\" (brackets = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+            "note": "\"車両重量 1200kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 195/65R15 91S\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S\"."
+            }
+          ],
+          "note": "Load/speed index 91S."
+        },
+        "rear": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 195/65R15 91S\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S\"."
+            }
+          ],
+          "note": "Load/speed index 91S."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4500,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"全長×全幅×全高 mm 4500×1695×1285\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+              "note": "\"全長×全幅×全高 4500×1695×1285mm\"."
+            },
+            {
+              "url": "https://www.autech.co.jp/history/sv/silvia_stylea_2000.html",
+              "accessed": "2026-09-26",
+              "title": "Autech: 2000年発売 シルビア スタイルA (history page)",
+              "note": "\"寸法（全長x全幅x全高） 4500×1695×1285（mm）\"."
+            }
+          ],
+          "note": "55 mm longer than the standard car because of the style-A front and rear bumpers."
+        },
+        "trackFront": {
+          "value": 1480,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"トレッド 前／後 mm ... 1480／1470\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            }
+          ],
+          "note": "SR20DE trims on 15-inch wheels; 16-inch trims are 1470/1460."
+        },
+        "trackRear": {
+          "value": 1470,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"トレッド 前／後 mm ... 1480／1470\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506053/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 5MT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            }
+          ]
+        }
+      },
+      "notes": "Autech Japan 'style-A' (sold through Nissan dealers, registered as an Autech car): unique front bumper with silver grille, unique rear bumper and rear lamps, tan leather front seats (Nissan/Autech 24 Oct 2000 release). Mechanicals are those of the base grade; only the length changes. 15-inch alloy wheels (size not stated in the release or brochure)."
+    },
+    {
+      "id": "jdm-style-a-spec-s-4at",
+      "name": "style-A (Spec-S base)",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/type",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 24 Oct 2000: シルビアに「Lパッケージ」、「Type-B」を追加 (and style-A)",
+            "note": "\"特別仕様車「style-A」を１０月２４日より全国一斉に発売する\" (style-A on sale from 24 October 2000); base cars spec-R (SR20DET, E-AT/6MT) and spec-S (SR20DE, E-AT/5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (2000年10月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年10月 発売モデル\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month style-A was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm-at"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+            "note": "\"最終減速比 4.083\"."
+          }
+        ],
+        "note": "Same as the Spec-S 4AT (verified there)."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "Viscous LSD listed only as an extra-cost option on the SR20DE style-A (\"寒冷地仕様付＋ビスカスLSD付\")."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+            "note": "\"LSD オプション\"."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1230,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "\"車両重量 kg 1240(1270) [SR20DET] / 1200(1230) [SR20DE]\" (brackets = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+            "note": "\"車両重量 1230kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 195/65R15 91S\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S\"."
+            }
+          ],
+          "note": "Load/speed index 91S."
+        },
+        "rear": {
+          "value": "195/65R15",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 195/65R15 91S\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 195/65R15 91S\"."
+            }
+          ],
+          "note": "Load/speed index 91S."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4500,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"全長×全幅×全高 mm 4500×1695×1285\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+              "note": "\"全長×全幅×全高 4500×1695×1285mm\"."
+            },
+            {
+              "url": "https://www.autech.co.jp/history/sv/silvia_stylea_2000.html",
+              "accessed": "2026-09-26",
+              "title": "Autech: 2000年発売 シルビア スタイルA (history page)",
+              "note": "\"寸法（全長x全幅x全高） 4500×1695×1285（mm）\"."
+            }
+          ],
+          "note": "55 mm longer than the standard car because of the style-A front and rear bumpers."
+        },
+        "trackFront": {
+          "value": 1480,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"トレッド 前／後 mm ... 1480／1470\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            }
+          ],
+          "note": "SR20DE trims on 15-inch wheels; 16-inch trims are 1470/1460."
+        },
+        "trackRear": {
+          "value": 1470,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"トレッド 前／後 mm ... 1480／1470\" (SR20DE)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506052/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"トレッド前／後 1480/1470mm\"."
+            }
+          ]
+        }
+      },
+      "notes": "Autech Japan 'style-A' (sold through Nissan dealers, registered as an Autech car): unique front bumper with silver grille, unique rear bumper and rear lamps, tan leather front seats (Nissan/Autech 24 Oct 2000 release). Mechanicals are those of the base grade; only the length changes. SR20DE AT rating 160 PS (goo-net 1506052). Engine variant `s15-jdm-at` (not in the shared id table, see the Spec-S 4AT trim)."
+    },
+    {
+      "id": "jdm-style-a-spec-r-6mt",
+      "name": "style-A (Spec-R base)",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/type",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 24 Oct 2000: シルビアに「Lパッケージ」、「Type-B」を追加 (and style-A)",
+            "note": "\"特別仕様車「style-A」を１０月２４日より全国一斉に発売する\" (style-A on sale from 24 October 2000); base cars spec-R (SR20DET, E-AT/6MT) and spec-S (SR20DE, E-AT/5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (2000年10月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年10月 発売モデル\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month style-A was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 3.692,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 6MT (GF-S15)",
+            "note": "\"最終減速比 3.692\"."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/release-9cd833c24c8642e8989dd682777da687-19990119-e_presskit",
+            "accessed": "2026-09-26",
+            "title": "Nissan press kit, 19 Jan 1999: Nissan Releases All-New Silvia (specifications of spec-R 6MT)",
+            "note": "\"Final 3.692\" for the spec-R 6MT, the base car of this style-A (per the 24 Oct 2000 release)."
+          }
+        ]
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/release-0d0f3b9fbc4ff6a260598c0760046b15-nissan-releases-all-new-silvia-j",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 20 Jan 1999: 新型「シルビア」を発売 (all-new Silvia launched)",
+            "note": "\"旋回時のレスポンスとコントロール性に優れたヘリカルＬＳＤを採用した。（spec-Ｒシリーズ6ＭＴ車、spec-Ｓエアロ ハンドリングパッケージ装着5ＭＴ車）\" (helical LSD on spec-R 6MT and Spec-S Aero handling-package 5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 6MT (GF-S15)",
+            "note": "\"LSD 標準\" (LSD standard)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/silvia/F003M001/list.html",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor: Silvia 1999年1月～2002年8月生産モデル grade list",
+            "note": "Model overview: \"一部にスポーツチューンドサスペンションやヘリカルLSDを採用\" (helical LSD on some grades)."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1240,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "\"車両重量 kg 1240(1270) [SR20DET] / 1200(1230) [SR20DE]\" (brackets = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+            "note": "\"車両重量 1240kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 205/55R16 89V\" (SR20DET)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 6MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 205/55R16 89V\" (SR20DET)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 6MT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4500,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"全長×全幅×全高 mm 4500×1695×1285\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+              "note": "\"全長×全幅×全高 4500×1695×1285mm\"."
+            },
+            {
+              "url": "https://www.autech.co.jp/history/sv/silvia_stylea_2000.html",
+              "accessed": "2026-09-26",
+              "title": "Autech: 2000年発売 シルビア スタイルA (history page)",
+              "note": "\"寸法（全長x全幅x全高） 4500×1695×1285（mm）\"."
+            }
+          ],
+          "note": "55 mm longer than the standard car because of the style-A front and rear bumpers."
+        }
+      },
+      "notes": "Autech Japan 'style-A' (sold through Nissan dealers, registered as an Autech car): unique front bumper with silver grille, unique rear bumper and rear lamps, tan leather front seats (Nissan/Autech 24 Oct 2000 release). Mechanicals are those of the base grade; only the length changes. 16-inch alloy wheels from the Spec-R base (release: \"SR20DET車はベース車に16インチアルミロードホイール標準\")."
+    },
+    {
+      "id": "jdm-style-a-spec-r-4at",
+      "name": "style-A (Spec-R base)",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-10",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/type",
+            "accessed": "2026-09-26",
+            "title": "Nissan / Autech Japan press release, 24 Oct 2000: シルビアに「Lパッケージ」、「Type-B」を追加 (and style-A)",
+            "note": "\"特別仕様車「style-A」を１０月２４日より全国一斉に発売する\" (style-A on sale from 24 October 2000); base cars spec-R (SR20DET, E-AT/6MT) and spec-S (SR20DE, E-AT/5MT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506051/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (2000年10月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年10月 発売モデル\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month style-A was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-jdm-at"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 3.916,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+            "note": "\"最終減速比 3.916\"."
+          }
+        ],
+        "note": "Same as the Spec-R 4AT."
+      },
+      "differential": {
+        "value": "viscous-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+            "note": "\"LSD 標準\" (an LSD is standard on the Spec-R 4AT; type not stated)."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia/chiebukuro/detail/?qid=10127343395",
+            "accessed": "2026-09-26",
+            "title": "Yahoo! Chiebukuro Q&A (via carview): S15 LSD question",
+            "note": "Best answer: \"スペックRの場合、MTはヘリカルLSD、ATはビスカスLSDが標準装備です\" (Spec-R: MT has helical, AT has viscous LSD as standard). Forum answer, not a factory document."
+          },
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Nissan S15 200SX (2000-02)",
+            "note": "For the Australian car: \"models with automatic transmissions had a viscous limited slip differential\" (corroborates the AT type for the export model only)."
+          }
+        ],
+        "note": "Nissan's launch release limits the helical LSD to 6MT cars, and goo-net says an LSD is standard on the Spec-R AT, so it is a different type; the only statement that it is a viscous LSD is a Q&A answer (JDM) and an Australian review (AUDM). Kept as single-source."
+      },
+      "curbWeight": {
+        "value": 1270,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+            "note": "\"車両重量 kg 1240(1270) [SR20DET] / 1200(1230) [SR20DE]\" (brackets = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+            "note": "\"車両重量 1270kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 205/55R16 89V\" (SR20DET)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"タイヤ 前・後 205/55R16 89V\" (SR20DET)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA 4AT (GF-S15)",
+              "note": "\"タイヤサイズ(前) 205/55R16 89V\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "dimensions": {
+        "length": {
+          "value": 4500,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_stylea_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア style-A 主要諸元 and 車両価格",
+              "note": "\"全長×全幅×全高 mm 4500×1695×1285\"."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1506050/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Silvia スタイルA (GF-S15)",
+              "note": "\"全長×全幅×全高 4500×1695×1285mm\"."
+            },
+            {
+              "url": "https://www.autech.co.jp/history/sv/silvia_stylea_2000.html",
+              "accessed": "2026-09-26",
+              "title": "Autech: 2000年発売 シルビア スタイルA (history page)",
+              "note": "\"寸法（全長x全幅x全高） 4500×1695×1285（mm）\"."
+            }
+          ],
+          "note": "55 mm longer than the standard car because of the style-A front and rear bumpers."
+        }
+      },
+      "notes": "Autech Japan 'style-A' (sold through Nissan dealers, registered as an Autech car): unique front bumper with silver grille, unique rear bumper and rear lamps, tan leather front seats (Nissan/Autech 24 Oct 2000 release). Mechanicals are those of the base grade; only the length changes. SR20DET AT rating 225 PS (goo-net 1506050), engine variant `s15-jdm-at`."
+    },
+    {
+      "id": "jdm-varietta-5mt",
+      "name": "Varietta",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-07",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+            "note": "\"シルビア　コンバーチブル　Varietta を７月２７日より全国一斉に発売する\" (on sale from 27 July 2000); base car spec-S, SR20DE, E-AT/5MT."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505471/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ (2000年7月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年7月 発売モデル\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia_varietta/gradeid/11300/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia ヴァリエッタ (AT)",
+            "note": "\"発売年月 2000年7月\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month the Varietta was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "convertible",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm"
+      },
+      "transmission": "s15-5mt",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"最終減速比 4,083\" (OCR of 4.083) in the 5速マニュアル column."
+          }
+        ],
+        "note": "Only the Autech brochure prints it for the Varietta (goo-net leaves the gearing blank); it matches the Spec-S 5MT."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "主要装備一覧: \"リヤビスカスLSD（リミテッドスリップデフ）（注5）\" as a maker option; \"（注5）寒冷地仕様とセットオプションです\" (bundled with the cold-climate pack)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505471/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ (GF-S15)",
+            "note": "\"LSD オプション\"."
+          }
+        ],
+        "note": "Open differential as standard; rear viscous LSD optional with the cold-climate pack."
+      },
+      "curbWeight": {
+        "value": 1330,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"車両重量 kg 1330〔1360〕\" (〔〕 = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505471/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ 5MT (GF-S15)",
+            "note": "\"車両重量 1330kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "\"タイヤ 前・後 205/55R16 89V\"; 主要装備 \"205/55R16 89Vタイヤ\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"・205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "\"タイヤ 前・後 205/55R16 89V\"; 主要装備 \"205/55R16 89Vタイヤ\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"・205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "主要装備: \"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated."
+        },
+        "rear": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "主要装備: \"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated."
+        }
+      },
+      "notes": "Autech Japan convertible with an electric folding metal roof (Japan's first full-open retractable hardtop, about 20 s to open), 2+2 seats, based on the Spec-S with 205/55R16 tyres on 16x6.5JJ alloys (Nissan/Autech 9 May 2000 release; Autech brochure). Dimensions and tracks are the same as the 16-inch coupe (brochure: 4445×1695×1285 mm, tracks 1470/1460). Needs its own body model (convertible)."
+    },
+    {
+      "id": "jdm-varietta-4at",
+      "name": "Varietta",
+      "market": "JDM",
+      "period": {
+        "value": {
+          "from": "2000-07",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+            "note": "\"シルビア　コンバーチブル　Varietta を７月２７日より全国一斉に発売する\" (on sale from 27 July 2000); base car spec-S, SR20DE, E-AT/5MT."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505471/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ (2000年7月) (GF-S15)",
+            "note": "Catalogue entry under \"2000(平成12)年7月 発売モデル\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia_varietta/gradeid/11300/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia ヴァリエッタ (AT)",
+            "note": "\"発売年月 2000年7月\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` is sourced (see sources). The month the Varietta was dropped is not published in any source opened, so `to` is set to the end of S15 production (Aug 2002, Nissan 24 Jan 2002 release). Treat `to` as an upper bound."
+      },
+      "bodyStyle": "convertible",
+      "engine": {
+        "id": "sr20de",
+        "variant": "s15-jdm-at"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 4.083,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"最終減速比 ... 4.083\" in the フルレンジ電子制御4速オートマチック column."
+          }
+        ],
+        "note": "Only the Autech brochure prints it for the Varietta; it matches the Spec-S 4AT."
+      },
+      "differential": {
+        "value": "open",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "主要装備一覧: \"リヤビスカスLSD（リミテッドスリップデフ）（注5）\" as a maker option; \"（注5）寒冷地仕様とセットオプションです\" (bundled with the cold-climate pack)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505471/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ (GF-S15)",
+            "note": "\"LSD オプション\"."
+          }
+        ],
+        "note": "Open differential as standard; rear viscous LSD optional with the cold-climate pack."
+      },
+      "curbWeight": {
+        "value": 1360,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+            "accessed": "2026-09-26",
+            "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+            "note": "\"車両重量 kg 1330〔1360〕\" (〔〕 = E-AT)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SILVIA/1505470/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Silvia ヴァリエッタ 4AT (GF-S15)",
+            "note": "\"車両重量 1360kg\"."
+          },
+          {
+            "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/silvia_varietta/gradeid/11300/",
+            "accessed": "2026-09-26",
+            "title": "carview! catalogue: Silvia Varietta (AT)",
+            "note": "\"車両重量 1,360kg\"."
+          }
+        ],
+        "note": "JIS 車両重量 (vehicle weight): full fuel, oil and coolant, no driver or passengers."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "\"タイヤ 前・後 205/55R16 89V\"; 主要装備 \"205/55R16 89Vタイヤ\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"・205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "\"タイヤ 前・後 205/55R16 89V\"; 主要装備 \"205/55R16 89Vタイヤ\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"・205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Load/speed index 89V."
+        }
+      },
+      "wheels": {
+        "front": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "主要装備: \"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated."
+        },
+        "rear": {
+          "value": "16x6.5JJ",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.autech.co.jp/history/sv/PDF/silvia_convertiblevarietta_2000.pdf",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan brochure (2000): シルビア コンバーチブル ヴァリエッタ, 主要諸元 / 変速比・最終減速比",
+              "note": "主要装備: \"16×6.5JJアルミロードホイール\"."
+            },
+            {
+              "url": "https://global.nissannews.com/ja-JP/releases/autech-japan-to-release-silvia-convertible-j",
+              "accessed": "2026-09-26",
+              "title": "Autech Japan / Nissan press release, 9 May 2000: シルビア コンバーチブルを発売 (Silvia Convertible Varietta)",
+              "note": "\"205/55R16タイヤ＆16×6.5JJアルミロードホイール\"."
+            }
+          ],
+          "note": "Offset not stated."
+        }
+      },
+      "notes": "Autech Japan convertible with an electric folding metal roof (Japan's first full-open retractable hardtop, about 20 s to open), 2+2 seats, based on the Spec-S with 205/55R16 tyres on 16x6.5JJ alloys (Nissan/Autech 9 May 2000 release; Autech brochure). Dimensions and tracks are the same as the 16-inch coupe (brochure: 4445×1695×1285 mm, tracks 1470/1460). Needs its own body model (convertible). SR20DE AT rating 160 PS / 19.2 kgf·m (brochure: \"118(160)/6400, 188(19.2)/4800\"); engine variant `s15-jdm-at` (not in the shared id table)."
+    },
+    {
+      "id": "audm-spec-s-6mt",
+      "name": "200SX Spec S",
+      "market": "AUDM",
+      "period": {
+        "value": {
+          "from": "2000-11",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"Released in November 2000, the Nissan S15 200SX ... The 200SX range consisted of Spec S and Spec R variants, though GT editions were released in May 2002.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/44e435ba-11dc-4234-8920-4c9148289b29/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Manual",
+            "note": "\"Launch Year 2000\", \"Launch Month 11\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` verified (two sites). `to` = end of S15 production in Japan (Aug 2002, Nissan release); Australian sales from stock may have run later, but no source for the last Australian build or sale month was found."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-audm"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 3.692,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff (Australian 200SX S15 build)",
+            "note": "Table for the car's gearbox: \"SR20DET 6-speed manual ... 1st 3.626, 2nd 2.200, 3rd 1.541, 4th 1.213, 5th 1.000, 6th 0.767, final drive (diff) 3.692\"."
+          },
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – manual – R200H – 3.692 (5 & 6 bolt)'; gearbox table 'S15 SR20DET 6speed 1- 3.626 2- 2.200 3- 1.541 4- 1.213 5- 1.000 6- 0.767'. Not split by market."
+          }
+        ],
+        "note": "project200sx.com (an Australian owner's build log) and GKTech's ratio guide (Australian parts maker, not split by market) both give 3.692; it matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and is not cited."
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"While 200SX models with manual transmissions were fitted with helical limited slip differentials as standard, models with automatic transmissions had a viscous limited slip differential.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/44e435ba-11dc-4234-8920-4c9148289b29/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Manual",
+            "note": "Transmission & Drivetrain: \"Differential: Limited slip diff\" (type not stated)."
+          },
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff",
+            "note": "Conflicting: \"The standard Nissan 200sx S15 viscous diff was never going to last...\" (owner of a manual car calls the stock diff viscous)."
+          }
+        ],
+        "note": "Sources disagree: Australian Car.Reviews says manual cars have a helical LSD (consistent with Nissan's JDM Spec-R 6MT spec); the project200sx owner calls his stock diff viscous. Helical kept because it matches the factory JDM 6MT hardware; treat as unconfirmed for Australia."
+      },
+      "curbWeight": {
+        "value": 1265,
+        "unit": "kg",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/44e435ba-11dc-4234-8920-4c9148289b29/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Manual",
+            "note": "Dimensions & Weights: \"Tare Mass 1235 kg\", \"Kerb Weight 1265 kg\"."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2002/spec-s-gt/27a9529a-2d20-4c27-b320-04b9e559e07a/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2002 Nissan 200SX Spec S GT S15",
+            "note": "GT variant: \"Kerb Weight 1265 kg\", \"Launch Year 2002, Launch Month 5\" (same weight as the non-GT)."
+          }
+        ],
+        "note": "Australian kerb weight as published by Redbook/carsales (tare mass 1235 kg). Kerb weight is not the same standard as JIS 車両重量, so do not compare the two directly. Both pages are the same Redbook database, so this is single-source."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/44e435ba-11dc-4234-8920-4c9148289b29/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Manual",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/44e435ba-11dc-4234-8920-4c9148289b29/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Manual",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        }
+      },
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com (and GKTech's S15 table, not market-specific) match the JDM Spec-R."
+    },
+    {
+      "id": "audm-spec-s-4at",
+      "name": "200SX Spec S",
+      "market": "AUDM",
+      "period": {
+        "value": {
+          "from": "2000-11",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"Released in November 2000, the Nissan S15 200SX ... The 200SX range consisted of Spec S and Spec R variants, though GT editions were released in May 2002.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/0fbfb8f1-9342-4ed2-a110-c0c41ed278d2/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Auto",
+            "note": "\"Launch Year 2000\", \"Launch Month 11\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` verified (two sites). `to` = end of S15 production in Japan (Aug 2002, Nissan release); Australian sales from stock may have run later, but no source for the last Australian build or sale month was found."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-audm"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 3.916,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – auto – R200V – 3.916' (also 'S15 – SR20DET – manual – R200H – 3.692'; the S14 lines are split JDM/EDM/ADM, the S15 lines are not)."
+          }
+        ],
+        "note": "GKTech gives one value for every S15 SR20DET automatic, while it splits the S14 by market, which suggests no Australian difference; it is still an aftermarket source, not a Nissan document. It matches the JDM Spec-R 4AT (goo-net/NEXTAGE/GAZOO) and the English export S14 manual's automatic final drive (PD-35: R200V, A/T 3.916). No Australian factory figure was found."
+      },
+      "differential": {
+        "value": "viscous-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"...models with automatic transmissions had a viscous limited slip differential.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/0fbfb8f1-9342-4ed2-a110-c0c41ed278d2/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Auto",
+            "note": "\"Differential: Limited slip diff\" (type not stated)."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1285,
+        "unit": "kg",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/0fbfb8f1-9342-4ed2-a110-c0c41ed278d2/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Auto",
+            "note": "Dimensions & Weights: \"Tare Mass 1255 kg\", \"Kerb Weight 1285 kg\"."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2002/spec-s-gt/072441d3-87bc-4dc4-a6ff-24cf3d9ddeda/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2002 Nissan 200SX Spec S GT S15",
+            "note": "GT variant: \"Kerb Weight 1285 kg\", \"Launch Year 2002, Launch Month 5\" (same weight as the non-GT)."
+          }
+        ],
+        "note": "Australian kerb weight as published by Redbook/carsales (tare mass 1255 kg). Kerb weight is not the same standard as JIS 車両重量, so do not compare the two directly. Both pages are the same Redbook database, so this is single-source."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/0fbfb8f1-9342-4ed2-a110-c0c41ed278d2/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Auto",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-s/0fbfb8f1-9342-4ed2-a110-c0c41ed278d2/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec S S15 Auto",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        }
+      },
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec S: 16-inch alloys, air conditioning, CD, leather-wrapped wheel and gear knob, remote locking. The Spec S GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found; GKTech gives no automatic ratios). Final drive 3.916 per GKTech, not market-specific."
+    },
+    {
+      "id": "audm-spec-r-6mt",
+      "name": "200SX Spec R",
+      "market": "AUDM",
+      "period": {
+        "value": {
+          "from": "2000-11",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"Released in November 2000, the Nissan S15 200SX ... The 200SX range consisted of Spec S and Spec R variants, though GT editions were released in May 2002.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Manual",
+            "note": "\"Launch Year 2000\", \"Launch Month 11\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` verified (two sites). `to` = end of S15 production in Japan (Aug 2002, Nissan release); Australian sales from stock may have run later, but no source for the last Australian build or sale month was found."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-audm"
+      },
+      "transmission": "s15-6mt",
+      "finalDrive": {
+        "value": 3.692,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff (Australian 200SX S15 build)",
+            "note": "Table for the car's gearbox: \"SR20DET 6-speed manual ... 1st 3.626, 2nd 2.200, 3rd 1.541, 4th 1.213, 5th 1.000, 6th 0.767, final drive (diff) 3.692\"."
+          },
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – manual – R200H – 3.692 (5 & 6 bolt)'; gearbox table 'S15 SR20DET 6speed 1- 3.626 2- 2.200 3- 1.541 4- 1.213 5- 1.000 6- 0.767'. Not split by market."
+          }
+        ],
+        "note": "project200sx.com (an Australian owner's build log) and GKTech's ratio guide (Australian parts maker, not split by market) both give 3.692; it matches the JDM Spec-R 6MT. A search snippet of a WhichCar feature also said the Australian S15 kept a 3.69 final drive, but the page returned 403 and is not cited."
+      },
+      "differential": {
+        "value": "helical-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"While 200SX models with manual transmissions were fitted with helical limited slip differentials as standard, models with automatic transmissions had a viscous limited slip differential.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Manual",
+            "note": "Transmission & Drivetrain: \"Differential: Limited slip diff\" (type not stated)."
+          },
+          {
+            "url": "https://www.project200sx.com/index.php/project-nissan-200sx/gear-box-and-diff",
+            "accessed": "2026-09-26",
+            "title": "project200sx.com: Gear Box and Diff",
+            "note": "Conflicting: \"The standard Nissan 200sx S15 viscous diff was never going to last...\" (owner of a manual car calls the stock diff viscous)."
+          }
+        ],
+        "note": "Sources disagree: Australian Car.Reviews says manual cars have a helical LSD (consistent with Nissan's JDM Spec-R 6MT spec); the project200sx owner calls his stock diff viscous. Helical kept because it matches the factory JDM 6MT hardware; treat as unconfirmed for Australia."
+      },
+      "curbWeight": {
+        "value": 1284,
+        "unit": "kg",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Manual",
+            "note": "Dimensions & Weights: \"Tare Mass 1247 kg\", \"Kerb Weight 1284 kg\"."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2002/spec-r-gt/689d7492-60e3-4c4b-ae3a-f2723dd8947b/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2002 Nissan 200SX Spec R GT S15",
+            "note": "GT variant: \"Kerb Weight 1284 kg\", \"Launch Year 2002, Launch Month 5\" (same weight as the non-GT)."
+          }
+        ],
+        "note": "Australian kerb weight as published by Redbook/carsales (tare mass 1247 kg). Kerb weight is not the same standard as JIS 車両重量, so do not compare the two directly. Both pages are the same Redbook database, so this is single-source. The Spec R is heavier than the Spec S because it adds an electric sunroof, side skirts and rear spoiler (Australian Car.Reviews)."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Manual",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/ea10477e-3b92-4649-9da0-e85fd23cacb0/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Manual",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        }
+      },
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. 6MT ratios per project200sx.com (and GKTech's S15 table, not market-specific) match the JDM Spec-R."
+    },
+    {
+      "id": "audm-spec-r-4at",
+      "name": "200SX Spec R",
+      "market": "AUDM",
+      "period": {
+        "value": {
+          "from": "2000-11",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"Released in November 2000, the Nissan S15 200SX ... The 200SX range consisted of Spec S and Spec R variants, though GT editions were released in May 2002.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Auto",
+            "note": "\"Launch Year 2000\", \"Launch Month 11\"."
+          },
+          {
+            "url": "https://global.nissannews.com/ja-JP/releases/020124-03",
+            "accessed": "2026-09-26",
+            "title": "Nissan press release, 24 Jan 2002: シルビアに「Vパッケージ」を追加 (V package; end of production announced)",
+            "note": "\"1965年4月に初代を発売以来、ご愛顧いただいたシルビアは2002年8月をもって生産を終了する\" (Silvia production ends in August 2002)."
+          }
+        ],
+        "note": "`from` verified (two sites). `to` = end of S15 production in Japan (Aug 2002, Nissan release); Australian sales from stock may have run later, but no source for the last Australian build or sale month was found."
+      },
+      "bodyStyle": "coupe",
+      "engine": {
+        "id": "sr20det",
+        "variant": "s15-audm"
+      },
+      "transmission": "s15-4at",
+      "finalDrive": {
+        "value": 3.916,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://us.gktech.com/blogs/news/nissan-s-r-z-chassis-diff-transmission-ratio-guide",
+            "accessed": "2026-09-26",
+            "title": "GKTech (Australian S/R/Z-chassis parts maker): Nissan S/R/Z chassis diff/transmission ratio guide",
+            "note": "Diff ratio list: 'S15 – SR20DET – auto – R200V – 3.916' (also 'S15 – SR20DET – manual – R200H – 3.692'; the S14 lines are split JDM/EDM/ADM, the S15 lines are not)."
+          }
+        ],
+        "note": "GKTech gives one value for every S15 SR20DET automatic, while it splits the S14 by market, which suggests no Australian difference; it is still an aftermarket source, not a Nissan document. It matches the JDM Spec-R 4AT (goo-net/NEXTAGE/GAZOO) and the English export S14 manual's automatic final drive (PD-35: R200V, A/T 3.916). No Australian factory figure was found."
+      },
+      "differential": {
+        "value": "viscous-lsd",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+            "accessed": "2026-09-26",
+            "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+            "note": "\"...models with automatic transmissions had a viscous limited slip differential.\""
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Auto",
+            "note": "\"Differential: Limited slip diff\" (type not stated)."
+          }
+        ]
+      },
+      "curbWeight": {
+        "value": 1304,
+        "unit": "kg",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Auto",
+            "note": "Dimensions & Weights: \"Tare Mass 1267 kg\", \"Kerb Weight 1304 kg\"."
+          },
+          {
+            "url": "https://www.carsales.com.au/research/nissan/200sx/2002/spec-r-gt/3b17a0ce-8736-4d0b-8166-7dc1fe19fd42/",
+            "accessed": "2026-09-26",
+            "title": "carsales (Redbook data): 2002 Nissan 200SX Spec R GT S15",
+            "note": "GT variant: \"Kerb Weight 1304 kg\", \"Launch Year 2002, Launch Month 5\" (same weight as the non-GT)."
+          }
+        ],
+        "note": "Australian kerb weight as published by Redbook/carsales (tare mass 1267 kg). Kerb weight is not the same standard as JIS 車両重量, so do not compare the two directly. Both pages are the same Redbook database, so this is single-source. The Spec R is heavier than the Spec S because it adds an electric sunroof, side skirts and rear spoiler (Australian Car.Reviews)."
+      },
+      "tyres": {
+        "front": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Auto",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        },
+        "rear": {
+          "value": "205/55R16",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.carsales.com.au/research/nissan/200sx/2000/spec-r/c6f4e02e-4bd0-4bf1-9ea4-7a964243427d/",
+              "accessed": "2026-09-26",
+              "title": "carsales (Redbook data): 2000 Nissan 200SX Spec R S15 Auto",
+              "note": "Wheels & Tyres: \"Front Tyre Description 205/55 R16\", \"Rear Tyre Description 205/55 R16\"."
+            },
+            {
+              "url": "https://www.australiancar.reviews/review-nissan-s15-200sx-2000-02/",
+              "accessed": "2026-09-26",
+              "title": "Australian Car.Reviews: Review: Nissan S15 200SX (2000-02)",
+              "note": "\"Standard features for the 200SX Spec S included 16-inch alloy wheels with 205/55 R16 89V tyres\"."
+            }
+          ],
+          "note": "Load/speed index 89V (Australian Car.Reviews)."
+        }
+      },
+      "notes": "Australian-market Nissan 200SX (S15). Unlike Japan, both Australian grades use the SR20DET turbo; rated 147 kW at 6400 rpm and 265 Nm at 4800 rpm for manual and automatic alike (carsales/Redbook; Australian Car.Reviews). Engine variant `s15-audm`. Spec R adds a 6-stack CD, side skirts, rear spoiler and electric sunroof over the Spec S. The Spec R GT (May 2002: polished chrome alloys, leather, 'high performance' rear spoiler, drilled pedals, GT badges) has the same published weight and is folded into this trim. Wheels are 16x6.5 per carsales, but the flange letter (J/JJ) and offset are not published, so `wheels` is left out. Gear ratios are assumed to be the JDM E-AT's (no Australian ratio source found; GKTech gives no automatic ratios). Final drive 3.916 per GKTech, not market-specific."
+    }
+  ],
+  "geometry": {
+    "status": "pending-model",
+    "plan": "Mount points (mount_engine, mount_trans, mount_turbo, mount_intercooler, mount_radiator, mount_wheel_*, seats, aero) and the engine-bay envelope will be measured in Phase 4 from a to-scale, licensed (CC0/CC-BY/commercial) S15 3D model, checked against the published wheelbase (2525 mm), tracks (1470/1460 mm, 1480/1470 mm on 15-inch cars) and overall size (4445 x 1695 x 1285 mm). No coordinates are filled in until then."
+  }
+}

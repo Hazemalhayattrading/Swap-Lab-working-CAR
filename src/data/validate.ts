@@ -1,5 +1,7 @@
 import type { z } from 'zod';
 import { AssetManifestSchema, type Asset, type AssetManifest } from './schema/asset';
+import { CarSchema, type Car } from './schema/car';
+import { EngineSchema, type Engine } from './schema/engine';
 import { BUDGET_BYTES, checkBudget } from './policy';
 
 /**
@@ -35,6 +37,13 @@ export interface ValidationReport {
   issues: ValidationIssue[];
   checkedFiles: string[];
   counts: Record<string, number>;
+  /** JSON paths of every value marked `estimated` in car and engine files. */
+  estimated: string[];
+  /**
+   * Files of assets with a NoAI clause. Scripts may process them; no AI model
+   * may be shown them, their textures or screenshots of them (CLAUDE.md rule 5).
+   */
+  noAiFiles: string[];
 }
 
 interface SchemaRule {
@@ -54,7 +63,82 @@ export const SCHEMA_RULES: readonly SchemaRule[] = [
     test: (p) => p === 'src/data/assets.json',
     schema: AssetManifestSchema,
   },
+  {
+    description: 'car (chassis and trims)',
+    test: (p) => /^src\/data\/cars\/[a-z0-9-]+\.json$/.test(p),
+    schema: CarSchema,
+  },
+  {
+    description: 'engine',
+    test: (p) => /^src\/data\/engines\/[a-z0-9-]+\.json$/.test(p),
+    schema: EngineSchema,
+  },
 ];
+
+/** `src/data/cars/nissan-silvia-s15.json` -> `nissan-silvia-s15`. */
+function fileStem(path: string): string {
+  return path.slice(path.lastIndexOf('/') + 1, -'.json'.length);
+}
+
+/**
+ * Walks a parsed data file and counts every sourced value by confidence, and
+ * lists where the `estimated` ones are, so the session summary can report them.
+ */
+export function collectConfidence(
+  json: unknown,
+  path: string,
+  out: { counts: Record<string, number>; estimated: string[] },
+): void {
+  if (Array.isArray(json)) {
+    json.forEach((item, i) => {
+      collectConfidence(item, `${path}[${String(i)}]`, out);
+    });
+    return;
+  }
+  if (json === null || typeof json !== 'object') return;
+  const record = json as Record<string, unknown>;
+  if (typeof record.confidence === 'string' && Array.isArray(record.sources)) {
+    const key = `value ${record.confidence}`;
+    out.counts[key] = (out.counts[key] ?? 0) + 1;
+    if (record.confidence === 'estimated') out.estimated.push(path);
+    return;
+  }
+  for (const [key, value] of Object.entries(record))
+    collectConfidence(value, `${path}.${key}`, out);
+}
+
+/** Checks between files: ids match file names, and trims point at real engine variants. */
+function checkReferences(
+  cars: readonly { path: string; car: Car }[],
+  engines: readonly { path: string; engine: Engine }[],
+): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const byId = new Map<string, Engine>();
+  for (const { path, engine } of engines) {
+    if (engine.id !== fileStem(path)) {
+      issues.push({ path, message: `id "${engine.id}" must match the file name.` });
+    }
+    byId.set(engine.id, engine);
+  }
+  for (const { path, car } of cars) {
+    if (car.id !== fileStem(path)) {
+      issues.push({ path, message: `id "${car.id}" must match the file name.` });
+    }
+    car.trims.forEach((trim, i) => {
+      const engine = byId.get(trim.engine.id);
+      const at = `${path}.trims[${String(i)}].engine`;
+      if (!engine) {
+        issues.push({ path: at, message: `No engine file for "${trim.engine.id}".` });
+      } else if (!engine.variants.some((v) => v.id === trim.engine.variant)) {
+        issues.push({
+          path: at,
+          message: `Engine "${engine.id}" has no variant "${trim.engine.variant}".`,
+        });
+      }
+    });
+  }
+  return issues;
+}
 
 /**
  * First-party files allowed in public/ without a manifest entry. Everything else
@@ -177,7 +261,11 @@ function checkManifest(manifest: AssetManifest, file: string, facts: FileFacts):
 export function validateData(files: readonly DataFile[], facts: FileFacts): ValidationReport {
   const issues: ValidationIssue[] = [];
   const counts: Record<string, number> = {};
+  const estimated: string[] = [];
+  const noAiFiles: string[] = [];
   const checkedFiles: string[] = [];
+  const cars: { path: string; car: Car }[] = [];
+  const engines: { path: string; engine: Engine }[] = [];
 
   for (const file of files) {
     const rule = SCHEMA_RULES.find((r) => r.test(file.path));
@@ -197,12 +285,23 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       }
       continue;
     }
+    if (rule.schema === CarSchema) cars.push({ path: file.path, car: result.data as Car });
+    if (rule.schema === EngineSchema) {
+      engines.push({ path: file.path, engine: result.data as Engine });
+    }
+    if (rule.schema !== AssetManifestSchema) {
+      collectConfidence(result.data, file.path, { counts, estimated });
+    }
     if (rule.schema === AssetManifestSchema) {
       const manifest = result.data as AssetManifest;
       issues.push(...checkManifest(manifest, file.path, facts));
       for (const asset of manifest.assets) {
         const key = `asset status ${asset.status}`;
         counts[key] = (counts[key] ?? 0) + 1;
+        if (asset.restrictions.noAi) {
+          counts['asset with NoAI clause'] = (counts['asset with NoAI clause'] ?? 0) + 1;
+          noAiFiles.push(...asset.files);
+        }
         if (asset.originConfidence) {
           const originKey = `asset origin ${asset.originConfidence}`;
           counts[originKey] = (counts[originKey] ?? 0) + 1;
@@ -210,5 +309,6 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       }
     }
   }
-  return { issues, checkedFiles, counts };
+  issues.push(...checkReferences(cars, engines));
+  return { issues, checkedFiles, counts, estimated, noAiFiles };
 }

@@ -1,0 +1,922 @@
+{
+  "$comment": "Toyota 2JZ-GE as fitted to the JZA80 Supra (stock-only, not a swap engine). Researched 2026-09-26. No JDM VVT-i variant: the Japanese Supra's NA engine never got VVT-i. Toyota's 1993 US Supra New Car Features and 1998 Supra Product Source (page scans on mkiv.com) back the US figures.",
+  "id": "2jz-ge",
+  "code": "2JZ-GE",
+  "manufacturer": "Toyota",
+  "family": "JZ",
+  "role": "stock-only",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 2997,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Grade table: engine code 2JZ-GE, 'Displacement(cm3) 2997'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'総排気量 2997cc' (total displacement)."
+      }
+    ]
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+        "accessed": "2026-09-26",
+        "title": "Toyota認定中古車 catalogue: Supra SZ (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'内径×行程 86.0mm×86.0mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+        "accessed": "2026-09-26",
+        "title": "Toyota認定中古車 catalogue: Supra SZ (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×86.0mm' (bore x stroke)."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Grade table: 2JZ-GE 'Engine type: In-line 6-cylinder, DOHC'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'種類 直列6気筒DOHC24バルブ' (type: inline-6 DOHC 24-valve)."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'種類 直列6気筒DOHC24バルブ': 24 valves on 6 cylinders = 4 per cylinder."
+      },
+      {
+        "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+        "accessed": "2026-09-26",
+        "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+        "note": "Text: '3,000 cc inline 6-cylinder DOHC 24-valve 225 PS unit ... or its twin-turbo version producing 280 PS'."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "belt",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "2JZ-GTE section: 'belt-driven dual overhead camshaft ... cast-iron block, aluminium cylinder head engine'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'Camshafts are made of specially cast steel and are driven by a timing belt.'"
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "cast-iron",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox 'Block: Cast iron'; 2JZ-GE section: 'aluminium head ... along with a cast-iron cylinder block'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The Toyota 2JZ-GE engine features a cast-iron block, aluminum cylinder head'."
+      }
+    ]
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-26",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox 'Head: Aluminium'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The cylinder head is made of a light, strong aluminum alloy'."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://mkiv.com/specifications/ncf/ncf93/ncf033.jpg",
+        "accessed": "2026-09-26",
+        "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GE Engine: Engine Specifications and Performance Curve, p. 33 (page scan hosted by mkiv.com)",
+        "note": "2JZ-GE column: 'Firing Order 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "Spec table: 'Firing order 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "Spec table: 'Firing order 1-5-3-6-2-4'."
+      }
+    ],
+    "note": "Toyota's 1993 Supra New Car Features prints the firing order in its 2JZ-GE specification table (p. 33); the two spec aggregators agree."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+        "accessed": "2026-09-26",
+        "title": "goo-net catalogue: Toyota Supra SZ (1993-05) (1000911)",
+        "note": "'燃料供給装置 EFI' (fuel supply: electronic fuel injection, port type)."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'L-type electronically-controlled, multiport sequential fuel injection (SFI) system'."
+      }
+    ]
+  },
+  "dryWeight": {
+    "value": 230,
+    "unit": "kg",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "Spec table: 'Weight 230 kg (507 lbs)'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "'Engine weight 595 lbs (270 kg) - 2JZ-GTE; 507 lbs (230 kg) - 2JZ-GE'."
+      }
+    ],
+    "note": "Two spec aggregators agree, but neither says what is included and they may share an origin; no Toyota figure was found. Speedway Motors gives about 498 lb (226 kg) for 'a complete 2JZ' without saying which version."
+  },
+  "dimensions": {
+    "length": {
+      "value": 820,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "'Engine Size (mm)': 2JZ-GE '820x680x680'."
+        }
+      ],
+      "note": "Axes not labelled by the source; length x width x height assumed from the order."
+    },
+    "width": {
+      "value": 680,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "2JZ-GE '820x680x680'."
+        }
+      ],
+      "note": "Axis order assumed (L x W x H)."
+    },
+    "height": {
+      "value": 680,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-26",
+          "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+          "note": "2JZ-GE '820x680x680'."
+        }
+      ],
+      "note": "Axis order assumed (L x W x H)."
+    }
+  },
+  "oilCapacity": {
+    "value": 5.2,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "http://mkiv.supras.org.nz/specs.htm",
+        "accessed": "2026-09-26",
+        "title": "Toyota Supra MKIV: MKIV Specifications (mkiv.supras.org.nz, NZ MKIV club reference site)",
+        "note": "Japanese specifications, 2JZ-GE column: 'Oil Capicity (L) 5.2'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+        "accessed": "2026-09-26",
+        "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "'5.2 l (5.5 qt) - 2JZ-GE Supra'."
+      }
+    ],
+    "note": "Neither source says whether this includes the filter."
+  },
+  "variants": [
+    {
+      "id": "jza80-jdm",
+      "name": "2JZ-GE, JDM Supra SZ/SZ-R, 1993-2002",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1993-05",
+          "to": "2002-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+            "accessed": "2026-09-26",
+            "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+            "note": "'Released date : 1993/ 5/24'; grade '3000 Twin Cam 24_SZ' with 2JZ-GE; 'production ended in August 2002'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M006G005/",
+            "accessed": "2026-09-26",
+            "title": "Car Sensor catalogue: Toyota Supra 3.0 SZ 5MT (1999-08 to 2002-08 build)",
+            "note": "Header '1999年8月～2002年8月生産モデル'; 2JZ-GE 225ps, 29/4800."
+          }
+        ]
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 10.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+            "note": "'圧縮比 10.0'. Same on the 1997-08 SZ (1000919) and 2001-09 SZ (1010965) pages."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+            "note": "'圧縮比 10.0'. Same on toyota.jp's 1997-08 SZ page (199708/1000919)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+            "note": "'過給機 なし' (supercharger/turbo: none)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+            "note": "'過給機 なし' (supercharger/turbo: none)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+            "note": "'過給機 なし' (supercharger/turbo: none)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+            "note": "'過給機 なし' (supercharger/turbo: none)."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%82%B9%E3%83%BC%E3%83%97%E3%83%A9",
+            "accessed": "2026-09-26",
+            "title": "トヨタ・スープラ (Japanese Wikipedia)",
+            "note": "Aug 1997 minor change: 'エンジンがVVT-i化された（NAの2JZ-GEは変更なし）' (the engine gained VVT-i; the NA 2JZ-GE was unchanged)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199708/1000919/",
+            "accessed": "2026-09-26",
+            "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1997-08) (1997-08) (toyota.jp, Toyota's own used-car site)",
+            "note": "1997-08 SZ still lists '225ps(165kW)/6000rpm', '29.0kg・m(284.4N・m)/ 4800rpm', '圧縮比 10.0', the same as 1993."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1010965/",
+            "accessed": "2026-09-26",
+            "title": "goo-net catalogue: Toyota Supra SZ 5MT (2001-09) (1010965)",
+            "note": "2001-09 SZ: '225ps(165kW)/6000rpm', '29.0kg・m(284N・m)/4800rpm', '圧縮比 10.0'."
+          }
+        ],
+        "note": "English Wikipedia's Supra article says both Japanese engines got VVT-i in 1997; Japanese Wikipedia says the NA engine did not, and every Toyota and catalogue spec page shows the NA rating and 10.0:1 compression unchanged to 2002 (VVT-i 2JZ-GEs elsewhere run 10.5:1). So no JDM VVT-i 2JZ-GE Supra variant exists; jza80-jdm-vvti was deliberately not created."
+      },
+      "output": {
+        "power": {
+          "value": 225,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+              "accessed": "2026-09-26",
+              "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+              "note": "SZ: 'Max. output kW(PS)/r.p.m. -/225/6000' (net)."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最高出力 225ps(165kW)/6000rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+              "note": "'最高出力 225ps(165kW)/6000rpm'."
+            }
+          ],
+          "note": "165 kW printed alongside agrees after conversion."
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60006850/index.html",
+              "accessed": "2026-09-26",
+              "title": "75 Years of Toyota: Vehicle Lineage, Supra (2nd generation in Japan, released 1993-05-24)",
+              "note": "'-/225/6000'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'225ps(165kW)/6000rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 29.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最大トルク 29.0kg・m(284.4N・m)/ 4800rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+              "note": "'最大トルク 29.0kg・m(284.4N・m)/4800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/toyota/supra/F002/M001G005/",
+              "accessed": "2026-09-26",
+              "title": "Car Sensor catalogue: Toyota Supra 3.0 SZ 5MT (1993-05 to 1994-07 build)",
+              "note": "'最大トルク/回転数 kg・m/rpm 29/4800'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199305/1000911/",
+              "accessed": "2026-09-26",
+              "title": "Toyota認定中古車 catalogue: Supra SZ 5MT (1993-05) (1993-05) (toyota.jp, Toyota's own used-car site)",
+              "note": "'29.0kg・m(284.4N・m)/ 4800rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000911/",
+              "accessed": "2026-09-26",
+              "title": "goo-net catalogue: Toyota Supra SZ 5MT (1993-05) (1000911)",
+              "note": "'29.0kg・m(284.4N・m)/4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      }
+    },
+    {
+      "id": "jza80-usdm",
+      "name": "2JZ-GE, US/Canada Supra (non-turbo), 1993-1997 (fixed cam timing)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "1993-05",
+          "to": "1997-09"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "Powertrain table: 2JZ-GE 220 hp, 'May 1993 – September 1997', 'Canada and United States'."
+          }
+        ],
+        "note": "US model years 1993-1997 (KBB lists 220 hp for 1994 and 1997)."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 10.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://mkiv.com/specifications/ncf/ncf93/ncf033.jpg",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Corporation: 1993 Toyota Supra New Car Features (applicable models JZA80 series, U.S.A.; foreword refers to Repair Manual RM343U1/U2), 3. Technical Description, Engine - 2JZ-GE Engine: Engine Specifications and Performance Curve, p. 33 (page scan hosted by mkiv.com)",
+            "note": "2JZ-GE column: 'Compression Ratio 10.0 : 1'."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/93/14.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: '93 Supra Product Source (dealer product guide), Specifications/Presentation, p. 13 (page scan hosted by mkiv.com)",
+            "note": "Supra column: 'Compression ratio 10.0:1'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'Compression ratio rating for 2JZ-GE without VVT-i system is 10.0:1, for the version with VVT-i, is 10.5:1.'"
+          }
+        ],
+        "note": "Toyota's US New Car Features (also the p. 256 spec table) and Product Source print 10.0:1 for the US 1993 engine, the same as the JDM 2JZ-GE."
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "'a naturally aspirated Toyota 2JZ-GE having a power output of 164 kW (220 hp) at 5,800 rpm'."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+            "accessed": "2026-09-26",
+            "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "Base 5-speed: 'Engine 6-Cyl, 3.0 Liter' (the turbo is listed separately as '6-Cyl, Turbo, 3.0 Liter')."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+            "accessed": "2026-09-26",
+            "title": "Toyota Supra (Wikipedia), A80 section",
+            "note": "Naturally aspirated 2JZ-GE."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+            "accessed": "2026-09-26",
+            "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "Non-turbo '6-Cyl, 3.0 Liter'."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "'1998 – VVT-i on non-turbo models' and 'Variable Valve Timing with intelligence adds five horsepower to the non-turbo engine, bringing it to 225' (so 1993-1997 had none)."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-26",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "VVT-i 'did not come to the 2JZ-GTE and the US-market 2JZ-GE engines until mid-1997 for the 1998 model year onwards'."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 220,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+              "accessed": "2026-09-26",
+              "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "Base 5-speed: 'Horsepower 220 @ 5800 RPM | Torque 210 @ 4800 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "Powertrain table: '220 hp', Canada and United States; text: '164 kW (220 hp) at 5,800 rpm'."
+            },
+            {
+              "url": "https://pressroom.toyota.com/supra-chronology/",
+              "accessed": "2026-09-26",
+              "title": "Supra Chronology (Toyota USA Newsroom)",
+              "note": "1998 VVT-i 'adds five horsepower to the non-turbo engine, bringing it to 225' (implies 220 before)."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 5800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+              "accessed": "2026-09-26",
+              "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'220 @ 5800 RPM'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'at 5,800 rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 210,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+              "accessed": "2026-09-26",
+              "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'Torque 210 @ 4800 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'210 lb⋅ft (285 N⋅m) at 4,800 rpm of torque'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.kbb.com/toyota/supra/1994/specs/",
+              "accessed": "2026-09-26",
+              "title": "1994 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'210 @ 4800 rpm'."
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Toyota_Supra",
+              "accessed": "2026-09-26",
+              "title": "Toyota Supra (Wikipedia), A80 section",
+              "note": "'at 4,800 rpm'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 6800,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.caranddriver.com/reviews/a23284697/1994-toyota-supra-mk4-2jz-sports-car/",
+            "accessed": "2026-09-26",
+            "title": "Car and Driver (March 1994 issue): 1994 Toyota Supra (base, 5-speed)",
+            "note": "'it purrs all the way to the 6800-rpm redline.'"
+          }
+        ],
+        "note": "Car and Driver's 1994 base-car test; no Toyota document or second test stating the non-turbo's redline was found. The fuel-cut rev limit was not found."
+      },
+      "notes": "Rating standard not printed by these sources; US ratings of the period are SAE net. Canada is not listed: Toyota's 1993 and 1997 New Car Features spec tables list Canadian Supras only as Turbo Sport Roof models, so no Canadian car used this engine as far as Toyota's documents show."
+    },
+    {
+      "id": "jza80-usdm-vvti",
+      "name": "2JZ-GE VVT-i, US Supra (non-turbo), 1998 model year",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "1997",
+          "to": "1998"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "'1998 – VVT-i on non-turbo models'; 'Due to the decline in the high-performance vehicle segment, Supra ceased production for the 1999 model year.'"
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+            "accessed": "2026-09-26",
+            "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "1998 model-year page lists a non-turbo 'Horsepower 225 @ 6000 RPM'."
+          }
+        ],
+        "note": "Sources give the 1998 model year only; production of 1998 models started in the second half of 1997, so the period is stored by year. Canada had dropped the Supra by then (Wikipedia)."
+      },
+      "fittedTo": ["JZA80"],
+      "compressionRatio": {
+        "value": 10.5,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.engine-specs.net/toyota/2jz-ge.html",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ-GE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'...for the version with VVT-i, is 10.5:1.'"
+          },
+          {
+            "url": "https://www.carsales.com.au/research/lexus/gs/1998/gs300/",
+            "accessed": "2026-09-26",
+            "title": "carsales.com.au catalogue: 1998 Lexus GS300 (Australia) specifications",
+            "note": "'Camshaft DOHC with VVT', 'Compression ratio 10.5', 'Engine Code 2JZ-GE', 'Power 168.0kW @ 6000rpm', 'Torque 298Nm @ 4000rpm' (a different car with the same VVT-i 2JZ-GE rating; context only)."
+          },
+          {
+            "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+            "accessed": "2026-09-26",
+            "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+            "note": "Normally Aspirated column: 'Horsepower (bhp @ rpm) 225 @ 6000', 'Torque (lb-ft @ rpm) 220 @ 4000', 'Compression Ratio 10.0:1', engine '3.0-L I-6 DOHC 24-V EFI with variable valve timing'."
+          },
+          {
+            "url": "https://xr793.com/wp-content/uploads/2022/01/1998-Lexus-GS-Specs.pdf",
+            "accessed": "2026-09-26",
+            "title": "Lexus Knowledge Center: 1998 Lexus GS Specifications, p.1 (GS 300 engine)",
+            "note": "GS 300 engine: \"In-line 6, iron block, aluminum head / 3.0 liters (183 cubic inches) / Twin cam, four valves per cylinder, with continuously Variable Valve Timing with intelligence (VVT-i) / 10.5:1 / 225 hp @ 6,000 / 220 lb-ft @ 4,000\". A Lexus (Toyota) document for the same VVT-i 2JZ-GE at the identical rating as the 1998 US Supra non-turbo."
+          }
+        ],
+        "note": "Sources disagree. Toyota's 1998 Supra Product Source prints 10.0:1 for the 1998 non-turbo. Lexus's own 1998 GS specification sheet gives 10.5:1 for the GS 300's VVT-i 2JZ-GE, which carries the identical 225 hp @ 6,000 / 220 lb-ft @ 4,000 rating, and engine-specs.net gives 10.5:1 for VVT-i 2JZ-GEs in general. 10.5 is kept because the Product Source row looks carried over from the pre-VVT-i engine (10.0:1), but it stays single-source until a 1998 Supra repair manual or New Car Features page settles it."
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "'Variable Valve Timing with intelligence adds five horsepower to the non-turbo engine'."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+            "accessed": "2026-09-26",
+            "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "Non-turbo 'Engine 6-Cyl, 3.0 Liter'."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "Non-turbo engine."
+          },
+          {
+            "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+            "accessed": "2026-09-26",
+            "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+            "note": "Non-turbo '6-Cyl, 3.0 Liter'."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://pressroom.toyota.com/supra-chronology/",
+            "accessed": "2026-09-26",
+            "title": "Supra Chronology (Toyota USA Newsroom)",
+            "note": "'Variable Valve Timing with intelligence adds five horsepower to the non-turbo engine, bringing it to 225.'"
+          },
+          {
+            "url": "https://www.motorreviewer.com/engine.php?engine_id=147",
+            "accessed": "2026-09-26",
+            "title": "Toyota 2JZ GE/GTE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+            "note": "'In 1997, Toyota released the second generation in which engineers implemented VVT-i for the intake valve timing'."
+          }
+        ],
+        "note": "VVT-i is Toyota's continuously variable intake-cam phasing (Wikipedia's JZ article calls it a 'continuously variable valve timing mechanism')."
+      },
+      "output": {
+        "power": {
+          "value": 225,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998, p. 2 (page scan hosted by mkiv.com)",
+              "note": "Non-Turbo Models: 'Variable valve timing for improved performance', 'Horsepower improved from 220 @ 5800 to 225 @ 6000 rpm', 'Torque improved from 210 @ 4800 to 220 @ 4000 rpm'."
+            },
+            {
+              "url": "https://pressroom.toyota.com/supra-chronology/",
+              "accessed": "2026-09-26",
+              "title": "Supra Chronology (Toyota USA Newsroom)",
+              "note": "'...bringing it to 225.'"
+            },
+            {
+              "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+              "accessed": "2026-09-26",
+              "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "Non-turbo automatic: 'Horsepower 225 @ 6000 RPM | Torque 220 @ 4000 rpm'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Normally Aspirated column: 'Horsepower (bhp @ rpm) 225 @ 6000', 'Torque (lb-ft @ rpm) 220 @ 4000', 'Compression Ratio 10.0:1', engine '3.0-L I-6 DOHC 24-V EFI with variable valve timing'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998, p. 2 (page scan hosted by mkiv.com)",
+              "note": "Non-Turbo Models: 'Variable valve timing for improved performance', 'Horsepower improved from 220 @ 5800 to 225 @ 6000 rpm', 'Torque improved from 210 @ 4800 to 220 @ 4000 rpm'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/98_brochure/index.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+              "note": "'3.0-liter twin-cam 24-valve EFI inline 6-cylinder with VVT-i (Variable Valve Timing); 225 hp @ 6,000 rpm; 220 lb.-ft. @ 4,000 rpm: Standard on Supra.'"
+            },
+            {
+              "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+              "accessed": "2026-09-26",
+              "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'225 @ 6000 RPM'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 220,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Normally Aspirated column: 'Horsepower (bhp @ rpm) 225 @ 6000', 'Torque (lb-ft @ rpm) 220 @ 4000', 'Compression Ratio 10.0:1', engine '3.0-L I-6 DOHC 24-V EFI with variable valve timing'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998, p. 2 (page scan hosted by mkiv.com)",
+              "note": "Non-Turbo Models: 'Variable valve timing for improved performance', 'Horsepower improved from 220 @ 5800 to 225 @ 6000 rpm', 'Torque improved from 210 @ 4800 to 220 @ 4000 rpm'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/98_brochure/index.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+              "note": "'3.0-liter twin-cam 24-valve EFI inline 6-cylinder with VVT-i (Variable Valve Timing); 225 hp @ 6,000 rpm; 220 lb.-ft. @ 4,000 rpm: Standard on Supra.'"
+            },
+            {
+              "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+              "accessed": "2026-09-26",
+              "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'Torque 220 @ 4000 rpm'."
+            }
+          ],
+          "note": "Toyota's 1998 Product Source and brochure and KBB agree; Toyota gives lb-ft only."
+        },
+        "torqueRpm": {
+          "value": 4000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/07.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Specifications, p. 7 (page scan hosted by mkiv.com)",
+              "note": "Normally Aspirated column: 'Horsepower (bhp @ rpm) 225 @ 6000', 'Torque (lb-ft @ rpm) 220 @ 4000', 'Compression Ratio 10.0:1', engine '3.0-L I-6 DOHC 24-V EFI with variable valve timing'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/product_source/98/02.JPG",
+              "accessed": "2026-09-26",
+              "title": "Toyota Motor Sales U.S.A.: 1998 Supra Product Source (dealer product guide), Model Line-Up: New for 1998, p. 2 (page scan hosted by mkiv.com)",
+              "note": "Non-Turbo Models: 'Variable valve timing for improved performance', 'Horsepower improved from 220 @ 5800 to 225 @ 6000 rpm', 'Torque improved from 210 @ 4800 to 220 @ 4000 rpm'."
+            },
+            {
+              "url": "https://mkiv.com/specifications/98_brochure/index.html",
+              "accessed": "2026-09-26",
+              "title": "Toyota USA 1998 Supra and Supra Turbo brochure, specifications text (transcribed on mkiv.com)",
+              "note": "'3.0-liter twin-cam 24-valve EFI inline 6-cylinder with VVT-i (Variable Valve Timing); 225 hp @ 6,000 rpm; 220 lb.-ft. @ 4,000 rpm: Standard on Supra.'"
+            },
+            {
+              "url": "https://www.kbb.com/toyota/supra/1998/specs/",
+              "accessed": "2026-09-26",
+              "title": "1998 Toyota Supra Specs (Kelley Blue Book)",
+              "note": "'220 @ 4000 rpm'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "notes": "Exists only in the US: Toyota USA adds VVT-i to the 1998 non-turbo, while the Japanese Supra's 2JZ-GE never got it. Toyota's 1998 Product Source confirms the 1998 non-turbo (models 2396 and 2394) and makes the 4-speed ECT-i automatic its only gearbox (the 5-speed models were deleted). English Wikipedia's claim that the NA engine was dropped in the US for 1998 is therefore wrong. The 1998 Turbo was not sold in California-emissions states."
+    }
+  ]
+}

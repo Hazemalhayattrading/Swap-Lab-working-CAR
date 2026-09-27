@@ -9,9 +9,10 @@ import { SourceSchema } from './source';
  * 1. The licence enum only holds licences the rule allows (no NC, ND or SA).
  * 2. The licence URL must be the canonical page for that licence, so an NC deed
  *    can't sit next to a CC-BY label.
- * 3. Restrictions that ride on top of an allowed licence (a NoAI clause,
- *    editorial-only use, a game rip, an AI-generated model) must each be
- *    explicitly attested `false` from the listing page.
+ * 3. Restrictions that ride on top of an allowed licence (editorial-only use,
+ *    a game rip, an AI-generated model) must each be explicitly attested
+ *    `false` from the listing page. A NoAI clause is recorded either way, and
+ *    is only accepted on CC0 or CC-BY assets (owner's decision, 2026-09-26).
  */
 export const LicenceSchema = z.enum([
   'CC0-1.0',
@@ -61,11 +62,15 @@ export const AssetStatusSchema = z.enum([
 ]);
 
 /**
- * Each flag must be checked on the listing page and recorded as `false`.
- * An asset where any of these is true can't be used (CLAUDE.md rule 5).
+ * Each flag must be checked on the listing page and recorded.
+ * `editorialOnly`, `gameRip` and `aiGenerated` must be `false`: an asset with
+ * any of them can't be used (CLAUDE.md rule 5).
+ * `noAi` may be `true` on a CC0 or CC-BY asset, because we never train AI on
+ * assets. Those files are only processed by scripts and never shown to an AI
+ * model (CLAUDE.md rule 5); validate-data lists them so every session knows.
  */
 export const RestrictionsSchema = z.strictObject({
-  noAi: z.literal(false),
+  noAi: z.boolean(),
   editorialOnly: z.literal(false),
   gameRip: z.literal(false),
   aiGenerated: z.literal(false),
@@ -122,6 +127,14 @@ export const AssetSchema = z
           message: `Licence URL doesn't match ${asset.licence}; expected it to start with ${prefixes.join(' or ')}.`,
         });
       }
+    }
+    if (asset.restrictions.noAi && !asset.licence.startsWith('CC')) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['restrictions', 'noAi'],
+        message:
+          'A NoAI clause is only accepted on CC0 or CC-BY assets (CLAUDE.md rule 5, owner decision 2026-09-26).',
+      });
     }
     if (asset.origin && !asset.originConfidence) {
       ctx.addIssue({
