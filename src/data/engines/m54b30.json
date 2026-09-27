@@ -1,0 +1,1126 @@
+{
+  "$comment": "BMW M54B30 as fitted to the E46 330i / 330Ci (stock-only). Researched 2026-09-27. Primary sources: BMW NA technical training ST034 (E46), ST036 (X5 M54) and ST045 (Z4 M54) on archive.org; BMW AG and BMW NA press spec tables; ETK via bmwfans.info. The US Performance Package (ZHP) is a separately rated variant.",
+  "id": "m54b30",
+  "code": "M54B30",
+  "manufacturer": "BMW",
+  "family": "M54",
+  "role": "stock-only",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 2979,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+        "note": "Technical Data: \"Displacement - cm3 2494 2979\" (M54B25, M54B30)."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+        "note": "\"Displacement, cc/cu in. 2979/182\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+        "accessed": "2026-09-27",
+        "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+        "note": "Technische Daten, 330i columns: \"Hubraum | cm³ | ... | 2 979\"."
+      }
+    ]
+  },
+  "bore": {
+    "value": 84.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+        "note": "Technical Data: \"Bore/stroke - mm 84 x 75 84 x 89.6\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+        "note": "\"Bore x stroke, mm/in. 84.0 x 89.6 / 3.31 x 3.53\"."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 89.6,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+        "note": "Technical Data: \"Bore/stroke - mm 84 x 75 84 x 89.6\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+        "note": "\"Bore x stroke, mm/in. 84.0 x 89.6 / 3.31 x 3.53\"."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+        "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+      },
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+        "note": "\"Double VANOS consists of the following parts: • Intake and exhaust camshafts with helical gear insert\"."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+        "note": "Technical Data: \"Valves per cylinder 4 4\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+        "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+        "note": "VANOS control: \"The “initial” timing is set by gear positioning (refer to the Repair Instructions for details) and the chain tensioner.\""
+      },
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: \"BMW M54B30 - Engine Specs\" (spec aggregator)",
+        "note": "\"The aluminum cylinder head uses chain-driven double overhead camshafts (DOHC) and four valves per cylinder (24 valves in total)\"."
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: BMW M54B30 - Engine Specs (AGGREGATOR)",
+        "note": "\"The BMW M54B30 engine features a cast-aluminum alloy cylinder block with cast-iron cylinder liners.\""
+      },
+      {
+        "url": "https://www.wersis.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "wersis.net: BMW M54B30 (3.0 L) engine specs and service data (AGGREGATOR)",
+        "note": "\"Cast-aluminum alloy cylinder block with cast-iron cylinder liners\""
+      },
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW NA Technical Training ST034 E46 Complete Vehicle \"9 Engines\", pp.8-9 (M52TU) and pp.22-23 (M54); p.8 (M52TU crankcase: \"made from the same aluminum alloy as the crankcase for the Z3 Roadster 2.8 liter M 52 engine\")",
+        "note": "\"The engine has cast iron liners as the M52 engine in the Z3.\""
+      }
+    ],
+    "note": "Aluminium crankcase with cast-iron cylinder liners. BMW's training states it for the M52TU, the M54's direct predecessor, and lists no block change for the M54; the M54-specific statements are aggregators."
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: \"BMW M54B30 - Engine Specs\" (spec aggregator)",
+        "note": "\"The aluminum cylinder head uses chain-driven double overhead camshafts (DOHC)\"."
+      }
+    ],
+    "note": "Aggregator only; no BMW document found that names the head material."
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+        "note": "Technical Data: \"Firing order 1 5 3 6 2 4 1 5 3 6 2 4\"."
+      },
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: \"BMW M54B30 - Engine Specs\" (spec aggregator)",
+        "note": "\"Firing order | 1-5-3-6-2-4\"."
+      }
+    ]
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+        "note": "\"INJECTION VALVES - The diameter of the injection pintle has increased slightly for the increased displacement of the 3 liter engine.\""
+      },
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+        "note": "\"The M54 engine with MS 43.0 control uses the non return fuel rail system introduced on the M 62 TU engine.\""
+      }
+    ],
+    "note": "Sequential port injection from a returnless fuel rail; both BMW NA training manuals are on archive.org (one site)."
+  },
+  "dryWeight": {
+    "value": 170,
+    "unit": "kg",
+    "confidence": "estimated",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST501%20New%20Engine%20Technology%20%28Archive%201%29/04_N52%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW NA Technical Training ST501 (Archive 1) \"N52 Engine\"",
+        "note": "\"Compared to the M54 at 1 .Okg/kW, the N52 has been further reduced to 0.82kg/kW.\""
+      },
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST501%20New%20Engine%20Technology%20%28Archive%201%29/04_N52%20Engine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW NA Technical Training ST501 (Archive 1) \"N52 Engine\"",
+        "note": "\"The new construction configuration allows a weight savings of 10kg (22 lbs.) over the previous generation of six cylinder engines.\""
+      },
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: BMW M54B30 - Engine Specs (AGGREGATOR)",
+        "note": "\"Weight 130 kg (286.6 lbs)\""
+      }
+    ],
+    "method": "No BMW weight for the M54 was found. BMW's N52 training gives the M54's power-to-weight as \"1.0kg/kW\" (rounded); x 170 kW = about 170 kg. Cross-check: N52B30 0.82 kg/kW x 190 kW = about 156 kg, plus the stated 10 kg saving = about 166 kg. The rounding of \"1.0\" alone allows roughly 161-179 kg. It assumes the ratio refers to the 3.0 L M54 and BMW's usual engine-weight definition (not stated). engine-specs.net's 130 kg is inconsistent with BMW's ratios and was not used."
+  },
+  "bellhousing": {
+    "value": "bmw-m54-s54",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/330Ci-M54/browse/manual_transmission/manual_transmission_s5d_z/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S5D...Z, E46 330Ci M54 USA",
+        "note": "\"Rmfd-5 speed gearbox 1 i 23 00 7 503 993 S5D 320Z - THCH to Mar ' 03 1 35 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/Z3-Coupe/USA/Z3_3.0i-M54/browse/manual_transmission/manual_transmission_s5d_z/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S5D...Z, Z3 3.0i M54 USA",
+        "note": "\"Rmfd-5 speed gearbox 1 i 23 00 7 503 993 S5D 320Z - THCH 1 35 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/330Ci-M54/browse/manual_transmission/manual_transmission_gs6_37bz_dz/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual transmission GS6-37BZ/DZ, E46 330Ci M54 USA",
+        "note": "\"Rmfd-6 speed gearbox 1 i 23 00 7 532 498 GS6-37BZ - THEG from Mar ' 03 1 43.9 kg\""
+      }
+    ],
+    "note": "The ETK lists the same gearbox part numbers behind the M54 and the S54 (ZF S5D 320Z 23 00 7 503 993 in the 330Ci and the Z3 M; GS6-37BZ in the 330Ci from 03/2003 and the Z4 M), so they share the bell pattern. One ETK mirror; no BMW text names the pattern."
+  },
+  "oilCapacity": {
+    "value": 6.5,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/details/manualzilla-id-7304367",
+        "accessed": "2026-09-27",
+        "title": "BMW 3 Series Sedan Owner's Manual (320i/325i/325xi/330i/330xi), Part No. 01 41 0 156 168 (c)09/01, p.143 Capacities",
+        "note": "\"Engine oil and filter change quarts (liters) 320i, 325i, 330i: BMW High Performance approx. 6.9 (approx. 6.5)\""
+      },
+      {
+        "url": "https://www.engine-specs.net/bmw/m54b30.html",
+        "accessed": "2026-09-27",
+        "title": "engine-specs.net: BMW M54B30 - Engine Specs (AGGREGATOR)",
+        "note": "\"Engine oil capacity (Refill capacity) ~ 6.5 L (6.87 US. qt, 5.72 Imp. qt.)\""
+      }
+    ],
+    "note": "Oil and filter change, rear-drive 330i. The 330xi's pan takes about 7.5 L."
+  },
+  "variants": [
+    {
+      "id": "e46-eudm",
+      "name": "M54B30, E46 330i / 330Ci (Europe)",
+      "markets": ["EUDM", "UKDM"],
+      "period": {
+        "value": {
+          "from": "2000-06",
+          "to": "2006-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/12%20Automatic%20Transmission%20Internet.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW NA Technical Training ST034 E46 Complete Vehicle, module \"12 Automatic Transmission\"",
+            "note": "\"330i/Ci/Cic: from 6/00, 325i/Ci/Cic: from 9/00\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW NA Technical Training ST034 E46 Complete Vehicle, module \"9 Engines\", M54 section p. 21-22",
+            "note": "\"Production Date: M54 B30: From 6/00 M54 B25: From 9/00\""
+          },
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46-Cabrio/Europe/330Ci-M54/2006",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: production-month selector for E46-Cabrio Europe 330Ci-M54 2006",
+            "note": "\"<li id=\"month_8\" ><a href=\"https://bmwfans.info/parts-catalog/E46-Cabrio/Europe/330Ci-M54/aug2006\" rel=\"nofollow\" onclick=\"changeMonth(this,'8'); return false;\">August</a></li>\""
+          }
+        ],
+        "note": "From the start of 330i production (06/2000) to the last 330Ci convertible (ETK production-month filter, 2006-08)."
+      },
+      "fittedTo": ["E46"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\". (no forced induction)"
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: \"Design 6-cylinder/in-line engine\" (no forced induction)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: naturally aspirated, no intercooler listed."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 10.2,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+            "note": "M54 section: \"COMPRESSION ... 10.2:1\" (M54B30)."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+            "accessed": "2026-09-27",
+            "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+            "note": "Technische Daten, 330i columns: \"Verdichtung | :1 | ... | 10,2\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Compression ratio 10.2.1\" (sic, 10.2:1)."
+          }
+        ]
+      },
+      "cams": {
+        "intakeLift": {
+          "value": 9.7,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+              "note": "M54 mechanical changes: \"CAM SHAFT - The camshaft for the 3 liter M 54 is modified with more lift (9.7 mm) and new valve springs to accommodate the increased lift.\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+              "note": "\"CAMSHAFT - The camshaft for the 3 liter M54 is modified with more lift (9.7 mm) and new valve springs to accommodate the increased lift.\""
+            }
+          ],
+          "note": "BMW says \"the camshaft\" without naming intake or exhaust; stored as the intake lift only. Durations are not published."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+            "note": "\"With the double VANOS system, the valve timing is changed on both the intake and the exhaust camshafts.\" ... \"The double VANOS system is “fully variable”.\""
+          }
+        ],
+        "note": "Double VANOS, hydraulic, on both camshafts."
+      },
+      "output": {
+        "power": {
+          "value": 170,
+          "unit": "kW",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0005998DE/22821",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: \"BMW Automobilprogramm 2002\" (Modellprogramm 2002, Word attachment; page https://www.press.bmwgroup.com/deutschland/article/detail/T0005998DE/modellprogramm-2002), Technische Daten der Modelle",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment, footer 2/2003; page https://www.press.bmwgroup.com/deutschland/article/detail/T0006219DE/pressemappe:-die-3er-baureihe-im-modelljahr-2003), chapter 7 Technische Daten",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+              "note": "\"Power output - kW/HP 141/191 170/231 at engine speed (rpm) 6000 5900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST034 E46 Complete Vehicle, module \"9 Engines\", M54 section p. 21-22",
+              "note": "\"HORSE POWER M54B30 231@5900RPM\""
+            }
+          ],
+          "note": "231 PS. BMW AG's tables print no rating standard; they list 87-98 RON fuel, and BMW quotes performance on 98 RON."
+        },
+        "powerRpm": {
+          "value": 5900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0005998DE/22821",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: \"BMW Automobilprogramm 2002\" (Modellprogramm 2002, Word attachment; page https://www.press.bmwgroup.com/deutschland/article/detail/T0005998DE/modellprogramm-2002), Technische Daten der Modelle",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment, footer 2/2003; page https://www.press.bmwgroup.com/deutschland/article/detail/T0006219DE/pressemappe:-die-3er-baureihe-im-modelljahr-2003), chapter 7 Technische Daten",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+              "note": "\"Power output - kW/HP 141/191 170/231 at engine speed (rpm) 6000 5900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST034 E46 Complete Vehicle, module \"9 Engines\", M54 section p. 21-22",
+              "note": "\"HORSE POWER M54B30 231@5900RPM\""
+            }
+          ]
+        },
+        "torque": {
+          "value": 300,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0005998DE/22821",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: \"BMW Automobilprogramm 2002\" (Modellprogramm 2002, Word attachment; page https://www.press.bmwgroup.com/deutschland/article/detail/T0005998DE/modellprogramm-2002), Technische Daten der Modelle",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment, footer 2/2003; page https://www.press.bmwgroup.com/deutschland/article/detail/T0006219DE/pressemappe:-die-3er-baureihe-im-modelljahr-2003), chapter 7 Technische Daten",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+              "note": "\"Torque - Nm 245 300 at engine speed (rpm) 3500 3500\""
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0005998DE/22821",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: \"BMW Automobilprogramm 2002\" (Modellprogramm 2002, Word attachment; page https://www.press.bmwgroup.com/deutschland/article/detail/T0005998DE/modellprogramm-2002), Technische Daten der Modelle",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+              "accessed": "2026-09-27",
+              "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment, footer 2/2003; page https://www.press.bmwgroup.com/deutschland/article/detail/T0006219DE/pressemappe:-die-3er-baureihe-im-modelljahr-2003), chapter 7 Technische Daten",
+              "note": "\"Leistung | kW/PS | 125/170 | 141/192 | 170/231 | | | bei Drehzahl | min–1 | 6 100 | 6 000 | 5 900 | | | Drehmoment | Nm | 210 | 245 | 300 | | | bei Drehzahl | min–1 | 3 500 | 3 500 | 3 500 | |\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+              "note": "\"Torque - Nm 245 300 at engine speed (rpm) 3500 3500\""
+            }
+          ]
+        },
+        "standard": "unknown"
+      },
+      "revLimit": {
+        "value": 6500,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+            "note": "\"Cut-off speed - rpm 6500 6500\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesConvertible_2006.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America brochure \"BMW 2006 3 Series Convertible\" ((c)2006 BMW of North America), Technical Data p. 13 / Packages p. 8",
+            "note": "\"the redline has been increased from 6500 to 6800 rpm.\""
+          }
+        ],
+        "note": "BMW's training calls 6,500 rpm the \"cut-off speed\"; the 2006 US brochure calls it the redline."
+      },
+      "ecu": {
+        "value": "Siemens MS43",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+            "accessed": "2026-09-27",
+            "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+            "note": "Technische Daten, 330i columns: \"Motorsteuerung | | MS43\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Engine-management system Siemens MS 43 with knock control (2 sensors); variable valve timing, electronic throttle system, dual resonance intake system\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+            "note": "M54 section: \"The M54 engine with MS 43.0 control uses the non return fuel rail system\"."
+          }
+        ],
+        "note": "The Z4 3.0i's M54B30 uses Siemens MS45.0 (ST045); the E46 kept MS43."
+      },
+      "notes": "European 330i sedan and Touring, 330Ci coupe and convertible. Rating standard not printed by BMW AG (European ratings of the period were normally to 80/1269/EEC, but no BMW document here says so)."
+    },
+    {
+      "id": "e46-usdm",
+      "name": "M54B30, E46 330i / 330Ci (USA)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2000-06",
+          "to": "2006-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0021977EN_US/41265",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: Press Kit MY 2001 BMW 3 Series (15 Aug 2000), \"MY_2001_3_Series_Story\"",
+            "note": "\"Production of the 330 models began in June 2000; they are already available at BMW Centers across the U.S.\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW NA Technical Training ST034 E46 Complete Vehicle, module \"9 Engines\", M54 section p. 21-22",
+            "note": "\"Production Date: M54 B30: From 6/00 M54 B25: From 9/00\""
+          },
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46-Cabrio/USA/330Ci-M54/2006",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: production-month selector for E46-Cabrio USA 330Ci-M54 2006",
+            "note": "\"<li id=\"month_8\" ><a href=\"https://bmwfans.info/parts-catalog/E46-Cabrio/USA/330Ci-M54/aug2006\" rel=\"nofollow\" onclick=\"changeMonth(this,'8'); return false;\">August</a></li>\""
+          }
+        ],
+        "note": "MY2001 production from June 2000 (BMW NA) to the last US 330Ci convertible (ETK, 2006-08)."
+      },
+      "fittedTo": ["E46"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\". (no forced induction)"
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: \"Design 6-cylinder/in-line engine\" (no forced induction)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: naturally aspirated, no intercooler listed."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 10.2,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+            "note": "M54 section: \"COMPRESSION ... 10.2:1\" (M54B30)."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+            "accessed": "2026-09-27",
+            "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+            "note": "Technische Daten, 330i columns: \"Verdichtung | :1 | ... | 10,2\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Compression ratio 10.2.1\" (sic, 10.2:1)."
+          }
+        ]
+      },
+      "cams": {
+        "intakeLift": {
+          "value": 9.7,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+              "note": "M54 mechanical changes: \"CAM SHAFT - The camshaft for the 3 liter M 54 is modified with more lift (9.7 mm) and new valve springs to accommodate the increased lift.\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+              "note": "\"CAMSHAFT - The camshaft for the 3 liter M54 is modified with more lift (9.7 mm) and new valve springs to accommodate the increased lift.\""
+            }
+          ],
+          "note": "BMW says \"the camshaft\" without naming intake or exhaust; stored as the intake lift only. Durations are not published."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+            "note": "\"With the double VANOS system, the valve timing is changed on both the intake and the exhaust camshafts.\" ... \"The double VANOS system is “fully variable”.\""
+          }
+        ],
+        "note": "Double VANOS, hydraulic, on both camshafts."
+      },
+      "output": {
+        "power": {
+          "value": 225,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST036 X5 Complete Vehicle, \"03 M54 Engine\" (rev. 6/2000)",
+              "note": "\"HORSE POWER 225@5900RPM\""
+            }
+          ],
+          "note": "BMW NA prints no rating standard; US ratings of the period are SAE net."
+        },
+        "powerRpm": {
+          "value": 5900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW NA Technical Training ST036 X5 Complete Vehicle, \"03 M54 Engine\" (rev. 6/2000)",
+              "note": "\"HORSE POWER 225@5900RPM\""
+            }
+          ],
+          "note": "BMW NA's E39 training quotes 225 hp at 6000 rpm for the 530i; every E46 document says 5900."
+        },
+        "torque": {
+          "value": 214,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "revLimit": {
+        "value": 6500,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW NA Technical Training ST045 Z4 Complete Vehicle, \"03 E85 M54 Engine\", Technical Data p. 3 (Z4 3.0i M54B30)",
+            "note": "\"Cut-off speed - rpm 6500 6500\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesConvertible_2006.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America brochure \"BMW 2006 3 Series Convertible\" ((c)2006 BMW of North America), Technical Data p. 13 / Packages p. 8",
+            "note": "\"the redline has been increased from 6500 to 6800 rpm.\""
+          }
+        ],
+        "note": "BMW's training calls 6,500 rpm the \"cut-off speed\"; the 2006 US brochure calls it the redline."
+      },
+      "ecu": {
+        "value": "Siemens MS43",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+            "accessed": "2026-09-27",
+            "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+            "note": "Technische Daten, 330i columns: \"Motorsteuerung | | MS43\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Engine-management system Siemens MS 43 with knock control (2 sensors); variable valve timing, electronic throttle system, dual resonance intake system\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+            "note": "M54 section: \"The M54 engine with MS 43.0 control uses the non return fuel rail system\"."
+          }
+        ],
+        "note": "The Z4 3.0i's M54B30 uses Siemens MS45.0 (ST045); the E46 kept MS43."
+      },
+      "notes": "US 330i sedan, 330Ci coupe and convertible (not the ZHP Performance Package; see e46-usdm-zhp)."
+    },
+    {
+      "id": "e46-usdm-zhp",
+      "name": "M54B30, E46 330i / 330Ci Performance Package ZHP (USA)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2003-03",
+          "to": "2006-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0022155EN_US/bmw-introduces-the-330i-performance-package?language=en_US",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: \"BMW Introduces the 330i Performance Package\" (13 Dec 2002)",
+            "note": "\"Production of the 330i Performance Package will begin in March 2003 with the first cars arriving at BMW centers in April.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0018360EN_US/36187",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: \"BMW 3 Series for 2004\" kit (8 Oct 2003), story text (031008_3_Series_Text)",
+            "note": "\"This dazzling package, introduced in March ’03, takes the 330i Sedan to its highest level of sportiness ever. Developed by BMW M, it includes very extensive enhancements to performance, roadability, exterior design and interior features. Originally offered only in combination with the 6-speed manual transmission, this Package is now also available with the 5-speed STEPTRONIC automatic; it is not yet offered with the new Sequential Manual Gearbox.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0022232EN_US/performance-package-now-available-on-330i-coupes-and-convertibles?language=en_US",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: \"Performance Package now available on 330i Coupes and Convertibles\" (4 Dec 2003)",
+            "note": "\"originally introduced on the 330i Sedan in January 2003, will make its debut on the 2004 330Ci Coupe and Convertible at the Los Angeles International Auto Show on December 29th, 2003.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34837",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Description\"",
+            "note": "\"This dazzling Package was introduced during the ’03 model year on the 330i Sedan, then made available on the 330Ci Coupe and Convertible in ’04.\""
+          },
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46-Cabrio/USA/330Ci-M54/2006",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: production-month selector for E46-Cabrio USA 330Ci-M54 2006",
+            "note": "\"<li id=\"month_8\" ><a href=\"https://bmwfans.info/parts-catalog/E46-Cabrio/USA/330Ci-M54/aug2006\" rel=\"nofollow\" onclick=\"changeMonth(this,'8'); return false;\">August</a></li>\""
+          }
+        ],
+        "note": "330i sedan ZHP from March 2003 production; 330Ci coupe and convertible ZHP for MY2004-2006 (to the last convertible, ETK 2006-08). US only."
+      },
+      "fittedTo": ["E46"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\". (no forced induction)"
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: \"Design 6-cylinder/in-line engine\" (no forced induction)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST045, Z4 Complete Vehicle, \"E85 M54 Engine\", technical data p. 3 (PDF on archive.org)",
+            "note": "Technical Data: naturally aspirated, no intercooler listed."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 10.2,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST034, E46 Complete Vehicle, module \"Engines\" (M52TU and M54), pp. 8-25 (PDF on archive.org)",
+            "note": "M54 section: \"COMPRESSION ... 10.2:1\" (M54B30)."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006219DE/23207",
+            "accessed": "2026-09-27",
+            "title": "BMW AG PressClub Deutschland: Pressemappe \"Die 3er Baureihe im Modelljahr 2003\" (Word attachment), chapter 7 \"Technische Daten\"",
+            "note": "Technische Daten, 330i columns: \"Verdichtung | :1 | ... | 10,2\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Compression ratio 10.2.1\" (sic, 10.2:1)."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "Engine type: \"DOHC inline 24-valve 6-cylinder, Double VANOS steplessly variable valve timing\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST036, X5 Complete Vehicle, \"M54 Engine\" (initial print 02/2000, revised 6/2000), pp. 2-4 and 32 (PDF on archive.org)",
+            "note": "\"With the double VANOS system, the valve timing is changed on both the intake and the exhaust camshafts.\" ... \"The double VANOS system is “fully variable”.\""
+          }
+        ],
+        "note": "Double VANOS, hydraulic, on both camshafts."
+      },
+      "output": {
+        "power": {
+          "value": 235,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2005.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2005 3 Series Sedan\" ((c)2004 BMW AG), Technical Data p. 14-15",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ],
+          "note": "BMW NA's 10/2003 spec sheet prints \"(330i ZHP: 225 @ 5900)\", an evident typo; every other BMW document says 235."
+        },
+        "powerRpm": {
+          "value": 5900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2005.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2005 3 Series Sedan\" ((c)2004 BMW AG), Technical Data p. 14-15",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ]
+        },
+        "torque": {
+          "value": 222,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0018360EN_US/36193",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: \"BMW 3 Series for 2004\" kit (8 Oct 2003), \"2004 BMW 330 Models Specifications\" (031008_3_Series_330i_Specifications)",
+              "note": "\"Power @ rpm, hp 225 @ 5900 1 (330i ZHP: 225 @ 5900) Torque @ rpm, lb-ft. 214 @ 3500 1 (330i ZHP: 222 @ 3500)\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+              "note": "\"Nominal output/rpm hp 184/6000 184/6000 225/5900 [235/5900] 225/5900 Max torque/rpm lb-ft 175/3500 175/3500 214/3500 [222/3500] 214/3500\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0018360EN_US/36193",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: \"BMW 3 Series for 2004\" kit (8 Oct 2003), \"2004 BMW 330 Models Specifications\" (031008_3_Series_330i_Specifications)",
+              "note": "\"Power @ rpm, hp 225 @ 5900 1 (330i ZHP: 225 @ 5900) Torque @ rpm, lb-ft. 214 @ 3500 1 (330i ZHP: 222 @ 3500)\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34840",
+              "accessed": "2026-09-27",
+              "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Specs\" Technical Specifications",
+              "note": "\"Power @ rpm, hp 184 @ 6000 6 225 @ 5900 7 (ZHP: 235 @ 5900) Torque @ rpm, lb-ft. 175 @ 3500 6 214 @ 3500 7 (ZHP: 222 @ 3500)\""
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "revLimit": {
+        "value": 6800,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesSedan_2004-2.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America brochure \"BMW 2004 3 Series Sedan\" (version 2, (c)2004 BMW AG; late MY2004), Technical Data p. 14-15 / Performance Package p. 8-9",
+            "note": "\"The increased redline starts at 6800 rpm.\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%203SeriesConvertible_2006.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America brochure \"BMW 2006 3 Series Convertible\" ((c)2006 BMW of North America), Technical Data p. 13 / Packages p. 8",
+            "note": "\"the redline has been increased from 6500 to 6800 rpm.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0022155EN_US/bmw-introduces-the-330i-performance-package?language=en_US",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: \"BMW Introduces the 330i Performance Package\" (13 Dec 2002)",
+            "note": "\"300 higher rpm limit.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0017560EN_US/34837",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: Press Kit 2006 BMW 3 Series Coupes and Convertibles (16 Dec 2005), \"2006_e46_Description\"",
+            "note": "\"300 rpm to the rev limit\""
+          }
+        ],
+        "note": "BMW: \"the redline has been increased from 6500 to 6800 rpm\" and \"300 higher rpm limit\"; BMW uses redline and rev limit for the same figure on this engine."
+      },
+      "ecu": {
+        "value": "Siemens MS43 (ZHP calibration)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022146EN_US/41439",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003 3 Series\" (24 Oct 2002), attachment \"2003 BMW 330 Sedan Specifications\"",
+            "note": "\"Engine-management system Siemens MS 43\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/detail/T0022155EN_US/bmw-introduces-the-330i-performance-package?language=en_US",
+            "accessed": "2026-09-27",
+            "title": "BMW NA PressClub USA: \"BMW Introduces the 330i Performance Package\" (13 Dec 2002)",
+            "note": "\"Modifications to the 3.0-liter in-line six-cylinder engine, which include different camshafts and performance-modified Digital Motor Electronics, yield a ten horsepower increase to 235.\""
+          }
+        ]
+      },
+      "notes": "BMW Individual / BMW M \"Performance Package\" (ZHP), US only: \"different camshafts and performance-modified Digital Motor Electronics\" (BMW NA). The ZHP cam specifications are not published, so no cam data are stored for this variant."
+    }
+  ]
+}

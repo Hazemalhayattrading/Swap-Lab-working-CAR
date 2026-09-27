@@ -1,0 +1,1369 @@
+{
+  "$comment": "BMW S54B32 as fitted to the E46 M3 and M3 CSL (launch swap). Researched 2026-09-27. Primary sources: BMW NA technical training ST041 (E46 M3), ST055 (MS S54), ST505 (M engines) and ST601 (Z4 M) on archive.org; BMW AG, BMW GB and BMW NA press kits; ETK via bmwfans.info. Dry weight is derived from a BMW statement and outline dimensions are a geometric estimate (see methods). Z3 M and Z4 M ratings are noted but not modelled.",
+  "id": "s54b32",
+  "code": "S54B32",
+  "manufacturer": "BMW",
+  "family": "S54",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 3246,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+        "note": "p. 7, E46 M3 specifications table: \"Engine Size 3246 ccm\"."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+        "note": "Technical Data: \"Displacement cu cm 3246 3246\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+        "note": "\"Displacement, cc/cu in. 3246/198\"."
+      }
+    ]
+  },
+  "bore": {
+    "value": 87.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+        "note": "p. 7: \"Bore 87.0 mm\" (E36 M3: 86.4 mm)."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+        "note": "Technical Data: \"Bore/stroke in 3.43/3.58\" (87.1/90.9 mm)."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 91.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+        "note": "p. 7: \"Stroke 91.0 mm\" (E36 M3: 89.6 mm)."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+        "note": "Technical Data: \"Bore/stroke in 3.43/3.58\" (87.1/90.9 mm)."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST601%20E85%20LCI%20and%20M%20Roadster/E85%20M%20Roadster.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST601, E85 M Roadster (initial print 03/06), pp. 4-6 (PDF on archive.org)",
+        "note": "p. 4, technical data: \"Liter/type/valves 3.2/DOHC inline 6/24\"."
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+        "note": "Engine type: \"DOHC 24-valve inline 6-cylinder\"."
+      }
+    ],
+    "note": "Two overhead camshafts driven directly by a duplex chain, with finger followers (ST041, BMW NA 2003 story)."
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 3: \"The S54B32 is a 4-valve per cylinder dual VANOS naturally aspirated engine\"."
+      },
+      {
+        "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+        "note": "Technical Data: \"Liters/type/valves 3.2/inline 6/24\"."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 14: \"Camshaft Drive: The camshafts are driven by the crankshaft using a double-roller timing chain.\""
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+        "note": "\"the S54 has a full duplex (double) chain driving both camshafts directly. As usual with BMW engines, the chain is hydraulically tensioned and needs no periodic adjustment or replacement.\""
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "cast-iron",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 5: \"Engine Block: The S54 engine block is cast iron in order to absorb the high forces produced by the crankshaft (combustion pressure and high engine rpm).\" ... \"The \"bare\" block weighs approximately 105 lbs. (48 kg).\""
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+        "note": "\"Given that other current BMW “sixes” have an aluminum block with cast-iron cylinder liners, it may be surprising that the S54 M3 engine has a cast-iron block.\""
+      }
+    ],
+    "note": "BMW researched a silicon-impregnated aluminium block and chose cast iron for the cylinder pressures and piston speed (24 m/s at 8,000 rpm). Bare block about 48 kg (ST041)."
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 12: \"Cylinder Head: The S54 features an aluminum cross-flow cylinder head designed as a single component that houses the camshafts and valve train.\""
+      },
+      {
+        "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+        "note": "\"Extreme strength in the cylinder head is achieved by making it a single aluminum casting. This construction, though more difficult to realize than the previous European engine’s 2-piece head casting, also saves a significant 29 lb.\""
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/3%20EngineElectronics%20%28Part%202%29.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, E46 M3 Engine Electronics (MS S54), part 2 (PDF on archive.org)",
+        "note": "\"The Crankshaft Position/RPM signals the ECM to start ignition in firing order (1-5-3-6-2-4)\"."
+      },
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics%20%28Archive%201%29/8%20MS%20S54.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST055 Engine Electronics, MS S54 (PDF on archive.org)",
+        "note": "\"The Crankshaft Position/RPM signals the ECM to start ignition in firing order (1 -5-3-6-2-4)\"."
+      }
+    ],
+    "note": "Both BMW NA training manuals are on archive.org (one site). 1-5-3-6-2-4 is also the M54B30 order (BMW ST045)."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 26: \"The S54 uses Bosch (4 hole plate) fuel injectors. The ECM controls the fuel injectors to regulate the air/fuel mixture.\"; ST041 Engine Electronics: \"The Fuel Injectors will be opened by the ECM to inject pressurized fuel into the intake ports.\""
+      }
+    ],
+    "note": "Sequential port injection with six individual throttle bodies (BMW NA 2003 story: \"All six throttles operate from a single shaft, each in its own throttle body right at the intake ports\")."
+  },
+  "dryWeight": {
+    "value": 217,
+    "unit": "kg",
+    "confidence": "estimated",
+    "sources": [
+      {
+        "url": "https://www.press.bmwgroup.com/global/article/attachment/T0012000EN/16623",
+        "accessed": "2026-09-27",
+        "title": "BMW Media Information 3/2007 \"The new V8 Power Unit for the BMW M3.\"",
+        "note": "\"BMW’s new V8, weighing a mere 202 kg or 445 lb, is a genuine lightweight, saving some 15 kg or 33 lb versus the six-cylinder power unit in the previous model.\""
+      }
+    ],
+    "method": "BMW Media Information 3/2007 gives the V8 that replaced it at 202 kg and says it saves \"some 15 kg\" against the six-cylinder of the previous M3 (the S54): 202 + 15 = about 217 kg. BMW does not say what the figure includes, and \"some\" makes it approximate. Forum posts (not opened) cite 217 kg from an M3 brochure; mywikimotors' 149 kg is too low for an engine whose bare iron block alone weighs about 48 kg (ST041)."
+  },
+  "dimensions": {
+    "length": {
+      "value": 780,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 5: \"The cylinder bores are 87 mm in diameter and are spaced 91 mm on center.\"; p. 7: connecting rods \"Length = 139 mm\"; p. 5: \"a 91 mm stroke\"."
+        },
+        {
+          "url": "http://mywikimotors.com/bmw-s54/",
+          "accessed": "2026-09-27",
+          "title": "mywikimotors.com: \"BMW E46 M3 engine | S54 specs\" (spec aggregator)",
+          "note": "\"new high compression pistons (CR=11.5), their compression height 32.3 mm\"."
+        }
+      ],
+      "method": "No outline dimensions exist in any BMW source found (ST041, ST505/ST609, ST055, press kits, US brochures) or in the aggregators. Geometric estimate for the bare engine with its intake and exhaust manifolds, upright, from BMW's own internal dimensions: bore spacing 91 mm, 91 mm stroke, 139 mm rods (ST041) and a 32.3 mm piston compression height (mywikimotors) give a deck height of about 217 mm above the crank centre. Length: 6 x 91 mm of cylinder row plus block end walls (about 600 mm), the timing case, VANOS unit and vibration damper at the front (about 150 mm) and the crank flange at the rear; about 780 mm, +/-60 mm."
+    },
+    "width": {
+      "value": 700,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 5: \"The cylinder bores are 87 mm in diameter and are spaced 91 mm on center.\"; p. 7: connecting rods \"Length = 139 mm\"; p. 5: \"a 91 mm stroke\"."
+        },
+        {
+          "url": "http://mywikimotors.com/bmw-s54/",
+          "accessed": "2026-09-27",
+          "title": "mywikimotors.com: \"BMW E46 M3 engine | S54 specs\" (spec aggregator)",
+          "note": "\"new high compression pistons (CR=11.5), their compression height 32.3 mm\"."
+        }
+      ],
+      "method": "No outline dimensions exist in any BMW source found (ST041, ST505/ST609, ST055, press kits, US brochures) or in the aggregators. Geometric estimate for the bare engine with its intake and exhaust manifolds, upright, from BMW's own internal dimensions: bore spacing 91 mm, 91 mm stroke, 139 mm rods (ST041) and a 32.3 mm piston compression height (mywikimotors) give a deck height of about 217 mm above the crank centre. Width: the block with the six individual throttle bodies and air collector on one side and the exhaust manifolds on the other; about 700 mm, +/-60 mm."
+    },
+    "height": {
+      "value": 650,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 5: \"The cylinder bores are 87 mm in diameter and are spaced 91 mm on center.\"; p. 7: connecting rods \"Length = 139 mm\"; p. 5: \"a 91 mm stroke\"."
+        },
+        {
+          "url": "http://mywikimotors.com/bmw-s54/",
+          "accessed": "2026-09-27",
+          "title": "mywikimotors.com: \"BMW E46 M3 engine | S54 specs\" (spec aggregator)",
+          "note": "\"new high compression pistons (CR=11.5), their compression height 32.3 mm\"."
+        }
+      ],
+      "method": "No outline dimensions exist in any BMW source found (ST041, ST505/ST609, ST055, press kits, US brochures) or in the aggregators. Geometric estimate for the bare engine with its intake and exhaust manifolds, upright, from BMW's own internal dimensions: bore spacing 91 mm, 91 mm stroke, 139 mm rods (ST041) and a 32.3 mm piston compression height (mywikimotors) give a deck height of about 217 mm above the crank centre. Height: about 217 mm deck height plus about 190 mm of head and cam cover above the deck and about 240 mm of crank throw clearance and oil pan below the crank centre; about 650 mm upright, +/-60 mm. In the E46 the engine is installed inclined."
+    }
+  },
+  "bellhousing": {
+    "value": "bmw-m54-s54",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/M3-S54/browse/manual_transmission/manual_transmission_s6s_420g/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S6S 420G, E46 M3 S54 USA",
+        "note": "\"Rmfd-6 speed gearbox 1 i 23 00 2 229 721 S6S 420G - TBAI 1 46 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/Z3-Coupe/USA/Z3_M3.2-S54/browse/manual_transmission/manual_transmission_s5d_z/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S5D...Z, Z3 M3.2 S54 USA",
+        "note": "\"Rmfd-5 speed gearbox 1 i 23 00 7 503 993 S5D 320Z - THCH 1 35 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/E85/USA/Z4_M3.2-S54/browse/manual_transmission/manual_transmission_gs6_37bz_dz/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual transmission GS6-37BZ/DZ, Z4 M3.2 S54 USA",
+        "note": "\"Rmfd-6 speed gearbox 1 i 23 00 7 837 983 GS6-37BZ - TJEE 1 44.5 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/330Ci-M54/browse/manual_transmission/manual_transmission_s5d_z/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S5D...Z, E46 330Ci M54 USA",
+        "note": "\"Rmfd-5 speed gearbox 1 i 23 00 7 503 993 S5D 320Z - THCH to Mar ' 03 1 35 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/Z3-Coupe/USA/Z3_3.0i-M54/browse/manual_transmission/manual_transmission_s5d_z/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual Transmission S5D...Z, Z3 3.0i M54 USA",
+        "note": "\"Rmfd-5 speed gearbox 1 i 23 00 7 503 993 S5D 320Z - THCH 1 35 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/330Ci-M54/browse/manual_transmission/manual_transmission_gs6_37bz_dz/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Manual transmission GS6-37BZ/DZ, E46 330Ci M54 USA",
+        "note": "\"Rmfd-6 speed gearbox 1 i 23 00 7 532 498 GS6-37BZ - THEG from Mar ' 03 1 43.9 kg\""
+      },
+      {
+        "url": "https://bmwfans.info/parts-catalog/E46-Coupe/USA/M3-S54/browse/engine/flywheel_twin_mass_flywheel/",
+        "accessed": "2026-09-27",
+        "title": "bmwfans.info (mirror of BMW ETK parts catalogue): Flywheel / Twin Mass Flywheel, E46 M3 S54 USA",
+        "note": "\"Hex bolt 4 i 11 22 2 243 051 M12X1,5X50 8\""
+      }
+    ],
+    "note": "The S54 bolts to the same BMW six-cylinder gearbox families as the M54: the Z3 M uses the ZF S5D 320Z with the same part number as the E46 330Ci M54 (23 00 7 503 993), and the Z4 M the ZF GS6-37BZ also used behind the 330Ci M54 from 03/2003. Crank flange: 8 x M12x1.5x50 flywheel bolts. One ETK mirror; no BMW text names the pattern. The E46 M3 dual-mass flywheel is 11.4 kg (ETK)."
+  },
+  "sump": {
+    "value": "rear",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+        "note": "p. 10, Oil Pump: \"The oil pump has two separate chambers, the scavenge chamber (1) draws oil from the pickup at the front of the oil pan. The oil is transferred from the pump through a small pipe to the main sump at the rear of the oil pan (2).\" Oil circuit legend p. 9: \"1. Oil Pump Intake (rear of pan) ... 1a. Oil Pump Intake (front of Pan)\"."
+      }
+    ],
+    "note": "E46 M3 layout: the deep main sump is at the rear of the pan with a scavenge pickup at the front (BMW calls it \"semi-dry-sump\": \"a “semi-dry-sump” system helps ensure adequate lubrication under the high cornering, acceleration and braking loads\", BMW NA 2003 story). The ST041 module covers the E46 M3 and the Z3 M roadster/coupe; whether the Z3 M or Z4 M pans differ is not stated there."
+  },
+  "oilCapacity": {
+    "value": 5.5,
+    "unit": "L",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+        "accessed": "2026-09-27",
+        "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+        "note": "p. 7: \"Engine Oil Change Capacity With Oil Filter 5.5 L\" (E36 M3: 6.5 L)."
+      }
+    ],
+    "note": "Oil change with filter. BMW GB's 2001 technical specification prints \"Engine oil ltr 7\", which reads as the total fill. BMW specified Castrol 10W-60 (ST041)."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 5: \"Crankshaft and Bearings: The S54 crankshaft is forged steel with 12 counterweights and a 91 mm stroke. The crankshaft is supported by 7 (60 mm diameter) main bearings with 49 mm diameter connecting rod journals.\""
+        },
+        {
+          "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+          "note": "\"A forged, nitro-carbonized steel crankshaft provides great strength in this critical component.\""
+        }
+      ]
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 7: \"Connecting Rods and Bearings: The S54 uses reinforced forged steel \"cracked\" connecting rods: 1. Length = 139 mm 2. Small End (Integrated Bushing) Diameter = 21 mm 3. Large End Diameter = 49 mm\"."
+        },
+        {
+          "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+          "note": "\"Forged-steel “cracked” connecting rods eliminate the need for bolt sleeves and thus reduce reciprocating weight.\""
+        }
+      ],
+      "note": "Fracture-split caps, 139 mm centre-to-centre; weight-matched to +/-4 g and sold only as a matched set (ST041)."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-27",
+          "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+          "note": "p. 8: \"Pistons and Piston Rings: The S54 uses graphite coated cast aluminum (full slipper skirt) pistons with valve recesses. The piston diameter is 86.965 mm, weighs approximately 470 grams with a compression ratio of 11.5:1.\" ... \"The pistons are cooled by oil spray nozzles that are bolted into the crankcase.\""
+        }
+      ],
+      "note": "BMW NA's 2003 story confirms \"graphite-coated aluminum pistons ... cooled by oil spray\" but does not say cast."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 470,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.drifted.com/e46-m3-supercharger/",
+              "accessed": "2026-09-27",
+              "title": "DRIFTED.com: Ultimate BMW E46 M3 Supercharger Guide (quotes manufacturer descriptions)",
+              "note": "\"The non-intercooled S54 VT1-475 supercharger system produces 470hp SAE (475DIN) and 330lb-ft of torque at 6.5psi of boost.\""
+            },
+            {
+              "url": "http://mywikimotors.com/bmw-s54/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: BMW E46 M3 engine | S54 specs (AGGREGATOR)",
+              "note": "\"The maximum boost VT1 – 6 psi (0.4 bar) you do not even need forged pistons. It will easily provide 470 horsepower.\""
+            }
+          ],
+          "note": "Both pages trace to ESS Tuning's own description of its VT1-475 kit."
+        },
+        "context": "ESS VT1-475 centrifugal supercharger kit rating (non-intercooled): 470 hp SAE (475 DIN) and 330 lb-ft at 6.5 psi on the stock internals. A kit rating from its maker, not a tested failure limit; no fuel, rpm or duration context. The known weak point is the connecting-rod bearings (BMW campaigns 11 02 03 and 11 04 04 replaced them on cars built up to 2003-05-22, per EuroConnex)."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "e46-m3-eudm",
+      "name": "S54B32, E46 M3 (Europe)",
+      "markets": ["EUDM", "UKDM"],
+      "period": {
+        "value": {
+          "from": "2000",
+          "to": "2006-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46/",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: BMW 3' E46 model identification table (production months, decoded)",
+            "note": "\"RAW Coupe / Europe: {\"p\":[{\"ys\":[{\"d\":\"19993904\"},{\"d\":\"20004092\"},{\"d\":\"20014095\"},{\"d\":\"20024095\"},{\"d\":\"20034095\"},{\"d\":\"20044095\"},{\"d\":\"20054095\"},{\"d\":\"200631\"}],\"i\":\"NN\"}\""
+          },
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46/",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: BMW 3' E46 model identification table (production months, decoded)",
+            "note": "\"{\"d\":\"20054095\"},{\"d\":\"2006255\"}],\"i\":\"LN\"}\""
+          }
+        ],
+        "note": "From the European coupe start (2000; UK sales from April 2001) to the last convertible (ETK: 2006-08)."
+      },
+      "fittedTo": ["E46 M3"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"The S54B32 is a 4-valve per cylinder dual VANOS naturally aspirated engine with high torque and high-rev concepts.\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+            "note": "Technical Data: \"Liters/type/valves 3.2/inline 6/24\"; no forced induction listed."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"naturally aspirated engine\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+            "note": "Engine type: \"DOHC 24-valve inline 6-cylinder\" (naturally aspirated; no intercooler)."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 11.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+            "note": "\"Compression ratio/fuel grade||11.5 : 1 / RON/98\" (OCR of the table reads \"ROM/98\")."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+            "note": "p. 7: \"Compression Ratio 11.5 :1\"."
+          }
+        ],
+        "note": "BMW AG says the S54B32 hardware is the same worldwide; Europe rates it on 98 RON."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 260,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"The original S54B32 found in every other E46 M3 came with 260 intake and 260 exhaust cams.\""
+            },
+            {
+              "url": "http://mywikimotors.com/bmw-s54/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: BMW E46 M3 engine | S54 specs (AGGREGATOR)",
+              "note": "\"used new cast iron hollow camshafts (duration 260/260, lift 12/12 mm)\""
+            }
+          ],
+          "note": "Neither source is BMW: EuroConnex (tuner build journal) and mywikimotors (aggregator). BMW publishes lift and VANOS ranges only (ST041/ST505: intake spread 70-130 deg, exhaust 83-128 deg). The lift at which duration is measured is not stated."
+        },
+        "exhaustDuration": {
+          "value": 260,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"The original S54B32 found in every other E46 M3 came with 260 intake and 260 exhaust cams.\""
+            },
+            {
+              "url": "http://mywikimotors.com/bmw-s54/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: BMW E46 M3 engine | S54 specs (AGGREGATOR)",
+              "note": "\"used new cast iron hollow camshafts (duration 260/260, lift 12/12 mm)\""
+            }
+          ],
+          "note": "Neither source is BMW: EuroConnex (tuner build journal) and mywikimotors (aggregator). BMW publishes lift and VANOS ranges only (ST041/ST505: intake spread 70-130 deg, exhaust 83-128 deg). The lift at which duration is measured is not stated."
+        },
+        "intakeLift": {
+          "value": 12,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+              "note": "p. 4, Technical Data: \"Valve Lift Intake / Exhaust (mm) 12/ 12\"; p. 14: \"The duration and lift (12 mm) of the lobes are the same on both camshafts.\""
+            }
+          ],
+          "note": "ST041 says duration and lift are the same on both camshafts. Hollow cast-iron camshafts with finger followers."
+        },
+        "exhaustLift": {
+          "value": 12,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+              "note": "p. 4, Technical Data: \"Valve Lift Intake / Exhaust (mm) 12/ 12\"."
+            }
+          ],
+          "note": "ST041 says duration and lift are the same on both camshafts. Hollow cast-iron camshafts with finger followers."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 21: \"VANOS mechanical operation is dependent on oil pressure applied to position the control pistons. The double VANOS camshafts are infinitely adjustable within the mechanical travel limits of the drive gears.\" \"The total adjustment range of the intake camshaft is 60° The total adjustment range of the exhaust camshaft is 45°\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+            "note": "\"The S54 engine has stepless Double VANOS, which varies valve timing on the intake and exhaust camshafts.\" \"Intake timing is varied by 60˚, exhaust by 46˚\"."
+          }
+        ],
+        "note": "High-pressure double VANOS with its own radial-piston pump driven by the exhaust camshaft. ST041 gives adjustment ranges of 60 deg (intake) and 45 deg (exhaust) and 100 bar; BMW NA's 2003 story says 60 and 46 deg and up to 120 bar."
+      },
+      "output": {
+        "power": {
+          "value": 343,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+              "accessed": "2026-09-27",
+              "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+              "note": "\"Max. output|kW/bhp|252/343|||| At engine speed|rpm|7900||||\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0011880DE/16348",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Presse \"Technische Daten BMW 3er Coupe M3\" (gueltig ab 03/2004), attachment m3_coupe.doc of PressClub Deutschland item \"Technische Daten BMW M Fahrzeuge\" (1 Feb 2005); text extracted with Word tracked deletions removed",
+              "note": "\"Leistung |kW / PS |252 / 343 | | | | |bei Drehzahl |min-1 |7900\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0020380EN_US/39112",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit for the Paris Auto Show 2000 (28 Sep 2000, posted on PressClub USA), attachment AG000928 Press Kit for Paris Auto Show.rtf, section 2 \"The BMW M3\"",
+              "note": "\"providing maximum output of 343 bhp (252 kW) in ECE trim (333 bhp in the US version) at 7900 rpm.\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Kw\":252,\"Ps\":343,\"Kwmin\":7900"
+            }
+          ],
+          "note": "252 kW. Rated on 98 RON (BMW GB: 95 RON is usable via knock control, with no power figure given)."
+        },
+        "powerRpm": {
+          "value": 7900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+              "accessed": "2026-09-27",
+              "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+              "note": "\"Max. output|kW/bhp|252/343|||| At engine speed|rpm|7900||||\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0011880DE/16348",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Presse \"Technische Daten BMW 3er Coupe M3\" (gueltig ab 03/2004), attachment m3_coupe.doc of PressClub Deutschland item \"Technische Daten BMW M Fahrzeuge\" (1 Feb 2005); text extracted with Word tracked deletions removed",
+              "note": "\"Leistung |kW / PS |252 / 343 | | | | |bei Drehzahl |min-1 |7900\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0020380EN_US/39112",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit for the Paris Auto Show 2000 (28 Sep 2000, posted on PressClub USA), attachment AG000928 Press Kit for Paris Auto Show.rtf, section 2 \"The BMW M3\"",
+              "note": "\"providing maximum output of 343 bhp (252 kW) in ECE trim (333 bhp in the US version) at 7900 rpm.\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Kw\":252,\"Ps\":343,\"Kwmin\":7900"
+            }
+          ]
+        },
+        "torque": {
+          "value": 365,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+              "accessed": "2026-09-27",
+              "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+              "note": "\"Max. torque|Nm/lb-ft|365/269|||| At engine speed|rpm|4900||||\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0011880DE/16348",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Presse \"Technische Daten BMW 3er Coupe M3\" (gueltig ab 03/2004), attachment m3_coupe.doc of PressClub Deutschland item \"Technische Daten BMW M Fahrzeuge\" (1 Feb 2005); text extracted with Word tracked deletions removed",
+              "note": "\"Drehmoment |Nm |365 | | | | |bei Drehzahl |min-1 |4900\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Drehmoment\":365,\"Drehmin\":4900"
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+              "accessed": "2026-09-27",
+              "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+              "note": "\"Max. torque|Nm/lb-ft|365/269|||| At engine speed|rpm|4900||||\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0011880DE/16348",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Presse \"Technische Daten BMW 3er Coupe M3\" (gueltig ab 03/2004), attachment m3_coupe.doc of PressClub Deutschland item \"Technische Daten BMW M Fahrzeuge\" (1 Feb 2005); text extracted with Word tracked deletions removed",
+              "note": "\"Drehmoment |Nm |365 | | | | |bei Drehzahl |min-1 |4900\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Drehmoment\":365,\"Drehmin\":4900"
+            }
+          ]
+        },
+        "standard": "unknown"
+      },
+      "revLimit": {
+        "value": 8000,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 4",
+            "note": "\"The maximum engine speed is 8000 rpm.\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/3%20EngineElectronics%20%28Part%202%29.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module 3 \"Engine Electronics (Part 2)\", MS S54 Fuel Management, p. 37",
+            "note": "\"When the engine speed reaches 8000 rpm, the injectors will be deactivated to protect the engine from over-rev.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37448",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_description.doc",
+            "note": "\"The M3 engine’s maximum power occurs just below its 8000-rpm limit at 7900 rpm.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39119",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), section 2 \"Engine & Transmission\"",
+            "note": "\"The pistons of the new engine, for example, cover more than 24 metres per second at the maximum engine speed of 8000 rpm.\""
+          }
+        ],
+        "note": "Rev limiter: the injectors are cut at 8,000 rpm and resume below it (ST041/ST055). The tachometer reads to 9,000 rpm with a variable warm-up warning segment."
+      },
+      "ecu": {
+        "value": "Siemens MSS54 (MS S54)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0011880DE/16348",
+            "accessed": "2026-09-27",
+            "title": "BMW AG Presse \"Technische Daten BMW 3er Coupe M3\" (gueltig ab 03/2004), attachment m3_coupe.doc (PressClub Deutschland item \"Technische Daten BMW M Fahrzeuge\", 1 Feb 2005)",
+            "note": "\"Motorsteuerung | |MSS 54\"."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+            "note": "p. 7: \"Engine Management MS S54\"."
+          }
+        ],
+        "note": "BMW NA's 2003 story: \"Manufactured by Siemens and called MS S54\"."
+      },
+      "notes": "European rating: 252 kW (343 PS) at 7,900 rpm and 365 Nm at 4,900 rpm, on 98 RON; BMW's tables print no rating standard (European ratings of the period were normally to 80/1269/EEC, but no BMW document here says so). Same engine hardware as the US car. Also fitted, with other ratings, to the Z3 M roadster/coupe (US: 315 hp and 340 Nm per ST041) and the Z4 M roadster/coupe (US: 330 hp at 7,900 and 262 lb-ft at 4,900 per ST601; MSS70 engine management); those are not modelled here."
+    },
+    {
+      "id": "e46-m3-usdm",
+      "name": "S54B32, E46 M3 (USA)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2001-01",
+          "to": "2006-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 2",
+            "note": "\"Model: E46 M3 Production Date: 01/2001\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics%20%28Archive%201%29/8%20MS%20S54.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST055 Engine Electronics, module 8 \"MS S54\", p. 2",
+            "note": "\"Model: E46 M3 S54B32 Engine Production Date: 01/2001\""
+          },
+          {
+            "url": "https://bmwfans.info/parts-catalog/E46/",
+            "accessed": "2026-09-27",
+            "title": "bmwfans.info mirror of BMW ETK: BMW 3' E46 model identification table (production months, decoded)",
+            "note": "\"{\"d\":\"20054095\"},{\"d\":\"2006255\"}],\"i\":\"LN\"}\""
+          }
+        ],
+        "note": "US production from 01/2001 (BMW NA training) to the last convertible (ETK: 2006-08); MY2001 to MY2006."
+      },
+      "fittedTo": ["E46 M3"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"The S54B32 is a 4-valve per cylinder dual VANOS naturally aspirated engine with high torque and high-rev concepts.\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+            "note": "Technical Data: \"Liters/type/valves 3.2/inline 6/24\"; no forced induction listed."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"naturally aspirated engine\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+            "note": "Engine type: \"DOHC 24-valve inline 6-cylinder\" (naturally aspirated; no intercooler)."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 11.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+            "note": "p. 7: \"Compression Ratio 11.5 :1\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+            "note": "\"Compression ratio 11.5:1\"."
+          }
+        ]
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 260,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"The original S54B32 found in every other E46 M3 came with 260 intake and 260 exhaust cams.\""
+            },
+            {
+              "url": "http://mywikimotors.com/bmw-s54/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: BMW E46 M3 engine | S54 specs (AGGREGATOR)",
+              "note": "\"used new cast iron hollow camshafts (duration 260/260, lift 12/12 mm)\""
+            }
+          ],
+          "note": "Neither source is BMW: EuroConnex (tuner build journal) and mywikimotors (aggregator). BMW publishes lift and VANOS ranges only (ST041/ST505: intake spread 70-130 deg, exhaust 83-128 deg). The lift at which duration is measured is not stated."
+        },
+        "exhaustDuration": {
+          "value": 260,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"The original S54B32 found in every other E46 M3 came with 260 intake and 260 exhaust cams.\""
+            },
+            {
+              "url": "http://mywikimotors.com/bmw-s54/",
+              "accessed": "2026-09-27",
+              "title": "mywikimotors.com: BMW E46 M3 engine | S54 specs (AGGREGATOR)",
+              "note": "\"used new cast iron hollow camshafts (duration 260/260, lift 12/12 mm)\""
+            }
+          ],
+          "note": "Neither source is BMW: EuroConnex (tuner build journal) and mywikimotors (aggregator). BMW publishes lift and VANOS ranges only (ST041/ST505: intake spread 70-130 deg, exhaust 83-128 deg). The lift at which duration is measured is not stated."
+        },
+        "intakeLift": {
+          "value": 12,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+              "note": "p. 4, Technical Data: \"Valve Lift Intake / Exhaust (mm) 12/ 12\"; p. 14: \"The duration and lift (12 mm) of the lobes are the same on both camshafts.\""
+            }
+          ],
+          "note": "ST041 says duration and lift are the same on both camshafts. Hollow cast-iron camshafts with finger followers."
+        },
+        "exhaustLift": {
+          "value": 12,
+          "unit": "mm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+              "note": "p. 4, Technical Data: \"Valve Lift Intake / Exhaust (mm) 12/ 12\"."
+            }
+          ],
+          "note": "ST041 says duration and lift are the same on both camshafts. Hollow cast-iron camshafts with finger followers."
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 21: \"VANOS mechanical operation is dependent on oil pressure applied to position the control pistons. The double VANOS camshafts are infinitely adjustable within the mechanical travel limits of the drive gears.\" \"The total adjustment range of the intake camshaft is 60° The total adjustment range of the exhaust camshaft is 45°\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+            "note": "\"The S54 engine has stepless Double VANOS, which varies valve timing on the intake and exhaust camshafts.\" \"Intake timing is varied by 60˚, exhaust by 46˚\"."
+          }
+        ],
+        "note": "High-pressure double VANOS with its own radial-piston pump driven by the exhaust camshaft. ST041 gives adjustment ranges of 60 deg (intake) and 45 deg (exhaust) and 100 bar; BMW NA's 2003 story says 60 and 46 deg and up to 120 bar."
+      },
+      "output": {
+        "power": {
+          "value": 333,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37451",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_specs.doc \"2006 BMW M3 Technical Specifications\"",
+              "note": "\"Power @ rpm, hp SAE net 333 @ 7900 1\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America: 2004 M3 Coupe / M3 Convertible sales brochure (US), Technical Data, p. 9 (text layer; table verified on rendered page image img/m3_2004_p9_techdata_vals.png)",
+              "note": "\"Nominal output/rpm hp 333/7900 333/7900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module 2 \"M3 DriveLine\" (S54B32 engine chapter), p. 3",
+              "note": "\"Power Output for the E46 M3: 1. 333 hp at 7900 rpm 2. 355 Nm of Torque at 4900 rpm\""
+            }
+          ],
+          "note": "SAE net. The same engine as Europe's 343 PS; the difference is the rating standard and fuel."
+        },
+        "powerRpm": {
+          "value": 7900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37451",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_specs.doc \"2006 BMW M3 Technical Specifications\"",
+              "note": "\"Power @ rpm, hp SAE net 333 @ 7900 1\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America: 2004 M3 Coupe / M3 Convertible sales brochure (US), Technical Data, p. 9 (text layer; table verified on rendered page image img/m3_2004_p9_techdata_vals.png)",
+              "note": "\"Nominal output/rpm hp 333/7900 333/7900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041, module 2 \"M3 DriveLine\" (S54B32 engine chapter), p. 3",
+              "note": "\"Power Output for the E46 M3: 1. 333 hp at 7900 rpm 2. 355 Nm of Torque at 4900 rpm\""
+            }
+          ]
+        },
+        "torque": {
+          "value": 262,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37451",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_specs.doc \"2006 BMW M3 Technical Specifications\"",
+              "note": "\"Torque @ rpm, lb-ft. 262 @ 4900 1\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America: 2004 M3 Coupe / M3 Convertible sales brochure (US), Technical Data, p. 9 (text layer; table verified on rendered page image img/m3_2004_p9_techdata_vals.png)",
+              "note": "\"Max torque/rpm lb-ft 262/4900 262/4900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 4",
+              "note": "\"The engine develops its maximum torque of 355 Nm at 4900 rpm.\""
+            }
+          ],
+          "note": "ST041 prints 355 Nm, which is 262 lb-ft converted."
+        },
+        "torqueRpm": {
+          "value": 4900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37451",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_specs.doc \"2006 BMW M3 Technical Specifications\"",
+              "note": "\"Torque @ rpm, lb-ft. 262 @ 4900 1\""
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America: 2004 M3 Coupe / M3 Convertible sales brochure (US), Technical Data, p. 9 (text layer; table verified on rendered page image img/m3_2004_p9_techdata_vals.png)",
+              "note": "\"Max torque/rpm lb-ft 262/4900 262/4900\""
+            },
+            {
+              "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+              "accessed": "2026-09-27",
+              "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 4",
+              "note": "\"The engine develops its maximum torque of 355 Nm at 4900 rpm.\""
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "revLimit": {
+        "value": 8000,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 4",
+            "note": "\"The maximum engine speed is 8000 rpm.\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/3%20EngineElectronics%20%28Part%202%29.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module 3 \"Engine Electronics (Part 2)\", MS S54 Fuel Management, p. 37",
+            "note": "\"When the engine speed reaches 8000 rpm, the injectors will be deactivated to protect the engine from over-rev.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37448",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_description.doc",
+            "note": "\"The M3 engine’s maximum power occurs just below its 8000-rpm limit at 7900 rpm.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39119",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), section 2 \"Engine & Transmission\"",
+            "note": "\"The pistons of the new engine, for example, cover more than 24 metres per second at the maximum engine speed of 8000 rpm.\""
+          }
+        ],
+        "note": "Rev limiter: the injectors are cut at 8,000 rpm and resume below it (ST041/ST055). The tachometer reads to 9,000 rpm with a variable warm-up warning segment."
+      },
+      "ecu": {
+        "value": "Siemens MSS54 (MS S54)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, E46 M3 Complete Vehicle, module \"Complete Vehicle\" (model E46 M3, production date 01/2001), pp. 4-8 (PDF on archive.org)",
+            "note": "p. 7: \"Engine Management MS S54\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+            "note": "\"Engine-management system BMW MS S54 with adaptive knock control\"."
+          }
+        ]
+      },
+      "notes": "US rating: 333 hp at 7,900 rpm and 262 lb-ft at 4,900 rpm, premium unleaded. BMW NA prints no rating standard; US ratings of the period are SAE net."
+    },
+    {
+      "id": "e46-m3-csl",
+      "name": "S54B32HP, E46 M3 CSL",
+      "markets": ["EUDM", "UKDM"],
+      "period": {
+        "value": {
+          "from": "2003-06",
+          "to": "2003-12"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0016268EN_GB/32657",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press release \"From lightweight concept to pure reality - the new BMW M3 CSL\" (9 Jun 2003), attachment 030609_M3_CSL.rtf incl. \"Specifications. BMW M3 CSL.\"",
+            "note": "\"A limited run will be built in Munich between June and December this year.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0016453EN_GB/january-news-in-brief",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press release \"January news in brief\" (22 Jan 2004), item \"The end of an era - the BMW M3 CSL\"",
+            "note": "\"Produced between June and December 2003, a total of 422 right hand drive cars were produced for the UK market.\""
+          }
+        ]
+      },
+      "fittedTo": ["E46 M3"],
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"The S54B32 is a 4-valve per cylinder dual VANOS naturally aspirated engine with high torque and high-rev concepts.\""
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/BMW/3%20Series/BMW_US%20M3_2004.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America: 2004 BMW M3 Coupe and Convertible brochure (US, (c)2003 BMW AG), \"Technical Data\" (PDF via auto-brochures.com)",
+            "note": "Technical Data: \"Liters/type/valves 3.2/inline 6/24\"; no forced induction listed."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 3: \"naturally aspirated engine\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022127EN_US/41385",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"Model Year 2002: M3\" (1 Nov 2001), attachment MY 2002 M3 Specs.pdf",
+            "note": "Engine type: \"DOHC 24-valve inline 6-cylinder\" (naturally aspirated; no intercooler)."
+          }
+        ]
+      },
+      "compressionRatio": {
+        "value": 11.5,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+            "accessed": "2026-09-27",
+            "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf",
+            "note": "Specifications: \"Compression ratio :1 11.5\"."
+          }
+        ]
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 268,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"BMW M engineers fitted barely any bigger cams to the CSL engine with 268 intake and 264 exhaust duration camshafts.\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+              "accessed": "2026-09-27",
+              "title": "BMW Press 3/2003 \"BMW M3 CSL\" press kit, technical data",
+              "note": "\"which is why the camshafts come with longer valve opening periods.\""
+            }
+          ],
+          "note": "Tuner figure (EuroConnex); BMW says only that the CSL camshafts \"come with longer valve opening periods\". mywikimotors' 288/280 deg with 11.6 mm lift matches the aftermarket Schrick \"CSL\" cam set and is treated as a mix-up. No CSL lift figure was found."
+        },
+        "exhaustDuration": {
+          "value": 264,
+          "unit": "deg",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://euroconnex.co/blogs/the-phoenix-e46-m3/let-em-brag",
+              "accessed": "2026-09-27",
+              "title": "EuroConnex (tuner/vendor blog), \"Let 'em brag.\" by Matt Di Vita, 2023-07-24 (The Phoenix E46 M3 build journal)",
+              "note": "\"BMW M engineers fitted barely any bigger cams to the CSL engine with 268 intake and 264 exhaust duration camshafts.\""
+            }
+          ]
+        }
+      },
+      "variableValveTiming": {
+        "value": "intake-and-exhaust-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module \"M Engines - S54B32\" (E46 M3, M roadster, M coupe; 2001 MY on), pp. 3-26 (PDF on archive.org, file \"2 M3 DriveLine\")",
+            "note": "p. 21: \"VANOS mechanical operation is dependent on oil pressure applied to position the control pistons. The double VANOS camshafts are infinitely adjustable within the mechanical travel limits of the drive gears.\" \"The total adjustment range of the intake camshaft is 60° The total adjustment range of the exhaust camshaft is 45°\"."
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022150EN_US/41460",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America press kit \"MY 2003: M3\" (2 Dec 2002), attachment 2003_M3_Story.rtf",
+            "note": "\"The S54 engine has stepless Double VANOS, which varies valve timing on the intake and exhaust camshafts.\" \"Intake timing is varied by 60˚, exhaust by 46˚\"."
+          }
+        ],
+        "note": "High-pressure double VANOS with its own radial-piston pump driven by the exhaust camshaft. ST041 gives adjustment ranges of 60 deg (intake) and 45 deg (exhaust) and 100 bar; BMW NA's 2003 story says 60 and 46 deg and up to 120 bar."
+      },
+      "output": {
+        "power": {
+          "value": 360,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf, p. 19 Specifications",
+              "note": "\"Output kW/bhp 265/360 at rpm 7,900\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006229DE/23225",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Pressemappe \"BMW M3 CSL\" (Genf 2003, 28 Feb 2003), attachment BMW_M3_CSL_Pressemappe.doc, Technische Daten",
+              "note": "\"Leistung |kW/PS |265/360\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Kw\":265,\"Ps\":360,\"Kwmin\":7900"
+            }
+          ],
+          "note": "265 kW."
+        },
+        "powerRpm": {
+          "value": 7900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf, p. 19 Specifications",
+              "note": "\"Output kW/bhp 265/360 at rpm 7,900\""
+            },
+            {
+              "url": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0006229DE/23225",
+              "accessed": "2026-09-27",
+              "title": "BMW AG Pressemappe \"BMW M3 CSL\" (Genf 2003, 28 Feb 2003), attachment BMW_M3_CSL_Pressemappe.doc, Technische Daten",
+              "note": "\"Leistung |kW/PS |265/360\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Kw\":265,\"Ps\":360,\"Kwmin\":7900"
+            }
+          ]
+        },
+        "torque": {
+          "value": 370,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf, p. 19 Specifications",
+              "note": "\"Torque Nm (lb-ft) 370 (273) at rpm 4,900\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Drehmoment\":370,\"Drehmin\":4900"
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4900,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+              "accessed": "2026-09-27",
+              "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf, p. 19 Specifications",
+              "note": "\"Torque Nm (lb-ft) 370 (273) at rpm 4,900\""
+            },
+            {
+              "url": "https://www.auto-motor-und-sport.de/marken-modelle/bmw/m3/e46/technische-daten/",
+              "accessed": "2026-09-27",
+              "title": "auto motor und sport (Motor Presse Stuttgart) technical-data database, BMW M3 (E46) page, embedded JSON records (magazine database reproducing maker data)",
+              "note": "\"Drehmoment\":370,\"Drehmin\":4900"
+            }
+          ]
+        },
+        "standard": "unknown"
+      },
+      "revLimit": {
+        "value": 8000,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041 M3 Complete Vehicle, module 1 \"E46 M3 Complete Vehicle\", p. 4",
+            "note": "\"The maximum engine speed is 8000 rpm.\""
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/3%20EngineElectronics%20%28Part%202%29.pdf",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America Technical Training ST041, module 3 \"Engine Electronics (Part 2)\", MS S54 Fuel Management, p. 37",
+            "note": "\"When the engine speed reaches 8000 rpm, the injectors will be deactivated to protect the engine from over-rev.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0019121EN_US/37448",
+            "accessed": "2026-09-27",
+            "title": "BMW of North America \"PRESS KIT: 2006 BMW M3\" (16 Dec 2005), attachment 2006_m3_description.doc",
+            "note": "\"The M3 engine’s maximum power occurs just below its 8000-rpm limit at 7900 rpm.\""
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39119",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), section 2 \"Engine & Transmission\"",
+            "note": "\"The pistons of the new engine, for example, cover more than 24 metres per second at the maximum engine speed of 8000 rpm.\""
+          }
+        ],
+        "note": "Rev limiter: the injectors are cut at 8,000 rpm and resume below it (ST041/ST055). The tachometer reads to 9,000 rpm with a variable warm-up warning segment."
+      },
+      "ecu": {
+        "value": "Siemens MSS54HP",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+            "accessed": "2026-09-27",
+            "title": "BMW AG press kit \"BMW M3 CSL\" (3/2003, English GB version, posted on PressClub USA 28 Feb 2003), attachment AG030228 M3 CSL Press Kit_GB_finalversion.pdf",
+            "note": "Specifications: \"Engine management MSS 54HP\"; p. 12: \"the DME memory is twice as big as before, with an increase in computer speed by 25 per cent.\""
+          }
+        ]
+      },
+      "notes": "CSL changes (BMW AG CSL press kit): \"a large air collector made of carbon fibre ... which is why the camshafts come with longer valve opening periods\"; \"optimised exhaust valves, a modified exhaust emission manifold and funnel-shaped pipes leading into the air silencer\"; MSS54HP engine management. No cam duration or lift figures are published."
+    }
+  ]
+}

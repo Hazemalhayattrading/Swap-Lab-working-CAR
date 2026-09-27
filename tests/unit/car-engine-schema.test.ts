@@ -163,6 +163,22 @@ describe('EngineSchema', () => {
     expect(messages(r)).toBe('');
   });
 
+  it('accepts a published torque curve and rejects unsorted or unit-less ones', () => {
+    const curve = (value: unknown, unit?: string) =>
+      EngineSchema.safeParse(
+        engine({ variants: [variant({ torqueCurve: { ...v(value, unit) } })] }),
+      );
+    const points = [
+      [2000, 314],
+      [4800, 363],
+      [6600, 288],
+    ];
+    expect(messages(curve(points, 'Nm'))).toBe('');
+    expect(messages(curve([points[1], points[0], points[2]], 'Nm'))).toContain('rising rpm');
+    expect(messages(curve(points))).toContain('Torque curve needs a unit');
+    expect(curve(points.slice(0, 2), 'Nm').success).toBe(false);
+  });
+
   it('rejects a "verified" rating backed by one site', () => {
     const output = {
       ...variant().output,
