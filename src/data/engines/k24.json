@@ -1,0 +1,2449 @@
+{
+  "$comment": "Honda K24 (2,354 cc K-series I4) as used for engine swaps (launch swap). Researched 2026-09-29. Variants are the factory versions swap vendors recommend: K24A2 (2004-2005 and 2006-2008 Acura TSX), the JDM K24A with the RBB head and 200 PS rating (CL9 Accord, CM2 Accord Wagon Type S, RB1 Odyssey Absolute), K24Z3 (2009-2014 TSX), K24Z7 (2012-2013 and 2014-2015 Civic Si) and the K24A1 (2002-2005 and 2006 CR-V, split at Honda's 2006 SAE J1349 Rev 8/04 re-rating), the usual donor block for K24-block/K20-head builds. Primary sources: American Honda press kits (acuranews.com and hondanews.com, one newsroom, so they count as one source family here), Honda Japan's own auto-archive spec sheets, Acura/Honda US brochures (auto-brochures.com) and the 2002 CR-V service manual (archive.org). Swap fitment comes from vendors: KPower Industries (RWD kits, adapters, pans), Hasport (FWD mounts and transmission families), Hybrid Racing, Humble Performance, TF-Works, XAT Racing and FischRacingTech. Weak spots: dry weight (a vendor's and an owner's forum figures), outline dimensions (a geometric estimate), the factory sump position (one builder's statement), and the rod and piston materials of the K24A-family engines.",
+  "id": "k24",
+  "code": "K24",
+  "manufacturer": "Honda",
+  "family": "K",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 4,
+  "displacement": {
+    "value": 2354,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Displacement 143.6 cu. in. (2354 cc)'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'総排気量（cm3） 2,354' (total displacement, cc) for the K24A."
+      },
+      {
+        "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+        "accessed": "2026-09-29",
+        "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+        "note": "Civic Si (K24Z7): 'Displacement (L / cc) 2.4 / 2354'."
+      }
+    ],
+    "note": "Every K24 variant in this file is 2,354 cc (87 x 99 mm)."
+  },
+  "bore": {
+    "value": 87,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Bore & Stroke 87 mm x 99 mm'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'内径×行程（mm） 87.0×99.0' (bore x stroke)."
+      },
+      {
+        "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+        "accessed": "2026-09-29",
+        "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+        "note": "Design Specifications, p. 02-17: 'K24A1 engine 87 X 99 mm (3.43 X 3.90 in.)'."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 99,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Bore & Stroke 87 mm x 99 mm'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'内径×行程（mm） 87.0×99.0' (bore x stroke)."
+      },
+      {
+        "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+        "accessed": "2026-09-29",
+        "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+        "note": "Design Specifications, p. 02-17: 'K24A1 engine 87 X 99 mm (3.43 X 3.90 in.)'."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'16-valve, DOHC, 2.4-liter, i-VTEC 4-cylinder'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'DOHC チェーン駆動　吸気2　排気2' (DOHC, chain drive, 2 intake, 2 exhaust valves)."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "Valvetrain: 'DOHC, 4-valves-per-cylinder, chain-driven camshafts'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'DOHC チェーン駆動　吸気2　排気2' (2 intake and 2 exhaust valves)."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "chain",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "Valvetrain: 'DOHC, 4-valves-per-cylinder, chain-driven camshafts'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'DOHC チェーン駆動　吸気2　排気2' (チェーン駆動 = chain drive)."
+      },
+      {
+        "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+        "accessed": "2026-09-29",
+        "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+        "note": "Design Specifications, p. 02-17: 'Chain drive, DOHC VTEC 4 valves per cylinder' (K24A1)."
+      }
+    ]
+  },
+  "blockMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Engine Block Aluminum alloy with cast-in iron liners'."
+      },
+      {
+        "url": "https://hondanews.com/en-US/releases/2004-acura-tsx-powertrain-part-2",
+        "accessed": "2026-09-29",
+        "title": "Honda News (American Honda): 2004 Acura TSX - Powertrain, Part 2",
+        "note": "'The die-cast lightweight aluminum block has cast-in iron cylinder liners with 87 mm bores.'"
+      },
+      {
+        "url": "https://kpowerindustries.com/pages/faqs",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries (formerly KMiata; RWD K-swap kits): FAQs",
+        "note": "'The K series is an all-aluminum four-cylinder'."
+      }
+    ],
+    "note": "Die-cast aluminium block with cast-in, centrifugally spun iron liners and a one-piece aluminium bed-plate crankshaft carrier (Honda). acuranews.com and hondanews.com are the same American Honda newsroom; KPower is the independent second site. Deck: widely described as open deck, but no saved page says so outright; the indirect evidence is Super Street's K24 build using L.A.SLEEVE's 'Pro Cross Pro Cool sport compact open deck amphibious sleeves' and ERL's 'SUPERDECK' sleeve-support system (Hybrid Racing). Treat open deck as likely, unconfirmed. Deck height 231.5 mm (motorreviewer.com) or 9.1 in (Jalopnik); K20: 8.3 in."
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Cylinder Head Aluminum alloy with 4 valves-per-cylinder and pent-roof combustion chambers'."
+      },
+      {
+        "url": "https://kpowerindustries.com/pages/faqs",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries (formerly KMiata; RWD K-swap kits): FAQs",
+        "note": "'The K series is an all-aluminum four-cylinder'."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 3, 4, 2],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://functiontheory.com/2019/03/how-to-valve-adjustment-k20a/",
+        "accessed": "2026-09-29",
+        "title": "FunctionTheory: How To: Valve Adjustment K20A (March 2019)",
+        "note": "'The K-series engine (like most Honda engines) has a firing order of 1, 3, 4, 2.' ... 'Cylinder #1 is located closest to the timing chain/gears, while cylinder #4 is closest to the transmission.'"
+      },
+      {
+        "url": "https://ricksfreeautorepairadvice.com/wp-content/uploads/2009/09/Acura-B-and-K-engines.jpg",
+        "accessed": "2026-09-29",
+        "title": "Rick's Free Auto Repair Advice: firing-order diagram image 'Acura B and K engines' on the page '2.4 Acura Firing Order'",
+        "note": "Diagram text 'K engine firing order 1-3-4-2 clockwise rotation', with cylinder 1 drawn at the passenger-side (timing) end (read from the page image, the only diagram on the page)."
+      }
+    ],
+    "note": "No Honda document found here prints it: the 2002 CR-V service manual's text layer has no firing order. Both sources are secondary (a K-series tuning blog and a repair-advice site). Cylinder 1 is at the timing-chain (crank-pulley) end."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "'Induction System Programmed Fuel Injection (PGM-FI)'."
+      },
+      {
+        "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+        "accessed": "2026-09-29",
+        "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+        "note": "'電子制御燃料噴射式（ホンダPGM-FI）' (electronically controlled fuel injection, Honda PGM-FI)."
+      },
+      {
+        "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+        "accessed": "2026-09-29",
+        "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+        "note": "Civic Si (K24Z7): 'Multi-Point Fuel Injection'."
+      }
+    ],
+    "note": "Multi-point port injection (PGM-FI) on every K24 here; no direct-injection K24 is covered."
+  },
+  "dryWeight": {
+    "value": 280,
+    "unit": "lb",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://www.r3vlimited.com/board/forum/e30-technical-forums/engine-drivetrain/m30-other-swaps/377871-honda-k24-swap-interest/page27?view=stream",
+        "accessed": "2026-09-29",
+        "title": "R3VLimited forum (BMW E30): Honda K24 swap interest?, page 27 (posts of 27 July 2018)",
+        "note": "KMiata (now KPower Industries), 27 July 2018: 'A fully dressed k24 weighs 280ish lbs with our header and intake manifold.' Owner E30SPDFRK, same day: 'I weighed mine when I got it, no alternator or starter, 273.6lbs.' and 'k24a2 from a TSX'."
+      }
+    ],
+    "note": "About 127 kg. What it includes: KMiata's figure is a 'fully dressed' engine (accessories) with its tubular RWD header and intake manifold; whether oil and coolant were in it, and whether a flywheel was fitted, is not stated (another poster asked 'Are these wet weights or dry?' and got no answer on that page). The owner-weighed K24A2 was 273.6 lb without alternator or starter. Both posts are on one forum, so this is one source. Not used: Jalopnik's 'the larger K24 only weighs nine pounds more than the 403-pound K20' (unsourced; posts on the same R3V page say quick searches return engine-plus-transmission figures near 400 lb), and enginetechspecs.com, whose K24 pages disagree with each other (K24A4 304 lb, K24A1 150-160 kg). A 6-speed K-series transaxle is not included."
+  },
+  "dimensions": {
+    "length": {
+      "value": 560,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+          "accessed": "2026-09-29",
+          "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+          "note": "'stretching the deck height from the K20 engine block's 8.3 inches to 9.1 inches for the K24'."
+        },
+        {
+          "url": "https://www.acurapartswarehouse.com/oem/acura~pan~oil~11200-rbb-000.html",
+          "accessed": "2026-09-29",
+          "title": "Acura Parts Warehouse (Acura dealer parts catalogue): 11200-RBB-000 Pan, Oil",
+          "note": "'Manufacturer Part Number 11200-RBB-000' ... 'Item Dimensions 16.3 x 10.6 x 6.2 inches'."
+        }
+      ],
+      "method": "No outline dimensions exist in any Honda source found (press kits, brochures, the 2002 CR-V service manual) or in a vendor spec sheet; the only full L x W x H found (enginetechspecs.com) is unreliable (its K24A1, K24A4 and K24Z7 pages give three different sets). Rough geometric estimate for a bare K24A2 upright with its stock intake and exhaust manifolds, accessories and oil pan, from: 87 x 99 mm bore and stroke (Honda), a 9.1 in (231 mm) block deck height (Jalopnik), the 2004-2008 TSX pan 11200-RBB-000 listed at 16.3 x 10.6 x 6.2 in (Acura parts catalogue; possibly its box) and Moroso's RSX Type-S replacement pan with a sump '5.5″ deep, 16.75″ long'. A Honda-Tech post (403 to this session, seen only as a search snippet, not a source) reportedly gives a K24A2 as 25.5 in tall and 20 in long plus 4-5 in for the transmission-end coolant outlet, which is consistent. Axis order assumed: length along the crank, width across the manifolds, height vertical. Length: about 420 mm of block and pan, plus about 25 mm of timing-chain case and 45 mm of crank pulley and accessory drive at the front and the crank flange at the rear, to the transmission mating face: about 500-560 mm; 560 mm used. The K24A2's transmission-end coolant outlet adds about 100 mm at head level. +/-70 mm."
+    },
+    "width": {
+      "value": 650,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+          "accessed": "2026-09-29",
+          "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+          "note": "'stretching the deck height from the K20 engine block's 8.3 inches to 9.1 inches for the K24'."
+        }
+      ],
+      "method": "No outline dimensions exist in any Honda source found (press kits, brochures, the 2002 CR-V service manual) or in a vendor spec sheet; the only full L x W x H found (enginetechspecs.com) is unreliable (its K24A1, K24A4 and K24Z7 pages give three different sets). Rough geometric estimate for a bare K24A2 upright with its stock intake and exhaust manifolds, accessories and oil pan, from: 87 x 99 mm bore and stroke (Honda), a 9.1 in (231 mm) block deck height (Jalopnik), the 2004-2008 TSX pan 11200-RBB-000 listed at 16.3 x 10.6 x 6.2 in (Acura parts catalogue; possibly its box) and Moroso's RSX Type-S replacement pan with a sump '5.5″ deep, 16.75″ long'. A Honda-Tech post (403 to this session, seen only as a search snippet, not a source) reportedly gives a K24A2 as 25.5 in tall and 20 in long plus 4-5 in for the transmission-end coolant outlet, which is consistent. Axis order assumed: length along the crank, width across the manifolds, height vertical. Width: block and head about 350-400 mm wide, plus the intake manifold and throttle body on one side (about 200 mm) and the exhaust manifold on the other (about 100-150 mm): about 650 mm. Depends heavily on the manifolds; RWD swaps use aftermarket ones. +/-80 mm."
+    },
+    "height": {
+      "value": 650,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+          "accessed": "2026-09-29",
+          "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+          "note": "'stretching the deck height from the K20 engine block's 8.3 inches to 9.1 inches for the K24'."
+        },
+        {
+          "url": "https://www.motorreviewer.com/engine.php?engine_id=164",
+          "accessed": "2026-09-29",
+          "title": "motorreviewer.com: Honda 2.4L K24A/K24Z/K24W engine specs (spec aggregator)",
+          "note": "'K24A block has a deck height of 231.5 mm.' (spec aggregator)."
+        },
+        {
+          "url": "https://www.acurapartswarehouse.com/oem/acura~pan~oil~11200-rbb-000.html",
+          "accessed": "2026-09-29",
+          "title": "Acura Parts Warehouse (Acura dealer parts catalogue): 11200-RBB-000 Pan, Oil",
+          "note": "'Manufacturer Part Number 11200-RBB-000' ... 'Item Dimensions 16.3 x 10.6 x 6.2 inches'."
+        }
+      ],
+      "method": "No outline dimensions exist in any Honda source found (press kits, brochures, the 2002 CR-V service manual) or in a vendor spec sheet; the only full L x W x H found (enginetechspecs.com) is unreliable (its K24A1, K24A4 and K24Z7 pages give three different sets). Rough geometric estimate for a bare K24A2 upright with its stock intake and exhaust manifolds, accessories and oil pan, from: 87 x 99 mm bore and stroke (Honda), a 9.1 in (231 mm) block deck height (Jalopnik), the 2004-2008 TSX pan 11200-RBB-000 listed at 16.3 x 10.6 x 6.2 in (Acura parts catalogue; possibly its box) and Moroso's RSX Type-S replacement pan with a sump '5.5″ deep, 16.75″ long'. A Honda-Tech post (403 to this session, seen only as a search snippet, not a source) reportedly gives a K24A2 as 25.5 in tall and 20 in long plus 4-5 in for the transmission-end coolant outlet, which is consistent. Axis order assumed: length along the crank, width across the manifolds, height vertical. Height: 231 mm crank centre to deck, plus about 190 mm of head and valve cover, plus about 230 mm below the crank centre (bed-plate and a pan about 6 in deep): about 650 mm upright, +/-60 mm. Honda installs the engine leaning back 15 degrees in FWD cars (KPower), and Hybrid Racing notes a K24 needs the hood webbing trimmed where a K20 Type S does not."
+    }
+  },
+  "bellhousing": {
+    "value": "honda-k",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://hasportperformance.com/products/ekk2-k-series-mount-kit/",
+        "accessed": "2026-09-29",
+        "title": "Hasport Performance: EKK K-series Mount Kit 96-00 Civic EG/DC2 Subframe",
+        "note": "'whether you are using a K20 or K24 engine the head remains in the same location' (one mount kit, K20 or K24, with any of the listed K-series gearboxes)."
+      },
+      {
+        "url": "https://hasportperformance.com/products/egk-k-series-mount-kit/",
+        "accessed": "2026-09-29",
+        "title": "Hasport Performance: EGK K-series Mount Kit 92-95 Civic, 94-01 Integra, and Del Sol",
+        "note": "'The EGK2 mount kit works with the RSX and 02-11 Civic Si manual transmissions.' ... 'The EGK4 mount kit works with the 03-07 Accord and 04-08 TSX manual transmissions.' ... 'The EGK5 mount kit works with the 08-13 Accord, 09-14 TSX, and 12-15 Civic Si manual transmissions.' ... 'The EGKAWD mount kit works with the K-series CRV and Element AWD or FWD manual transmissions.'"
+      },
+      {
+        "url": "https://kpowerindustries.com/products/engine-adapter-plate",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries: K series Engine to 1990-2005 Mazda Miata (NA NB) Transmission Adapter Plate",
+        "note": "'This engine/transmission adapter plate allows you to bolt all popular K series engines to any 1990-2005 Miata transmission (5 and 6-speed).'"
+      },
+      {
+        "url": "https://kpowerindustries.com/pages/faqs",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries (formerly KMiata; RWD K-swap kits): FAQs",
+        "note": "'Because all K-series transmissions are FWD, our swap packages include an adapter plate and flywheel designed to pair the K engine with the factory RWD transmission from the chassis you’re working with.'"
+      },
+      {
+        "url": "https://kpowerindustries.com/products/k-series-to-bmw-e36-e46-transmission-adapter-plate-and-flywheel",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries: K Series Engine to BMW G260/Getrag 5/ZF5/ZF6 (E30/E36/E46) Adapter Plate, Flywheel, and Release Bearing",
+        "note": "'adapt a K series engine to BMW E36/E46 Getrag 5, ZF5, ZF6 or a E30 Getrag 260 5-speed transmission' ... 'The offset Honda uses from the factory on Civic/RSX/TSX/etc: 15°' ... 'Use Honda flywheel bolt 90011-RDB-000 only.'"
+      },
+      {
+        "url": "https://kpowerindustries.com/products/k-to-nc-mx5-engine-adapter-plate",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries: K Series Engine to 2006-2015 Mazda Miata MX5 (NC) Transmission Adapter Plate",
+        "note": "'This engine/transmission adapter plate allows you to bolt a K24 engine to any 2006-2015 Mazda MX5 transmission (5 and 6-speed).'"
+      },
+      {
+        "url": "https://kpowerindustries.com/products/kpower-k-series-engine-to-2016-2025-mazda-miata-mx5-nd-transmission-adapter-plate",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries: K Series Engine to 2016-2025 Mazda Miata MX5 (ND) Transmission Adapter Plate",
+        "note": "'This engine/transmission adapter plate allows you to bolt a K24 engine to any 2016-2025 Mazda Miata MX5 (ND) transmission.'"
+      },
+      {
+        "url": "https://kpowerindustries.com/products/kpower-86-transmission-adapter-plate",
+        "accessed": "2026-09-29",
+        "title": "KPower Industries: K Series Engine to 2013-2025 Toyota/Scion/Subaru 86/FRS/BRZ Transmission Adapter Plate",
+        "note": "'Our patented K24 86 adapter plate (U.S. Patent No. D1053910)' (Toyota/Subaru 86, FR-S, BRZ gearboxes, 2013-2025)."
+      },
+      {
+        "url": "https://xatracing.com/xat-k-series-to-cd009-adapter-plate",
+        "accessed": "2026-09-29",
+        "title": "XAT Racing: Honda K20 K24 to Nissan CD009 Adapter Plate",
+        "note": "K-series (K20/K24) to Nissan CD009: 'Fits CD001 through CD009 transmissions from 2003-2007 with the standard DE bolt pattern (VQ35DE)'."
+      },
+      {
+        "url": "https://fischracingtech.com/products/honda-k-series-to-cd009-adapter-system",
+        "accessed": "2026-09-29",
+        "title": "FischRacingTech: Honda K-Series (K20/K24) to CD009/CD00A Adapter System",
+        "note": "K-series to CD009/CD00A: 'preserves the 15-degree lean of the K-Series'."
+      },
+      {
+        "url": "https://collinsperformancetechnologies.com/products/k-series-to-s13-full-swap-kit",
+        "accessed": "2026-09-29",
+        "title": "Collins Performance Technologies: Honda K-Series Engine to KA24DE Transmission S13 Chassis Full Swap Kit",
+        "note": "K20/K24 to the Nissan S13 KA24DE 5-speed: 'It sits in the factory position of the stock KA24DE and bolts up to the OEM KA24DE transmission with the hood able to close.'"
+      },
+      {
+        "url": "http://speed.academy/how-to-k24-swap-a-s14-nissan-240sx-part1/",
+        "accessed": "2026-09-29",
+        "title": "Speed Academy: How To Swap a Honda K-series Engine Into a S14 Nissan 240SX, Part 1",
+        "note": "K24A2 in an S14 240SX: the KMiata kit 'which will allow us to bolt up a Getrag or ZF BMW E36 or E46 3-series gearbox to the K24'."
+      },
+      {
+        "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k-series-transmission-guide",
+        "accessed": "2026-09-29",
+        "title": "Hybrid Racing: The Complete Honda K-Series Transmission Guide",
+        "note": "'There are essentially two shapes of K-Series transmission cases (excluding AWD), easily identified by their mounting locations.' ... 'Style 1 has a three-bolt top transmission mount.' ... 'Style 2 will have a two-bolt top transmission mount.'"
+      }
+    ],
+    "note": "One bolt pattern for the whole K20/K24 family (Honda K transaxles). Factory gearboxes are all transverse FWD transaxles (5- and 6-speed manuals and automatics; AWD CR-V/Element versions): RSX and 2002-2011 Civic Si; 2003-2007 Accord and 2004-2008 TSX; 2008-2013 Accord, 2009-2014 TSX and 2012-2015 Civic Si; CR-V/Element (Hasport). They differ in case mounting points, shifter linkage and speed sensors, not in the engine face (Hybrid Racing), and only the 2012-2015 Civic Si (K24Z7) 6-speed has a factory LSD among K24 gearboxes ('No K24 transmission was equipped with an LSD (Except the K24Z7*)'). RWD needs an adapter plate plus a matching flywheel: KPower makes them for the Mazda MX-5 NA/NB, NC and ND gearboxes, the Toyota/Subaru 86 gearbox and BMW Getrag 260, Getrag 5-speed, ZF 5-speed and ZF 6-speed (E30/E36/E46); XAT Racing, FischRacingTech and Autosports Engineering make K-series to Nissan CD009/CD00A (350Z/370Z) kits, and Collins Performance Technologies a K-series to Nissan KA24DE 5-speed (S13) kit. Speed Academy's K24A2 S14 240SX runs a BMW E46 ZF through the KMiata (KPower) plate. XAT's catalogue also lists Toyota W and R series gearboxes, but no K-series kit for them was opened. KPower's BMW kit comes in 13 or 15 degree clocking (15 = Honda's factory lean). The K24 flywheel uses Honda bolt 90011-RDB-000 (KPower)."
+  },
+  "sump": {
+    "value": "centre",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://www.mattcaudell.com/k24-swapped-mercedes-190e",
+        "accessed": "2026-09-29",
+        "title": "Matt Caudell (engineer's build log): K24 Swapped Mercedes 190E",
+        "note": "About the K24A he fitted with a TF-Works RWD pan: the pan 'converts the engine from a mid-sump configuration to front-sump so it can clear the front crossmember in rear wheel drive cars'."
+      }
+    ],
+    "note": "Reference fitment: 2004-2008 Acura TSX (K24A2), stamped-steel pan 11200-RBB-000 carrying the chain-driven balance-shaft unit ('Chain-driven balance shafts mounted on lower block in oil pan', Honda). One builder's description; no Honda document found states where the sump sits, and the 2002 CR-V service manual's pan drawings (pp. 07-11, 07-27) show the pan outline but not its orientation to the crank. RWD swaps replace the pan: every KPower RWD pan also needs the K20 (PRB) oil pump ('There is physically no way to fit one of our oil pans on a K24 without this pump', KPower planning guide). Collins' S13 kit likewise 'uses any of the after market front sump oil pans and RSX Type S oil pump'."
+  },
+  "sumpOptions": [
+    {
+      "name": "2004-2008 Acura TSX (K24A2) stamped-steel oil pan",
+      "kind": "factory",
+      "position": {
+        "value": "centre",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.mattcaudell.com/k24-swapped-mercedes-190e",
+            "accessed": "2026-09-29",
+            "title": "Matt Caudell (engineer's build log): K24 Swapped Mercedes 190E",
+            "note": "'converts the engine from a mid-sump configuration to front-sump so it can clear the front crossmember in rear wheel drive cars'."
+          }
+        ],
+        "note": "Generic K24A statement from one builder; not measured here."
+      },
+      "fittedTo": ["CL9 Acura TSX (2004-2008)"],
+      "partNumber": {
+        "value": "11200-RBB-000",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.acurapartswarehouse.com/oem/acura~pan~oil~11200-rbb-000.html",
+            "accessed": "2026-09-29",
+            "title": "Acura Parts Warehouse (Acura dealer parts catalogue): 11200-RBB-000 Pan, Oil",
+            "note": "'Manufacturer Part Number 11200-RBB-000' ... 'Part Description Pan, Oil'; fitment rows run from '2004 Acura TSX 4 Door TSX' to 2008, 5AT and 6MT."
+          }
+        ]
+      },
+      "notes": "Steel, with the balance-shaft oil pump inside. The same black steel pan style is on the CR-V, Accord and TSX K24s ('K20 and K24 engines with STEEL Oil Pan. This is the black pan from CRV, Accord, TSX, etc.', KPower listing for the 4Piston baffle); CR-V, Accord and Element pan part numbers were not looked up."
+    },
+    {
+      "name": "2009-2014 Acura TSX (K24Z3) oil pan",
+      "kind": "factory",
+      "position": {
+        "value": "centre",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://kpower.industries/blogs/news/k24a2-vs-k24z3-which-swap-is-right-for-me",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: K24A2 vs. K24Z3: which swap is right for me?",
+            "note": "'the oil pans and engine mounts are all interchangeable between the K24A and K24Z blocks despite the drastically different designs'."
+          },
+          {
+            "url": "https://www.mattcaudell.com/k24-swapped-mercedes-190e",
+            "accessed": "2026-09-29",
+            "title": "Matt Caudell (engineer's build log): K24 Swapped Mercedes 190E",
+            "note": "'converts the engine from a mid-sump configuration to front-sump so it can clear the front crossmember in rear wheel drive cars'."
+          }
+        ],
+        "method": "No source states where the K24Z pan's sump sits. KPower says pans interchange between K24A and K24Z blocks, so the K24A position (mid-sump, Caudell) is assumed. Not checked against a drawing or photo."
+      },
+      "fittedTo": ["CU2 Acura TSX (2009-2014)"],
+      "partNumber": {
+        "value": "11200-R40-A00",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.acurapartswarehouse.com/oem/acura~pan~assy~oil~11200-r40-a00.html",
+            "accessed": "2026-09-29",
+            "title": "Acura Parts Warehouse (Acura dealer parts catalogue): 11200-R40-A00 Pan Assembly, Oil",
+            "note": "'Manufacturer Part Number 11200-R40-A00' ... 'Part Description Pan Assembly, Oil'; fitment rows from '2009 Acura TSX 4 Door TSX' to 2014."
+          }
+        ]
+      },
+      "notes": "Honda describes the related Civic Si K24Z7 pan as 'a stiff, cast-aluminum oil pan' (2012 Civic powertrain release); whether the TSX part is the same casting was not checked. The K24Z oil filter and crank sensor sit differently from the K24A (KPower)."
+    },
+    {
+      "name": "KPower K Swap RWD Front Sump Oil Pan System",
+      "kind": "aftermarket",
+      "position": {
+        "value": "front",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kpowerindustries.com/products/k24-swap-oiling-system-for-bmw-e30",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries: K Swap RWD Front Sump Oil Pan System",
+            "note": "Product name 'KPower K Swap RWD Front Sump Oil Pan System'; 'designed a front sump oil pan so we could keep the engine as close as possible to the firewall'."
+          }
+        ]
+      },
+      "notes": "Fabricated aluminium, '7 quart oil capacity', baffled, K20 (PRB) oil pump conversion required, K-series A/C compressor retained. Made for the BMW E30; KPower lists it in the Mercedes 190E, '1989-2002 Nissan S13 and S14 Chassis', '1983-1987 Toyota AE86 Corolla/Sprinter Trueno', 1978-1985 Mazda RX-7 (FB) and 2001-2005 Lexus IS300."
+    },
+    {
+      "name": "TF-Works RWD K-swap oil pan kit (billet oil pump adapter and pickup)",
+      "kind": "aftermarket",
+      "position": {
+        "value": "front",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.tf-works.com/tf-works-rwd-oil-pan-kit-with-billet-oil-pump-adapter/",
+            "accessed": "2026-09-29",
+            "title": "TF-Works (Touge Factory): RWD Oil Pan Kit with Billet Oil Pump Adapter and Pickup",
+            "note": "Kit contents '1 x Front sump oil pick up tube with viton O-ring'; related listing 'Kswap billet oil pump adapter for front sump relocation.'"
+          },
+          {
+            "url": "https://www.mattcaudell.com/k24-swapped-mercedes-190e",
+            "accessed": "2026-09-29",
+            "title": "Matt Caudell (engineer's build log): K24 Swapped Mercedes 190E",
+            "note": "'converts the engine from a mid-sump configuration to front-sump so it can clear the front crossmember in rear wheel drive cars'."
+          }
+        ],
+        "note": "TF-Works' own 2026 text also says 'By having the rear sump and flange machined together', which contradicts its front-sump pickup; the pickup, the relocation adapter and Caudell's fitted example all say front sump, so front is used."
+      },
+      "notes": "8 quart capacity ('maintain the 8 quart oil capacity'); 'specifically designed to clear the front subframe and steering rack on the S-chassis / BMW E30 / FRS / BRZ platform', narrowed in 2026 for the AE86, Datsun 510, KE70 and RX-3."
+    }
+  ],
+  "oilCapacity": {
+    "value": 4.2,
+    "unit": "L",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+        "accessed": "2026-09-29",
+        "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+        "note": "Standards and Service Limits, Engine Lubrication (p. 02-5), K24A1: 'Engine oil Capacity 5.3' L 'for engine overhaul'; 4.2 L (4.4 US qt) 'for oil change, including filter'; 4.0 L without filter (the PDF text layer renders the litre sign as 'O')."
+      },
+      {
+        "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+        "accessed": "2026-09-29",
+        "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+        "note": "TSX (K24A2) capacities: 'Crankcase 5.3' (no unit printed)."
+      }
+    ],
+    "note": "Oil change including filter, from the K24A1 (2002 CR-V) service manual. The TSX press kit's 'Crankcase 5.3' matches the manual's 5.3 L overhaul (dry) fill; no TSX, K24Z3 or K24Z7 oil-change figure was found (the TSX owner's manual on techinfo.honda.com failed TLS from here). RWD swap pans hold more: KPower 7 qt, TF-Works 8 qt."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://hondanews.com/en-US/releases/2004-acura-tsx-powertrain-part-2",
+          "accessed": "2026-09-29",
+          "title": "Honda News (American Honda): 2004 Acura TSX - Powertrain, Part 2",
+          "note": "'The TSX uses a forged-steel crankshaft with a relatively long 99 mm throw.'"
+        },
+        {
+          "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+          "accessed": "2026-09-29",
+          "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+          "note": "Civic Si (K24Z7): 'The crankshaft is a highly rigid, forged-steel design'."
+        },
+        {
+          "url": "https://www.drifted.com/honda-k24/",
+          "accessed": "2026-09-29",
+          "title": "DRIFTED.com: Ultimate Honda K24 Guide",
+          "note": "'The engine block features dual balance shafts, a forged crankshaft, reinforced connecting rods, and lightweight pistons.' (about the K24A2)."
+        }
+      ],
+      "note": "Forged steel, micropolished journals, five main bearings in a one-piece aluminium bed-plate (Honda, 2004 and 2009 TSX). For 2006 the K24A2's crank balance weight was 'optimized' (Honda)."
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+          "accessed": "2026-09-29",
+          "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+          "note": "'For 2006, crank balance weight was optimized and the connecting rods were strengthened to handle the increased RPMs' ... 'Lightweight alloy pistons and high-strength connecting rods'."
+        },
+        {
+          "url": "https://kpower.industries/blogs/news/k24a2-vs-k24z3-which-swap-is-right-for-me",
+          "accessed": "2026-09-29",
+          "title": "KPower Industries blog: K24A2 vs. K24Z3: which swap is right for me?",
+          "note": "'the K24Z3 rods are stronger than all older K24 rods'."
+        }
+      ],
+      "method": "No source read here names the rod material or process: Honda says only 'high-strength connecting rods' (TSX and Civic Si) and that the 2006 K24A2 rods were strengthened; KPower says the K24Z3 rods are stronger than older K24 rods. Forged steel is assumed because the aftermarket and forum lore describe the K24 rods as forged steel; this is unconfirmed and must be checked (it may be fracture-split powdered or forged steel).",
+      "note": "Humble Performance's wheel-torque advice (see reportedLimits) treats the rods as the first weak point."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+          "accessed": "2026-09-29",
+          "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+          "note": "Civic Si (K24Z7): 'high-compression cast-aluminum pistons'."
+        }
+      ],
+      "note": "Honda says 'cast' only for the K24Z7; for the K24A2 it says 'Lightweight alloy pistons' (2006 TSX powertrain release). Cast is assumed across the family but is unconfirmed for the K24A engines. The 2006 K24A2 added under-piston oil jets according to Wikipedia (lead only), and KPower's K20 pump kit plugs 'oil jet on the block'."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 450,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://kpowerindustries.com/pages/faqs",
+              "accessed": "2026-09-29",
+              "title": "KPower Industries (formerly KMiata; RWD K-swap kits): FAQs",
+              "note": "'a properly set up turbo or supercharger system can safely produce 450+ whp on a stock K24 bottom end.'"
+            },
+            {
+              "url": "https://kpower.industries/blogs/news/k24a2-vs-k24z3-which-swap-is-right-for-me",
+              "accessed": "2026-09-29",
+              "title": "KPower Industries blog: K24A2 vs. K24Z3: which swap is right for me?",
+              "note": "'It’s common to make 450-600whp out of a stock K20A or K24A.'"
+            }
+          ],
+          "note": "Both statements are KPower's (one site). 600 whp is its upper figure for the K20A/K24A family."
+        },
+        "context": "KPower Industries (RWD K-swap vendor), general guidance for a stock K24 bottom end with a turbo or supercharger that is 'properly set up'; no fuel, boost, rpm or duration stated. KPower's blog puts the common range at 450-600 whp for stock K20A/K24A engines and says it has seen K24Z3s 'easily make 500whp in Hondas'."
+      },
+      {
+        "component": "rods",
+        "quantity": "torque",
+        "value": {
+          "value": 500,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://shop.humbleperformance.com/blog/kseriesguide",
+              "accessed": "2026-09-29",
+              "title": "Humble Performance: Stock K20 K24 Engine Guide Quick And Dirty (6 Jul 2020)",
+              "note": "K24 notes: 'Keep WTQ under 500ftlbs if you like keeping your rods inside the block'."
+            }
+          ]
+        },
+        "context": "Humble Performance (Honda tuning shop), K24A2/K24A section of its stock-engine guide: stay under 500 lb-ft at the WHEELS (WTQ) on stock rods. Its power suggestions: K24A2/A 500-600 hp and K24Z7 400-450 hp on stock engines, with 600+ hp made on stock K24A2s in turbo builds; hp basis (wheel or crank), fuel and duration not stated."
+      },
+      {
+        "component": "oil-pump",
+        "quantity": "rpm",
+        "value": {
+          "value": 7800,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://shop.humbleperformance.com/blog/kseriesguide",
+              "accessed": "2026-09-29",
+              "title": "Humble Performance: Stock K20 K24 Engine Guide Quick And Dirty (6 Jul 2020)",
+              "note": "'Balance Shaft Oil Pump will limit revs under 7800RPM'."
+            }
+          ]
+        },
+        "context": "Humble Performance: the stock K24 balance-shaft oil pump limits revs to below 7,800 rpm; the fix is the K20 (PRB) pump. Hybrid Racing: the K24 carries 'a pair of balance shafts in the oil pump', and 'The K20A2 oil pump WILL cavitate past 8500rpm' (ported PRB pumps held pressure to 8,800 rpm in its experience)."
+      },
+      {
+        "component": "bottom-end",
+        "quantity": "rpm",
+        "value": {
+          "value": 8200,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://kpowerindustries.com/pages/build-planning-guide",
+              "accessed": "2026-09-29",
+              "title": "KPower Industries: Planning Guide (K24 swap options, updated October 2020)",
+              "note": "'A stock K24A2 engine with a 50 degree VTC gear typically makes 220-230whp and 180+wtq with the supporting upgrades in our swap packages. We generally set the rev limiter to 8200 RPM for track use.'"
+            }
+          ]
+        },
+        "context": "KPower's usual track rev limiter for stock K24A2 long blocks in its RWD swaps, which all run the K20 (PRB) oil pump conversion and a 50-degree VTC gear. A vendor's working limit, not a failure test; the factory redline is 7,100 rpm."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "k24a2-tsx-2004",
+      "name": "K24A2, 2004-2005 Acura TSX (USDM), 200 hp SAE net (pre-2005 procedure)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2003",
+          "to": "2005"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/release-a6627496e8fdac5503a03a004c34c07e-acura-model-chronology-2004-2006-tsx",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): Acura Model Chronology: 2004-2006 TSX",
+            "note": "'New model; introduced Spring, 2003' (model years 2004-2006 table)."
+          },
+          {
+            "url": "https://acuranews.com/en-US/releases/release-a823e49b4b06ce8b18c770004c34c33d-2005-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2005 Acura TSX Specifications (release September 2, 2004)",
+            "note": "2005 model specifications, release 'September 2, 2004', unchanged 200 hp rating."
+          }
+        ],
+        "note": "Model years 2004-2005; Honda gives no build dates. The 2006 model (next variant) was announced on 2 September 2005. Both pages are the American Honda newsroom. Canada also had the TSX; no Canadian source was read."
+      },
+      "fittedTo": ["CL9"],
+      "compressionRatio": {
+        "value": 10.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+            "note": "'Compression Ratio 10.5:1'."
+          },
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+            "note": "'The Acura TSX comes in with 10.5:1 compression and 2.4 liters of displacement.'"
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "'the K24Z3 features a higher compression ratio (11:1) than the K24A2 (10.5:1)'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2004-acura-tsx-powertrain-part",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2004 Acura TSX - Powertrain, Part 1",
+            "note": "VTC 'which continuously adjusts the intake cam timing to suit engine operating conditions'."
+          },
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k-series-faq-s",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K-Series FAQs",
+            "note": "'By varying oil pressure, VTC can continuously vary intake timing relative to the engine’s exhaust timing.'"
+          }
+        ],
+        "note": "K24A engines have a 25-degree VTC intake cam gear; swappers fit the 50-degree K20A2/K24Z3 gear ('a 50 degree VTC intake cam gear is highly recommended to replace the 25 degree gear', KPower)."
+      },
+      "injectorFlow": {
+        "value": 310,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kpowerindustries.com/pages/build-planning-guide",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries: Planning Guide (K24 swap options, updated October 2020)",
+            "note": "Fuel system, in a guide built around the K24A2: 'For mild naturally aspirated builds, we recommend the stock 310cc injectors.'"
+          }
+        ],
+        "note": "KPower gives no test pressure, and its guide also covers K24Z3 Miata swaps, so the figure is attributed to the K24A2 with some doubt. No Honda figure found."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake-and-exhaust",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2004-acura-tsx-powertrain-part",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2004 Acura TSX - Powertrain, Part 1",
+              "note": "'the TSX powerplant varies the opening lift and duration of the intake and exhaust valves'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "TSX: 'This motor uses the conventional VTEC mechanism as the older B series motors but with the addition of VTC.'"
+            },
+            {
+              "url": "https://ff-squad.com/technet2/k20-head-on-k24-block/",
+              "accessed": "2026-09-29",
+              "title": "FFS TechNet (ff-squad.com): K20/K24 Frankenstein: K20 Head Swap on K24 Block (20 May 2026)",
+              "note": "'RBB head / JDM K24A, USDM K24A2, UK K24A3' ... 'Uses 3-lobe camshafts on both sides of the head with single spring valvetrain.'"
+            }
+          ]
+        },
+        "switchRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2004-acura-tsx-powertrain-part",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2004 Acura TSX - Powertrain, Part 1",
+              "note": "'Above 6000 rpm, the intake and exhaust valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ],
+          "note": "Honda's round figure; the ECU's actual switch point varies with load."
+        }
+      },
+      "output": {
+        "power": {
+          "value": 200,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+              "note": "'Horsepower, SAE Net 200 hp @ 6800 rpm'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/acura/Acura_US%20Full%20Line_2004.pdf",
+              "accessed": "2026-09-29",
+              "title": "Acura (American Honda) 2004 US full-line brochure, TSX Specifications, p. 9 (PDF via auto-brochures.com; OCR text layer)",
+              "note": "TSX Specifications: 'Horsepower: 200 @ 6800 rpm'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 200hp at 6800rpm and 166lbs-ft at 4500rpm.'"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+              "note": "'Horsepower, SAE Net 200 hp @ 6800 rpm'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 200hp at 6800rpm and 166lbs-ft at 4500rpm.'"
+            }
+          ]
+        },
+        "torque": {
+          "value": 166,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+              "note": "'Torque, SAE Net 166 lb-ft @ 4500 rpm'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 200hp at 6800rpm and 166lbs-ft at 4500rpm.'"
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/acura/Acura_US%20Full%20Line_2004.pdf",
+              "accessed": "2026-09-29",
+              "title": "Acura (American Honda) 2004 US full-line brochure, TSX Specifications, p. 9 (PDF via auto-brochures.com; OCR text layer)",
+              "note": "'Torque: 166 lbs-ft' (the OCR text layer reads the rpm as '@4S00', i.e. 4500)."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+              "note": "'Torque, SAE Net 166 lb-ft @ 4500 rpm'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 200hp at 6800rpm and 166lbs-ft at 4500rpm.'"
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 7100,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://acuranews.com/en-US/releases/release-6a2f3de869ef0af45df662004c34c653-2004-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2004 Acura TSX Specifications (release January 5, 2003)",
+            "note": "'Redline 7100 rpm'."
+          }
+        ]
+      },
+      "notes": "RBB cylinder head (FFS TechNet). Balance-shaft oil pump in a steel pan. Drive-by-wire throttle, EGR on the intake manifold (Hybrid Racing). KPower's first choice for RWD swaps ('The K24A2 from the 2004-2008 TSX is the most potent K24 in stock form'); in swaps it makes 220-230 whp with a 50-degree VTC gear and bolt-ons (KPower). Wikipedia's 7,200 rpm rev limiter is a lead only, not used. Premium unleaded, 91 octane (Honda)."
+    },
+    {
+      "id": "k24a2-tsx-2006",
+      "name": "K24A2, 2006-2008 Acura TSX (USDM), 205 hp SAE net (Rev 8/04)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2005",
+          "to": "2008"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+            "note": "2006 model specifications, release 'September 2, 2005'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+            "note": "The next-generation 2009 TSX (K24Z3) was released 'Release April 20, 2008'."
+          }
+        ],
+        "note": "Model years 2006-2008; Honda gives no build dates. Both pages are the American Honda newsroom."
+      },
+      "fittedTo": ["CL9"],
+      "compressionRatio": {
+        "value": 10.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+            "note": "'Compression Ratio 10.5:1'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+            "note": "'Compression ratio 10.5:1'."
+          },
+          {
+            "url": "https://ff-squad.com/technet2/k20-head-on-k24-block/",
+            "accessed": "2026-09-29",
+            "title": "FFS TechNet (ff-squad.com): K20/K24 Frankenstein: K20 Head Swap on K24 Block (20 May 2026)",
+            "note": "the 2006-2008 K24A2 'retained the same 10.5 compression ratio'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "injectorFlow": {
+        "value": 310,
+        "unit": "cc/min",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kpowerindustries.com/pages/build-planning-guide",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries: Planning Guide (K24 swap options, updated October 2020)",
+            "note": "Fuel system, in a guide built around the K24A2: 'For mild naturally aspirated builds, we recommend the stock 310cc injectors.'"
+          }
+        ],
+        "note": "KPower gives no test pressure, and its guide also covers K24Z3 Miata swaps, so the figure is attributed to the K24A2 with some doubt. No Honda figure found."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+            "note": "VTC 'continuously adjusts the intake cam timing to suit engine operating conditions'."
+          },
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k-series-faq-s",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K-Series FAQs",
+            "note": "'By varying oil pressure, VTC can continuously vary intake timing relative to the engine’s exhaust timing.'"
+          }
+        ],
+        "note": "25-degree VTC gear as on the earlier K24A2 (KPower recommends the 50-degree gear for any K24A)."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake-and-exhaust",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+              "note": "'Above 6000 rpm, the intake and exhaust valves are operated by high-lift, long-duration cam profiles'."
+            },
+            {
+              "url": "https://ff-squad.com/technet2/k20-head-on-k24-block/",
+              "accessed": "2026-09-29",
+              "title": "FFS TechNet (ff-squad.com): K20/K24 Frankenstein: K20 Head Swap on K24 Block (20 May 2026)",
+              "note": "'RBB head / JDM K24A, USDM K24A2, UK K24A3' ... 'Uses 3-lobe camshafts on both sides of the head with single spring valvetrain.'"
+            }
+          ]
+        },
+        "switchRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+              "note": "'Above 6000 rpm, the intake and exhaust valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 205,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+              "note": "'205 hp @ 7000 rpm SAE net (Rev 8/04)'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+              "note": "'SAE net (Rev 8/04) horsepower @ rpm 205 @7000'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2008-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2008 Acura TSX - Powertrain",
+              "note": "2008 TSX: 'Horsepower @ rpm 205 @ 7000'."
+            }
+          ],
+          "note": "Only the American Honda newsroom (acuranews.com and hondanews.com) states it, so one source family."
+        },
+        "powerRpm": {
+          "value": 7000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+              "note": "'205 hp @ 7000 rpm SAE net (Rev 8/04)'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2008-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2008 Acura TSX - Powertrain",
+              "note": "2008 TSX: 'Horsepower @ rpm 205 @ 7000'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 164,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+              "note": "'164lb-ft @ 4500 rpm SAE net (Rev 8/04)'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2006-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Acura TSX - Powertrain (release September 2, 2005)",
+              "note": "'SAE net (Rev 8/04) torque @ rpm (lbs.-ft.) 164 @ 4500'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2008-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2008 Acura TSX - Powertrain",
+              "note": "2008 TSX: 'Torque @ rpm (lb-ft) 164 @ 4500'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4500,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+              "note": "'164lb-ft @ 4500 rpm SAE net (Rev 8/04)'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 7100,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://acuranews.com/en-US/releases/release-72fa4b08ec5c0f899612f2004c34c17a-2006-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Acura News (American Honda): 2006 Acura TSX Specifications (release September 2, 2005)",
+            "note": "'Redline 7100 rpm'."
+          }
+        ]
+      },
+      "notes": "RBB cylinder head (FFS TechNet). Balance-shaft oil pump in a steel pan. Drive-by-wire throttle, EGR on the intake manifold (Hybrid Racing). KPower's first choice for RWD swaps ('The K24A2 from the 2004-2008 TSX is the most potent K24 in stock form'); in swaps it makes 220-230 whp with a 50-degree VTC gear and bolt-ons (KPower). Wikipedia's 7,200 rpm rev limiter is a lead only, not used. 2006 hardware changes (Honda): intake valve 35 to 36 mm, more intake lift and duration at high rpm ('intake valve lift and opening duration were increased'), throttle body 60 to 64 mm, intake runner radius 70 to 80 mm, exhaust pipe 54 to 57.2 mm, crank balance weight optimized, connecting rods strengthened, ventilation holes between cylinders. The rating also moved to SAE J1349 (Rev 8/04): 'all Acura horsepower and torque specifications have been updated to reflect revised Society of Automotive Engineers (SAE) J1349 (Rev 8/04) net calculations that went into affect in January of 2005' (Acura). So 200 hp/166 lb-ft (old procedure) became 205 hp/164 lb-ft; Honda does not split the change between hardware and procedure (torque fell despite the upgrades, which points at the procedure). Swappers value the 2006-2008 cams (Humble: '06-08 K24A2 is more desirable over earlier years due to camshaft design')."
+    },
+    {
+      "id": "k24a-jdm-rbb-200ps",
+      "name": "K24A (RBB head), JDM Accord CL9 / Accord Wagon Type S / Odyssey Absolute FF, 200 PS",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "2002-10",
+          "to": "2008-11"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/honda/accord/F004/M001G001/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Honda Accord 2.4 24TL (2002-10 to 2004-09 build)",
+            "note": "Accord 24TL page header '2002年10月～2004年9月生産モデル' (built October 2002 to September 2004): K24A, 200 PS."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Honda Accord model index (all generations)",
+            "note": "'アコード（ホンダ）ＣＬ系 2002年10月発売モデルのカタログ' (CL-series Accord, October 2002 launch): '2.4Lが200馬力' (the 2.4 L makes 200 PS)."
+          },
+          {
+            "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+            "accessed": "2026-09-29",
+            "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+            "note": "Last CL9 model: '2006年10月発表　2008年11月終了モデル' (announced October 2006, ended November 2008)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/honda/odyssey/F003/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Honda Odyssey, 2003-10 to 2008-09 generation (RB1/RB2)",
+            "note": "RB1/RB2 Odyssey generation: 'オデッセイ 2003年10月～2008年9月生産モデルのカタログ' (built October 2003 to September 2008)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/honda/accord_wagon/F004/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Honda Accord Wagon, 2002-11 to 2008-12 generation (CM1/CM2/CM3)",
+            "note": "CM Accord Wagon generation: 'アコードワゴン 2002年11月～2008年12月生産モデルのカタログ' (built November 2002 to December 2008)."
+          }
+        ],
+        "note": "The window is the CL9 Accord sedan's (Car Sensor, goo-net, Honda Japan). Inside it: the RB1 Odyssey Absolute (FF) from October 2003 to September 2008 (Car Sensor) and the CM2 Accord Wagon Type S (wagon generation November 2002 to December 2008 per Car Sensor; Honda Japan's archive ends the last wagon model in November 2008, so November 2008 is kept)."
+      },
+      "fittedTo": [
+        "CL9 (Accord 24T, 24S, 24TL, Type S)",
+        "CM2 (Accord Wagon Type S)",
+        "RB1 (Odyssey Absolute, FF)"
+      ],
+      "compressionRatio": {
+        "value": 10.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+            "accessed": "2026-09-29",
+            "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+            "note": "'圧縮比 10.5' (compression ratio) for the K24A."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+            "note": "'圧縮比 10.5'."
+          },
+          {
+            "url": "https://www.honda.co.jp/auto-archive/odyssey/2007_01/grade-data/",
+            "accessed": "2026-09-29",
+            "title": "Honda Japan auto-archive: Odyssey, announced 2006-04, ended 2007-01, specifications (主要諸元)",
+            "note": "Odyssey: 10.5 for the Absolute (ABA-RB1/RB2) against 9.7 for the other grades."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+            "note": "'過給機 なし' (supercharger/turbo: none)."
+          },
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+            "note": "'過給機 なし' (no forced induction, so no intercooler)."
+          },
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Honda Accord model index (all generations)",
+            "note": "'VTC：連続可変バルブタイミング・コントロール機構' (VTC: continuously variable valve timing control)."
+          }
+        ],
+        "note": "goo-net says continuous VTC but not which cam; intake-only is from the K24A2 press kit and KPower's statement that the JDM RBB K24A is 'nearly identical to the K24A2 available in the U.S.'"
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake-and-exhaust",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://ff-squad.com/technet2/k20-head-on-k24-block/",
+              "accessed": "2026-09-29",
+              "title": "FFS TechNet (ff-squad.com): K20/K24 Frankenstein: K20 Head Swap on K24 Block (20 May 2026)",
+              "note": "'RBB head / JDM K24A, USDM K24A2, UK K24A3' ... 'Uses 3-lobe camshafts on both sides of the head with single spring valvetrain.'"
+            },
+            {
+              "url": "https://kpowerindustries.com/pages/faqs",
+              "accessed": "2026-09-29",
+              "title": "KPower Industries (formerly KMiata; RWD K-swap kits): FAQs",
+              "note": "JDM K24A: 'nearly identical to the K24A2 available in the U.S.' and buyers should 'make sure they are receiving the K24A engine with an RBB cylinder head and a 200 hp rating'."
+            },
+            {
+              "url": "https://shop.humbleperformance.com/blog/kseriesguide",
+              "accessed": "2026-09-29",
+              "title": "Humble Performance: Stock K20 K24 Engine Guide Quick And Dirty (6 Jul 2020)",
+              "note": "'The K24A is sold as both a K24A4 equivalent and a K24A2 Equivalent.' (check for the RBB head)."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 200,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+              "accessed": "2026-09-29",
+              "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+              "note": "'最高出力（kW［PS］/rpm）＊ 147［200］/6,800' (max power, kW [PS]/rpm, net)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+              "note": "'最高出力 200ps(147kW)/6800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/honda/accord/F004/M001G001/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Honda Accord 2.4 24TL (2002-10 to 2004-09 build)",
+              "note": "2002-2004 build: '最高出力 200ps'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/honda/odyssey/F003/M001G007/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Honda Odyssey 2.4 Absolute (RB1, 2003-10 to 2004-11 build)",
+              "note": "Odyssey Absolute (RB1), '2003年10月～2004年11月生産モデル': 'エンジン型式 K24A', '最高出力 200ps'."
+            }
+          ],
+          "note": "Honda Japan: '＊はネット値です。' (net figures), i.e. JIS net. Car Sensor and goo-net are separate datasets; Honda Japan is the maker."
+        },
+        "powerRpm": {
+          "value": 6800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+              "accessed": "2026-09-29",
+              "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+              "note": "'最高出力（kW［PS］/rpm）＊ 147［200］/6,800'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+              "note": "'最高出力 200ps(147kW)/6800rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 232,
+          "unit": "Nm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+              "accessed": "2026-09-29",
+              "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+              "note": "'最大トルク（N・m［kg・m］/rpm）＊ 232［23.7］/4,500' (max torque, N·m [kg·m]/rpm, net)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+              "note": "'最大トルク 23.7kg・m(232N・m)/4500rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/honda/accord/F004/M001G001/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Honda Accord 2.4 24TL (2002-10 to 2004-09 build)",
+              "note": "'232（23.7）/4500'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/honda/odyssey/F003/M001G007/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Honda Odyssey 2.4 Absolute (RB1, 2003-10 to 2004-11 build)",
+              "note": "Odyssey Absolute (RB1): '232（23.7）/4500'."
+            }
+          ],
+          "note": "23.7 kgf·m."
+        },
+        "torqueRpm": {
+          "value": 4500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.honda.co.jp/auto-archive/accord/4door/2008/grade-data/",
+              "accessed": "2026-09-29",
+              "title": "Honda Japan auto-archive: Accord 4-door, announced 2006-10, ended 2008-11, specifications (主要諸元)",
+              "note": "'最大トルク（N・m［kg・m］/rpm）＊ 232［23.7］/4,500'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/HONDA/ACCORD/10016621/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Honda Accord 24TL (2004-01) (10016621)",
+              "note": "'最大トルク 23.7kg・m(232N・m)/4500rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Imported as a used 'JDM K24A'. Same RBB head family as the K24A2 (FFS TechNet; KPower). The same code K24A also covers 160 PS, 9.7:1 regular-fuel economy engines (e.g. Odyssey B/M/L '118［160］/5,500', Accord Wagon 24EL), so swappers check for the RBB head and the 200 PS rating. Left out: the 4WD Odyssey Absolute RB2 (and Accord Wagon CM3), rated '140［190］/6,800' and '228［23.2］/4,500' (Honda Japan), a separate rating not recommended by the vendors. All JDM CL9 Accords were 5-speed automatics; the RB1 Absolute had a 5AT. JDM water-pump housing and alternator differ; KPower suggests the USDM K24 parts. Hybrid Racing ranks the JDM K24A first among K-swap engines."
+    },
+    {
+      "id": "k24z3-tsx",
+      "name": "K24Z3, 2009-2014 Acura TSX (USDM), 201 hp SAE net",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2008",
+          "to": "2014"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+            "note": "2009 TSX specifications, 'Release April 20, 2008'."
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "'The ideal engine to use for this swap is the K24Z3 engine found in the 2009-2014 Acura TSX.'"
+          },
+          {
+            "url": "https://www.acurapartswarehouse.com/oem/acura~pan~assy~oil~11200-r40-a00.html",
+            "accessed": "2026-09-29",
+            "title": "Acura Parts Warehouse (Acura dealer parts catalogue): 11200-R40-A00 Pan Assembly, Oil",
+            "note": "Pan 11200-R40-A00 fitment rows run from '2009 Acura TSX 4 Door TSX' to 2014."
+          }
+        ],
+        "note": "Model years 2009-2014 (the 2008 start is the press launch); build dates not published. Assembled from three sites, none giving the whole window."
+      },
+      "fittedTo": ["CU2 (TSX sedan)", "CW2 (TSX Sport Wagon, 2011-2014)"],
+      "compressionRatio": {
+        "value": 11.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+            "note": "'Compression Ratio 11.0:1'."
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "'the K24Z3 features a higher compression ratio (11:1) than the K24A2 (10.5:1)'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-powertrain",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX - Powertrain (release April 20, 2008)",
+            "note": "'An increase in compression ratio from 10.5 to 11.0:1'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-powertrain",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX - Powertrain (release April 20, 2008)",
+            "note": "'intake camshaft timing is continuously adjusted to suit engine operating conditions'."
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "'It has iVTEC on the intake cam only, and also includes a 50 degree VTC gear from the factory'."
+          }
+        ],
+        "note": "50-degree VTC gear from the factory (KPower)."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX - Powertrain (release April 20, 2008)",
+              "note": "'Above 5000 rpm, the intake valves are operated by high-lift, long-duration camshaft profiles'."
+            },
+            {
+              "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+              "accessed": "2026-09-29",
+              "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+              "note": "'It has iVTEC on the intake cam only'."
+            }
+          ]
+        },
+        "switchRpm": {
+          "value": 5000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX - Powertrain (release April 20, 2008)",
+              "note": "'Above 5000 rpm, the intake valves are operated by high-lift, long-duration camshaft profiles'."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 201,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+              "note": "'Horsepower 201 hp @ 7000 rpm'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/acura/tsx/Acura_US%20TSX_2009.pdf",
+              "accessed": "2026-09-29",
+              "title": "Acura (American Honda) 2009 US TSX brochure, specifications (PDF via auto-brochures.com)",
+              "note": "'Horsepower @ rpm (SAE net) 201 @ 7000'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+              "note": "'Horsepower 201 hp @ 7000 rpm'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/acura/tsx/Acura_US%20TSX_2009.pdf",
+              "accessed": "2026-09-29",
+              "title": "Acura (American Honda) 2009 US TSX brochure, specifications (PDF via auto-brochures.com)",
+              "note": "'Horsepower @ rpm (SAE net) 201 @ 7000'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 172,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+              "note": "'Torque 172 lb-ft @ 4400 rpm (6MT); 170 lb-ft @ 4300 rpm (5AT)'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/acura/tsx/Acura_US%20TSX_2009.pdf",
+              "accessed": "2026-09-29",
+              "title": "Acura (American Honda) 2009 US TSX brochure, specifications (PDF via auto-brochures.com)",
+              "note": "'Manual: 172 @ 4300'."
+            }
+          ],
+          "note": "Manual-transmission rating; automatics are rated 170 lb-ft @ 4,300 rpm."
+        },
+        "torqueRpm": {
+          "value": 4400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+              "note": "'Torque 172 lb-ft @ 4400 rpm (6MT); 170 lb-ft @ 4300 rpm (5AT)'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-powertrain",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2009 Acura TSX - Powertrain (release April 20, 2008)",
+              "note": "'172 lb-ft of torque at 4,400 rpm (MT)'."
+            }
+          ],
+          "note": "Conflict: Acura's 2009 TSX brochure prints 'Manual: 172 @ 4300' (auto-brochures.com). The press kit gives 4,400 rpm twice, so 4,400 is used; the brochure may carry the automatic's rpm."
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 7100,
+        "unit": "rpm",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2009-acura-tsx-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2009 Acura TSX Specifications (release April 20, 2008)",
+            "note": "'Redline 7100 rpm'."
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/acura/tsx/Acura_US%20TSX_2009.pdf",
+            "accessed": "2026-09-29",
+            "title": "Acura (American Honda) 2009 US TSX brochure, specifications (PDF via auto-brochures.com)",
+            "note": "'Redline (rpm) 7100'."
+          }
+        ]
+      },
+      "notes": "R40 head with the exhaust manifold cast into it and a single exhaust exit ('designing the R40 cylinder head with an integrated exhaust manifold and a single exit exhaust port', KPower), which eases turbo and tight RWD installs but limits N/A power (KPower: 200-210 whp with bolt-ons, 206 whp at a 7,800 rpm limit in its Miata). Crank trigger on the flywheel side, CAN-bus, flash-only ECU; KPower makes a timing cover to use the older crank sensor. Rods thicker than the K24A's ('the K24Z3 rods are stronger than all older K24 rods'). Left out: the 2008-2012 Accord K24Z3 (190 hp; KPower quotes 'slightly lower compression ratio (10.7:1 vs. 11:1)'), which vendors do not recommend."
+    },
+    {
+      "id": "k24z7-civic-si-2012",
+      "name": "K24Z7, 2012-2013 Honda Civic Si (USDM), 201 hp SAE net",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2011",
+          "to": "2013"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+            "note": "2012 Civic Si specifications, 'Release April 20, 2011'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-5d911be38cf30e49d54f6cb4520829b7-honda-civic-si-timeline-and-milestones",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): Honda Civic Si Timeline and Milestones",
+            "note": "Model years '2012-2013' with '201 hp 170 lb.-ft.'; then '2014-2015' at 205 hp."
+          }
+        ],
+        "note": "Model years 2012-2013; build dates not published."
+      },
+      "fittedTo": ["FG4 (Civic Si Coupe)", "FB6 (Civic Si Sedan)"],
+      "compressionRatio": {
+        "value": 11.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+            "note": "'Compression Ratio 11.0:1'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+            "note": "'High-strength connecting rods with lightweight aluminum pistons that deliver a 11.0:1 compression ratio'."
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "K24Z7: 'they have identical specs to the K24Z3 from the TSX' (11:1)."
+          }
+        ],
+        "note": "hondanews.com is one source family; KPower is the independent confirmation."
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+            "note": "A VTC actuator 'advances or retards the intake cam, optimizing engine output and reducing emissions' ... 'the intake camshaft is continuously varying the amount of advance or retard'."
+          }
+        ],
+        "note": "Honda newsroom only."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+              "note": "'Above 5,000 rpm, the intake valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ]
+        },
+        "switchRpm": {
+          "value": 5000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+              "note": "'Above 5,000 rpm, the intake valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 201,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+              "note": "'Horsepower @ rpm (SAE net) 201 @ 7000'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+              "note": "'Horsepower @ rpm (SAE net) 201 @ 7000'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 170,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+              "note": "'Torque (lb-ft @ rpm) 170 @ 4400'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+              "note": "'Torque (lb-ft @ rpm) 170 @ 4400'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 7000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-ae0181ece9064907b67ccdd9baebbca2-2012-honda-civic-si-specifications-and-features",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic Si Specifications and Features (release April 20, 2011)",
+            "note": "'Redline (rpm) 7000'."
+          }
+        ]
+      },
+      "notes": "Honda names the code: 'engine (K24Z7) with 201 horsepower' (Civic Si timeline). Exhaust manifold 'integrated directly into the cylinder head casting'; cast-aluminium pistons, forged-steel crank, cast-aluminium oil pan, chain-driven balancer in the pan (Honda). 6-speed manual with a 'Helical-type limited-slip differential'. Vendors rate it below the K24Z3/K24A2 for swaps: KPower calls it compatible but pricier; Hybrid Racing: 'Best for: RWD swaps, or builds where you already have the engine'. Sources for output are hondanews.com only (one source family)."
+    },
+    {
+      "id": "k24z7-civic-si-2014",
+      "name": "K24Z7, 2014-2015 Honda Civic Si (USDM), 205 hp SAE net",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2014-03",
+          "to": "2015"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/release-a305479299cb416c9a8944a100a7e03d-2014-civic-si-ups-the-ante-with-more-power-higher-tech-and-sportier-coupe-styling",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2014 Civic Si Ups the Ante with More Power, Higher Tech and Sportier Coupe Styling (March 11, 2014)",
+            "note": "'2014 Civic Si Coupe goes on-sale March 12' (the sedan followed on 26 March)."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-5d911be38cf30e49d54f6cb4520829b7-honda-civic-si-timeline-and-milestones",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): Honda Civic Si Timeline and Milestones",
+            "note": "Model years '2014-2015' at 205 hp; '2015: No changes.'"
+          }
+        ],
+        "note": "Model years 2014-2015."
+      },
+      "fittedTo": ["FG4 (Civic Si Coupe)", "FB6 (Civic Si Sedan)"],
+      "compressionRatio": {
+        "value": 11.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+            "note": "'Compression Ratio 11.0 : 1'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+            "note": "'High-strength connecting rods with lightweight aluminum pistons that deliver a 11.0:1 compression ratio'."
+          },
+          {
+            "url": "https://kpower.industries/blogs/news/game-changer-the-new-k24z3-swap-is-here",
+            "accessed": "2026-09-29",
+            "title": "KPower Industries blog: The Game-Changing K24Z3 Swap Is Here",
+            "note": "K24Z7: 'they have identical specs to the K24Z3 from the TSX' (11:1)."
+          }
+        ],
+        "note": "hondanews.com is one source family; KPower is the independent confirmation."
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+            "note": "A VTC actuator 'advances or retards the intake cam, optimizing engine output and reducing emissions' ... 'the intake camshaft is continuously varying the amount of advance or retard'."
+          }
+        ],
+        "note": "Honda newsroom only."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+              "note": "'Above 5,000 rpm, the intake valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ]
+        },
+        "switchRpm": {
+          "value": 5000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/releases/2012-honda-civic-powertrains",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2012 Honda Civic - Powertrains (release April 20, 2011)",
+              "note": "'Above 5,000 rpm, the intake valves are operated by high-lift, long-duration cam profiles'."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 205,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+              "note": "'Horsepower @ rpm (SAE net) 205 @ 7000'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-f1bee6892c014e2582c6dfaf6461f989-2015-civic-si-specifications-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2015 Civic Si Specifications & Features",
+              "note": "2015: 'Horsepower @ rpm (SAE net) 205 @ 7000'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+              "note": "'Horsepower @ rpm (SAE net) 205 @ 7000'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-f1bee6892c014e2582c6dfaf6461f989-2015-civic-si-specifications-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2015 Civic Si Specifications & Features",
+              "note": "2015: 'Horsepower @ rpm (SAE net) 205 @ 7000'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 174,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+              "note": "'Torque (lb-ft @ rpm, SAE net) 174 @ 4400'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-f1bee6892c014e2582c6dfaf6461f989-2015-civic-si-specifications-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2015 Civic Si Specifications & Features",
+              "note": "2015: 'Torque (lb-ft @ rpm, SAE net) 174 @ 4400'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 4400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+              "note": "'Torque (lb-ft @ rpm, SAE net) 174 @ 4400'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-f1bee6892c014e2582c6dfaf6461f989-2015-civic-si-specifications-features",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2015 Civic Si Specifications & Features",
+              "note": "2015: 'Torque (lb-ft @ rpm, SAE net) 174 @ 4400'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "redline": {
+        "value": 7000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-b228c382366b432890e04499ebb2b995-2014-civic-si-specifications-and-features",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2014 Civic Si Specifications and Features",
+            "note": "'Redline (rpm) 7000'."
+          }
+        ]
+      },
+      "notes": "Honda names the code: 'engine (K24Z7) with 201 horsepower' (Civic Si timeline). Exhaust manifold 'integrated directly into the cylinder head casting'; cast-aluminium pistons, forged-steel crank, cast-aluminium oil pan, chain-driven balancer in the pan (Honda). 6-speed manual with a 'Helical-type limited-slip differential'. Vendors rate it below the K24Z3/K24A2 for swaps: KPower calls it compatible but pricier; Hybrid Racing: 'Best for: RWD swaps, or builds where you already have the engine'. Honda: 'a retuned exhaust system boosts the engine output of both the Si Coupe and Si Sedan by 4 horsepower (205)' and 4 lb-ft. Output sources are hondanews.com only."
+    },
+    {
+      "id": "k24a1-crv-2002",
+      "name": "K24A1, 2002-2005 Honda CR-V (USDM), 160 hp SAE net (pre-2005 procedure); usual K24-block donor",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2001",
+          "to": "2005"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+            "note": "2002 CR-V specifications, release 'September 1, 2001'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-199c5b5152258254520134004c34c33a-2005-honda-cr-v-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2005 Honda CR-V Specifications (release September 2, 2004)",
+            "note": "2005 CR-V specifications, release 'September 2, 2004', still 160 hp."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-13f25e90cfe47cd58453f1f710057d45-honda-cr-v-timeline-and-milestones",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): Honda CR-V Timeline and Milestones",
+            "note": "'2002 - 2004 Engine 2.4-liter DOHC 16-valve i-VTEC® 160 hp 162 lb.-ft.'; 2005 the same; 2006 at 156 hp."
+          }
+        ],
+        "note": "Model years 2002-2005; build dates not published. American Honda newsroom only. '2005: A five-speed automatic transmission became standard for all trim levels.' (CR-V timeline)."
+      },
+      "fittedTo": ["RD4 (CR-V 2WD)", "RD5 (CR-V 4WD)"],
+      "compressionRatio": {
+        "value": 9.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+            "accessed": "2026-09-29",
+            "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+            "note": "Design Specifications, p. 02-17: 'K24A1 engine 9.6'."
+          },
+          {
+            "url": "https://www.auto-brochures.com/makes/Honda/CR-V/Honda_US%20CR-V_2003.pdf",
+            "accessed": "2026-09-29",
+            "title": "Honda (American Honda) 2003 US CR-V brochure, specifications (PDF via auto-brochures.com)",
+            "note": "'Compression Ratio 9.6: 1'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+            "note": "'Compression Ratio 9.6:1'."
+          },
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+            "note": "'Honda CRV comes in with 9.6:1 compression and 2.4 liters of displacement.'"
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+            "note": "CR-V: 'This motor does not use the conventional VTEC mechanism from the earlier B series motors but does have VTC.'"
+          }
+        ],
+        "note": "Hybrid Racing says VTC without naming the cam; intake phasing as on every K24 here."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "CR-V: 'This motor has no VTEC mechanism on the exhaust cam and runs on 12 valves before 2200rpm' (economy i-VTEC: one intake valve per cylinder barely opens at low rpm)."
+            },
+            {
+              "url": "https://shop.humbleperformance.com/blog/kseriesguide",
+              "accessed": "2026-09-29",
+              "title": "Humble Performance: Stock K20 K24 Engine Guide Quick And Dirty (6 Jul 2020)",
+              "note": "K24A1/A4/A8/A: 'Cons: Intake Only VTEC, Balance Shaft Oil Pumps'."
+            }
+          ],
+          "note": "Economy i-VTEC. Hybrid Racing puts the switch near 2,200 rpm; Wikipedia says 2,750 rpm (lead only), so no switch rpm is recorded."
+        }
+      },
+      "output": {
+        "power": {
+          "value": 160,
+          "unit": "hp",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+              "note": "'Horsepower @ rpm (SAE net) 160@6000'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Honda/CR-V/Honda_US%20CR-V_2003.pdf",
+              "accessed": "2026-09-29",
+              "title": "Honda (American Honda) 2003 US CR-V brochure, specifications (PDF via auto-brochures.com)",
+              "note": "'Horsepower @ rpm (SAE net) 160 @ 6000'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 160hp at 6000rpm and 162lbs-ft at 3600 rpm.'"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+              "note": "'Horsepower @ rpm (SAE net) 160@6000'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 160hp at 6000rpm and 162lbs-ft at 3600 rpm.'"
+            }
+          ]
+        },
+        "torque": {
+          "value": 162,
+          "unit": "lb-ft",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+              "note": "'Torque (lb.-ft. @ rpm) 162@3600'."
+            },
+            {
+              "url": "https://www.auto-brochures.com/makes/Honda/CR-V/Honda_US%20CR-V_2003.pdf",
+              "accessed": "2026-09-29",
+              "title": "Honda (American Honda) 2003 US CR-V brochure, specifications (PDF via auto-brochures.com)",
+              "note": "'Torque (lb.-ft. @ rpm) 162 @ 3600'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 160hp at 6000rpm and 162lbs-ft at 3600 rpm.'"
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3600,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-64ea815d6e8d0126225ce8004c34c80f-2002-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2002 Honda CR-V Specifications (release September 1, 2001)",
+              "note": "'Torque (lb.-ft. @ rpm) 162@3600'."
+            },
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "'The motor is rated at 160hp at 6000rpm and 162lbs-ft at 3600 rpm.'"
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "notes": "Why swappers use it: the cheapest K24 long block, and the usual base for a K24 block with a K20 (PRB or RBC) head. Its pistons clear the K20 head's valves, unlike the K24A4/A8's ('If using a K24a4 block the pistons will need to be swapped with aftermarket or a1, a2 pistons to avoid valve to piston contact', Hybrid Racing). K20-head swaps use the CR-V K24A1 head gasket 12251-PPA-004 (FFS TechNet). Its PPA head is the best-flowing economy K head (FFS TechNet). 5-speed manual or automatic, no LSD. Humble Performance suggests 400-500 hp on a stock K24A1/A4/A8 bottom end with a head and oil-pump swap and a turbo. Regular unleaded (Honda)."
+    },
+    {
+      "id": "k24a1-crv-2006",
+      "name": "K24A1, 2006 Honda CR-V (USDM), 156 hp SAE net (Rev 8/04 re-rating)",
+      "markets": ["USDM"],
+      "period": {
+        "value": {
+          "from": "2005",
+          "to": "2006"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+            "note": "2006 CR-V specifications, release 'February 17, 2006'."
+          },
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-13f25e90cfe47cd58453f1f710057d45-honda-cr-v-timeline-and-milestones",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): Honda CR-V Timeline and Milestones",
+            "note": "'2006: All Honda horsepower and torque specifications were updated to reflect revised Society of Automotive Engineers (SAE) J1349 (Rev 8/04) net calculations.'"
+          }
+        ],
+        "note": "Model year 2006 only; the 2007 CR-V moved to the K24Z1. The start is approximate (model-year 2006 production began in 2005); build dates not published."
+      },
+      "fittedTo": ["RD4 (CR-V 2WD)", "RD5 (CR-V 4WD)"],
+      "compressionRatio": {
+        "value": 9.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+            "accessed": "2026-09-29",
+            "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+            "note": "'Compression Ratio 9.6:1'."
+          },
+          {
+            "url": "https://archive.org/download/2002-crv-service-manual/2002%20CRV%20Service%20Manual.pdf",
+            "accessed": "2026-09-29",
+            "title": "Honda 2002 CR-V Service Manual (K24A1 and K20A4/A5), PDF on archive.org (item 2002-crv-service-manual)",
+            "note": "Design Specifications, p. 02-17: 'K24A1 engine 9.6' (2002 manual; same engine code)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "naturally-aspirated",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ]
+      },
+      "intercooler": {
+        "value": "none",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.jalopnik.com/2091028/hondas-k20-and-ks4-engines-differences/",
+            "accessed": "2026-09-29",
+            "title": "Jalopnik: What Are The Differences Between Honda's K20 And K24 Engines?",
+            "note": "'Honda never produced a turbo K24 engine variant.' (Jalopnik, secondary)."
+          }
+        ],
+        "note": "No forced induction, so no intercooler."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+            "accessed": "2026-09-29",
+            "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+            "note": "CR-V: 'This motor does not use the conventional VTEC mechanism from the earlier B series motors but does have VTC.'"
+          }
+        ],
+        "note": "Hybrid Racing says VTC without naming the cam; intake phasing as on every K24 here."
+      },
+      "camProfileSwitching": {
+        "valves": {
+          "value": "intake",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.hybrid-racing.com/blogs/hybrid-racing/k20-k24-hybrid-engine-build-guide",
+              "accessed": "2026-09-29",
+              "title": "Hybrid Racing: K20/K24 Hybrid Engine Build Guide",
+              "note": "CR-V: 'This motor has no VTEC mechanism on the exhaust cam and runs on 12 valves before 2200rpm' (economy i-VTEC)."
+            },
+            {
+              "url": "https://shop.humbleperformance.com/blog/kseriesguide",
+              "accessed": "2026-09-29",
+              "title": "Humble Performance: Stock K20 K24 Engine Guide Quick And Dirty (6 Jul 2020)",
+              "note": "K24A1/A4/A8/A: 'Cons: Intake Only VTEC, Balance Shaft Oil Pumps'."
+            }
+          ]
+        }
+      },
+      "output": {
+        "power": {
+          "value": 156,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+              "note": "'Horsepower @ rpm (SAE net) 156@5900'."
+            },
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-13f25e90cfe47cd58453f1f710057d45-honda-cr-v-timeline-and-milestones",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): Honda CR-V Timeline and Milestones",
+              "note": "2006: '156 hp 160 lb.-ft.'"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 5900,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+              "note": "'Horsepower @ rpm (SAE net) 156@5900'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 160,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+              "note": "'Torque (lb.-ft. @ rpm) 160@3600'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3600,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-c92ae4e8ebcb91afa365cb004c34c054-2006-honda-cr-v-specifications",
+              "accessed": "2026-09-29",
+              "title": "Honda News (American Honda): 2006 Honda CR-V Specifications (release February 17, 2006)",
+              "note": "'Torque (lb.-ft. @ rpm) 160@3600'."
+            }
+          ]
+        },
+        "standard": "SAE-net"
+      },
+      "notes": "Honda's 2006 re-rating changed the figures (160 hp @ 6,000 / 162 lb-ft to 156 hp @ 5,900 / 160 lb-ft) with no engine change listed for 2006 in Honda's timeline; the specifications page itself does not footnote the procedure. Why swappers use it: the cheapest K24 long block, and the usual base for a K24 block with a K20 (PRB or RBC) head. Its pistons clear the K20 head's valves, unlike the K24A4/A8's ('If using a K24a4 block the pistons will need to be swapped with aftermarket or a1, a2 pistons to avoid valve to piston contact', Hybrid Racing). K20-head swaps use the CR-V K24A1 head gasket 12251-PPA-004 (FFS TechNet). Its PPA head is the best-flowing economy K head (FFS TechNet). 5-speed manual or automatic, no LSD. Humble Performance suggests 400-500 hp on a stock K24A1/A4/A8 bottom end with a head and oil-pump swap and a turbo. Regular unleaded (Honda)."
+    }
+  ]
+}
