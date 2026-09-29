@@ -147,14 +147,24 @@ function checkReferences(
       }
     });
   }
-  const carIds = new Set(cars.map((c) => c.car.id));
   for (const { path, swap } of swaps) {
     if (swap.id !== fileStem(path)) {
       issues.push({ path, message: `id "${swap.id}" must match the file name.` });
     }
-    if (!carIds.has(swap.car)) {
+    const car = cars.find((c) => c.car.id === swap.car)?.car;
+    if (!car) {
       issues.push({ path: `${path}.car`, message: `No car file for "${swap.car}".` });
     }
+    swap.parts.forEach((part, i) => {
+      part.carGearbox?.forEach((id, j) => {
+        if (car && !car.transmissions.some((t) => t.id === id)) {
+          issues.push({
+            path: `${path}.parts[${String(i)}].carGearbox[${String(j)}]`,
+            message: `Car "${car.id}" has no transmission "${id}".`,
+          });
+        }
+      });
+    });
     swap.engines.forEach((id, i) => {
       const engine = byId.get(id);
       const at = `${path}.engines[${String(i)}]`;

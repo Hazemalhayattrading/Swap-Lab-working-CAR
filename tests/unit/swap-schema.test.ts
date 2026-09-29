@@ -159,6 +159,47 @@ describe('validateData: swaps', () => {
       },
     ],
   });
+  const s15 = {
+    id: 'nissan-silvia-s15',
+    make: 'Nissan',
+    model: 'Silvia',
+    chassis: 'S15',
+    layout: 'FR',
+    production: v({ from: '1999-01', to: '2002-08' }),
+    dimensions: {
+      length: v(4445, 'mm'),
+      width: v(1695, 'mm'),
+      height: v(1285, 'mm'),
+      wheelbase: v(2525, 'mm'),
+      trackFront: v(1480, 'mm'),
+      trackRear: v(1470, 'mm'),
+    },
+    transmissions: [
+      {
+        id: 's15-6mt',
+        name: '6-speed manual',
+        type: 'manual',
+        gears: 6,
+        ratios: v([3.321, 1.902, 1.308, 1.0, 0.759, 0.63]),
+      },
+    ],
+    trims: [
+      {
+        id: 'jdm-spec-r-6mt',
+        name: 'Spec-R',
+        market: 'JDM',
+        period: v({ from: '1999-01', to: '2002-08' }),
+        bodyStyle: 'coupe',
+        engine: { id: 'ls1', variant: 'c5' },
+        transmission: 's15-6mt',
+        finalDrive: v(3.692),
+        differential: v('helical-lsd'),
+        curbWeight: v(1240, 'kg'),
+        tyres: { front: v('215/45R17'), rear: v('215/45R17') },
+      },
+    ],
+    geometry: { status: 'pending-model', plan: 'Measure from the licensed model in Phase 4.' },
+  };
   const files = (swapJson: unknown, swapFile = 'nissan-silvia-s15--gm-ls') => [
     { path: `src/data/swaps/${swapFile}.json`, json: swapJson },
     { path: 'src/data/engines/ls1.json', json: engine('ls1', 'launch-swap') },
@@ -181,6 +222,19 @@ describe('validateData: swaps', () => {
     expect(found).toContain('id "nissan-silvia-s15--gm-ls" must match the file name.');
     expect(found).toContain('"lq4" is a stock-only engine; swaps are for launch-swap engines.');
     expect(found).toContain('No engine file for "ls9".');
+  });
+
+  it("checks a kept gearbox against the car file's transmissions", () => {
+    const withCar = (json: unknown) => [
+      ...files(json),
+      { path: 'src/data/cars/nissan-silvia-s15.json', json: s15 },
+    ];
+    const kept = (ids: string[]) =>
+      swap({ parts: [...swap().parts, part('fs6r92a', ['gearbox'], { carGearbox: ids })] });
+    expect(validateData(withCar(kept(['s15-6mt'])), facts).issues).toEqual([]);
+    expect(validateData(withCar(kept(['t56'])), facts).issues.map((i) => i.message)).toEqual([
+      'Car "nissan-silvia-s15" has no transmission "t56".',
+    ]);
   });
 
   it('counts the confidence of swap values like any other data', () => {

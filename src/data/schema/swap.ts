@@ -61,6 +61,11 @@ export const SwapPartSchema = z.strictObject({
   price: Price.optional(),
   /** The swap's engines this part is for, when it doesn't suit all of them (e.g. a 24x or 58x ECU). */
   engines: z.array(SlugSchema).min(1).optional(),
+  /**
+   * When the part is the car's own gearbox, kept behind the new engine: its
+   * ids in the car file's `transmissions` (validate-data checks they exist).
+   */
+  carGearbox: z.array(SlugSchema).min(1).optional(),
   /** What the listing says is included. */
   includes: sourced(z.array(z.string().min(1)).min(1)).optional(),
   /** What the listing says you need with it, in its words. */
