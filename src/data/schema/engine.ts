@@ -1,5 +1,7 @@
 import { z } from 'zod';
-import { sourced } from './source';
+import { wankelChamberDisplacementCc } from '../displacement';
+import { convert } from '../units';
+import { measured, sourced } from './source';
 import {
   Length,
   Mass,
@@ -13,7 +15,6 @@ import {
   Torque,
   UNITS,
 } from './common';
-import { measured } from './source';
 
 /**
  * Engine data (BUILD_PROMPT section 7.1): one file per engine in src/data/engines/.
@@ -21,6 +22,11 @@ import { measured } from './source';
  * Hardware shared by every version of an engine sits at the top level. What
  * differs by year or market (compression, turbos, injectors, cams, rated
  * output) sits in `variants`, and each car trim points at one variant.
+ *
+ * Piston engines and rotaries are separate shapes, told apart by `layout`: a
+ * rotary has rotors, rotor geometry and ports instead of cylinders, bore,
+ * stroke and valves, and it breathes on a different cycle (see
+ * src/data/displacement.ts).
  *
  * What's deliberately not here: a volumetric-efficiency curve. The build
  * prompt's VE curve is a model parameter, fitted in Phase 2 against the rated
@@ -67,6 +73,7 @@ const Cams = z.strictObject({
   exhaustLift: Length.optional(),
 });
 
+/** Piston-engine variant. Rotary variants are the same without cams and cam phasing. */
 export const EngineVariantSchema = z.strictObject({
   id: SlugSchema,
   name: z.string().min(1),
@@ -82,7 +89,13 @@ export const EngineVariantSchema = z.strictObject({
   /** Stock peak boost. */
   boost: measured(UNITS.pressure).optional(),
   intercooler: sourced(z.enum(['none', 'air-to-air-front', 'air-to-air-side', 'air-to-water'])),
+  /** Flow of one injector; there's one per cylinder or rotor (with staged fuelling, the primary). */
   injectorFlow: measured(UNITS.flow).optional(),
+  /**
+   * Staged fuelling (e.g. the 13B-REW): flow of one secondary injector, one per
+   * cylinder or rotor, which the ECU adds at high load on top of the primaries.
+   */
+  secondaryInjectorFlow: measured(UNITS.flow).optional(),
   cams: Cams.optional(),
   /**
    * Cam phasing. `intake-and-exhaust-continuous` covers BMW double VANOS and
@@ -100,70 +113,209 @@ export const EngineVariantSchema = z.strictObject({
   ecu: sourced(z.string().min(1)).optional(),
   notes: z.string().min(1).optional(),
 });
-export type EngineVariant = z.infer<typeof EngineVariantSchema>;
+
+/** A rotary has ports, not valves, so there are no cams or cam phasing to record. */
+export const RotaryEngineVariantSchema = EngineVariantSchema.omit({
+  cams: true,
+  variableValveTiming: true,
+});
+export type EngineVariant =
+  z.infer<typeof EngineVariantSchema> | z.infer<typeof RotaryEngineVariantSchema>;
 
 /** A published "the stock part holds about this much" figure, with its context. */
-const ReportedLimit = z.strictObject({
-  component: z.enum(['bottom-end', 'rods', 'pistons', 'head-gasket', 'crank', 'oil-pump', 'block']),
-  quantity: z.enum(['crank-power', 'wheel-power', 'torque', 'rpm']),
-  value: measured([...UNITS.power, ...UNITS.torque, ...UNITS.speed]),
-  /** Conditions: fuel, rev limit, tune quality, how long it lasted. */
-  context: z.string().min(1),
+function reportedLimit<const C extends readonly [string, ...string[]]>(components: C) {
+  return z.strictObject({
+    component: z.enum(components),
+    quantity: z.enum(['crank-power', 'wheel-power', 'torque', 'rpm']),
+    value: measured([...UNITS.power, ...UNITS.torque, ...UNITS.speed]),
+    /** Conditions: fuel, rev limit, tune quality, how long it lasted. */
+    context: z.string().min(1),
+  });
+}
+
+/** Fields every engine has, piston or rotary. */
+const common = {
+  $comment: z.string().optional(),
+  id: SlugSchema,
+  code: z.string().min(1),
+  manufacturer: z.string().min(1),
+  family: z.string().min(1),
+  /**
+   * `launch-swap`: one of the 12 swap engines in BUILD_PROMPT section 3; the
+   * swap-relevant hardware (weight, size, bellhousing, sump, internals) is required.
+   * `stock-only`: powers a stock trim but isn't offered as a swap, so only the
+   * core specs are required.
+   */
+  role: z.enum(['launch-swap', 'stock-only']),
+  /**
+   * As the maker states it. For a rotary that is rotors x chamber displacement
+   * (13B: 654 cc x 2 = 1,308 cc), never a doubled "piston-equivalent" figure or
+   * a tax or racing-class figure. How it's used: src/data/displacement.ts.
+   */
+  displacement: measured(UNITS.displacement),
+  /** Cylinder (or rotor, front = 1) numbers in firing order, e.g. [1, 5, 3, 6, 2, 4]. */
+  firingOrder: sourced(z.array(z.number().int().min(1)).min(1)),
+  fuelInjection: sourced(z.enum(['port', 'direct', 'carburettor'])),
+  dryWeight: Mass.optional(),
+  dimensions: z.strictObject({ length: Length, width: Length, height: Length }).optional(),
+  /** Gearbox bolt pattern, as a shared id, e.g. "nissan-sr20" or "toyota-jz". */
+  bellhousing: sourced(SlugSchema).optional(),
+  sump: sourced(z.enum(['front', 'centre', 'rear'])).optional(),
+  oilCapacity: measured(UNITS.volume).optional(),
+};
+
+const PistonEngineSchema = z.strictObject({
+  ...common,
+  layout: z.enum(['inline', 'V', 'flat']),
+  cylinders: z.number().int().min(1).max(16),
+  bore: Length,
+  stroke: Length,
+  camLayout: sourced(z.enum(['DOHC', 'SOHC', 'OHV'])),
+  valvesPerCylinder: sourced(z.number().int().min(2).max(5)),
+  camDrive: sourced(z.enum(['belt', 'chain', 'gear'])),
+  blockMaterial: sourced(z.enum(['cast-iron', 'aluminium'])),
+  headMaterial: sourced(z.enum(['cast-iron', 'aluminium'])),
+  internals: z
+    .strictObject({
+      crank: sourced(z.enum(['forged', 'cast'])),
+      rods: sourced(z.enum(['forged', 'cast', 'powdered-metal'])),
+      pistons: sourced(z.enum(['cast', 'hypereutectic', 'forged'])),
+      reportedLimits: z.array(
+        reportedLimit([
+          'bottom-end',
+          'rods',
+          'pistons',
+          'head-gasket',
+          'crank',
+          'oil-pump',
+          'block',
+        ]),
+      ),
+    })
+    .optional(),
+  variants: z.array(EngineVariantSchema).min(1),
 });
 
+/**
+ * One port event in eccentric-shaft (or crank) degrees, as the maker prints it,
+ * e.g. intake opens 45° BTDC, closes 50° ABDC.
+ */
+const PortEvent = z.strictObject({
+  ref: z.enum(['BTDC', 'ATDC', 'BBDC', 'ABDC']),
+  angle: measured(UNITS.angle, z.number().min(0).max(180)),
+});
+
+const PortLocation = sourced(z.enum(['side', 'peripheral']));
+
+const RotaryPorts = z.strictObject({
+  /** Each intake port set (e.g. primary and secondary side ports) with its timing. */
+  intake: z
+    .array(
+      z.strictObject({
+        name: z.enum(['primary', 'secondary', 'auxiliary']),
+        location: PortLocation,
+        opens: PortEvent.optional(),
+        closes: PortEvent.optional(),
+      }),
+    )
+    .min(1),
+  exhaust: z.strictObject({
+    location: PortLocation,
+    opens: PortEvent.optional(),
+    closes: PortEvent.optional(),
+  }),
+});
+
+const HousingMaterial = z.enum(['aluminium', 'cast-iron']);
+
+const RotaryEngineSchema = z.strictObject({
+  ...common,
+  layout: z.literal('rotary'),
+  rotors: z.number().int().min(1).max(6),
+  /**
+   * The Wankel geometry: generating radius R (rotor centre to apex tip),
+   * eccentricity e (offset of the rotor journal from the shaft axis) and the
+   * rotor housing width B. `chamberDisplacement` is the maker's swept volume of
+   * one working chamber (its largest minus its smallest volume), 654 cc for the
+   * 13B and 20B; in theory 3·√3·R·e·B.
+   */
+  rotor: z.strictObject({
+    generatingRadius: Length,
+    eccentricity: Length,
+    width: Length,
+    chamberDisplacement: measured(UNITS.displacement),
+  }),
+  ports: RotaryPorts.optional(),
+  /** Leading and trailing plugs on the 13B-REW and 20B-REW. */
+  sparkPlugsPerRotor: sourced(z.number().int().min(1).max(3)).optional(),
+  materials: z.strictObject({
+    rotorHousing: sourced(HousingMaterial),
+    sideHousings: sourced(HousingMaterial),
+    rotors: sourced(z.enum(['cast-iron', 'steel', 'aluminium'])),
+  }),
+  internals: z
+    .strictObject({
+      eccentricShaft: sourced(z.enum(['forged', 'cast'])),
+      /** As printed, e.g. "two-piece cast iron". */
+      apexSeals: sourced(z.string().min(1)),
+      apexSealWidth: Length.optional(),
+      reportedLimits: z.array(
+        reportedLimit([
+          'apex-seals',
+          'side-seals',
+          'rotor-housing',
+          'eccentric-shaft',
+          'rotors',
+          'rotor-bearings',
+          'stationary-gear',
+          'coolant-seals',
+          'oil-pump',
+        ]),
+      ),
+    })
+    .optional(),
+  variants: z.array(RotaryEngineVariantSchema).min(1),
+});
+
+/** How far a maker's rounded figure may sit from the geometry it should match. */
+const ROUNDING_TOLERANCE = 0.015;
+
 export const EngineSchema = z
-  .strictObject({
-    $comment: z.string().optional(),
-    id: SlugSchema,
-    code: z.string().min(1),
-    manufacturer: z.string().min(1),
-    family: z.string().min(1),
-    /**
-     * `launch-swap`: one of the 12 swap engines in BUILD_PROMPT section 3; the
-     * swap-relevant hardware (weight, size, bellhousing, sump, internals) is required.
-     * `stock-only`: powers a stock trim but isn't offered as a swap, so only the
-     * core specs are required.
-     */
-    role: z.enum(['launch-swap', 'stock-only']),
-    layout: z.enum(['inline', 'V', 'flat', 'rotary']),
-    /** Cylinders, or rotors for a rotary. */
-    cylinders: z.number().int().min(1).max(16),
-    displacement: measured(UNITS.displacement),
-    bore: Length,
-    stroke: Length,
-    camLayout: sourced(z.enum(['DOHC', 'SOHC', 'OHV'])),
-    valvesPerCylinder: sourced(z.number().int().min(2).max(5)),
-    camDrive: sourced(z.enum(['belt', 'chain', 'gear'])),
-    blockMaterial: sourced(z.enum(['cast-iron', 'aluminium'])),
-    headMaterial: sourced(z.enum(['cast-iron', 'aluminium'])),
-    /** Cylinder numbers in firing order, e.g. [1, 5, 3, 6, 2, 4]. */
-    firingOrder: sourced(z.array(z.number().int().min(1)).min(1)),
-    fuelInjection: sourced(z.enum(['port', 'direct', 'carburettor'])),
-    dryWeight: Mass.optional(),
-    dimensions: z.strictObject({ length: Length, width: Length, height: Length }).optional(),
-    /** Gearbox bolt pattern, as a shared id, e.g. "nissan-sr20" or "toyota-jz". */
-    bellhousing: sourced(SlugSchema).optional(),
-    sump: sourced(z.enum(['front', 'centre', 'rear'])).optional(),
-    oilCapacity: measured(UNITS.volume).optional(),
-    internals: z
-      .strictObject({
-        crank: sourced(z.enum(['forged', 'cast'])),
-        rods: sourced(z.enum(['forged', 'cast', 'powdered-metal'])),
-        pistons: sourced(z.enum(['cast', 'hypereutectic', 'forged'])),
-        reportedLimits: z.array(ReportedLimit),
-      })
-      .optional(),
-    variants: z.array(EngineVariantSchema).min(1),
-  })
+  .discriminatedUnion('layout', [PistonEngineSchema, RotaryEngineSchema])
   .superRefine((engine, ctx) => {
-    const order = engine.firingOrder.value;
-    const expected = Array.from({ length: engine.cylinders }, (_, i) => i + 1);
-    if (engine.layout !== 'rotary' && [...order].sort((a, b) => a - b).join() !== expected.join()) {
+    const units = engine.layout === 'rotary' ? 'rotors' : 'cylinders';
+    const count = engine.layout === 'rotary' ? engine.rotors : engine.cylinders;
+    const expected = Array.from({ length: count }, (_, i) => i + 1);
+    if ([...engine.firingOrder.value].sort((a, b) => a - b).join() !== expected.join()) {
       ctx.addIssue({
         code: 'custom',
         path: ['firingOrder', 'value'],
-        message: `Firing order must list cylinders 1-${engine.cylinders} once each.`,
+        message: `Firing order must list ${units} 1-${count} once each.`,
       });
+    }
+    if (engine.layout === 'rotary') {
+      const { rotor } = engine;
+      const chamber = rotor.chamberDisplacement.value;
+      if (Math.abs(engine.displacement.value - engine.rotors * chamber) > 0.005 * chamber) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['displacement', 'value'],
+          message: `A rotary's displacement is rotors x chamber displacement (${engine.rotors} x ${chamber} cc).`,
+        });
+      }
+      const mm = (l: { value: number; unit: 'mm' | 'in' }) => convert(l.value, l.unit, 'mm');
+      const theory = wankelChamberDisplacementCc(
+        mm(rotor.generatingRadius),
+        mm(rotor.eccentricity),
+        mm(rotor.width),
+      );
+      if (Math.abs(chamber - theory) > ROUNDING_TOLERANCE * theory) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['rotor', 'chamberDisplacement', 'value'],
+          message: `Chamber displacement ${chamber} cc doesn't match 3·√3·R·e·B = ${theory.toFixed(1)} cc.`,
+        });
+      }
     }
     if (engine.role === 'launch-swap') {
       for (const key of ['dryWeight', 'dimensions', 'bellhousing', 'sump', 'internals'] as const) {
@@ -201,6 +353,15 @@ export const EngineSchema = z
           message: 'A naturally aspirated variant cannot have turbos or boost.',
         });
       }
+      if (v.secondaryInjectorFlow && !v.injectorFlow) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['variants', i, 'secondaryInjectorFlow'],
+          message: 'Staged fuelling needs the primary injector flow (`injectorFlow`) too.',
+        });
+      }
     });
   });
 export type Engine = z.infer<typeof EngineSchema>;
+export type RotaryEngine = Extract<Engine, { layout: 'rotary' }>;
+export type PistonEngine = Exclude<Engine, { layout: 'rotary' }>;

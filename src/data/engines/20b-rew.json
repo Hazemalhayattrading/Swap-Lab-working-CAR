@@ -1,0 +1,788 @@
+{
+  "$comment": "Mazda 20B-REW (three-rotor sequential twin-turbo, Eunos Cosmo JCESE, 1990-1995). Researched 2026-09-27 to 2026-09-29. Primary sources: Mazda’s 1990 Eunos Cosmo brochure and 1997 Mazda Motorsports (US) competition parts catalogue, Mazda’s RE vehicle album; the goo-net, Car Sensor and carview catalogues; Mazdatrix and FD-swap vendors for the swap hardware. Mazda publishes much less on the 20B than the 13B: no port timing, weight, dimensions, redline, injector flow or turbo model was found in a Mazda document, and the firing order is estimated. Rotor geometry is the 13B’s (shared rotor and rotor-housing part numbers). Displacement and rpm follow the rotary convention in docs/decisions.md.",
+  "id": "20b-rew",
+  "code": "20B-REW",
+  "manufacturer": "Mazda",
+  "family": "Mazda Wankel",
+  "role": "launch-swap",
+  "layout": "rotary",
+  "rotors": 3,
+  "displacement": {
+    "value": 1962,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/details/101_20260307_202603",
+        "accessed": "2026-09-27",
+        "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+        "note": "work/engine-20b-cosmo/br1990/114.png (brochure p.14, SPECIFICATIONS, ENGINE block, 20B column; crop c114_b.png): 総排気量 cc | 654×3"
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+        "accessed": "2026-09-27",
+        "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+        "note": "総排気量 1962cc"
+      },
+      {
+        "url": "https://www.carsensor.net/catalog/mazda/eunos_cosmo/F001/M004G003/",
+        "accessed": "2026-09-27",
+        "title": "Car Sensor catalogue: Eunos Cosmo M004G003",
+        "note": "総排気量 1962cc"
+      },
+      {
+        "url": "https://carview.yahoo.co.jp/ncar/catalog/mazda/eunos_cosmo/gradeid/20019/",
+        "accessed": "2026-09-27",
+        "title": "carview catalogue: Eunos Cosmo grade 20019",
+        "note": "総排気量 1,962cc"
+      },
+      {
+        "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+        "accessed": "2026-09-27",
+        "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+        "note": "総排気量（cc） 654×3"
+      }
+    ],
+    "note": "Mazda prints 654 x 3 cc; the catalogues print 1,962 cc. Mazda’s RE vehicle album misprints it as 654 cc x 2."
+  },
+  "firingOrder": {
+    "value": [1, 2, 3],
+    "confidence": "estimated",
+    "sources": [],
+    "method": "The rotors are 120° apart on the eccentric shaft, so one rotor fires every 120° of shaft rotation (http://www.ausrotary.com/viewtopic.php?t=26822; https://www.msextra.com/doc/ms1extra/MS_Extra_Ignition_Hardware_Manual.htm; forum and ECU documentation, no Mazda document). Which rotor follows rotor 1 isn’t printed in any source that could be read: rx7club.com threads, blocked from here, are summarised by search engines as 1-2-3 for most 20Bs and 1-3-2 for some. 1-2-3 is stored as a placeholder; the even 120° spacing, which is what the sound and airflow need, is sourced."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/details/101_20260307_202603",
+        "accessed": "2026-09-27",
+        "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+        "note": "114.png: 燃料供給装置 | 電子制御燃料噴射装置 [fuel system: electronically controlled fuel injection]"
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+        "accessed": "2026-09-27",
+        "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+        "note": "燃料供給装置 電子制御燃料噴射装置"
+      },
+      {
+        "url": "https://www.radiumauto.com/products/fuel-rail-mazda-20b-rew-secondary",
+        "accessed": "2026-09-29",
+        "title": "Radium Engineering: Fuel Rail, Mazda 20B-REW Secondary",
+        "note": "The Radium Engineering high flow secondary fuel rail is for the OEM lower intake manifold found on the Mazda 20B-REW rotary engine."
+      },
+      {
+        "url": "https://www.radiumauto.com/products/fuel-rail-top-feed-conversion-mazda-20b-rew-primary",
+        "accessed": "2026-09-29",
+        "title": "Radium Engineering: Fuel Rail, Top Feed Conversion, Mazda 20B-REW Primary",
+        "note": "The Radium Engineering high flow primary fuel rail is for the 20B-REW rotary engine originally found in the 1990-1995 Mazda/Eunos Cosmo."
+      }
+    ],
+    "note": "electronically controlled fuel injection with separate primary and secondary fuel rails (secondary rail on the lower intake manifold)"
+  },
+  "dryWeight": {
+    "value": 185,
+    "unit": "kg",
+    "confidence": "estimated",
+    "sources": [],
+    "method": "No Mazda figure. The published numbers don’t share a basis: 260 lb (118 kg) “bare” (Paul Lamar, rotary aviation list) and 350 kg “with manifolds” (DRIFTED, copied by two other sites, and hard to reconcile with a 13B at about 155 kg). Estimated from the 13B-REW’s 155 kg (with turbos and manifolds, itself estimated) plus a third rotor (about 4.1 kg, Mazda Motorsports catalogue), a third rotor housing and a second intermediate housing (a stock 13B-REW intermediate housing weighs 25.9 lb, 11.7 kg, per Racing Beat), and a longer shaft, pan and manifolds: about +30 kg, so 185 kg, roughly +/-20 kg."
+  },
+  "dimensions": {
+    "length": {
+      "value": 672,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Placeholder from DRIFTED (drifted.com/20b-engine, “with accessories”, unsourced and nearly identical to the figure it gives for Mazda’s 13G race engine). No Mazda or specialist figure was found. For scale: a 13BT measures 19 in (483 mm) pulley to back of block (AusRotary), and the 20B adds one 80 mm rotor housing and one intermediate housing."
+    },
+    "width": {
+      "value": 549,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Placeholder from DRIFTED (drifted.com/20b-engine, “with accessories”, unsourced). No Mazda or specialist figure was found."
+    },
+    "height": {
+      "value": 520,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Placeholder from DRIFTED (drifted.com/20b-engine, “with accessories”, unsourced). The stock intake is too tall for an FD bonnet (FD swap vendors)."
+    }
+  },
+  "bellhousing": {
+    "value": "mazda-rotary",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://mazdatrix.com/product/housing-rear-13b-cosmo-20b-at/",
+        "accessed": "2026-09-27",
+        "title": "Mazdatrix (US rotary parts specialist): HOUSING REAR 13B COSMO + 20B (AUTOMATIC TRANSMISSION)",
+        "note": "HOUSING REAR, 13B COSMO + 20B (AUTOMATIC TRANSMISSION)"
+      },
+      {
+        "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+        "accessed": "2026-09-27",
+        "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+        "note": "97CatComp.pdf PDF page 23 (E-23; text layer): NF01-10-C50D 1 Rear Housing 20B Cosmo ALL"
+      },
+      {
+        "url": "https://collinsperformancetechnologies.com/products/mazda-rotary-13b-to-350z-partial-swap-kit",
+        "accessed": "2026-09-27",
+        "title": "Collins Performance Technologies: Mazda Rotary 13B, 20B, 26B to CD009 manual transmission kit",
+        "note": "Custom 3-piece Flywheel (requires Automatic rear housing and 20B 3-rotor Automatic bell housing/starter)"
+      },
+      {
+        "url": "https://collinsperformancetechnologies.com/products/mazda-rotary-13b-to-350z-partial-swap-kit",
+        "accessed": "2026-09-27",
+        "title": "Collins Performance Technologies: Mazda Rotary 13B, 20B, 26B to CD009 manual transmission kit",
+        "note": "This is an adaptation kit to mate together the Rotary 13B 20B 26B Engines to the Nissan Line of 350Z 370Z 350ZHR 370ZHR Later model transmissions."
+      },
+      {
+        "url": "https://rotaryengine.com/20b-fd-conversions/",
+        "accessed": "2026-09-27",
+        "title": "RotaryEngine.com / RX-7 Specialties (Calgary): 20B/FD Conversions",
+        "note": "without moving the location of the transmission"
+      },
+      {
+        "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A2",
+        "accessed": "2026-09-27",
+        "title": "ja.wikipedia: マツダ・コスモ (weak source)",
+        "note": "トランスミッションは全グレードで4速ATのみが設定された。 [every grade had only the 4-speed AT]"
+      }
+    ],
+    "note": "13B rear-housing pattern: one adapter plate is sold for 13B/20B/26B. Factory 20B had only the automatic rear housing (shared with the 13B Cosmo). FD swaps keep the FD transmission in place (so the FD gearbox bolts to the 20B), but no source names the R15M-D adapter/rear-housing combination Factory: Cosmo 4AT only (brochure lists only the torque-converter AT). What adapter or rear iron lets an R15M-D bolt to a 20B is NOT found; Collins' kit notes suggest the rotary automatic rear housing plus automatic bellhousing/starter are used when converting to manual on their adapters. Not verified for the FD R15M-D."
+  },
+  "sump": {
+    "value": "centre",
+    "confidence": "estimated",
+    "sources": [],
+    "method": "A 20B-specific pan (NF01-10-400B) that doesn’t fit the FD crossmember or clear its steering rack (Xcessive, Defined Autoworks: https://mazdatrix.com/product/3r-oil-pan-nla-oil-pan/; https://www.definedautoworks.com/conversions-copy.html; https://xcessivemanufacturing.com/products/20b-m-20b-fd-mmb-k). Where it sits along the engine isn’t printed; like the 13B’s it is taken to run under the whole engine, stored as centre."
+  },
+  "rotor": {
+    "generatingRadius": {
+      "value": 105,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://archive.org/download/rx-7-kundendienstschule-egi/RX-7%20FC%20und%20FD%20Schulungshandbuch.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motors (Deutschland): RX-7 FC und FD Schulungshandbuch [RX-7 FC and FD training handbook] (archive.org item rx-7-kundendienstschule-egi)",
+          "note": "Schulungshandbuch PDF page 16 = C-6: R : Abstand zwischen der Mitte des Rotors und Scheitelkante ... R = 10,5 cm [R: distance between rotor centre and apex edge ... R = 10.5 cm]"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 23 = book p.17: Table 2.1 ... 654 | 15.0 | 102 | 3 | 80 | 6.80 | 26.2 (columns V_H(cc), e(mm), R(mm), a(mm), b(mm), K, φmax)"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 18 = book p.12, section 2.1.2 PARALLEL TROCHOID CURVE: In the actual rotary engine, the curve used for the inner surface of its rotor housing is the trochoid given by Eq. (2.4) that has been moved outward in parallel by a constant amount a. The purpose of this is to form the top of the apex seal in a circular section in the radius a ... This curve is closely approximate to the trochoid drawn with the generating radius R increased by the amount of the parallel transfer a. In ordinary calculation, a sufficient accuracy for practical use can be obtained by substituting R+a for the generating radius R in Eq. (2.4)."
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 21 = book p.15: In the above calculation, the parallel transfers a and a' of the trochoid and the inner envelope, respectively, have been disregarded for convenience. In practice, they need to be considered. In such a case, the volume of the working chamber can be approximately calculated in practically sufficient accuracy by taking R1=R+a and R2=R+a', as follows: ... The stroke volume V_H becomes V_H' = √3 e(2R1+R2)b ... (2.30)"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 19 = book p.13, section 2.2.2: Generally, a' can be determined, as follows: a' = a - Sp where a : amount of parallel transfer of trochoid Sp: minimum clearance between rotor and rotor housing"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 22 = book p.16: Fig. 2.11 Rotor vertex speed and piston speed ... Rotary engine R=105 mm e= 15 mm (Engine speed 6 000rpm)"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 21 (catalogue page E-21, ROTOR HOUSINGS continued; transcribed from the page image): N318-10-B10A | S | 1 | Rotor Housing (Front) | 13B T / 20B Cosmo | 1989-91 / ALL ; N318-10-B50C | S | 1 | Rotor Housing (Rear) | 13B T / 20B Cosmo | 1989-91 / ALL"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 24 (catalogue page E-24, ROTORS - FRONT & REAR; transcribed from the page image): N3Y8-11-B10B | S | 2 | Rotor (Front/Rear) | 13B T & 20B Cosmo | 1989-91 | Approximate Weight = 4075 gm."
+        },
+        {
+          "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A2",
+          "accessed": "2026-09-27",
+          "title": "ja.wikipedia: マツダ・コスモ (weak source)",
+          "note": "ローターとローターハウジングは13B型と同寸である [the rotors and rotor housings are the same size as the 13B's]"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8",
+          "accessed": "2026-09-29",
+          "title": "Motor-Fan article syndicated on Yahoo! News Japan: 「バブル期マツダの“技術狂”ぶりが凄い！」世界初だらけの革新技術を振り返る (dated 8/22, Saturday; 2026)",
+          "note": "20B-REWという型式を持つこのエンジンは、13B型にもうひとつローターを追加したもの。排気量は654cc×3となり [the 20B-REW is a 13B with one more rotor added; displacement 654cc×3]"
+        }
+      ],
+      "note": "The 20B uses the 13B’s rotors and rotor housings (Mazda Motorsports 1997 catalogue part numbers shared with the 1989-91 FC 13B turbo), so the 13B’s R = 105 mm (effective; Yamamoto’s 102 + 3 mm) applies. No source prints R for the 20B itself."
+    },
+    "eccentricity": {
+      "value": 15,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://archive.org/download/rx-7-kundendienstschule-egi/RX-7%20FC%20und%20FD%20Schulungshandbuch.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motors (Deutschland): RX-7 FC und FD Schulungshandbuch [RX-7 FC and FD training handbook] (archive.org item rx-7-kundendienstschule-egi)",
+          "note": "Schulungshandbuch PDF page 16 = C-6: e : Exzentrizität der Exzenterwelle ... e = 1,5 cm [e: eccentricity of the eccentric shaft]"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-27",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 English edition (scan hosted by foxed.ca)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 23 = book p.17: Table 2.1 ... V_H 654 cc, e(mm) 15.0"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 21 (catalogue page E-21, ROTOR HOUSINGS continued; transcribed from the page image): N318-10-B10A | S | 1 | Rotor Housing (Front) | 13B T / 20B Cosmo | 1989-91 / ALL ; N318-10-B50C | S | 1 | Rotor Housing (Rear) | 13B T / 20B Cosmo | 1989-91 / ALL"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 24 (catalogue page E-24, ROTORS - FRONT & REAR; transcribed from the page image): N3Y8-11-B10B | S | 2 | Rotor (Front/Rear) | 13B T & 20B Cosmo | 1989-91 | Approximate Weight = 4075 gm."
+        },
+        {
+          "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A2",
+          "accessed": "2026-09-27",
+          "title": "ja.wikipedia: マツダ・コスモ (weak source)",
+          "note": "ローターとローターハウジングは13B型と同寸である [the rotors and rotor housings are the same size as the 13B's]"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8",
+          "accessed": "2026-09-29",
+          "title": "Motor-Fan article syndicated on Yahoo! News Japan: 「バブル期マツダの“技術狂”ぶりが凄い！」世界初だらけの革新技術を振り返る (dated 8/22, Saturday; 2026)",
+          "note": "20B-REWという型式を持つこのエンジンは、13B型にもうひとつローターを追加したもの。排気量は654cc×3となり [the 20B-REW is a 13B with one more rotor added; displacement 654cc×3]"
+        }
+      ],
+      "note": "The 13B’s figure; the 20B shares its rotors and housings."
+    },
+    "width": {
+      "value": 80,
+      "unit": "mm",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda: 1993 RX-7 Workshop Manual, section TD Technical Data (US; scan hosted by foxed.ca)",
+          "note": "1993FSM TD-2 (PDF page 2): Rotor housing | Width mm {in} | 80 {3.1}"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/tech/94TD.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda: 1994 RX-7 Workshop Manual, Technical Data (US; scan hosted by foxed.ca)",
+          "note": "tech_94TD.pdf PDF page 3 = TD-2: Rotor housing | Width mm {in} | 80 {3.1}; Rotor | Width (Apex) mm {in} | 79.675 {3.1368}"
+        },
+        {
+          "url": "https://archive.org/download/rx-7-kundendienstschule-egi/RX-7%20FC%20und%20FD%20Schulungshandbuch.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motors (Deutschland): RX-7 FC und FD Schulungshandbuch [RX-7 FC and FD training handbook] (archive.org item rx-7-kundendienstschule-egi)",
+          "note": "Schulungshandbuch PDF page 16 = C-6: b : Breite-Rotorgehäuse ... b = 8,0 cm [b: rotor housing width]"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 21 (catalogue page E-21, ROTOR HOUSINGS continued; transcribed from the page image): N318-10-B10A | S | 1 | Rotor Housing (Front) | 13B T / 20B Cosmo | 1989-91 / ALL ; N318-10-B50C | S | 1 | Rotor Housing (Rear) | 13B T / 20B Cosmo | 1989-91 / ALL"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+          "note": "97CatComp.pdf PDF page 24 (catalogue page E-24, ROTORS - FRONT & REAR; transcribed from the page image): N3Y8-11-B10B | S | 2 | Rotor (Front/Rear) | 13B T & 20B Cosmo | 1989-91 | Approximate Weight = 4075 gm."
+        },
+        {
+          "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB%E3%82%B3%E3%82%B9%E3%83%A2",
+          "accessed": "2026-09-27",
+          "title": "ja.wikipedia: マツダ・コスモ (weak source)",
+          "note": "ローターとローターハウジングは13B型と同寸である [the rotors and rotor housings are the same size as the 13B's]"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8",
+          "accessed": "2026-09-29",
+          "title": "Motor-Fan article syndicated on Yahoo! News Japan: 「バブル期マツダの“技術狂”ぶりが凄い！」世界初だらけの革新技術を振り返る (dated 8/22, Saturday; 2026)",
+          "note": "20B-REWという型式を持つこのエンジンは、13B型にもうひとつローターを追加したもの。排気量は654cc×3となり [the 20B-REW is a 13B with one more rotor added; displacement 654cc×3]"
+        }
+      ],
+      "note": "The 13B’s rotor housing width; the 20B shares its rotor housings."
+    },
+    "chamberDisplacement": {
+      "value": 654,
+      "unit": "cc",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://archive.org/details/101_20260307_202603",
+          "accessed": "2026-09-27",
+          "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+          "note": "114.png: 総排気量 cc | 654×3"
+        },
+        {
+          "url": "https://bestcarweb.jp/usedcar/255888",
+          "accessed": "2026-09-27",
+          "title": "Best Car web: ユーノスコスモは今しか乗れない!?",
+          "note": "3ローターエンジン「20B-REW（654cc×3）」"
+        },
+        {
+          "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB20B%E5%9E%8B%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3",
+          "accessed": "2026-09-29",
+          "title": "ja.wikipedia: マツダ・20B型エンジン (weak source; revision of 2026-06-25)",
+          "note": "各燃焼室の排気量が654cc（39.9立方インチ）であるため、3つの燃焼室（ローターごとに1つ）の排気量は1,962cc（119.7立方インチ）となり [Because each combustion chamber displaces 654 cc, three chambers (one per rotor) give 1,962 cc]"
+        }
+      ],
+      "note": "Mazda prints 654 x 3; the brochure does not define the 654 cc, which is the same chamber as the 13B’s."
+    }
+  },
+  "sparkPlugsPerRotor": {
+    "value": 2,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.msextra.com/doc/ms1extra/MS_Extra_Ignition_Hardware_Manual.htm",
+        "accessed": "2026-09-29",
+        "title": "MegaSquirt MS1/Extra Ignition Hardware Manual (ECU documentation)",
+        "note": "The rotary engine has a leading and a trailing ignition (2 plugs per rotor) the leading fires first then the trailing fires a few degrees later. On a 2 rotor engine the leading can be fired in a wasted spark format, but on a 3 rotor engine the leading must be driven by 3 individual coils e.g. COP."
+      },
+      {
+        "url": "http://fc3spro.com/TECH/SWAP/COSMO/20b.html",
+        "accessed": "2026-09-29",
+        "title": "FC3S Pro v2.0: Engine Swaps - Cosmo 20B (enthusiast swap guide; weak)",
+        "note": "The stock 20B ignition/coil system used a pair of triple coil groups."
+      }
+    ],
+    "note": "Leading and trailing, fired by six coils in two groups of three (MegaSquirt documentation, FC3S Pro; no Mazda document)."
+  },
+  "materials": {
+    "rotorHousing": {
+      "value": "aluminium",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/rotary-album.pdf",
+          "accessed": "2026-09-29",
+          "title": "Mazda: Rotary Engine vehicle album (PDF ROTARY_ENGINE_2007E; foxed.ca mirror), fold-out 'History of Mazda's Rotary Engine Development', Main Specification Changes > Housing",
+          "note": "rotary-album.pdf PDF page 6 (printed pp.42-44), Housing row, bar spanning 1987-2007; PDF page 5 (pp.39-41) shows it starting 1986 and footnote '*SIP=Sheet Metal Insert Process': SIP & micro channel porous Chromium-Molybdenum Plating"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/rotary-album.pdf",
+          "accessed": "2026-09-29",
+          "title": "Mazda: Rotary Engine vehicle album (PDF ROTARY_ENGINE_2007E; foxed.ca mirror), fold-out 'History of Mazda's Rotary Engine Development', Main Specification Changes > Housing",
+          "note": "rotary-album.pdf PDF page 6 (pp.42-44), Housing row, note at 1992: Graphite coating on trochoid surface"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-29",
+          "title": "Kenichi Yamamoto (Toyo Kogyo/Mazda): Rotary Engine, 1981 (foxed.ca mirror; general Mazda engineering text, not specific to the 13B-REW or 20B)",
+          "note": "REbyKenichiYamamoto-1981.pdf PDF page 27 (book p.22), 3.2.1 (2) MATERIAL: In general, gamma silmin aluminum alloy is used for the rotor housing. ... a new manufacturing method, called SIP (Sheet-metal Insert Process), has been developed. In this method, a sheet of steel formed to the trochoid is inserted inside the rotor housing and its inner surface is hard-chrome plated."
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+          "accessed": "2026-09-27",
+          "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror)",
+          "note": "97CatComp.pdf PDF page 21 (E-21), transcribed by engine-20b-2: N318-10-B10A | S | 1 | Rotor Housing (Front) | 13B T / 20B Cosmo | 1989-91 / ALL ; N318-10-B50C | S | 1 | Rotor Housing (Rear) | 13B T / 20B Cosmo | 1989-91 / ALL"
+        }
+      ],
+      "note": "aluminium-alloy rotor housings with SIP steel trochoid insert (same parts family as the FC 13B turbo). No 20B-specific material statement. The 20B shares FC 13B turbo rotor-housing part numbers (catalogue), and Mazda's album bar for 1986-2007 applies to all production rotaries of that period. Aluminium itself is from Yamamoto (general) and Coleman (13B-REW) only."
+    },
+    "sideHousings": {
+      "value": "cast-iron",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/rotary-album.pdf",
+          "accessed": "2026-09-29",
+          "title": "Mazda: Rotary Engine vehicle album (PDF ROTARY_ENGINE_2007E; foxed.ca mirror), fold-out 'History of Mazda's Rotary Engine Development', Main Specification Changes > Housing",
+          "note": "rotary-album.pdf PDF page 6 (pp.42-44), Side Housing bar 1987-2007: Gas soft nitriding-treated special cast iron"
+        },
+        {
+          "url": "https://mazdatrix.com/product/housing-rear-20b-aluminum/",
+          "accessed": "2026-09-27",
+          "title": "Mazdatrix: HOUSING REAR 20B, ALUMINUM (NLA) - Racing Beat flame-sprayed aluminium side housing (aftermarket)",
+          "note": "We offer a series of Aircraft Grade A356 aluminum alloy side housings to replace many of the heavier, cast iron stock assemblies found on all 1974 and later 12A, 13B, 20B, and 13G engines."
+        }
+      ],
+      "note": "special cast iron with nitrided sliding surfaces: front, two intermediate (one thick, one thin) and rear housings. The Mazdatrix 'HOUSING REAR 20B, ALUMINUM' (SKU 11072) is an aftermarket Racing Beat part ('Sorry, Racing Beat has discontinued this item'; 'Flame Sprayed Aluminum Rear Side Housings 20B – Racing Beat Exclusive'), cast in A356, T-6 heat-treated and flame/plasma-sprayed. It is not the stock part; the same text says the stock housings are cast iron with a nitride surface. Housing count (4 side housings) is from engine-20b-2 (1997 catalogue and Mazdatrix)."
+    },
+    "rotors": {
+      "value": "cast-iron",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Only Mazda’s general engineering text (Yamamoto, Rotary Engine, 1981) names the rotor material, nodular graphite cast iron, for Mazda’s production rotaries; no document for this engine says it (https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf; https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf)."
+    }
+  },
+  "internals": {
+    "eccentricShaft": {
+      "value": "forged",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Two pieces joined at the centre by a taper joint with a key (Motor-Fan, a minkara owner rebuild and Mazda centre-key part NF01-11-D19 via Mazdatrix: https://mazdatrix.com/product/3r-keyway-center-shaft-center-key/; https://minkara.carview.co.jp/userid/140048/car/240911/742606/note.aspx; https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8; https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf; https://www.motorverso.com/20b-engine/); no source says whether a centre bolt is also used. Forged steel is from Mazda’s general text (Yamamoto 1981), not confirmed for the 20B. The shaft has its own centre main bearing and centre stationary gear."
+    },
+    "apexSeals": {
+      "value": "2 mm, three per rotor (nine per engine)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mazdatrix.com/product/rotor-kit-20b-2mm-steel-apex/",
+          "accessed": "2026-09-27",
+          "title": "Mazdatrix (US rotary parts specialist): ROTOR KIT, 20B 2MM STEEL APEX SEAL",
+          "note": "18 Corner Seal N326-11-C20A 18 Corner Seal Spring NF01-11-C24 3 Side Oil Seal Spring N225-11-351 3 Side Oil Seal Spring N225-11-361 3 Side Oil Seal Spring 4352-11-353 3 Side Oil Seal Spring 4352-11-363 18 Side Seal Spring N326-11-C17 18 Side Seal N3Y1-11-C11 9 Apex Seal N351-11-C00C"
+        },
+        {
+          "url": "https://mazdatrix.com/product/apex-seals-i-rotary-2-piece-2mm-steel-86-02-20b-9-seals/",
+          "accessed": "2026-09-27",
+          "title": "Mazdatrix (US rotary parts specialist): APEX SEALS, I-ROTARY, 2 PIECE, 2MM STEEL 86-02 20B (9 SEALS)",
+          "note": "Ianetti I-Rotary Steel Apex Seals, 2 Piece, 2mm 86-02 20B (9 Seals) Does complete 3 Rotor Motor."
+        }
+      ],
+      "note": "OEM seal material and piece count for the 20B are not printed; the catalogue's general note (E-3) calls stock seals cast iron but does not name the 20B. The kit title says '2MM STEEL APEX SEAL' but lists the Mazda part number, so the material wording is Mazdatrix's."
+    },
+    "apexSealWidth": {
+      "value": 2.0,
+      "unit": "mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mazdatrix.com/product/rotor-kit-20b-2mm-steel-apex/",
+          "accessed": "2026-09-27",
+          "title": "Mazdatrix (US rotary parts specialist): ROTOR KIT, 20B 2MM STEEL APEX SEAL",
+          "note": "ROTOR KIT, 20B 2MM STEEL APEX SEAL"
+        }
+      ],
+      "note": "Specialist listing, not a Mazda document."
+    },
+    "reportedLimits": [
+      {
+        "component": "apex-seals",
+        "quantity": "rpm",
+        "value": {
+          "value": 8000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.foxed.ca/rx7manual/manuals/97CatComp.pdf",
+              "accessed": "2026-09-27",
+              "title": "Mazda Motorsports (US): 1997 Competition Parts Catalog (foxed.ca mirror; text layer present)",
+              "note": "97CatComp.pdf PDF page 3 (E-3, Competition Apex Seal Information; text layer): Carbon apex seals and Iannetti Advanced Carbon seals are recommended for any engine that will see 8000 rpm and above. They weigh significantly less than the stock (cast iron) apex seals"
+            }
+          ]
+        },
+        "context": "Mazda Motorsports 1997 catalogue, general advice for all rotary engines (not 20B-specific): stock cast-iron apex seals skip at high rpm; carbon seals recommended at 8,000 rpm and above."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "jcese-cosmo",
+      "name": "20B-REW, Eunos Cosmo 20B (JCESE), 1990-1995, 4AT only (280 PS)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1990-04",
+          "to": "1995-08"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.foxed.ca/rx7manual/manuals/rotary-album.pdf",
+            "accessed": "2026-09-27",
+            "title": "Mazda: Rotary Engine vehicle album (PDF titled ROTARY_ENGINE_2007E; foxed.ca mirror)",
+            "note": "The Eunos Cosmo, launched in April 1990, was the world’s first series- production car with a 3-rotor rotary engine"
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/mazda/eunos_cosmo/F001/",
+            "accessed": "2026-09-27",
+            "title": "Car Sensor: ユーノスコスモ 1990年4月～1995年8月生産モデル",
+            "note": "1990年4月～1995年8月生産モデル"
+          }
+        ],
+        "note": "goo-net dates the first grade pages 1990年3月 (catalogue date; brochure says 'as of March 1990'). ja.wikipedia gives sales to 1996-06."
+      },
+      "fittedTo": ["JCESE"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/details/101_20260307_202603",
+            "accessed": "2026-09-27",
+            "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+            "note": "114.png: 圧縮比 | 9.0"
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+            "accessed": "2026-09-27",
+            "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+            "note": "圧縮比 9.0"
+          },
+          {
+            "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+            "accessed": "2026-09-27",
+            "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+            "note": "圧縮比 9.0：1"
+          }
+        ]
+      },
+      "induction": {
+        "value": "twin-turbo-sequential",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/details/101_20260307_202603",
+            "accessed": "2026-09-27",
+            "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+            "note": "108.png (crop c108_left.png): 量産車世界初のシーケンシャルツインターボシステム [world-first sequential twin-turbo system in a production car]"
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Hitachi HT15",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8",
+                "accessed": "2026-09-29",
+                "title": "Motor-Fan article syndicated on Yahoo! News Japan: 「バブル期マツダの“技術狂”ぶりが凄い！」世界初だらけの革新技術を振り返る (dated 8/22, Saturday; 2026)",
+                "note": "タービンは日立製でプライマリーにHT15、セカンダリーにHT12を使用。"
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "primary; 11 impact-type blades for response (Motor-Fan). Single-source."
+        },
+        {
+          "model": {
+            "value": "Hitachi HT12",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://news.yahoo.co.jp/articles/019cba459d3c0a1df24be3dd950065ac4113c8c8",
+                "accessed": "2026-09-29",
+                "title": "Motor-Fan article syndicated on Yahoo! News Japan: 「バブル期マツダの“技術狂”ぶりが凄い！」世界初だらけの革新技術を振り返る (dated 8/22, Saturday; 2026)",
+                "note": "風量的にはほぼ同等だが、低速域を担当するHT15は11枚のインパクト型ブレードでレスポンスを重視し、中高速域で稼働するHT12は9枚のハイフロー型ブレードで過給効率を高める"
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "secondary; 9 high-flow blades; secondary pre-spun during primary-only operation (予回転方式). Single-source; Project JDM says two HT-12s (see conflicts)."
+        }
+      ],
+      "boost": {
+        "value": 0.7,
+        "unit": "bar",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%84%E3%83%80%E3%83%BB20B%E5%9E%8B%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3",
+            "accessed": "2026-09-29",
+            "title": "ja.wikipedia: マツダ・20B型エンジン (weak source; revision of 2026-06-25)",
+            "note": "ツインシーケンシャルターボチャージャー で0.7 bar （10psi、70kPa）のブースト圧が与えられ [with twin sequential turbochargers it was given 0.7 bar (10 psi, 70 kPa) boost]"
+          }
+        ],
+        "note": "Japanese Wikipedia only; no Mazda or specialist figure found. Whether it is the primary-only or the full figure isn’t stated."
+      },
+      "intercooler": {
+        "value": "air-to-air-front",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://motorz.jp/feature/46949/",
+            "accessed": "2026-09-27",
+            "title": "Motorz (2017-11-07): 3ローターエンジンには夢があった！？マツダの名車ユーノスコスモ (web magazine; weak)",
+            "note": "ロータリー専用車らしく低いボンネットの下ではインタークーラー(空冷)、ラジエーター、オイルクーラーと重なってその奥にエンジンとターボが押し込められ、熱がこもりやすかった。 [under the low bonnet the (air-cooled) intercooler, radiator and oil cooler are stacked, with the engine and turbos packed in behind them, so heat built up]"
+          },
+          {
+            "url": "http://fc3spro.com/TECH/SWAP/COSMO/20b.html",
+            "accessed": "2026-09-29",
+            "title": "FC3S Pro v2.0: Engine Swaps - Cosmo 20B (FC swap guide; enthusiast, weak)",
+            "note": "The stock 20B in a Cosmo uses a front-mounted intercooler, so you'll need to have a front-mounted intercooler installed."
+          },
+          {
+            "url": "https://www.nextage.jp/carcatalog/eunos/eunos_cosmo/e-jcese/3000251/",
+            "accessed": "2026-09-29",
+            "title": "NEXTAGE used-car catalogue: ユーノスコスモ 20B タイプS [4AT] grade 3000251",
+            "note": "過給機 ＩＣ付きツインターボ [forced induction: twin turbo with intercooler]"
+          }
+        ],
+        "note": "Front-mounted, stacked with the radiator and oil cooler (Motorz and FC3S Pro, two weak sources); air-cooled per Motorz only."
+      },
+      "injectorFlow": {
+        "value": 550,
+        "unit": "cc/min",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://fc3spro.com/TECH/SWAP/COSMO/20b.html",
+            "accessed": "2026-09-29",
+            "title": "FC3S Pro v2.0: Engine Swaps - Cosmo 20B (enthusiast swap guide; weak)",
+            "note": "The stock 20B run 6 x 550cc/min fuel injectors, so you're looking at a 50% increase in fuel injector capacity compared to a stock FC3S fuel system."
+          },
+          {
+            "url": "https://www.radiumauto.com/products/fuel-rail-mazda-20b-rew-secondary",
+            "accessed": "2026-09-29",
+            "title": "Radium Engineering: Fuel Rail, Mazda 20B-REW Secondary",
+            "note": "COMPATIBILITY 1990-1995 Mazda/Eunos Cosmo FUEL INJECTORS When the included spacers are not installed, only OEM Mazda fuel injectors are compatible."
+          }
+        ],
+        "note": "Six injectors, two per rotor on separate primary and secondary rails, all 550 cc/min per FC3S Pro (one weak source); Radium confirms the two rails. Whether primaries and secondaries differ isn’t printed."
+      },
+      "secondaryInjectorFlow": {
+        "value": 550,
+        "unit": "cc/min",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://fc3spro.com/TECH/SWAP/COSMO/20b.html",
+            "accessed": "2026-09-29",
+            "title": "FC3S Pro v2.0: Engine Swaps - Cosmo 20B (enthusiast swap guide; weak)",
+            "note": "The stock 20B run 6 x 550cc/min fuel injectors, so you're looking at a 50% increase in fuel injector capacity compared to a stock FC3S fuel system."
+          },
+          {
+            "url": "https://www.radiumauto.com/products/fuel-rail-mazda-20b-rew-secondary",
+            "accessed": "2026-09-29",
+            "title": "Radium Engineering: Fuel Rail, Mazda 20B-REW Secondary",
+            "note": "COMPATIBILITY 1990-1995 Mazda/Eunos Cosmo FUEL INJECTORS When the included spacers are not installed, only OEM Mazda fuel injectors are compatible."
+          }
+        ],
+        "note": "See injectorFlow: FC3S Pro gives 550 cc/min for all six."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://archive.org/details/101_20260307_202603",
+              "accessed": "2026-09-27",
+              "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+              "note": "114.png: 最高出力（ネット） ps/rpm | 280/6500"
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+              "note": "最高出力 280ps(206kW)/6500rpm"
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/mazda/eunos_cosmo/gradeid/20019/",
+              "accessed": "2026-09-27",
+              "title": "carview catalogue: Eunos Cosmo grade 20019",
+              "note": "最高出力 280ps（-kw）/6,500rpm"
+            },
+            {
+              "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+              "accessed": "2026-09-27",
+              "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+              "note": "最高出力（ps/rpm） 280/6500"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6500,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://archive.org/details/101_20260307_202603",
+              "accessed": "2026-09-27",
+              "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+              "note": "114.png: 最高出力（ネット） ps/rpm | 280/6500"
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+              "note": "最高出力 280ps(206kW)/6500rpm"
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/mazda/eunos_cosmo/gradeid/20019/",
+              "accessed": "2026-09-27",
+              "title": "carview catalogue: Eunos Cosmo grade 20019",
+              "note": "最高出力 280ps（-kw）/6,500rpm"
+            },
+            {
+              "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+              "accessed": "2026-09-27",
+              "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+              "note": "最高出力（ps/rpm） 280/6500"
+            }
+          ]
+        },
+        "torque": {
+          "value": 41.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://archive.org/details/101_20260307_202603",
+              "accessed": "2026-09-27",
+              "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+              "note": "114.png: 最大トルク kg-m/rpm | 41.0/3000"
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+              "note": "最大トルク 41.0kg・m(402.1N・m)/3000rpm"
+            },
+            {
+              "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+              "accessed": "2026-09-27",
+              "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+              "note": "最大トルク（kg-m/rpm） 41.0/3000"
+            }
+          ],
+          "note": "goo-net converts to 402.1 N·m; Wikipedia prints 407 N·m (see conflicts)."
+        },
+        "torqueRpm": {
+          "value": 3000,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://archive.org/details/101_20260307_202603",
+              "accessed": "2026-09-27",
+              "title": "Mazda (Eunos): Eunos Cosmo brochure, Japan, 'as of March 1990' (archive.org item 1990 Eunos Cosmo Brochure. Japan, 3-1990)",
+              "note": "114.png: 最大トルク kg-m/rpm | 41.0/3000"
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/EUNOS/EUNOS_COSMO/3000105/",
+              "accessed": "2026-09-27",
+              "title": "goo-net catalogue: Eunos Cosmo grade 3000105",
+              "note": "最大トルク 41.0kg・m(402.1N・m)/3000rpm"
+            },
+            {
+              "url": "https://nosweb.jp/nostalgichero/articles/detail/1970",
+              "accessed": "2026-09-27",
+              "title": "NOSWEB / Hachimaru Hero vol.19 (2012-11), reposted 2021-02-16: 1990 Eunos Cosmo 20B Vol.3 (spec box)",
+              "note": "最大トルク（kg-m/rpm） 41.0/3000"
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "No engine change is recorded over the car’s life: every 20B grade from 1990-03 to 1994-03 is rated 280 PS / 41.0 kgf·m. Redline, fuel cut, ECU and oil capacity weren’t found. In an FD swap, kits keep the FD gearbox, power-plant frame and propshaft in place and move the extra length forward; the stock pan and intake have to change."
+    }
+  ]
+}

@@ -1,0 +1,1675 @@
+{
+  "checked": "2026-09-29",
+  "agent": "assets-rx7-2",
+  "method": "Resumed re-check (the first run, 2026-09-27, opened 14 Sketchfab listings and was stopped before writing verdicts; its saved copies under [session scratch file] were reused, not re-fetched). Sketchfab: Data API (no key) + viewer metadata endpoint (source-file names and sizes, texture names and sizes, download and store state) + server-rendered model page (licence and NoAI rows) + comments and user-profile APIs, via [session scratch file] (the first run's script, retargeted). Originality was judged from text only: descriptions, source and texture file names, exact face/vertex counts and archive sizes compared across uploads, comments and uploader profiles. No model file, texture, thumbnail, preview or screenshot was opened, viewed or downloaded, so body, wheels and cabin were NOT seen for any model and are judged from text. BlenderKit (now Blendkit) search API and its licence pages; Blend Swap site search. CGTrader (HTTP 202 empty WAF challenge) and TurboSquid (403 DataDome) were each tried once and not worked around. WebSearch was not used (0 of 5).",
+  "scope": "Every Mazda RX-7 FD3S entry in docs/asset-shopping-list.md (usable table, needs-your-call table, avoid list, and leads in its notes), every lead in the RX-7 item of docs/research/asset-candidates-2026-09-26.json (including its searchNotes), the 14 listings in docs/research-notes/part3a.md section 4, the re-upload clusters flagged there, and new searches: Sketchfab Data API license=by and license=cc0 for interior, engine-bay, dashboard, trim-name and year queries [session scratch file] on top of the first run's 21-query sweep [session scratch file] Ddiaz Design's RX-7 uploads; Blendkit search (rx7, rx-7, fd3s, mazda rx); Blend Swap search (rx7, rx-7, fd3s, mazda).",
+  "verdicts": "usable = licence allowed by CLAUDE.md rule 5 and no sign it is a rip or re-upload (still needs the owner to look at the body in the viewer); needs-your-call = allowed licence but a fit or originality question only the owner can settle; avoid = licence not allowed, game rip or re-upload, or not a stock FD.",
+  "licenceTerms": {
+    "blendkit": {
+      "url": "https://www.blendkit.com/docs/licenses/licensing-faq/",
+      "fetched": "2026-09-29",
+      "openedHow": "curl (www.blenderkit.com redirects to www.blendkit.com)",
+      "explicitRealTimeWebPermission": false,
+      "answer": "No for a plain GLB on GitHub Pages. The Royalty Free licence allows games only if the models \"can't be extracted by the users in an easy way\".",
+      "quotes": [
+        {
+          "url": "https://www.blendkit.com/docs/licenses/licensing-faq/",
+          "title": "Blendkit: Licensing FAQ",
+          "quote": "Can I sell games made with Blendkit models? Yes, if these can't be extracted by the users in an easy way.",
+          "accessed": "2026-09-29"
+        },
+        {
+          "url": "https://www.blendkit.com/docs/licenses/licensing-faq/",
+          "title": "Blendkit: Licensing FAQ",
+          "quote": "Yes, you can, but the assets shouldn't be directly extractable in the distribution.",
+          "accessed": "2026-09-29"
+        },
+        {
+          "url": "https://www.blendkit.com/docs/licenses/",
+          "title": "Blendkit: Licenses",
+          "quote": "doesn't allow for re-sale of the asset in the same form",
+          "accessed": "2026-09-29"
+        }
+      ]
+    },
+    "cgtrader": {
+      "answer": "Not re-read (site blocked). docs/decisions.md already excludes its \"Royalty Free No AI\" licence."
+    }
+  },
+  "items": [
+    {
+      "item": "Mazda RX-7 FD3S (1992-2002)",
+      "entries": [
+        {
+          "id": "cgt-hlol911-jackboys",
+          "title": "Jackboys Mazda RX7 FD High Detailed 3D Model",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/jackboys-mazda-rx7-fd-high-detailed-3d-model",
+          "marketplace": "CGTrader",
+          "listInOldFile": "usable",
+          "opened": false,
+          "openedHow": "Could not open: tried once with curl on 2026-09-29; www.cgtrader.com answered HTTP 202 with an empty body (the same WAF challenge as on 2026-09-27). Not worked around. Nothing on this listing was re-verified.",
+          "licence": "Not seen this run (Phase 0 search summary said Royalty Free)",
+          "noAi": "Not seen",
+          "polycount": "Not re-verified",
+          "interior": "Not re-verified",
+          "engineBay": "Not re-verified",
+          "stockBody": "Not re-verified",
+          "originalityEvidence": "None gathered (page not reachable)",
+          "verdict": "avoid",
+          "reason": "CGTrader sells to ordinary buyers only under its 'Royalty Free License, No AI' (T&C 21A.7, read 2026-09-26 in the 350Z/E46 re-check). docs/decisions.md ('NoAI clauses allowed on CC0 and CC-BY', Scope) says a NoAI clause on a paid licence, 'all of CGTrader's current \"Royalty Free No AI\"', is still excluded. That holds whatever this listing says. It was also never a stock car: the name refers to the car in Travis Scott's JackBoys video and the Phase 0 summary said 'JDM styled interior'.",
+          "note": "Old fields (174,484 vertices, interior and 13B engine under the hood, RigACar rig, OBJ/FBX/BLEND, by hlol911) are Phase 0 search summaries from 2026-09-26 and were not re-verified. If the owner ever wants it, it would need a direct licence from the author."
+        },
+        {
+          "id": "sf-mgr99-efini",
+          "title": "Mazda RX-7 FD3S Efini",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-fd3s-efini-61c7faa539424486aff840b78d7d6459",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "usable",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/61c7faa539424486aff840b78d7d6459 + viewer metadata https://sketchfab.com/i/models/61c7faa539424486aff840b78d7d6459 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "MGR '99 (@MGR99)",
+          "licence": "Editorial (API license.label). The page title still reads \"Buy Royalty Free 3D model\", but there is no Buy or Download button (inStore false, downloadType no).",
+          "noAi": "No NoAI notice or noai tag seen",
+          "editorial": true,
+          "polycount": "48,578 faces / 26,255 vertices (API); 21,983 quads + 4,612 triangles, 17 materials (viewer)",
+          "interior": "Unknown; no interior texture names (textures are tyres, lights, body, muffler, wheels)",
+          "engineBay": "No sign (no engine textures)",
+          "stockBody": "Tagged \"stock\"; the author's older listing is described as \"A stock Mazda RX-7 FD efini model.\"",
+          "originalityEvidence": "Author's own remodel: \"I was not satisfied with how my RX7 model looked, so I decided to remodel it\". Source file mazda_rx7_fd_update.blend (7.2 MB).",
+          "verdict": "avoid",
+          "reason": "Editorial licence and not purchasable or downloadable any more. The old list's \"Royalty Free, 4.5M triangles\" is out of date: the API now reports 48,578 faces, so it would also be far below the detail target.",
+          "conflicts": "Phase 0 search summary: 4.5M triangles / 2.4M vertices, Royalty Free. Data API 2026-09-27: 48,578 faces / 26,255 vertices, Editorial. The API value is the one read from the listing itself.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/61c7faa539424486aff840b78d7d6459",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"label\": \"Editorial\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/61c7faa539424486aff840b78d7d6459",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"downloadType\": \"no\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/61c7faa539424486aff840b78d7d6459",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "Mazda RX-7 FD3S Efini - Buy Royalty Free 3D model by MGR '99 (@MGR99)",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/61c7faa539424486aff840b78d7d6459",
+              "title": "Sketchfab Data API model record",
+              "quote": "I was not satisfied with how my RX7 model looked, so I decided to remodel it and make it more presentable and accurate.",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "cgt-fd-turbo-1995",
+          "title": "Mazda RX7 FD Turbo 1995 JDM (paid, USD 40)",
+          "url": "https://www.cgtrader.com/3d-models/car/racing-car/mazda-rx7-fd-turbo-1995",
+          "marketplace": "CGTrader",
+          "listInOldFile": "usable",
+          "opened": false,
+          "openedHow": "Could not open: tried once with curl on 2026-09-29; www.cgtrader.com answered HTTP 202 with an empty body (the same WAF challenge as on 2026-09-27). Not worked around. Nothing on this listing was re-verified.",
+          "licence": "Not seen this run (Phase 0 search summary said Royalty Free)",
+          "noAi": "Not seen",
+          "polycount": "Not re-verified",
+          "interior": "Not re-verified",
+          "engineBay": "Not re-verified",
+          "stockBody": "Not re-verified",
+          "originalityEvidence": "None gathered (page not reachable)",
+          "verdict": "avoid",
+          "reason": "CGTrader sells to ordinary buyers only under its 'Royalty Free License, No AI' (T&C 21A.7, read 2026-09-26 in the 350Z/E46 re-check). docs/decisions.md ('NoAI clauses allowed on CC0 and CC-BY', Scope) says a NoAI clause on a paid licence, 'all of CGTrader's current \"Royalty Free No AI\"', is still excluded. That holds whatever this listing says. Not stock either: the Phase 0 summary lists 18-inch Volk Racing TE37 wheels and modified headlights.",
+          "note": "The free sister listing https://www.cgtrader.com/free-3d-models/car/racing-car/mazda-rx-7-fd-turbo-1995-jdm was also tried once (HTTP 202, empty). Old figures (279,970 polygons / 171,883 vertices on the free listing, USD 40) are Phase 0 search summaries.",
+          "relatedUrl": "https://www.cgtrader.com/free-3d-models/car/racing-car/mazda-rx7-fd-turbo-1995-jdm"
+        },
+        {
+          "id": "cgt-rx7-fd-full-ready",
+          "title": "Mazda RX-7 FD Full Ready",
+          "url": "https://www.cgtrader.com/3d-models/car/sport-car/rx-7-fd-full-ready",
+          "marketplace": "CGTrader",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: tried once with curl on 2026-09-29; www.cgtrader.com answered HTTP 202 with an empty body (the same WAF challenge as on 2026-09-27). Not worked around. Nothing on this listing was re-verified.",
+          "licence": "Not seen this run (Phase 0 search summary said Royalty Free)",
+          "noAi": "Not seen",
+          "polycount": "Not re-verified",
+          "interior": "Not re-verified",
+          "engineBay": "Not re-verified",
+          "stockBody": "Not re-verified",
+          "originalityEvidence": "None gathered (page not reachable)",
+          "verdict": "avoid",
+          "reason": "CGTrader sells to ordinary buyers only under its 'Royalty Free License, No AI' (T&C 21A.7, read 2026-09-26 in the 350Z/E46 re-check). docs/decisions.md ('NoAI clauses allowed on CC0 and CC-BY', Scope) says a NoAI clause on a paid licence, 'all of CGTrader's current \"Royalty Free No AI\"', is still excluded. That holds whatever this listing says. The Phase 0 summary also said the spoiler and bumpers are the creator's own design, so the body isn't stock.",
+          "note": "Old fields (detailed interior, OBJ/FBX/BLEND) are Phase 0 search summaries."
+        },
+        {
+          "id": "ts-1715974-bn-sport",
+          "title": "RX7 FD3S BN Sport bodykit",
+          "url": "https://www.turbosquid.com/FullPreview/1715974",
+          "marketplace": "TurboSquid",
+          "listInOldFile": "needs-call",
+          "opened": false,
+          "openedHow": "Could not open: tried once with curl on 2026-09-29; HTTP 403 (DataDome \"Please enable JS\" device check). Not worked around.",
+          "licence": "Not seen",
+          "noAi": "Not seen",
+          "polycount": "Not seen",
+          "interior": "Not seen",
+          "engineBay": "Not seen",
+          "stockBody": "No: BN Sports aero kit (from the title)",
+          "originalityEvidence": "None gathered. Note: Ddiaz Design's \"2018 BN Sports BLS FD RX7\" on Sketchfab says \"Based on a CSR2 3d model\", so BN Sports FD meshes circulating online may be game-derived; not shown for this listing.",
+          "verdict": "avoid",
+          "reason": "Not a stock body (BN Sports aero kit), licence unseen, page blocked. TurboSquid's standard licence did not pass the web-delivery check in the 2026-09-26 review (docs/asset-shopping-list.md \"Paid licence terms\").",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "2018 BN Sports BLS FD RX7",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "ts-pandem-v3",
+          "title": "RX7 FD Pandem V3 (TurboSquid, from the old list's note)",
+          "url": null,
+          "marketplace": "TurboSquid",
+          "listInOldFile": "lead (in the BN Sport note)",
+          "opened": false,
+          "openedHow": "No URL was recorded in Phase 0 and TurboSquid blocks curl (403), so it was not looked for.",
+          "licence": "Not seen",
+          "noAi": "Not seen",
+          "polycount": "Not seen",
+          "interior": "Not seen",
+          "engineBay": "Not seen",
+          "stockBody": "No: Pandem widebody (from the title)",
+          "originalityEvidence": "None",
+          "verdict": "avoid",
+          "reason": "Widebody, not stock; nothing verifiable."
+        },
+        {
+          "id": "sf-vuckyz-panspeed",
+          "title": "Mazda RX-7 Panspeed (FD3S)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-panspeed-fd3s-745eac0542eb470f9d88b6215f33ee93",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/745eac0542eb470f9d88b6215f33ee93 + viewer metadata https://sketchfab.com/i/models/745eac0542eb470f9d88b6215f33ee93 + model page (curl) + comments and user APIs",
+          "author": "VuckyZ (@VuckyZ123)",
+          "licence": "CC Attribution (as shown)",
+          "noAi": "No NoAI notice",
+          "editorial": false,
+          "polycount": "30,610 triangles / 19,579 vertices",
+          "interior": "Game-level (rx2_cabin texture)",
+          "engineBay": "No sign",
+          "stockBody": "No: Panspeed aero",
+          "originalityEvidence": "Description says it is from Grid AutoSport (mobile); source file is a hashed OBJ name.",
+          "verdict": "avoid",
+          "reason": "Confirmed game rip (Grid AutoSport), so the CC-BY label is not the author's; also not stock and low-poly.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/745eac0542eb470f9d88b6215f33ee93",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "Model from: Grid AutoSport (mobile)",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-niev-1999",
+          "title": "Mazda RX7 FD 1999",
+          "url": "https://sketchfab.com/3d-models/mazda-rx7-fd-1999-06986b70c65b44c5a7315ed467b621a6",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/06986b70c65b44c5a7315ed467b621a6 + viewer metadata https://sketchfab.com/i/models/06986b70c65b44c5a7315ed467b621a6 + model page (curl) + comments and user APIs",
+          "author": "Nieve5677 (@niev), uploader",
+          "licence": "CC Attribution (as shown)",
+          "noAi": "No NoAI notice",
+          "editorial": false,
+          "polycount": "650,294 faces / 389,514 vertices; 323,756 quads + 2,782 triangles; 16 materials, no textures",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "stockBody": "Unknown (1999 Series 8 by title)",
+          "originalityEvidence": "The uploader's profile says they did not make any of their 2,109 models.",
+          "verdict": "avoid",
+          "reason": "Re-upload by a non-author; the CC-BY label is not from the real author.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=niev&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@niev)",
+              "quote": "I did not make any of these models but feel free to use them for anything.",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-lb-silhouette",
+          "title": "2023 LB★SUPER SILHOUETTE MAZDA FD3S RX-7",
+          "url": "https://sketchfab.com/3d-models/2023-lbsuper-silhouette-mazda-fd3s-rx-7-c5c5ad569240468e9f58a8f88e7aaaf0",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "avoid",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/c5c5ad569240468e9f58a8f88e7aaaf0 + viewer metadata https://sketchfab.com/i/models/c5c5ad569240468e9f58a8f88e7aaaf0 + model page (curl) + comments and user APIs",
+          "author": "Ddiaz Design (@ddiaz-design)",
+          "licence": "CC Attribution-NonCommercial-ShareAlike",
+          "noAi": "No NoAI notice",
+          "editorial": false,
+          "polycount": "139,460 triangles / 78,918 vertices",
+          "interior": "Game-level (InteriorA textures, 800 px)",
+          "engineBay": "No sign",
+          "stockBody": "No: Liberty Walk Super Silhouette widebody",
+          "originalityEvidence": "Description: \"Based on a CSR2 3d model\". Game-style texture names (Mazda_LBSuperSilhouetteRX7_1993_*).",
+          "verdict": "avoid",
+          "reason": "Now verified: BY-NC-SA licence, derived from the CSR2 game model, and a widebody.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/c5c5ad569240468e9f58a8f88e7aaaf0",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "Based on a CSR2 3d model",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/c5c5ad569240468e9f58a8f88e7aaaf0",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "License: CC Attribution-NonCommercial-ShareAlike",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-realwallon-rx7",
+          "title": "Mazda RX-7",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-45cb02e634ed477a9a04bb19813443f2",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead ('Mazda RX-7' by wallon, in searchNotes)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/45cb02e634ed477a9a04bb19813443f2 + viewer metadata https://sketchfab.com/i/models/45cb02e634ed477a9a04bb19813443f2 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "wallon (@realwallon), US, Blender + Substance, 15 uploads",
+          "licence": "CC Attribution (API label and page row)",
+          "noAi": false,
+          "editorial": false,
+          "price": "Free download",
+          "polycount": "361,462 faces / 185,448 vertices; 179,499 quads + 1,548 triangles; 8 materials. Source rx7.fbx 10.2 MB.",
+          "textures": "2048 px PBR sets for lights, wheel and intercooler only; the rest uses Sketchfab standard materials",
+          "interior": "Probably none: no interior textures or materials are named. A derivative copy by @RxARSLON (same wheel textures and triangle count) says in Uzbek that the interior is not modelled. Not seen directly.",
+          "engineBay": "No sign (only an intercooler normal map, which suggests a front-mount intercooler, i.e. an aftermarket part)",
+          "stockBody": "Uncertain: tagged \"Stance\" and \"toyotires\"; an intercooler texture suggests a visible front-mount intercooler. Not seen (no images viewed).",
+          "originalityEvidence": "Description says it was modelled in Blender and textured in Substance Painter; 25 comments, including Sketchfab staff featuring it (top-10 week 2022-24) and the author answering a game-use question (\"sure\"). No game or rip wording. Its mesh has since been copied by others (RxARSLON re-upload, Denys.Cherkasov \"TANK\" conversion reusing its headlight textures).",
+          "verdict": "usable",
+          "reason": "Clean CC-BY, the author's own model, 361k faces with PBR lights and wheels, fits 25 MB after compression. It is the best free FD body found, but it is exterior-only and may be a stanced build (tags), so the owner must check the wheels, ride height and intercooler in the Sketchfab viewer. Credit wallon on /credits.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "The car was modeled in Blender, then parts were textured in Substance Painter, and the rest utilizes standard materials in Sketchfab.",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "License: CC Attribution Creative Commons Attribution",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab comments API",
+              "quote": "@epich307 sure",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"name\": \"Stance\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/0d3501c3da4e4c5abd413267a4633472",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "Texture uv mashinaning ichki qismi yasalmagan. shuning uchun bu madelni ishlatganingizda oynalarni rangini qoraytirishingiz kerak. [Uzbek, on @RxARSLON's copy: the car's interior is not made, so when you use this model you should darken the window colour]",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-lexyc16-fd",
+          "title": "Mazda RX-7 FD",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-fd-d35ff630df614771b82e7b2f59035b1e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (searchNotes: 'licence not seen; may be CC BY-NC')",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/d35ff630df614771b82e7b2f59035b1e + viewer metadata https://sketchfab.com/i/models/d35ff630df614771b82e7b2f59035b1e + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Lexyc16 (@Lexyc16), Russia, Blender",
+          "licence": "CC Attribution (page row), not NC",
+          "noAi": true,
+          "editorial": false,
+          "price": "Free download",
+          "polycount": "37,114 faces / 21,767 vertices; 17,442 quads + 213 triangles; 16 materials. Source .blend 3.3 MB.",
+          "textures": "lights and tyre textures (425 to 1600 px) only",
+          "interior": "Not mentioned; no interior textures; a 2026 commenter asks the author \"are you good with interiors too?\"",
+          "engineBay": "No sign",
+          "stockBody": "Body looks stock by title; a commenter asked for a \"stock wheel(rims) version\", so the wheels are aftermarket.",
+          "originalityEvidence": "Description: \"Mazda Rx-7 FD i made in blender 2.82a\", with an update note. Its mesh was later copied by others (saitoyang, where a commenter says the topology is identical, plus Anokino, Dan_man5000 and xybrrr at 37,112 to 37,114 faces).",
+          "verdict": "usable",
+          "reason": "CC-BY with a NoAI clause (allowed on CC-BY; mark noAi: true and keep it out of AI review, per rule 5). Self-made. Fallback only: 37k faces, exterior-only, aftermarket rims.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/d35ff630df614771b82e7b2f59035b1e",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "Mazda Rx-7 FD i made in blender 2.82a",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/d35ff630df614771b82e7b2f59035b1e",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=d35ff630df614771b82e7b2f59035b1e",
+              "title": "Sketchfab comments API",
+              "quote": "Please do stock wheel(rims) version.",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-car2022-type-rs",
+          "title": "Mazda RX-7 Type-RS (FD3S)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-type-rs-fd3s-6941f12139cc4c18b81875947cdf5256",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (searchNotes, Mona x Supercars @Car2022)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/6941f12139cc4c18b81875947cdf5256 + viewer metadata https://sketchfab.com/i/models/6941f12139cc4c18b81875947cdf5256 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Mona x Supercars (@Car2022), uploader of 467 models",
+          "licence": "CC Attribution (as shown)",
+          "noAi": false,
+          "polycount": "78,464 triangles; 27 materials; no textures",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "stockBody": "Unknown",
+          "originalityEvidence": "The uploaded file is named \"zr350-gta-san-andreas-wip\" (a GTA San Andreas car). The uploader's other listings include NFS Unbound and Forza Motorsport 4 cars.",
+          "verdict": "avoid",
+          "reason": "Game-derived (GTA San Andreas file name) from a re-uploader of game cars; the CC-BY label is not the author's.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/6941f12139cc4c18b81875947cdf5256",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"zr350-gta-san-andreas-wip\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=Car2022&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@Car2022)",
+              "quote": "Mercedes-Benz 190E (NFS Unbound)",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=Car2022&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@Car2022)",
+              "quote": "forza-motorsport-4",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-car2022-spirit-r",
+          "title": "Mazda RX-7 Spirit R (FD3S)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-spirit-r-fd3s-e9c3394294104838bfc89b226f93a52a",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (searchNotes, @Car2022)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/e9c3394294104838bfc89b226f93a52a + viewer metadata https://sketchfab.com/i/models/e9c3394294104838bfc89b226f93a52a + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Mona x Supercars (@Car2022)",
+          "licence": "CC Attribution (as shown)",
+          "noAi": false,
+          "polycount": "49,688 triangles; 73 materials; 55 textures up to 1024 px",
+          "interior": "Game-level cabin (GaugeCluster, door cards, Recaro Spirit R Type A bucket seat textures)",
+          "engineBay": "A 13B-REW texture exists (13brew1_diff), so a basic engine is present",
+          "stockBody": "Spirit R Type A by name",
+          "originalityEvidence": "Game-style part textures (e.g. \"RecaroSpiritrTypeABucketSeatRight1_diff\", \"13brew1_diff\") and a spec-sheet description with no making-of; the uploader re-uploads game cars (see Type-RS entry). Source game not named.",
+          "verdict": "avoid",
+          "reason": "Very probably a game rip from a game-car re-uploader (not proven which game); low-poly anyway.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/e9c3394294104838bfc89b226f93a52a",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "RecaroSpiritrTypeABucketSeatRight1_diff",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/e9c3394294104838bfc89b226f93a52a",
+              "title": "Sketchfab Data API model record",
+              "quote": "Exterior Paint: White",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-0verly-abflug",
+          "title": "Mazda RX-7 FD3S Abflug",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-fd3s-abflug-37c4551451c342ada3d8593956e23f35",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (searchNotes, @0verly)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/37c4551451c342ada3d8593956e23f35 + viewer metadata https://sketchfab.com/i/models/37c4551451c342ada3d8593956e23f35 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "licence": "CC Attribution-NonCommercial",
+          "noAi": false,
+          "polycount": "563,505 triangles",
+          "interior": "Yes (Recaro, Schroth, carpet textures)",
+          "engineBay": "Unknown",
+          "stockBody": "No: Abflug Anubis aero kit",
+          "originalityEvidence": "Upload is an Assetto Corsa mod folder: \"1994_Mazda_RX-7___40_FD3S__41__Abflug_Anubis_3D_Assetto\", with skins/cm_skin.json and ext_config.ini files.",
+          "verdict": "avoid",
+          "reason": "NonCommercial licence, Assetto Corsa mod rip, and an aero-kit body.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/37c4551451c342ada3d8593956e23f35",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "1994_Mazda_RX-7___40_FD3S__41__Abflug_Anubis_3D_Assetto",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/37c4551451c342ada3d8593956e23f35",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "License: CC Attribution-NonCommercial",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "cgt-abflug-anubis-1994",
+          "title": "Mazda RX-7 FD3S Abflug Anibus 1994 (CGTrader, from searchNotes)",
+          "url": null,
+          "marketplace": "CGTrader",
+          "listInOldFile": "lead (searchNotes)",
+          "opened": false,
+          "openedHow": "No URL recorded in Phase 0; CGTrader is blocked (HTTP 202 empty). Not looked for.",
+          "licence": "Not seen",
+          "noAi": "Not seen",
+          "polycount": "Not seen",
+          "interior": "Not seen",
+          "engineBay": "Not seen",
+          "stockBody": "No: Abflug aero kit",
+          "originalityEvidence": "The same kit's Sketchfab upload by @0verly is an Assetto Corsa mod rip; whether this listing is related is unknown.",
+          "verdict": "avoid",
+          "reason": "Aero-kit body, and CGTrader's licence is excluded (see cgt-hlol911-jackboys)."
+        },
+        {
+          "id": "cgt-lowpoly-fd3s",
+          "title": "Mazda RX-7 FD3S low-poly (CGTrader, from searchNotes)",
+          "url": null,
+          "marketplace": "CGTrader",
+          "listInOldFile": "lead (searchNotes)",
+          "opened": false,
+          "openedHow": "No URL recorded in Phase 0; CGTrader is blocked. Not looked for.",
+          "licence": "Not seen",
+          "noAi": "Not seen",
+          "polycount": "Low-poly per Phase 0 summary",
+          "interior": "Not seen",
+          "engineBay": "Not seen",
+          "stockBody": "Not seen",
+          "originalityEvidence": "None",
+          "verdict": "avoid",
+          "reason": "Low-poly by description, and CGTrader's licence is excluded."
+        },
+        {
+          "id": "sf-naudaff3d-custom",
+          "title": "Mazda RX-7 Custom",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-custom-b4988cf04b0e48d78a6ee9c8a4169994",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (searchNotes)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/b4988cf04b0e48d78a6ee9c8a4169994 + viewer metadata https://sketchfab.com/i/models/b4988cf04b0e48d78a6ee9c8a4169994 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Naudaff3D",
+          "licence": "Editorial (API label); page title still \"Buy Royalty Free\"; no Buy or Download button",
+          "noAi": true,
+          "editorial": true,
+          "polycount": "938,643 faces / 483,113 vertices",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "stockBody": "No: the author's own body-kit modifications",
+          "originalityEvidence": "Self-made in Blender 4.0 per description.",
+          "verdict": "avoid",
+          "reason": "Editorial, not purchasable, and a custom body kit.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/b4988cf04b0e48d78a6ee9c8a4169994",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"label\": \"Editorial\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/b4988cf04b0e48d78a6ee9c8a4169994",
+              "title": "Sketchfab Data API model record",
+              "quote": "I made an RX-7 model with my own bodykit modifications",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-mgr99-outdated",
+          "title": "Mazda RX7 FD (MGR '99, marked OUTDATED)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx7-fd-90597e9ed8e74937a4ae8de016bfccf5",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "lead (named in the Efini entry's evidence)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/90597e9ed8e74937a4ae8de016bfccf5 + viewer metadata https://sketchfab.com/i/models/90597e9ed8e74937a4ae8de016bfccf5 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "MGR '99 (@MGR99)",
+          "licence": "Editorial; downloadType no; inStore false",
+          "noAi": false,
+          "editorial": true,
+          "polycount": "28,718 faces / 16,607 vertices",
+          "interior": "No sign",
+          "engineBay": "No sign",
+          "stockBody": "Yes by description (\"A stock Mazda RX-7 FD efini model.\")",
+          "originalityEvidence": "Author's own (superseded by the Efini remodel).",
+          "verdict": "avoid",
+          "reason": "Editorial, not for sale, low-poly and self-described as outdated.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/90597e9ed8e74937a4ae8de016bfccf5",
+              "title": "Sketchfab Data API model record",
+              "quote": "*OUTDATED* A stock Mazda RX-7 FD efini model.",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/90597e9ed8e74937a4ae8de016bfccf5",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"downloadType\": \"no\"",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-spirit-r-type-a",
+          "title": "2002 Mazda RX-7 Spirit R Type A (FD)",
+          "url": "https://sketchfab.com/3d-models/2002-mazda-rx-7-spirit-r-type-a-fd-60b2b5e9f5ce45cbb41832793d0e0e68",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new in the first run (part3a.md section 4)",
+          "opened": true,
+          "openedHow": "From the first run's saved API and viewer copies (2026-09-27); its page text was not saved.",
+          "author": "Ddiaz Design (@ddiaz-design), 1,505 uploads",
+          "licence": "CC Attribution-NonCommercial-ShareAlike",
+          "noAi": false,
+          "polycount": "53,817 triangles / 36,302 vertices; 29 materials",
+          "interior": "Game-level",
+          "engineBay": "Engine textures present (Car_Mazda_RX7SpiritR_2002_Engine_*)",
+          "stockBody": "Spirit R Type A, but with TOYO Proxes R888 tyre textures",
+          "originalityEvidence": "Description: \"Based on a Need For Speed Heat 3d model\". The uploader's profile says the models are references, not for commercial use.",
+          "verdict": "avoid",
+          "reason": "BY-NC-SA and derived from NFS Heat. This is the source of the whole 53.8k re-upload cluster below.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/60b2b5e9f5ce45cbb41832793d0e0e68",
+              "title": "Sketchfab Data API model record",
+              "quote": "Based on a Need For Speed Heat 3d model",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/60b2b5e9f5ce45cbb41832793d0e0e68",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"label\": \"CC Attribution-NonCommercial-ShareAlike\"",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=ddiaz-design&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@ddiaz-design)",
+              "quote": "Los modelos presentes en esta cuenta no son para usos comerciales, solo son referencias. [The models on this account are not for commercial use, they are only references.]",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-adrianaflak09-spirit-r",
+          "title": "2002 Mazda RX-7 Spirit R (FD)",
+          "url": "https://sketchfab.com/3d-models/2002-mazda-rx-7-spirit-r-fd-5d3422f5a933442b94fd85b97dd97aab",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new in the first run (part3a.md section 5 item 7: \"may be a re-upload\")",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/5d3422f5a933442b94fd85b97dd97aab + viewer metadata https://sketchfab.com/i/models/5d3422f5a933442b94fd85b97dd97aab + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Galaxy Car Showroom (@adrianaflak09), uploader",
+          "licence": "CC Attribution (as shown)",
+          "noAi": false,
+          "polycount": "56,574 triangles / 38,437 vertices; 40 materials; source is a .glb",
+          "interior": "Game-level",
+          "engineBay": "Engine textures present",
+          "stockBody": "Spirit R by name",
+          "originalityEvidence": "Texture names match Ddiaz Design's NFS Heat-based Spirit R Type A (Car_Mazda_RX7SpiritR_2002_Badge_*, _Engine_*, _InteriorTiledSimple_*, Shared_Car_Chassis_*). The uploader's other listings say \"Model from CSR 2, Original model by Ddiaz Design\", \"Model from Need For Speed Heat\", \"Model from Forza Motorsport 4\" and similar. A commenter asks whether it can be used commercially.",
+          "verdict": "avoid",
+          "reason": "Now shown to be a game-derived re-upload (same game texture set as the NFS Heat-based Ddiaz model, from an uploader who labels other uploads as game models); the CC-BY label is not the author's.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/5d3422f5a933442b94fd85b97dd97aab",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "Car_Mazda_RX7SpiritR_2002_Engine_D_9.png",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/60b2b5e9f5ce45cbb41832793d0e0e68",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "Car_Mazda_RX7SpiritR_2002_Engine_D.png",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=adrianaflak09&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@adrianaflak09)",
+              "quote": "Model from CSR 2, Original model by Ddiaz Design",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=5d3422f5a933442b94fd85b97dd97aab",
+              "title": "Sketchfab comments API",
+              "quote": "Can I use the model commercially?",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-res1n-1999",
+          "title": "1999 Mazda RX-7 FD",
+          "url": "https://sketchfab.com/3d-models/1999-mazda-rx-7-fd-ff9c8b4fd8124cb1b54211baff7d6444",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new in the first run (part3a.md section 5 item 7: identical counts to niev's)",
+          "opened": true,
+          "openedHow": "From the first run's saved copies (2026-09-27): Sketchfab Data API https://api.sketchfab.com/v3/models/ff9c8b4fd8124cb1b54211baff7d6444 + viewer metadata https://sketchfab.com/i/models/ff9c8b4fd8124cb1b54211baff7d6444 + model page (curl) + comments and user APIs. Not re-fetched.",
+          "author": "Res1n (@Res1n), uploader",
+          "licence": "CC Attribution (as shown)",
+          "noAi": false,
+          "polycount": "650,294 faces / 389,514 vertices (identical to niev's)",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "stockBody": "Unknown",
+          "originalityEvidence": "Its source file source/Mazda_RX7_1999.zip is 45,160,827 bytes, exactly the archive size of niev's upload, whose uploader says they made none of their models. Res1n also re-uploads niev's RX-7 Mk1 and FC (same face counts) and tags this one with unrelated brands (bmw, audi, mersedes).",
+          "verdict": "avoid",
+          "reason": "Re-upload of niev's re-upload; the licence is not from the real author.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/ff9c8b4fd8124cb1b54211baff7d6444",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filesize\": 45160827",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/06986b70c65b44c5a7315ed467b621a6",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"archiveSize\": 45160827",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "bk-dimensionalworks-rx7",
+          "title": "Mazda RX-7 FD (Blendkit, formerly BlenderKit)",
+          "url": "https://www.blendkit.com/asset-gallery-detail/7b20a3b8-7194-493b-930b-0e6904ffe8b9/",
+          "marketplace": "Blendkit (BlenderKit)",
+          "listInOldFile": "lead (searchNotes: 'Mazda RX-7 FD by Dimensionalworks on BlenderKit, licence not seen')",
+          "opened": true,
+          "openedHow": "Blendkit search API https://www.blendkit.com/api/v1/search/?query=rx7%20asset_type:model (JSON, text fields only; no thumbnails fetched). The web page itself was not opened; the URL above is built from the asset id and not verified.",
+          "author": "Dimensionalworks Johanson (\"Full-time freelance 3D designer\", dimensionalworks.com)",
+          "licence": "royalty_free (Blendkit Royalty Free licence), Full Plan (paid subscription) only; isFree false",
+          "noAi": "Not stated",
+          "editorial": false,
+          "polycount": "203,121 faces (2,264,631 at render with subdivision); quad-dominant; 169 objects; 22 textures, up to 4096 px",
+          "interior": "Yes, modelled: materials include Leather, Fabric, Dash_Plastic, Interior_Details, Stitching, Interior_Rx7, seatbelt",
+          "engineBay": "Not stated (materials list shows Suspension and Hardware, no engine material named)",
+          "stockBody": "Not fully: a \"TE37 RAYS\" wheel material (Volk TE37 aftermarket wheels). Dimensions 4.28 x 1.90 x 1.18 m. Body otherwise not described.",
+          "originalityEvidence": "Blender 4.2 native file with a modifier stack (mirror, subsurf, solidify, bevel, weighted normal) and validated status, which points to a self-made model. Its 203,121 base faces are close to, but not equal to, the 203,266 of Ddiaz's CSR2-based \"1993 Mazda RX-7\", so no link is shown.",
+          "verdict": "avoid",
+          "reason": "The best-detailed stock-shaped FD with a real interior found, but the Blendkit Royalty Free licence allows games only if the models \"can't be extracted by the users in an easy way\", which a GLB served from GitHub Pages in a public repo is not. It also needs a paid Full Plan and has TE37 wheels. Would only work with a separate licence from the author (owner's call; rule 10).",
+          "quotes": [
+            {
+              "url": "https://www.blendkit.com/api/v1/search/?query=rx7%20asset_type:model",
+              "title": "Blendkit search API record for \"Mazda RX-7 FD\"",
+              "quote": "license: royalty_free",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://www.blendkit.com/api/v1/search/?query=rx7%20asset_type:model",
+              "title": "Blendkit search API record for \"Mazda RX-7 FD\"",
+              "quote": "accessLabel: Full Plan",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://www.blendkit.com/api/v1/search/?query=rx7%20asset_type:model",
+              "title": "Blendkit search API record for \"Mazda RX-7 FD\"",
+              "quote": "Tyre TE37 RAYS",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://www.blendkit.com/api/v1/search/?query=rx7%20asset_type:model",
+              "title": "Blendkit search API record for \"Mazda RX-7 FD\"",
+              "quote": "faceCount: 203121",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://www.blendkit.com/docs/licenses/licensing-faq/",
+              "title": "Blendkit: Licensing FAQ",
+              "quote": "Yes, if these can't be extracted by the users in an easy way.",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-danok98-rx7",
+          "title": "Mazda rx-7 (danok98)",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-d9f736f66ee24544bec4326ee9b135b9",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/d9f736f66ee24544bec4326ee9b135b9 + viewer metadata https://sketchfab.com/i/models/d9f736f66ee24544bec4326ee9b135b9 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "danok98 (Opole; ArtStation danok98, Instagram byesly_design; 6 uploads)",
+          "licence": "CC Attribution (API label and page row)",
+          "noAi": false,
+          "editorial": false,
+          "price": "Free download",
+          "published": "2019-08-04",
+          "polycount": "83,518 faces / 43,193 vertices; 40,632 quads + 1,333 triangles; 30 materials. Source mazda.fbx 2.6 MB.",
+          "textures": "93 Substance-style maps at 2048 px (body, headlights, rear lights, glass, mirror, wheels, rubber, suspension, springs, muffler, salon (cabin), seats, steering wheel, body_kit, spoiler)",
+          "interior": "Yes, a basic one: salon (cabin), seats and steering-wheel texture sets; a commenter who used it calls it \"Almost high interior\".",
+          "engineBay": "No engine textures named (suspension, springs and muffler only)",
+          "stockBody": "No: body_kit and spoiler texture sets and tags \"bodykit\" and \"Stance\". Also tagged \"nfs\" (no other game wording).",
+          "originalityEvidence": "Author links ArtStation; the account's other uploads (240Z Rocket Bunny, BMW M1, weapons, headphones) are in the same Blender + Substance style; commenters used it in games without any claim that it was taken. The \"nfs\" tag is unexplained. Not proven original.",
+          "verdict": "needs-your-call",
+          "reason": "CC-BY, mid-poly, the only free FD found with a (basic) modelled cabin that is not a game derivative, but it carries an aftermarket body kit and spoiler, so it is not a stock FD3S. Worth a look only if a modified body is acceptable or the kit parts can be removed.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab comments API",
+              "quote": "Game ready, Almost high interior, High details.",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filepath\": \"textures/salon.001_albedo.jpg\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filepath\": \"textures/body_kit.001_Metallic.png\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"name\": \"bodykit\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"name\": \"nfs\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/d9f736f66ee24544bec4326ee9b135b9",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "https://www.artstation.com/danok98",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-eikojonwa-rmagic",
+          "title": "2010_r_magic_fd_armor_mazda_rx-7_fd3s",
+          "url": "https://sketchfab.com/3d-models/2010-r-magic-fd-armor-mazda-rx-7-fd3s-3c62e9f7aa0d441c87e7060d49709077",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/3c62e9f7aa0d441c87e7060d49709077 + viewer metadata https://sketchfab.com/i/models/3c62e9f7aa0d441c87e7060d49709077 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "Eikojonwa (1 upload)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "244,498 triangles (= Ddiaz's CSR2-based upload 957051ad)",
+          "interior": "Game-level",
+          "engineBay": "Game-level",
+          "stockBody": "No: R Magic aero",
+          "originalityEvidence": "Single-upload account, a glb whose name is a Sketchfab download slug, face count identical to Ddiaz's CSR2-based model.",
+          "verdict": "avoid",
+          "reason": "Relabelled re-upload of a BY-NC-SA game-model derivative; aero-kit body.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/3c62e9f7aa0d441c87e7060d49709077",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"2010_r_magic_fd_armor_mazda_rx-7_fd3s\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "2010 R Magic FD Armor Mazda RX-7 FD3S | ddiaz-design | CC Attribution-NonCommercial-ShareAlike | 244498",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-hidan1199-rx7",
+          "title": "Mazda RX 7",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-9b06522c4bf84ee0908f4482ee4a506e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/9b06522c4bf84ee0908f4482ee4a506e + viewer metadata https://sketchfab.com/i/models/9b06522c4bf84ee0908f4482ee4a506e + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "hidan1199 (Instagram jejelioo), member since 2015, 23 uploads",
+          "licence": "CC Attribution (API label and page row)",
+          "noAi": false,
+          "editorial": false,
+          "price": "Free download",
+          "published": "2021-03-15",
+          "polycount": "629,054 faces / 321,348 vertices; 313,903 quads + 888 triangles; 12 materials. Source \"RX 7 To subtance.fbx\", 16.3 MB.",
+          "textures": "44 Substance texture maps at 2048 px (BaseColor, Height, Metallic, Normal, Roughness) with French part names: carosserie (body), garde boue (fender), vitre (glass), phare AR (tail light), grille AV (front grille), pneu (tyre), logos",
+          "interior": "Probably none: no interior texture set among the 44 maps. Not stated.",
+          "engineBay": "No sign",
+          "stockBody": "Unknown (not seen). Tagged \"initiald\"; texture sets are body, fender, glass, lights, grille, tyres and logos, with no aero parts named.",
+          "originalityEvidence": "Description \"i have realised this car\" (French \"j'ai réalisé\", I made); French-named Substance Painter texture sets and a \"To subtance\" export name; the uploader's other work (knives, swords, revolvers, cars) is mostly sold under Standard or Editorial licences, which suggests a working modeller. No game or rip wording. Not proven.",
+          "verdict": "usable",
+          "reason": "Clean CC-BY, probably self-made, the densest free FD body found (629k faces, PBR textures). Exterior-only as far as the file names show. At 16 MB FBX plus 44 textures at 2048 px it needs Draco/KTX2 compression to fit 25 MB. The owner should check the body and wheels in the viewer. Credit hidan1199 on /credits.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/9b06522c4bf84ee0908f4482ee4a506e",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "i have realised this car, this is Mazda RX 7, Japan mythic car.",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/9b06522c4bf84ee0908f4482ee4a506e",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "License: CC Attribution Creative Commons Attribution",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/9b06522c4bf84ee0908f4482ee4a506e",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "RX_7_MEDIUM_POLY_carosserie.1_BaseColor.png",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/9b06522c4bf84ee0908f4482ee4a506e",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"RX 7 To subtance\"",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-ynimaxoffice-rx7",
+          "title": "Mazda RX-7",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-ffa18ebe20ac49be86055c748601ff63",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/ffa18ebe20ac49be86055c748601ff63 + viewer metadata https://sketchfab.com/i/models/ffa18ebe20ac49be86055c748601ff63 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "ynimaxoffice (Indonesian 3D-animation student; 2 uploads)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "price": "Free download",
+          "polycount": "175,224 faces / 87,813 vertices, all quads; 11 materials; no textures. Source \"Mazda RX-7.blend\" (Blender 2.91), 12 MB.",
+          "interior": "Unknown (11 materials, nothing named)",
+          "engineBay": "Unknown",
+          "stockBody": "Unknown (not seen)",
+          "originalityEvidence": "Native Blender file and a \"medium poly ... good for game asset\" description, but no making-of statement. The account's only other upload is named \"Lamborghini_Diablo_Sketchfab\", which reads like a file downloaded from Sketchfab. Originality can't be shown either way.",
+          "verdict": "needs-your-call",
+          "reason": "Allowed licence, plausible detail, but untextured and originality unproven. Lower priority than realwallon and hidan1199.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/ffa18ebe20ac49be86055c748601ff63",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "have a medim poly,not rigged and good for game asset",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=ynimaxoffice&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@ynimaxoffice)",
+              "quote": "Lamborghini_Diablo_Sketchfab",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-kitso3d-rx7",
+          "title": "Mazda Rx7 simple model RAR ZIP FBX file avalable",
+          "url": "https://sketchfab.com/3d-models/mazda-rx7-simple-model-rar-zip-fbx-file-avalable-51a054d45a4f4c4397ad8c8d10dd6614",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/51a054d45a4f4c4397ad8c8d10dd6614 + viewer metadata https://sketchfab.com/i/models/51a054d45a4f4c4397ad8c8d10dd6614 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "Kitso_3d (Lahore; account from 2025-09; 3 uploads)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "price": "Free download",
+          "polycount": "173,722 faces / 92,680 vertices; 85,984 quads + 621 triangles; 21 materials; no textures. Sources include RX7.mb (Maya), FBX, OBJ.",
+          "interior": "Unknown",
+          "engineBay": "Unknown (the tag list includes \"engine\" among ~30 generic tags)",
+          "stockBody": "Unknown",
+          "originalityEvidence": "A native Maya .mb file is a mild sign of authorship; the profile says the author works in Maya and is still learning. Generic marketing description, no making-of.",
+          "verdict": "needs-your-call",
+          "reason": "Allowed licence; untextured \"simple model\" by a learner; originality not shown. Low priority.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/51a054d45a4f4c4397ad8c8d10dd6614",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filepath\": \"RX7.mb\"",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-lunchinthetree-scans",
+          "title": "FD RX-7 photogrammetry scans: engine bay (x2), shell without subframe, transmission, front suspension",
+          "url": "https://sketchfab.com/3d-models/1994-fd-rx-7-engine-bay-v2-1d85b66923244796916f510696bb5057",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/1d85b66923244796916f510696bb5057 + viewer metadata https://sketchfab.com/i/models/1d85b66923244796916f510696bb5057 + model page (curl) + comments and user APIs, fetched 2026-09-29; also ae5a2aafcdcb4cfb9ec2d8f7719b0907 (engine bay v1), 7473a4c52ddf4836a4919744fe3f0644 (scan with no subframe); transmission f13d0ea5 and suspension 105ec4cb seen in the upload list",
+          "relatedUrls": [
+            "https://sketchfab.com/3d-models/fd-rx7-engine-bay-ae5a2aafcdcb4cfb9ec2d8f7719b0907",
+            "https://sketchfab.com/3d-models/fd-rx7-scan-with-no-subframe-7473a4c52ddf4836a4919744fe3f0644",
+            "https://sketchfab.com/3d-models/fd-rx-7-transmission-f13d0ea5daea42709912317bc5ac0e54",
+            "https://sketchfab.com/3d-models/1994-mazda-rx7-front-passenger-suspension-105ec4cb089e4532845c05094613640e"
+          ],
+          "author": "lunchinthetree (Pro account, 9 uploads, all tagged realityscan-mobile)",
+          "licence": "CC Attribution on all five (a second copy of \"Fd Rx7 Engine Bay\" is \"Free Standard\" with a noai tag)",
+          "noAi": "No NoAI on the CC-BY copies; the Free Standard duplicate 8da67383 carries a noai tag",
+          "price": "Free download",
+          "polycount": "Engine bay V2 917,644 triangles; engine bay v1 673,356; shell 708,368; transmission 428,971; suspension 859,129. Each one mesh with a single 8192 px photo texture (99.6 MB OBJ for V2).",
+          "interior": "n/a",
+          "engineBay": "Yes: phone photogrammetry of a real 1994 FD engine bay (RealityScan mobile)",
+          "stockBody": "n/a (scans of a real car)",
+          "originalityEvidence": "RealityScan mobile export names (shareModel.obj, tex_u1_v1_diffuse.jpg), a Volvo engine scanned by the same account, and a first-person description of the transmission (\"I have no idea\"). Looks like the uploader's own scans.",
+          "verdict": "needs-your-call",
+          "reason": "The only free, CC-BY engine-bay material of a real FD found. Scan meshes are not clean geometry: useful as modelling reference or a baked backdrop, not as the swappable engine bay. Includes Mazda part markings on the real car (not branding, but worth knowing).",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/1d85b66923244796916f510696bb5057",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"name\": \"realityscan-mobile\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/1d85b66923244796916f510696bb5057",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filepath\": \"shareModel.obj\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=lunchinthetree&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@lunchinthetree)",
+              "quote": "This is a stock 5 speed transmission from a 1993 Mazda RX-7 FD. Apparently this is a JDM transmission but I have no idea.",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=lunchinthetree&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@lunchinthetree)",
+              "quote": "Fd Rx7 Engine Bay | 8da6738349754d6b9394d6f980b0df29 | Free Standard",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-rxarslon-rx7",
+          "title": "Mazda rx7",
+          "url": "https://sketchfab.com/3d-models/mazda-rx7-0d3501c3da4e4c5abd413267a4633472",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/0d3501c3da4e4c5abd413267a4633472 + viewer metadata https://sketchfab.com/i/models/0d3501c3da4e4c5abd413267a4633472 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "Arslon.Aminboyv (@RxARSLON)",
+          "licence": "CC Attribution",
+          "noAi": "Uploader account is AI-restricted (userAiRestricted true)",
+          "polycount": "360,194 faces; 178,865 quads + 1,548 triangles; 8 materials",
+          "interior": "No (the description says so)",
+          "engineBay": "No sign",
+          "stockBody": "Unknown",
+          "originalityEvidence": "Uses realwallon's wheel texture set (rx-7_wheel_Base_Color.png etc.), the same 1,548 triangles and 8 materials, 1.3k fewer faces, and a source named \"1.fbx\".",
+          "verdict": "avoid",
+          "reason": "Derivative re-upload of realwallon's model; use the original instead.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/0d3501c3da4e4c5abd413267a4633472",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "rx-7_wheel_Base_Color.png",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "rx-7_wheel_Base_Color.png",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/0d3501c3da4e4c5abd413267a4633472",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"triangle\": 1548",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/45cb02e634ed477a9a04bb19813443f2",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"triangle\": 1548",
+              "accessed": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "id": "sf-cherkasov-tank",
+          "title": "mazda-rx-7 - TANK",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-tank-12af6a5d15d34dfab6b5ec5d8c7e0d4a",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/12af6a5d15d34dfab6b5ec5d8c7e0d4a + viewer metadata https://sketchfab.com/i/models/12af6a5d15d34dfab6b5ec5d8c7e0d4a + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "1,440,221 faces",
+          "interior": "n/a",
+          "engineBay": "n/a",
+          "stockBody": "No: an RX-7 turned into a tank",
+          "originalityEvidence": "Reuses realwallon's headlight textures (rx7_lights_Headlight_Glass_*).",
+          "verdict": "avoid",
+          "reason": "A joke tank conversion built on realwallon's model.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/12af6a5d15d34dfab6b5ec5d8c7e0d4a",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "rx7_lights_Headlight_Glass_BaseColor.png",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-lexyc16-copies",
+          "title": "Copies of Lexyc16's FD: saitoyang \"Mazda RX-7\" (43,577 faces) and the 37,112 to 37,114-face uploads by Anokino, Dan_man5000 and xybrrr",
+          "url": "https://sketchfab.com/3d-models/mazda-rx-7-600f981cd5974bf5be71b488c3cacc43",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/600f981cd5974bf5be71b488c3cacc43 + viewer metadata https://sketchfab.com/i/models/600f981cd5974bf5be71b488c3cacc43 + model page (curl) + comments and user APIs, fetched 2026-09-29. The other three: first run's search listing only [session scratch file] plus this run's fetch where it finished.",
+          "licence": "CC Attribution (as shown)",
+          "noAi": "The original (Lexyc16) has a NoAI clause; the copies don't show it",
+          "polycount": "saitoyang 43,577; Anokino 37,114; Dan_man5000 37,114; xybrrr 37,112",
+          "interior": "No",
+          "engineBay": "No",
+          "stockBody": "As Lexyc16's",
+          "originalityEvidence": "saitoyang's upload uses Lexyc16's texture files (frontlights_normal.png 425x307, tire.png 1600x1600) and a commenter says the topology is identical to Lexyc16's. Dan_man5000's and Anokino's uploads contain Lexyc16's own .blend (Sketchfab_2020_05_22_14_44_47.blend, 3,306,116 bytes, the same name and size as Lexyc16's source), and a commenter on Dan_man5000's says it was stolen from Lexyc16. xybrrr's is a Sketchfab glTF download (license.txt included) at 37,112 faces.",
+          "verdict": "avoid",
+          "reason": "Copies of Lexyc16's model; if wanted, use the original.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=600f981cd5974bf5be71b488c3cacc43",
+              "title": "Sketchfab comments API",
+              "quote": "The topology on this looks identical to @Lexyc16 's RX-7 model",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/600f981cd5974bf5be71b488c3cacc43",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "frontlights_normal.png",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/d35ff630df614771b82e7b2f59035b1e",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "frontlights_normal.png",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/comments?model=8238de83025749c0806179b87c3c5e77",
+              "title": "Sketchfab comments API",
+              "quote": "bruh you obviously stole this model from Lexyc16",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/8238de83025749c0806179b87c3c5e77",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "mazda-rx-7-car.zip/source/Sketchfab_2020_05_22_14_44_47.blend",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-1993-cluster",
+          "title": "\"1993 Mazda RX-7\" 203,266-face cluster: Ddiaz Design (source) and CC-BY copies by tangwang920 and homicivan53",
+          "url": "https://sketchfab.com/3d-models/1993-mazda-rx-7-0921f5c673cf45cdb737ee999f6d213e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new (the \"203k\" cluster named in part3a.md section 3)",
+          "opened": true,
+          "openedHow": "Ddiaz original: Data API search of Ddiaz's uploads (sf-search-ddiaz-rx7.txt). Copies 8b828b5c888c43a1895228d48fe50c97 (tangwang920) and 05ff02c130e442acba2557b8996c30b4 (homicivan53): Sketchfab Data API https://api.sketchfab.com/v3/models/<uid> + viewer metadata https://sketchfab.com/i/models/<uid> + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "members": [
+            {
+              "url": "https://sketchfab.com/3d-models/1993-mazda-rx-7-0921f5c673cf45cdb737ee999f6d213e",
+              "user": "ddiaz-design",
+              "licence": "CC Attribution-NonCommercial-ShareAlike",
+              "faces": 203266
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/1993-mazda-rx-7-8b828b5c888c43a1895228d48fe50c97",
+              "user": "tangwang920",
+              "licence": "CC Attribution",
+              "faces": 203266
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/1993-mazda-rx-7-05ff02c130e442acba2557b8996c30b4",
+              "user": "homicivan53",
+              "licence": "CC Attribution",
+              "faces": 203266
+            }
+          ],
+          "licence": "Source BY-NC-SA; copies relabelled CC-BY",
+          "noAi": false,
+          "polycount": "203,266 triangles / 120,143 vertices; 24 materials; textures 512 px and below",
+          "interior": "Game-level (Interior_C, InteriorA textures)",
+          "engineBay": "Game-level engine textures (EngineA)",
+          "stockBody": "Stock 1993 by name but with \"TNR\" (Tuner) rims: wheels_TNRRims_92A18...",
+          "originalityEvidence": "Ddiaz's description: \"Based on a CSR2 3d model\". Both copies carry identical 203,266/120,143 counts, identical 5,819,033-byte archives, a Sketchfab-generated license.txt (they are downloads of another Sketchfab model) and CSR2-style texture names (Mazda_1Mazda_RX7TNR0_1993BadgeA_Material1_*).",
+          "verdict": "avoid",
+          "reason": "CSR2 game-model derivative; the source is BY-NC-SA and the CC-BY copies are relabelled re-uploads.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "0921f5c673cf45cdb737ee999f6d213e | 1993 Mazda RX-7 | ddiaz-design | CC Attribution-NonCommercial-ShareAlike | 203266",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/8b828b5c888c43a1895228d48fe50c97",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filepath\": \"license.txt\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/8b828b5c888c43a1895228d48fe50c97",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"archiveSize\": 5819033",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/05ff02c130e442acba2557b8996c30b4",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"archiveSize\": 5819033",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/8b828b5c888c43a1895228d48fe50c97",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "Mazda_1Mazda_RX7TNR0_1993BadgeA_Material1_baseColor.png",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-spirit-r-53k-cluster",
+          "title": "Spirit R Type A 53.8k-face cluster: CC-BY copies of Ddiaz's NFS Heat-based model (tangwang920, vecarz/heynic, homicivan53, Xiang-BX, pmadhav027)",
+          "url": "https://sketchfab.com/3d-models/2002-mazda-rx-7-spirit-r-type-a-fd-adb1f97cf09341178c5afcc72f9362c6",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new (the \"53.8k\" cluster named in part3a.md section 3)",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/<uid> + viewer metadata https://sketchfab.com/i/models/<uid> + model page (curl) + comments and user APIs for adb1f97cf0, 57ef6f2e29, c739f6cd26, 06de65977a, 7f75a4065c; fetched 2026-09-29",
+          "members": [
+            {
+              "uid": "adb1f97cf09341178c5afcc72f9362c6",
+              "user": "tangwang920",
+              "faces": 53817
+            },
+            {
+              "uid": "57ef6f2e2980487080b84e0b16979978",
+              "user": "heynic (vecarz)",
+              "faces": 53813
+            },
+            {
+              "uid": "c739f6cd26a8455d92a26c45dd431440",
+              "user": "homicivan53",
+              "faces": 53813
+            },
+            {
+              "uid": "06de65977a514e5abe3535c0bd8c030a",
+              "user": "Xiang-BX",
+              "faces": 53813
+            },
+            {
+              "uid": "7f75a4065c2d4dd1bc19a507576fc574",
+              "user": "pmadhav027",
+              "faces": 53813
+            }
+          ],
+          "licence": "CC Attribution on all copies; the source is BY-NC-SA",
+          "noAi": false,
+          "polycount": "53,813 to 53,817 triangles / 36,302 vertices",
+          "interior": "Game-level",
+          "engineBay": "Game-level",
+          "stockBody": "Spirit R Type A",
+          "originalityEvidence": "tangwang920's source file FINAL_MODEL_02.zip is 11,362,068 bytes, exactly the archive size of Ddiaz's upload; vecarz credits Ddiaz Design; all share Ddiaz's vertex count (36,302).",
+          "verdict": "avoid",
+          "reason": "Relabelled re-uploads of a BY-NC-SA, NFS Heat-derived model.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/adb1f97cf09341178c5afcc72f9362c6",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"filesize\": 11362068",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/i/models/60b2b5e9f5ce45cbb41832793d0e0e68",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"archiveSize\": 11362068",
+              "accessed": "2026-09-27"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models/57ef6f2e2980487080b84e0b16979978",
+              "title": "Sketchfab Data API model record",
+              "quote": "Credit [Ddiaz Design]",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-other-fd-copies",
+          "title": "Other CC-BY copies of Ddiaz's CSR2-based FD kits: tangwang920 \"1997-mazda-rx-7\" (VeilSide Fortune), Eikojonwa R Magic Armor, DRIVER-FIRE Julius 2F2F",
+          "url": "https://sketchfab.com/3d-models/1997-mazda-rx-7-454df208081d41c5b7103efedf122fd8",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/454df208081d41c5b7103efedf122fd8 + viewer metadata https://sketchfab.com/i/models/454df208081d41c5b7103efedf122fd8 + model page (curl) + comments and user APIs, fetched 2026-09-29; Eikojonwa copy is its own entry (sf-eikojonwa-rmagic); DRIVER-FIRE Julius by face-count match in the search listing only",
+          "licence": "CC Attribution (copies); Ddiaz sources BY-NC-SA",
+          "noAi": false,
+          "polycount": "VeilSide Fortune 212,969 (= Ddiaz 7db6bd58); R Magic 244,498 (= Ddiaz 957051ad); Julius 205,426 (= Ddiaz 292a3ae5)",
+          "interior": "Game-level",
+          "engineBay": "Game-level",
+          "stockBody": "No: aero kits",
+          "originalityEvidence": "tangwang920's \"1997-mazda-rx-7\" was uploaded from a file named \"1997-veilside-fortune-mazda-rx-7-fd-tokyo-drift\" with Ddiaz's FINAL_MODEL_Vel.zip; the face counts equal Ddiaz's CSR2-based uploads.",
+          "verdict": "avoid",
+          "reason": "Relabelled game-model derivatives, and aero-kit bodies. Note the misleading title: \"1997-mazda-rx-7\" is the VeilSide Fortune kit.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/454df208081d41c5b7103efedf122fd8",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"1997-veilside-fortune-mazda-rx-7-fd-tokyo-drift\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "1997 VeilSide Fortune Mazda RX-7 FD Tokyo Drift | ddiaz-design | CC Attribution-NonCommercial-ShareAlike | 212969",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-ddiaz-type-rs-2001",
+          "title": "2001 Mazda RX-7 Series 8 Type RS (Ddiaz Design)",
+          "url": "https://sketchfab.com/3d-models/2001-mazda-rx-7-series-8-type-rs-def52c4dada6469eb8ff9531a02c894e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Data API search of Ddiaz's uploads only (sf-search-ddiaz-rx7.txt); the listing itself was not fetched.",
+          "licence": "CC Attribution-NonCommercial-ShareAlike",
+          "noAi": false,
+          "polycount": "286,891 faces",
+          "interior": "Not checked",
+          "engineBay": "Not checked",
+          "stockBody": "Stock Type RS by name",
+          "originalityEvidence": "Description: \"Based on a Racing Master 3d model\".",
+          "verdict": "avoid",
+          "reason": "The most stock-looking FD in Ddiaz's set, but BY-NC-SA and derived from the Racing Master game. Watch for CC-BY copies of it (none seen in the searches).",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "Based on a Racing Master 3d model",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-chrissantana-1993",
+          "title": "1993 Mazda RX-7 (chrissantana6779)",
+          "url": "https://sketchfab.com/3d-models/1993-mazda-rx-7-f1a30e5bcbdf4cce8edef385964a713e",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/f1a30e5bcbdf4cce8edef385964a713e + viewer metadata https://sketchfab.com/i/models/f1a30e5bcbdf4cce8edef385964a713e + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "200,475 faces; 98,558 quads + 442 triangles; 38 materials; no textures",
+          "interior": "Unknown",
+          "engineBay": "Unknown",
+          "stockBody": "Unknown",
+          "originalityEvidence": "No making-of, a fictional delivery story as description, and the same uploader's \"1993 Mazda RX-7\" FC has 83,430 faces, exactly Ddiaz's NFS Mobile-based \"1989 Mazda Savanna RX-7 Infini III (FC3S)\". Source of this FD mesh not identified.",
+          "verdict": "avoid",
+          "reason": "Uploader re-uploads game-derived models; originality of this one can't be shown.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=chrissantana6779&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@chrissantana6779)",
+              "quote": "1993 Mazda RX-7 | dc0be668802845b4b90f6815e5f8cb88 | CC Attribution | 83430",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/search?type=models&q=rx-7&user=ddiaz-design&count=24",
+              "title": "Sketchfab Data API search of Ddiaz Design's RX-7 uploads",
+              "quote": "1989 Mazda Savanna RX-7 Infini III (FC3S) | ddiaz-design | CC Attribution-NonCommercial-ShareAlike | 83430",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-zoneid-rx7",
+          "title": "Mazda RX-7 (ZoneID)",
+          "url": "https://sketchfab.com/3d-models/a451de591ae0418d88ad2fafe377a759",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/a451de591ae0418d88ad2fafe377a759 + viewer metadata https://sketchfab.com/i/models/a451de591ae0418d88ad2fafe377a759 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "ZoneID (\"developer mod games\")",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "218,677 faces; 60 materials",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "SketchUp default material textures (Carpet_Plush_Charcoal, Formica_Blue, Blacktop_Old_01), which points to a 3D Warehouse / SketchUp origin; uploader describes making game mods. Author not shown.",
+          "verdict": "avoid",
+          "reason": "Origin unknown and probably not the uploader's model.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/a451de591ae0418d88ad2fafe377a759",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "Carpet_Plush_Charcoal.jpg",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=ZoneID&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@ZoneID)",
+              "quote": "I making 3d model and developer mod games",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-davidholiday-rx7",
+          "title": "Mazda RX7 (David_Holiday)",
+          "url": "https://sketchfab.com/3d-models/639d1352be0a4e0e8395313aa069f3e6",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/639d1352be0a4e0e8395313aa069f3e6 + viewer metadata https://sketchfab.com/i/models/639d1352be0a4e0e8395313aa069f3e6 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "David_Holiday (Roblox developer, 288+ uploads)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "211,184 triangles; 62 materials; no UVs",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "Source folder \"29871_Mazda_RX7\" (a numbered download from another site); unrelated description; the uploader posts hundreds of cars from many brands, some tagged LSPDFR.",
+          "verdict": "avoid",
+          "reason": "Re-upload by a non-author.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/639d1352be0a4e0e8395313aa069f3e6",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "29871_Mazda_RX7/29871_Mazda_RX7.obj",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://api.sketchfab.com/v3/models?user=David_Holiday&sort_by=-publishedAt",
+              "title": "Sketchfab user profile and upload list (@David_Holiday)",
+              "quote": "I am a Roblox Developer",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-uzbeksupra-rx7",
+          "title": "Mazda rx-7 (uzbek_supra)",
+          "url": "https://sketchfab.com/3d-models/53cf53c9790e4067af1df80d5f68b71b",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/53cf53c9790e4067af1df80d5f68b71b + viewer metadata https://sketchfab.com/i/models/53cf53c9790e4067af1df80d5f68b71b + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "uzb_rx7 (@uzbek_supra)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "145,360 triangles",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "Uploaded file is \"mazda_rx-7_fc3s_akagis_white_comet_remake\", i.e. myedsu's FC3S downloaded and re-uploaded. Not an FD.",
+          "verdict": "avoid",
+          "reason": "Re-upload, and an FC not an FD.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/53cf53c9790e4067af1df80d5f68b71b",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"mazda_rx-7_fc3s_akagis_white_comet_remake\"",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-paliompa-inspiration",
+          "title": "Mazda RX7 Inspiration",
+          "url": "https://sketchfab.com/3d-models/dfa077761d8e46fabd9ace14ea4d5ced",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/dfa077761d8e46fabd9ace14ea4d5ced + viewer metadata https://sketchfab.com/i/models/dfa077761d8e46fabd9ace14ea4d5ced + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "paliompa",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "132,778 triangles; 3 materials",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "Described as a design \"inspired by\" the RX-7 with Mercedes SLR details, not a replica (2015).",
+          "verdict": "avoid",
+          "reason": "Not an FD3S replica.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/3d-models/dfa077761d8e46fabd9ace14ea4d5ced",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "inspired by the legendary Mazda RX 7",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-dev365th-rx7",
+          "title": "best detail RX7",
+          "url": "https://sketchfab.com/3d-models/c3228c21c8d343e5982b4644b7a044ba",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/c3228c21c8d343e5982b4644b7a044ba + viewer metadata https://sketchfab.com/i/models/c3228c21c8d343e5982b4644b7a044ba + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "Dev365TH",
+          "licence": "CC Attribution with NoAI",
+          "noAi": "see quotes",
+          "polycount": "131,137 faces",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "Tagged custom, tuner, widebodykits and noai; rear diffuser credited from GrabCAD (GrabCAD's own licence is non-commercial).",
+          "verdict": "avoid",
+          "reason": "Custom widebody, not stock; includes a third-party GrabCAD part.",
+          "quotes": [
+            {
+              "url": "https://api.sketchfab.com/v3/models/c3228c21c8d343e5982b4644b7a044ba",
+              "title": "Sketchfab Data API model record",
+              "quote": "\"name\": \"widebodykits\"",
+              "accessed": "2026-09-29"
+            },
+            {
+              "url": "https://sketchfab.com/3d-models/c3228c21c8d343e5982b4644b7a044ba",
+              "title": "Sketchfab model page (visible text)",
+              "quote": "For rear diffuser https://grabcad.com/library/rc-hpi-rear-diffuser-1",
+              "accessed": "2026-09-29"
+            }
+          ]
+        },
+        {
+          "id": "sf-supercarmodels-spirit-r",
+          "title": "2002 Mazda RX-7 Spirit R Type-A (FD3S) (supercarmodels)",
+          "url": "https://sketchfab.com/3d-models/0fb3634898bf42049d7017dc79f847c5",
+          "marketplace": "Sketchfab",
+          "listInOldFile": "new",
+          "opened": true,
+          "openedHow": "Sketchfab Data API https://api.sketchfab.com/v3/models/0fb3634898bf42049d7017dc79f847c5 + viewer metadata https://sketchfab.com/i/models/0fb3634898bf42049d7017dc79f847c5 + model page (curl) + comments and user APIs, fetched 2026-09-29",
+          "author": "DisneyCars (@supercarmodels)",
+          "licence": "CC Attribution",
+          "noAi": false,
+          "polycount": "34,394 triangles",
+          "interior": "Not relevant (rejected)",
+          "engineBay": "Not relevant (rejected)",
+          "stockBody": "See originality",
+          "originalityEvidence": "Uploaded file is \"toon_japan__mazda_rx-7\": LePointBAT's stylised \"TOON Japan : Mazda RX-7\" (same 34,394 faces) re-uploaded under a Spirit R title.",
+          "verdict": "avoid",
+          "reason": "Re-upload of a toon-style model.",
+          "quotes": [
+            {
+              "url": "https://sketchfab.com/i/models/0fb3634898bf42049d7017dc79f847c5",
+              "title": "Sketchfab viewer metadata (source-file and texture names)",
+              "quote": "\"originalFileName\": \"toon_japan__mazda_rx-7\"",
+              "accessed": "2026-09-29"
+            }
+          ]
+        }
+      ],
+      "consideredNotListed": [
+        {
+          "url": "https://sketchfab.com/3d-models/a7e24facef9045ada3d8d2c0178ace16",
+          "who": "arjuntripathi2k10",
+          "licence": "CC Attribution",
+          "faces": 1174801,
+          "why": "VeilSide Fortune body kit (title), not stock"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/c7a2d80e92a545f9ac757e8b338f05b7",
+          "who": "DRIVER-FIRE",
+          "licence": "CC Attribution",
+          "faces": 1541122,
+          "why": "\"Pandem RX7\" widebody; the same account re-uploads Ddiaz's Julius 2F2F (205,426 faces)"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/25c8f83edab0404db891436c537d7087",
+          "who": "VTDAT23",
+          "licence": "CC Attribution",
+          "faces": 552873,
+          "why": "VeilSide Fortune (Tokyo Drift), not stock"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/5671247f77ed42d6afb4b1270d9e6282",
+          "who": "huntrixhalo; also B4_Cobra de99c52f66",
+          "licence": "CC Attribution",
+          "faces": 212953,
+          "why": "VeilSide Fortune, lowercase-underscore file-style titles typical of re-uploads, 16 faces off Ddiaz's 212,969"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/44dda9608b314f07855e73bb83feea3d",
+          "who": "B4_Cobra (3 uploads at 210,523)",
+          "licence": "CC Attribution",
+          "faces": 210523,
+          "why": "VeilSide C-II, close to Ddiaz's CSR2-based 210,535; B4_Cobra also posts \"nfs_the_run_mazda_rx-7_rz\""
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/03df5d860f0d4ddba13674347a56716f",
+          "who": "reniblox199kk",
+          "licence": "CC Attribution",
+          "faces": 621135,
+          "why": "RE Amemiya aero build, not stock"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/69186dd11a93470994c2fa81370841a2",
+          "who": "Dakta.Grower.Nzl",
+          "licence": "CC Attribution",
+          "faces": 461099,
+          "why": "\"Rx7+wide+body\"; the same account also has a re-uploaded-looking \"13b-rew__mazda_rx7_car_engine\" (lowercase file-style title)"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/b0362bc7872f4d089057067e0517ec79",
+          "who": "orgknighthvrblx",
+          "licence": "CC Attribution",
+          "faces": 96682,
+          "why": "Widebody body-only shell"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/ae69dfff13cb4712aa10058c6849559e",
+          "who": "hernany11",
+          "licence": "CC Attribution",
+          "faces": 56868,
+          "why": "Rocket Bunny kit, mid-poly"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/41646f87ec264fe9a018b018daa2d222",
+          "who": "J6unh and 3 others at 99,488 faces (Preview2SEBIT69, thompson.aidan, giuffridamassimino)",
+          "licence": "CC Attribution",
+          "faces": 99488,
+          "why": "Han's VeilSide RX-7 (Tokyo Drift); four uploads with identical counts = re-upload cluster"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/eea5a74ecb184954b79375fbd1bed55e",
+          "who": "CARS2024; also ruizruizharry fef78355d9, faizmikey333 9eeebc915a (all 32,063)",
+          "licence": "CC Attribution",
+          "faces": 32063,
+          "why": "Textures rx1_lights, grills.tga, disc, the same naming as the Grid AutoSport rip (rx2_*, grills.tga, disc); low-poly"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/4a39453a3d874bb4a9f895cf53afd37c",
+          "who": "Tyler_Dave",
+          "licence": "CC Attribution",
+          "faces": 23626,
+          "why": "GT300 race car, low-poly"
+        },
+        {
+          "url": "https://blendswap.com/blend/6833",
+          "who": "riccosutan (Blend Swap)",
+          "licence": "CC-BY",
+          "faces": null,
+          "why": "The only RX-7 on Blend Swap: \"RX 7 Veilside\", Blender 2.6x. Body kit, not stock. Blend Swap has no fd3s results."
+        },
+        {
+          "url": "https://sketchfab.com (many, see search summaries)",
+          "who": "various",
+          "licence": "CC Attribution",
+          "faces": "< 25,000",
+          "why": "Low-poly, toon or stylised FDs (LePointBAT TOON Japan, ponter, themodel_finder, ynesolefru, ehabjundi5, phenkykurs, LowPolyRacing, MenOfMena 14,940, Streetsraker 19,000-21,370, ZENTA 7,498): far below the detail target"
+        },
+        {
+          "url": "https://sketchfab.com (see search summaries)",
+          "who": "niev / Res1n / heynic",
+          "licence": "CC Attribution",
+          "faces": "various",
+          "why": "RX-7 SA/FB and FC re-uploads (1,573,078 and 786,219-face clusters): wrong generation and re-uploads"
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/097379e3c0c44c26a3204fe5c4a9d718",
+          "who": "fritts",
+          "licence": "CC Attribution",
+          "faces": 768774,
+          "why": "Engine part, not a car: \"Low res version of the 13b-rew front cover\" (STL, no UVs). Possibly useful for the 13B-REW engine item later."
+        },
+        {
+          "url": "https://sketchfab.com/3d-models/84954ec7097c44c6851d02f0d6819e2c",
+          "who": "racingcarz",
+          "licence": "CC Attribution",
+          "faces": 14683,
+          "why": "Low-poly (14,683 triangles); file \"Mazda RX-7 3D Model (2001)\""
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    "www.cgtrader.com (4 listings, 1 try each, 2026-09-29): HTTP 202 with an empty body (WAF challenge)",
+    "www.turbosquid.com/FullPreview/1715974 (1 try): HTTP 403 DataDome device check"
+  ],
+  "stoppedAt": [],
+  "notFound": [
+    "CGTrader listings (Jackboys, FD Turbo 1995 paid and free, FD Full Ready, Abflug Anubis, low-poly FD3S): could not be opened (WAF challenge); price, polycount and NoAI not re-verified.",
+    "TurboSquid 1715974 (BN Sport) and the Pandem V3 listing: could not be opened (DataDome).",
+    "No stock-bodied FD3S with a modelled interior AND engine bay under CC0 or CC-BY was found. The only interior-equipped stock-shaped candidates are game derivatives (Ddiaz, Car2022, adrianaflak09) or paid (Blendkit Dimensionalworks, CGTrader Jackboys), none of which passes rule 5 or the web-delivery check.",
+    "Body, wheels and cabin of every candidate were judged from text only; no image was viewed. realwallon's and hidan1199's bodies must be checked by the owner in the Sketchfab viewer.",
+    "Blendkit asset page for Dimensionalworks' RX-7 was not opened (the search API record was used); downloading needs a logged-in paid account, which was not attempted.",
+    "WebSearch was not used, so non-Sketchfab free sources other than Blend Swap and Blendkit (e.g. Printables, CadCrowd, free3d) were not searched this run."
+  ]
+}

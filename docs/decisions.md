@@ -332,3 +332,54 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Why:** In part 2 a research agent clicked "Accept" on the Nissan Europe newsroom's download agreement to open the 350Z spec sheets. Accepting terms is an agreement made on the owner's behalf, so it's the owner's call.
 - **Scope:** From 2026-09-27 on. The part 2 facts cited from those spec sheets are unchanged, and no files were re-hosted. The Blend Swap 350Z download probably needs an account (its download link refused an anonymous request), so it waits for the owner.
 - **Alternatives:** Let sessions accept read-only click-through terms and disclose them afterwards, as happened in part 2.
+
+## 2026-09-27 (Phase 1, part 3a: RX-7 FD3S, 13B-REW, 20B-REW)
+
+### Rotary engines get their own schema shape
+
+- **Decision:** `EngineSchema` is now a union on `layout`. Piston engines are unchanged. A rotary (`layout: "rotary"`) has:
+  - `rotors` instead of `cylinders`;
+  - `rotor`: the generating radius R, eccentricity e, rotor housing width B and the maker's chamber displacement, instead of bore and stroke;
+  - optional `ports`: each intake port set (primary, secondary, auxiliary; side or peripheral) and the exhaust port, with the maker's port timing;
+  - `sparkPlugsPerRotor`, and `materials` for the rotor housings, side housings and rotors instead of block and head;
+  - rotary `internals`: eccentric shaft, apex seals and their width, and reported limits whose components are rotary parts (apex seals, side seals, rotor housing, eccentric shaft, rotors, rotor bearings, stationary gear, coolant seals, oil pump).
+
+  Rotary variants have no `cams` or `variableValveTiming`. Every variant may now carry `secondaryInjectorFlow` for staged fuelling (the 13B-REW's primary and secondary injectors).
+
+- **Checks added:** validate-data rejects a rotary whose displacement isn't rotors x chamber displacement (so neither the doubled "piston-equivalent" figure nor a tax-class figure can be entered), a chamber displacement more than 1.5 % away from 3·√3·R·e·B, a firing order that doesn't list every rotor once (rotaries used to be exempt), and secondary injectors without primaries.
+- **Why:** A Wankel has no bore, stroke, valves or cams. Forcing them in would be invented data, and leaving them optional for everyone would weaken the piston checks. The old schema planned to reuse `cylinders` for rotors; a separate `rotors` field means Phase 2 can't mistake a two-rotor 13B for a two-cylinder four-stroke.
+- **Alternatives:** One object with optional piston fields and an optional rotary block (weaker typing, and every consumer has to guess which fields exist). Reusing `cylinders` for rotors (the original plan).
+
+### Trims can record seats
+
+- **Decision:** An optional, sourced `seats` on trims, used where grades of one body differ (the 2-seat Type RZ and Spirit R Type A against the 2+2 grades).
+- **Why:** The Spirit R Type A and Type B differ in seating and weight and nothing else; without the field the two trims look identical apart from the note. It also matters for the cabin view (passenger and rear seats) and weight distribution.
+
+## 2026-09-29 (Phase 1, part 3a, continued)
+
+### Rotary displacement and cycle convention
+
+- **Decision:**
+  - **Displacement** is stored as Mazda states it: rotors × the swept volume of one working chamber. 13B-REW: 654 × 2 = 1,308 cc; 20B-REW: 654 × 3 = 1,962 cc. No doubled "piston-equivalent" figure and no tax or racing-class figure is stored (validate-data rejects them).
+  - **rpm** is eccentric-shaft rpm everywhere: ratings, redline, rev limit, torque curves and the simulation.
+  - **Cycle:** the eccentric shaft turns three times per rotor turn, and each of a rotor's three chambers completes one intake-compression-power-exhaust cycle per rotor turn. So each rotor fires once, and draws in one chamber's volume, per shaft turn. A rotary therefore breathes its whole quoted displacement per shaft turn; a four-stroke piston engine breathes half of its displacement per crank turn. At the same rpm a 13B-REW flows like a 2.6-litre four-stroke at the same volumetric efficiency. This lives in `src/data/displacement.ts` (`intakeVolumePerRevCc`, `firingsPerRev`), which Phase 2's airflow model and the sound synthesis must use.
+  - **Rotor geometry** is stored as Mazda's training material prints it: generating radius R = 105 mm, eccentricity e = 15 mm, rotor housing width b = 80 mm, and the check is V = 3·√3·R·e·b = 654.7 cc against Mazda's 654 cc. Yamamoto's book lists R = 102 mm with a "parallel transfer" a = 3 mm for the same 654 cc chamber: 102 mm is the radius of the basic trochoid, and the real housing curve is moved outward by a (the apex-seal tip radius), so the effective radius is 105 mm. Using 102 mm would give 636 cc, 3 % short. The data file notes both.
+- **Sources:**
+  - Mazda Motors (Deutschland), _RX-7 FC und FD Schulungshandbuch_ (dealer training handbook), archive.org item `rx-7-kundendienstschule-egi`, page C-6: "Beispiel: RX-7 (FC und FD) 13B Motor e = 1,5 cm R = 10,5 cm b = 8,0 cm … = 654 cm³"; and the operating-principle page: "daß der Rotor eine komplette Umdrehung (360°) durchführt, während sich die Exzenterwelle drei Umdrehungen (1.080°) dreht … Somit ergibt sich ein Arbeitstakt auf eine Exzenterwellenumdrehung pro Rotor" (the rotor turns once while the eccentric shaft turns three times … so one power stroke per shaft turn per rotor).
+  - Kenichi Yamamoto (Mazda), _Rotary Engine_ (1981), foxed.ca scan: book p. 7 ("the rotor rotates once and the output shaft three times"; "one explosion while the output shaft rotates once"), p. 12 (the parallel trochoid, moved outward by a), p. 15 (stroke volume V_H = 3√3·e·R·b, the difference between the chamber's largest and smallest volume) and Table 2.1, p. 17 (654 cc: e 15.0, R 102, a 3, b 80 mm).
+  - Mazda, _1993 RX-7 Service Highlights_ (US technician training), foxed.ca scan: F-34 ("ONE ROTATION OF ROTOR (THREE ROTATION OF ECCENTRIC SHAFT)", with each chamber running intake-compression-combustion-exhaust once), F-33 (the engine-speed signal comes from the eccentric-shaft pulley, 12 pulses per shaft turn) and F-38 (fuel cut above 8,100 rpm MT, 7,500 rpm AT).
+  - Mazda 1993 US workshop manual, TD-2: "Displacement 654 {40.0} × 2".
+- **Not a Mazda statement:** no page says in so many words that the tachometer reads eccentric-shaft rpm. It follows from the engine-speed sensor sitting on the eccentric-shaft pulley and from every Mazda rating and fuel-cut figure being given as engine speed.
+- **Equivalences, recorded but not used:** the FIA treats a Wankel as 1.8 × its swept chamber volume (Appendix J, Article 252, 2025 edition, art. 3.3), and Japanese car tax as 1.5 × the registered 654 × rotors figure (Hiroshima and Wakayama prefecture tax pages). These are class rules, not physics, so the simulation ignores them.
+- **Alternatives:** Store the piston-equivalent 2.6 L figure (would double-count when Phase 2 applies the rotary cycle, and matches no Mazda document). Store 1.3 L and treat the 13B as a two-cylinder four-stroke (halves its airflow: the error the build prompt warns about). Store R = 102 mm (the basic trochoid, which fails Mazda's own 654 cc check).
+
+### Unknown RX-7 values filled from a sister trim, not invented
+
+- **Decision:** Where a trim's own sources print no final drive, weight, tyres or differential type but the trim is documented as a limited edition or market version of another trim, the value is taken from that trim and marked `estimated`, with the method naming the trim and its sources. Cases: the Type R Bathurst X and Type RB Bathurst X final drives, the 1997 Type RS-R final drive (Mazda names the Type RS 5MT as its base), the US R1/R2 weights (Mazda prints one 5MT weight per model year), the UK and Australian final drives and tyres (European figures), and the Torsen type on JDM grades whose pages only say "LSD". Trims with no weight and no gearing at all (the 1992 and 1993 Type RZ, the 1996-98 Australian car, and all Canadian cars) are left out and listed in the file's `$comment` and in `docs/progress.md`.
+- **Why:** The schema needs these fields, and the gaps are small and bounded: limited editions share their base car's drivetrain. Inventing a Type RZ weight is not bounded that way.
+- **Alternatives:** Leave those trims out too (loses the limited editions people actually look for). Fill them silently (breaks rule 2).
+
+### Periods compare at shared precision
+
+- **Decision:** A period like `1995-04` to `1995` is valid: `PeriodSchema` now compares the two ends only as far as both are precise, as the car-level period check already did.
+- **Why:** The Australian RX-7 SP's sources give a first month (April 1995) but only an end year. Padding the end to `1995-12` would invent a month.

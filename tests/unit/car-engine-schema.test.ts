@@ -58,6 +58,68 @@ function variant(over: Record<string, unknown> = {}) {
   };
 }
 
+/** A 13B-REW-like rotary: rotors and ports instead of cylinders and valves. */
+function rotary(over: Record<string, unknown> = {}) {
+  const deg = (value: number) => v(value, 'deg');
+  return {
+    id: '13b-rew',
+    code: '13B-REW',
+    manufacturer: 'Mazda',
+    family: '13B',
+    role: 'stock-only',
+    layout: 'rotary',
+    rotors: 2,
+    displacement: v(1308, 'cc'),
+    rotor: {
+      generatingRadius: v(105, 'mm'),
+      eccentricity: v(15, 'mm'),
+      width: v(80, 'mm'),
+      chamberDisplacement: v(654, 'cc'),
+    },
+    ports: {
+      intake: [
+        {
+          name: 'primary',
+          location: v('side'),
+          opens: { ref: 'BTDC', angle: deg(45) },
+          closes: { ref: 'ABDC', angle: deg(50) },
+        },
+      ],
+      exhaust: {
+        location: v('peripheral'),
+        opens: { ref: 'BBDC', angle: deg(75) },
+        closes: { ref: 'ATDC', angle: deg(48) },
+      },
+    },
+    sparkPlugsPerRotor: v(2),
+    firingOrder: v([1, 2]),
+    fuelInjection: v('port'),
+    materials: {
+      rotorHousing: v('aluminium'),
+      sideHousings: v('cast-iron'),
+      rotors: v('cast-iron'),
+    },
+    variants: [rotaryVariant()],
+    ...over,
+  };
+}
+
+function rotaryVariant(over: Record<string, unknown> = {}) {
+  const { variableValveTiming: _vvt, ...pistonOnlyRemoved } = variant();
+  return {
+    ...pistonOnlyRemoved,
+    id: 'fd3s-jdm',
+    name: 'FD3S',
+    fittedTo: ['FD3S'],
+    compressionRatio: v(9.0),
+    induction: v('twin-turbo-sequential'),
+    turbos: [{ model: { value: 'Example HT12', ...one }, count: 2 }],
+    injectorFlow: v(550, 'cc/min'),
+    secondaryInjectorFlow: v(850, 'cc/min'),
+    ...over,
+  };
+}
+
 function car(over: Record<string, unknown> = {}) {
   return {
     id: 'nissan-silvia-s15',
@@ -188,6 +250,69 @@ describe('EngineSchema', () => {
   });
 });
 
+describe('EngineSchema: rotaries', () => {
+  it('accepts a rotary with rotor geometry, ports and staged injectors', () => {
+    expect(messages(EngineSchema.safeParse(rotary()))).toBe('');
+  });
+
+  it('keeps piston and rotary fields apart', () => {
+    expect(messages(EngineSchema.safeParse(rotary({ bore: v(86, 'mm') })))).toMatch(
+      /Unrecognized key/,
+    );
+    expect(messages(EngineSchema.safeParse(engine({ rotors: 2 })))).toMatch(/Unrecognized key/);
+    const withCams = rotary({
+      variants: [rotaryVariant({ variableValveTiming: v('none') })],
+    });
+    expect(messages(EngineSchema.safeParse(withCams))).toMatch(/Unrecognized key/);
+  });
+
+  it("stores the maker's displacement, not a doubled or tax-class figure", () => {
+    expect(messages(EngineSchema.safeParse(rotary({ displacement: v(2616, 'cc') })))).toMatch(
+      /rotors x chamber displacement/,
+    );
+    expect(messages(EngineSchema.safeParse(rotary({ displacement: v(1962, 'cc') })))).toMatch(
+      /rotors x chamber displacement/,
+    );
+  });
+
+  it('checks the chamber displacement against 3·√3·R·e·B', () => {
+    const rotor = { ...rotary().rotor, eccentricity: v(17.5, 'mm') };
+    expect(messages(EngineSchema.safeParse(rotary({ rotor })))).toMatch(/3·√3·R·e·B/);
+  });
+
+  it('checks the firing order lists every rotor once', () => {
+    expect(messages(EngineSchema.safeParse(rotary({ firingOrder: v([1, 1]) })))).toMatch(
+      /list rotors 1-2 once each/,
+    );
+  });
+
+  it('needs the primary injectors when there are secondaries', () => {
+    const variants = [rotaryVariant({ injectorFlow: undefined })];
+    expect(messages(EngineSchema.safeParse(rotary({ variants })))).toMatch(/primary injector/);
+  });
+
+  it('requires swap hardware on a launch-swap rotary and rotary limit components', () => {
+    expect(messages(EngineSchema.safeParse(rotary({ role: 'launch-swap' })))).toMatch(
+      /`internals`/,
+    );
+    const limit = (component: string) => ({
+      component,
+      quantity: 'wheel-power',
+      value: v(400, 'hp'),
+      context: 'Tuner guidance, pump fuel.',
+    });
+    const internals = (component: string) => ({
+      eccentricShaft: v('forged'),
+      apexSeals: v('two-piece cast iron'),
+      reportedLimits: [limit(component)],
+    });
+    expect(messages(EngineSchema.safeParse(rotary({ internals: internals('apex-seals') })))).toBe(
+      '',
+    );
+    expect(EngineSchema.safeParse(rotary({ internals: internals('rods') })).success).toBe(false);
+  });
+});
+
 describe('CarSchema', () => {
   it('accepts a complete car', () => {
     expect(messages(CarSchema.safeParse(car()))).toBe('');
@@ -217,6 +342,18 @@ describe('CarSchema', () => {
     expect(messages(r)).toBe('');
   });
 
+  it('compares a period’s ends at the precision both share', () => {
+    // RX-7 SP: sources give April 1995 as the start but only the year it ended.
+    const ok = CarSchema.safeParse(
+      car({ trims: [trim({ period: v({ from: '1999-04', to: '1999' }) })] }),
+    );
+    expect(messages(ok)).toBe('');
+    const bad = CarSchema.safeParse(
+      car({ trims: [trim({ period: v({ from: '2000-04', to: '1999' }) })] }),
+    );
+    expect(messages(bad)).toMatch(/after/);
+  });
+
   it('accepts automated-manual gearboxes, wagons and speed-sensing clutch LSDs', () => {
     const transmissions = [
       { ...car().transmissions[0], id: 'smg', name: '6-speed SMG II', type: 'automated-manual' },
@@ -229,6 +366,11 @@ describe('CarSchema', () => {
       }),
     ];
     expect(messages(CarSchema.safeParse(car({ transmissions, trims })))).toBe('');
+  });
+
+  it('accepts a seat count where grades differ (2-seat Spirit R Type A)', () => {
+    expect(messages(CarSchema.safeParse(car({ trims: [trim({ seats: v(2) })] })))).toBe('');
+    expect(CarSchema.safeParse(car({ trims: [trim({ seats: v(0) })] })).success).toBe(false);
   });
 
   it('rejects malformed tyre sizes', () => {
