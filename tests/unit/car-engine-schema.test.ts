@@ -342,6 +342,18 @@ describe('CarSchema', () => {
     expect(messages(r)).toBe('');
   });
 
+  it('compares a period’s ends at the precision both share', () => {
+    // RX-7 SP: sources give April 1995 as the start but only the year it ended.
+    const ok = CarSchema.safeParse(
+      car({ trims: [trim({ period: v({ from: '1999-04', to: '1999' }) })] }),
+    );
+    expect(messages(ok)).toBe('');
+    const bad = CarSchema.safeParse(
+      car({ trims: [trim({ period: v({ from: '2000-04', to: '1999' }) })] }),
+    );
+    expect(messages(bad)).toMatch(/after/);
+  });
+
   it('accepts automated-manual gearboxes, wagons and speed-sensing clutch LSDs', () => {
     const transmissions = [
       { ...car().transmissions[0], id: 'smg', name: '6-speed SMG II', type: 'automated-manual' },

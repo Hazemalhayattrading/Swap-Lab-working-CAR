@@ -15,13 +15,20 @@ export const YearMonthSchema = z
   .string()
   .regex(/^(19|20)\d{2}(-(0[1-9]|1[0-2]))?$/, 'YYYY or YYYY-MM');
 
-/** A production or sales window. `to` is left out while still in production. */
+/**
+ * A production or sales window. `to` is left out while still in production.
+ * The two ends are compared at the precision both share, so `1995-04` to `1995`
+ * (a source that gives only the end year) is a valid window.
+ */
 export const PeriodSchema = z
   .strictObject({ from: YearMonthSchema, to: YearMonthSchema.optional() })
-  .refine((p) => p.to === undefined || p.from <= p.to, {
-    message: '`from` is after `to`.',
-    path: ['to'],
-  });
+  .refine(
+    (p) => p.to === undefined || p.from.slice(0, p.to.length) <= p.to.slice(0, p.from.length),
+    {
+      message: '`from` is after `to`.',
+      path: ['to'],
+    },
+  );
 export type Period = z.infer<typeof PeriodSchema>;
 
 export const SourcedPeriodSchema = sourced(PeriodSchema);
