@@ -1,4 +1,6 @@
-# Phase 1, part 3a research notes: RX-7 FD3S, 13B-REW, 20B-REW (paused)
+# Phase 1, part 3a research notes: RX-7 FD3S, 13B-REW, 20B-REW
+
+**Status (2026-09-29): part 3a is finished.** The data is in `src/data/cars/mazda-rx-7-fd3s.json`, `src/data/engines/13b-rew.json` and `src/data/engines/20b-rew.json`, each value with its sources; what was estimated or left out is in `docs/progress.md`. Section 6 records how the open questions below were settled. The rest of this file is the record written at the pause.
 
 Written 2026-09-27, when the owner paused the project. Seven research agents were stopped part-way; none got as far as writing its structured output or its final report. This file keeps what they had gathered, with sources, so the next session can pick up without redoing it.
 
@@ -459,6 +461,16 @@ Parsed by script from the pages the agents saved: goo-net from its `<th>`/`<td>`
    - niev's "Mazda RX7 FD 1999" (on the Avoid list) and Res1n's "1999 Mazda RX-7 FD" have identical face and vertex counts, which suggests a re-upload.
    - adrianaflak09's CC-BY "2002 Mazda RX-7 Spirit R (FD)" is close in size to ddiaz-design's CC BY-NC-SA Spirit R Type A. It may be a re-upload of it; not proven.
    - realwallon's CC-BY "Mazda RX-7" looks like the best free lead (self-made, 361k faces).
+
+## 6. How the section 5 questions were settled (2026-09-29)
+
+1. **Gearing by market:** confirmed. Mazda's JDM brochures print 0.806 fifth with 3.909 (1991-12 Type S and X) or 4.100, and 0.762 with 4.300 on the Type RS, RZ and Spirit R Type A/B. The US workshop manual prints 0.719 with 4.100. auto motor und sport prints the same 0.72 / 4.10 set for Germany. No UK or Australian source prints ratios, so those trims assume the European gearbox, marked estimated.
+2. **Length:** 4,295 mm (1991-12), 4,280 mm (1993-08 to 1998) and 4,285 mm (1999 on), confirmed by the Mazda brochures. The US car is 168.5 in, and Europe prints a 1,750 mm width.
+3. **Two-seaters:** confirmed for the Type R-II, Type R-II Bathurst, Type RZ editions and Spirit R Type A. Car Sensor's 4-seat Type R-II is out of line with goo-net and carview. Every US, European and UK car is a two-seater.
+4. **Output steps:** confirmed by Mazda's brochures and releases. One exception: the 1995-09 catalogue still prints 255 PS, because it predates the 1996-01 change.
+5. **Generating radius:** R = 105 mm is stored. Mazda Germany's training handbook prints R = 10.5 cm for the FC and FD 13B. Yamamoto's 102 mm is the basic trochoid; the 3 mm "parallel transfer" moves the housing outward to the apex-seal tip. Details are in `docs/decisions.md` (2026-09-29, "Rotary displacement and cycle convention").
+6. **Eunos Cosmo:** used for the 20B-REW variant and the Cosmo 13B-REW variant. Mazda's 1990 Cosmo brochure confirms the 20B's 654 x 3 cc, 280 PS and 41.0 kgf·m, and that the Cosmo 13B-REW is sequential.
+7. **Shopping list:** judged in `docs/research/asset-recheck-rx7-2026-09-29.json`. MGR99's Efini model is Editorial and not for sale. Res1n's upload is a byte-identical re-upload of niev's. adrianaflak09's Spirit R shares the NFS Heat textures of Ddiaz's BY-NC-SA model. realwallon's CC-BY model is the best free lead.
 
 ## Appendix A: Mazda 1993 and 1994 technical data, transcribed by the US agent
 
