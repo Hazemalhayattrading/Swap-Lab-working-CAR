@@ -383,3 +383,39 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 
 - **Decision:** A period like `1995-04` to `1995` is valid: `PeriodSchema` now compares the two ends only as far as both are precise, as the car-level period check already did.
 - **Why:** The Australian RX-7 SP's sources give a first month (April 1995) but only an end year. Padding the end to `1995-12` would invent a month.
+
+## 2026-09-29 (owner decision after Phase 1, part 3a)
+
+### No donation for the ImportArchive scans
+
+- **Decision (owner):** No donation is made to ImportArchive for its 300 dpi brochure scans. The 1994-95 US RX-7 curb weights stay as they are (2,826 lb 5MT and 2,881 lb 4AT for 1994, read from the free 400-pixel previews), with their notes saying the last digit is soft and that Mazda's 1996 full-line brochure appears to print 2,830 / 2,883 lb.
+- **Why:** A donation is a payment made on the owner's behalf (CLAUDE.md rule 13), and a 4 lb difference on a 2,800 lb car doesn't change any result.
+- **Alternatives:** Donate for the sharp scans; replace the figures with the 1996 brochure's (a later model year, and also only a blurry preview).
+
+## 2026-09-29 (Phase 1, part 3b: 1JZ-GTE, RB25DET NEO, RB26DETT, LS1, LS3, K24 and the LS swap hardware)
+
+### Swap hardware lives in its own files
+
+- **Decision:** A new schema (`src/data/schema/swap.ts`) and folder, `src/data/swaps/`, with one file per car and engine family, e.g. `nissan-silvia-s15--gm-ls.json`. A swap file lists `parts`. Each part is a real product or donor part as its vendor or maker lists it: product name, part number, price, what's included and what the listing says you also need, each with sources. Each part says which **slots** it fills: engine mounts, transmission mount, gearbox, bellhousing adapter, clutch, oil pan, headers, wiring harness, ECU, driveshaft, cooling, fuel system, accessory drive, steering, or other. Several parts in one slot are alternatives; a kit fills several slots. `pairsWith` links parts in the same file (e.g. a crossmember sold for a T56), and `engines` narrows a part to LS1 or LS3 where that matters (24x against 58x ECUs).
+- **Checks:** Every swap must fill the slots BUILD_PROMPT section 3 names ("swap kit, mounts, adapter, sump, wiring and ECU"): engine mounts, gearbox (either a gearbox that bolts to the engine, or the car's own gearbox paired with an adapter), oil pan, wiring harness and ECU. validate-data also checks part ids are unique, `pairsWith` points at real parts, the car file exists, and every engine exists and is a launch-swap engine.
+- **Why:** BUILD_PROMPT 7.1 puts "allowed swap kits" in the car files, but a swap is a dozen parts, most of them shared across cars (ECU, harness, gearbox) and priced by vendors who change them. Car files are already large (the 350Z is 2.3 MB), and car facts and vendor listings have different provenance. One file per swap is what Phase 3 needs to build the parts catalogue and the "fits with..." lists.
+- **What it isn't:** A fitment rule. It records what vendors sell and what they say about fitment. The Phase 3 compatibility engine turns it into rules, and clearance checks wait for the measured bay geometry (Phase 4).
+- **Known duplication:** The ECU, harness, gearbox and clutch options are the same in all five LS swap files. Phase 3 moves them into `parts/`.
+- **Alternatives:** `swapKits` inside each car file (bloats them, and a kit isn't a fact about the car). Building the Phase 3 parts catalogue now (out of scope for Phase 1).
+
+### Prices keep the seller's currency
+
+- **Decision:** `Price` (in `src/data/schema/common.ts`) stores the price as listed, in USD, AUD, JPY, GBP, EUR or SAR. The currencies are kept out of `UNITS`: money has no SI conversion, and turning AUD or JPY into USD needs a dated exchange rate, which is Phase 3's job (USD to SAR is the 3.75 peg). The source's access date is the price's date stamp (BUILD_PROMPT 7.3).
+- **Why:** Same rule as every other number: store what the page prints so it can be checked.
+
+### Engines record their sump options
+
+- **Decision:** Engines get an optional `sumpOptions` list: every factory pan by donor (`factory`), pans the engine's maker sells for swaps (`maker-swap-part`, e.g. GM's LS retrofit pan) and widely used multi-swap pans (`aftermarket`), each with its sump position along the crank (front = crank-pulley end), donors, part number and depth where printed. `sump` stays, meaning the stock pan of the engine's reference fitment (its note says which). A pan made for one car goes in that car's swap file instead.
+- **Why:** The pan is often what decides whether a swap fits: the 2JZ needs a front sump in an S14, and the LS1's F-body, Corvette and GTO pans sit differently. One value can't say that.
+- **Scope:** Filled for the six engines added in this part. The six earlier launch-swap engines keep their single `sump` value (their notes already mention the alternatives); backfilling them is listed for Phase 3.
+- **Alternatives:** Replace `sump` with the list for every engine (touches six verified files without new research).
+
+### Cam-profile switching (VTEC) and two more limit components
+
+- **Decision:** Piston variants can record `camProfileSwitching` (Honda VTEC): which valves switch (`intake` or `intake-and-exhaust`) and the switch-over rpm where published. Rotary variants can't. The reported-limit components gain `rod-bolts` and `valvetrain`.
+- **Why:** VTEC changes the K24's breathing sharply at the switch point, which Phase 2's volumetric-efficiency fit has to know about, and cam phasing (`variableValveTiming`) doesn't cover it. Tuners quote LS and RB limits as rod-bolt or valve-spring limits, and filing those under `bottom-end` would lose that.

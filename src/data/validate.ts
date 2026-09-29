@@ -2,6 +2,7 @@ import type { z } from 'zod';
 import { AssetManifestSchema, type Asset, type AssetManifest } from './schema/asset';
 import { CarSchema, type Car } from './schema/car';
 import { EngineSchema, type Engine } from './schema/engine';
+import { SwapSchema, type Swap } from './schema/swap';
 import { BUDGET_BYTES, checkBudget } from './policy';
 
 /**
@@ -37,7 +38,7 @@ export interface ValidationReport {
   issues: ValidationIssue[];
   checkedFiles: string[];
   counts: Record<string, number>;
-  /** JSON paths of every value marked `estimated` in car and engine files. */
+  /** JSON paths of every value marked `estimated` in car, engine and swap files. */
   estimated: string[];
   /**
    * Files of assets with a NoAI clause. Scripts may process them; no AI model
@@ -73,6 +74,11 @@ export const SCHEMA_RULES: readonly SchemaRule[] = [
     test: (p) => /^src\/data\/engines\/[a-z0-9-]+\.json$/.test(p),
     schema: EngineSchema,
   },
+  {
+    description: 'engine swap hardware (car x engine family)',
+    test: (p) => /^src\/data\/swaps\/[a-z0-9-]+\.json$/.test(p),
+    schema: SwapSchema,
+  },
 ];
 
 /** `src/data/cars/nissan-silvia-s15.json` -> `nissan-silvia-s15`. */
@@ -107,10 +113,14 @@ export function collectConfidence(
     collectConfidence(value, `${path}.${key}`, out);
 }
 
-/** Checks between files: ids match file names, and trims point at real engine variants. */
+/**
+ * Checks between files: ids match file names, trims point at real engine
+ * variants, and swaps point at a real car and at launch-swap engines.
+ */
 function checkReferences(
   cars: readonly { path: string; car: Car }[],
   engines: readonly { path: string; engine: Engine }[],
+  swaps: readonly { path: string; swap: Swap }[] = [],
 ): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   const byId = new Map<string, Engine>();
@@ -133,6 +143,27 @@ function checkReferences(
         issues.push({
           path: at,
           message: `Engine "${engine.id}" has no variant "${trim.engine.variant}".`,
+        });
+      }
+    });
+  }
+  const carIds = new Set(cars.map((c) => c.car.id));
+  for (const { path, swap } of swaps) {
+    if (swap.id !== fileStem(path)) {
+      issues.push({ path, message: `id "${swap.id}" must match the file name.` });
+    }
+    if (!carIds.has(swap.car)) {
+      issues.push({ path: `${path}.car`, message: `No car file for "${swap.car}".` });
+    }
+    swap.engines.forEach((id, i) => {
+      const engine = byId.get(id);
+      const at = `${path}.engines[${String(i)}]`;
+      if (!engine) {
+        issues.push({ path: at, message: `No engine file for "${id}".` });
+      } else if (engine.role !== 'launch-swap') {
+        issues.push({
+          path: at,
+          message: `"${id}" is a stock-only engine; swaps are for launch-swap engines.`,
         });
       }
     });
@@ -266,6 +297,7 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
   const checkedFiles: string[] = [];
   const cars: { path: string; car: Car }[] = [];
   const engines: { path: string; engine: Engine }[] = [];
+  const swaps: { path: string; swap: Swap }[] = [];
 
   for (const file of files) {
     const rule = SCHEMA_RULES.find((r) => r.test(file.path));
@@ -289,6 +321,7 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
     if (rule.schema === EngineSchema) {
       engines.push({ path: file.path, engine: result.data as Engine });
     }
+    if (rule.schema === SwapSchema) swaps.push({ path: file.path, swap: result.data as Swap });
     if (rule.schema !== AssetManifestSchema) {
       collectConfidence(result.data, file.path, { counts, estimated });
     }
@@ -309,6 +342,6 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       }
     }
   }
-  issues.push(...checkReferences(cars, engines));
+  issues.push(...checkReferences(cars, engines, swaps));
   return { issues, checkedFiles, counts, estimated, noAiFiles };
 }

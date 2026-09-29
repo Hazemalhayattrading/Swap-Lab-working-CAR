@@ -314,7 +314,7 @@ Started 2026-09-27, paused by the owner the same day, resumed and finished 2026-
    - the 1996-98 Australian car: one secondary source, output only;
    - every Canadian car: 1993-95 sales are confirmed, but no Canadian specification source was found.
 2. **Market weights use different standards:** JIS without a driver, US curb weight, and unstated for Europe and the UK. Each note says which.
-3. **The 1994-95 US weights (2,826 / 2,881 lb) are provisional.** The only free scans are 400-pixel previews, and Mazda's 1996 full-line brochure appears to read 2,830 / 2,883 lb. ImportArchive offers the 300 dpi scans only after a donation, which no session makes without you (rule 13).
+3. **The 1994-95 US weights (2,826 / 2,881 lb) are provisional.** The only free scans are 400-pixel previews, and Mazda's 1996 full-line brochure appears to read 2,830 / 2,883 lb. ImportArchive offers the 300 dpi scans only after a donation. Your decision (2026-09-29): no donation, and the weights stay as they are (see decisions).
 4. **Gearing outside Japan and the US** comes from one magazine (auto motor und sport) for Europe, and is assumed for the UK, Australia and the SP. None of the Mazda JDM documents prints a gearbox code.
 5. **Rotary swap hardware is thin:**
    - Mazda publishes no weight, outline dimensions, turbo model or JDM injector flow for either engine;
