@@ -1,0 +1,1417 @@
+{
+  "$comment": "Toyota 1JZ-GTE (2.5-litre turbo JZ). Researched 2026-09-29. Two variants: the 1990-1996 parallel twin-turbo (CT12A, 8.5:1, fixed cam timing; JZA70, JZX81, JZX90, early JZZ30) and the 1996-2006 VVT-i single turbo (CT15B, 9.0:1; JZZ30, JZX100, JZS171, JZX110, JZX110W). Primary sources: Toyota's own catalogue data (toyota.jp used-car catalogue and goo-net grade pages for every chassis), Toyota's 2001 Chaser brochure, Toyota's September 1996 JZX100 repair book (English machine translation on archive.org: boost, oil capacity, gearboxes, shims, intercooler removal) and Toyota's parts catalogue (japan-parts.eu mirror: every oil pan part number and sump position, rods, pistons, heads). Missing or weak: no Toyota engine weight or outline dimensions (both estimated), no Toyota statement of crank/rod/piston materials, no twin-turbo boost or intercooler position, no injector size per generation, no VVT-i cam specs, no ECU part numbers.",
+  "id": "1jz-gte",
+  "code": "1JZ-GTE",
+  "manufacturer": "Toyota",
+  "family": "JZ",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 2491,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'総排気量 2491cc' (total displacement)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+        "accessed": "2026-09-29",
+        "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+        "note": "'総排気量 ※2 2491cc'."
+      },
+      {
+        "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+        "accessed": "2026-09-29",
+        "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+        "note": "Engine page, 1JZ-GTE VVT-i: 'Displacement:2.4910' (OCR of 2.491 litres)."
+      }
+    ],
+    "note": "Every Toyota catalogue figure read (goo-net and toyota.jp grade pages for JZX81, JZX90, JZX100 and JZX110, and the 2001 Chaser brochure) is 2,491 cc. Wikipedia and engine-specs.net print 2,492 cc, which is the rounded geometric figure (86.0 x 86.0 x 71.5 x 6 x pi/4 = 2,491.96 cc); the maker figure is stored."
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'内径×行程 86.0mm×71.5mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+        "accessed": "2026-09-29",
+        "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×71.5mm'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'cylinder bore is 86 mm (3.39 in) and piston stroke 71.5 mm (2.81 in)'."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 71.5,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'内径×行程 86.0mm×71.5mm' (bore x stroke)."
+      },
+      {
+        "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+        "accessed": "2026-09-29",
+        "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+        "note": "'内径×行程 86.0×71.5mm'."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'cylinder bore is 86 mm (3.39 in) and piston stroke 71.5 mm (2.81 in)'."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'水冷直列6気筒DOHC24バルブターボ' (water-cooled inline-6 DOHC 24-valve turbo)."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'dual belt-driven overhead camshafts (DOHC) and four valves per cylinder (24 in total)'."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'水冷直列6気筒DOHC24バルブターボ': 24 valves on 6 cylinders = 4 per cylinder."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'four valves per cylinder (24 in total)'."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "belt",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'dual belt-driven overhead camshafts (DOHC)'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-29",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "1JZ section: 'It is a 24-valve DOHC engine with two belt-driven camshafts'."
+      }
+    ],
+    "note": "Toyota's JZX100 repair book has a timing-belt removal procedure for the 1JZ-GTE, and Toyota's parts catalogue lists 'BELT, TIMING' in the camshaft group of the JZX90 and JZX100 1JZ-GTE (not quoted here)."
+  },
+  "blockMaterial": {
+    "value": "cast-iron",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The Toyota 1JZ-GTE engine features a cast-iron block, aluminum cylinder head'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-29",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox: 'Cylinder block material | Cast iron'."
+      }
+    ]
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'The Toyota 1JZ-GTE engine features a cast-iron block, aluminum cylinder head'."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-29",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "Infobox: 'Cylinder head material | Aluminium'."
+      }
+    ]
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "Spec table: 'Firing order | 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+        "accessed": "2026-09-29",
+        "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "Spec table: 'Firing order 1-5-3-6-2-4'."
+      }
+    ],
+    "note": "Two spec aggregators; the same order as the 2JZ-GTE, which Toyota prints in its 1993 Supra New Car Features (see 2jz-gte.json). No Toyota 1JZ document with the firing order was read."
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+        "note": "'燃料供給装置 EFI（電子制御式燃料噴射装置）' (fuel supply: electronic fuel injection)."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'Fuel system | Multi-point fuel injection system'."
+      }
+    ]
+  },
+  "dryWeight": {
+    "value": 210,
+    "unit": "kg",
+    "confidence": "estimated",
+    "method": "No Toyota figure exists in the sources read. Three weak published figures cluster at 207-225 kg: 207 kg (motorreviewer.com, whole 1JZ family), 210 kg (Wikipedia, uncited) and 225 kg (a Toymods forum member who weighed his 1JZ-GTE, dress unstated). 210 kg is taken from the middle of that cluster; treat it as about +/-15 kg.",
+    "sources": [
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+        "accessed": "2026-09-29",
+        "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "Spec table: 'Engine weight | 455 lbs (207 kg)' (one figure for the whole 1JZ family)."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+        "accessed": "2026-09-29",
+        "title": "Toyota JZ engine (Wikipedia)",
+        "note": "1JZ-GTE section (first generation): 'blowing through a side-mount or front mount air-to-air intercooler weighing 210 kg (465 lb)'; 1JZ-GE: 'weighing 200 kg (440 lb)'."
+      },
+      {
+        "url": "https://www.toymods.org.au/forums/threads/27880-1JZ-GTE-weight-W55-weight",
+        "accessed": "2026-09-29",
+        "title": "1JZ-GTE weight W55 weight (Toymods, Australian Toyota club forum, owner measurement)",
+        "note": "'i weighed my 1j using my getto scale system' ... '1jz= 225kg'."
+      }
+    ],
+    "note": "None of the three says what is included (turbos and manifolds, flywheel, starter, alternator, fluids). engine-specs.net and tractortechspecs.com leave weight blank. For comparison, 2jz-gte.json carries 230 kg (+/-20 kg) for the 2JZ-GTE."
+  },
+  "dimensions": {
+    "length": {
+      "value": 865,
+      "unit": "mm",
+      "confidence": "estimated",
+      "method": "No published 1JZ-GTE outline dimensions were found (engine-specs.net and tractortechspecs.com print no data). Taken from the 2JZ-GTE manual-gearbox figures in 2jz-gte.json (865 x 700 x 675 mm, NZ MKIV club, axis order assumed), because the two engines share bore pitch and general architecture (Wikipedia). Same block length; crank pulley to bellhousing face is assumed equal.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+          "accessed": "2026-09-29",
+          "title": "Toyota JZ engine (Wikipedia)",
+          "note": "'This engine is not merely a stroked version of the 1JZ (although they share a common bore size, bore pitch, and general architecture), but has a taller block deck and longer connecting rods'."
+        }
+      ],
+      "note": "Estimate, not a measurement. Axis order L x W x H as used for the 2JZ-GTE."
+    },
+    "width": {
+      "value": 700,
+      "unit": "mm",
+      "confidence": "estimated",
+      "method": "No published 1JZ-GTE outline dimensions were found (engine-specs.net and tractortechspecs.com print no data). Taken from the 2JZ-GTE manual-gearbox figures in 2jz-gte.json (865 x 700 x 675 mm, NZ MKIV club, axis order assumed), because the two engines share bore pitch and general architecture (Wikipedia). Width depends on the intake manifold and turbo layout, which differ (twin CT12A or single CT15B versus the 2JZ-GTE sequential pair), so treat this as +/-30 mm.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+          "accessed": "2026-09-29",
+          "title": "Toyota JZ engine (Wikipedia)",
+          "note": "'share a common bore size, bore pitch, and general architecture'."
+        }
+      ]
+    },
+    "height": {
+      "value": 675,
+      "unit": "mm",
+      "confidence": "estimated",
+      "method": "No published 1JZ-GTE outline dimensions were found (engine-specs.net and tractortechspecs.com print no data). Taken from the 2JZ-GTE manual-gearbox figures in 2jz-gte.json (865 x 700 x 675 mm, NZ MKIV club, axis order assumed), because the two engines share bore pitch and general architecture (Wikipedia). The 2JZ block deck is taller (Wikipedia), so the real 1JZ-GTE height is lower by an unsourced amount; 675 mm is an upper bound, which errs on the safe side for bonnet-clearance checks.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+          "accessed": "2026-09-29",
+          "title": "Toyota JZ engine (Wikipedia)",
+          "note": "'has a taller block deck and longer connecting rods to accommodate the 14.5 mm (0.57 in) stroke increase'."
+        }
+      ]
+    }
+  },
+  "bellhousing": {
+    "value": "toyota-jz",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.driftmotion.com/1JZ-2JZ-R154-Bell-Housing-p/dm3.htm",
+        "accessed": "2026-09-29",
+        "title": "1JZ/2JZ to R154 Bell Housing (Driftmotion, JZ swap parts vendor)",
+        "note": "'New 1JZ Bell Housing for R154 transmission. Use for 1JZ or 2JZ engine with an R154.' and '1JZ and 2JZ engines with an R154 will also need a 1JZ 8 bolt flywheel, sold separately.'"
+      },
+      {
+        "url": "https://www.supramania.com/threads/r154-2jzgte.129370/",
+        "accessed": "2026-09-29",
+        "title": "R154 2jzgte (Supramania forum)",
+        "note": "'The 2JZ was never offered with the R154, but the 1JZ was. The 1JZ and 2JZ share bellhousing bolt patterns.'"
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/toyota-gearbox-tech-info-w58-r154/",
+        "accessed": "2026-09-29",
+        "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: Toyota gearbox tech info, W58 / R154 / V160 / V161",
+        "note": "'Gearbox found in MK3 supra turbo, crown / chaser tourer v / mark II tourer v / cresta tourer v / soarer turbo up to 2004.' Part numbers: '13405-46030 – 1JZ R154 flywheel', '31111-14110 – 1JZ R154 bellhousing'."
+      },
+      {
+        "url": "https://archive.org/download/jzx-100-repair-manual-combined/JZX100%20Repair%20Manual%20-%20Combined_djvu.txt",
+        "accessed": "2026-09-29",
+        "title": "Toyota Motor Corporation Service Department: Mark II / Chaser / Cresta repair book (修理書) for JZX100/101/105, September 1996; English machine translation uploaded to archive.org (item jzx-100-repair-manual-combined), OCR text layer",
+        "note": "Related-documents list: 'R154150F 151F Manual Transmission Repair Book'; automatic: 'A341E (1 JZ—GTE)'. Model list: 'E-JZX100-BTMVZ' is the Tourer V with the R154."
+      },
+      {
+        "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MzExMTF8SE9VU0lORywgQ0xVVENIfHRveW90YXxqcHxtYXJrLTJ8anp4OTAtYXRtdnp8MTk5Mnw1XzMxMTE3MF8wMDNffA==",
+        "accessed": "2026-09-29",
+        "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX90-ATMVZ (twin turbo, R154), 31111 HOUSING, CLUTCH",
+        "note": "'31111-14110' ... '(10/1992 - 09/1996)'."
+      },
+      {
+        "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MzExMTF8SE9VU0lORywgQ0xVVENIfHRveW90YXxqcHxtYXJrLTJ8anp4MTAwLWF0bXZ6fDE5OTZ8NF8zMTExODBfMDA0X3w=",
+        "accessed": "2026-09-29",
+        "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ (VVT-i, R154), 31111 HOUSING, CLUTCH",
+        "note": "'31111-14110' ... '(09/1996 - 10/1999)'."
+      }
+    ],
+    "note": "Engine-side pattern shared by 1JZ and 2JZ. Factory gearboxes behind the 1JZ-GTE: Toyota R154 5-speed (JZA70, JZZ30, JZX90, JZX100, JZX110; Toyota repair book model list, PDF p. 5: R154 (5M/T) E-JZX100-ATMVZ, A341E (4A/T ECT-iE) E-JZX100-ATPVZ) and Aisin 4-speed automatics: the A341E on the JZX100 (repair book), a 4-speed ECT-S on the JZX81 (toyota.jp does not name the model). The JZX81 GT Twin Turbo was automatic only (goo-net lists 4AT only). Toyota parts catalogue: the manual-gearbox flywheel 13405-46030 (8 bolts, 90910-02103) is the same part on the JZX90 (1992-10 to 1996-09), JZX100 (1996-09 on) and JZX110 (2000-10 to 2002-10), so the flywheel did not change with VVT-i. The R154 clutch housing (bellhousing) is also one part, 31111-14110, on the JZX90 and JZX100 (the ESB part list calls it the 1JZ R154 bellhousing), and the starter is the same on both (28100-46130, 12 V 0.8 kW; 28100-46140, 1.4 kW, cold-climate). So twin-turbo and VVT-i engines take the same bellhousing, flywheel and starter behind an R154; the automatic bellhousings (A340E/A341E) were not compared."
+  },
+  "sump": {
+    "value": "front",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.japan-parts.eu/JP/4/110208B.png",
+        "accessed": "2026-09-29",
+        "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ (Tourer V 5MT, 1JZ-GTE, from 1996-09), group 1105 CYLINDER BLOCK, illustration",
+        "note": "The lower steel pan (12102A) sits under the timing-belt end of the block, the same end as the oil pump (read from the illustration image 110208-B)."
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+        "accessed": "2026-09-29",
+        "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+        "note": "'Front sump' ... 'Originally found in JZS147 JZS160 Aristo, JZX90 JZX100 JZX110 Chaser. Used to swap JZ’s to rear rack chassis like Nissan S13/14/15, Z33, GT86.'"
+      },
+      {
+        "url": "https://xatracing.com/JZ-rear-sump-oil-pan.html",
+        "accessed": "2026-09-29",
+        "title": "Rear Sump JZ Oil Pan Kit Conversion (XAT Racing, JZ parts vendor)",
+        "note": "'Front sump oil pan is typically needed for fitment in the following chassis:' ... 'Crown. Chaser. Mark II, Cresta'."
+      },
+      {
+        "url": "https://shop.battlegarage-rs.com/products/oem-toyota-front-sump-oil-pan-1jz-gte",
+        "accessed": "2026-09-29",
+        "title": "Genuine Toyota OEM Front Sump Oil Pan For JZX100 Chaser (Battle Garage Racing Service, parts retailer)",
+        "note": "'genuine Toyota OEM front sump oil pan for the Toyota Chaser. Specifically, the JZX100 Chaser with the 1JZ-GTE engine.'"
+      }
+    ],
+    "note": "Reference fitment: the JZX100 Mark II / Chaser / Cresta, the usual 1JZ-GTE swap donor. Every JZX (JZX81, JZX90, JZX100, JZX110) and JZS171 Crown 1JZ-GTE has a front sump; the JZA70 Supra and JZZ30 Soarer have a rear sump (sumpOptions). An S-chassis (S13/S14/S15) swap needs a front sump, so a JZX-donor engine keeps its own pan; a JZA70/JZZ30 engine needs a front-sump conversion."
+  },
+  "sumpOptions": [
+    {
+      "name": "Toyota JZX81 / JZX90 / JZX100 front-sump pan (lower steel pan 12102-46011)",
+      "kind": "factory",
+      "position": {
+        "value": "front",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/JP/5/MAE160F.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX81-ATPVZ (GT Twin Turbo, 1990-08 to 1992-10), group 1105 CYLINDER BLOCK, illustration",
+            "note": "Lower pan 12102A under the timing-belt end, next to the oil level block plate 11494 (read from the illustration image MA E160-F)."
+          },
+          {
+            "url": "https://www.japan-parts.eu/JP/4/110208B.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ (Tourer V 5MT), group 1105 CYLINDER BLOCK, illustration",
+            "note": "Lower pan 12102A at the timing-belt end (read from the illustration image 110208-B)."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'Low profile front sump – non-VVT-i (up to 97)' ... '12102-46011 – lower steel pan'."
+          }
+        ]
+      },
+      "fittedTo": [
+        "JZX81 Mark II / Chaser / Cresta GT Twin Turbo",
+        "JZX90 Mark II / Chaser / Cresta Tourer V",
+        "JZX100 Mark II / Chaser Tourer V, Cresta Roulant G"
+      ],
+      "partNumber": {
+        "value": "12102-46011 (PAN SUB-ASSY, OIL, NO.2: lower steel sump)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/?parttt=&part=1210246011&regi=JP&cars=ok",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): part-number search 12102-46011",
+            "note": "'12102-46011 PAN SUB-ASSY, OIL, NO.2'; applications include 'JZX81-ATPVZ 08/1990 - 10/1992 1JZGTE HT GT ATM 4FC', 'JZX90-ATMVZ 10/1992 - 09/1996 1JZGTE TOUV MTM', 'JZX100-ATMVZ 09/1996 - 10/2000 1JZGTE TOUV MTM 5F', 'JZX100-BTMVZ 09/1996 - 06/2001 1JZGTE TOUV MTM 5F', 'JZX100-CEPVZ 09/1996 - 06/2001 1JZGTE ROUG ATM'."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'12102-46011 – lower steel pan' (low-profile front sump)."
+          }
+        ],
+        "note": "Toyota catalogue (japan-parts.eu), upper aluminium pan 'PAN SUB-ASSY, OIL' by chassis: 12111-46020 (JZX81, 08/1990 - 09/1991), 12111-46021 (JZX90, from 10/1992), 12111-46110 (JZX100, 09/1996 - 03/1997), later 12111-46112; baffle 12121-46010 on all. The JZX81's first lower pan was 12102-46010 (08/1990 - 06/1992). ESB lists 12111-46112 as the non-VVT-i upper pan, but the catalogue fits 12111-46112 only from the JZX100 on."
+      },
+      "notes": "Moroso describes the factory JZX-style front-sump pans as about 3 in deep. ESB: the low-profile steel pan has better ground clearance than the later high-profile one. Oil level block plate 11494-46010 and gasket 11496-46010 belong to the front-sump engines (ESB part list; the plate appears in the JZX81 and JZX100 catalogue illustrations)."
+    },
+    {
+      "name": "Toyota JZS171 / JZX110 front-sump pan (lower steel pan 12102-46040)",
+      "kind": "factory",
+      "position": {
+        "value": "front",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/JP/3/111557F.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Crown JZS171-AEPVZ (Athlete V, 1JZ-GTE, from 1999-09), group 1105 CYLINDER BLOCK, illustration",
+            "note": "Lower pan 12102A at the timing-belt end, with the oil level block plate 11494 (read from the illustration image 111557-F)."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'High profile front sump – VVT-i 97+ – increased clearance for sway bar' ... '12102-46040 – lower steel pan'."
+          }
+        ]
+      },
+      "fittedTo": [
+        "JZS171 / JZS171W Crown Athlete V (sedan and Estate)",
+        "JZX110 Mark II Grande iR-V / iR-V / Grande G-tb",
+        "JZX110 Verossa VR25",
+        "JZX110W Mark II Blit iR-V"
+      ],
+      "partNumber": {
+        "value": "12102-46040 (PAN SUB-ASSY, OIL, NO.2: lower steel sump)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/?parttt=&part=1210246040&regi=JP&cars=ok",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): part-number search 12102-46040",
+            "note": "'12102-46040 PAN SUB-ASSY, OIL, NO.2'; 1JZ-GTE applications 'JZX110-AEMVZ 10/2000 - 11/2004 1JZGTE SED GDV MTM 5F', 'JZX110-AEPZZ 10/2000 - 10/2002 1JZGTE SED GDGT ATM 4FC', 'JZX110W-AWPVZ 01/2002 - 04/2006 1JZGTE WG IRV ATM 4FC', 'JZX110-BEMVZ 06/2001 - 04/2004 1JZGTE VR25 MTM 5F', 'JZS171-AEPVZ 09/1999 - 12/2003 1JZGTE SED ATHV ATM 4FC', 'JZS171W-AWPVZ 12/1999 - 12/2003 1JZGTE WG ATHV ATM 4FC'."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'12102-46040 – lower steel pan' (high-profile front sump)."
+          }
+        ],
+        "note": "Upper pan 12111-46112 and baffle 12121-46010 (catalogue: JZX110-AEMVZ '10/2000 - 04/2006', JZS171-AEPVZ '09/1999 - 08/2001'). ESB labels this pan 'VVT-i 97+', but Toyota's catalogue keeps 12102-46011 on the VVT-i JZX100 (to 2000-10/2001-06) and fits 12102-46040 only from the JZS171 (1999-09) and JZX110 (2000-10)."
+      },
+      "notes": "ESB: deeper than 12102-46011 (it calls it high profile, with more clearance for the anti-roll bar); the oil pickup differs too (15104-46070 versus 15104-46060, ESB, not checked in the catalogue)."
+    },
+    {
+      "name": "Toyota JZA70 / JZZ30 rear-sump pan (lower steel pan 12102-46030, later 12102-46031)",
+      "kind": "factory",
+      "position": {
+        "value": "rear",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/JP/5/MAE037D.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Supra JZA70-BLMVZ (2.5GT Twin Turbo, from 1990-08), group 1105 CYLINDER BLOCK, illustration",
+            "note": "Lower pan 12102A under the flywheel end of the block (read from the illustration image MA E037-D)."
+          },
+          {
+            "url": "https://www.japan-parts.eu/JP/4/110125F.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Soarer JZZ30-ACMVZ (2.5GT Twin Turbo, from 1991-05), group 1105 CYLINDER BLOCK, illustration",
+            "note": "Lower pan 12102A under the flywheel end (read from the illustration image 110125-F)."
+          },
+          {
+            "url": "https://xatracing.com/JZ-rear-sump-oil-pan.html",
+            "accessed": "2026-09-29",
+            "title": "Rear Sump JZ Oil Pan Kit Conversion (XAT Racing, JZ parts vendor)",
+            "note": "'Rear sump oil pan is needed for fitment in the following chassis:' ... 'Mk3 Supra A70' ... 'Soarer'."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'Rear sump' ... 'Originally found in JZZ30 Soarer, JZA80 Supra.'"
+          },
+          {
+            "url": "https://www.suprastore.com/1j2jresucooi.html",
+            "accessed": "2026-09-29",
+            "title": "Front to Rear Sump Conversion Supra 1JZGTE 2JZGTE Oil Pan Kit (SupraStore, JZ parts vendor)",
+            "note": "'Rear sump oil pan is needed for fitment in the following chassis' ... 'Mk3 Supra, MkIV Supra, SC300/SC400, Soarer, Toyota Pickup, many BMW applications.'"
+          }
+        ]
+      },
+      "fittedTo": [
+        "JZA70 Supra 2.5GT Twin Turbo / Twin Turbo R",
+        "JZZ30 Soarer 2.5GT Twin Turbo / 2.5GT-T"
+      ],
+      "partNumber": {
+        "value": "12102-46031 (PAN SUB-ASSY, OIL, NO.2: lower steel sump; supersedes 12102-46030)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/?parttt=&part=1210246031&regi=JP&cars=ok",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): part-number search 12102-46031",
+            "note": "'12102-46031 PAN SUB-ASSY, OIL, NO.2'; applications 'JZZ30-ACMVZ 05/1991 - 12/2000 1JZGTE GTT MTM', 'JZZ30-ACPVZ 05/1991 - 12/2000 1JZGTE GTT ATM' and the JZA80 Supra."
+          },
+          {
+            "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTIxMDJBfFBBTiBTVUItQVNTWSwgT0lMLCBOTy4yfHRveW90YXxqcHxzdXByYXxqemE3MC1ibG12enwxOTkwfDVfMjkxMTIwXzAyMF98",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Supra JZA70-BLMVZ, 12102A PAN SUB-ASSY, OIL, NO.2",
+            "note": "'12102-46030' ... '(08/1990 - 05/1993)'."
+          },
+          {
+            "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-sump-information/",
+            "accessed": "2026-09-29",
+            "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ sump information",
+            "note": "'12102-46031 – lower steel pan' (rear sump)."
+          }
+        ],
+        "note": "Upper pan by the catalogue: 12111-46050 (JZA70 08/1990 - 08/1991; JZZ30 05/1991 - 08/1991), then 12111-46051 (JZZ30 08/1991 - 02/1997), and 12111-46052, which the catalogue lists for the JZZ30 1JZ-GTE and the JZA80 2JZ-GTE (ESB: 'GTE/turbo, with turbo oil drain'); baffle 12121-46030. The JZZ30 used 12102-46030 from 05/1991 to 08/1996."
+      },
+      "notes": "XAT Racing and SupraStore sell a new genuine-Toyota rear-sump conversion kit ('it takes 64 parts to do the swap') for putting a front-sump JDM engine into a JZA70/JZA80/Soarer; the front-sump dipstick tube is discontinued (XAT)."
+    },
+    {
+      "name": "Moroso 20947 front-sump steel lower pan with road-race baffles",
+      "kind": "aftermarket",
+      "position": {
+        "value": "front",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.moroso.com/oil-pan-toyota-1jz-2jz-front-sump-road-race-baffle-steel/",
+            "accessed": "2026-09-29",
+            "title": "Moroso Oil Pan Kit Toyota 1JZ & 2JZ Front Sump Road Race Baffle Steel (Moroso, pan maker)",
+            "note": "'OIL PAN, TOYOTA, 1JZ, 2JZ, FRONT SUMP, ROAD RACE BAFFLE, STEEL'; 'Fits; Most Toyota JZ-Equipped Chassis Requiring Front Sump'; 'Compatible with OEM Toyota cast upper pans'."
+          }
+        ]
+      },
+      "fittedTo": ["JZ swaps needing a front sump (S-chassis, JZX, IS300/Altezza, GS300)"],
+      "partNumber": {
+        "value": "20947",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.moroso.com/oil-pan-toyota-1jz-2jz-front-sump-road-race-baffle-steel/",
+            "accessed": "2026-09-29",
+            "title": "Moroso Oil Pan Kit Toyota 1JZ & 2JZ Front Sump Road Race Baffle Steel (Moroso, pan maker)",
+            "note": "'Part #' '20947'; pickup 'Oil Pick Up, For No. 20947' (24947)."
+          }
+        ]
+      },
+      "depth": {
+        "value": 4,
+        "unit": "in",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.moroso.com/oil-pan-toyota-1jz-2jz-front-sump-road-race-baffle-steel/",
+            "accessed": "2026-09-29",
+            "title": "Moroso Oil Pan Kit Toyota 1JZ & 2JZ Front Sump Road Race Baffle Steel (Moroso, pan maker)",
+            "note": "'Moroso Front Sump JZ oil pan is 4' ... 'deep and designed to be used with the included oil pick up.'"
+          }
+        ],
+        "note": "Depth of the steel lower pan itself, not measured from the block rail (the factory aluminium upper pan stays). Moroso puts the factory JZX pans at about 3 in."
+      },
+      "notes": "Replaces the factory lower steel pan only; bolts to the factory upper aluminium pan. Moroso: 6 US quarts plus filter; four trap doors and a louvered baffle; needs its own pickup (24947) and stud kit (38949)."
+    }
+  ],
+  "oilCapacity": {
+    "value": 5.4,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/jzx-100-repair-manual-combined/JZX100%20Repair%20Manual%20-%20Combined.pdf",
+        "accessed": "2026-09-29",
+        "title": "Toyota Motor Corporation Service Department: Mark II / Chaser / Cresta repair book for JZX100/101/105, September 1996; English machine translation on archive.org (item jzx-100-repair-manual-combined), page images of the PDF",
+        "note": "Section 19-2, Engine oil table (PDF p. 1303): '1JZ-GTE' row, 'When changing only the oil ... Filling volume [L]' '5.1', 'oil and oil fill ... Filling amount when replacing the tank [L]' '5.4' (read from the page image, p. 1303)."
+      },
+      {
+        "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+        "accessed": "2026-09-29",
+        "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+        "note": "'Engine oil capacity (Refill capacity)': 'Without oil filter: 5.1-5.4 l' 'With oil filter: 5.4-5.7 l' 'For JZX90 since oct. 1993' 'Without oil filter: 5.6 l' 'With oil filter: 5.9 l'."
+      },
+      {
+        "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+        "accessed": "2026-09-29",
+        "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+        "note": "'Engine oil capacity, liter' '5.4 l (5.7 qt) - 1JZ-GTE/GE 2WD Mark 2, Cresta, Chaser'."
+      }
+    ],
+    "note": "Refill with a new oil filter, drained at the plug, JZX100 (front-sump) engine: 5.4 L; oil only 5.1 L (Toyota repair book, machine-translated column headings). engine-specs.net gives 5.9 / 5.6 L for the JZX90 from October 1993. Dry-fill capacity and the rear-sump (JZA70, JZZ30) capacity were not found."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://8020automotive.com/toyota-1jz-gte-engine-complete-guide/",
+          "accessed": "2026-09-29",
+          "title": "Toyota 1JZ-GTE Engine Complete Guide: Specs, Reliability, Power (8020 Automotive, US tuning guide site)",
+          "note": "Spec table: 'Crankshaft | Forged'."
+        }
+      ],
+      "note": "engine-specs.net: 'The crankshaft has seven journals and twelve counterweights; both pins and journals were induction-hardened' (material not stated); CARPRIME calls it a full-counterweight crank ('フルカウンタークランク'). Toyota's catalogue fits the same crankshaft 13401-46010 to the JZX90 (non-VVT-i) and the JZX100 (VVT-i, to 1999-07) and 13401-46012 to the JZX110. No Toyota statement of the forging was read."
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://8020automotive.com/toyota-1jz-gte-engine-complete-guide/",
+          "accessed": "2026-09-29",
+          "title": "Toyota 1JZ-GTE Engine Complete Guide: Specs, Reliability, Power (8020 Automotive, US tuning guide site)",
+          "note": "Spec table: 'Rods | Forged'."
+        },
+        {
+          "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+          "accessed": "2026-09-29",
+          "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+          "note": "'The 1JZ-GTE Gen 1 has forged connecting rods and pistons lowering compression ratio to 8.5:1.'"
+        },
+        {
+          "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTMyMDF8Uk9EIFNVQi1BU1NZLCBDT05ORUNUSU5HfHRveW90YXxqcHxtYXJrLTJ8anp4OTAtYXRtdnp8MTk5Mnw1XzMxMTE3MF8wMDNffA==",
+          "accessed": "2026-09-29",
+          "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX90-ATMVZ (non-VVT-i), 13201 ROD SUB-ASSY, CONNECTING",
+          "note": "'13201-46030' ... '(10/1992 - 09/1996)'."
+        },
+        {
+          "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTMyMDF8Uk9EIFNVQi1BU1NZLCBDT05ORUNUSU5HfHRveW90YXxqcHxtYXJrLTJ8anp4MTAwLWF0bXZ6fDE5OTZ8NF8zMTExODBfMDA0X3w=",
+          "accessed": "2026-09-29",
+          "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ (VVT-i), 13201 ROD SUB-ASSY, CONNECTING",
+          "note": "'13201-46030' ... '(09/1996 - 10/2000)'."
+        },
+        {
+          "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTMyMDF8Uk9EIFNVQi1BU1NZLCBDT05ORUNUSU5HfHRveW90YXxqcHxtYXJrLTItbWFyay0yLWJsaXR8anp4MTEwLWFlbXZ6fDIwMDB8M18zMTExOTBfMDA1X3w=",
+          "accessed": "2026-09-29",
+          "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX110-AEMVZ (VVT-i), 13201 ROD SUB-ASSY, CONNECTING",
+          "note": "'13201-46030' ... '(10/2000 - 04/2006)'."
+        }
+      ],
+      "note": "Toyota fits one connecting rod, 13201-46030, with the same rod bolts 13265-46020, to the twin-turbo JZX90 and the VVT-i JZX100 and JZX110, so the rods did not change with VVT-i (unlike the 2JZ-GTE story). Brian Crower sells one aftermarket rod for both (SupraStore listing: BC Brian Crower 1JZ 1JZGTE non-VVTi or VVTi Connecting Rods). The forging itself is stated only by tuner and aggregator sites, not by a Toyota document read here."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+          "accessed": "2026-09-29",
+          "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+          "note": "'The pistons are special aluminum casting. Each piston is fitted with two compression rings and a single oil ring.'"
+        },
+        {
+          "url": "https://8020automotive.com/toyota-1jz-gte-engine-complete-guide/",
+          "accessed": "2026-09-29",
+          "title": "Toyota 1JZ-GTE Engine Complete Guide: Specs, Reliability, Power (8020 Automotive, US tuning guide site)",
+          "note": "'pistons are cast rather than forged, they certainly aren' ... spec table 'Pistons | Hypereutectic Cast'."
+        },
+        {
+          "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTMxMDF8UElTVE9OIFNVQi1BU1NZLCBXL1BJTnx0b3lvdGF8anB8bWFyay0yfGp6eDkwLWF0bXZ6fDE5OTJ8NV8zMTExNzBfMDAzX3w=",
+          "accessed": "2026-09-29",
+          "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX90-ATMVZ (non-VVT-i), 13101 PISTON SUB-ASSY, W/PIN",
+          "note": "'13101-88400' ... '(10/1992 - 09/1996)'."
+        },
+        {
+          "url": "https://www.japan-parts.eu/site/detail_cat.php?p=MTMxMDF8UElTVE9OIFNVQi1BU1NZLCBXL1BJTnx0b3lvdGF8anB8bWFyay0yfGp6eDEwMC1hdG12enwxOTk2fDRfMzExMTgwXzAwNF98",
+          "accessed": "2026-09-29",
+          "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ (VVT-i), 13101 PISTON SUB-ASSY, W/PIN",
+          "note": "'13101-88410' ... '(09/1996 - 10/2000)'."
+        }
+      ],
+      "note": "Sources disagree. Cast: engine-specs.net and 8020 Automotive (which also says hypereutectic). Forged: motorreviewer.com ('forged connecting rods and pistons'), CARPRIME ('鍛造ピストン' (forged pistons) for the twin-turbo engine, 'セミ鍛造ピストン' (semi-forged) for the VVT-i engine) and Japanese Wikipedia ('セミ鍛造ピストン'). No Toyota document on the piston material was read, so treat 'cast' as the better-supported but unconfirmed answer. Toyota changed the piston with VVT-i (13101-88400 to 13101-88410, for the 9.0:1 compression), so twin-turbo and VVT-i pistons are not interchangeable."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "wheel-power",
+        "value": {
+          "value": 550,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://8020automotive.com/toyota-1jz-gte-engine-complete-guide/",
+              "accessed": "2026-09-29",
+              "title": "Toyota 1JZ-GTE Engine Complete Guide: Specs, Reliability, Power (8020 Automotive, US tuning guide site)",
+              "note": "'500-550whp is pretty close to maxing out a 1JZ-GTE with stock internals. Without additional high-flow head work, forged internals, valve springs, and a performance head gasket, pushing any more power than that is very risky and unsustainable.'"
+            }
+          ],
+          "note": "Upper end of the quoted 500-550 whp range. The same article also says 'Maintaining stock internals, it is possible to hit numbers around 700 horsepower with some heavier duty equipment', so its ceiling is loose."
+        },
+        "context": "Tuning-guide article (8020 Automotive), not a measured failure test: assumes E85 tuning, upgraded fuel system (twin pumps), a large single turbo and a proper tune on a healthy engine; beyond about 550 whp it recommends forged internals, head work, valve springs and a performance head gasket. No engine builder with a named test car was found."
+      },
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 650,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.hpacademy.com/forum/general-engine-building-discussion/show/1jzgte-vvti-stock-bottom-end/",
+              "accessed": "2026-09-29",
+              "title": "1JZGTE VVTI stock bottom end (High Performance Academy forum; reply by HPA tutor Andre Simon)",
+              "note": "Question: 'The engine will be running E85 and aiming for around the 650 horsepower mark'; Andre Simon (Tutor): '650 hp on a stock 1JZ should be very achievable, particularly on a quality fuel like E85.' ... 'Detontaion is the usual killer of these engines when modified'."
+            }
+          ],
+          "note": "Neither post says crank or wheel horsepower; stored as crank-power, the more conservative reading."
+        },
+        "context": "Opinion of an established tuning educator (HP Academy tutor), not a test: VVT-i 1JZ-GTE, stock bottom end including rod bolts, E85 fuel, good tune; he names detonation, not the parts, as the usual cause of failure. No rpm limit was given."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "jdm-twin-turbo",
+      "name": "1JZ-GTE twin turbo (fixed cam timing), JDM, 1990-1996",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1990-08",
+          "to": "1996-09"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+            "note": "Page title 'マークII(1990年8月～1992年10月) ＧＴツインターボ' (Mark II, Aug 1990 to Oct 1992, GT Twin Turbo)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SUPRA/199008/1000979/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Supra 2.5GT Twin Turbo R 5MT, E-JZA70 (1990-08 to 1991-08) (toyota.jp, Toyota's own used-car site)",
+            "note": "Page title 'スープラ(1990年8月～1991年8月) ２．５ＧＴツインターボＲ'."
+          },
+          {
+            "url": "https://www.japan-parts.eu/?parttt=&part=1210246011&regi=JP&cars=ok",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): part-number search 12102-46011",
+            "note": "Last twin-turbo production window: 'JZX90-ATMVZ 10/1992 - 09/1996 1JZGTE TOUV MTM'."
+          },
+          {
+            "url": "https://archive.org/download/manualzilla-id-6580042/6580042_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "BLITZ intercooler kit 13120 instructions for the JZZ30 Soarer, pre-facelift (archive.org, manualzilla item 6580042, text layer)",
+            "note": "'エンジン：1JZ-GTE' '年 式：1991 年 5 月～1996 年 8 月' (engine 1JZ-GTE, model years May 1991 to August 1996)."
+          }
+        ],
+        "note": "Sale start 1990-08 with the JZA70 Supra 2.5GT Twin Turbo and JZX81 GT Twin Turbo (catalogue model windows); the JZZ30 Soarer 2.5GT Twin Turbo followed in 1991-05 (toyota.jp: 1991-05 to 1992-06 model window) and switched to VVT-i in 1996-08; the JZX90 Tourer V (from 1992-10) was the last twin-turbo model, to 1996-09. The JZA70 ended when the JZA80 arrived in 1993-05 (catalogue: lower pan to 05/1993)."
+      },
+      "fittedTo": ["JZA70", "JZX81", "JZX90", "JZZ30"],
+      "compressionRatio": {
+        "value": 8.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+            "note": "'圧縮比 8.5' (compression ratio)."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+            "note": "'圧縮比 8.5'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001121/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX90 (1992-10) (1001121)",
+            "note": "JZX90 Tourer V: '圧縮比 8.5'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000979/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Supra 2.5GT Twin Turbo R 5MT, E-JZA70 (1990-08) (1000979)",
+            "note": "'圧縮比 8.5'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "twin-turbo-parallel",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+            "accessed": "2026-09-29",
+            "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'The first generation of the Toyota 1JZ-GTE had a compression ratio rating of 8.5:1, twin CT12A turbochargers arranged in parallel'."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+            "accessed": "2026-09-29",
+            "title": "Toyota JZ engine (Wikipedia)",
+            "note": "'The first generation 1JZ-GTE employs twin CT12A turbochargers arranged in parallel'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+            "note": "'過給機 ツインターボ' (forced induction: twin turbo)."
+          }
+        ],
+        "note": "Toyota's catalogues say only 'ツインターボ' (twin turbo) or 'ＩＣ付きツインターボ' (twin turbo with intercooler); the parallel (not sequential) layout is from engine-specs.net and Wikipedia."
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT12A",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+                "accessed": "2026-09-29",
+                "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'Power adder' '1-st gen: Twin CT12A turbochargers'."
+              },
+              {
+                "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+                "accessed": "2026-09-29",
+                "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+                "note": "'The first generation 1JZ twin turbo was equipped with two CT12A turbochargers'."
+              },
+              {
+                "url": "https://car-me.jp/articles/7330",
+                "accessed": "2026-09-29",
+                "title": "CARPRIME (car-me.jp, Japanese car media): Toyota 1JZ-GTE engine article",
+                "note": "'トヨタ内製CT12型セラミックタービンターボチャージャーを2機搭載した「1JZ-GTE」' (two Toyota-made CT12 ceramic-turbine turbochargers)."
+              }
+            ],
+            "note": "The A suffix is from engine-specs.net, motorreviewer.com and Wikipedia; Japanese sources say CT12. Not confirmed from a Toyota parts catalogue."
+          },
+          "count": 2,
+          "notes": "Ceramic turbine wheels: Toyota’s 1993 Chaser brochure (pp. 24-25) says 2基のセラミックターボ (two ceramic turbos); CARPRIME and Japanese Wikipedia: CT12型セラミックタービン; motorreviewer.com: ceramic turbine wheels prone to delamination under high temperature and boost). A Supramania interchange post says the 2JZ-GTE export CT12B is not a direct swap."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "method": "No source read states where the twin-turbo cars mount their intercooler. Toyota catalogues confirm an intercooler (ＩＣ付きツインターボ). engine-specs.net and Wikipedia say side-mount or front mount without naming chassis. Side is assumed by analogy with the JZX100, whose factory intercooler two Japanese shops place under the right headlight.",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SUPRA/1000979/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Supra 2.5GT Twin Turbo R 5MT, E-JZA70 (1990-08) (1000979)",
+            "note": "'過給機 ＩＣ付きツインターボ' (twin turbo with intercooler)."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/SOARER/1000874/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Soarer 2.5GT Twin Turbo 5MT, E-JZZ30 (1991-05) (1000874)",
+            "note": "'過給機 ＩＣ付きツインターボ'."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+            "accessed": "2026-09-29",
+            "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'twin CT12A turbochargers arranged in parallel and blowing through a side-mount or front mount intercooler'."
+          },
+          {
+            "url": "https://archive.org/download/1_20260118_20260118_1126/13.png",
+            "accessed": "2026-09-29",
+            "title": "Toyota: Chaser (X90) catalogue (brochure), Japan, printed 1992-10-29, pp. 24-25 engine page (scan on archive.org, item 1_20260118_20260118_1126, image 13.png)",
+            "note": "1JZ twin-turbo panel: '2基のセラミックターボ、空冷式インタークーラーを装着' (two ceramic turbos and an air-cooled intercooler fitted) (read from the page image, pp. 24-25)."
+          }
+        ],
+        "note": "Air-to-air in every case (Toyota: 空冷式, air-cooled) (no water-cooled intercooler is mentioned anywhere). Position per chassis (JZA70, JZX81, JZX90, JZZ30) is unconfirmed."
+      },
+      "cams": {
+        "intakeDuration": {
+          "value": 224,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-cam-specs/",
+              "accessed": "2026-09-29",
+              "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ cam specs",
+              "note": "'1JZ-GTE non-vvti stock' 'lift 7.69/7.95' 'duration (adv) 224°/228°' 'duration @1mm 189.1°/194.1°'."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+              "accessed": "2026-09-29",
+              "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'The first generation 1JZ-GTE has the intake valves with 224° of duration, valve lift is 7.69 mm (0.30 in) and the exhaust valve duration is 228°, valve lift is 7.95 mm (0.31 in).'"
+            },
+            {
+              "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+              "accessed": "2026-09-29",
+              "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+              "note": "'1JZ-GTE camshaft specifications: duration - 224/228 deg (intake/exhaust), valve lift 7.69/7.95 mm (intake/exhaust).'"
+            }
+          ],
+          "note": "Advertised duration; ESB gives 189.1° at 1 mm lift."
+        },
+        "exhaustDuration": {
+          "value": 228,
+          "unit": "deg",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-cam-specs/",
+              "accessed": "2026-09-29",
+              "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ cam specs",
+              "note": "'duration (adv) 224°/228°' (intake/exhaust)."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+              "accessed": "2026-09-29",
+              "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'the exhaust valve duration is 228°'."
+            }
+          ],
+          "note": "ESB gives 194.1° at 1 mm lift."
+        },
+        "intakeLift": {
+          "value": 7.69,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-cam-specs/",
+              "accessed": "2026-09-29",
+              "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ cam specs",
+              "note": "'lift 7.69/7.95' (intake/exhaust)."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+              "accessed": "2026-09-29",
+              "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'valve lift is 7.69 mm (0.30 in)'."
+            }
+          ]
+        },
+        "exhaustLift": {
+          "value": 7.95,
+          "unit": "mm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.eatsleepboost.lt/tech-info/jz-tech-info/1jz-2jz-cam-specs/",
+              "accessed": "2026-09-29",
+              "title": "Eat Sleep BOOST (Lithuanian JZ/Nissan specialist) tech page: 1JZ/2JZ cam specs",
+              "note": "'lift 7.69/7.95' (intake/exhaust)."
+            },
+            {
+              "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+              "accessed": "2026-09-29",
+              "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+              "note": "'valve lift is 7.95 mm (0.31 in)'."
+            }
+          ]
+        }
+      },
+      "ecu": {
+        "value": "89661-22480 (JZX90 Mark II Tourer V 5MT, 1992-10 to 1994-09); other chassis and gearboxes not checked",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/site/detail_cat.php?p=ODk2NjF8Q09NUFVURVIsIEVOR0lORSBDT05UUk9MfHRveW90YXxqcHxtYXJrLTJ8anp4OTAtYXRtdnp8MTk5Mnw1XzMxMTE3MF8wMDNffA==",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX90-ATMVZ, 89661 COMPUTER, ENGINE CONTROL",
+            "note": "'89661 - COMPUTER, ENGINE CONTROL' '89661-22480' ... '(10/1992 - 09/1994)'."
+          }
+        ],
+        "note": "Example only: every chassis, gearbox and build period has its own ECU number. The twin-turbo ECU reads a vacuum (MAP) sensor: the JZX90 fuel-injection group lists 89420 SENSOR ASSY, VACUUM, which the JZX100 group lacks."
+      },
+      "variableValveTiming": {
+        "value": "none",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+            "accessed": "2026-09-29",
+            "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'VVT-i (Variable Valve Timing with intelligence) since 1996'."
+          },
+          {
+            "url": "https://www.motorreviewer.com/engine.php?engine_id=148",
+            "accessed": "2026-09-29",
+            "title": "Toyota 2.5L 1JZ-GTE/GE/FSE Engine Specs (motorreviewer.com, spec aggregator)",
+            "note": "'Like the 1JZ-GE, the 1JZ-GTE went through some changes in 1996.' ... 'Toyota’s engineers also added the VVT-i system for the intake'."
+          }
+        ],
+        "note": "Toyota's parts catalogue lists a 'VALVE ASSY, CAMSHAFT TIMING OIL CONTROL' in the JZX100 1JZ-GTE cylinder-head group and none in the JZX90 group (not quoted: it is image-map text)."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+              "note": "'最高出力 280ps(206kW)/6200rpm' (max output)."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最高出力 280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001121/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX90 (1992-10) (1001121)",
+              "note": "JZX90 Tourer V 5MT: '280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://archive.org/download/1_20260118_20260118_1126/13.png",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser (X90) catalogue (brochure), Japan, printed 1992-10-29, pp. 24-25 engine page (scan on archive.org, item 1_20260118_20260118_1126, image 13.png)",
+              "note": "1JZ twin-turbo panel: '最高出力 ネット280PS/6,200r.p.m.' (read from the page image, pp. 24-25)."
+            }
+          ],
+          "note": "Same rating for every twin-turbo chassis and gearbox read: JZX81 4AT, JZX90 5MT and 4AT, JZA70 5MT, JZZ30 5MT (goo-net / toyota.jp)."
+        },
+        "powerRpm": {
+          "value": 6200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+              "note": "'280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+              "note": "'280ps(206kW)/6200rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 37.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+              "note": "'最大トルク 37.0kg・m(362.8N・m)/4800rpm' (max torque)."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最大トルク 37.0kg・m(362.8N・m)/ 4800rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001106/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 4AT, E-JZX90 (1992-10) (1001106)",
+              "note": "JZX90 Tourer V 4AT: '37.0kg・m(362.8N・m)/4800rpm'."
+            },
+            {
+              "url": "https://archive.org/download/1_20260118_20260118_1126/13.png",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser (X90) catalogue (brochure), Japan, printed 1992-10-29, pp. 24-25 engine page (scan on archive.org, item 1_20260118_20260118_1126, image 13.png)",
+              "note": "1JZ twin-turbo panel: '最大トルク ネット37.0kg-m/4,800r.p.m.' (read from the page image, pp. 24-25)."
+            }
+          ],
+          "note": "engine-specs.net and Wikipedia print 363 Nm, the rounded conversion of 37.0 kgf·m; the catalogues print 362.8 N·m."
+        },
+        "torqueRpm": {
+          "value": 4800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001172/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08) (1001172)",
+              "note": "'37.0kg・m(362.8N・m)/4800rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199008/1001172/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II GT Twin Turbo 4AT, E-JZX81 (1990-08 to 1992-10) (toyota.jp, Toyota's own used-car site)",
+              "note": "'37.0kg・m(362.8N・m)/ 4800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Manual and automatic cars carry identical ratings (JZX90 Tourer V 5MT and 4AT pages). The JZX81 GT Twin Turbo was automatic only (Toyota’s 1993 Chaser brochure: 今回マニュアル車を新設定しました, a manual car is newly offered this time); the R154 5-speed came in the JZA70, JZZ30 and JZX90. Shim-over-bucket valvetrain: Toyota lists separate 13751 LIFTER, VALVE and 13753 SHIM, VALVE ADJUSTING (shims 2.50 mm upward in 0.05 mm steps, part numbers 13753-74010 on) for the JZX90. Cylinder head 11101-88400 and head gasket 11115-88400 differ from the VVT-i parts (Toyota catalogue). Stock boost was not found in a Toyota document (motorreviewer.com says 10 psi / 0.7 bar), and stock injector size was not found per generation (ESB and motorreviewer.com: 380 cc, high impedance)."
+    },
+    {
+      "id": "jdm-vvti",
+      "name": "1JZ-GTE VVT-i single turbo, JDM, 1996-2006",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1996-08",
+          "to": "2006-04"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-SOARER/199608/1000876/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Soarer 2.5GT-T 5MT, E-JZZ30 (1996-08 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+            "note": "Page title 'ソアラ(1996年8月～1997年8月) ２．５ＧＴ－Ｔ'; '圧縮比 9.0'."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARKII_BLIT/200412/10025227/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Mark II Blit 2.5iR-V 4AT, GH-JZX110W (2004-12 to 2006-04) (toyota.jp, Toyota's own used-car site)",
+            "note": "Page title 'マークIIブリット(2004年12月～2006年4月) ２．５ｉＲ－Ｖ'."
+          },
+          {
+            "url": "https://www.japan-parts.eu/?parttt=&part=1210246040&regi=JP&cars=ok",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): part-number search 12102-46040",
+            "note": "'JZX110W-AWPVZ 01/2002 - 04/2006 1JZGTE WG IRV ATM 4FC'."
+          }
+        ],
+        "note": "First VVT-i car: JZZ30 Soarer 2.5GT-T (1996-08), then the JZX100 Tourer V / Roulant G (1996-09). Last: the Mark II Blit iR-V wagon, whose last catalogue window ends 2006-04 and whose parts-catalogue production window ends 04/2006. Wikipedia says 1JZ production ran to 2007, which fits the non-turbo Blit and Crown Estate (1JZ-FSE) to 2007-06, not the 1JZ-GTE."
+      },
+      "fittedTo": ["JZZ30", "JZX100", "JZS171", "JZS171W", "JZX110", "JZX110W"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+            "note": "'圧縮比 9.0'."
+          },
+          {
+            "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+            "accessed": "2026-09-29",
+            "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+            "note": "'圧縮比 9.0'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1008664/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II Grande iR-V 5MT, GH-JZX110 (2000-10) (1008664)",
+            "note": "JZX110 Grande iR-V: '圧縮比 9.0'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/CROWN/1000814/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Crown Athlete V 4AT, GH-JZS171 (1999-09) (1000814)",
+            "note": "'圧縮比 9.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+            "note": "'過給機 ターボ' (turbo; the twin-turbo pages say ツインターボ)."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+            "accessed": "2026-09-29",
+            "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'2-st gen: Single CT15B turbocharger'."
+          },
+          {
+            "url": "https://car-me.jp/articles/7330",
+            "accessed": "2026-09-29",
+            "title": "CARPRIME (car-me.jp, Japanese car media): Toyota 1JZ-GTE engine article",
+            "note": "'直列6気筒エンジンに装着されるセラミック製ターボは、2基から1基に変更。' (the ceramic turbo went from two to one)."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Toyota CT15B",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+                "accessed": "2026-09-29",
+                "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+                "note": "'2-st gen: Single CT15B turbocharger'."
+              },
+              {
+                "url": "https://takumi-motoroil.co.jp/blog/engineoil-car/engineoil-car-172/",
+                "accessed": "2026-09-29",
+                "title": "Chaser JZX100 engine 1JZ-GTE explained (TAKUMI motor oil, Japanese oil maker blog)",
+                "note": "'単基のシングルターボチャージャー（CT15B型）へと変更' (changed to a single turbocharger, type CT15B)."
+              },
+              {
+                "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB1JZ-GTE",
+                "accessed": "2026-09-29",
+                "title": "トヨタ・1JZ-GTE (Japanese Wikipedia)",
+                "note": "'CT15B型セラミック製シングルターボエンジンへと改良された。' (improved to a CT15B ceramic single-turbo engine)."
+              }
+            ],
+            "note": "Not confirmed from a Toyota parts catalogue."
+          },
+          "count": 1,
+          "notes": "Ceramic turbine wheel: Toyota's 2001 Chaser brochure (OCR) 'BEAMS 1JZ-GTE VVT-i( ツ イン カム 24 タ ー ボ ) WV 1 と セラ ミッ ク' '製 タ ー ボ' (VVT-i and a ceramic turbo); CARPRIME and Japanese Wikipedia agree. Japanese Wikipedia also reports Modellista/Yamaha specials of the JZX110 Mark II (Fortuna YAMAHA Power) and Verossa (Speciale) with a special turbo, 300 PS and 39.7 kgf·m at 2,400 rpm; not found in a Toyota catalogue, so not modelled."
+        }
+      ],
+      "boost": {
+        "value": 67.3,
+        "unit": "kPa",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/download/jzx-100-repair-manual-combined/JZX100%20Repair%20Manual%20-%20Combined_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Toyota Motor Corporation Service Department: Mark II / Chaser / Cresta repair book (修理書) for JZX100/101/105, September 1996; English machine translation uploaded to archive.org (item jzx-100-repair-manual-combined), OCR text layer",
+            "note": "Turbocharger boost pressure check: '(2) Engine speed 6000r/min or more, 1st gear (L range) and acceleration' ... 'value 59.3-67.3kPa {0.60~0.69kgf/cm7}' (OCR of kgf/cm²)."
+          },
+          {
+            "url": "https://archive.org/download/jzx-100-repair-manual-combined/JZX100%20Repair%20Manual%20-%20Combined.pdf",
+            "accessed": "2026-09-29",
+            "title": "Toyota Motor Corporation Service Department: Mark II / Chaser / Cresta repair book for JZX100/101/105, September 1996; English machine translation on archive.org (item jzx-100-repair-manual-combined), page images of the PDF",
+            "note": "Page 2-125 (PDF p. 234): 'Engine speed 6000r/min or more, 1st gear (L range) and acceleration' 'Measure the boost pressure when running with the cell fully open.' ('cell' is the machine translation's word for the throttle) 'standard value 59.3~67.3kPa {0.60~0.69kgf/cm²}' (read from the page image, p. 234)."
+          }
+        ],
+        "note": "Upper end of the service standard range (59.3-67.3 kPa, 0.60-0.69 kgf/cm², about 8.6-9.8 psi) measured at 6,000 rpm or more at full throttle in first gear on the JZX100 (Toyota repair book, 1996). Peak boost lower in the rev range may differ slightly. The twin-turbo engine has no Toyota figure in the sources read."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.cockpit.co.jp/shop/zoom/diary/48103/",
+            "accessed": "2026-09-29",
+            "title": "JZX100 Chaser intercooler front-mount conversion (Style Cockpit Zoom, tyre and custom shop, staff diary)",
+            "note": "'純正インタークーラーは、右側ヘッドライト下にあります。' (the factory intercooler is under the right-hand headlight); the job title is 'インタークーラー前置化' (moving the intercooler to the front)."
+          },
+          {
+            "url": "https://ameblo.jp/vertex-auto/entry-12174423409.html",
+            "accessed": "2026-09-29",
+            "title": "JZX100 Chaser intercooler fitting (Vertex, workshop blog on ameblo)",
+            "note": "'この車の純正インタークーラーはフロント右側にいらっしゃいます' (the factory intercooler sits at the front right) and '純正インタークーラーは小さくてショボい' (small)."
+          },
+          {
+            "url": "https://archive.org/download/jzx-100-repair-manual-combined/JZX100%20Repair%20Manual%20-%20Combined_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Toyota Motor Corporation Service Department: Mark II / Chaser / Cresta repair book (修理書) for JZX100/101/105, September 1996; English machine translation uploaded to archive.org (item jzx-100-repair-manual-combined), OCR text layer",
+            "note": "Intercooler removal (1JZ-GTE): 'Remove and install the front' 'bumper (Refer to'; the exploded view shows an intercooler air duct."
+          }
+        ],
+        "note": "Checked for the JZX100 only: a small air-to-air core at the front right corner behind the bumper, under the headlight, fed by its own duct (Toyota repair book exploded view, PDF p. 236), not a full-width core in front of the radiator; aftermarket kits (GReddy, TRUST) move it to in front of the radiator. The JZZ30, JZS171 and JZX110 positions were not checked."
+      },
+      "ecu": {
+        "value": "89661-22790 (JZX100 Mark II Tourer V 5MT, from 1996-09); other chassis and gearboxes not checked",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.japan-parts.eu/site/detail_cat.php?p=ODk2NjF8Q09NUFVURVIsIEVOR0lORSBDT05UUk9MfHRveW90YXxqcHxtYXJrLTJ8anp4MTAwLWF0bXZ6fDE5OTZ8NF8zMTExODBfMDA0X3w=",
+            "accessed": "2026-09-29",
+            "title": "Toyota electronic parts catalogue, Japan region (japan-parts.eu mirror): Mark II JZX100-ATMVZ, 89661 COMPUTER, ENGINE CONTROL",
+            "note": "'89661 - COMPUTER, ENGINE CONTROL' '89661-22790' ... '(09/1996 - )'."
+          }
+        ],
+        "note": "Example only: every chassis, gearbox and build period has its own ECU number."
+      },
+      "variableValveTiming": {
+        "value": "intake-continuous",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+            "note": "'VVT-i[Variable Valve Timng-intelligent( 連 続 可変 バル ブタ イミ ング 機構 ) )' (continuously variable valve timing) ... 'が 吸気 バル プ の 開閉 時 期 を 運転 状況 に 応じ て' (controls the intake valve timing to suit driving conditions)."
+          },
+          {
+            "url": "https://www.engine-specs.net/toyota/1jz-gte.html",
+            "accessed": "2026-09-29",
+            "title": "Toyota 1JZ-GTE Engine Specs (engine-specs.net, spec aggregator)",
+            "note": "'VVT-i system on the inlet camshaft'."
+          },
+          {
+            "url": "https://takumi-motoroil.co.jp/blog/engineoil-car/engineoil-car-172/",
+            "accessed": "2026-09-29",
+            "title": "Chaser JZX100 engine 1JZ-GTE explained (TAKUMI motor oil, Japanese oil maker blog)",
+            "note": "'吸気カムシャフトの位相をエンジン回転数や動的負荷に応じて無段階かつリアルタイムに最適油圧制御する連続位相可変バルブタイミング機構' (continuously variable intake-cam phasing)."
+          }
+        ]
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+              "note": "'最高出力 280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最高出力 280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+              "note": "'Maximum Power:NET206kW(280PS) /6,200r.p.m.'"
+            }
+          ],
+          "note": "Same rating on every VVT-i chassis and gearbox read: JZX100 5MT and 4AT, JZX110 5MT and 4AT, Grande G-tb, JZS171 Athlete V, Verossa VR25, Blit iR-V, JZZ30 2.5GT-T, Cresta Roulant G (goo-net / toyota.jp)."
+        },
+        "powerRpm": {
+          "value": 6200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+              "note": "'280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'280ps(206kW)/6200rpm'."
+            },
+            {
+              "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+              "note": "'NET206kW(280PS) /6,200r.p.m.'"
+            }
+          ]
+        },
+        "torque": {
+          "value": 38.5,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+              "note": "'最大トルク 38.5kg・m(377.6N・m)/2400rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'最大トルク 38.5kg・m(377.6N・m)/ 2400rpm'."
+            },
+            {
+              "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+              "note": "'Maximum Torque:NET378N・m (38.5kg・m) /2,400r.p.m.'"
+            }
+          ],
+          "note": "The catalogues print 377.6 N·m for the 1996-2000 cars and 378 N·m from 2000 (same 38.5 kgf·m). engine-specs.net prints 38.6 kg·m; Wikipedia 379 N·m."
+        },
+        "torqueRpm": {
+          "value": 2400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/TOYOTA/MARK_II/1001095/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Toyota Mark II Tourer V 5MT, E-JZX100 (1996-09) (1001095)",
+              "note": "'38.5kg・m(377.6N・m)/2400rpm'."
+            },
+            {
+              "url": "https://toyota.jp/ucar/catalog/brand-TOYOTA/car-MARK_II/199609/1001095/",
+              "accessed": "2026-09-29",
+              "title": "Toyota認定中古車 catalogue: Mark II Tourer V 5MT, E-JZX100 (1996-09 to 1997-08) (toyota.jp, Toyota's own used-car site)",
+              "note": "'38.5kg・m(377.6N・m)/ 2400rpm'."
+            },
+            {
+              "url": "https://archive.org/download/2001-toyota-chaser-brochure.-japan-5-2001.-nb-0016-0105/2001%20Toyota%20Chaser%20Brochure.%20Japan%2C%205-2001.%20NB0016-0105_djvu.txt",
+              "accessed": "2026-09-29",
+              "title": "Toyota: Chaser catalogue (brochure), Japan, May 2001 (print code NB0016-0105), scan on archive.org, OCR text layer",
+              "note": "'(38.5kg・m) /2,400r.p.m.'"
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Manual and automatic ratings are identical. Gearboxes: R154 5-speed (JZZ30, JZX100 Tourer V, JZX110 iR-V, Verossa VR25) or 4-speed automatic (A341E on the JZX100 per Toyota's repair book; the Crown Athlete V, Blit iR-V and Cresta Roulant G were automatic only). Hardware changes versus the twin turbo, from Toyota's parts catalogue: new cylinder head (11101-88400 to 11101-88410), head gasket (11115-88400 to 11115-88410), pistons (13101-88400 to 13101-88410) and camshafts (13501/13502-88400 to 13501-88410 / 13502-88401); the connecting rods (13201-46030), rod bolts and manual flywheel (13405-46030) carry over. The valvetrain stays shim-over-bucket: Toyota's JZX100 repair book replaces shims from above with a lifter press (SST 09248-05410/05420) and says 'Install the shim with the coated part (gold side) facing up. (Excluding 2JZ-GE)'; the new shims (13753-46030 on) come in 0.02 mm steps from 2.50 mm. Cam specifications for the VVT-i engine were not found. Oil capacity 5.4 L with filter is the JZX100 figure (top-level oilCapacity)."
+    }
+  ]
+}

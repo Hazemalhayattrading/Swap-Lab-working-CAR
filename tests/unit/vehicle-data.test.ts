@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { CarSchema, type Car } from '../../src/data/schema/car';
-import { EngineSchema, type Engine } from '../../src/data/schema/engine';
+import { EngineSchema, type Engine, type PistonEngine } from '../../src/data/schema/engine';
+import { REQUIRED_SWAP_SLOTS, SwapSchema } from '../../src/data/schema/swap';
 import { validateData, type DataFile } from '../../src/data/validate';
 import { convert } from '../../src/data/units';
 import {
@@ -23,12 +24,22 @@ const carFiles = asFiles(
 const engineFiles = asFiles(
   import.meta.glob('../../src/data/engines/*.json', { eager: true, import: 'default' }),
 );
+const swapFiles = asFiles(
+  import.meta.glob('../../src/data/swaps/*.json', { eager: true, import: 'default' }),
+);
 const cars = carFiles.map((f) => CarSchema.parse(f.json));
 const engines = engineFiles.map((f) => EngineSchema.parse(f.json));
+const swaps = swapFiles.map((f) => SwapSchema.parse(f.json));
 
 const car = (id: string): Car => {
   const found = cars.find((c) => c.id === id);
   if (!found) throw new Error(`no car ${id}`);
+  return found;
+};
+/** A piston engine by id, so its variants carry the piston-only fields. */
+const piston = (id: string): PistonEngine => {
+  const found = engines.find((e) => e.id === id);
+  if (!found || found.layout === 'rotary') throw new Error(`no piston engine ${id}`);
   return found;
 };
 const variant = (engineId: string, variantId: string) => {
@@ -39,8 +50,8 @@ const variant = (engineId: string, variantId: string) => {
 };
 
 describe('committed vehicle data', () => {
-  it('passes validation, including trims pointing at real engine variants', () => {
-    const report = validateData([...carFiles, ...engineFiles], {
+  it('passes validation, including trims and swaps pointing at real cars and engines', () => {
+    const report = validateData([...carFiles, ...engineFiles, ...swapFiles], {
       sizeOf: () => undefined,
       dependencyVersion: () => undefined,
       dependencies: [],
@@ -50,7 +61,7 @@ describe('committed vehicle data', () => {
     expect(report.issues).toEqual([]);
   });
 
-  it('covers the Phase 1 roster so far (parts 1, 2 and 3a)', () => {
+  it('covers the full Phase 1 roster: 5 cars and the 12 launch-swap engines', () => {
     expect(cars.map((c) => c.id).sort()).toEqual([
       'bmw-3-series-e46',
       'mazda-rx-7-fd3s',
@@ -58,24 +69,54 @@ describe('committed vehicle data', () => {
       'nissan-silvia-s15',
       'toyota-supra-jza80',
     ]);
-    expect(engines.map((e) => e.id).sort()).toEqual([
-      '13b-rew',
-      '20b-rew',
-      '2jz-ge',
-      '2jz-gte',
-      'm54b30',
-      's54b32',
-      'sr20de',
-      'sr20det',
-      'vq35de',
-      'vq35hr',
-    ]);
+    // BUILD_PROMPT section 3, "Engine swaps to support at launch", by engine code.
+    const launch: Record<string, string> = {
+      '2JZ-GTE': '2jz-gte',
+      '1JZ-GTE': '1jz-gte',
+      SR20DET: 'sr20det',
+      'RB25DET NEO': 'rb25det-neo',
+      RB26DETT: 'rb26dett',
+      VQ35HR: 'vq35hr',
+      LS3: 'ls3',
+      LS1: 'ls1',
+      K24: 'k24',
+      S54B32: 's54b32',
+      '13B-REW': '13b-rew',
+      '20B-REW': '20b-rew',
+    };
+    const swapEngines = engines.filter((e) => e.role === 'launch-swap');
+    expect(Object.fromEntries(swapEngines.map((e) => [e.code, e.id]))).toEqual(launch);
+    // Engines that power stock trims but aren't swap options.
     expect(
       engines
-        .filter((e) => e.role === 'launch-swap')
+        .filter((e) => e.role === 'stock-only')
         .map((e) => e.id)
         .sort(),
-    ).toEqual(['13b-rew', '20b-rew', '2jz-gte', 's54b32', 'sr20det', 'vq35hr']);
+    ).toEqual(['2jz-ge', 'm54b30', 'sr20de', 'vq35de']);
+  });
+
+  it('records the hardware for every LS launch swap, for both the LS1 and the LS3', () => {
+    // BUILD_PROMPT section 3: S15<-LS, 350Z<-LS, E46<-LS, RX-7<-LS, Supra<-LS.
+    expect(swaps.map((s) => s.car).sort()).toEqual([
+      'bmw-3-series-e46',
+      'mazda-rx-7-fd3s',
+      'nissan-350z-z33',
+      'nissan-silvia-s15',
+      'toyota-supra-jza80',
+    ]);
+    for (const swap of swaps) {
+      expect(swap.engines, swap.id).toEqual(['ls1', 'ls3']);
+      // Each required slot has a part for each engine: a 24x LS1 and a 58x LS3
+      // need different ECUs and harnesses, so "some part fills it" isn't enough.
+      for (const engine of swap.engines) {
+        for (const slot of REQUIRED_SWAP_SLOTS) {
+          const fits = swap.parts.filter(
+            (p) => p.fills.includes(slot) && (p.engines?.includes(engine) ?? true),
+          );
+          expect(fits.length, `${swap.id} ${engine} ${slot}`).toBeGreaterThan(0);
+        }
+      }
+    }
   });
 
   // Spot checks of headline figures against what the sources print, so a bad
@@ -261,6 +302,115 @@ describe('committed vehicle data', () => {
     expect(trim('jdm-s6-spirit-r-type-c-4at').engine.variant).toBe('fd3s-jdm-4at');
     expect(trim('audm-1995-sp-5mt').curbWeight).toMatchObject({ value: 1218, unit: 'kg' });
     expect(trim('usdm-1993-base-5mt').curbWeight).toMatchObject({ value: 2789, unit: 'lb' });
+  });
+
+  it('K24: 2,354 cc; K24A2 200 then 205 hp; JDM K24A 200 PS; VTEC switch points', () => {
+    const e = engines.find((x) => x.id === 'k24');
+    if (e?.layout !== 'inline') throw new Error('K24 must be an inline engine');
+    const k24 = (id: string) => {
+      const found = e.variants.find((x) => x.id === id);
+      if (!found) throw new Error(`no K24 variant ${id}`);
+      return found;
+    };
+    expect(e.displacement).toMatchObject({ value: 2354, unit: 'cc', confidence: 'verified' });
+    expect(e.bellhousing?.value).toBe('honda-k');
+    const tsx04 = k24('k24a2-tsx-2004');
+    expect(tsx04.output.power).toMatchObject({ value: 200, unit: 'hp', confidence: 'verified' });
+    expect(tsx04.output.powerRpm.value).toBe(6800);
+    expect(tsx04.camProfileSwitching?.valves.value).toBe('intake-and-exhaust');
+    expect(tsx04.camProfileSwitching?.switchRpm?.value).toBe(6000);
+    expect(k24('k24a2-tsx-2006').output.power).toMatchObject({ value: 205, unit: 'hp' });
+    expect(k24('k24a-jdm-rbb-200ps').output.power).toMatchObject({
+      value: 200,
+      unit: 'PS',
+      confidence: 'verified',
+    });
+    expect(k24('k24z3-tsx').camProfileSwitching?.valves.value).toBe('intake');
+  });
+
+  it('LS1: 5,665 cc; GM rates the 1998 F-body 305 hp / 335 lb-ft and weighs it at 214.5 kg dressed', () => {
+    const e = piston('ls1');
+    expect(e.displacement).toMatchObject({ value: 5665, unit: 'cc', confidence: 'verified' });
+    expect(e.firingOrder.value).toEqual([1, 8, 7, 2, 6, 5, 4, 3]);
+    expect(e.dryWeight).toMatchObject({ value: 214.5, unit: 'kg' });
+    expect(e.bellhousing?.value).toBe('gm-ls');
+    const fbody = variant('ls1', 'fbody-1998-2000').output;
+    expect(fbody.power).toMatchObject({ value: 305, unit: 'hp', confidence: 'verified' });
+    expect(fbody.torque).toMatchObject({ value: 335, unit: 'lb-ft' });
+    expect(fbody.standard).toBe('SAE-net');
+    expect(variant('ls1', 'c5-1997-2000').output.power).toMatchObject({ value: 345, unit: 'hp' });
+    const pans = e.sumpOptions ?? [];
+    expect(pans.find((s) => s.partNumber?.value === '12628771')?.position.value).toBe('rear');
+    expect(pans.some((s) => s.kind === 'maker-swap-part')).toBe(true);
+  });
+
+  it('LS3: 6,162 cc, 183 kg; C6 430 hp; crate 19540155 430 hp / 425 lb-ft; 6,600 rpm valvetrain', () => {
+    const e = piston('ls3');
+    expect(e.displacement).toMatchObject({ value: 6162, unit: 'cc', confidence: 'verified' });
+    expect(e.dryWeight).toMatchObject({ value: 183, unit: 'kg', confidence: 'verified' });
+    expect(variant('ls3', 'c6-corvette').output.power).toMatchObject({ value: 430, unit: 'hp' });
+    const crate = variant('ls3', 'crate-ls3').output;
+    expect(crate.power).toMatchObject({ value: 430, unit: 'hp', confidence: 'verified' });
+    expect(crate.torque).toMatchObject({ value: 425, unit: 'lb-ft' });
+    expect(e.internals?.pistons.value).toBe('hypereutectic');
+    const valvetrain = e.internals?.reportedLimits.find((l) => l.component === 'valvetrain');
+    expect(valvetrain?.value).toMatchObject({ value: 6600, unit: 'rpm', confidence: 'verified' });
+  });
+
+  it('RB26DETT: 2,568 cc, 870 x 665 x 675 mm (Nissan); torque 36.0 / 37.5 / 40.0 kgf·m by generation', () => {
+    const e = piston('rb26dett');
+    expect(e.displacement).toMatchObject({ value: 2568, unit: 'cc', confidence: 'verified' });
+    expect(e.dimensions?.length).toMatchObject({ value: 870, unit: 'mm' });
+    expect(e.dimensions?.width.value).toBe(665);
+    expect(e.dimensions?.height.value).toBe(675);
+    expect(e.sump).toMatchObject({ value: 'front', confidence: 'verified' });
+    const torque = (id: string) => variant('rb26dett', id).output.torque;
+    expect(torque('bnr32')).toMatchObject({ value: 36, unit: 'kgf·m', confidence: 'verified' });
+    expect(torque('bcnr33').value).toBe(37.5);
+    expect(torque('bnr34').value).toBe(40);
+    for (const v of e.variants) {
+      expect(v.output.power, v.id).toMatchObject({ value: 280, unit: 'PS' });
+      expect(v.induction.value, v.id).toBe('twin-turbo-parallel');
+    }
+  });
+
+  it('RB25DET NEO: ER34 5MT 35.0 then 37.0 kgf·m, automatics 34.0; front-sump 2WD pan', () => {
+    const e = piston('rb25det-neo');
+    expect(e.displacement).toMatchObject({ value: 2498, unit: 'cc', confidence: 'verified' });
+    const torque = (id: string) => variant('rb25det-neo', id).output.torque;
+    expect(torque('er34-mt-1998')).toMatchObject({
+      value: 35,
+      unit: 'kgf·m',
+      confidence: 'verified',
+    });
+    expect(torque('er34-mt-2000')).toMatchObject({ value: 37, confidence: 'verified' });
+    expect(torque('er34-at')).toMatchObject({ value: 34, confidence: 'verified' });
+    expect(variant('rb25det-neo', 'er34-mt-1998').output.power).toMatchObject({
+      value: 280,
+      unit: 'PS',
+    });
+    expect(e.bellhousing?.value).toBe('nissan-rb');
+    const pan = e.sumpOptions?.find((s) => s.partNumber?.value === '11110-08U00');
+    expect(pan?.position).toMatchObject({ value: 'front', confidence: 'verified' });
+  });
+
+  it('1JZ-GTE: twin turbo 37.0 kgf·m at 4,800 rpm, VVT-i 38.5 at 2,400; JZX front and JZA70 rear sumps', () => {
+    const e = piston('1jz-gte');
+    expect(e.displacement).toMatchObject({ value: 2491, unit: 'cc', confidence: 'verified' });
+    const twin = variant('1jz-gte', 'jdm-twin-turbo');
+    expect(twin.output.torque).toMatchObject({ value: 37, unit: 'kgf·m', confidence: 'verified' });
+    expect(twin.output.torqueRpm.value).toBe(4800);
+    expect(twin.induction.value).toBe('twin-turbo-parallel');
+    const vvti = variant('1jz-gte', 'jdm-vvti');
+    expect(vvti.output.torque).toMatchObject({ value: 38.5, confidence: 'verified' });
+    expect(vvti.output.torqueRpm.value).toBe(2400);
+    expect(vvti.induction.value).toBe('single-turbo');
+    expect(e.bellhousing?.value).toBe('toyota-jz');
+    const pans = e.sumpOptions ?? [];
+    const donor = (chassis: string) =>
+      pans.find((s) => s.kind === 'factory' && s.fittedTo?.some((f) => f.startsWith(chassis)));
+    expect(donor('JZX100')?.position.value).toBe('front');
+    expect(donor('JZA70')?.position.value).toBe('rear');
   });
 
   it('every trim has a sourced final drive and a gearbox with matching ratios', () => {

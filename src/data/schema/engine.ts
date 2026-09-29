@@ -104,6 +104,17 @@ export const EngineVariantSchema = z.strictObject({
   variableValveTiming: sourced(
     z.enum(['none', 'intake-on-off', 'intake-continuous', 'intake-and-exhaust-continuous']),
   ),
+  /**
+   * Cam-profile switching (Honda VTEC): above `switchRpm` a longer, higher-lift
+   * lobe takes over. `intake` also covers Honda's economy i-VTEC, which runs one
+   * intake valve nearly shut at low rpm. Left out when there is none.
+   */
+  camProfileSwitching: z
+    .strictObject({
+      valves: sourced(z.enum(['intake', 'intake-and-exhaust'])),
+      switchRpm: Rpm.optional(),
+    })
+    .optional(),
   output: Output,
   torqueCurve: TorqueCurve.optional(),
   /** Tachometer redline. */
@@ -118,6 +129,7 @@ export const EngineVariantSchema = z.strictObject({
 export const RotaryEngineVariantSchema = EngineVariantSchema.omit({
   cams: true,
   variableValveTiming: true,
+  camProfileSwitching: true,
 });
 export type EngineVariant =
   z.infer<typeof EngineVariantSchema> | z.infer<typeof RotaryEngineVariantSchema>;
@@ -132,6 +144,31 @@ function reportedLimit<const C extends readonly [string, ...string[]]>(component
     context: z.string().min(1),
   });
 }
+
+const SumpPosition = z.enum(['front', 'centre', 'rear']);
+
+/**
+ * An oil pan the engine can run, and where its sump sits along the crank
+ * (front = the crank-pulley end). Swaps pick one that clears the car's
+ * crossmember, steering rack and ground: the 2JZ needs a front sump in an S14,
+ * the LS an F-body or a swap pan.
+ * - `factory`: fitted to a production engine; `fittedTo` names the donors.
+ * - `maker-swap-part`: sold by the engine's maker for swaps (e.g. GM's LS retrofit pan).
+ * - `aftermarket`: a third-party pan made for many swaps. A pan made for one
+ *   car belongs in that car's swap file instead (src/data/swaps/).
+ */
+const SumpOption = z.strictObject({
+  /** As the maker or the source names it, e.g. "F-body (Camaro/Firebird) pan". */
+  name: z.string().min(1),
+  kind: z.enum(['factory', 'maker-swap-part', 'aftermarket']),
+  position: sourced(SumpPosition),
+  /** Donor vehicles that came with it, descriptive only (e.g. "JZS161 Aristo"). */
+  fittedTo: z.array(z.string().min(1)).min(1).optional(),
+  partNumber: sourced(z.string().min(1)).optional(),
+  /** Depth below the block rail, where a source prints it. */
+  depth: Length.optional(),
+  notes: z.string().min(1).optional(),
+});
 
 /** Fields every engine has, piston or rotary. */
 const common = {
@@ -160,7 +197,12 @@ const common = {
   dimensions: z.strictObject({ length: Length, width: Length, height: Length }).optional(),
   /** Gearbox bolt pattern, as a shared id, e.g. "nissan-sr20" or "toyota-jz". */
   bellhousing: sourced(SlugSchema).optional(),
-  sump: sourced(z.enum(['front', 'centre', 'rear'])).optional(),
+  /**
+   * Sump position of the engine as fitted to its reference car (the note says
+   * which). Where donors differ, `sumpOptions` lists every pan.
+   */
+  sump: sourced(SumpPosition).optional(),
+  sumpOptions: z.array(SumpOption).min(1).optional(),
   oilCapacity: measured(UNITS.volume).optional(),
 };
 
@@ -184,11 +226,13 @@ const PistonEngineSchema = z.strictObject({
         reportedLimit([
           'bottom-end',
           'rods',
+          'rod-bolts',
           'pistons',
           'head-gasket',
           'crank',
           'oil-pump',
           'block',
+          'valvetrain',
         ]),
       ),
     })

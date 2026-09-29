@@ -1,0 +1,2437 @@
+{
+  "$comment": "Nissan RB25DET NEO (NEO Straight 6), launch swap. Researched 2026-09-29. Top-level hardware is the ER34 Skyline 25GT Turbo engine; variants split by rated output: ER34 5MT 1998-05 to 2000-07 (35.0 kgf·m), ER34 5MT from 2000-08 (37.0 kgf·m, own turbo, camshaft and ECU per the parts catalogue), ER34 4AT (34.0), WC34 Stagea (from 1998-08: 34.0 on the automatics, 35.0 on the 5MT 25t RS FOUR S, a separate variant), C35 Laurel (from 1998-09, 4AT, 34.0) and Y34 Cedric/Gloria 4WD (260 PS, later 250 PS). The ER34 25GT FOUR (ENR34) is not a NEO turbo: every 4WD Skyline R34 used the NA RB25DE. Primary sources: Nissan releases of 1998-05-25, 1998-08-31 (page images) and 2000-08-28, the English R34 Series service manual on archive.org (service data only), and the Nissan parts catalogue (EPC) read at megazip.net. JDM ratings are cross-checked on goo-net and Car Sensor. Weak points: dry weight (disputed, 180-260 kg) and outline dimensions come only from spec aggregators; crank and rod material only from an aggregator; the stock-internals limits are rules of thumb (Tomei, TorqueCars) and one owner dyno; the intercooler position is sourced for the ER34 only, and the 4WD sump position is inferred.",
+  "id": "rb25det-neo",
+  "code": "RB25DET NEO",
+  "manufacturer": "Nissan",
+  "family": "RB",
+  "role": "launch-swap",
+  "layout": "inline",
+  "cylinders": 6,
+  "displacement": {
+    "value": 2498,
+    "unit": "cc",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'総排気量 2498cc' (total displacement)."
+      },
+      {
+        "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+        "accessed": "2026-09-29",
+        "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+        "note": "'総排気量 2498cc'."
+      },
+      {
+        "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+        "accessed": "2026-09-29",
+        "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+        "note": "p. 8 spec table (25GT-X TURBO): 'Displacement (cc) 2,498' (read from the page image, p. 8)."
+      }
+    ]
+  },
+  "bore": {
+    "value": 86.0,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'内径×行程 86.0mm×71.7mm' (bore x stroke)."
+      },
+      {
+        "url": "https://er34.dg-works.jp/category1/entry3.html",
+        "accessed": "2026-09-29",
+        "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+        "note": "Spec table, RB25DET column: 'ボアｘストローク | 78.0×69.7 | 86.0×71.7 | 86.0×71.7' (bore x stroke for RB20DE, RB25DE, RB25DET)."
+      },
+      {
+        "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+        "accessed": "2026-09-29",
+        "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+        "note": "p. 8: 'Bore×Stroke (mm) 86.0×71.7' (read from the page image, p. 8)."
+      }
+    ]
+  },
+  "stroke": {
+    "value": 71.7,
+    "unit": "mm",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'内径×行程 86.0mm×71.7mm'."
+      },
+      {
+        "url": "https://er34.dg-works.jp/category1/entry3.html",
+        "accessed": "2026-09-29",
+        "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+        "note": "'ボアｘストローク | 78.0×69.7 | 86.0×71.7 | 86.0×71.7'."
+      },
+      {
+        "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+        "accessed": "2026-09-29",
+        "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+        "note": "p. 8: 'Bore×Stroke (mm) 86.0×71.7' (read from the page image, p. 8)."
+      }
+    ]
+  },
+  "camLayout": {
+    "value": "DOHC",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'水冷直列6気筒DOHC24バルブICターボ' (water-cooled inline 6, DOHC 24-valve, intercooled turbo)."
+      },
+      {
+        "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/492_skyline_25gt_turbo.html",
+        "accessed": "2026-09-29",
+        "title": "Nissan Heritage Collection No.492: Nissan Skyline 25GT Turbo (1998: ER34)",
+        "note": "'RB25DET (6-cyl. inline, 4-valve DOHC with turbo) 2,498cc'."
+      }
+    ]
+  },
+  "valvesPerCylinder": {
+    "value": 4,
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/492_skyline_25gt_turbo.html",
+        "accessed": "2026-09-29",
+        "title": "Nissan Heritage Collection No.492: Nissan Skyline 25GT Turbo (1998: ER34)",
+        "note": "'RB25DET (6-cyl. inline, 4-valve DOHC with turbo) 2,498cc'."
+      },
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'水冷直列6気筒DOHC24バルブICターボ' (24 valves, 6 cylinders)."
+      }
+    ]
+  },
+  "camDrive": {
+    "value": "belt",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_text.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR text-layer PDF",
+        "note": "PDF p. 207, SD-7 Engine Mechanical tightening torque table for the RB25DET (the page that lists the turbocharger): 'Cam pulley (INT) Cam pulley (EXH) Timing belt cover', 'Timing belt rear cover Tensioner pulley Idler pulley'."
+      },
+      {
+        "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+        "accessed": "2026-09-29",
+        "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+        "note": "'- Timing belt-driven valvetrain'."
+      }
+    ],
+    "note": "Toothed timing belt with tensioner and idler pulleys (Nissan R34 service manual torque table); enginetechspecs.com agrees but is an unsourced aggregator."
+  },
+  "blockMaterial": {
+    "value": "cast-iron",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://low-offset.com/nissan/rb25det-engine/",
+        "accessed": "2026-09-29",
+        "title": "Low Offset: Nissan RB25DET Engine: Reliability, Specs & Swap Info (spec aggregator)",
+        "note": "'RB25 engines used a similar cast-iron cylinder block to its predecessor, the RB20.'"
+      },
+      {
+        "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+        "accessed": "2026-09-29",
+        "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+        "note": "'The RB25DET uses a cast-iron block designed for high durability.'"
+      }
+    ],
+    "note": "Both are spec aggregators; no Nissan document that could be opened states the block material. Japanese Wikipedia (lead only) also says cast iron."
+  },
+  "headMaterial": {
+    "value": "aluminium",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://low-offset.com/nissan/rb25det-engine/",
+        "accessed": "2026-09-29",
+        "title": "Low Offset: Nissan RB25DET Engine: Reliability, Specs & Swap Info (spec aggregator)",
+        "note": "'The inline-six engine displaces 2,498-cc with four valves per cylinder, twin camshafts, and an aluminum cylinder head.'"
+      },
+      {
+        "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+        "accessed": "2026-09-29",
+        "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+        "note": "'The cast-iron block provides extreme strength, while the aluminum DOHC'."
+      }
+    ],
+    "note": "Aggregator sources only; no Nissan document opened states it."
+  },
+  "firingOrder": {
+    "value": [1, 5, 3, 6, 2, 4],
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_text.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR text-layer PDF",
+        "note": "PDF p. 206, SD-6 Engine Mechanical, Standard and Repair Limit, RB25DET: 'RB25DET 1-5-3-6-2-4' (the value in the Firing order row; row labels paired with values from the page image)."
+      },
+      {
+        "url": "https://low-offset.com/nissan/rb25det-engine/",
+        "accessed": "2026-09-29",
+        "title": "Low Offset: Nissan RB25DET Engine: Reliability, Specs & Swap Info (spec aggregator)",
+        "note": "'Firing Order: 1-5-3-6-2-4'."
+      },
+      {
+        "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+        "accessed": "2026-09-29",
+        "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+        "note": "'The firing order is 1-5-3-6-2-4.'"
+      }
+    ]
+  },
+  "fuelInjection": {
+    "value": "port",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+        "accessed": "2026-09-29",
+        "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+        "note": "'燃料供給装置 ニッサンEGI（ECCS）電子制御燃料噴射装置' (Nissan EGI (ECCS) electronic fuel injection)."
+      },
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_text.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR text-layer PDF",
+        "note": "PDF p. 21, EC section ECM terminal layout: '101 Injector No. 1 cylinder drive signal' (one injector per cylinder, driven by the ECM)."
+      }
+    ],
+    "note": "Multi-point port injection (EGI). Nissan releases list the induction as EGI (ECCS)."
+  },
+  "dryWeight": {
+    "value": 260,
+    "unit": "kg",
+    "confidence": "single-source",
+    "sources": [
+      {
+        "url": "https://mymotorlist.com/engines/nissan/rb25de-det/",
+        "accessed": "2026-09-29",
+        "title": "mymotorlist.com: Engine specifications for RB25DE/RB25DET (spec aggregator)",
+        "note": "'Weight, kg | 235 (RB25DE) 260 (RB25DET)'."
+      },
+      {
+        "url": "https://low-offset.com/nissan/rb25det-engine/",
+        "accessed": "2026-09-29",
+        "title": "Low Offset: Nissan RB25DET Engine: Reliability, Specs & Swap Info (spec aggregator)",
+        "note": "Disagrees: 'The RB25DET weighs around 189 kilograms or 417 lbs and holds 4.3 quarts of oil'."
+      },
+      {
+        "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+        "accessed": "2026-09-29",
+        "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+        "note": "Disagrees: 'Dry weight 180-200 kg (397-440 lb).'"
+      },
+      {
+        "url": "https://www.drifted.com/rb25det/",
+        "accessed": "2026-09-29",
+        "title": "DRIFTED.com: RB25DET - Everything You Need To Know",
+        "note": "'the 4-pot SR20 is around 80kg lighter, which is excellent for weight distribution and handling.'"
+      },
+      {
+        "url": "https://minkara.carview.co.jp/userid/258264/blog/5355813/",
+        "accessed": "2026-09-29",
+        "title": "minkara blog: エンジン重量 (2007-06-27), table of engine weights of unknown origin",
+        "note": "No RB25DET entry; same-family reference: 'スカイラインＧＴ-R　　RB26DETT 280ps 255kg 1.10'."
+      }
+    ],
+    "note": "Weak and disputed: every figure comes from a spec aggregator or enthusiast page, none from Nissan, none specific to the NEO, and none says what is included. Figures found: 260 kg (mymotorlist.com), about 189 kg (low-offset.com, in a sentence that also gives the 4.3 litre oil capacity as quarts), 180-200 kg dry (enginetechspecs.com). 260 kg is stored because it is the only figure consistent with the other evidence: DRIFTED says the SR20DET is about 80 kg lighter (Swap Lab stores 166 kg for the SR20DET, which puts the RB25DET near 246 kg), and the table Swap Lab uses for the SR20DET lists the twin-turbo RB26DETT at 255 kg. The lighter figures probably exclude the turbo, manifolds and accessories. Treat as about 230-260 kg dressed. Forum threads that may give weighed figures could not be read (Driftworks 403; GTR UK redirects to a TollBit pay-per-crawl gate, not passed)."
+  },
+  "dimensions": {
+    "length": {
+      "value": 805,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+          "accessed": "2026-09-29",
+          "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+          "note": "'- Length 780-830 mm (30.7-32.7 inches)'."
+        }
+      ],
+      "method": "Midpoint of the 780-830 mm length range that enginetechspecs.com prints for the RB25DET, with no source, conditions or NEO-specific figure. No Nissan outline dimension was found (R34 service manual service-data section and R33 engine service manual checked). Axis is labelled by the source. What is included (turbo, manifolds, accessories, flywheel) is not stated. Measure from a model in Phase 4."
+    },
+    "width": {
+      "value": 640,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+          "accessed": "2026-09-29",
+          "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+          "note": "'- Width 630-650 mm (24.8-25.6 inches)'."
+        }
+      ],
+      "method": "Midpoint of the 630-650 mm width range that enginetechspecs.com prints for the RB25DET, unsourced and not NEO-specific. Axis labelled by the source; the intake plenum and turbo on opposite sides probably set the width, but the page does not say."
+    },
+    "height": {
+      "value": 705,
+      "unit": "mm",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+          "accessed": "2026-09-29",
+          "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+          "note": "'- Height 690-720 mm (27.2-28.3 inches)'."
+        }
+      ],
+      "method": "Midpoint of the 690-720 mm height range that enginetechspecs.com prints for the RB25DET, unsourced and not NEO-specific. Axis labelled by the source; sump depth and the plenum are presumably included but not stated."
+    }
+  },
+  "bellhousing": {
+    "value": "nissan-rb",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.hgtengineering.com/shop/bellhousings/nissan/nissan-rb20-rb25-rb26-rb30-adjustable-bellhousing/",
+        "accessed": "2026-09-29",
+        "title": "HGT Engineering: Nissan RB20-RB25-RB26-RB30 Adjustable Bellhousing (SKU T1021)",
+        "note": "'Nissan RB20-RB25-RB26-RB30 Adjustable Bellhousing' (one engine-side bellhousing for all four RB displacements)."
+      },
+      {
+        "url": "https://collinsperformancetechnologies.com/products/rb20-rb25-rb26-to-350z-370z-adapter-plate-and-flywheel-combo",
+        "accessed": "2026-09-29",
+        "title": "Collins Performance Technologies: RB20DET, RB25DET, RB26DET to CD009 adapter plate and flywheel kit",
+        "note": "'This is a Partial Swap adapter plate and flywheel combo for RB20, RB25, RB26 to 350Z, 370Z Transmissions!' and 'This works with RB20, RB25, RB26 along with KA24DE engines.'"
+      },
+      {
+        "url": "https://flatoutoffroad.com/products/nissan-rb20det-rb25det-bell-housing-bolt-set",
+        "accessed": "2026-09-29",
+        "title": "Flat Out Offroad: Nissan RB20DET, RB25DET Bell Housing Bolt Set",
+        "note": "'Bell housing to block bolt set to suit Nissan RB20DET, RB25DET, RB20DE, RB20e and RB25DE.'"
+      },
+      {
+        "url": "https://www.eatsleepboost.lt/tech-info/nissan-tech-info/nissan-rb25det-vg30dett-gearbox-info-rs5r30a/",
+        "accessed": "2026-09-29",
+        "title": "Eat sleep BOOST: Nissan RB25DET/VG30DETT gearbox info - RS5R30A",
+        "note": "'RB25DET Turbo box has internal shifter, shifter position is too short for S body swaps and requires tunnel modification. R33 uses push type, R34 uses pull type clutch pressure plates.'"
+      },
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_text.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR text-layer PDF",
+        "note": "GI-3 Model Variation: 'GGKBRTFR34UDA FS5R30A RB25DET GGKBRTAR34UDA RE4R01B' (25GT TURBO: FS5R30A 5-speed manual or RE4R01B 4-speed automatic) and 'BGKAREFR34EDA FS5W71C RB25DE' (NA 25GT-X: FS5W71C)."
+      },
+      {
+        "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+        "accessed": "2026-09-29",
+        "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+        "note": "p. 5: 'Moreover, a pull-type clutch for easier operation has been adopted in the manual transmission on turbocharged models.' (read from the page image, p. 5)."
+      },
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, scanned PDF (page images)",
+        "note": "SD-8 Clutch: RB25DET clutch disc 'Size mm ... 250 dia.' and clutch cover '250 dia.' (read from the page image, PDF p. 208)."
+      }
+    ],
+    "note": "One engine-side pattern across the RB20, RB25, RB26 and RB30 (HGT sells one bellhousing for all four; Collins one adapter plate for RB20/25/26; the NEO needs no special part in any of these listings). Factory gearboxes behind the NEO: FS5R30A 5-speed manual and RE4R01B 4-speed automatic (M-ATx) in the ER34 (R34 service manual GI-3); the WC34 Stagea and C35 Laurel automatics and the Stagea 25t RS FOUR S 5MT share their catalogue gear ratios (2.785 first, 4.083 final on the automatics; 3.214 first on the manuals). The FS5R30A for the RB is shared in family with the VG30 300ZX box (Eat Sleep Boost). Clutch: the R34 turbo manual is pull type (Nissan 1998 release: adopted for easier operation), while R33 RB25DET boxes are push type (Eat Sleep Boost), so an R33 box behind a NEO needs the matching cover, release bearing and fork; disc and cover are 250 mm (service manual SD-8). The NA ER34 grades (RB25DE, RB20DE) use the lighter FS5W71C 5-speed (service manual GI-3). S-chassis swaps: the RB25 box shifter sits too far back and the tunnel needs work (Eat Sleep Boost)."
+  },
+  "sump": {
+    "value": "front",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://www.boostfactory.ca/products/genuine-nissan-product-name-here-part-number-here",
+        "accessed": "2026-09-29",
+        "title": "Boost Factory (Canada): Genuine Nissan RWD RB25/20/30 Front Sump Oil Pan - 11110-08U00",
+        "note": "'Genuine Nissan RWD RB25/20/30 Front Sump Oil Pan - 11110-08U00'; 'Fits: - RWD RB20 - RWD RB25 - RWD SET UP RB30'."
+      },
+      {
+        "url": "https://rawbrokerage.com/products/nissan-oem-oil-pan-rb25-rb20",
+        "accessed": "2026-09-29",
+        "title": "Raw Brokerage: Nissan OEM Oil Pan RB25 RB20 (11110-08U00)",
+        "note": "'Nissan 11110-08U00 OEM Oil Pan - RB20DET RB25DET'; 'This is a front sump pan used on both Skyline and S-chassis swaps.'"
+      },
+      {
+        "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/cylinder-block-oil-pan-7810211",
+        "accessed": "2026-09-29",
+        "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Cylinder block & oil pan",
+        "note": "'Pan Assy-Oil 9805--01 ~ 9901--01; IRS.2WD.RB25DE +RB20DE +RB25DET' with part number '1111008U00' (11110-08U00): the ER34 RB25DET pan."
+      }
+    ],
+    "note": "Reference fitment: ER34 Skyline 25GT Turbo (2WD). The Nissan catalogue ties 11110-08U00 to the ER34 RB25DET; two parts sellers call that pan a front sump. The R33 engine service manual (archive.org) shows the RB25DE/RB25DET pan with a Front arrow but the drawings do not make the sump position unambiguous, so it is not cited for the position."
+  },
+  "sumpOptions": [
+    {
+      "name": "Nissan 2WD RB pan 11110-08U00 (steel, R32/R33/R34 rear-drive RB20/RB25)",
+      "kind": "factory",
+      "position": {
+        "value": "front",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.boostfactory.ca/products/genuine-nissan-product-name-here-part-number-here",
+            "accessed": "2026-09-29",
+            "title": "Boost Factory (Canada): Genuine Nissan RWD RB25/20/30 Front Sump Oil Pan - 11110-08U00",
+            "note": "'Genuine Nissan RWD RB25/20/30 Front Sump Oil Pan - 11110-08U00'."
+          },
+          {
+            "url": "https://rawbrokerage.com/products/nissan-oem-oil-pan-rb25-rb20",
+            "accessed": "2026-09-29",
+            "title": "Raw Brokerage: Nissan OEM Oil Pan RB25 RB20 (11110-08U00)",
+            "note": "'This is a front sump pan used on both Skyline and S-chassis swaps.'"
+          }
+        ]
+      },
+      "fittedTo": [
+        "ER34 Skyline 25GT Turbo (RB25DET NEO)",
+        "ER34/HR34 Skyline (RB25DE, RB20DE)",
+        "ECR33 Skyline GTS25t (RB25DET)",
+        "HCR32 Skyline GTS-t (RB20DET)"
+      ],
+      "partNumber": {
+        "value": "11110-08U00",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/cylinder-block-oil-pan-7810211",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Cylinder block & oil pan",
+            "note": "'1111008U00 Pan Assy-Oil 9805--01 ~ 9901--01; IRS.2WD.RB25DE +RB20DE +RB25DET'."
+          },
+          {
+            "url": "https://www.boostfactory.ca/products/genuine-nissan-product-name-here-part-number-here",
+            "accessed": "2026-09-29",
+            "title": "Boost Factory (Canada): Genuine Nissan RWD RB25/20/30 Front Sump Oil Pan - 11110-08U00",
+            "note": "'Part Number: 11110-08U00'."
+          },
+          {
+            "url": "https://rawbrokerage.com/products/nissan-oem-oil-pan-rb25-rb20",
+            "accessed": "2026-09-29",
+            "title": "Raw Brokerage: Nissan OEM Oil Pan RB25 RB20 (11110-08U00)",
+            "note": "'SKU 11110-08U00'."
+          }
+        ],
+        "note": "The EPC date range shown ends 1999-01, but later ER34 builds list no other pan number on the page read; sellers still sell 11110-08U00 for R34 RB25DET."
+      },
+      "notes": "The pan for rear-drive swaps. Terra Firma Automotive (tfaspeed.com) lists the genuine RWD pan as fitting ECR32, HCR32, ECR33 GTS25T, ER34 25GTT and 'RB25NEO', and says it is the usual pan for S-chassis and R-chassis swaps and RB26 rear-drive conversions. ISR Performance (S13/S14 RB mounts): 'You must use a RWD RB25DET Oil Pan for proper pan clearance. AWD RB26 pan will not fit.'"
+    },
+    {
+      "name": "Nissan 4WD RB25 pan with front differential (WGNC34 Stagea, ENY34 Cedric/Gloria)",
+      "kind": "factory",
+      "position": {
+        "value": "front",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://rawbrokerage.com/products/raw-brokerage-awd-to-rwd-converted-oil-pan-rb26",
+            "accessed": "2026-09-29",
+            "title": "Raw Brokerage: AWD-to-RWD Converted Oil Pan RB26",
+            "note": "'The oil pan found on these engines contain the front differential and axle output shafts to drive the front wheels.'; 'we're able to achieve a OEM fitment solution for the RB26 engine being used in a RWD swap (front sump).'"
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/stagea-2087/wc34-6151/wgnc34-622159/cylinder-block-oil-pan-7846513",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Stagea WGNC34 25t RS FOUR S 5MT (build 622159), Cylinder block & oil pan, 4WD assembly",
+            "note": "'Plate-Baffle, Oil Pan 9808--01 ~ 9908--01; &4WD.RB25DET.AT +4WD.RB25DE +RB25DET.MT' (4WD-only baffles 1111305U01, 1111305U10, 1111405U00, 1111405U10)."
+          }
+        ],
+        "method": "No source read states where the sump of the RB25 4WD pan sits. Raw Brokerage says the RB26DETT AWD pan carries the front differential and becomes a front-sump RWD pan once the diff housing is machined off, so the AWD RB pan layout is taken to keep its sump at the front. This is an inference from the RB26 pan, not a statement about the Stagea or Y34 pan; check before relying on it."
+      },
+      "fittedTo": [
+        "WGNC34 Stagea 25t RS FOUR S / 25t RS FOUR V / 25t X FOUR",
+        "ENY34 Cedric/Gloria 250 FOUR grades",
+        "ENR34 Skyline 25GT FOUR (RB25DE, NA)"
+      ],
+      "notes": "The 4WD pan carries the front differential and cannot be used in a 2WD car; fit 11110-08U00 (the Nissan catalogue shows the 4WD pans use their own baffle plates). The pan assembly part number was not shown on the catalogue page read. Donor engines pulled from a 4WD Stagea or Y34 need the 2WD pan, strainer and dipstick for a swap."
+    }
+  ],
+  "oilCapacity": {
+    "value": 4.3,
+    "unit": "L",
+    "confidence": "verified",
+    "sources": [
+      {
+        "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_text.pdf",
+        "accessed": "2026-09-29",
+        "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR text-layer PDF",
+        "note": "PDF p. 206, SD-6 RB25DET: 'Approx. 3.9 Approx. 4.3' (Engine oil capacity, without filter / with filter; row labels paired from the page image)."
+      },
+      {
+        "url": "https://er34.dg-works.jp/category1/entry9.html",
+        "accessed": "2026-09-29",
+        "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): オイル・フルード類 (oils and fluids)",
+        "note": "Oil change volumes, ER34 FR turbo column: 'オイルのみ交換 3.8L 3.9L 4.2L' and 'フィルター同時交換 4.2L 4.3L 4.6L' (oil only / with filter; columns ER34 NA, ER34 FR turbo, ENR34 4WD)."
+      }
+    ],
+    "note": "With filter change. Without filter: approx. 3.9 L (service manual SD-6, dg-works)."
+  },
+  "internals": {
+    "crank": {
+      "value": "forged",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+          "accessed": "2026-09-29",
+          "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+          "note": "'- Forged-steel crankshaft with seven main bearings'."
+        }
+      ],
+      "note": "Weak: one unsourced aggregator (the same page gets the NEO rating wrong, 260-280 hp at 6,800 rpm). dg-works says the NEO shares many parts with the RB26DETT, including cams, pistons and the crankshaft, and that the RB25 crank has 8 counterweights ('RB25は８カウンター'), but gives no material. Known failure point on RB25s: the crank nose drives the oil pump; TorqueCars says 'The standard RB25 crank does not fit 100% over the oil gear on the oil pump' and most owners fit a crank collar. Check the material against a builder or Nissan source before the sim uses it."
+    },
+    "rods": {
+      "value": "forged",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://enginetechspecs.com/nissan_rb25det_technical_data.html",
+          "accessed": "2026-09-29",
+          "title": "enginetechspecs.com: Nissan RB25DET technical information and specs (spec aggregator)",
+          "note": "'- Forged connecting rods'."
+        },
+        {
+          "url": "https://low-offset.com/nissan/rb25det-engine/",
+          "accessed": "2026-09-29",
+          "title": "Low Offset: Nissan RB25DET Engine: Reliability, Specs & Swap Info (spec aggregator)",
+          "note": "Material not stated: 'Pair that to stronger connecting rods from the RB26 motor, and the engine can now run a higher 9:1 compression ratio.'"
+        },
+        {
+          "url": "https://motor-fan.jp/article/179472/",
+          "accessed": "2026-09-29",
+          "title": "Motor-Fan (OPTION magazine web): RB25DETをリーズナブルに鍛え上げろ！ Auto Select 2.6 L build",
+          "note": "Material not stated: 'ちなみに、最大トルク37kgm台を引き出したER34後期のRB25には、RB26と同じコンロッドが純正採用されていた。' (incidentally, the late ER34 RB25 that made 37 kgm used the same connecting rod as the RB26 from the factory)."
+        }
+      ],
+      "note": "Weak on material: only one unsourced aggregator says forged. Which NEO engines got the RB26DETT rod is also unsettled: Auto Select (GT-R tuner, via Motor-Fan) says the late ER34 37 kgm engine (the 2000-08 5MT) did, while low-offset.com says all NEO turbo engines did. Tomei lists forged H-section rods only in its RB28 stroker kit."
+    },
+    "pistons": {
+      "value": "cast",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.tomei-p.co.jp/catalogue/piston_rb25/",
+          "accessed": "2026-09-29",
+          "title": "Tomei Powered online catalogue: RB25DET forged piston kit (NEO6 and earlier)",
+          "note": "'生産性を最優先させた鋳造（ちゅうぞう）素材では必要な温度強度を確保できません' (cast material, chosen for productivity, cannot give the needed high-temperature strength) and 'ノーマルピストンは生産性・コスト' (stock pistons are made for productivity and cost)."
+        },
+        {
+          "url": "https://er34.dg-works.jp/category1/entry3.html",
+          "accessed": "2026-09-29",
+          "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+          "note": "'油圧ラッシュアジャスターの廃止、ピストン形状見直し・クーリングチャネルの追加等' (hydraulic lash adjusters dropped, piston shape revised and a cooling channel added)."
+        },
+        {
+          "url": "https://www.fujiirs.com/gallery/9.html",
+          "accessed": "2026-09-29",
+          "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+          "note": "'開けた理由は純正ピストン棚落ちだったかな？' (the reason it was opened was, I think, a stock piston ring-land failure) on the shop owner's own NEO6."
+        },
+        {
+          "url": "https://motor-fan.jp/article/179472/",
+          "accessed": "2026-09-29",
+          "title": "Motor-Fan (OPTION magazine web): RB25DETをリーズナブルに鍛え上げろ！ Auto Select 2.6 L build",
+          "note": "'RB25のエンジンブローは、圧縮比が高いまま無理にハイブーストを掛けての棚落ちが大半。' (most RB25 engine failures are ring-land failures from forcing high boost at the stock, high compression ratio)."
+        }
+      ],
+      "method": "No saved source states the stock NEO piston material outright. Tomei (engine builder) contrasts its forged pistons with productivity-first cast production pistons on its RB25DET/NEO6 piston page, dg-works describes a revised NEO piston with a cooling channel, and FRS reports a stock NEO piston ring-land failure. Cast aluminium is inferred from these, not read from a Nissan document."
+    },
+    "reportedLimits": [
+      {
+        "component": "bottom-end",
+        "quantity": "crank-power",
+        "value": {
+          "value": 427.6,
+          "unit": "PS",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://minkara.carview.co.jp/userid/1700088/blog/35050153/",
+              "accessed": "2026-09-29",
+              "title": "minkara owner blog: 限界パワー(?)なRB25DET(NEO6) (2015-02-09)",
+              "note": "'緑:修正馬力 427.6PS' (corrected power) and '赤:計測馬力 406.5PS' (measured power), '4ATの3速計測' (measured in 3rd gear of the 4AT), and '既にエンジン側の耐久性に限界が来ているようでコレ以上はノーマルピストン、コンロッド等がヤバいときたもんだ' (the engine seems to have reached its durability limit; beyond this the stock pistons and rods are at risk)."
+            }
+          ]
+        },
+        "context": "One owner (ER34 25GT Turbo 4AT, stock pistons and rods, GT2835-based turbo, cams, Trust intercooler) on a Japanese chassis dyno in 2015: 427.6 PS corrected (406.5 PS measured) and 48.6 kgf·m. The owner reports being told the stock pistons and rods are at their limit there; no failure is reported and no fuel or duration is given. Stored as crank power because it is the corrected figure; weak evidence."
+      },
+      {
+        "component": "pistons",
+        "quantity": "crank-power",
+        "value": {
+          "value": 500,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.torquecars.com/nissan/rb25-tuning.php",
+              "accessed": "2026-09-29",
+              "title": "TorqueCars: All you need to know about RB25 tuning (UK tuning guide site)",
+              "note": "'Pistons are generally good for 500bhp.'"
+            }
+          ]
+        },
+        "context": "TorqueCars general RB25 tuning guide (not NEO-specific): stock pistons generally good for 500 bhp. No fuel, boost, rpm or duration context. The same guide says the stock injectors run out at about 350 bhp."
+      },
+      {
+        "component": "pistons",
+        "quantity": "crank-power",
+        "value": {
+          "value": 600,
+          "unit": "PS",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.tomei-p.co.jp/catalogue/piston_rb25/",
+              "accessed": "2026-09-29",
+              "title": "Tomei Powered online catalogue: RB25DET forged piston kit (NEO6 and earlier)",
+              "note": "'この過酷な条件の中で100PS/1気筒を超えるチューニングエンジンのピストン素材はアルミ合金を使った鍛造（たんぞう）以外に考えられません。' (for tuned engines above 100 PS per cylinder, only forged aluminium-alloy pistons will do)."
+            }
+          ]
+        },
+        "context": "Tomei Powered (engine builder) general guidance on its RB25DET/NEO6 forged piston page: above 100 PS per cylinder, i.e. about 600 PS for this six, cast production pistons are not suitable. A design rule of thumb from a parts maker, not a tested failure point; the 600 PS figure is 100 PS x 6 cylinders."
+      },
+      {
+        "component": "head-gasket",
+        "quantity": "crank-power",
+        "value": {
+          "value": 320,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.torquecars.com/nissan/rb25-tuning.php",
+              "accessed": "2026-09-29",
+              "title": "TorqueCars: All you need to know about RB25 tuning (UK tuning guide site)",
+              "note": "'At 320-340bhp and greater, you should uprate the turbo, head gasket, clutch, airflow meter, and injectors.'"
+            },
+            {
+              "url": "https://er34.dg-works.jp/category1/entry7.html",
+              "accessed": "2026-09-29",
+              "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): タービン (turbocharger)",
+              "note": "Boost, not power: 'ヘッドガスケット（0.8Kg/c' (head gasket reaching its limit around 0.8 kg/cm² of boost)."
+            }
+          ]
+        },
+        "context": "TorqueCars (RB25 generally): uprate the head gasket, with the turbo, clutch, air-flow meter and injectors, from about 320-340 bhp. dg-works (ER34 owner database) puts the stock gasket limit at about 0.8 kg/cm² boost and the stock turbine at about 300 PS. Advice, not a measured failure."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "er34-mt-1998",
+      "name": "ER34 Skyline 25GT Turbo / 25GT-X Turbo, 5MT (1998-05 to 2000-07)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1998-05",
+          "to": "2000-07"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Nissan Skyline 1998-05 to 2001-05 production (R34) model list",
+            "note": "'1999年8月～2000年7月生産モデル' (August 1999 to July 2000 production) and '2000年8月～2001年5月生産モデル' (the facelift from August 2000)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+            "note": "'（1998年5月～1999年7月生産モデル）　2.5 25GTターボ' (May 1998 to July 1999 production)."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+            "accessed": "2026-09-29",
+            "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+            "note": "'Ever since its release in May 1998'; 'August 28, 2000' (date of the facelift release)."
+          }
+        ],
+        "note": "Sales began 1998-05; the 2000-08-28 minor change raised the 5MT torque, so this rating covers production to 2000-07."
+      },
+      "fittedTo": ["ER34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+            "note": "'圧縮比 9.0' (compression ratio)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。' (the NEO6 is also 9.0)."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 8: 'Compression Ratio 9.0:1' (read from the page image, p. 8)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+            "note": "'過給機 ＩＣ付きターボ' (turbocharger with intercooler)."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA100 (1998-05 to 2000-07), then 14411-AA110 (2000-07 to 2000-08)",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/turbo-charger-7810298",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Turbo charger",
+                "note": "'14411-AA100 Turbocharger 9805--01 ~ 0007--01; RB25DET' and '14411-AA110 Turbocharger 0007--01 ~ 0008--01; RB25DET'."
+              },
+              {
+                "url": "https://er34.dg-works.jp/category1/entry7.html",
+                "accessed": "2026-09-29",
+                "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): タービン (turbocharger)",
+                "note": "'●14411-AA100 前期MT・AT共。樹脂インペラ。' (early MT and AT, resin compressor wheel) and '●14411-AA110 中期MT・AT共、後期AT。アルミインペラ' (mid MT and AT, late AT; aluminium compressor wheel)."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Compressor wheel: resin on 14411-AA100, aluminium on 14411-AA110 (dg-works). Turbine wheel: ceramic on all R34 units per dg-works ('エギゾースト（排気）側は一貫してセラミック製'); low-offset.com also mentions NEO turbos with a nylon compressor and ceramic turbine. dg-works says the -AA110 bolts onto early cars without an ECU change. Maker (Garrett or other) is not stated for these two; see the late 5MT unit."
+        }
+      ],
+      "boost": {
+        "value": 0.5,
+        "unit": "kgf/cm²",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://er34.dg-works.jp/category1/entry7.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): タービン (turbocharger)",
+            "note": "'フルノーマル時のブースト圧は0.4〜0.5Kg/c' (boost pressure when fully stock is 0.4 to 0.5 kg/cm²)."
+          }
+        ],
+        "note": "Owner database, not Nissan, and a range (0.4-0.5); the upper figure is stored. dg-works says boost is solenoid-controlled and falls to about 0.3 if the solenoid fails. No Nissan boost figure was found."
+      },
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://expert-d.fc2.net/blog-entry-346.html",
+            "accessed": "2026-09-29",
+            "title": "expert-d.fc2.net (男の秘密基地, Japanese workshop blog): ER34 前置きインタークーラーキット取り付け編 (fitting a front-mount intercooler kit to an ER34)",
+            "note": "'バンパーを外してまずは左前にセットされている純正インタークーラーを取り外しします。' (with the bumper off, first remove the stock intercooler mounted at the front left)."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 2: 'Turbocharged models equipped with an intercooler adopt an air outlet on the left side of the front bumper for improved heat radiation.' (read from the page image, p. 2)."
+          },
+          {
+            "url": "https://manaboon.co.jp/blog/maintenance/2017-8-25",
+            "accessed": "2026-09-29",
+            "title": "MANABOON (used-car dealer) mechanic blog: R34スカイライン 25GT-T 前置きブリッツインタークーラー取り付け (2017-08-25)",
+            "note": "'純正のインタークーラーコアを取り外すためにエアクリーナーが邪魔なので取り外し！' (the air cleaner is in the way of removing the stock intercooler core, so it comes out) and 'このスカイラインはGT-Rルックのフロントバンパーが入っているので、前置きインタークーラーは必須アイテムですね。' (with a GT-R-look bumper a front-mount intercooler is a must)."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/turbo-charger-7810293",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Turbo charger, intercooler and piping group",
+            "note": "'14461-AA102 Charge Air Cooler 9805--01 ~ 0008--01; RB25DET' and '14461-AA103 Charge Air Cooler 0008--01 ~ ; RB25DET'."
+          }
+        ],
+        "note": "Air-to-air cooler in the left front corner behind the bumper, beside the air cleaner, fed through the left side of the bumper: a side-mount in Swap Lab terms. No source uses the words side-mount; the classification rests on the left-front location (workshop blog, Nissan release) and on front-mount coolers being sold as an aftermarket change (前置き). Nissan part 14461-AA102 to 2000-08, 14461-AA103 after (EPC)."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS)."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+              "note": "'最高出力 280ps(206kW)/6400rpm' (max power)."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+              "note": "'最高出力 280ps'."
+            },
+            {
+              "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/492_skyline_25gt_turbo.html",
+              "accessed": "2026-09-29",
+              "title": "Nissan Heritage Collection No.492: Nissan Skyline 25GT Turbo (1998: ER34)",
+              "note": "'Engine Max. power 206kW (280ps)/6,400rpm'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+              "note": "'280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/492_skyline_25gt_turbo.html",
+              "accessed": "2026-09-29",
+              "title": "Nissan Heritage Collection No.492: Nissan Skyline 25GT Turbo (1998: ER34)",
+              "note": "'206kW (280ps)/6,400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 35.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+              "note": "'最大トルク 35.0kg・m(343.2N・m)/3200rpm' (max torque)."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 35/3200'."
+            },
+            {
+              "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+              "accessed": "2026-09-29",
+              "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+              "note": "'higher engine torque, which has been raised to 363 N-m (37.0 kg-m) at 3200 rpm, up from 343 N-m (35.0 kg-m) at 3200 rpm.' (the pre-facelift 5MT figure)."
+            },
+            {
+              "url": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/492_skyline_25gt_turbo.html",
+              "accessed": "2026-09-29",
+              "title": "Nissan Heritage Collection No.492: Nissan Skyline 25GT Turbo (1998: ER34)",
+              "note": "'Engine Max. torque 43N·m (35.0kgf·m)/3,200rpm' (43 is a typo for 343)."
+            }
+          ],
+          "note": "343 N·m. The Nissan Heritage page lists a 1,450 kg sedan, which matches the automatic in the 1998 release, but prints the manual torque; the manual figure is confirmed by the 2000 release."
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501418/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (1998-05) (1501418)",
+              "note": "'35.0kg・m(343.2N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G003/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (1998-05 to 1999-07 production)",
+              "note": "'35/3200'."
+            },
+            {
+              "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+              "accessed": "2026-09-29",
+              "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+              "note": "'up from 343 N-m (35.0 kg-m) at 3200 rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "Nissan ECCS ECM 23710-AA500 (1998-05 to 1998-07), 23710-AA501 (1998-07 to 1999-10), 23710-AA502 (1999-10 to 2000-08)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/engine-control-module-7809097",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Engine control module",
+            "note": "'23710-AA500 Engine Control Module 9805--01 ~ 9807--01; RB25DET.MT.F5', '23710-AA501 Engine Control Module 9807--01 ~ 9910--01; RB25DET.MT.F5', '23710-AA502 Engine Control Module 9910--01 ~ 0008--01; RB25DET.MT.F5'."
+          }
+        ]
+      },
+      "notes": "Gearbox FS5R30A 5-speed manual with a pull-type clutch (service manual GI-3; Nissan 1998 release). Rated output is JIS net. Redline and fuel-cut rpm were not found. From 1999-08 the 2WD 5MT turbo cars gained a helical LSD (Car Sensor model note)."
+    },
+    {
+      "id": "er34-mt-2000",
+      "name": "ER34 Skyline 25GT Turbo, 5MT (2000-08 facelift)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "2000-08",
+          "to": "2001-05"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+            "accessed": "2026-09-29",
+            "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+            "note": "'August 28, 2000'; 'Tokyo -- Nissan Motor Co., Ltd. today announced the domestic release of the Skyline following the execution of a minor model change.'"
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G001/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (2000-08 to 2001-05 production)",
+            "note": "'（2000年8月～2001年5月生産モデル）　2.5 25GTターボ' (August 2000 to May 2001 production)."
+          }
+        ]
+      },
+      "fittedTo": ["ER34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+            "note": "'圧縮比 9.0'."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。' (not specific to the facelift engine)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G001/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (2000-08 to 2001-05 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AB000 (Garrett-stamped), 5MT only",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/turbo-charger-7810298",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Turbo charger",
+                "note": "'14411-AB000 Turbocharger 0008--01 ~ ; RB25DET.MT.F5'."
+              },
+              {
+                "url": "https://er34.dg-works.jp/category1/entry7.html",
+                "accessed": "2026-09-29",
+                "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): タービン (turbocharger)",
+                "note": "'●14411-AB000 後期MTのみ。ハウジングに「GARRET」刻印。' (late MT only; housing stamped GARRET) and 'アルミインペラ、形状がデュアルブレードでねじれたような形状のもの' (aluminium compressor wheel with twisted dual blades)."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "Compressor wheel aluminium; turbine ceramic per dg-works. dg-works advises re-tuning if fitted to earlier cars because the turbine characteristics differ, and says the late cams differ too."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://expert-d.fc2.net/blog-entry-346.html",
+            "accessed": "2026-09-29",
+            "title": "expert-d.fc2.net (男の秘密基地, Japanese workshop blog): ER34 前置きインタークーラーキット取り付け編 (fitting a front-mount intercooler kit to an ER34)",
+            "note": "'バンパーを外してまずは左前にセットされている純正インタークーラーを取り外しします。' (with the bumper off, first remove the stock intercooler mounted at the front left)."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 2: 'Turbocharged models equipped with an intercooler adopt an air outlet on the left side of the front bumper for improved heat radiation.' (read from the page image, p. 2)."
+          },
+          {
+            "url": "https://manaboon.co.jp/blog/maintenance/2017-8-25",
+            "accessed": "2026-09-29",
+            "title": "MANABOON (used-car dealer) mechanic blog: R34スカイライン 25GT-T 前置きブリッツインタークーラー取り付け (2017-08-25)",
+            "note": "'純正のインタークーラーコアを取り外すためにエアクリーナーが邪魔なので取り外し！' (the air cleaner is in the way of removing the stock intercooler core, so it comes out) and 'このスカイラインはGT-Rルックのフロントバンパーが入っているので、前置きインタークーラーは必須アイテムですね。' (with a GT-R-look bumper a front-mount intercooler is a must)."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/turbo-charger-7810293",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Turbo charger, intercooler and piping group",
+            "note": "'14461-AA102 Charge Air Cooler 9805--01 ~ 0008--01; RB25DET' and '14461-AA103 Charge Air Cooler 0008--01 ~ ; RB25DET'."
+          }
+        ],
+        "note": "Air-to-air cooler in the left front corner behind the bumper, beside the air cleaner, fed through the left side of the bumper: a side-mount in Swap Lab terms. No source uses the words side-mount; the classification rests on the left-front location (workshop blog, Nissan release) and on front-mount coolers being sold as an aftermarket change (前置き). Nissan part 14461-AA102 to 2000-08, 14461-AA103 after (EPC)."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS)."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+              "note": "'最高出力 280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G001/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (2000-08 to 2001-05 production)",
+              "note": "'最高出力 280ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+              "note": "'280ps(206kW)/6400rpm'."
+            }
+          ],
+          "note": "Car Sensor and the Nissan release give no power rpm for this grade; unchanged from 1998 per goo-net."
+        },
+        "torque": {
+          "value": 37.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+              "accessed": "2026-09-29",
+              "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+              "note": "'models fitted with the RB25DET turbo engine and the 5-speed manual transmission deliver sportier driving performance'; 'raised to 363 N-m (37.0 kg-m) at 3200 rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+              "note": "'最大トルク 37.0kg・m(363N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G001/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 5MT (2000-08 to 2001-05 production)",
+              "note": "'最大トルク/回転数 n・m（kg・m）/rpm 363（37）/3200'."
+            },
+            {
+              "url": "https://er34.dg-works.jp/category1/entry3.html",
+              "accessed": "2026-09-29",
+              "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+              "note": "'35.0/3200（前期） 37.0/3200（後期）' (early / late)."
+            }
+          ],
+          "note": "363 N·m."
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/release-0032ff05aa6577577d36a0990c045c31",
+              "accessed": "2026-09-29",
+              "title": "Nissan press release: Skyline and Skyline GT-R Undergo Minor Model Change (2000-08-28)",
+              "note": "'363 N-m (37.0 kg-m) at 3200 rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505766/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 5MT (2000-08) (1505766)",
+              "note": "'37.0kg・m(363N・m)/3200rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "Nissan ECCS ECM 23710-AA560 (from 2000-08)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/engine-control-module-7809097",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Engine control module",
+            "note": "'23710-AA560 Engine Control Module 0008--01 ~ ; RB25DET.MT.F5'."
+          }
+        ]
+      },
+      "notes": "Nissan's parts catalogue gives this engine its own turbo (14411-AB000), ECM (23710-AA560) and camshaft 13020-AB000 marked 'RB25DET.MT.F5' from 2000-08 (the page does not say intake or exhaust; Japanese Wikipedia, a lead only, says a new exhaust cam). Auto Select (GT-R tuner, via Motor-Fan) says this 37 kgm engine used the RB26DETT connecting rod from the factory. The 2000 release also mentions shorter shift travel. Redline and fuel cut not found."
+    },
+    {
+      "id": "er34-at",
+      "name": "ER34 Skyline 25GT Turbo / 25GT-X Turbo, 4AT M-ATx (1998-05 to 2001-05)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1998-05",
+          "to": "2001-05"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G004/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (1998-05 to 1999-07 production)",
+            "note": "'（1998年5月～1999年7月生産モデル）　2.5 25GTターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G002/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (2000-08 to 2001-05 production)",
+            "note": "'（2000年8月～2001年5月生産モデル）　2.5 25GTターボ'."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 1: 'May 25, 1998' 'Nissan Releases All-New Skyline' (read from the page image, p. 1)."
+          }
+        ]
+      },
+      "fittedTo": ["ER34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501417/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (1998-05) (1501417)",
+            "note": "'圧縮比 9.0'."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 8 (25GT-X TURBO, Dualmatic M-ATx): 'Compression Ratio 9.0:1' (read from the page image, p. 8)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501417/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (1998-05) (1501417)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G004/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (1998-05 to 1999-07 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA100 (1998-05 to 2000-07), then 14411-AA110",
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620694/turbo-charger-7810298",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 4AT (build 620694), Turbo charger",
+                "note": "'14411-AA100 Turbocharger 9805--01 ~ 0007--01; RB25DET' and '14411-AA110 Turbocharger 0007--01 ~ 0008--01; RB25DET'."
+              },
+              {
+                "url": "https://er34.dg-works.jp/category1/entry7.html",
+                "accessed": "2026-09-29",
+                "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): タービン (turbocharger)",
+                "note": "'●14411-AA110 中期MT・AT共、後期AT。' (mid MT and AT, and the late AT)."
+              }
+            ]
+          },
+          "count": 1,
+          "notes": "The catalogue page read shows no automatic turbo after 2000-08; dg-works says the late automatic kept 14411-AA110. Turbine ceramic, compressor resin (AA100) then aluminium (AA110) per dg-works."
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://expert-d.fc2.net/blog-entry-346.html",
+            "accessed": "2026-09-29",
+            "title": "expert-d.fc2.net (男の秘密基地, Japanese workshop blog): ER34 前置きインタークーラーキット取り付け編 (fitting a front-mount intercooler kit to an ER34)",
+            "note": "'バンパーを外してまずは左前にセットされている純正インタークーラーを取り外しします。' (with the bumper off, first remove the stock intercooler mounted at the front left)."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+            "accessed": "2026-09-29",
+            "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+            "note": "p. 2: 'Turbocharged models equipped with an intercooler adopt an air outlet on the left side of the front bumper for improved heat radiation.' (read from the page image, p. 2)."
+          },
+          {
+            "url": "https://manaboon.co.jp/blog/maintenance/2017-8-25",
+            "accessed": "2026-09-29",
+            "title": "MANABOON (used-car dealer) mechanic blog: R34スカイライン 25GT-T 前置きブリッツインタークーラー取り付け (2017-08-25)",
+            "note": "'純正のインタークーラーコアを取り外すためにエアクリーナーが邪魔なので取り外し！' (the air cleaner is in the way of removing the stock intercooler core, so it comes out) and 'このスカイラインはGT-Rルックのフロントバンパーが入っているので、前置きインタークーラーは必須アイテムですね。' (with a GT-R-look bumper a front-mount intercooler is a must)."
+          },
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620693/turbo-charger-7810293",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 5MT (build 620693), Turbo charger, intercooler and piping group",
+            "note": "'14461-AA102 Charge Air Cooler 9805--01 ~ 0008--01; RB25DET' and '14461-AA103 Charge Air Cooler 0008--01 ~ ; RB25DET'."
+          }
+        ],
+        "note": "Air-to-air cooler in the left front corner behind the bumper, beside the air cleaner, fed through the left side of the bumper: a side-mount in Swap Lab terms. No source uses the words side-mount; the classification rests on the left-front location (workshop blog, Nissan release) and on front-mount coolers being sold as an aftermarket change (前置き). Nissan part 14461-AA102 to 2000-08, 14461-AA103 after (EPC)."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS)."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+              "accessed": "2026-09-29",
+              "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+              "note": "p. 8 (25GT-X TURBO, M-ATx): 'Max. Power (PS/rpm) 280/6,400' (read from the page image, p. 8)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501417/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (1998-05) (1501417)",
+              "note": "'最高出力 280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (1998-05 to 1999-07 production)",
+              "note": "'最高出力 280ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+              "accessed": "2026-09-29",
+              "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+              "note": "p. 8: 'Max. Power (PS/rpm) 280/6,400' (read from the page image, p. 8)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501417/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (1998-05) (1501417)",
+              "note": "'280ps(206kW)/6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 34.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+              "accessed": "2026-09-29",
+              "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+              "note": "p. 8: 'Max. Torque (kg-m/rpm) 34.0/3,200' (read from the page image, p. 8)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1501417/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (1998-05) (1501417)",
+              "note": "'最大トルク 34.0kg・m(333.4N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (1998-05 to 1999-07 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 34/3200'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/SKYLINE/1505767/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Skyline 25GT Turbo coupe 4AT (2000-08) (1505767)",
+              "note": "2000-08 facelift automatic: '最大トルク 34.0kg・m(333N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M003G002/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (2000-08 to 2001-05 production)",
+              "note": "2000-08 facelift automatic: '333（34）/3200'."
+            }
+          ],
+          "note": "333 N·m. Unchanged at the 2000-08 facelift (goo-net, Car Sensor); the 2000 release raises only the 5MT."
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980525-01-e",
+              "accessed": "2026-09-29",
+              "title": "Nissan News release: Nissan Releases All-New Skyline (1998-05-25), body published as page images",
+              "note": "p. 8: 'Max. Torque (kg-m/rpm) 34.0/3,200' (read from the page image, p. 8)."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/skyline/F003/M001G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Skyline 2.5 25GT Turbo 4AT (1998-05 to 1999-07 production)",
+              "note": "'34/3200'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "ecu": {
+        "value": "Nissan ECM 23740-AA510 (1998-05 to 1998-07), 23740-AA511 (1998-07 to 1998-11), 23740-AA512 (1998-11 to 1999-10), 23740-AA513 (1999-10 to 2000-08), 23740-AA570 (from 2000-08)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/skyline-2086/r34-6122/er34-620694/engine-control-module-7809097",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Skyline ER34 25GT Turbo 4AT (build 620694), Engine control module",
+            "note": "'23740-AA510 Engine Control Module 9805--01 ~ 9807--01; RB25DET.AT.F4', '23740-AA513 Engine Control Module 9910--01 ~ 0008--01; RB25DET.AT.F4', '23740-AA570 Engine Control Module 0008--01 ~ ; RB25DET.AT.F4'."
+          }
+        ],
+        "note": "The 23740 prefix on the automatic suggests the combined ECM-TCM the service manual describes for RB25DET A/T models."
+      },
+      "notes": "Gearbox RE4R01B 4-speed automatic (Dualmatic M-ATx) per service manual GI-3; gear ratios 2.785/1.545/1.000/0.694, final 4.083 (Nissan 1998 release p. 8)."
+    },
+    {
+      "id": "wc34-at",
+      "name": "WC34 Stagea 25t RS V (2WD), 25t RS FOUR V and 25t X FOUR (4WD), 4AT M-ATx (1998-08 to 2001-09)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1998-08",
+          "to": "2001-09"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G001/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Stagea 2.5 25t RS V (1998-08 to 2001-09 production)",
+            "note": "'（1998年8月～2001年9月生産モデル）　2.5 25t RS V'."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980831-e",
+            "accessed": "2026-09-29",
+            "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+            "note": "p. 1: 'Date : August 31, 1998' 'Stagea Undergoes Minor Model Change' (read from the page image, p. 1)."
+          }
+        ]
+      },
+      "fittedTo": ["WGC34", "WGNC34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504581/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Stagea 25t RS V (1998-08) (1504581)",
+            "note": "'圧縮比 9.0'."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980831-e",
+            "accessed": "2026-09-29",
+            "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+            "note": "p. 3 (25t RS FOUR V): 'Compression Ratio 9.0:1' (read from the page image, p. 3)."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504581/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Stagea 25t RS V (1998-08) (1504581)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G001/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Stagea 2.5 25t RS V (1998-08 to 2001-09 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA100 (1998-08 to 2000-07), then 14411-AA110",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/stagea-2087/wc34-6151/wgnc34-622159/turbo-charger-7846613",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Stagea WGNC34 25t RS FOUR S 5MT (build 622159), Turbo charger",
+                "note": "'14411-AA100 Turbocharger 9808--01 ~ 0007--01; RB25DET' and '14411-AA110 Turbocharger 0007--01 ~ ; RB25DET'."
+              }
+            ],
+            "note": "The 2WD automatic build (WGC34, 622158) lists the same two numbers. The pre-NEO 1997-08 turbo was 14411-21U01."
+          },
+          "count": 1
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/stagea-2087/wc34-6151/wgnc34-622159/turbo-charger-7846617",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Stagea WGNC34 (build 622159), Turbo charger, intercooler group",
+            "note": "'14461-AA102 Charge Air Cooler 9808--01 ~ ; RB25DET'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504581/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Stagea 25t RS V (1998-08) (1504581)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          }
+        ],
+        "method": "The Nissan catalogue lists the same charge air cooler, 14461-AA102, as the ER34 Skyline, whose stock cooler sits in the left front corner behind the bumper (see the ER34 variants). The mounting position in the WC34 Stagea body was not found in any source, so side-mount is carried over from the ER34, not confirmed."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS). Sources describe the NEO engine generally, not the Stagea specifically."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980831-e",
+              "accessed": "2026-09-29",
+              "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+              "note": "p. 3 (25t RS FOUR V): 'Max. Power (PS/rpm) 280/6,400' (read from the page image, p. 3)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504581/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS V (1998-08) (1504581)",
+              "note": "'最高出力 280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G003/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR V 4WD (1998-08 to 2001-09 production)",
+              "note": "'最高出力 280ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980831-e",
+              "accessed": "2026-09-29",
+              "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+              "note": "p. 3: 'Max. Power (PS/rpm) 280/6,400' (read from the page image, p. 3)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504584/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR V (1998-08) (1504584)",
+              "note": "'280ps(206kW)/6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 34.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980831-e",
+              "accessed": "2026-09-29",
+              "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+              "note": "p. 3: 'Max. Torque (kg-m/rpm) 34.0/3,200' (read from the page image, p. 3)."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504584/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR V (1998-08) (1504584)",
+              "note": "'最大トルク 34.0kg・m(333.4N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G001/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS V (1998-08 to 2001-09 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 34/3200'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://global.nissannews.com/en/releases/19980831-e",
+              "accessed": "2026-09-29",
+              "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+              "note": "p. 3: 'Max. Torque (kg-m/rpm) 34.0/3,200' (read from the page image, p. 3)."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G003/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR V 4WD (1998-08 to 2001-09 production)",
+              "note": "'34/3200'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Nissan 1998-08-31 release: the facelift adopted the NEO Straight 6 RB25DET and Dualmatic M-ATx first seen on the R34 Skyline, and added a 2WD automatic (25t RS V) and a 4WD 5MT (25t RS FOUR S, separate variant). The pre-facelift WC34 turbo grades (1996-09 to 1998-07) used the non-NEO RB25DET, 235 PS / 28.0 kgf·m at 4,800 rpm (goo-net 1504566). 4WD cars carry the 4WD sump with the front differential."
+    },
+    {
+      "id": "wc34-mt",
+      "name": "WC34 Stagea 25t RS FOUR S, 4WD 5MT (1998-08 to 2001-09)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1998-08",
+          "to": "2001-09"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G004/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR S 4WD 5MT (1998-08 to 2001-09 production)",
+            "note": "'（1998年8月～2001年9月生産モデル）　2.5 25t RS FOUR S 4WD'."
+          },
+          {
+            "url": "https://global.nissannews.com/en/releases/19980831-e",
+            "accessed": "2026-09-29",
+            "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+            "note": "p. 1: 'a 4WD model equipped with a 5-speed manual transmission' (read from the page image, p. 1)."
+          }
+        ]
+      },
+      "fittedTo": ["WGNC34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504575/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR S (1998-08) (1504575)",
+            "note": "'圧縮比 9.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504575/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR S (1998-08) (1504575)",
+            "note": "'過給機 ＩＣ付きターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G004/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR S 4WD 5MT (1998-08 to 2001-09 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA100 (1998-08 to 2000-07), then 14411-AA110",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/stagea-2087/wc34-6151/wgnc34-622159/turbo-charger-7846613",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Stagea WGNC34 25t RS FOUR S 5MT (build 622159), Turbo charger",
+                "note": "'14411-AA100 Turbocharger 9808--01 ~ 0007--01; RB25DET' and '14411-AA110 Turbocharger 0007--01 ~ ; RB25DET'."
+              }
+            ]
+          },
+          "count": 1
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/stagea-2087/wc34-6151/wgnc34-622159/turbo-charger-7846617",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Stagea WGNC34 (build 622159), Turbo charger, intercooler group",
+            "note": "'14461-AA102 Charge Air Cooler 9808--01 ~ ; RB25DET'."
+          }
+        ],
+        "method": "The Nissan catalogue lists the same charge air cooler, 14461-AA102, as the ER34 Skyline, whose stock cooler sits in the left front corner behind the bumper (see the ER34 variants). The mounting position in the WC34 Stagea body was not found in any source, so side-mount is carried over from the ER34, not confirmed."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS). Sources describe the NEO engine generally."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504575/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR S (1998-08) (1504575)",
+              "note": "'最高出力 280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR S 4WD 5MT (1998-08 to 2001-09 production)",
+              "note": "'最高出力 280ps'."
+            },
+            {
+              "url": "https://global.nissannews.com/en/releases/19980831-e",
+              "accessed": "2026-09-29",
+              "title": "Supplemental Nissan News A30-SN-8058: Stagea Undergoes Minor Model Change (1998-08-31), body published as page images",
+              "note": "p. 2: 'are powered by the 280PS NEO Straight 6 RB25DET turbocharged engine' (read from the page image, p. 2)."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504575/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR S (1998-08) (1504575)",
+              "note": "'280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/stagea/gradeid/6896/",
+              "accessed": "2026-09-29",
+              "title": "carview! catalogue: Nissan Stagea 25t RS FOUR S 4WD (MT) (gradeid 6896, 1998-08)",
+              "note": "'最高出力 280ps（-kw）/6,400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 35.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/stagea/gradeid/6896/",
+              "accessed": "2026-09-29",
+              "title": "carview! catalogue: Nissan Stagea 25t RS FOUR S 4WD (MT) (gradeid 6896, 1998-08)",
+              "note": "'発売年月 1998年8月', '車両型式 GF-WGNC34', '最大トルク 35.0kg・m（-N・m）/3,200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR S 4WD 5MT (1998-08 to 2001-09 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 35/3200'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/STAGEA/1504575/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Stagea 25t RS FOUR S (1998-08) (1504575)",
+              "note": "Disagrees: '最大トルク 34.0kg・m(333.4N・m)/3200rpm'."
+            }
+          ],
+          "note": "carview and Car Sensor give 35.0 kgf·m, the same as the ER34 5MT of the time; goo-net gives 34.0 (the automatic figure), taken as a goo-net error. Nissan 1998-08-31 release gives no 5MT torque. This rating splits the Stagea manual from the automatics."
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://carview.yahoo.co.jp/ncar/catalog/nissan/stagea/gradeid/6896/",
+              "accessed": "2026-09-29",
+              "title": "carview! catalogue: Nissan Stagea 25t RS FOUR S 4WD (MT) (gradeid 6896, 1998-08)",
+              "note": "'35.0kg・m（-N・m）/3,200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/stagea/F001/M003G004/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Stagea 2.5 25t RS FOUR S 4WD 5MT (1998-08 to 2001-09 production)",
+              "note": "'35/3200'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "FS5R30A-family 5MT with 4WD transfer (first gear 3.214, final 4.111 per goo-net 1504575). The only NEO manual outside the Skyline."
+    },
+    {
+      "id": "c35-at",
+      "name": "C35 Laurel 25 Club S Turbo / Type X / Medalist V Turbo / Medalist Premier Turbo, 4AT (1998-09 to 2002-12)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1998-09",
+          "to": "2002-12"
+        },
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M002G015/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo (1998-09 to 1998-12 production)",
+            "note": "'（1998年9月～1998年12月生産モデル）　2.5 25クラブSターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M004G010/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo Type X (1999-08 to 2002-12 production)",
+            "note": "'（1999年8月～2002年12月生産モデル）　2.5 25クラブSターボ タイプX'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+            "note": "'日産 ローレル（LAUREL）２５クラブＳターボ(1998年9月)'."
+          }
+        ],
+        "note": "The 1997-06 C35 launch turbo was the non-NEO RB25DET, 235 PS / 28.0 kgf·m at 4,800 rpm (goo-net 1501345)."
+      },
+      "fittedTo": ["GC35", "GCC35"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+            "note": "'圧縮比 9.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+            "note": "'過給機 ターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M002G015/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo (1998-09 to 1998-12 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA100 (1998-09 to 1999-08), later 14411-AA110",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/laurel-2127/c35-6068/gc35-617999/turbo-charger-7756165",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Laurel GC35 RB25DET 4AT (build 617999), Turbo charger",
+                "note": "'14411-AA100 Turbocharger 9809--01 ~ 9908--01; RB25DET' and '14411-AA110 Turbocharger 0007--01 ~ ; RB25DET'."
+              }
+            ],
+            "note": "The page shows no number for 1999-08 to 2000-07. The pre-NEO C35 turbo was 14411-21U01 (1997-06 to 1998-09)."
+          },
+          "count": 1
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/laurel-2127/c35-6068/gc35-617999/turbo-charger-7756167",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Laurel GC35 (build 617999), Turbo charger, intercooler group",
+            "note": "'14461-AA102 Charge Air Cooler 9809--01 ~ 9908--01; RB25DET'."
+          }
+        ],
+        "method": "The Nissan catalogue lists the same charge air cooler, 14461-AA102, as the ER34 Skyline, whose stock cooler sits in the left front corner behind the bumper (see the ER34 variants). The mounting position in the C35 Laurel body was not found in any source, so side-mount is carried over from the ER34, not confirmed."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS). Sources describe the NEO engine generally."
+      },
+      "output": {
+        "power": {
+          "value": 280,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+              "note": "'最高出力 280ps(206kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M002G015/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo (1998-09 to 1998-12 production)",
+              "note": "'最高出力 280ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+              "note": "'280ps(206kW)/6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 34.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+              "note": "'最大トルク 34.0kg・m(333.4N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M002G015/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo (1998-09 to 1998-12 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 34/3200'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1507004/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo Type X (2002-01) (1507004)",
+              "note": "'RB25DET〔NEOストレート6〕' with '34.0kg・m(333N・m)/3200rpm'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 3200,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/LAUREL/1501184/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Laurel 25 Club S Turbo (1998-09) (1501184)",
+              "note": "'34.0kg・m(333.4N・m)/3200rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/laurel/F003/M004G010/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Laurel 2.5 25 Club S Turbo Type X (1999-08 to 2002-12 production)",
+              "note": "'34/3200'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "Automatic only; 2WD only (the C35 4WD grades use the NA RB25DE)."
+    },
+    {
+      "id": "y34-4wd-260",
+      "name": "Y34 Cedric 250L FOUR / 250LV FOUR and Gloria 250T FOUR / 250TX FOUR, 4WD 4AT (1999-06 to 2002-08)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "1999-06",
+          "to": "2002-08"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+            "note": "'日産 セドリック（CEDRIC）２５０Ｌ ＦＯＵＲ(1999年6月)'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+            "note": "Next rating from the 2002-09 model: '最高出力 250ps(184kW)/6400rpm'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M001G009/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Cedric 2.5 250L FOUR 4WD (1999-06 to 2001-11 production)",
+            "note": "'（1999年6月～2001年11月生産モデル）　2.5 250L FOUR 4WD'."
+          }
+        ],
+        "note": "The end month is inferred from goo-net, which shows the 250 PS rating from the 2002-09 model; Car Sensor does not show the change (see y34-4wd-250)."
+      },
+      "fittedTo": ["ENY34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+            "note": "'圧縮比 9.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+            "note": "'過給機 ターボ'."
+          },
+          {
+            "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M001G009/",
+            "accessed": "2026-09-29",
+            "title": "Car Sensor catalogue: Cedric 2.5 250L FOUR 4WD (1999-06 to 2001-11 production)",
+            "note": "'過給器 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA110",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/cedric-gloria-2088/y34-6169/eny34-622858/turbo-charger-7870316",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Cedric/Gloria ENY34 RB25DET 4WD (build 622858), Turbo charger",
+                "note": "'14411-AA110 Turbocharger 9906--01 ~ 0112--01; RB25DET'."
+              }
+            ],
+            "note": "Catalogue page for 1999-06 to 2001-12 builds; later builds not read."
+          },
+          "count": 1
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/cedric-gloria-2088/y34-6169/eny34-622858/turbo-charger-7870317",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Cedric/Gloria ENY34 (build 622858), Turbo charger, intercooler and piping group",
+            "note": "'14461-AG501 Charge Air Cooler 9906--01 ~ 0112--01; RB25DET'."
+          }
+        ],
+        "method": "The catalogue confirms a charge air cooler, but a different part (14461-AG501) from the Skyline, Stagea and Laurel, and no source gives its position in the Y34. Side-mount is carried over from the other NEO fitments as a placeholder; treat as unknown."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS). Sources describe the NEO engine generally, not the Y34 tune."
+      },
+      "output": {
+        "power": {
+          "value": 260,
+          "unit": "PS",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+              "note": "'最高出力 260ps(191kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M001G009/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Cedric 2.5 250L FOUR 4WD (1999-06 to 2001-11 production)",
+              "note": "'最高出力 260ps'."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+              "note": "'260ps(191kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/GLORIA/1500972/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Gloria 250T FOUR (1999-06) (1500972)",
+              "note": "'260ps(191kW)/6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 33.0,
+          "unit": "kgf·m",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+              "note": "'最大トルク 33.0kg・m(323.6N・m)/2800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M001G009/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Cedric 2.5 250L FOUR 4WD (1999-06 to 2001-11 production)",
+              "note": "'最大トルク/回転数 kg・m/rpm 33/2800'."
+            }
+          ]
+        },
+        "torqueRpm": {
+          "value": 2800,
+          "unit": "rpm",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1500765/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L FOUR (1999-06) (1500765)",
+              "note": "'33.0kg・m(323.6N・m)/2800rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M001G009/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Cedric 2.5 250L FOUR 4WD (1999-06 to 2001-11 production)",
+              "note": "'33/2800'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "goo-net lists the 1999-06 engine as 'RB25DET LEV' and the 2000-10 one as 'RB25DET(NEOストレート6ターボ）'. Low-emission (LEV) tune for the 4WD luxury sedans; 4WD sump with front differential."
+    },
+    {
+      "id": "y34-4wd-250",
+      "name": "Y34 Cedric 250L-Four / 250LV-Four and Gloria Gran Turismo 250S-Four / 250SV-Four, 4WD 4AT (2002-09 to 2004-10)",
+      "markets": ["JDM"],
+      "period": {
+        "value": {
+          "from": "2002-09",
+          "to": "2004-10"
+        },
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+            "note": "'日産 セドリック（CEDRIC）２５０Ｌ−Ｆｏｕｒ(2002年9月)'."
+          },
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric model list",
+            "note": "'1999(平成11)年6月~2004(平成16)年10月' (Y34 generation)."
+          }
+        ]
+      },
+      "fittedTo": ["ENY34"],
+      "compressionRatio": {
+        "value": 9.0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+            "note": "'圧縮比 9.0'."
+          }
+        ]
+      },
+      "induction": {
+        "value": "single-turbo",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+            "accessed": "2026-09-29",
+            "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+            "note": "'過給機 ターボ'."
+          }
+        ]
+      },
+      "turbos": [
+        {
+          "model": {
+            "value": "Nissan 14411-AA110 (assumed carried over)",
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/cedric-gloria-2088/y34-6169/eny34-622858/turbo-charger-7870316",
+                "accessed": "2026-09-29",
+                "title": "Nissan parts catalogue (EPC), read at megazip.net: Cedric/Gloria ENY34 RB25DET 4WD (build 622858), Turbo charger",
+                "note": "'14411-AA110 Turbocharger 9906--01 ~ 0112--01; RB25DET'."
+              }
+            ],
+            "method": "The catalogue page read covers builds to 2001-12 only; the later turbo number was not read. Carried over from the 1999-2001 builds as an assumption."
+          },
+          "count": 1
+        }
+      ],
+      "intercooler": {
+        "value": "air-to-air-side",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.megazip.net/zapchasti-dlya-avtomobilej/nissan/cedric-gloria-2088/y34-6169/eny34-622858/turbo-charger-7870317",
+            "accessed": "2026-09-29",
+            "title": "Nissan parts catalogue (EPC), read at megazip.net: Cedric/Gloria ENY34 (build 622858), Turbo charger, intercooler and piping group",
+            "note": "'14461-AG501 Charge Air Cooler 9906--01 ~ 0112--01; RB25DET'."
+          }
+        ],
+        "method": "The catalogue confirms a charge air cooler, but a different part (14461-AG501) from the Skyline, Stagea and Laurel, and no source gives its position in the Y34. Side-mount is carried over from the other NEO fitments as a placeholder; treat as unknown."
+      },
+      "variableValveTiming": {
+        "value": "intake-on-off",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-skyline-r-34-service-repair-workshop-manual-model-years-1998-to-2002-chassis-codes-r-34/Nissan%20Skyline%20R34%20Service%20%26%20Repair%20Workshop%20Manual%2C%20Model%20Years%201998%20to%202002%20-%20Chassis%20Code%28s%29%20R34_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Nissan Service Manual, Model R34 Series (English, (c)1998 Nissan; service data and diagnosis only), on archive.org, OCR plain text",
+            "note": "EC section, CONSULT data monitor item INTN TIM SOL: 'The control condition of the intake valve' ... 'Intake valve timing control is oper-' (ON) / 'Intake valve timing control is not' (OFF)."
+          },
+          {
+            "url": "https://www.fujiirs.com/gallery/9.html",
+            "accessed": "2026-09-29",
+            "title": "FRS (Fujii RS, Japanese engine shop) photo gallery: RB26, RB25, RB25NEO6 head comparison",
+            "note": "'ＮＥＯ６も圧縮比９．０。これもＮＶＣＳ付き。' (the NEO6 is also 9.0 compression, and also has NVCS)."
+          },
+          {
+            "url": "https://er34.dg-works.jp/category1/entry3.html",
+            "accessed": "2026-09-29",
+            "title": "ER34 Skyline database (er34.dg-works.jp, owner-run reference site): エンジン (engine)",
+            "note": "'可変バルタイ機構（NVCS）を備えるため低回転時からのトルクに優れるが、切り替えタイミングで若干のトルクの谷が存在する。' (with NVCS the torque is strong from low rpm, but there is a slight dip at the switching point)."
+          }
+        ],
+        "note": "Two-position (on/off) intake cam phasing, Nissan NVCS, switched by the ECM through a solenoid valve. Nissan 1998 release p. 3: the RB25DET NEO incorporates the Nissan Valve-timing Control System (NVCS). Sources describe the NEO engine generally."
+      },
+      "output": {
+        "power": {
+          "value": 250,
+          "unit": "PS",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+              "note": "'最高出力 250ps(184kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/10018373/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four NAVI Edition II (2004-04) (10018373)",
+              "note": "'最高出力 250ps(184kW)/6400rpm'."
+            },
+            {
+              "url": "https://www.carsensor.net/catalog/nissan/cedric/F004/M002G008/",
+              "accessed": "2026-09-29",
+              "title": "Car Sensor catalogue: Cedric 2.5 250L-Four 4WD (2001-12 to 2004-09 production)",
+              "note": "Disagrees: '最高出力 260ps'."
+            }
+          ],
+          "note": "goo-net shows 250 PS on every 2002-09 and later Y34 4WD page read (2002-09, 2003-05, 2004-04); Car Sensor has one page for 2001-12 to 2004-09 production and keeps 260 PS / 33 kgf·m, probably the first spec of that span. goo-net preferred; the reason for the drop (new emissions calibration?) is not stated anywhere read."
+        },
+        "powerRpm": {
+          "value": 6400,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+              "note": "'250ps(184kW)/6400rpm'."
+            }
+          ]
+        },
+        "torque": {
+          "value": 32.5,
+          "unit": "kgf·m",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+              "note": "'最大トルク 32.5kg・m(319N・m)/2800rpm'."
+            },
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/10018373/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four NAVI Edition II (2004-04) (10018373)",
+              "note": "'32.5kg・m(319N・m)/2800rpm'."
+            }
+          ],
+          "note": "Car Sensor's combined 2001-12 to 2004-09 page gives '324（33）/2800' (see power note)."
+        },
+        "torqueRpm": {
+          "value": 2800,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.goo-net.com/catalog/NISSAN/CEDRIC/1507635/",
+              "accessed": "2026-09-29",
+              "title": "goo-net catalogue: Nissan Cedric 250L-Four (2002-09) (1507635)",
+              "note": "'32.5kg・m(319N・m)/2800rpm'."
+            }
+          ]
+        },
+        "standard": "JIS-net"
+      },
+      "notes": "goo-net engine name 'RB25DET(NEOストレート6ターボ）'. 4WD sump with front differential."
+    }
+  ]
+}

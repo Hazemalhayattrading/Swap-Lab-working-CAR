@@ -1,0 +1,3295 @@
+{
+  "$comment": "Nissan Silvia S15 with a GM LS1 (Gen III, 24x, cable throttle) or LS3 (Gen IV, 58x, drive-by-wire). Researched 2026-09-29 for Swap Lab Phase 1 part 3b. Sources are vendor listings and install guides (Sikky, Wiring Specialties, Chase Bays, Collins Performance Technologies, ISR, KE Conversions) plus two magazines; no Nissan or GM document covers this swap, so nearly everything is single-source. Prices are as listed on 2026-09-29, before options, in the listed currency. Generic LS hardware (ECUs, standalone harnesses, T56/TR6060, clutches, generic pans, CD009 adapters) is researched separately and only named here where a kit requires it. Not found: an S15-specific install guide, a Nissan parts catalogue entry for the front suspension member, a factory GM oil pan stated to clear the S15, any Japanese vendor, and any adapter for the S15's own gearboxes. Merged 2026-09-29 with the hardware common to every LS swap (GM PCM, Chevrolet Performance and Holley ECU routes, standalone harnesses, GM and Tremec gearboxes, clutches, fuel regulators), which a separate research pass sourced; those parts repeat in each LS swap file until Phase 3 moves them into parts/.",
+  "id": "nissan-silvia-s15--gm-ls",
+  "car": "nissan-silvia-s15",
+  "engines": ["ls1", "ls3"],
+  "appliesTo": "Every S15 (1999-2002, JDM Silvia and Australian 200SX; all RHD). The kits replace the S15 gearbox (FS6R92A, FS5W71C or RE4R01A) with a GM T56, T56 Magnum or TR6060, or a Nissan CD009-family gearbox; none keeps the factory gearbox. Parts for the LHD US 240SX (S13/S14) are a different fit and are not listed.",
+  "parts": [
+    {
+      "id": "sikky-stage-1-s15-rhd",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Stage 1 Nissan Silvia S15 (RHD) LS Package",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "'Sikky Stage 1 Nissan Silvia S15 (RHD) LS Package' and 'This Stage 1 package includes the basic components needed to mount your engine into your Nissan Silvia S15.'"
+          }
+        ]
+      },
+      "fills": ["engine-mounts", "transmission-mount", "oil-pan", "driveshaft"],
+      "partNumber": {
+        "value": "MKP001-S15-RHD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "'SKU: MKP001-S15-RHD'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2327.9,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "'$2,327.90' as the package price. Required choices then add or subtract: bushings 'Urethane (UMA1)' or 'Aluminum (AL-MA)'; driveshaft from 'Non-ABS T56-S (SKNISH2-S)' (no charge) to 'Non-ABS TR6060-S (SKNISH12-S) (+$640.00)'; gasket 'Yes (G01) (+$55.99)'; fuel lines 'Yes, add Short Line Kit (FFK-UNS) (+$324.79)'; power steering 'Yes (PS106) (+$167.99)'."
+          }
+        ],
+        "note": "Base price before options. It equals the sum of Sikky's own list prices for the parts it contains (MK001-RHD $425.99 + bushings $167.99 + CM25 $145.99 + TM01 bracket $67.99 + OP001S pan $783.96 + RK001 filter kit $195.99 + SKNISH2-S driveshaft $539.99 = $2,327.90; sum worked out here, not stated by Sikky). The Stage 2 package (MKP001-S15-RHD-2, $3,559.89) is this plus the HDR005SS headers ($1,231.99) and is not listed separately. Conflict: this page prices the TR6060 steel shaft (SKNISH12-S) at +$640.00 and the aluminium one (SKNISH12-A) at +$560.00, while the Stage 2 package and the SKNISH2 page list steel +$560.00 and aluminium +$640.00; the Stage 1 figures are probably swapped."
+      },
+      "includes": {
+        "value": [
+          "Aluminium race oil pan, 6.8 quart, with Sikky pickup tube, dipstick tube and dipstick, pan-mounted remote oil filter adapter and drain plug",
+          "Remote-mount oil filter kit (-10 AN fittings and two braided lines, filter base, filter)",
+          "Billet 6061-T6 engine mounts with urethane bushings and hardware",
+          "Transmission mount and CNC-bent steel mount bracket (crossmember per the gearbox chosen)",
+          "Steel one-piece driveshaft with 1310 U-joints (aluminium upgrade available)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "'This consists of Sikky’s industry leading motor mounts, trans mount, oil pan and driveshaft'; 'High capacity 6.8 quart sump (does not include oil filter or oil filter relocation)'; 'Comes with Sikky Oil Pump Pickup Tube, Sikky Dip Stick Tube and Dip Stick, pan mounted bottom port remote oil filter adapter, magnetic drain plug'; 'Remote mount filter Kit'; '-10 AN Fittings (4) and Stainless Braided Lines (2)'; 'CNC Bent Steel Mount Bracket'; 'Steel One Piece Driveshaft with High Strength 1310 U-joints (aluminum upgrade available)'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "A GM T56 or T56 Magnum, a Nissan CD009 (crossmember CM25) or a TR6060 (crossmember CM28), the only gearboxes the package offers",
+          "Headers, fuel lines, power-steering lines, intake and wiring sourced separately",
+          "A Sikky front sway bar (the install guide removes the factory bar)",
+          "The Sikky clutch master cylinder kit, fitted before the engine goes in"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "Transmission options: 'T56 6 Speed (CM25)(TM01)', 'T56 Magnum 6 Speed (CM25)(TM01)', 'CD009 (CM25)(TM03)', 'TR6060 (CM28)(TM02)'. Scope: 'ideal for a do-it-yourself type who wants to source or fabricate their own headers, fuel lines, power steering lines, intake, wiring etc.'"
+          },
+          {
+            "url": "https://www.sikky.com/wp-content/uploads/2015/10/s-chassis-mount-kit-install.pdf",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LSx Motor Mount Kit into S13/S14 240SX, install guide PDF (the S-Chassis Mount Kit Installation link on the S15 package pages)",
+            "note": "'Remove factory sway bar and endlinks- Sikky sway bar will be required for install.' and 'Make sure that you install Sikky clutch master cylinder kit at this time.'"
+          }
+        ],
+        "note": "The sway bar and clutch master lines come from the S-chassis install guide, which is written for the S13/S14 240SX; Sikky lists front bars for the S13 and S14 only, none for the S15."
+      },
+      "pairsWith": ["sikky-silvia-rhd-headers", "sikky-ps106-rhd-ls1-power-steering-line"],
+      "notes": "The S15 package is built from Sikky's S14 RHD parts: the MK001-RHD mounts sold as S14/S15, the RHD S14 crossmembers CM25/CM28 and the S14 driveshaft SKNISH2. Its installation links are the S13/S14 240SX guides; no S15-specific guide was found. Driveshaft variants cover ABS and non-ABS cars and T56, T56 Magnum and TR6060 gearboxes (SKNISH2/4/7/8/12/23/31)."
+    },
+    {
+      "id": "sikky-mk001-rhd-mounts",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan Silvia S14/S15 (RHD) LS Motor Mounts",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s14-ls1-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia S14/S15 (RHD) LS Motor Mounts (product page)",
+            "note": "'Sikky Nissan Silvia S14/S15 (RHD) LS Motor Mounts' and 'Right Hand Drive Only'."
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "partNumber": {
+        "value": "MK001-RHD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s14-ls1-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia S14/S15 (RHD) LS Motor Mounts (product page)",
+            "note": "'SKU: MK001-RHD'"
+          }
+        ]
+      },
+      "price": {
+        "value": 425.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s14-ls1-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia S14/S15 (RHD) LS Motor Mounts (product page)",
+            "note": "'$425.99' for the mounts; bushings are a required choice: 'Urethane (UMA1) (+$167.99)' or 'Aluminum (AL-MA) (+$167.99)', or 'Do not add (mounts only)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Billet motor mount (left)", "Billet motor mount (right)", "High grade hardware"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s14-ls1-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia S14/S15 (RHD) LS Motor Mounts (product page)",
+            "note": "'-Billet Motor mount (left)', '-Billet Motor mount (right)', '-High grade hardware'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Sikky engine mount bushings, oil pan and transmission crossmember"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s14-ls1-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia S14/S15 (RHD) LS Motor Mounts (product page)",
+            "note": "'For correct fitment be sure to use with Sikky Engine Mount Bushings, Oil Pan, and Transmission Cross member'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-op001s-oil-pan", "sikky-cm25-crossmember", "sikky-cm28-crossmember"],
+      "notes": "One RHD mount set for the S14 and S15; the LHD 240SX mounts (MK001, MK002) are separate products. Sikky says the mounts suit the whole LS family, LS1 and LS3 included: Can be used on LS1, LS2, LS3, LS6, L99, LQ4, LQ9, LSA, LS7, LS9, LSX and any other LS based engine using this engine mount bolt pattern."
+    },
+    {
+      "id": "sikky-cm25-crossmember",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky RHD S14 T56 / CD00x Transmission Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s14-silvia-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 T56 / CD00x Transmission Crossmember (product page)",
+            "note": "'Sikky RHD S14 T56 / CD00x Transmission Crossmember' and 'Designed for use with the T56 6 Speed, T56 Magnum 6 Speed or CD00x'."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "partNumber": {
+        "value": "CM25",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s14-silvia-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 T56 / CD00x Transmission Crossmember (product page)",
+            "note": "'SKU: CM25'"
+          }
+        ]
+      },
+      "price": {
+        "value": 145.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s14-silvia-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 T56 / CD00x Transmission Crossmember (product page)",
+            "note": "'$145.99'; the mount bracket is a separate required choice: 'T56, T56 Magnum (TM01) (+$67.99)' or 'CD00x (TM03) (+$67.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Steel crossmember", "Urethane bushing with mount bolt"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s14-silvia-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 T56 / CD00x Transmission Crossmember (product page)",
+            "note": "'Sikky transmission mounts are CAD/CAM designed and CNC Laser Cut from steel and welded in house. High performance urethane bushing included with mount bolt.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Mount bracket TM01 (T56, T56 Magnum) or TM03 (CD00x), sold as an option"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s14-silvia-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 T56 / CD00x Transmission Crossmember (product page)",
+            "note": "'T56, T56 Magnum (TM01) (+$67.99)' and 'CD00x (TM03) (+$67.99)'"
+          }
+        ]
+      },
+      "notes": "Listed for the RHD S14; the S15 packages specify it for T56, T56 Magnum and CD009 (S15 Stage 1 options T56 6 Speed (CM25)(TM01) and CD009 (CM25)(TM03))."
+    },
+    {
+      "id": "sikky-cm28-crossmember",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky RHD S14 TR6060 Transmission Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-rhd-s14-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 TR6060 Transmission Crossmember (product page)",
+            "note": "'Sikky RHD S14 TR6060 Transmission Crossmember' and 'Designed for use with the TR6060'."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "partNumber": {
+        "value": "CM28",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-rhd-s14-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 TR6060 Transmission Crossmember (product page)",
+            "note": "'SKU: CM28'"
+          }
+        ]
+      },
+      "price": {
+        "value": 145.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-rhd-s14-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 TR6060 Transmission Crossmember (product page)",
+            "note": "'$145.99'; bracket 'Add (TM02) (+$67.99)'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Mount bracket TM02, sold as an option"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-rhd-s14-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD S14 TR6060 Transmission Crossmember (product page)",
+            "note": "'Add (TM02) (+$67.99)'"
+          }
+        ]
+      },
+      "notes": "Listed for the RHD S14; the S15 packages specify it for the TR6060 (option TR6060 (CM28)(TM02))."
+    },
+    {
+      "id": "sikky-op001s-oil-pan",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-lsx-swap-oil-pan/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan (product page)",
+            "note": "'Sikky Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan'; fitment note 'Designed to fit perfectly in the Nissan 240sx, 180sx, s13, s14, and s15'."
+          }
+        ]
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "OP001S",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-lsx-swap-oil-pan/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan (product page)",
+            "note": "'SKU: OP001S'"
+          }
+        ]
+      },
+      "price": {
+        "value": 783.96,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-lsx-swap-oil-pan/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan (product page)",
+            "note": "'$783.96'; options 'Yes (RK001) (+$195.99)' (oil filter relocation) and 'Yes (G01) (+$55.99)' (OEM gasket)."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Oil pan (6.8 quart front sump, billet flange and back plate)",
+          "Sikky oil pump pickup tube",
+          "Sikky dipstick tube and dipstick",
+          "Pan-mounted bottom-port remote oil filter adapter",
+          "Magnetic drain plug",
+          "NPT plugs for the turbo drain and temperature bungs",
+          "Hardware kit (uses some factory hardware, not included)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-lsx-swap-oil-pan/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan (product page)",
+            "note": "'High capacity 6.8 quart sump'; 'Sikky Oil Pump Pickup Tube'; 'Sikky Dip Stick Tube and Dip Stick'; 'Pan mounted bottom port remote oil filter adapter'; 'Magnetic drain plug'; 'NPT Plugs for turbo drain and temperature port bungs'; 'Hardware Kit (utilizes some factory hardware not included)'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "The Sikky mount kit",
+          "An oil filter relocation kit (the pan has no filter mount; RK001 is the option)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-lsx-swap-oil-pan/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S13/S14 LS Swap Front Sump Oil Pan (product page)",
+            "note": "'To ensure proper fitment use with Sikky Mount kit' and 'High capacity 6.8 quart sump (does not include oil filter or oil filter relocation)'."
+          }
+        ]
+      },
+      "pairsWith": ["sikky-mk001-rhd-mounts"],
+      "notes": "Front sump (Sikky's wording). Sikky says it suits all LS engines, LS1 and LS3 included, and does not hang below the front subframe. Its install guide has the factory oil pump baffle trimmed and the block's dipstick hole plugged (see modifications); aftermarket oil pumps may need more clearance."
+    },
+    {
+      "id": "sikky-sknish2-driveshaft",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan 240sx S14 LSx Swap Driveshaft",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-s14-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S14 LSx Swap Driveshaft (product page)",
+            "note": "'Sikky Nissan 240sx S14 LSx Swap Driveshaft'; 'Designed for 4 bolt differential flanges.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "The S15 package's driveshaft choices are this part's codes, e.g. 'Non-ABS T56-S (SKNISH2-S)' and 'ABS T56-S (SKNISH4-S) (-$30.00)'."
+          }
+        ]
+      },
+      "fills": ["driveshaft"],
+      "partNumber": {
+        "value": "SKNISH2",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-s14-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S14 LSx Swap Driveshaft (product page)",
+            "note": "'SKU: SKNISH2'"
+          }
+        ]
+      },
+      "price": {
+        "value": 539.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-s14-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S14 LSx Swap Driveshaft (product page)",
+            "note": "'$539.99' with 'Non ABS T56-S (SKNISH2-S)'; other variants include 'Non-ABS T56-A (SKNISH2-A) (+$260.00)' and 'Non-Abs TR6060-S (SKNISH12-S) (+$560.00)'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "A T56 or T56 Magnum (TR6060 variants listed as options; CD009 support not yet offered)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/240sx-s14-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan 240sx S14 LSx Swap Driveshaft (product page)",
+            "note": "'suitable for LS T56 and T56 Magnum transmission. New transmission support is coming soon for the TR6060 and CD009'"
+          }
+        ],
+        "note": "The page text says TR6060 support is coming, but TR6060 variants (SKNISH12) are already listed as options on this page and on the S15 package."
+      },
+      "notes": "S14 part used in the S15 package, which is Sikky's only S15 statement for it. ABS and non-ABS cars take different shafts."
+    },
+    {
+      "id": "sikky-silvia-rhd-headers",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan Silvia (RHD) LS Swap Headers",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+            "note": "'Sikky Nissan Silvia (RHD) LS Swap Headers'; 'Allowing for perfect drop-in fitment in the Nissan Silvia S13/S14/S15 chassis (RHD) with a Sikky LSx (LS1 / LS2 / LS3 / LS6 / LS7) Swap Kit using a T-56 Transmission.'"
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "partNumber": {
+        "value": "HDR005SS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+            "note": "'SKU: HDR005SS'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1231.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+            "note": "'$1,231.99'; starter option 'Yes, add starter (+$313.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Stainless steel headers, 1 7/8 in primaries, collectors with merge bullets, CNC head flanges"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+            "note": "'100% stainless steel construction'; 'High flow collectors with merge bullets'; 'CNC head flanges'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "The Sikky low-profile starter (SK-01), for clearance",
+          "Taylor 79013 plug wires",
+          "Sikky mount kit and components"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+            "note": "'The Sikky starter is required for clearance.'; 'Designed to fit with Taylor 79013 plug wires'; 'All Sikky chassis specific swap headers are designed around using the Sikky mount kits and components.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-stage-2-nissan-silvia-s15-ls-swap-package/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 2 Nissan Silvia S15 (RHD) LS Package (w/ Headers) (product page)",
+            "note": "Starter option on the S15 Stage 2 package: 'Add our Low Profile starter designed to fit with our RHD headers to clear the factory steering column.' 'Yes (SK-01) (+$313.99)'."
+          }
+        ]
+      },
+      "pairsWith": ["sikky-mk001-rhd-mounts"],
+      "notes": "RHD only. Sikky says they also fit with the TR6060 and the 4L60E. If the steering rack is moved forward (angle kits), the header hits the steering column; see modifications."
+    },
+    {
+      "id": "sikky-ps106-rhd-ls1-power-steering-line",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky RHD LS1/ LS2 S-Chassis Power Steering Line Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/ls1-silvia-power-steering-line/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD LS1/LS2 S-Chassis Power Steering Line Kit (product page)",
+            "note": "'Sikky RHD LS1/ LS2 S-Chassis Power Steering Line Kit'; 'This power steering line is designed to mate your LS1 power steering pump to your Silvia (S13/S14) powersteering rack with OEM fitment.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: Stage 1 Nissan Silvia S15 (RHD) LS Package (product page)",
+            "note": "Offered on the S15 package as 'Add LS1/LS2 Power Steering Line Kit' with 'Yes (PS106) (+$167.99)'."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "PS106",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/ls1-silvia-power-steering-line/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD LS1/LS2 S-Chassis Power Steering Line Kit (product page)",
+            "note": "'SKU: PS106'"
+          }
+        ]
+      },
+      "price": {
+        "value": 167.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/ls1-silvia-power-steering-line/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD LS1/LS2 S-Chassis Power Steering Line Kit (product page)",
+            "note": "'$167.99'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["High-pressure line with swivel fitting", "Low-pressure return line with clamps"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/ls1-silvia-power-steering-line/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD LS1/LS2 S-Chassis Power Steering Line Kit (product page)",
+            "note": "'Swiveling fitting for optimum fitment'; 'Extreme high pressure line with max pressure of 10,000 PSI'; 'Includes Low pressure power steering return line w/ clamps'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["An LS1 or LS2 power steering pump and reservoir"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/ls1-silvia-power-steering-line/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: RHD LS1/LS2 S-Chassis Power Steering Line Kit (product page)",
+            "note": "'Fits LS1 & LS2 Power steering reservoirs'"
+          }
+        ]
+      },
+      "notes": "LS1/LS2 only: no RHD S-chassis line for the LS3 pump was found at Sikky (its LS3 line PS100A is listed for the S13/S14). The product text names the S13/S14 rack; the S15 fitment rests on the S15 package offering it."
+    },
+    {
+      "id": "chasebays-power-steering-kit-ls",
+      "vendor": "Chase Bays",
+      "product": {
+        "value": "Chase Bays Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-power-steering-kit-nissan-s13-s14-s15-with-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7 (product page)",
+            "note": "'Chase Bays Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7'; applications 'S13 / S14 / S15 RHD and LHD with:'."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "partNumber": {
+        "value": "CB-N-PSKLS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-power-steering-kit-nissan-s13-s14-s15-with-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7 (product page)",
+            "note": "'SKU: CB-N-PSKLS'"
+          }
+        ]
+      },
+      "price": {
+        "value": 499.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-power-steering-kit-nissan-s13-s14-s15-with-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7 (product page)",
+            "note": "'$499.99'; options 'Left Hand Drive or Right Hand Drive?' and 'Add Fluid Cooler?'."
+          }
+        ],
+        "note": "Price shown with no option selected; the page does not print a separate price for the cooler option in the saved text."
+      },
+      "includes": {
+        "value": [
+          "Triple-baffled power steering reservoir with a bracket for the stock location",
+          "-6AN PTFE high-pressure rack-to-pump hose; -6AN rack-to-reservoir and -10AN reservoir-to-pump hoses",
+          "AN fittings and metric-to-AN adapters for the rack and pump, including o-ring rack fittings"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-power-steering-kit-nissan-s13-s14-s15-with-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7 (product page)",
+            "note": "'It is a full 100% upgraded A.N. Hose and Fitting replacement of the stock reservoir and hoses.'; 'The bracket works for S13, S14 & S15 chassis unlike stock.'; 'The high-pressure rack to pump hose is -6AN stainless steel, Teflon PTFE lined'; 'The -6AN rack to reservoir & -10AN reservoir to pump hoses'; 'Metric to AN adapters for rack & pump conversion to AN.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["LS1 and LS6: a 1997-2004 Corvette-type pump for the external reservoir"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-power-steering-kit-nissan-s13-s14-s15-with-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Power Steering Kit - Nissan 240sx S13 / S14 / S15 with LS1, LS2, LS3, LS6, LS7 (product page)",
+            "note": "'LS1 & LS6 (require pump swap to 97-04 Corvette type for external reservoir use)'"
+          }
+        ]
+      },
+      "notes": "Covers LS1 (with the pump swap) and LS3 in RHD S15s. Uses the factory S-chassis rack."
+    },
+    {
+      "id": "chasebays-tucked-radiator-s-chassis",
+      "vendor": "Chase Bays",
+      "product": {
+        "value": "Chase Bays Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+            "note": "'Chase Bays Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32'; hose sizes include 'GM LS Upper & Lower' (1.5 in, 38 mm)."
+          }
+        ]
+      },
+      "fills": ["cooling"],
+      "partNumber": {
+        "value": "CB-14RAD-138",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+            "note": "'SKU: CB-14RAD-138'"
+          }
+        ]
+      },
+      "price": {
+        "value": 699.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+            "note": "'$699.99'; listed as 'This product is sold out' with 'OUT OF STOCK - RESTOCK Q4 2026'."
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Dual-pass aluminium radiator with -20AN inlet and outlet", "Fan shroud"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+            "note": "'Inlet & outlet are -20AN female threads.' and 'EVERY radiator comes standard with a shroud'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Front core support cutting",
+          "Custom hoses (factory hoses do not fit)",
+          "A new fill point, as the top sits below stock"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+            "accessed": "2026-09-29",
+            "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+            "note": "'This radiator requires some light front core support cutting.'; 'Factory hoses don't work.'; 'Since the top of our radiator sits lower than stock, we have to make a new fill point.'"
+          }
+        ]
+      },
+      "notes": "Sold out on 2026-09-29 (restock stated as Q4 2026). Size 27.25 x 13.5 x 3.5 in (3 in core), set up for two 12 in fans. Not LS-specific: the listing covers SR, RB, KA, JZ and LS engines."
+    },
+    {
+      "id": "collins-mm24017-s-chassis-mounts",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Engine to S-Chassis Engine Mounts",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: LSX Engine to S-Chassis Engine Mounts (product page)",
+            "note": "'LSX Engine to S-Chassis Engine Mounts'; chassis '-Nissan 240SX S13', '-Nissan 240SX S14', '-Nissan S15'; transmission '-350Z (CD001-CD009-Has Clutch Fork)'."
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "partNumber": {
+        "value": "MM24017",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-lsx-engine-mounts.json",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: product record (Shopify JSON) for LSX Engine to S-Chassis Engine Mounts",
+            "note": "Variant 'No Crossmember' has SKU 'MM24017'; 'Add Crossmember' adds 'CM01314'."
+          }
+        ]
+      },
+      "price": {
+        "value": 425.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: LSX Engine to S-Chassis Engine Mounts (product page)",
+            "note": "'No Crossmember - $425.00 USD'; with the S-chassis crossmember 'Add Crossmember - $630.00 USD'."
+          }
+        ]
+      },
+      "includes": {
+        "value": ["S-chassis to LS engine mounts", "Engine mount bolt kit"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: LSX Engine to S-Chassis Engine Mounts (product page)",
+            "note": "'-S-Chassis to LS Engine Mounts' and '-Engine Mount Bolt Kit'."
+          }
+        ]
+      },
+      "pairsWith": ["collins-cm01314-s-chassis-crossmember", "isr-op24016-s-chassis-oil-pan"],
+      "notes": "The Collins system pairs an LS with a Nissan 350Z/370Z gearbox (CD00x or JK40) through Collins' LS-to-350Z adapter plate, which is generic hardware researched elsewhere. Collins does not say whether these are ISR-made mounts; ISR's own LS mount kit (IS-240-LSMKT, $412.50, isrperformance.com) is listed for the S13 and S14 only, and Collins' ISR oil pan must be used with ISR mounts. No RHD or LHD statement."
+    },
+    {
+      "id": "collins-cm01314-s-chassis-crossmember",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "S-Chassis Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-crossmember",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: S-Chassis Crossmember (product page)",
+            "note": "'S-Chassis Crossmember'; application 'S to 350Z/370Z Transmission Mounted in an S13/S14/S15'."
+          }
+        ],
+        "note": "The application line is split in the page text as -L / S to 350Z/370Z..., i.e. LS to 350Z/370Z Transmission Mounted in an S13/S14/S15."
+      },
+      "fills": ["transmission-mount"],
+      "partNumber": {
+        "value": "CM01314",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-crossmember.json",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: product record (Shopify JSON) for S-Chassis Crossmember",
+            "note": "SKU string 'CM01314, CM02487, BK30360' (crossmember, mount, bolt kit)."
+          }
+        ]
+      },
+      "price": {
+        "value": 205.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-crossmember",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: S-Chassis Crossmember (product page)",
+            "note": "'Default Title - $205.00 USD'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["S-chassis steel crossmember", "Crossmember mount", "Crossmember bolt kit"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/s-chassis-crossmember",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: S-Chassis Crossmember (product page)",
+            "note": "'-S-Chassis Steel Crossmember', '-Crossmember Mount', '-S-Chassis Crossmember Bolt Kit'; 'With this single mount you have over an Inch(>25mm) of adjustability.'"
+          }
+        ]
+      },
+      "notes": "For a Nissan 350Z/370Z gearbox, not a T56. Its instructions have the tunnel flange beaten in (see modifications)."
+    },
+    {
+      "id": "isr-op24016-s-chassis-oil-pan",
+      "vendor": "ISR Performance (sold by Collins Performance Technologies)",
+      "product": {
+        "value": "ISR LSX to S-Chassis Oil Pan",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/isr-lsx-to-s-chassis-oil-pan",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Oil Pan (product page)",
+            "note": "'ISR LSX to S-Chassis Oil Pan'; chassis '-240SX S13' and '-240SX S14' only."
+          }
+        ]
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "OP24016",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/isr-lsx-to-s-chassis-oil-pan.json",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: product record (Shopify JSON) for ISR LSX to S-Chassis Oil Pan",
+            "note": "Variant 'Do Not Include' has SKU 'OP24016'; the relocation-kit variant adds 'OP00342'."
+          }
+        ]
+      },
+      "price": {
+        "value": 590.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/isr-lsx-to-s-chassis-oil-pan",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Oil Pan (product page)",
+            "note": "'Do Not Include - $590.00 USD'; with the Collins filter relocation kit 'Include Oil Filter Relocation Kit - $775.00 USD'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Front sump swap oil pan",
+          "Oil pickup tube with O-ring",
+          "Dipstick",
+          "Oil pan gasket",
+          "Hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/isr-lsx-to-s-chassis-oil-pan",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Oil Pan (product page)",
+            "note": "'-ISR LSX S13/14 Front Sump Swap Oil Pan', '-Oil Pickup Tube with O-Ring', '-Dip Stick', '-Oil Pan Gasket', '-Hardware'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "ISR LSX to S-chassis engine mounts",
+          "An oil filter relocation kit (Collins calls it necessary for fitment)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/isr-lsx-to-s-chassis-oil-pan",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Oil Pan (product page)",
+            "note": "'This oil pan must be used with ISR LSX to S-chassis Engine Mounts' and '-Collins Oil Filter Relocation Kit (Necessary for fitment)'."
+          }
+        ]
+      },
+      "pairsWith": ["collins-mm24017-s-chassis-mounts"],
+      "notes": "The listing names the S13 and S14 only, not the S15. Collins sells it as the oil-pan option of its S-chassis LS kit, whose mounts do list the S15; S15 fitment of the pan itself is unconfirmed."
+    },
+    {
+      "id": "isr-s-chassis-ls-headers",
+      "vendor": "ISR Performance (sold by Collins Performance Technologies)",
+      "product": {
+        "value": "ISR LSX to S-Chassis Headers",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-s-chassis-1-3-4-headers",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Headers (product page)",
+            "note": "'ISR LSX to S-Chassis Headers'; chassis '-Nissan 240SX S13', '-Nissan 240SX S14', '-Nissan S15'."
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "partNumber": {
+        "value": "EH01314",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-s-chassis-1-3-4-headers.json",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: product record (Shopify JSON) for ISR LSX to S-Chassis Headers",
+            "note": "SKU 'EH01314'"
+          }
+        ]
+      },
+      "price": {
+        "value": 800.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-s-chassis-1-3-4-headers",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Headers (product page)",
+            "note": "'Default Title - $800.00 USD'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Driver and passenger stainless headers, 1 3/4 in", "Four gaskets"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-s-chassis-1-3-4-headers",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies: ISR LSX to S-Chassis Headers (product page)",
+            "note": "'-Driver + Passenger Side Stainless Steel' and '-(4) Gaskets'."
+          }
+        ]
+      },
+      "notes": "S15 fitment conflict: Collins lists the S15, but ISR's own listing of its 1 3/4 in S-chassis LS header (HGC, IS-SSHD-240LS, $770.00, isrperformance.com) names only the 1989-98 240SX, which was sold LHD, says nothing about RHD, and requires ISR mounts to guarantee fitment. Sikky and Street Machine both say RHD cars need different headers. Treat as unconfirmed for the RHD S15. Whether EH01314 and IS-SSHD-240LS are the same header is not stated."
+    },
+    {
+      "id": "ke-conversions-s-chassis-ls-kit",
+      "vendor": "KE Conversions (Australia)",
+      "product": {
+        "value": "LS1 into S13 Silvia",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+            "accessed": "2026-09-29",
+            "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+            "note": "Product name 'LS1 into S13 Silvia'; description 'LS1 LS2 LS3 L98 into S13 S14 S15 silvia'."
+          },
+          {
+            "url": "https://www.keconversions.com/product/LS1-LS2-LS3-L98-S13-240sx-Nissan-silva-custom-engine-conversion-motor-mounts-swap/48",
+            "accessed": "2026-09-29",
+            "title": "KE Conversions (Australia): LS1 LS2 LS3 L98 S13 240sx Nissan silva custom engine conversion motor mounts swap (product page; its description is loaded by script)",
+            "note": "Page title 'LS1 LS2 LS3 L98 S13 240sx Nissan silva custom engine conversion motor mounts swap'."
+          }
+        ],
+        "note": "Two URLs, one vendor: the second is the store data behind the first, so this is one source."
+      },
+      "fills": ["engine-mounts", "transmission-mount"],
+      "includes": {
+        "value": ["Block mounts", "Gearbox crossmember", "Bolt kit"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+            "accessed": "2026-09-29",
+            "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+            "note": "'Full kit includes:' 'Block mounts' 'Gearbox crossmember' 'Bolt kit'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Standard S13 rubber engine mounts, or KE Conversions' own replacement mounts (sold separately)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+            "accessed": "2026-09-29",
+            "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+            "note": "'This kit has been re-designed from' (9 October 2023, the date is JSON-escaped in the record) ... 'to accept the standard S13 rubber mounts or the KEconversions S13 rubber mount replacements' and 'Rubber mount replacements pictured are not included in the sale but can be purchased separately.'"
+          }
+        ]
+      },
+      "notes": "Australian (store currency AUD, locale en_AU, per the store data in the product page's script). Price not stored: the product record gives only a range across its unnamed variations, low_formatted $140.00 to high_formatted $375.00 (AUD), so which figure is the full kit is not stated. The listing names the S15 but no gearbox. Its fitting requirements (tunnel, clutch master, sump or crossmember notching, starter or rack mounts, bonnet) are under modifications."
+    },
+    {
+      "id": "wiring-specialties-s15-ls1-harness",
+      "vendor": "Wiring Specialties (also sold by Sikky)",
+      "product": {
+        "value": "LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/s15-silvia-ls1-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES (product page)",
+            "note": "'LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES'; 'This harness is specifically engineered for a JDM RHD S15 Nissan Silvia (99-02) with the GM LS1 Cable Throttle engine swap.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/s15-silvia-ls1-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS1 Swap Wiring Harness for S15 Silvia, built by Wiring Specialties (product page)",
+            "note": "Sikky sells it as 'LS1 Swap Wiring Harness for S15 Silvia', 'Built to spec by Wiring Specialties'."
+          }
+        ],
+        "note": "The two sites name it differently; the maker's name is used."
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-S15RHD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/s15-silvia-ls1-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES (product page)",
+            "note": "'WRS-PROLS1-S15RHD'"
+          },
+          {
+            "url": "https://www.sikky.com/product/s15-silvia-ls1-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS1 Swap Wiring Harness for S15 Silvia, built by Wiring Specialties (product page)",
+            "note": "'SKU: WRS-PROLS1-S15RHD'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899.0,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/s15-silvia-ls1-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES (product page)",
+            "note": "'USD $899.00'"
+          },
+          {
+            "url": "https://www.sikky.com/product/s15-silvia-ls1-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS1 Swap Wiring Harness for S15 Silvia, built by Wiring Specialties (product page)",
+            "note": "'$899.00'"
+          }
+        ],
+        "note": "Base price; options (engine source, injectors, ABS, speedo calibration, gauge adapters, coil harness, A/C) add to it."
+      },
+      "includes": {
+        "value": [
+          "One-piece main engine and transmission harness with alternator charge cable",
+          "Connectors for sensors, 8 injectors, coils (coil harnesses optional), front O2 sensors, idle air, reverse lockout and skip shift",
+          "Wiring for two PCM-controlled electric fans",
+          "OBD2 connector"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/s15-silvia-ls1-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS1 Swap Wiring Harness for S15 Silvia, built by Wiring Specialties (product page)",
+            "note": "'Main Engine and Transmission one-piece tucked harness'; 'Alternator charge cable built into the main harness'; '8x Injector connectors'; 'Bank 1 and Bank 2 Coil interface connectors (coil harnesses are optional)'; 'Wiring for 2 PCM-controlled electric cooling fans'; 'OBD2 Communication connector'; 'Reverse Lockout connector'; 'Skip Shift connector'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "A drive-by-cable Gen III LS1 or Vortec engine and GM PCM with a startup flash (VATS removal)",
+          "Dakota Digital SGi-100BT signal conditioner for the factory tachometer",
+          "Working S15 ABS with the S15 diff, or the SGI-100BT option, for the factory speedometer",
+          "Nissan S15 one-wire oil and temperature senders to keep the factory gauges (with the optional adapters)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/s15-silvia-ls1-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS1 / Vortec Wiring Harness for S15 Silvia (RHD JDM) - PRO SERIES (product page)",
+            "note": "'Supports Engines with DRIVE BY CABLE THROTTLE ONLY'; 'Factory Tachometer use requires the Dakota Digital Signal Conditioner Box SGi-100BT to be wired in.'; 'Factory Speedometer use requires either functional ABS with S15 diff installed or the use of a speedometer signal conditioner wired in'; 'Will require the use of Nissan S15 Oil and Temp sensors (1-wire).'; 'The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ],
+        "note": "The page conflicts on the ABS core: the option reads Project Car ABS - CORE no longer required, while the description still says ABS use requires sending in the S15 SR20DE(T) main engine harness."
+      },
+      "notes": "Options select JDM or Australian S15, SR20DE or SR20DET car, factory manual or auto car, and ABS connector type. Wiring Specialties notes the S15 gearbox has no speed sensor, which is why the speedo needs ABS or a signal conditioner."
+    },
+    {
+      "id": "wiring-specialties-s15-ls3-harness",
+      "vendor": "Wiring Specialties (also sold by Sikky)",
+      "product": {
+        "value": "LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/silvia-s15-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES (product page)",
+            "note": "'LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES'"
+          },
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-ls3-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS3 Gen IV 58x DBW Swap Wiring Harness for Nissan Silvia S15, built by Wiring Specialties (product page)",
+            "note": "Sikky sells it as 'LS3 Gen IV 58x DBW Swap Wiring Harness for Nissan Silvia S15', 'Built to spec by Wiring Specialties'."
+          }
+        ],
+        "note": "The two sites name it differently; the maker's name is used."
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "WRS-PROLS3-S15",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/silvia-s15-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES (product page)",
+            "note": "'WRS-PROLS3-S15'"
+          }
+        ],
+        "note": "Sikky lists the same harness as SKU WRS-PROLS3-SILS15 (sikky.com/product/silvia-s15-ls3-wiring-harness/); the maker's number is used."
+      },
+      "price": {
+        "value": 999.0,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/silvia-s15-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES (product page)",
+            "note": "'USD $999.00'"
+          },
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-ls3-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS3 Gen IV 58x DBW Swap Wiring Harness for Nissan Silvia S15, built by Wiring Specialties (product page)",
+            "note": "'$999.00'"
+          }
+        ],
+        "note": "Base price before options (pedal, MAF, injectors, ABS, gauge adapters, A/C, grounding kit)."
+      },
+      "includes": {
+        "value": [
+          "Engine and transmission harness with integrated coil harnesses",
+          "Sealed 5-circuit Bussmann fuse and relay block (ignition, fuel pump, two fans, A/C)",
+          "OBD2 connector"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-ls3-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS3 Gen IV 58x DBW Swap Wiring Harness for Nissan Silvia S15, built by Wiring Specialties (product page)",
+            "note": "'Integrated Coil Pack Harnesses – both banks now provided for no extra charge'; 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided – no connections to OEM fuse boxes needed'; 'Circuits provided: Ignition, Fuel Pump, Fan1, Fan2 & A/C relay'; 'OBD2 Communication connector'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "A drive-by-wire 58x Gen IV engine (LS3 and truck variants listed) and its electronic throttle pedal (Corvette or Silverado/Escalade pedal offered)",
+          "Dakota Digital SGi-100BT signal conditioner for the factory tachometer",
+          "Working S15 ABS with the S15 diff, or the SGI-100BT option, for the factory speedometer"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-ls3-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Sikky: LS3 Gen IV 58x DBW Swap Wiring Harness for Nissan Silvia S15, built by Wiring Specialties (product page)",
+            "note": "'SUPPORTED ENGINES: GM 6.2 LITER LS3 ENGINES USING DRIVE BY WIRE / ELECTRONIC THROTTLE'; 'Buy a Corvette 58x Pedal (+$99.00)'; 'Buy a Silverado/Escalade 58x Pedal (+$99.00)'."
+          },
+          {
+            "url": "https://www.wiringspecialties.com/silvia-s15-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: LS3 Gen IV 58x DBW Wiring Harness for Nissan Silvia S15 (RHD JDM) - PRO SERIES (product page)",
+            "note": "'Factory Tachometer use requires the Dakota Digital Signal Conditioner Box SGi-100BT to be wired in.' and 'Factory Speedometer use requires either functional ABS with S15 diff installed or the use of a speedometer signal conditioner wired in'."
+          }
+        ],
+        "note": "Each item rests on one listing: the engine and pedal on Sikky's, the tachometer and speedometer notes on Wiring Specialties'."
+      },
+      "notes": "Pedal prices differ: Sikky lists them at +$99.00, Wiring Specialties at +$120. The LS1 harness does not run a 58x LS3, and this one does not run a 24x cable-throttle LS1."
+    },
+    {
+      "id": "wiring-specialties-s15-ls3-haltech-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-elite-2500-ls3-vortec-4th-gen-58x-dbw-wiring-harness-for-s15-silvia-rhd-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES (product page)",
+            "note": "'HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES'; 'Any JDM RHD S15 Silvia manufactured in 1999-2002'."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "WRS-PROLS3-HAL-ELITE2500-S15JDM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-elite-2500-ls3-vortec-4th-gen-58x-dbw-wiring-harness-for-s15-silvia-rhd-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES (product page)",
+            "note": "'WRS-PROLS3-HAL-ELITE2500-S15JDM'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1259.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-elite-2500-ls3-vortec-4th-gen-58x-dbw-wiring-harness-for-s15-silvia-rhd-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES (product page)",
+            "note": "'USD $1,259.00'"
+          }
+        ],
+        "note": "Harness only; the ECU is extra."
+      },
+      "requires": {
+        "value": ["A Haltech Elite 2500 ECU and Haltech-compatible sensors (not included)"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-elite-2500-ls3-vortec-4th-gen-58x-dbw-wiring-harness-for-s15-silvia-rhd-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties: HALTECH Elite 2500 LS3 / VORTEC 4th Gen 58x DBW Wiring Harness for S15 Silvia RHD - PRO SERIES (product page)",
+            "note": "'LS3 / VORTEC 4th Generation Complete Replacement Engine Harness pre-wired for use with the Haltech Elite 2500 Aftermarket ECU & appropriate Haltech compatible sensors.' and 'I Already Have a Haltech Elite 2500 ECU'."
+          }
+        ]
+      },
+      "notes": "The standalone-ECU alternative to the GM-PCM harness above; a Link Xtreme version is also listed. The ECU itself is covered by the generic LS research."
+    },
+    {
+      "id": "gm-p01-0411-pcm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "411 P01 PCM (red/blue connectors), 24x Gen III",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G3CM",
+            "note": "PSI's 24x drive-by-cable harness page lists as required and sold separately: 'RED/BLUE 411 P01 PCM' (read via WebFetch)."
+          },
+          {
+            "url": "https://www.ictbillet.com/products/ls-gen-3-ecm-engine-computer-connector-kit-blue-red-p01-pcm-0411-ls1-lm7-lq4-lr4",
+            "accessed": "2026-09-29",
+            "title": "ICT Billet WPECM30BR",
+            "note": "Connector kit for this PCM: 'LS Gen 3 ECM Engine Computer Connector Kit Blue Red P01 PCM 0411 LS1 LM7 LQ4 LR4', for 'LS1, LS6, LQ4, LQ9, LM7, L59, and LR4 engine-management systems using the matching blue and red PCM connectors'."
+          },
+          {
+            "url": "https://www.speartech.com/product_p/24xharnesscable.htm",
+            "accessed": "2026-09-29",
+            "title": "Speartech LS1 / Vortec Harness - Cable Throttle",
+            "note": "Speartech's 24x cable-throttle harness asks 'PCM connector style(required):' 'Red/Blue' or 'Blue/Green', and says 'PCM shown for reference only. Not included with harness.'"
+          }
+        ],
+        "note": "Speartech also offers a blue/green-connector version, so not every 24x PCM is the red/blue 0411; which LS1 donors used which connector set was not checked. No GM part number for the 0411 PCM was verified."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LSx engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS1-UNI",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis' and 'The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-ls1-pcm-programming",
+        "ws-ls1-standalone-harness",
+        "psi-har-g3cm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices licensing for the 98-02 Camaro 5.7 and 97-04 Corvette 5.7 ECMs at 2 credits each (see hpt-universal-credit). Wiring Specialties, PSI and lt1swap.com all sell or program these PCMs for swaps (separate parts)."
+    },
+    {
+      "id": "gm-e38-ecm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "E38 ECM, 58x Gen IV (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS3-UNI",
+            "note": "Wiring Specialties' LS3 harness: 'LS3/L99 4th Generation using E38 PCM' and the option 'Add LS3 / L76 / Vortec E38 PCM w/ Flash (+$299) (Recommended)'."
+          },
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "Programming service line: '$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99'."
+          },
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G4WM",
+            "note": "PSI's 58x manual harness: 'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)."
+          }
+        ],
+        "note": "E67 also runs 58x LS engines: lt1swap.com programs E37, E38 and E67 ECMs, and HP Tuners lists the Chevrolet Performance crate-engine controller as an E67 (see hpt-universal-credit). Which GM controller a given donor LS3 has was not checked car by car."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LS engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis. The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-58x-ecm-programming",
+        "ws-ls3-standalone-harness",
+        "psi-har-g4wm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices the 05-13 Corvette 6.0/6.2/7.0 and 10-15 Camaro 6.2/7.0 ECMs at 2 credits each."
+    },
+    {
+      "id": "hpt-mpvi4",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "MPVI4",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners MPVI4",
+            "note": "Product page title 'MPVI4' with 'Introducing HP Tuners’ newest and most advanced vehicle interface.'"
+          }
+        ],
+        "note": "The MPVI4 is the current interface. HP Tuners ends support for the original MPVI1 on 1 January 2027; the MPVI2, MPVI3 and MPVI4 are not affected (HP Tuners MPVI1 end-of-life FAQ)."
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "M04-000-00",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: M04-000-00'"
+          }
+        ]
+      },
+      "price": {
+        "value": 399.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'From: $399.99'"
+          }
+        ],
+        "note": "Regular list price on the maker page (\"From\"); credits are extra."
+      },
+      "includes": {
+        "value": ["MPVI4 Interface", "USB-C to C Cable", "Quick Start Guide"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "In the Box: 'MPVI4 Interface' 'USB-C to C Cable' 'Quick Start Guide'. Also 'comes standard with the Pro Feature Set'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["credits to license controllers (varies by make/model)", "VCM Suite 5.2+"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Requires credits to license controllers (varies by make/model)' and 'Credits Sold Separately'; 'Works with VCM Suite 5.2+'."
+          }
+        ]
+      },
+      "pairsWith": ["hpt-universal-credit", "gm-p01-0411-pcm", "gm-e38-ecm"],
+      "notes": "Tuning interface for the GM-PCM route (not an ECU). Filed under \"other\" so it is not read as an ECU alternative."
+    },
+    {
+      "id": "hpt-universal-credit",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "Universal Credits (GM Credits)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners products",
+            "note": "Credits section: 'Universal Credits' ... 'GM Credits $49.99'."
+          },
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Universal Credits' '$49.99 each'"
+          }
+        ]
+      },
+      "fills": ["other"],
+      "price": {
+        "value": 49.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'$49.99 each'"
+          },
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "note": "'GM Credits $49.99'"
+          }
+        ],
+        "note": "Per credit, regular price; both pages are hptuners.com, so one site. Two credits per ECM for the controllers below, so about USD 99.98 per car."
+      },
+      "requires": {
+        "value": [
+          "2 credits for the 98-02 Camaro 5.7, 97-04 Corvette 5.7, 05-13 Corvette 6.0/6.2/7.0, 10-15 Camaro 6.2/7.0 and Chevrolet Performance E67 crate-engine ECMs"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/vehicles/gm-tuning/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners GM vehicle support",
+            "note": "GM table: '98-02 | Camaro 5.7 | 2', '97-04 | Corvette 5.7 | 2', '05-13 | Corvette 6.0, 6.2, 7.0', '10-15 | Camaro 6.2, 7.0', '06-14 | Chevrolet Performance E67 Crate Engine PCM | 2'; 'Credit cost shown is for ECM licensing only.'"
+          }
+        ],
+        "note": "The 05-13 Corvette and 10-15 Camaro rows also read 2 credits on the page; the cell sits after a TDN icon, so only the row start is quoted."
+      },
+      "pairsWith": ["hpt-mpvi4"],
+      "notes": "Quantity matters: the schema has no quantity field, so the 2-credit count is in requires."
+    },
+    {
+      "id": "lt1swap-ls1-pcm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (1998-2002 Camaro/Trans Am LS1, 1997-2004 Corvette, 2004 GTO PCMs)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1, 1997-2004 Corvette,' '2004 GTO 5.7L LS1/LS6' and 'Swap Programming Service - USA Only'; the service is to 'remove anti-theft system' and 'I enable cooling fans for all swap applications'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 75,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-p01-0411-pcm"],
+      "notes": "US only: the page says 'NO LONGER SHIPPING INTERNATIONAL' and 'USA ONLY!', so it does not suit a Saudi-based build without a US forwarding step. Not a custom tune: it will not tune modified engines."
+    },
+    {
+      "id": "lt1swap-58x-ecm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (2007-2013 E37, E38, E67 ECMs incl. Camaro/Corvette 6.2L LS3)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99' and 'Swap Programming Service - USA Only'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-e38-ecm"],
+      "notes": "US only ('USA ONLY!'), as for the LS1 service."
+    },
+    {
+      "id": "psi-ls1-pcm-programmed",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "Related item on the HAR-G3CM page: 'LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01' at '$210.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 210,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$210.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com blocks curl), so not machine-checked; regular vs sale not shown in what was returned."
+      },
+      "pairsWith": ["psi-har-g3cm"]
+    },
+    {
+      "id": "psi-e38-ecm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "E38 LS3/Vortec Gen IV Engine ECM (2006+)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "Option on the HAR-G4WM page: 'E38 LS3/Vortec Gen IV Engine ECM (2006+)' at '$274.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 274,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$274.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; whether it is programmed for the swap was not stated in what WebFetch returned."
+      },
+      "pairsWith": ["psi-har-g4wm"]
+    },
+    {
+      "id": "chevrolet-performance-ls3-controller-kit",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Engine Controller Kit For 430HP LS3 6.2L",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19540147 - Engine Controller Kit For 430HP LS3 6.2L'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Chevrolet Performance LS3 430hp Controller Kit - Computer & Harness 19354328'"
+          },
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "title": "LS Series Crate Engine Control System, REV 19MY16",
+            "note": "GM instruction sheet 19171935: '19354328 LS3 Engine Control System Kit'"
+          }
+        ],
+        "note": "GM sheet: 'This control system is a stand alone, fully-integrated kit designed to run Chevrolet Performance Parts LS Series crate engines with 58x crankshaft reluctor wheels, 4x camshaft indexing, and electronic throttle control (ETC)'. No Chevrolet Performance controller kit for a 24x LS1 was found: Scoggin Dickey's catalogue searches for controller kits on 2026-09-29 (search pages not saved) returned only 58x LS and Gen V LT kits."
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "19540147",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19540147'"
+          }
+        ],
+        "note": "GM's instruction sheet (REV 19MY16) and Pro Touring Store's listing use the earlier number 19354328 for the LS3 kit; Scoggin Dickey sells it as 19540147 (its page metadata lists 19258270, 19354328 and 19540147 together, but no visible text states a supersession). Pro Touring Store's variant SKU is 19540148, which Scoggin Dickey uses for the LS376/480 kit, so that SKU looks like a listing error."
+      },
+      "price": {
+        "value": 2320.95,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'MSRP:' '$2,475.68' ... 'Now:' '$2,320.95'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,475.68). Pro Touring Store lists the kit under 19354328 at USD 2,257.74 ('$2,25774' on the page, cents in superscript)."
+      },
+      "includes": {
+        "value": [
+          "engine control module (flashed with the appropriate calibration)",
+          "engine harness with fuse/relay center",
+          "accelerator pedal (GM 10379038)",
+          "mass air flow (MAF) sensor and mounting boss",
+          "oxygen sensors (2) and mounting bosses (2)",
+          "MAP sensor jumper",
+          "instruction sheet"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'Included in the kit are the engine control module (flashed with the appropriate calibration), engine harness, accelerator pedal, mass air flow (MAF) sensor, MAF sensor mounting boss, oxygen sensors (2), and oxygen sensor mounting bosses (2).' Parts list: '10379038 Accelerator Pedal', '19202597 MAP Sensor Jumper LS3/LS376'; 'The harness includes a fuse/relay center'."
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'Most kits include:' ... 'A CTS style throttle pedal assembly (for use with the electronically operated throttle)' ... 'A complete wiring harness with fuse box and necessary cam sensor and MAP sensor jumpers' ... 'The programmed controller' ... 'An instruction sheet'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph",
+          "power and ground sources, a high-pressure fuel pump and an electric cooling fan",
+          "clutch and flywheel purchased separately (manual applications)"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'This control system requires a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph for the LS2/LS3/LS376s'; 'For manual applications, the clutch and flywheel used must be purchased separately'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'are power and ground sources, a high-pressure fuel pump and an electric cooling fan'"
+          }
+        ]
+      },
+      "pairsWith": ["qfs-c5-style-filter-regulator"],
+      "notes": "GM designs the kit for its own crate engines; the sheet does not cover use on a donor LS3. GM sheet: 'The axle drive ratio in the calibration is set to 3.42:1 and is okay for ratio from 3.08 to 4.11', and the speed input expects 40 pulses per revolution (4L60/4L80 automatics). The 3.42:1 base and tyre range matter for drift cars on other final drives. Scoggin Dickey's generic list adds an oil pressure sensor, fuel pump power module and fuel pressure sensor kit that GM's 2016 sheet does not list."
+    },
+    {
+      "id": "holley-terminator-x-550-903",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X MPFI, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-cable, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-903 - Terminator X Mpfi, Ls1' '24x Crank - 1x Cam - EV1 Injectors - 3.5 in. Touchscreen' and 'For GM LS1/LS6 engines with 24x crank reluctor - with EV1 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'24x / EV1 / DBC: 550-903' and '1997+ LS1/2/6 APPLICATIONS USING AN EV1 INJECTOR, 24X CRANK RELUCTOR, 1X CAM GEAR, AND DRIVE BY CABLE ONLY.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-903",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-903'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'24x / EV1 / DBC: 550-903'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1599.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'$1,599.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'$1,59995' (cents in superscript)"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown (Holley pricing is dealer-uniform). Both list it out of stock or backordered."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "Terminator X ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - Terminator X ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "No drive-by-wire control (drive by cable only, per Pro Touring Store's application note). It suits cable-throttle LS1s such as the F-body's; an LS1 on an electronic throttle needs the Max kit 550-929. Scoggin Dickey: 'Will not control Low Impedance Injectors'. EV6-injector version: 550-909, listed on the same Pro Touring Store page."
+    },
+    {
+      "id": "holley-terminator-x-max-550-929",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-929 - Terminator X Max Mpfi W/Dbw, Ls1' '24x Crank - 1x Cam - EV1 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'EV1 Bosch (LS1 / Jetronic) / Drive by wire / No'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-929",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-929'"
+          }
+        ],
+        "note": "Pro Touring Store sells the same variant (24x, EV1, drive by wire, no transmission control), but its page text does not print the part number; the store's product JSON (read with curl, not saved) gives 550-929."
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'$2,249.95' ... '$1,999.95' ... '$250.00'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,249.95, save USD 250.00); Pro Touring Store lists USD 1,999.95 with no compare-at price. Variant 550-929T swaps the handheld for a USB/CAN cable: USD 1,949.95 (MSRP 2,193.95) at Scoggin Dickey."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "For GM LS1/LS6 engines with a 24x reluctor, drive-by-wire throttle body and EV1 injectors. Scoggin Dickey: 'Recommended Pedal part number - 10379038' (pedal not included)."
+    },
+    {
+      "id": "holley-terminator-x-max-550-931",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW (58x crank, 4x cam, EV6 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-931 - Terminator X Max Mpfi W/Dbw' '58x Crank - 4x Cam - EV6 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen' and 'Designed for GM 4.8/5.3/6.0 LS Truck Engines and LS2/LS3 with 58x Crank, 4x Cam and a Drive-By-Wire Throttle Body, with EV6 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "Non-Max 58x kits on the same store's page: 'WILL NOT OPERATE FACTORY DRIVE BY WIRE LS3 THROTTLE BODIES' and 'USE TERMINATOR X MAX FOR DBW.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "550-931",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'$1,999.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown."
+      },
+      "includes": {
+        "value": [
+          "58x/4x LS Engine Main Harness",
+          "EV6 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 58x/4x LS Engine Main Harness - EV6 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "The match for a stock LS3 (58x, 4x cam, EV6 injectors, electronic throttle). The cheaper non-Max 58x kit 550-910 is EV1 and has no DBW control ('58x Crank - 4x Cam - EV1 Injectors - 3.5 in. Touchscreen', USD 1,599.95 at Scoggin Dickey), so it does not suit a stock LS3 without changes. Pedal not included; Scoggin Dickey recommends GM 10379038."
+    },
+    {
+      "id": "ws-ls1-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness - PRO SERIES'; 'Supports Engines with DRIVE BY CABLE THROTTLE ONLY'; 'Any F-Body 5.7L LS1 from 1999-2002 Camaro, Firebird, Trans Am or Corvette'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $899.00'"
+          }
+        ],
+        "note": "Base price; options add cost (e.g. CD009 or BMW ZF gearbox wiring +USD 45 each, PCM flash +USD 199, new PCM with tune +USD 299, coil harness +USD 149). Built to order, 2-8 weeks."
+      },
+      "includes": {
+        "value": [
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness",
+          "Wiring for 2 PCM-controlled electric cooling fans",
+          "self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump",
+          "Printable install instructions with pictures"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Main Engine and Transmission one-piece tucked harness' 'Alternator charge cable built into the main harness' 'Wiring for 2 PCM-controlled electric cooling fans' 'comes with a self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump' 'Printable install instructions with pictures'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a GM LS1 PCM with a startup tune (VATS off)",
+          "coil pack harness (option or existing)",
+          "hook up start signal, fuel pump wires and a few other wires for tach and speedo"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis'; 'Add PRO Coilpack Harness:' ... 'I Already Have a Coilpack Harness'; 'You just have to hook up start signal, fuel pump wires and a few other wires for tach and speedo'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "hpt-mpvi4"],
+      "notes": "Gearbox options on the page include 'T56', 'Tremec TR6060', 'Z33 CD009 6 Speed (+$45)' and 'BMW ZF Series (+$45)'. The page warns that 'some transmissions (350z, BMW ZF and S15 Silvia for example) do not have a speed sensor and will require a non-harness based solution like a GPS speedo'. Wiring Specialties also sells car-specific LS1 and LS3 harnesses for the S15, 350Z, E46 and FD RX-7 (ws-<car>-ls1/ls3-harness parts below); its LS menus list no Supra (its Supra MkIV harnesses are for the 1JZ-GTE)."
+    },
+    {
+      "id": "ws-ls1-standalone-harness-with-pcm",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness", "ecu"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI-PCU-HPT-COMBO",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI-PCU-HPT-COMBO'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1198,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,198.00'"
+          }
+        ],
+        "note": "Base price, options extra; no sale shown."
+      },
+      "includes": {
+        "value": [
+          "HP Tuners tuned & tested PCM",
+          "Main Engine and Transmission one-piece tucked harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "Title 'with HP Tuners tuned & tested PCM' and 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "notes": "Same drive-by-cable LS1 harness as ws-ls1-standalone-harness, sold with a tuned PCM. Which PCM family is supplied is not stated on the page."
+    },
+    {
+      "id": "ws-ls3-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES'; 'SUPPORTED ENGINES: GM 6.2 LITER LS3 ENGINES USING DRIVE BY WIRE / ELECTRONIC THROTTLE'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "WRS-PROLS3-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS3-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 999,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $999.00'"
+          }
+        ],
+        "note": "Base price; E38 PCM with flash +USD 299, CD009 or BMW ZF wiring +USD 45. Built to order."
+      },
+      "includes": {
+        "value": [
+          "Integrated Coil Pack Harnesses - both banks",
+          "Standalone 5 Circuit Bussmann Fuse/Relay Block",
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Integrated Coil Pack Harnesses - both banks now provided for no extra charge' 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided - no connections to OEM fuse boxes needed' 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "E38 PCM with a startup tune",
+          "electronic throttle pedal (Corvette/Camaro/CTS-V or Silverado/Escalade)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'LS3/L99 4th Generation using E38 PCM'; 'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis'; 'Electronic Throttle Pedal:' 'Using Chevrolet Corvette / Camaro / CTS-V Pedal'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "hpt-mpvi4"],
+      "notes": "Supported engines include '2008–2013 Chevrolet Corvette Base & Z51 (LS3 Vortec)' and '2010–2015 Chevrolet Camaro SS w/ Manual Trans (LS3 Vortec)'. Gearbox options include T56, T56 Magnum, Tremec TR6060, '350Z Z33 CD009 (+$45)' and 'BMW ZF Series (+$45)'."
+    },
+    {
+      "id": "psi-har-g3cm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic'; engines 'LS1, LS6, LR4, LM7, L59, LQ4, LQ9, LM4, L33' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "HAR-G3CM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G3CM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 599,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$599.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com returns a security check to curl), so not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["RED/BLUE 411 P01 PCM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'RED/BLUE 411 P01 PCM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "psi-ls1-pcm-programmed"]
+    },
+    {
+      "id": "psi-har-g4wm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "HAR-G4WM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G4WM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 624,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$624.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission wiring Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission wiring Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["E38 ECM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "psi-e38-ecm"]
+    },
+    {
+      "id": "qfs-c5-style-filter-regulator",
+      "vendor": "Quantum Fuel Systems (QFS)",
+      "product": {
+        "value": "LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "title": "High Flow Fuel",
+            "note": "'LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi + Straight/Curved AN or Barbed Fittings QFS'; 'this regulator has a fixed (non-adjustable) fuel pressure of 58psi'; '58PSI Fixed Pressure'; 'Fits All 1997+ Gen III and Gen IV LS Series 4.8, 5.3, 5.7L, 6.0, 6.2, 7.0L motors'; 'Supports 550-600HP'"
+          }
+        ],
+        "note": "An aftermarket copy of the GM C5 Corvette filter/regulator, not the GM part."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "QFS-F201-0",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'MPN: QFS-F201-0'"
+          }
+        ]
+      },
+      "price": {
+        "value": 55.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'$55.98 - $88.98'"
+          }
+        ],
+        "note": "Lowest price of the range shown; the option it belongs to (probably the regulator/filter only or barbed fittings) is not stated in the saved text. AN-fitting options cost up to USD 88.98."
+      },
+      "includes": {
+        "value": ["Choice of Fittings", "mounting bracket", "grounding strap"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'Includes Choice of Fittings + mounting bracket and grounding strap as shown.'"
+          }
+        ]
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Returnless LS rails need about 58-60 psi at a constant pressure. Hot Rod AN: 'The C5 Corvette filter/regulator (fixed 58 psi / 4 bar) makes a clean return-less LS fuel system'. GM's own controller-kit sheet asks for '400 kPa (60 psi) constant pressure' and says 'Vacuum reference the fuel system, it must run constant 400 kPa (60 psi).' The genuine GM part was not tied to a part number in a saved source (GM Parts Giant lists GM 10299146, now replaced by 19545386, as 'Fuel Filter', USD 114.06, MSRP 213.76, but the page does not say it is the Corvette regulator)."
+    },
+    {
+      "id": "acdelco-gf822-filter-regulator",
+      "vendor": "ACDelco (GM)",
+      "product": {
+        "value": "ACDelco GF822 Fuel Filter with integrated fuel pressure regulator (1999-2003 Corvette)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "title": "PartsHawk",
+            "note": "'ACDelco GF822 Fuel Filter for Chevrolet Corvette'; fitment '1999-2002 Chevrolet Corvette | Note: CONTAINS INTEGRATED FUEL PRESSURE REGULATOR' and '2003 Chevrolet Corvette | Note: EXCEPT 2ND DESIGN FUEL SYSTEM(FFS)'"
+          }
+        ],
+        "note": "This is the OE-brand version of the C5 Corvette filter/regulator that the QFS unit copies. The page does not state the regulated pressure; the 58 psi figure comes from the aftermarket sellers (QFS, Hot Rod AN)."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "GF822",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'ACDelco GF822'"
+          }
+        ]
+      },
+      "price": {
+        "value": 95.31,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'Special Price $95.31 Regular Price $105.90'"
+          }
+        ],
+        "note": "Sale (special) price; regular price USD 105.90."
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Aftermarket listings cross-reference it to GM 10299146 and 19239926, but no saved page states that link; GM Parts Giant lists GM 10299146 ('Fuel Filter', replaced by 19545386) at USD 114.06 without naming the Corvette regulator."
+    },
+    {
+      "id": "gm-t56-fbody-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 1998-2002 Camaro/Firebird LS1",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "Magnum-F page: 'a direct swap for 1998-02 F-cars with LS1 engines and internal slave hydraulics' and 'Like all Magnum transmissions, the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)'."
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'This T56 Concentric Slave Cylinder works with your Camaro Tremec T56 6-Speed Transmission from model years 1998-2002, it also works with all Pontiac GTO and Chevrolet Corvette variants.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Donor part, no price (no dated listing cited). Factory output is 27-spline (Tremec). Its shifter sits nearly 3 in further back than the Magnum standard position, which is why Tremec made the Magnum-F with the F-body location (see tremec-magnum-f-tuet16362). The LS bellhousing and concentric slave are separate parts. Input-shaft length of the donor T-56 was not found in a source."
+    },
+    {
+      "id": "gm-t56-gto-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 2004-2006 Pontiac GTO",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F.\""
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Other applications for installing the LS7 Chevrolet Performance Clutch Kit are the 2004-06 Pontiac GTO and 2008-09 G8.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": ["tremec-t56-ls-bellhousing", "collins-t56-slave-kit", "sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. The sources confirm it shares the T-56 LS bellhousing and slave with the F-body box; its shifter position, tailhousing and input-shaft length were not found in a source, so fitment in these chassis is unchecked."
+    },
+    {
+      "id": "tremec-magnum-tuet11009",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Magnum 6-speed for GM (hydraulic release), close ratio 2.66 first / 0.63 sixth",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "'TUET11009 GM Hyd 2.66 1.78 1.30 1.00 0.80 0.63 2.90'; quick specs 'Shifter Positions 3', 'Torque Capacity Up to 700 lb-ft.', 'Max Rated RPM 7800', 'Input Splines 26', 'Output Splines 31', 'Dry Weight 140 lbs / 64 kg'; \"Common 'T-56-style' bolt pattern allows for easy pairing to several late-model engines.\""
+          },
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf#page=6",
+            "accessed": "2026-09-29",
+            "title": "TREMEC catalog p. 6 drawing",
+            "note": "Dimensions read from the catalog drawing: (A) input shaft length from front face of trans 'GM 6.52 in' (Ford 5.70 in / 145 mm), (B) standard shifter location '21.05 in / 534.6 mm', (C) optional shifter location '17.53 in / 445.3 mm', (D) optional forward shifter location '13.25 in / 336.6 mm', (E) height at trans face '13.00 in / 330.2 mm', (F) width '12.25 in / 311.2 mm' (read from the page image, p. 6; the GM metric figure is partly hidden behind a photo)."
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "title": "American Powertrain",
+            "note": "'Tremec Magnum Close Ratio 6-speed for GM TUET11009' and '26-spline input shaft'"
+          },
+          {
+            "url": "https://tremec.com/aftermarket/products/magnum/",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Magnum page",
+            "note": "'Known in its original equipment form as the TR-6060, the Magnum is an aftermarket version of the same transmission'"
+          }
+        ],
+        "note": "Weight conflict: the 2020 catalog says 'Dry Weight 140 lbs / 64 kg'; Tremec's current web page and American Powertrain say 'Reasonably light at 135 lbs. dry'. Neither is used as a value here; if weight is needed, prefer the catalog's figure as the more specific (it gives kg too) and treat it as single-source."
+      },
+      "fills": ["gearbox"],
+      "partNumber": {
+        "value": "TUET11009",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'TUET11009 GM Hyd'"
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: TUET11009'"
+          }
+        ]
+      },
+      "price": {
+        "value": 3545.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'$3,545.00'"
+          }
+        ],
+        "note": "New, American Powertrain regular price (no sale shown). Pro Touring Store lists the same unit at USD 3,545.99 for pick-up ('$3,54599' on the page; freight +160 commercial or +210 residential)."
+      },
+      "requires": {
+        "value": [
+          "a 31-spline slip yoke (versus the factory T-56 27-spline)",
+          "separate 'forward' conversion shifter assembly (only for the forward shifter position)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)' is stated for 'all Magnum transmissions'; \"Requires use of separate 'forward' conversion shifter assembly.  Not included.\""
+          }
+        ],
+        "note": "The catalog double-spaces after the full stop; the checker ignores whitespace runs."
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Bolts to an LS through the separate T-56 LS bellhousing (Tremec 1386-212-005, not included). GM-style hydraulic units copy the 1998-2002 F-body clutch release ('units, clutch release provisions modeled after T-56 in 1998-2002 Camaro/Firebird'). Three shifter positions; the forward one needs an extra shifter assembly. Other GM versions in the catalog: TUET16885 (2.97 first / 0.63 sixth) and TUET11012 (2.97 / 0.50)."
+    },
+    {
+      "id": "tremec-t56-ls-bellhousing",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Aluminum T56 bell housing to LS engines (F-body & GTO pattern)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Aluminum T56 Bell Housing to LS & LT Engines - Tremec' and 'Genuine Tremec T56 to LS bell housing.'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "1386-212-005",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Part number 1386-212-005'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "note": "'1386-212-005'"
+          }
+        ]
+      },
+      "price": {
+        "value": 309.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'$30900' (cents in superscript)"
+          }
+        ],
+        "note": "Pro Touring Store price. Collins Performance Technologies lists the same part number at USD 650.00 ('Regular price' '$650.00'), more than twice as much; the lower price is used and the spread means this price is uncertain."
+      },
+      "requires": {
+        "value": ["Mounting Bolts Not Included"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Note: (Mounting Bolts Not Included)'"
+          }
+        ]
+      },
+      "notes": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F. Does NOT fit TR6060 transmissions.\" Needed for the T-56 / Magnum routes and for the Collins CD009 adapter route, which bolts the CD009 to this bellhousing."
+    },
+    {
+      "id": "collins-t56-slave-kit",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "T56 Slave Cylinder with Clutch Line and Adapter",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter' and '90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 310.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $310.00'"
+          }
+        ],
+        "note": "Regular price."
+      },
+      "includes": {
+        "value": [
+          "T56 Slave Cylinder",
+          "Clutch Line Adapter",
+          "90 Degree Teflon Coated -3AN High Pressure Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter -90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "pairsWith": ["collins-ls-cd009-adapter-plate", "tremec-t56-ls-bellhousing"],
+      "notes": "Concentric slave for 1998-2002 Camaro T56, GTO and Corvette variants. Collins says the line length suits '-Nissan Silvia (S15, JDM only) (with use of V8, or A340 Swap)', the 350Z and the MkIV Supra (A340 swap), among others."
+    },
+    {
+      "id": "sdpc-ls7-clutch-kit",
+      "vendor": "Scoggin Dickey Parts Center (SDPC)",
+      "product": {
+        "value": "SDPC SDLS7CK LS7 Clutch Kit - Pressure Plate, Disc & Flywheel",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'SDPC SDLS7CK - LS7 Clutch Kit - Pressure Plate, Disc & Flywheel'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "SDLS7CK",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: SDLS7CK'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'$899.99'"
+          }
+        ],
+        "note": "Listed price with the stock GM steel flywheel option; no MSRP or sale shown. A RAM aluminium flywheel upgrade is an option."
+      },
+      "includes": {
+        "value": [
+          "Corvette Z06 LS7 Pressure Plate",
+          "LS7 Disc",
+          "new GM Steel Flywheel",
+          "GM flywheel and pressure plate bolts"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'The SDPC LS7 clutch kit includes the Corvette Z06 LS7 Pressure Plate, LS7 Disc and a new GM Steel Flywheel.' 'We throw in a new set of GM flywheel and pressure plate bolts'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["factory replacement slave cylinder"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'In most applications, you will still use your factory replacement slave cylinder.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "gm-t56-fbody-donor",
+        "gm-t56-gto-donor",
+        "gm-tr6060-camaro-ss-donor",
+        "tremec-magnum-tuet11009"
+      ],
+      "notes": "For GM-spline gearboxes (T-56, Magnum, TR-6060). '1998-2002 F-Body, 2004-2006 GTO, 97-04 C5 Corvette, 2005-2013 LS2 and LS3 C6 Corvette, Pontiac G8, and 2010-2015 LS3 Camaro will all use their factory replacement slave cylinder'. Steel flywheel about 28 lb, optional RAM aluminium about 19 lb."
+    },
+    {
+      "id": "chevrolet-performance-19331079-clutch",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Clutch Kit LS3/LS7 Engines, 6-Bolt Crank (dual-disc, with flywheel)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19331079 - Clutch Kit LS3/LS7 Engines, 6-Bolt Crank'; 'High-performance dual-disc clutch and flywheel package for all LS engines with 6-bolt flywheel flange'; 'Rated for 800 lb.-ft. of torque'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "title": "GM Parts Giant",
+            "note": "'GM 19331079 Clutch Kit,Performance Upgrade Ls 6 Bolt T56 Mag'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "19331079",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19331079'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "note": "'Manufacturer Part Number | 19331079'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2683.6,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'$2,752.41' ... '$2,683.60'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,752.41, which GM Parts Giant also shows: '$2297.58 MSRP: $2752.41'). GM Parts Giant sells it for USD 2,297.58."
+      },
+      "includes": {
+        "value": ["flywheel", "pressure plate", "clutch disc", "additional hardware"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'Kit includes flywheel, pressure plate, clutch disc and additional hardware'"
+          }
+        ]
+      },
+      "pairsWith": ["tremec-magnum-tuet11009", "gm-t56-fbody-donor"],
+      "notes": "GM's own description ('T56 MAG') ties it to the T-56 Magnum; out of stock at Scoggin Dickey on 2026-09-29."
+    },
+    {
+      "id": "gm-tr6060-camaro-ss-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec TR-6060 6-speed from a 2010-2015 Camaro SS (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Product.Sheet_TR-6060.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC TR-6060 product sheet F-TR6060-0519",
+            "note": "Spec sheet: 'Clutch housing: Integrated'; Camaro SS ratios 2.66 / 1.78 / 1.30 / 1.00 / 0.74 / 0.50, reverse 2.90, input torque '617 Nm 455 lb-ft'; 'Transmission weight: Wet: 66.3 kg (146.2 lb)'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'This kit is a direct replacement for 1997 thru 2004 C5 Corvettes, 1998 thru 2002 LS equipped Firebirds and Camaros, and 2010 thru 2015 LS engine equipped Camaros.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "engines": ["ls3"],
+      "pairsWith": ["sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. Its clutch housing is cast in, so the separate T-56 LS bellhousing does not fit (Pro Touring Store: 'Does NOT fit TR6060 transmissions'). Tremec rates the Camaro SS version at 455 lb-ft input torque and the CTS-V version at 560 lb-ft. Tremec's aftermarket range (T-5, TKX, TR 4050, Magnum-F, Magnum, Magnum-XL on its site menu) has no TR-6060; the Magnum is its aftermarket version, so a new TR-6060 means a Magnum. engines lists only the LS3 because that is the donor car's engine; an LS1 fit was not checked in a source."
+    },
+    {
+      "id": "collins-ls-cd009-adapter-plate",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX to 350Z/370Z Adapter Plate",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'LSX to 350Z/370Z Adapter Plate'; engines '-LSX (LS1/LS2/LS3/LQ9/LS7/LQ4/LS9/L33/LR4/LM7/L59/LM4/L76)'; transmissions '-350Z (CD001-CD009-Has Clutch Fork)' '-350ZHR (JK40 Series-No Clutch Fork, Internal Slave Cylinder)' '-370Z (JK40 Series-No Clutch Fork, Internal Slave Cylinder)'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "price": {
+        "value": 600.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $600.00'"
+          }
+        ],
+        "note": "Regular price (the page shows a generic 'Sale' badge but only the one price)."
+      },
+      "includes": {
+        "value": [
+          "LSX to 350Z/370Z Adapter Plate",
+          "Dowel Pins",
+          "Input Shaft Seal",
+          "LSX Pilot Bearing needed to adapt the input shaft on the LS1 Crank",
+          "LSX to 350Z Bolt Kit"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'What is Included:' '-LSX to 350Z/370Z Adapter Plate -Dowel Pins -Input Shaft Seal -LSX Pilot Bearing needed to adapt the input shaft on the LS1 Crank -LSX to 350Z Bolt Kit'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "T56 Bellhousing",
+          "Cast Flywheel or Lightweight Chromoly Flywheel",
+          "Clutch System",
+          "T56 Slave Cylinder + Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'You Will Need to Supply the Following: -T56 Bellhousing -Cast Flywheel or Lightweight Chromoly Flywheel -Clutch System -T56 Slave Cylinder + Clutch Line'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-lsx-clutch-system",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "Keeps the Nissan CD009 (350Z/370Z 6-speed). The CD009's own bellhousing is cut off ('Simply cut the existing bell housing off of the front of the Stock 350Z/370Z/VQ 6-Speed Transmission.'), see modifications. Collins also sells a version with an 11 in clutch disc (collins-ls-cd009-adapter-plate-11in-disc)."
+    },
+    {
+      "id": "collins-ls-cd009-adapter-plate-11in-disc",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Engine to 350Z, 370Z VQ 6-Speed Transmission Adapter Plate with 11 inch Clutch Disc",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "Variants '350Z - $699.00 USD', '350ZHR - $699.00 USD', '370Z - $699.00 USD'; 'including CD001–CD009 as well as the brand new 6GP0B and JK40 series'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "price": {
+        "value": 699.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $699.00'"
+          }
+        ],
+        "note": "Regular price, same for all three gearbox variants."
+      },
+      "includes": {
+        "value": [
+          "LSX Adapter Plate",
+          "Input Shaft Seal",
+          "Dowel Pins",
+          "LSX Engine Side Bolt Kit",
+          "LSX Pilot Bearing",
+          "Collins LS 11 in. Custom Clutch Disc (Clutch Bolts, Clutch Tool)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'-LSX Adapter Plate -Input Shaft Seal -Dowel Pins -LSX Engine Side Bolt Kit -LSX Pilot Bearing' and 'Custom Clutch Disc (Clutch Bolts, Clutch Tool)'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "T56 Bellhousing",
+          "Cast Flywheel or Lightweight Chromoly Flywheel",
+          "Clutch System",
+          "T56 Slave Cylinder + Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'You Will Need to Supply the Following: -T56 Bellhousing -Cast Flywheel or Lightweight Chromoly Flywheel -Clutch System -T56 Slave Cylinder + Clutch Line'"
+          }
+        ],
+        "note": "The page lists 'Clutch System' as still needed although a disc is included, and its marketing text says the kit includes a flywheel while the included list does not; the included list is used."
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "The disc is sold per gearbox (350Z, 350Z HR and 370Z variants), so the input-shaft spline differs between CD009 and the later JK40/6GP0B boxes."
+    },
+    {
+      "id": "collins-lsx-clutch-system",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Clutch System, Stage 1 (500 ft-lb)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Stage 1 (500FTLBS) - $599.00 USD', 'Stage 2 (680FTLBS) - $650.00 USD', 'Stage 3 (800FTLBS) Aggressive - $724.00 USD'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 599.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $599.00'"
+          }
+        ],
+        "note": "Regular price for Stage 1; Stage 2 USD 650, Stage 3 USD 724."
+      },
+      "includes": {
+        "value": [
+          "LSX ACT 6-Puck Clutch Disc",
+          "LS Pressure Plate",
+          "LS Clutch Bolts",
+          "Clutch Tool"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "note": "'-LSX ACT 6-Puck Clutch Disc -LS Pressure Plate -LS Clutch Bolts -Clutch Tool'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "collins-ls-cd009-adapter-plate",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "For the LS-to-CD009 route (the disc carries the Nissan spline; listed for 350Z CD001-CD009, 350Z HR and 370Z boxes)."
+    },
+    {
+      "id": "collins-lsx-cast-flywheel",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Cast Heavy Duty Flywheel",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-heavy-duty-flywheel",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'-LS Heavy Duty Flywheel' listed for '-350Z (CD001-CD009-Has Clutch Fork)'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 302.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-heavy-duty-flywheel",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $302.00'"
+          }
+        ],
+        "note": "Regular price. Collins also lists an ACT Prolite (lightweight) LS flywheel at USD 572 (not saved separately)."
+      },
+      "pairsWith": ["collins-ls-cd009-adapter-plate", "collins-lsx-clutch-system"]
+    },
+    {
+      "id": "nissan-cd009-donor",
+      "vendor": "Nissan (donor part)",
+      "product": {
+        "value": "Nissan CD009-family 6-speed manual, from a 350Z/370Z-family car",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/silvia-s15-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Manufacturing: Sikky Stage 1 Nissan Silvia S15 (RHD) LS Package",
+            "note": "Gearbox option on the S15 package: 'Select Transmission Type' ... 'CD009 (CM25)(TM03)'."
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": [
+        "sikky-cm25-crossmember",
+        "collins-cm01314-s-chassis-crossmember",
+        "collins-ls-cd009-adapter-plate",
+        "collins-ls-cd009-adapter-plate-11in-disc"
+      ],
+      "notes": "A used gearbox from a 350Z/370Z-family car; no dated listing, so no price. Sikky's S15 package offers it with crossmember CM25 and bracket TM03 but doesn't name the LS adapter; Collins' LS-to-CD009 plate is the adapter sourced for S-chassis builds (its S-chassis mounts list the S15). The S15's own FS6R92A isn't offered by any kit."
+    }
+  ],
+  "fitment": [
+    {
+      "value": "The S14 front suspension member (engine crossmember) also fits the S15: a used-parts seller lists an S14 member as also suiting the 1999-2002 S15 Silvia and 200SX.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://3gspares.co.nz/products/nissan-s14-s15-silvia-sr20-front-engine-crossmember-subframe-support-sr20de-sr20det-180sx-200sx",
+          "accessed": "2026-09-29",
+          "title": "3G Spares (New Zealand used parts): Nissan S14 S15 Silvia SR20 front engine crossmember (54401-65F00 / 54401-85F00)",
+          "note": "'OEM Nissan front subframe or engine crossmember as removed from a Nissan Silvia S14 chassis, years 1993 - 1998.' 'This will also suit Nissan S15 Silvia & 200SX 1999 - 2002.'"
+        }
+      ],
+      "note": "Indirect support, not a second source: Sikky sells one RHD LS mount set for the S14 and S15 (MK001-RHD) and builds its S15 packages from RHD S14 crossmembers and an S14 driveshaft. nissanpartsdeal.com ties 54401-85F00 (which replaces 54401-65F00) to the 1995-1998 240SX only and says nothing about the S15. No Nissan parts catalogue for the S15 could be read (Amayama and Partsouq returned 403)."
+    }
+  ],
+  "modifications": [
+    {
+      "value": "The transmission tunnel has to be hammered out to clear the swap gearbox.",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2015/10/s-chassis-mount-kit-install.pdf",
+          "accessed": "2026-09-29",
+          "title": "Sikky: LSx Motor Mount Kit into S13/S14 240SX, install guide PDF (the S-Chassis Mount Kit Installation link on the S15 package pages)",
+          "note": "'From body pinch weld, Measure 4 inches and make a line all the way around transmission tunnel.' 'Hammer your marked space in' ... 'around your marks all the way around the transmission tunnel.'"
+        },
+        {
+          "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+          "accessed": "2026-09-29",
+          "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+          "note": "'Heavy tunnel bashing required, less if you cut a few tabs off the gearbox'"
+        }
+      ],
+      "note": "Sikky alone gives the area and depth: a band 4 to 6.5 in from the body pinch weld, hammered in 0.5 to 1 in, for its T56 kit. KE Conversions says heavy tunnel bashing, less if tabs are cut off the gearbox. The Sikky guide is written for the S13/S14 240SX and is the one the S15 packages link to."
+    },
+    {
+      "value": "Cut the aluminium tabs off the top of the gearbox (Sikky makes it a prep step; KE says it reduces the tunnel work).",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2015/10/s-chassis-mount-kit-install.pdf",
+          "accessed": "2026-09-29",
+          "title": "Sikky: LSx Motor Mount Kit into S13/S14 240SX, install guide PDF (the S-Chassis Mount Kit Installation link on the S15 package pages)",
+          "note": "'Cut off the aluminum tabs on top of the transmission.'"
+        },
+        {
+          "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+          "accessed": "2026-09-29",
+          "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+          "note": "'less if you cut a few tabs off the gearbox'"
+        }
+      ]
+    },
+    {
+      "value": "Remove the factory front sway bar and end links; Sikky says only its own bar fits with its kit.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2015/10/s-chassis-mount-kit-install.pdf",
+          "accessed": "2026-09-29",
+          "title": "Sikky: LSx Motor Mount Kit into S13/S14 240SX, install guide PDF (the S-Chassis Mount Kit Installation link on the S15 package pages)",
+          "note": "'Remove factory sway bar and endlinks- Sikky sway bar will be required for install.' and 'NOTE: No other sway bar will fit with this application.'"
+        }
+      ],
+      "note": "Sikky lists front bars for the S13 and S14 only; none is listed for the S15."
+    },
+    {
+      "value": "Remove the factory power steering pressure hose and cooler, move the ABS unit aside on ABS cars, and remove the firewall vibration weight and the factory exhaust heat shield.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2015/10/s-chassis-mount-kit-install.pdf",
+          "accessed": "2026-09-29",
+          "title": "Sikky: LSx Motor Mount Kit into S13/S14 240SX, install guide PDF (the S-Chassis Mount Kit Installation link on the S15 package pages)",
+          "note": "'Remove power steering pressure hose and PS cooler'; 'If the 240sx has ABS, it’s going to be a tight fit, unbolt the ABS unit and move aside.'; 'Remove vibration weight on firewall.'; 'Remove factory exhaust heat shield.'"
+        }
+      ]
+    },
+    {
+      "value": "For the Sikky pan: trim the rear of the engine's factory oil baffle, and tap and plug the block's stock dipstick hole (1/8 NPT); the oil level sensor is not used.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2015/10/oil-pan-install.pdf",
+          "accessed": "2026-09-29",
+          "title": "Sikky: Oil Pan Install Guide PDF (linked from the S15 package pages)",
+          "note": "'Remove factory baffle for trimming.' 'Cut marked area, grind all excess metal until all metal shavings are clean.' 'Thread stock dipstick hole with 1/8th inch NPT' 'Will not need oil level sensor with Sikky Oil pan'"
+        }
+      ]
+    },
+    {
+      "value": "No modification to the factory crossmember or subframe with the Sikky kit.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://nzperformancecar.co.nz/2015-6-19-ls-v8-conversions-is-the-grass-really-greener-we-talk-to-the-experts/",
+          "accessed": "2026-09-29",
+          "title": "NZ Performance Car, 19 June 2015: LS V8 conversions: is the grass really greener? We talk to the experts",
+          "note": "Of the Sikky S-chassis kit: 'This kit requires no modification to the factory cross member or subframe, and does not hang below the cross member when installed.'"
+        }
+      ],
+      "note": "2015 magazine description of the kit, not current Sikky text. The current OP001S page says the pan does not hang below the front subframe."
+    },
+    {
+      "value": "With the KE Conversions kit: either modify the sump or notch the crossmember, and fit a left-hand starter kit or move the rack mounts for starter clearance.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+          "accessed": "2026-09-29",
+          "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+          "note": "'Either sump mods or crossmember notching required & LH starter kit or move the rack mounts over for starter motor clearance.'"
+        }
+      ]
+    },
+    {
+      "value": "With the KE Conversions kit: modify the under-dash clutch master and the bonnet.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+          "accessed": "2026-09-29",
+          "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+          "note": "'Under dash clutch master modification required' and 'Bonnet modification required'"
+        }
+      ]
+    },
+    {
+      "value": "Optional with the KE Conversions M12 mounts: die-grind the engine-crossmember slot to take the M12 bolt.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cdn5.editmysite.com/app/store/api/v28/editor/users/136531304/sites/787716477827341151/products/48",
+          "accessed": "2026-09-29",
+          "title": "KE Conversions: product record 48 (Square Online store data behind the keconversions.com product page, same text)",
+          "note": "'you will need to die grind out the slot on your engine crossmember to accept the M12 bolt.'"
+        }
+      ]
+    },
+    {
+      "value": "If the steering rack is moved forward (e.g. an angle kit), the Sikky RHD header hits the steering column, which then needs modifying.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/nissan-silvia-lsx-swap-headers-pro-series/",
+          "accessed": "2026-09-29",
+          "title": "Sikky: Nissan Silvia (RHD) LS Swap Headers (product page)",
+          "note": "'Due to the tight clearance at the steering column relocation of the rack further forward will cause interference with the header. Steering column modifications will be required if the rack is located further forward for proper fit.'"
+        }
+      ]
+    },
+    {
+      "value": "Steering rack modifications are commonly required with S-chassis LS kits, and US kits for RHD cars may have different headers, mounts and starter positions.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.streetmachine.com.au/features/guide-to-ls-conversions",
+          "accessed": "2026-09-29",
+          "title": "Street Machine (Australia): Guide to LS engine swaps",
+          "note": "'They aren’t fully plug-and-play however, as steering rack modifications are commonly required.' and 'When buying a kit from the US for a right-hand-drive car, you should remember that headers, engine mounts and starter motor locations may be different.'"
+        }
+      ],
+      "note": "General statement about S13-S15 kits, not tied to one product."
+    },
+    {
+      "value": "Collins CD009 route: beat in the tunnel's stiffening flange at the crossmember at least 1/4 in each side, 1/2 in recommended.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://collinsperformancetechnologies.com/pages/s-chassis-crossmember",
+          "accessed": "2026-09-29",
+          "title": "Collins Performance Technologies: S-Chassis Crossmember Instructions",
+          "note": "'you must beat in the sheet metal along the inner portion of the tunnel where the stiffing flange goes around the inside of the tunnel.' 'You need to beat it in at least' ... 'on both sides but it is recommended to go up to a' ... 'for proper clearance.'"
+        }
+      ],
+      "note": "Written for the 240SX (it refers to the stock KA24DE crossmember)."
+    },
+    {
+      "value": "ISR headers: the floor may need clearancing around the 2-bolt collector flange.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.isrperformance.com/isr-performance-hgc-ls-swap-header-nissan-240sx-89-98-1-3-4/",
+          "accessed": "2026-09-29",
+          "title": "ISR Performance: HGC LS Swap Header - Nissan 240sx 89-98 - 1 3/4 in (product page)",
+          "note": "'Due to the new design some clearancing of the floor board may be required around the 2 bolt flange to accommodate for any engine movement during operation.'"
+        }
+      ]
+    },
+    {
+      "value": "Chase Bays tucked radiator: light cutting of the front core support.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.chasebays.com/products/chase-bays-14-tucked-aluminum-radiator",
+          "accessed": "2026-09-29",
+          "title": "Chase Bays: Tucked Aluminum Radiator - Nissan 240sx S13 / S14 / S15 and R32 (product page)",
+          "note": "'This radiator requires some light front core support cutting.'"
+        }
+      ]
+    },
+    {
+      "value": "CD009 adapter route only: the Nissan gearbox's own bellhousing is cut off and the gearbox bolts to a T-56 LS bellhousing through the Collins plate.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+          "accessed": "2026-09-29",
+          "note": "'Simply cut the existing bell housing off of the front of the Stock 350Z/370Z/VQ 6-Speed Transmission. Then remove the front input shaft bearing cover, replace the pump cover gasket with Liquid gasket material. Bolt the adapter plate to the LSX bell housing, and then bolt the bell housing to the transmission!'"
+        }
+      ]
+    }
+  ],
+  "notes": "S14/S15 front suspension member: Sikky sells one RHD mount set named for the S14 and S15 (MK001-RHD), and its S15 packages are built from its RHD S14 crossmembers (CM25, CM28) and S14 driveshaft (SKNISH2). The genuine-Nissan parts retailer nissanpartsdeal.com lists 54401-85F00 Member Assy-Front Suspension as fitting the 1995-1998 240SX (S14) and as replacing 54401-65F00, the S14 member (nissanpartsdeal.com/parts/nissan-member-assy-fro~54401-85f00.html). 3G Spares (New Zealand) sells a used S14 front engine crossmember listed under both numbers, 54401-65F00 / 54401-85F00, saying: This will also suit Nissan S15 Silvia & 200SX 1999 - 2002 (3gspares.co.nz/products/nissan-s14-s15-silvia-sr20-front-engine-crossmember-subframe-support-sr20de-sr20det-180sx-200sx). Only 3G Spares says the S14 member also suits the S15, so that stays single-source (see `fitment`); nissanpartsdeal.com ties the part numbers to the S14 alone. Search results also show BE FORWARD selling a used S15 member as 5440185F00, but that page returned a bot check; no JDM S15 catalogue page could be read (Amayama, Partsouq and Nengun returned 403). Gearbox: NZ Performance Car (2015) quotes Sikky as not recommending factory Nissan gearboxes behind the LS because of its torque. Oil pan: no source names a factory GM pan that clears the S15. KE Conversions requires sump modification or crossmember notching, and an Australian S14 build (Street Machine) used a CS Engineering kit with a Holden VX Gen III LS1 sump; CS Engineering's site did not respond. Left out: ISR's own LS mounts (IS-240-LSMKT), headers, driveshafts and Y-pipe, and Hinson's 240SX parts, which name only the S13/S14; CX Racing (403) and Fueled Racing (timed out) could not be read. No Japanese vendor of S15 LS parts was found. Clutch lines and master cylinder conversions for the T56 exist from Sikky and Chase Bays but belong to the clutch research."
+}

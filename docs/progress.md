@@ -2,17 +2,17 @@
 
 One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md section 10.
 
-| #   | Phase                                                                   | Status                                                                                                                                                                                        |
-| --- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                                                                                                                                 |
-| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Parts 1, 2 and 3a done:** all 5 cars (S15, Supra, 350Z, E46, RX-7); launch swaps SR20DET, 2JZ-GTE, VQ35HR, S54B32, 13B-REW, 20B-REW (+ 4 stock-only engines). Part 3b (6 swap engines) left |
-| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                                                                                                                                   |
-| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                                                                                                                                   |
-| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                                                                                                                                   |
-| 5   | Engine bay and cutaway animation                                        | Not started                                                                                                                                                                                   |
-| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                                                                                                                                   |
-| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                                                                                                                                   |
-| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                                                                                                                                   |
+| #   | Phase                                                                   | Status                                                                                                                             |
+| --- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                                                                      |
+| 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Done** (parts 1, 2, 3a and 3b): all 5 cars, all 12 launch-swap engines (+ 4 stock-only), swap hardware for the 5 LS launch swaps |
+| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                                                                        |
+| 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                                                                        |
+| 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                                                                        |
+| 5   | Engine bay and cutaway animation                                        | Not started                                                                                                                        |
+| 6   | Cabin view, live gauges, engine sound                                   | Not started                                                                                                                        |
+| 7   | Dyno mode, compare, share link, build sheet, heat-soak test             | Not started                                                                                                                        |
+| 8   | Polish: performance, accessibility, mobile, credits, screenshot tests   | Not started                                                                                                                        |
 
 ## Phase 0: scaffold (2026-09-26)
 
@@ -314,7 +314,7 @@ Started 2026-09-27, paused by the owner the same day, resumed and finished 2026-
    - the 1996-98 Australian car: one secondary source, output only;
    - every Canadian car: 1993-95 sales are confirmed, but no Canadian specification source was found.
 2. **Market weights use different standards:** JIS without a driver, US curb weight, and unstated for Europe and the UK. Each note says which.
-3. **The 1994-95 US weights (2,826 / 2,881 lb) are provisional.** The only free scans are 400-pixel previews, and Mazda's 1996 full-line brochure appears to read 2,830 / 2,883 lb. ImportArchive offers the 300 dpi scans only after a donation, which no session makes without you (rule 13).
+3. **The 1994-95 US weights (2,826 / 2,881 lb) are provisional.** The only free scans are 400-pixel previews, and Mazda's 1996 full-line brochure appears to read 2,830 / 2,883 lb. ImportArchive offers the 300 dpi scans only after a donation. Your decision (2026-09-29): no donation, and the weights stay as they are (see decisions).
 4. **Gearing outside Japan and the US** comes from one magazine (auto motor und sport) for Europe, and is assumed for the UK, Australia and the SP. None of the Mazda JDM documents prints a gearbox code.
 5. **Rotary swap hardware is thin:**
    - Mazda publishes no weight, outline dimensions, turbo model or JDM injector flow for either engine;
@@ -336,8 +336,152 @@ Started 2026-09-27, paused by the owner the same day, resumed and finished 2026-
 8. **The RX-7 data file is 747 KB**, mostly source notes. As with the 350Z, a Phase 2 loader should strip provenance for the client bundle.
 9. **Carried over:** the procedural floor, performance unmeasured on real hardware, asset pipeline scope, no floor reflections, and no code licence chosen.
 
-## Next: Phase 1, part 3b
+## Phase 1, part 3b: 1JZ-GTE, RB25DET NEO, RB26DETT, LS1, LS3, K24 and the LS swap hardware (2026-09-29)
 
-- Part 3b: the remaining swap engines, 1JZ-GTE, RB25DET NEO, RB26DETT, LS3, LS1 and K24.
-- Phase 2 should add a `tsconfig` for `src/sim/` with no DOM library, alongside the ESLint guard, and normalise the weight standards. Its airflow model and the Phase 6 sound synthesis must use `src/data/displacement.ts` for rotaries.
+This part finishes Phase 1. Nine research passes ran in parallel (six engines, three for the LS swap hardware), each told to follow CLAUDE.md rule 13. All nine were cut off by an API rate limit partway through; after the reset they were resumed from where they stopped, not restarted.
+
+### What's built
+
+- **Schema** (decisions, 2026-09-29):
+  - `src/data/schema/swap.ts` and `src/data/swaps/`: one file per car and engine family. A swap file lists real parts, each as its vendor or maker lists it (product, part number, price in the printed currency, what's included, what it says you also need), and the slots it fills. validate-data checks that every swap fills the slots BUILD_PROMPT section 3 names (mounts, gearbox or adapter, sump, wiring, ECU), that the car exists, that its engines exist and are launch-swap engines, and that a kept gearbox (`carGearbox`) is one of the car's transmissions. Swap files can also list sourced car-level `fitment` facts and `modifications`.
+  - Engines: `sumpOptions` (factory pans by donor, maker swap pans, multi-swap aftermarket pans, each with position, part number and depth where printed), `camProfileSwitching` (Honda VTEC), and the `rod-bolts` and `valvetrain` limit components.
+  - `Price` in the seller's currency (USD, AUD, JPY, GBP, EUR, SAR), kept out of the SI units.
+- **Data:**
+
+  | File                                   | Contents                                                                                                                                                             | Verified | Single-source | Estimated |
+  | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- | --------- |
+  | `engines/1jz-gte.json`                 | Twin-turbo 1990-96 (JZA70, JZX81, JZX90, JZZ30; 280 PS / 37.0 kgf·m at 4,800) and VVT-i 1996-2006 (JZX100, JZX110, JZS171, late JZZ30; 38.5 kgf·m at 2,400)          | 44       | 9             | 5         |
+  | `engines/rb25det-neo.json`             | ER34 5MT (35.0, then 37.0 kgf·m from 2000-08), ER34 4AT (34.0), WC34 Stagea AT and 5MT, C35 Laurel, Y34 Cedric/Gloria 4WD (260 PS, then 250 PS)                      | 71       | 29            | 11        |
+  | `engines/rb26dett.json`                | BNR32, NISMO, N1; BCNR33, V-spec N1; BNR34, N1, Nür; Stagea 260RS. 280 PS; 36.0 / 37.5 / 40.0 kgf·m by generation                                                    | 132      | 30            | 3         |
+  | `engines/ls1.json`                     | C5 Corvette (345 hp; 350 hp manual and automatic), F-body Z28/Formula/Trans Am and SS/WS6 (305-325 hp), 2004 GTO, Holden VT II to VZ Monaro, HSV VT II (16 in all)   | 49       | 136           | 16        |
+  | `engines/ls3.json`                     | C6 Corvette (430 hp; 436 hp with the dual-mode exhaust), Camaro SS manual, G8 GXP, Chevrolet SS, Holden VF II SS, HSV 317/325 kW, crate LS3, LS376/480, LS376/525    | 121      | 38            | 12        |
+  | `engines/k24.json`                     | The K24s swappers use: K24A2 (2004-05, 2006-08 TSX), JDM K24A RBB (200 PS), K24Z3 (2009-14 TSX), K24Z7 (2012-13, 2014-15 Civic Si), K24A1 CR-V block (2002-05, 2006) | 49       | 68            | 5         |
+  | `swaps/nissan-silvia-s15--gm-ls.json`  | 50 parts (Sikky RHD S15 packages and parts, Collins/ISR CD009 route, KE Conversions, Chase Bays, Wiring Specialties S15 harnesses) + common LS hardware              | 27       | 176           | 0         |
+  | `swaps/toyota-supra-jza80--gm-ls.json` | 42 parts (Sikky MKIV line, Collins LS-to-CD009 kit) + common LS hardware                                                                                             | 24       | 133           | 0         |
+  | `swaps/nissan-350z-z33--gm-ls.json`    | 56 parts (Sikky, Hinson, TDR, Sikky CD00X adapter for DE and HR gearboxes, Wiring Specialties CAN-bus harnesses and modules) + common LS hardware                    | 22       | 193           | 0         |
+  | `swaps/bmw-3-series-e46--gm-ls.json`   | 55 parts (Sikky, TDR, Pennsyltucky, Vorshlag; PMC and Rank One adapters for the car's ZF and the M3's Getrag 420G; Wiring Specialties) + common LS hardware          | 27       | 185           | 0         |
+  | `swaps/mazda-rx-7-fd3s--gm-ls.json`    | 51 parts (Sikky with its PPF brace, Hinson's subframe and torque-arm package, radiators, Wiring Specialties US-car harnesses) + common LS hardware                   | 23       | 181           | 0         |
+
+  The common LS hardware in every swap file: GM donor PCMs (P01 "0411" for the 24x LS1, E38 for the 58x LS3) with HP Tuners, the Chevrolet Performance LS3 controller kit, Holley Terminator X kits, Wiring Specialties and PSI standalone harnesses, fuel filter-regulators, and the gearbox routes each car's kits support (donor T56, Tremec Magnum or Magnum-F, TR6060, CD009 adapters), with clutches.
+
+  Main sources:
+  - **Toyota:** the September 1996 JZX100 repair book (archive.org), Toyota's parts catalogue (japan-parts.eu mirror, public pages only), toyota.jp and goo-net catalogue data, and 1992 and 2001 Chaser brochures.
+  - **Nissan:** the English R32 GT-R service manual and R34 supplement (archive.org), Nissan's 1998 and 2000 Skyline and 1998 Stagea releases (the inline page images; the PDF downloads sit behind a licence prompt and were not opened), Nissan's parts catalogue (megazip.net) and NISMO's catalogues.
+  - **GM:** GM Heritage vehicle-information kits and MVMA specification forms (gm.com), Chevrolet Performance's 2026 catalogue pages and crate-engine spec sheets, GM press kits, Holden handbooks and brochures.
+  - **Honda:** Acura and Honda press kits, Honda Japan's auto-archive spec sheets, and the 2002 CR-V service manual.
+  - **Swaps:** the vendors' own product pages and install guides.
+
+### How it was verified
+
+- **Checks:** `npm run lint`, `npm run typecheck`, `npm test` (158 tests) and `npm run validate-data` all pass.
+- **New tests:**
+  - the swap schema and its cross-file checks (slots, part ids, pairings, engines, kept gearboxes, fitment);
+  - sump options, VTEC and the new limit components;
+  - the full roster: 5 cars, the 12 launch-swap engines by code, and 4 stock-only engines;
+  - every LS swap has a part in each required slot for the LS1 and for the LS3 separately (they need different ECUs and harnesses);
+  - spot checks of each new engine's headline figures.
+- **Quote checks:** every quoted passage in the new files was machine-checked against the saved page text. That is 1,872 quotes across the six engine files and 2,156 across the five swap files, with 0 missing. What couldn't be machine-checked is labelled in its note: page images and scanned PDFs (GM Heritage kits, Chevrolet Performance catalogue pages, Nissan and Toyota manual pages) and two PSI pages read through WebFetch.
+- **Checked by hand** on the page images:
+  - Chevrolet Performance's 2026 catalogue p. 34 (the crate LS3: 19540155, 430 hp at 5,900, 425 lb-ft at 4,600, nodular-iron crank, powdered-metal rods, hypereutectic pistons, 10.7:1, 6,600 rpm, "Includes Gen IV F-Car Oil Pan");
+  - GM's 1998 Camaro MVMA forms, pp. 2 and 3A (the LS1 at 305 hp / 335 lb-ft SAE J1349, and "Total dressed engine mass (wt) dry: Automatic: 214.5 kg, Manual: 234.3 kg");
+  - Nissan's R32 GT-R manual EN-3 (2,568 cc, 86.0 x 73.7 mm, 8.5:1, "Dimensions (L x W x H) 870 x 665 x 675");
+  - Toyota's parts-catalogue illustration of the JZX100 block and pans (front sump);
+  - Acura's 2004-2006 TSX spec sheets (200 hp at 6,800, then 205 hp at 7,000 SAE net).
+- **One research claim corrected:** the S15 pass reported two sources for the S14 and S15 sharing a front suspension member. nissanpartsdeal.com doesn't mention the S15, so the fact is single-source (decisions).
+- `npm run e2e` passes (six Playwright tests) and the screenshots match the part 1 set. This part adds no UI.
+- The conflicts between sources, how each was settled, and the leads for Phase 3 are in `docs/research-notes/part3b.md`.
+
+### Checks against the BUILD_PROMPT roster
+
+The seed list names the swap engines without figures: "LS3 6.2 V8", "LS1 5.7 V8" and "K24 I4" hold (6,162 cc, 5,665 cc and 2,354 cc as the makers state them). "RB25DET NEO" is the 1998-on NEO, not the R33's RB25DET, and "1JZ-GTE (including the VVT-i version)" is two variants: the twin-turbo engine and the VVT-i single turbo.
+
+### Numbers marked `estimated` in this part (52)
+
+- **1JZ-GTE, 5:** weight 210 kg (the middle of 207, 210 and 225 kg, none saying what's included); outline dimensions copied from the 2JZ-GTE (same bore pitch; the height is an upper bound); the twin-turbo intercooler's side-mount position (by analogy with the JZX100).
+- **RB25DET NEO, 11:** outline dimensions (midpoints of an aggregator's unsourced ranges); the 4WD pan's front sump (inferred from the RB26 AWD pan); cast pistons (inferred); the WC34, C35 and Y34 intercooler positions (5 variants: the WC34 and C35 share the ER34's cooler part; the Y34 is a placeholder); the late Y34 turbo part (carried over).
+- **RB26DETT, 3:** the BNR32 boost (76 kPa, converted from Nissan's 570 mmHg, a unit the schema doesn't take); the BCNR33 V-spec N1's end date (end of R33 production); the Stagea 260RS intercooler position (from the GT-R).
+- **LS1, 16:**
+  - the 1998-2000 SS/WS6 torque rpm (4,400, from search snippets only);
+  - the 10.1:1 compression of seven variants whose documents don't print it (GTO, Holden VX, VY, VY SS, VY II, VY II SS, HSV VT II), taken from every other GM and Holden LS1 document;
+  - the periods of eight Holden and HSV variants (from handbook and brochure print dates).
+- **LS3, 12:**
+  - length and height (geometric, about ±60 mm);
+  - the C6 and Zeta pan positions (read from drawings);
+  - the C6 injector flow, twice (converted from GM's 5 g/s);
+  - the G8 GXP's power and torque rpm (the Chevrolet SS's, which carries the same 415/415 rating);
+  - four periods (the HSV 325 kW version, and the start of the crate LS3, LS376/480 and LS376/525 from the earliest dated GM documents).
+- **K24, 5:** outline dimensions (geometric); the K24Z3 pan position (KPower says the pans interchange with the K24A); forged rods (Honda says only "high-strength connecting rods").
+
+### Known issues and gaps
+
+1. **Weak engine weights.** No maker weight was found for the 1JZ-GTE, RB25DET NEO, RB26DETT or K24:
+   - the RB25's 260 kg sits among published figures of 180-260 kg;
+   - the RB26's 255 kg is from a table of unknown origin;
+   - the K24's 280 lb is one vendor's "fully dressed" figure.
+
+   GM's figures (LS1 214.5 kg dressed, LS3 183 kg) are the only maker weights in this part. Phase 4 should weigh nothing but can measure the outlines from the engine models.
+
+2. **Outline dimensions** are estimated for the 1JZ-GTE, RB25DET NEO, K24 and LS3 (length and height). The LS3 width (30.25 in) is GM's accessory-drive envelope, and the LS1's is Speedway Motors' labelled figure. Only the RB26DETT's comes from its maker.
+3. **Reported limits** are builder and tuner guidance, not failure tests, and are single-source apart from the LS3's (GM's 6,600 rpm, and Edelbrock's warranted 599 hp / 547 lb-ft supercharger kit on a stock LS3). The schema can't say whether a torque limit is at the crank or the wheels. The K24's 500 lb-ft rod guidance is at the wheels, and says so in its context.
+4. **Swap gaps:**
+   - Sources don't cover these at all:
+     - which factory GM pan clears any of the five cars (the kits use their own pans, or name the Holley 302-1 for the E46);
+     - an adapter to keep the Supra's W58 or V160/V161, or the RX-7's own gearbox;
+     - LS1 against LS3 bonnet clearance in the FD;
+     - whether the E46's DSC works after the swap;
+     - any Japanese vendor for the S15.
+   - Sourced but single-source: the S15 fitment of most "S-chassis" parts, many of which are US left-hand-drive 240SX parts (each part's notes say what its listing names).
+   - An open question in the sources: GM wants 60 psi constant fuel pressure for its LS3 controller kit, while the common Corvette filter-regulator is fixed at 58 psi.
+5. **Prices** are as listed on 2026-09-29, before tax, shipping and options, in the currency printed (USD, plus EUR and GBP for the PMC and Rank One adapters). Several parts were sold out that day, which is noted per part. Option-dependent prices (driveshaft by gearbox, harness options) are in the notes, since a part has one price.
+6. **Stopped at a gate (rule 13); nothing was accepted, signed up for, paid or submitted:**
+   - the Nissan newsroom's PDF downloads (licence prompt);
+   - TollBit pay-per-crawl redirects on k20a.org, skylineowners.com and gtr.co.uk;
+   - Wiring Specialties' and Sikky's add-to-cart disclaimers;
+   - lending-library manuals on archive.org.
+7. **Blocked from here:** holley.com, summitracing.com, jegs.com, media.gm.com, toyota-global.com, Amayama and Partsouq (403s or bot checks), and web.archive.org (no connection).
+8. **Earlier launch-swap engines** (SR20DET, 2JZ-GTE, VQ35HR, S54B32, 13B-REW, 20B-REW) still have one `sump` value and no `sumpOptions`, and the S15<-2JZ, RX-7<-2JZ and E46<-S54 swaps have no swap file yet (this part covered the swaps that use its engines).
+9. **Carried over:** the procedural floor, performance unmeasured on real hardware, asset pipeline scope, no floor reflections, and no code licence chosen.
+
+## Phase 1 final check (2026-09-29)
+
+- **Cars, 5 (every trim):** Nissan Silvia S15 (16 trims), Toyota Supra JZA80 (40), Nissan 350Z Z33 (126), BMW E46 330i/330Ci and M3 (58), Mazda RX-7 FD3S (56).
+- **Launch-swap engines, all 12 in BUILD_PROMPT section 3:** 2JZ-GTE, 1JZ-GTE, SR20DET, RB25DET NEO, RB26DETT, VQ35HR, LS3, LS1, K24, S54B32, 13B-REW, 20B-REW. Plus 4 stock-only engines for the stock trims: SR20DE, 2JZ-GE, VQ35DE, M54B30. A test checks this list by engine code.
+- **Swap hardware:** the five LS launch swaps (S15, 350Z, E46, RX-7 and Supra with an LS) have swap files. The other three (S15<-2JZ, RX-7<-2JZ, E46<-S54) have the engine-side fitment data only.
+- **`npm run validate-data` passes:** 27 data files; 3,317 values verified, 2,141 single-source, 318 estimated. Every source link and access date is recorded.
+
+### Every value still marked `estimated` (318)
+
+`npm run validate-data` prints each one's JSON path, and each value's `method` in its file says how it was made.
+
+| File                                                 | Estimated | What                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cars/nissan-350z-z33.json`                          | 134       | 73 US model-year windows; 5 US curb weights; 12 viscous-LSD calls; 5 European MY07 final drives; 26 body dimensions (US NISMO from Japan's Version NISMO, the MY2009 roadster, the 35th Anniversary's rear track); 12 rim sizes (MY2009 roadster); the production end |
+| `cars/mazda-rx-7-fd3s.json`                          | 41        | 23 differential types (Torsen where the catalogue says "LSD"); 6 limited-edition periods; 5 final drives (3 from the base grade, 2 UK/Australian from the European car); 3 US R1/R2 weights; 4 UK/Australian tyre sizes                                               |
+| `cars/bmw-3-series-e46.json`                         | 34        | 21 curb weights (SMG, ZHP, Competition/ZCP and European GM-automatic cars from the matching standard car); 11 periods (US model-year changes, the 330i Touring's start); 2 SMG weight splits                                                                          |
+| `cars/toyota-supra-jza80.json`                       | 4         | the EU Turbo 4AT weight; the periods of 3 MY1993.5-96 Sport Roof trims                                                                                                                                                                                                |
+| `cars/nissan-silvia-s15.json`                        | 0         |                                                                                                                                                                                                                                                                       |
+| `engines/ls1.json`                                   | 16        | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/vq35de.json`                                | 14        | 14 valve lifts (7 variants x intake/exhaust, from the manuals' spring heights)                                                                                                                                                                                        |
+| `engines/vq35hr.json`                                | 13        | weight; 3 outline dimensions; crank, rods and pistons; 6 valve lifts                                                                                                                                                                                                  |
+| `engines/ls3.json`                                   | 12        | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/rb25det-neo.json`                           | 11        | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/13b-rew.json`                               | 8         | weight; 3 outline dimensions; sump position; rotor material; eccentric-shaft forging; the Cosmo 13B's intercooler                                                                                                                                                     |
+| `engines/20b-rew.json`                               | 8         | firing order; weight; 3 outline dimensions; sump position; rotor material; eccentric-shaft forging                                                                                                                                                                    |
+| `engines/1jz-gte.json`                               | 5         | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/k24.json`                                   | 5         | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/sr20det.json`                               | 5         | 3 outline dimensions; cast pistons; the S13 side-mount intercooler                                                                                                                                                                                                    |
+| `engines/s54b32.json`                                | 4         | weight; 3 outline dimensions                                                                                                                                                                                                                                          |
+| `engines/rb26dett.json`                              | 3         | see part 3b above                                                                                                                                                                                                                                                     |
+| `engines/m54b30.json`                                | 1         | weight                                                                                                                                                                                                                                                                |
+| `engines/2jz-gte.json`, `2jz-ge.json`, `sr20de.json` | 0         |                                                                                                                                                                                                                                                                       |
+| `swaps/*.json` (5 files)                             | 0         | every part value is single-source or verified                                                                                                                                                                                                                         |
+
+## Next: Phase 2
+
+- Phase 2 (simulation, dyno chart, calibration tests) should add a `tsconfig` for `src/sim/` with no DOM library, alongside the ESLint guard, and normalise the weight standards. Its airflow model and the Phase 6 sound synthesis must use `src/data/displacement.ts` for rotaries. A Phase 2 loader should strip provenance for the client bundle (the data files are about 7.8 MB with their sources).
+- Phase 3 (parts, compatibility, cost) should:
+  - move the common LS hardware out of the five swap files into `parts/`;
+  - add swap files for S15<-2JZ, RX-7<-2JZ and E46<-S54;
+  - backfill `sumpOptions` for the six earlier launch-swap engines;
+  - consider what the research passes asked the schema for: per-part variant prices and bundles, per-part applicability (LHD only, M3 only), clutch push/pull type, lifter type, failure modes without a number, and wheel against crank torque on limits.
 - Phase 4 has to build the NoAI screenshot swap: a flag the AI-reviewed screenshot run sets, which shows NoAI assets as their clay placeholder (CLAUDE.md rule 5).

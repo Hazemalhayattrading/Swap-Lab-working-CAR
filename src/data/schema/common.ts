@@ -49,6 +49,16 @@ export const UNITS = {
   time: ['s'],
 } as const;
 
+/**
+ * Currencies a price may be printed in. Kept out of UNITS: money has no SI
+ * conversion, and turning AUD or JPY into USD needs a dated exchange rate,
+ * which is Phase 3's job (USD to SAR is the 3.75 peg).
+ */
+export const CURRENCIES = ['USD', 'AUD', 'JPY', 'GBP', 'EUR', 'SAR'] as const;
+
+/** A price as the seller lists it; the source's access date is its date stamp. */
+export const Price = measured(CURRENCIES);
+
 export const Power = measured(UNITS.power);
 export const Torque = measured(UNITS.torque);
 export const Mass = measured(UNITS.mass);

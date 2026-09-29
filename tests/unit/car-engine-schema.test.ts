@@ -248,6 +248,73 @@ describe('EngineSchema', () => {
     };
     expect(EngineSchema.safeParse(engine({ variants: [variant({ output })] })).success).toBe(false);
   });
+
+  it('accepts sump options by donor, with part numbers, and rejects an unknown kind', () => {
+    const pan = (over: Record<string, unknown> = {}) => ({
+      name: 'F-body (Camaro/Firebird) pan',
+      kind: 'factory',
+      position: v('rear'),
+      fittedTo: ['1998-2002 Camaro'],
+      partNumber: { value: '12628748', ...one },
+      depth: v(7.2, 'in'),
+      ...over,
+    });
+    const ok = EngineSchema.safeParse(engine({ sump: v('rear'), sumpOptions: [pan()] }));
+    expect(messages(ok)).toBe('');
+    const swapPan = pan({
+      name: 'GM LS retrofit pan',
+      kind: 'maker-swap-part',
+      fittedTo: undefined,
+    });
+    expect(messages(EngineSchema.safeParse(engine({ sumpOptions: [swapPan] })))).toBe('');
+    expect(
+      EngineSchema.safeParse(engine({ sumpOptions: [pan({ kind: 'junkyard' })] })).success,
+    ).toBe(false);
+    expect(EngineSchema.safeParse(engine({ sumpOptions: [] })).success).toBe(false);
+  });
+
+  it('accepts VTEC cam-profile switching on piston variants only', () => {
+    const vtec = { valves: v('intake-and-exhaust'), switchRpm: v(5800, 'rpm') };
+    const na = {
+      induction: v('naturally-aspirated'),
+      turbos: undefined,
+      intercooler: v('none'),
+      variableValveTiming: v('intake-continuous'),
+    };
+    const r = EngineSchema.safeParse(
+      engine({ variants: [variant({ ...na, camProfileSwitching: vtec })] }),
+    );
+    expect(messages(r)).toBe('');
+    const bad = { valves: v('exhaust') };
+    expect(
+      EngineSchema.safeParse(engine({ variants: [variant({ ...na, camProfileSwitching: bad })] }))
+        .success,
+    ).toBe(false);
+    expect(
+      EngineSchema.safeParse(rotary({ variants: [rotaryVariant({ camProfileSwitching: vtec })] }))
+        .success,
+    ).toBe(false);
+  });
+
+  it('accepts rod-bolt and valvetrain limits', () => {
+    const limit = (component: string, quantity: string, value: number, unit: string) => ({
+      component,
+      quantity,
+      value: v(value, unit),
+      context: 'Engine builder guidance for the stock part.',
+    });
+    const internals = {
+      crank: v('cast'),
+      rods: v('powdered-metal'),
+      pistons: v('hypereutectic'),
+      reportedLimits: [
+        limit('rod-bolts', 'rpm', 6800, 'rpm'),
+        limit('valvetrain', 'rpm', 6600, 'rpm'),
+        limit('rods', 'torque', 600, 'lb-ft'),
+      ],
+    };
+    expect(messages(EngineSchema.safeParse(engine({ internals })))).toBe('');
+  });
 });
 
 describe('EngineSchema: rotaries', () => {
