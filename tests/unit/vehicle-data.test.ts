@@ -50,7 +50,7 @@ describe('committed vehicle data', () => {
     expect(report.issues).toEqual([]);
   });
 
-  it('covers the Phase 1 roster so far (parts 1, 2 and 3a)', () => {
+  it('covers the Phase 1 roster so far (parts 1, 2, 3a and 3b in progress)', () => {
     expect(cars.map((c) => c.id).sort()).toEqual([
       'bmw-3-series-e46',
       'mazda-rx-7-fd3s',
@@ -63,6 +63,7 @@ describe('committed vehicle data', () => {
       '20b-rew',
       '2jz-ge',
       '2jz-gte',
+      'k24',
       'm54b30',
       's54b32',
       'sr20de',
@@ -75,7 +76,7 @@ describe('committed vehicle data', () => {
         .filter((e) => e.role === 'launch-swap')
         .map((e) => e.id)
         .sort(),
-    ).toEqual(['13b-rew', '20b-rew', '2jz-gte', 's54b32', 'sr20det', 'vq35hr']);
+    ).toEqual(['13b-rew', '20b-rew', '2jz-gte', 'k24', 's54b32', 'sr20det', 'vq35hr']);
   });
 
   // Spot checks of headline figures against what the sources print, so a bad
@@ -261,6 +262,30 @@ describe('committed vehicle data', () => {
     expect(trim('jdm-s6-spirit-r-type-c-4at').engine.variant).toBe('fd3s-jdm-4at');
     expect(trim('audm-1995-sp-5mt').curbWeight).toMatchObject({ value: 1218, unit: 'kg' });
     expect(trim('usdm-1993-base-5mt').curbWeight).toMatchObject({ value: 2789, unit: 'lb' });
+  });
+
+  it('K24: 2,354 cc; K24A2 200 then 205 hp; JDM K24A 200 PS; VTEC switch points', () => {
+    const e = engines.find((x) => x.id === 'k24');
+    if (e?.layout !== 'inline') throw new Error('K24 must be an inline engine');
+    const k24 = (id: string) => {
+      const found = e.variants.find((x) => x.id === id);
+      if (!found) throw new Error(`no K24 variant ${id}`);
+      return found;
+    };
+    expect(e.displacement).toMatchObject({ value: 2354, unit: 'cc', confidence: 'verified' });
+    expect(e.bellhousing?.value).toBe('honda-k');
+    const tsx04 = k24('k24a2-tsx-2004');
+    expect(tsx04.output.power).toMatchObject({ value: 200, unit: 'hp', confidence: 'verified' });
+    expect(tsx04.output.powerRpm.value).toBe(6800);
+    expect(tsx04.camProfileSwitching?.valves.value).toBe('intake-and-exhaust');
+    expect(tsx04.camProfileSwitching?.switchRpm?.value).toBe(6000);
+    expect(k24('k24a2-tsx-2006').output.power).toMatchObject({ value: 205, unit: 'hp' });
+    expect(k24('k24a-jdm-rbb-200ps').output.power).toMatchObject({
+      value: 200,
+      unit: 'PS',
+      confidence: 'verified',
+    });
+    expect(k24('k24z3-tsx').camProfileSwitching?.valves.value).toBe('intake');
   });
 
   it('every trim has a sourced final drive and a gearbox with matching ratios', () => {
