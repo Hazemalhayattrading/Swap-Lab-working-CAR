@@ -1,0 +1,3408 @@
+{
+  "$comment": "BMW 3 Series E46 (330i/330Ci and M3) with a GM LS1 or LS3: the hardware real builds use, researched 2026-09-29 from vendor product pages (Sikky Manufacturing, TDR Performance, Pennsyltucky Performance, Vorshlag Motorsports, Wiring Specialties, PMC Motorsport via its own shop and PO Performance, Rank One Performance); every page cited is saved and quote-checked. Prices as listed on 2026-09-29, in the currency printed. Covered: engine and transmission mounts (T56, T56 Magnum, TR6060, CD009, and the car's own ZF/Getrag), the Sikky pan, headers, steering shafts and lines, heater hoses, header-clearance chassis parts, LS-to-BMW gearbox adapters (the M3 Getrag 420G and the 330i ZF boxes), car-specific harnesses, Haltech Rebel ECU packages and CAN-bus cluster modules. Generic LS hardware (GM PCMs, T56/TR6060, clutches, universal pans, LS-to-CD009 adapters) is in the common LS file. Not found: an E46 LS driveshaft listing, an E46 LS radiator, any factory GM pan named as clearing the E46, whether the M3 needs different engine mounts, whether DSC still works, and the ZF boxes' torque ratings. Dirty Dingo lists no E46 in its by-model index; CX Racing blocks automated reading and is not included. Merged 2026-09-29 with the hardware common to every LS swap (GM PCM, Chevrolet Performance and Holley ECU routes, standalone harnesses, GM and Tremec gearboxes, clutches, fuel regulators), which a separate research pass sourced; those parts repeat in each LS swap file until Phase 3 moves them into parts/.",
+  "id": "bmw-3-series-e46--gm-ls",
+  "car": "bmw-3-series-e46",
+  "engines": ["ls1", "ls3"],
+  "parts": [
+    {
+      "id": "sikky-e46-engine-mounts",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Spec Your Own BMW E46 LS Swap Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Spec Your Own BMW E46 LS Swap Kit",
+            "note": "'Sikky Spec Your Own BMW E46 LS Swap Kit' (product title); 'Sikky’s Base LSx swap kit is an entry level kit consisting of our industry leading engine mounts.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-motor-mounts/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 LS Motor Mounts",
+            "note": "The same mounts sold alone: 'Sikky BMW E46 LS Motor Mounts', 'SKU: MK016', '$223.99' plus required bushings 'Add (UMA3) (+$223.99)'."
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "partNumber": {
+        "value": "MKP016-1 (mounts alone: MK016 with bushings UMA3)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: MKP016-1'"
+          },
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-motor-mounts/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: MK016' ... 'Add (UMA3) (+$223.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 447.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'$447.98' base kit; options priced separately, e.g. 'T56 6 Speed (CM44)(TM01) (+$291.98)' and 'Add (OP006) (+$643.98)'."
+          },
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-motor-mounts/",
+            "accessed": "2026-09-29",
+            "note": "'$223.99' for the mounts plus 'Add (UMA3) (+$223.99)' for the required bushings, the same 447.98 USD total."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "CNC-machined 6061-T6 aluminium engine mounts with urethane bushings",
+          "High grade hardware kit"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'The Mount Kit Includes: Engine Mounts CAD/CAM Designed CNC Machined Solid 6061 T-6 Aluminum Mounts or Custom Urethane Bushings with True Isolation High Grade Hardware Kit'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "For correct fitment be sure to use with Sikky Engine Mount Bushings, Oil Pan, and Transmission Cross member",
+          "Designed to work with left hand drive (LHD) vehicles only."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-motor-mounts/",
+            "accessed": "2026-09-29",
+            "note": "'For correct fitment be sure to use with Sikky Engine Mount Bushings, Oil Pan, and Transmission Cross member'"
+          },
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Designed to work with left hand drive (LHD) vehicles only.'"
+          }
+        ]
+      },
+      "notes": "Same mounts for the LS1 and LS3 ('Can be used on LS1, LS2, LS3 ...'). Gearboxes: 'This kit is developed to work with both the T56, T56 Magnum, Tr6060 and CD009 transmissions.' M3: the Sikky configurators offer M3-specific lower control arm bushings and the harness has M3 options, but no page says whether the engine mounts differ on the M3. Sikky also bundles these parts as Stage 1 (mounts, trans mount, pan), Stage 2 (adds headers) and Stage 3 packages (adds the Wiring Specialties harness; LS1 and LS3 versions). No Sikky E46 driveshaft is offered."
+    },
+    {
+      "id": "tdr-e46-engine-mounts",
+      "vendor": "TDR Performance",
+      "product": {
+        "value": "TDR E46 LSX Engine swap mounts",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/tdr-e46-lsx-engine-swap-mounts",
+            "accessed": "2026-09-29",
+            "title": "TDR BMW E46 LSX Engine swap mounts",
+            "note": "'TDR E46 LSX Engine swap mounts' (product title); 'TireDeathRacing.com LSX Engine into E46 BMW engine mount kit.'"
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "price": {
+        "value": 399.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/tdr-e46-lsx-engine-swap-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Default Title - $399.99 USD'"
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Tig-welded, CNC laser-cut 1/4 in steel mounts, powder coated",
+          "Billet 6061 aluminium pedestal",
+          "Energy Suspension polyurethane inserts",
+          "All required hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/tdr-e46-lsx-engine-swap-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Tig Welded' 'Cad Designed CNC Laser Cut' ... 'Powder Coated Black' 'Pedestal is CNC Machined from Billet 6061 aluminum' 'Energy Suspension Polyurethane Inserts' 'Includes all required hardware pictured for installation'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Must Use a rear sump pan"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/tdr-e46-lsx-engine-swap-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Must Use a rear sump pan, Requires no modifications to the crossmember'"
+          }
+        ]
+      },
+      "notes": "The page does not name which rear-sump pan. TDR's other E46 items shown on the page are 2JZ/1JZ mounts; no TDR LS transmission mount for the E46 is shown."
+    },
+    {
+      "id": "pennsyltucky-e46-v3-mounts",
+      "vendor": "Pennsyltucky Performance",
+      "product": {
+        "value": "E46 V3 LS Swap Engine Mounts",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-mount-v3",
+            "accessed": "2026-09-29",
+            "title": "E46 V3 LS Swap Engine Mounts",
+            "note": "'E46 V3 LS Swap Engine Mounts' (product title)."
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "price": {
+        "value": 275.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-mount-v3",
+            "accessed": "2026-09-29",
+            "note": "'from $275.00' (engine mounts only; the options add a transmission crossmember)."
+          }
+        ],
+        "note": "Starting price, engine mounts only."
+      },
+      "includes": {
+        "value": [
+          "Adjustable steel engine mounts (1.5 in forward or 0.5 in back)",
+          "75D polyurethane bushings",
+          "Grade 10.9 hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-mount-v3",
+            "accessed": "2026-09-29",
+            "note": "'adjustable to allow the engine to be moved forward 1.5' ... 'or back 0.5' ... 'These come with 75D polyurethane bushings and grade 10.9 hardware necessary for installation.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "designed to work with the Holley 302-1 or Poor Man Motorsport Top Street Performance oil pan",
+          "Transmission mounts for the crossmembers (e.g. Energy Suspension 3-1142G) should be purchased separately",
+          "For the 5th gen Camaro TR6060 the Muscle Rods retro adapter should be purchased in addition to the Prothane transmission mount."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-mount-v3",
+            "accessed": "2026-09-29",
+            "note": "'They are designed to work with the Holley 302-1 or Poor Man Motorsport Top Street Performance oil pan.' ... 'such as the Energy Suspension 3-1142G and should be purchased separately.' ... 'For the 5th gen Camaro TR6060 the Muscle Rods retro adapter should be purchased in addition to the Prothane transmission mount.'"
+          }
+        ]
+      },
+      "pairsWith": ["pennsyltucky-e46-trans-crossmember"],
+      "notes": "The adjustment is 'for those that wish to retain the factory BMW ZF transmission location'. Low profile to clear CX Racing headers; 'Sikky headers can also be used if you are not attempting to keep the ZF transmission in its factory location.' Crossmember options on the page: T56, Colorado AR5, 5th-gen Camaro TR6060, OEM-style adjustable (ZF/Getrag) and CD009. Shipped in bare mild steel, made to order."
+    },
+    {
+      "id": "sikky-e46-trans-crossmember",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky BMW E46 T56/CD009 Transmission Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 T56/CD009 Transmission Crossmember",
+            "note": "'Sikky BMW E46 T56/CD009 Transmission Crossmember' (product title); 'Designed for use with the T56 6 Speed, T56 Magnum 6 Speed, Or Nissan CD009.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 TR6060 Transmission Crossmember",
+            "note": "TR6060 version: 'Sikky BMW E46 TR6060 Transmission Crossmember'; 'Designed for use with the Tr6060'."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "partNumber": {
+        "value": "CM44 with bushing bracket TM01 (T56, T56 Magnum) or TM03 (CD009); CM45 with TM02 (TR6060)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: CM44'; 'T56 (TM01) (+$67.99)' 'CD009 (TM03) (+$67.99)'"
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: CM45'; 'Yes (TM02) (+$67.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 223.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'$223.99'; bushing bracket extra, 'T56 (TM01) (+$67.99)'."
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'$223.99' plus 'Yes (TM02) (+$67.99)'."
+          }
+        ],
+        "note": "Crossmember only; add 67.99 USD for the gearbox-specific bushing bracket."
+      },
+      "includes": {
+        "value": [
+          "Laser-cut, welded steel crossmember",
+          "High performance urethane bushing included with mount bolt"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-t56-cd009-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky transmission mounts are CAD/CAM designed and CNC Laser Cut from steel and welded in house. High performance urethane bushing included with mount bolt.'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-e46-engine-mounts"],
+      "notes": "Gearbox it assumes: CM44 for the T56, T56 Magnum or Nissan CD009; CM45 for the TR6060. No Sikky crossmember for the BMW ZF or Getrag gearboxes is listed."
+    },
+    {
+      "id": "vorshlag-e46-t56-crossmember",
+      "vendor": "Vorshlag Motorsports",
+      "product": {
+        "value": "Vorshlag E46 T56 Transmission Crossmember Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-t56-transmission-crossmember-kit",
+            "accessed": "2026-09-29",
+            "title": "Vorshlag E46 T56 Transmission Crossmember Kit",
+            "note": "'Vorshlag E46 T56 Transmission Crossmember Kit' (product title)."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "price": {
+        "value": 379.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-t56-transmission-crossmember-kit",
+            "accessed": "2026-09-29",
+            "note": "'$ 379.00' (listed 'Sold Out')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Transmission crossmember for Tremec T56 or T56 Magnum to be used in a LHD E46 chassis",
+          "Energy Suspensions polyurethane transmission bushing",
+          "Bolts and washers for mounting the transmission to the mount bushing"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-t56-transmission-crossmember-kit",
+            "accessed": "2026-09-29",
+            "note": "'Includes: Transmission crossmember for Tremec T56 or T56 Magnum to be used in a LHD E46 chassis Energy Suspensions polyurethane transmission bushing Bolts and washers for mounting the transmission to the mount bushing'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "re-use the 4 OEM bolts (chassis mounting bolts not included)",
+          "we strongly suggest using it with the Vorshlag BMW E46 LS1 Motor Mount Kit and our E46 LS1 swap exhaust headers"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-t56-transmission-crossmember-kit",
+            "accessed": "2026-09-29",
+            "note": "'except for the chassis mounting bolts (re-use the 4 OEM bolts there)' ... 'we strongly suggest using it with the Vorshlag BMW E46 LS1 Motor Mount Kit and our E46 LS1 swap exhaust headers as well.'"
+          }
+        ]
+      },
+      "notes": "Gearbox it assumes: 'This crossmember fits the mounting holes in a 1998-2002 Camaro T56 or the aftermarket Tremec T56 Magnum - not any other transmission.' LHD only. Vorshlag's E46 LSx collection lists no engine-mount kit any more, only replacement bushings (Vorshlag LS1 Motor Mount Replacement Bushings, 50 USD), although this page and the header page still recommend the Vorshlag E46 LS1 Motor Mount Kit."
+    },
+    {
+      "id": "pennsyltucky-e46-trans-crossmember",
+      "vendor": "Pennsyltucky Performance",
+      "product": {
+        "value": "E46 Adjustable Transmission Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-transmission-crossmember",
+            "accessed": "2026-09-29",
+            "title": "E46 Adjustable Transmission Crossmember",
+            "note": "'E46 Adjustable Transmission Crossmember' (product title); 'heavy duty and adjustable transmission cross member for the E46 chassis using a ZF or Getrag manual transmission.'"
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "price": {
+        "value": 200.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-transmission-crossmember",
+            "accessed": "2026-09-29",
+            "note": "'$200.00'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "pennsyltucky-e46-v3-mounts",
+        "bmw-e46-zf-retained",
+        "bmw-e46-m3-getrag-retained"
+      ],
+      "notes": "For keeping the car's own ZF or Getrag gearbox. 'When swapping a V8 in while maintaining the factory Getrag or ZF transmission it pushes the motor forward 1.25 inches'; the crossmember can move the gearbox 2 in rearward to recover the engine position. It follows the factory crossmember's dimensions, so exhaust clearance stays as stock."
+    },
+    {
+      "id": "sikky-e46-oil-pan",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky BMW E46 LS Swap Mid Sump Oil Pan",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-mid-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 LS Swap Mid Sump Oil Pan",
+            "note": "'Sikky BMW E46 LS Swap Mid Sump Oil Pan' (product title); 'Designed to fit perfectly in the BMW E46 (2000-2006)'"
+          }
+        ]
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "OP006B-E46 (listed as OP006 in the kit configurator)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-mid-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: OP006B-E46'"
+          },
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add (OP006) (+$643.98)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 643.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-mid-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'$643.98'; options 'Yes (RK002) (+$223.99)', pickup 'Yes (PT3) (+$55.99)', gasket 'Yes (G01) (+$55.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Oil Pan",
+          "Pan mounted bottom port remote oil filter adapter",
+          "Magnetic drain plug",
+          "Hardware Kit (utilizes some factory hardware not included)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-mid-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Oil Pan Kit Includes: Oil Pan Pan mounted bottom port remote oil filter adapter Magnetic drain plug Hardware Kit (utilizes some factory hardware not included)'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Requires OEM F-body Camaro pickup tube part number 12558251",
+          "Designed to use LS3 dipstick and tube. OEM GM tube 12625031, stick 12669528",
+          "Designed to fit perfectly around the front sub frame of the BMW E46 3 Series chassis when using a Sikky mount kit"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-mid-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Requires OEM F-body Camaro pickup tube part number 12558251' ... 'Designed to use LS3 dipstick and tube. OEM GM tube 12625031, stick 12669528' ... 'Designed to fit perfectly around the front sub frame of the BMW E46 3 Series chassis when using a Sikky mount kit'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-e46-engine-mounts"],
+      "notes": "Sump position conflict: the title says mid sump, the features say 'High capacity 5 1/2” deep front sump design'. Capacity conflict: this page says 'High capacity 5 quart sump', the Stage packages 'High capacity 7 quart sump'; the standalone page is preferred for both. Which factory GM pan clears the E46: none named by any source; Pennsyltucky specifies the Holley 302-1 or a Poor Man Motorsport pan and TDR 'a rear sump pan'."
+    },
+    {
+      "id": "sikky-e46-headers",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky BMW E46 LS Swap Headers",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 LS Swap Headers",
+            "note": "'Sikky BMW E46 LS Swap Headers' (product title); 'Sikky headers allow perfect drop-in fitment in the BMW E46 with a Sikky LSx (LS1 / LS2 / LS3 / LS6 / LS7) Swap Kit.'"
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "partNumber": {
+        "value": "HDR025SS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: HDR025SS'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1455.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'$1,455.99'; options 'Add Non M3 (CA-Bushing2) (+$269.99)', 'Add M3 (CA-Bushing3) (+$269.99)', 'Add (HSA001) (+$79.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "1 7/8 in primaries with a 3 in collector, 304 stainless",
+          "V-Band Flange Pre-Installed (clamp and other half included)",
+          "Includes New Gaskets and Bolts"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'1 7/8″ Primaries with a 3″ Collector made of high grade 304 Stainless Steel' 'V-Band Flange Pre-Installed (clamp and other half included)' 'Includes New Gaskets and Bolts'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "For proper header fitment you will need to use aftermarket eye ball arms (rear attachment point for lower control arm) as well as Sikky’s low profile steering shaft.",
+          "For maximum spark plug wire clearance use Taylor 79013 plug wires"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'For proper header fitment you will need to use aftermarket eye ball arms (rear attachment point for lower control arm) as well as Sikky’s low profile steering shaft.' ... 'For maximum spark plug wire clearance use Taylor 79013 plug wires'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "sikky-e46-engine-mounts",
+        "sikky-e46-steering-shaft",
+        "sikky-e46-control-arm-bushings"
+      ],
+      "notes": "Designed around the Sikky mounts; the Stage 2 page says the headers fit with any gearbox combination."
+    },
+    {
+      "id": "vorshlag-e46-headers",
+      "vendor": "Vorshlag Motorsports",
+      "product": {
+        "value": "Vorshlag E46 LS1 Full Length Header Kit, 304SS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-ls1-full-length-header-kit-304ss",
+            "accessed": "2026-09-29",
+            "title": "Vorshlag E46 LS1 Full Length Header Kit, 304SS",
+            "note": "'Vorshlag E46 LS1 Full Length Header Kit, 304SS' (product title)."
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "price": {
+        "value": 1850.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-ls1-full-length-header-kit-304ss",
+            "accessed": "2026-09-29",
+            "note": "'$ 1,850.00' (listed 'Sold Out')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "1.75 in full-length primaries of 16-gauge 304 stainless, laser-cut flanges",
+          "Stainless weld-on O2 bungs",
+          "V-band clamps and 304 stainless V-band flanges"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-ls1-full-length-header-kit-304ss",
+            "accessed": "2026-09-29",
+            "note": "'full length primaries made from 16 gauge 304 Stainless Steel tubing' ... 'Stainless steel weld-on O2 bungs are included' ... 'V-band flanges are made to Vorshlag specs in the USA, and are also 304 Stainless Steel.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "ARP header bolts, which are sold separately",
+          "highly recommend using them in conjunction with our Vorshlag E46 LS1 Motor Mount kit and Vorshlag E46 T56 Transmission Crossmember kits",
+          "strongly recommend using the Vorshlag low profile E46 Steering Shaft Assembly for additional clearance"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-ls1-full-length-header-kit-304ss",
+            "accessed": "2026-09-29",
+            "note": "'We stock stainless ARP header bolts, which are sold separately.' ... 'we highly recommend using them in conjunction with our Vorshlag E46 LS1 Motor Mount kit and Vorshlag E46 T56 Transmission Crossmember kits. We also strongly recommend using the Vorshlag low profile E46 Steering Shaft Assembly for additional clearance.'"
+          }
+        ]
+      },
+      "pairsWith": ["vorshlag-e46-t56-crossmember", "vorshlag-e46-steering-shaft"],
+      "notes": "North American LHD E46 only ('these WILL NOT FIT RHD E46 cars'). O2 bungs go downstream of the collectors. Vorshlag claims full-length headers make 'as much as a 50 hp difference on a bone stock 5.7L LS1 engine' against block huggers (vendor claim, not verified)."
+    },
+    {
+      "id": "sikky-e46-steering-shaft",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky BMW E46 Low Profile Steering Shaft Assembly",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lhd-bmw-e46-low-profile-steering-shaft-conversion-assembly/",
+            "accessed": "2026-09-29",
+            "title": "Sikky BMW E46 Low Profile Steering Shaft Assembly",
+            "note": "'Sikky BMW E46 Low Profile Steering Shaft Assembly' (product title)."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "partNumber": {
+        "value": "SSA-03",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lhd-bmw-e46-low-profile-steering-shaft-conversion-assembly/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: SSA-03'"
+          }
+        ]
+      },
+      "price": {
+        "value": 307.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lhd-bmw-e46-low-profile-steering-shaft-conversion-assembly/",
+            "accessed": "2026-09-29",
+            "note": "'$307.99'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Includes two joints, shaft, and hardware."],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lhd-bmw-e46-low-profile-steering-shaft-conversion-assembly/",
+            "accessed": "2026-09-29",
+            "note": "'Includes two joints, shaft, and hardware.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["E46 rack with E46 column"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lhd-bmw-e46-low-profile-steering-shaft-conversion-assembly/",
+            "accessed": "2026-09-29",
+            "note": "'Compatibility: E46 rack with E46 column'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-e46-headers"],
+      "notes": "'Joining your E46 steering rack to your E46 steering column with this low profile steering shaft is required when using the Sikky LS swap kit and headers.' It replaces the OEM shaft's rag joints."
+    },
+    {
+      "id": "vorshlag-e46-steering-shaft",
+      "vendor": "Vorshlag Motorsports",
+      "product": {
+        "value": "Vorshlag E46 Competition Steering Shaft Assembly",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-competition-steering-shaft-assembly",
+            "accessed": "2026-09-29",
+            "title": "Vorshlag E46 Competition Steering Shaft Assembly",
+            "note": "'Vorshlag E46 Competition Steering Shaft Assembly' (product title)."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "price": {
+        "value": 699.95,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-competition-steering-shaft-assembly",
+            "accessed": "2026-09-29",
+            "note": "'$ 699.95'"
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Chromoly low-profile needle-bearing U-joints at both ends",
+          "2-piece collapsible double-D intermediate shaft"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-competition-steering-shaft-assembly",
+            "accessed": "2026-09-29",
+            "note": "'Assembly includes custom spline ChromeMoly Steel low profile needle bearing U-joints at both ends and a 2-piece collapsible double-D shaped intermediate shaft.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "ALWAYS verify the spline count on your car’s shaft ends before ordering (17 mm / 54-spline U-joints)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vorshlag-store.com/products/vorshlag-e46-competition-steering-shaft-assembly",
+            "accessed": "2026-09-29",
+            "note": "'ALWAYS verify the spline count' ... 'This replacement steering shaft uses our unique 17mm diameter / 54 spline U-joints on both ends.'"
+          }
+        ]
+      },
+      "pairsWith": ["vorshlag-e46-headers"],
+      "notes": "Bolt-on replacement for the OEM aluminium shaft, whose rubber rag joint can interfere with full-length headers in a swap; off-road use only."
+    },
+    {
+      "id": "sikky-e46-ps-lines",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Power Steering Line Kit (E46 kit option, LS1/LS2 or LS3 pump)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add Power Steering Line Kit *Required' with 'LS1/LS2 Pump (PS103) (+$189.99)' and 'LS3 Pump (PS103A) (+$189.99)'."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "partNumber": {
+        "value": "PS103 (LS1/LS2 pump); PS103A (LS3 pump)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'LS1/LS2 Pump (PS103) (+$189.99)' 'LS3 Pump (PS103A) (+$189.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 189.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'LS1/LS2 Pump (PS103) (+$189.99)' 'LS3 Pump (PS103A) (+$189.99)'"
+          }
+        ]
+      },
+      "notes": "Engine-specific version: PS103 for an LS1, PS103A for an LS3; same price. Contents not listed."
+    },
+    {
+      "id": "sikky-e46-heater-hoses",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Low profile 90 degree heater hose kit (E46 kit option)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add Heater Hose Kit *Required Low profile 90 degree heater hose kit' ... 'Yes (HK001) (+$69.99)'"
+          }
+        ]
+      },
+      "fills": ["cooling"],
+      "partNumber": {
+        "value": "HK001",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Yes (HK001) (+$69.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 69.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Yes (HK001) (+$69.99)'"
+          }
+        ]
+      },
+      "notes": "Heater hoses only. No E46-specific LS radiator was found from any vendor."
+    },
+    {
+      "id": "sikky-e46-control-arm-bushings",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Front Lower Control Arm Bushings (to clear headers), non-M3 and M3 versions",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-stage-2-bmw-e46-ls-swap-package/",
+            "accessed": "2026-09-29",
+            "note": "'Add Front Lower Control Arm Bushings to clear Headers' with 'E46 Non M3 (CA-Bushing2) (+$269.99)' and 'E46 M3 (CA-Bushing3) (+$269.99)'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "CA-Bushing2 (non-M3); CA-Bushing3 (M3)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-stage-2-bmw-e46-ls-swap-package/",
+            "accessed": "2026-09-29",
+            "note": "'E46 Non M3 (CA-Bushing2) (+$269.99)' 'E46 M3 (CA-Bushing3) (+$269.99)'"
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-stage-3-bmw-e46-ls1-swap-package/",
+            "accessed": "2026-09-29",
+            "note": "The Stage 3 LS1 page prints the M3 code as 'E46 M3 (CA-Bushing) (+$269.99)'."
+          }
+        ],
+        "note": "The Stage 3 LS1 page drops the 3 from the M3 code; the other four Sikky E46 pages print CA-Bushing3."
+      },
+      "price": {
+        "value": 269.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-stage-2-bmw-e46-ls-swap-package/",
+            "accessed": "2026-09-29",
+            "note": "'E46 Non M3 (CA-Bushing2) (+$269.99)'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-e46-headers"],
+      "notes": "The headers page offers them as 'Adds needed lower control arm mount bushings'; Sikky's fitment notes call for 'aftermarket eye ball arms (rear attachment point for lower control arm)' with its headers. One of the few parts that differ for the M3."
+    },
+    {
+      "id": "sikky-e46-booster-heat-shield",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Brake Booster Heat Shield (E46 header option)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'Add Brake Booster Heat Shield *Required Adds stainless steel heat shield for the brake booster' ... 'Add (HSA001) (+$79.99)'"
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "HSA001",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'Add (HSA001) (+$79.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 79.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+            "accessed": "2026-09-29",
+            "note": "'Add (HSA001) (+$79.99)'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-e46-headers"]
+    },
+    {
+      "id": "bmw-e46-zf-retained",
+      "vendor": "BMW (the car's own gearbox, kept)",
+      "product": {
+        "value": "BMW ZF S5D 320Z 5-speed or ZF GS6-37BZ 6-speed manual (the car’s own gearbox)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "The PMC LS adapter plate lists 'BMW ZF (ZF Friedrichshafen) S5D-320 ZF 320 / ZF320 S5-32 5-speed' and 'BMW ZF (ZF Friedrichshafen) S6-37 GS6-37BZ 6-speed' among its gearboxes."
+          },
+          {
+            "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/05%20E85%20Driveline.pdf",
+            "accessed": "2026-09-29",
+            "title": "BMW Technical Training ST045, E85 Driveline",
+            "note": "BMW training manual ST045 (E85 Z4 driveline): 'The GS6-37BZ 6-speed manual transmission (H-gearbox) is used in the E85 with the M54B30 engine. The gearbox is designed by Zahnradfabrik Friedrichshafen (ZF) and built and supplied by ZF and Getrag.' Its designation key ('Gearbox type:') gives 37 as the H type code."
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "requires": {
+        "value": [
+          "An LS-to-BMW adapter plate and a custom flywheel",
+          "A transmission crossmember for the moved gearbox (the engine sits 1.25 in forward if the gearbox stays in its factory place)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "'Custom flywheel required Yes'"
+          },
+          {
+            "url": "https://pennsyltuckyperformance.com/shop/e46-transmission-crossmember",
+            "accessed": "2026-09-29",
+            "note": "'When swapping a V8 in while maintaining the factory Getrag or ZF transmission it pushes the motor forward 1.25 inches shifting the weight over the front axle.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "pmc-ls-bmw-adapter-plate",
+        "rankone-ls-bmw-kit",
+        "pennsyltucky-e46-trans-crossmember"
+      ],
+      "notes": "Car-file ids s5d320z-5mt and gs6-37bz-6mt (330i/330Ci). Speedometer: Wiring Specialties says the E46 speedo reads from the ABS system, so the gearbox's lack of a speed sensor does not matter here. Torque capacity: no BMW or ZF source read here states a rating. BMW's E85 training manual decodes the 37 in GS6-37BZ as a gearbox-type code (H), not a torque figure; the 370 Nm often quoted (Wikipedia, forums) is unconfirmed, and PMC only says BMW ZF/Getrag gearboxes in general handle high torque (some over 1000 Nm). Check before the compatibility rules pair an LS with a GS6-37BZ.",
+      "carGearbox": ["s5d320z-5mt", "gs6-37bz-6mt"]
+    },
+    {
+      "id": "bmw-e46-m3-getrag-retained",
+      "vendor": "BMW (the car's own gearbox, kept)",
+      "product": {
+        "value": "BMW Getrag S6S 420G 6-speed manual, E46 M3 (the car’s own gearbox)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'E46 M3 3.2 S54 GETRAG 420 S6S 420G - TBAI MT6 / BMW OE 23 00 2 229 721' (gearbox fitment line); gear ratios table 'Getrag 420G Gear ratios' with '4.227' '2.528' '1.669' '1.226' '1.000' '0.828' '3.746'."
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "partNumber": {
+        "value": "BMW 23 00 2 229 721 (TBAI)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'E46 M3 3.2 S54 GETRAG 420 S6S 420G - TBAI MT6 / BMW OE 23 00 2 229 721'"
+          }
+        ],
+        "note": "BMW number as printed by PMC Motorsport, not checked against the BMW ETK."
+      },
+      "requires": {
+        "value": [
+          "An LS-to-Getrag 420G adapter kit with a flywheel for the M3 clutch",
+          "Use a 240mm clutch disc that fits your gearbox."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'Aluminum clutch kit enabling the connection (swap / conversion) of GM Chevrolet V8 LS 6-bolts with a manual Getrag 420 gearbox from BMW.' ... 'Use a 240mm clutch disc that fits your gearbox.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "pmc-ls-getrag420-kit",
+        "rankone-ls-bmw-kit",
+        "pennsyltucky-e46-trans-crossmember"
+      ],
+      "notes": "Car-file id m3-6mt. The SMG II version (m3-smg2) is not covered by any adapter found. PMC's ratio table matches the car file's reverse (3.746). Torque capacity: not stated by any source read here.",
+      "carGearbox": ["m3-6mt"]
+    },
+    {
+      "id": "pmc-ls-bmw-adapter-plate",
+      "vendor": "PMC Motorsport (sold by PO Performance, UK)",
+      "product": {
+        "value": "Gearbox adapter plate GM Chevrolet LS - BMW Manual M50-M54 S50-S54 M47 M57 N52",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "title": "Gearbox adapter plate GM Chevrolet LS - BMW Manual M50-M54 S50-S54 M47 M57 N52",
+            "note": "'Gearbox adapter plate GM Chevrolet LS - BMW Manual M50-M54 S50-S54 M47 M57 N52' (product title); 'PMC Motorsport Adapter Plate (gearbox adapter / transmission adapter) GM Chevrolet V8 LS LSA LSX LT1 LM7 - BMW ZF310 / ZF320 / ZF GS5-39DZ / Getrag420G / ZF GS6-37DZ / ZF GS6-53DZ HGA'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "F0M50-LS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "'Reference F0M50-LS'"
+          }
+        ]
+      },
+      "price": {
+        "value": 370.83,
+        "unit": "GBP",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "'£370.83 Tax included'"
+          }
+        ],
+        "note": "PMC's own shop lists the same plate at 499,00 EUR as a component of its Getrag 420 kit ('Gearbox adapter GM Chevrolet LS - BMW ZF5 M50-M54 S50-S54 M47 M57 N52 [Manual] (1 pcs.)'); the UK reseller price is the listing for this exact item."
+      },
+      "includes": {
+        "value": ["Aluminium gearbox adapter", "Gearbox adapter bolts", "Dowel Pins"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "'Set includes Aluminium gearbox adapter Gearbox adapter bolts Dowel Pins'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Custom flywheel required"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.poperformance.co.uk/shop/gearbox-adaptors/19-adapter-plate-chevrolet-ls-ls1-ls3-ls7-bmw-m20-m57.html",
+            "accessed": "2026-09-29",
+            "note": "'Custom flywheel required Yes'"
+          }
+        ]
+      },
+      "pairsWith": ["bmw-e46-zf-retained", "bmw-e46-m3-getrag-retained"],
+      "notes": "Plate only, 35 mm thick; gearbox list includes the E46's 'S5D-320' 5-speed, 'S6-37 GS6-37BZ 6-speed' and the M3's 'GETRAG 420 / 420G TBAI S54 E46 M3'. Needs a flywheel to suit the chosen gearbox and clutch (for the M3 box, see the PMC Getrag 420 kit)."
+    },
+    {
+      "id": "pmc-ls-getrag420-kit",
+      "vendor": "PMC Motorsport",
+      "product": {
+        "value": "Adapter Kit GM Chevrolet V8 LS 6-bolts - BMW E46 S54 M3 GETRAG 420 6-speed - 240mm / 9.45\"",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "title": "Adapter Kit GM Chevrolet V8 LS 6-bolts - BMW E46 S54 M3 GETRAG 420 6-speed",
+            "note": "'Adapter Kit GM Chevrolet V8 LS 6-bolts - BMW E46 S54 M3 GETRAG 420 6-speed - 240mm / 9.45' (product title)."
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "A-LS-E46-240",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'Symbol A-LS-E46-240'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1048.0,
+        "unit": "EUR",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'1 048,00 EUR' ... 'incl. VAT' for the 'Adapter Kit ONLY 240mm / 9.45' option (clutch kits rated 650 to 800 Nm are dearer options)."
+          }
+        ],
+        "note": "Adapter kit only (plate plus flywheel), incl. VAT."
+      },
+      "includes": {
+        "value": [
+          "Gearbox adapter plate (PMC ZF5 / Getrag plate)",
+          "Custom 240 mm aluminium flywheel with replaceable friction disc, for the M57 or E46 M3 pressure plate",
+          "Mounting bolts",
+          "Custom clutch-fork pivot pin"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'Gearbox adapter GM Chevrolet LS - BMW ZF5 M50-M54 S50-S54 M47 M57 N52 [Manual] (1 pcs.)' ... 'Custom aluminum flywheel 240mm / 9.45' ... 'adapted for BMW M57 or BMW E46 M3 pressure plate (not compatible with M50 / M52 / M54 / S50 / e36 M3)' ... 'the kit includes all necessary mounting bolts.' ... 'Replace the original spherical pin (pivot pin) with the custom one from the kit.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "The starter remains an OE Chevrolet LS.",
+          "The bearing and clutch release fork remain from the existing gearbox.",
+          "Use a 240mm clutch disc that fits your gearbox.",
+          "You should use the flywheel / ring gear from the automatic version of the GM Chevrolet LS (not inc.)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5400-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-240mm-9-45.html",
+            "accessed": "2026-09-29",
+            "note": "'The starter remains an OE Chevrolet LS.' 'The bearing and clutch release fork remain from the existing gearbox.' ... 'Use a 240mm clutch disc that fits your gearbox.' ... 'You should use the flywheel / ring gear from the automatic version of the GM Chevrolet LS (not inc.)'"
+          }
+        ],
+        "note": "The last line is quoted as printed; it seems to conflict with the included flywheel and was not clarified."
+      },
+      "pairsWith": ["bmw-e46-m3-getrag-retained"],
+      "notes": "E46 M3 route (Getrag 420G). US orders go through PMC's US distributor (drifthq.com), per the page."
+    },
+    {
+      "id": "rankone-ls-bmw-kit",
+      "vendor": "Rank One Performance",
+      "product": {
+        "value": "LS1/LS2/LS3/LS6/LS7/LSX to BMW Manual Gearbox Adapter & Flywheel Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://rankoneperformance.com/products/lsx-to-bmw-gearbox-conversion-kit",
+            "accessed": "2026-09-29",
+            "title": "LS1/LS2/LS3/LS6/LS7/LSX to BMW Manual Gearbox Adapter & Flywheel Kit",
+            "note": "'LS1/LS2/LS3/LS6/LS7/LSX to BMW Manual Gearbox Adapter & Flywheel Kit' (product title)."
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "price": {
+        "value": 2499.0,
+        "unit": "EUR",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://rankoneperformance.com/products/lsx-to-bmw-gearbox-conversion-kit",
+            "accessed": "2026-09-29",
+            "note": "'Default Title - €2,499.00 EUR'; 'MADE TO ORDER!' 'Please allow up to 8 weeks lead time for manufacturing.'"
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Adapter plate for a BMW 5-speed ZF or 6-speed Getrag manual gearbox",
+          "Custom chromoly steel flywheel for the LS (16.5 kg)",
+          "Custom made bolts"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://rankoneperformance.com/products/lsx-to-bmw-gearbox-conversion-kit",
+            "accessed": "2026-09-29",
+            "note": "'This kit consists of adapter plate to be bolted to a BMW 5-speed ZF or 6-speed Getrag manual gearbox, a custom flywheel for the LS engine family and custom made bolts.' ... 'weighs 16.5 kg.'"
+          }
+        ]
+      },
+      "pairsWith": ["bmw-e46-m3-getrag-retained"],
+      "notes": "Compatible gearboxes listed include 'E46 M3 6speed (2000-2006)' (plus diesel ZF 5-speeds); 'Allows the use of a standard BMW M3 clutch'. The 330i's ZF boxes are not in its list. An aluminium flywheel option exists. The page shows a back-in-stock notice."
+    },
+    {
+      "id": "ws-e46-ls1-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "LS1 / Vortec Wiring Harness for BMW E46 - CANBUS PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'LS1 / Vortec Wiring Harness for BMW E46 - CANBUS PRO SERIES' (product title)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "partNumber": {
+        "value": "WRS-PROLS1-E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-E46'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1369.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,369.00'; options include 'Send in my PCM for tuning (+$199)' and 'Add New PCM with Tune (+$299)'."
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "Complete engine and transmission harness (no core needed)",
+          "Integration with the E46 cluster and fans: alternator charge, oil pressure and coolant temperature displays, reverse lights, wipers, factory fans"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'NO CORE HARNESS or additional wiring required' ... 'Retains functional alternator charge display, oil pressure display, coolant temperature display, reverse lights and wipers.' 'Factory cooling fans remain functional if that option is selected.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Conversion from stock electronic Drive-By-Wire throttle pedal to cable throttle is REQUIRED",
+          "Use Dakota Digital SGi-8 if the number of cylinders has changed from factory.",
+          "Oil pressure cluster option requires Beck/Arnley sensor P/N 2011515"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'Conversion from stock electronic Drive-By-Wire throttle pedal to cable throttle is REQUIRED' ... 'Use Dakota Digital SGi-8 if the number of cylinders has changed from factory.' ... 'Add Oil Press (Requires Beck/Arney Sensor P/N 2011515) (+$20)'"
+          }
+        ]
+      },
+      "notes": "Chassis 'BMW E46 1999-2006 including i & ci versions of 316 / 318 / 320 / 323 / 325 / 328 / 330, 330 ZHP & M3'; model options include M3 and 'M3 with 6MT Manual Transmission' / 'M3 with SMG Transmission'; LHD US or RHD non-US. 'Factory Speedometer functions by utilizing the ABS system outputs.' An E46 has six cylinders, so the tach needs the SGi-8 box with a V8."
+    },
+    {
+      "id": "ws-e46-ls3-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "LS3 Gen IV 58x DBW Wiring Harness for BMW E46 - CANBUS PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'LS3 Gen IV 58x DBW Wiring Harness for BMW E46 - CANBUS PRO SERIES' (product title)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "partNumber": {
+        "value": "WRS-PROLS3-E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS3-E46'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1549.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,549.00'"
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "Integrated coil pack harnesses for both banks",
+          "Standalone 5-circuit Bussmann fuse/relay block",
+          "Wiring for dual PCM-controlled 30 A cooling fans"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Integrated Coil Pack Harnesses - both banks now provided for no extra charge' 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided - no connections to OEM fuse boxes needed' ... 'Proper gauge wiring support for Dual 30 Amp PCM-controlled electric cooling fans'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["Use Dakota Digital SGi-8 if the number of cylinders has changed from factory."],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Use Dakota Digital SGi-8 if the number of cylinders has changed from factory.'"
+          }
+        ]
+      },
+      "notes": "Pedal options include 'Using Stock E46 Pedal', although the chassis line (apparently copied from the LS1 page) reads 'BMW E46 1999-2006 USING CABLE THROTTLE CONVERSION ONLY'; unresolved. M3 and ZHP model options, M3 6MT/SMG options, same cluster functions as the LS1 harness."
+    },
+    {
+      "id": "ws-e46-rebel-gen3",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Haltech NEXUS Rebel for LS Gen III Engines PNP for BMW E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'Haltech NEXUS Rebel for LS Gen III Engines PNP for BMW E46' (product title); 'Haltech Rebel LS Gen III ECU & Harness plus Wiring Specialties PNP Chassis Interface Harness'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "partNumber": {
+        "value": "WRS-HT-220201-E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-HT-220201-E46'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2595.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'USD $2,595.00'"
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "HT-220001 Rebel ECU",
+          "HT-186500 main harness",
+          "HT-186504 cable throttle + IAC sub-harness",
+          "HT-186501 LS EV1 injector sub-harness",
+          "HT-187003 T56 transmission harness",
+          "HT-186508 Gen III knock sensor adaptor",
+          "Wiring Specialties PNP chassis interface harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'HT-220001 - Rebel ECU' 'HT-186500 - Main Harness' 'HT-186504 - Cable Throttle + IAC sub-harness' 'HT-186501- LS EV1 Injector Sub-Harnes' 'HT-187003 - T56 Transmission Harness' ... 'HT-186508 - Gen III Knock Sensor Adaptor'"
+          }
+        ]
+      },
+      "notes": "'giving you dashboard functionality and other Chassis CANBUS functions'. Options cover 316i to 330i, 330 ZHP and M3 models, 1999-2006."
+    },
+    {
+      "id": "ws-e46-rebel-gen4",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Haltech NEXUS Rebel for LS Gen IV Engines PNP for BMW E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iv-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'Haltech NEXUS Rebel for LS Gen IV Engines PNP for BMW E46' (product title); 'Haltech Rebel LS Gen IV ECU & Harness plus Wiring Specialties PNP Chassis Interface Harness'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "partNumber": {
+        "value": "WRS-HT-220204-E46",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iv-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-HT-220204-E46'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2595.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iv-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'USD $2,595.00'"
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "HT-220001 Rebel ECU",
+          "HT-186500 main harness",
+          "HT-186505 6-pin DBW adaptor",
+          "HT-186507 Corvette pedal adaptor",
+          "HT-186502 LS EV6 injector sub-harness",
+          "HT-187003 T56 transmission harness",
+          "HT-186510 Gen IV oil pressure sensor adaptor harness",
+          "HT-186511 Gen IV MAP sensor adaptor harness",
+          "Wiring Specialties PNP chassis interface harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iv-engines-pnp-for-bmw-e46/",
+            "accessed": "2026-09-29",
+            "note": "'HT-220001 - Rebel ECU' 'HT-186500 - Main Harness' 'HT-186505 - 6 Pin DBW Adaptor' 'HT-186507 - Corvette pedal adaptor' 'HT-186502- LS EV6 Injector Sub-Harnes' 'HT-187003 - T56 Transmission Harness' ... 'HT-186510 - Gen IV Oil pressure sensor adaptor harness' 'HT-186511 - Gen IV MAP sensor adaptor harness'"
+          }
+        ]
+      },
+      "notes": "'Kit Supports Gen IV engines with drive by wire (DBW) using the OEM E46 Electronic Throttle Pedal.'"
+    },
+    {
+      "id": "ws-e46-revcan2-ls1",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "BMW E46 with LS1 OEM PCM - CANBUS DIY Module + A/C Support",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'BMW E46 with LS1 OEM PCM - CANBUS DIY Module + A/C Support' (product title)."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "WRS-RV2-E46-LS1",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-RV2-E46-LS1'"
+          }
+        ]
+      },
+      "price": {
+        "value": 395.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'USD $395.00'"
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "Detailed User Guide and Wiring Instructions",
+          "Genuine OEM Mating Connector with Pins",
+          "Genuine GM Engine Coolant Temperature Sensor & Mating Connector with Pins"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Detailed User Guide and Wiring Instructions' ... 'Genuine OEM Mating Connector with Pins' ... 'Genuine GM Engine Coolant Temperature Sensor & Mating Connector with Pins'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "BMW Refrigerant Pressure Sensor & Mating Connector PN: 64539141957 - Not Included",
+          "GM Refrigerant Pressure Sensor & Mating Connector PN: 22664328 - Not Included"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls1-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'BMW Refrigerant Pressure Sensor & Mating Connector PN: 64539141957 - Not Included' ... 'GM Refrigerant Pressure Sensor & Mating Connector PN: 22664328 - Not Included'"
+          }
+        ]
+      },
+      "notes": "E46 CAN integration for an OEM GM PCM ('E46 (Model Year 1999 - 2005)'): tachometer, coolant gauge, CEL, chassis fan and A/C control, 'Retains OEM ABS Functionality', 'Mitigates all engine-swap related lamps'. It does not claim that DSC traction or stability control works. Transmission options include M3 6MT and SMG."
+    },
+    {
+      "id": "ws-e46-revcan2-ls3",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "BMW E46 with LS3 OEM E38 PCM - CANBUS DIY Module + A/C Support",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'BMW E46 with LS3 OEM E38 PCM - CANBUS DIY Module + A/C Support' (product title)."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "WRS-RV2-E46-LS3",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-RV2-E46-LS3'"
+          }
+        ]
+      },
+      "price": {
+        "value": 395.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'USD $395.00'"
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "Detailed User Guide and Wiring Instructions",
+          "Genuine OEM Mating Connector with Pins"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Detailed User Guide and Wiring Instructions' ... 'Genuine OEM Mating Connector with Pins'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "BMW Refrigerant Pressure Sensor & Mating Connector PN: 64539141957 - Not Included",
+          "GM Refrigerant Pressure Sensor & Mating Connector PN: 22678731 - Not Included"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/bmw-e46-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'BMW Refrigerant Pressure Sensor & Mating Connector PN: 64539141957 - Not Included' ... 'GM Refrigerant Pressure Sensor & Mating Connector PN: 22678731 - Not Included'"
+          }
+        ]
+      },
+      "notes": "Same functions as the LS1 module for an E38 PCM; no DSC claim."
+    },
+    {
+      "id": "gm-p01-0411-pcm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "411 P01 PCM (red/blue connectors), 24x Gen III",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G3CM",
+            "note": "PSI's 24x drive-by-cable harness page lists as required and sold separately: 'RED/BLUE 411 P01 PCM' (read via WebFetch)."
+          },
+          {
+            "url": "https://www.ictbillet.com/products/ls-gen-3-ecm-engine-computer-connector-kit-blue-red-p01-pcm-0411-ls1-lm7-lq4-lr4",
+            "accessed": "2026-09-29",
+            "title": "ICT Billet WPECM30BR",
+            "note": "Connector kit for this PCM: 'LS Gen 3 ECM Engine Computer Connector Kit Blue Red P01 PCM 0411 LS1 LM7 LQ4 LR4', for 'LS1, LS6, LQ4, LQ9, LM7, L59, and LR4 engine-management systems using the matching blue and red PCM connectors'."
+          },
+          {
+            "url": "https://www.speartech.com/product_p/24xharnesscable.htm",
+            "accessed": "2026-09-29",
+            "title": "Speartech LS1 / Vortec Harness - Cable Throttle",
+            "note": "Speartech's 24x cable-throttle harness asks 'PCM connector style(required):' 'Red/Blue' or 'Blue/Green', and says 'PCM shown for reference only. Not included with harness.'"
+          }
+        ],
+        "note": "Speartech also offers a blue/green-connector version, so not every 24x PCM is the red/blue 0411; which LS1 donors used which connector set was not checked. No GM part number for the 0411 PCM was verified."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LSx engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS1-UNI",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis' and 'The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-ls1-pcm-programming",
+        "ws-ls1-standalone-harness",
+        "psi-har-g3cm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices licensing for the 98-02 Camaro 5.7 and 97-04 Corvette 5.7 ECMs at 2 credits each (see hpt-universal-credit). Wiring Specialties, PSI and lt1swap.com all sell or program these PCMs for swaps (separate parts)."
+    },
+    {
+      "id": "gm-e38-ecm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "E38 ECM, 58x Gen IV (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS3-UNI",
+            "note": "Wiring Specialties' LS3 harness: 'LS3/L99 4th Generation using E38 PCM' and the option 'Add LS3 / L76 / Vortec E38 PCM w/ Flash (+$299) (Recommended)'."
+          },
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "Programming service line: '$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99'."
+          },
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G4WM",
+            "note": "PSI's 58x manual harness: 'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)."
+          }
+        ],
+        "note": "E67 also runs 58x LS engines: lt1swap.com programs E37, E38 and E67 ECMs, and HP Tuners lists the Chevrolet Performance crate-engine controller as an E67 (see hpt-universal-credit). Which GM controller a given donor LS3 has was not checked car by car."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LS engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis. The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-58x-ecm-programming",
+        "ws-ls3-standalone-harness",
+        "psi-har-g4wm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices the 05-13 Corvette 6.0/6.2/7.0 and 10-15 Camaro 6.2/7.0 ECMs at 2 credits each."
+    },
+    {
+      "id": "hpt-mpvi4",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "MPVI4",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners MPVI4",
+            "note": "Product page title 'MPVI4' with 'Introducing HP Tuners’ newest and most advanced vehicle interface.'"
+          }
+        ],
+        "note": "The MPVI4 is the current interface. HP Tuners ends support for the original MPVI1 on 1 January 2027; the MPVI2, MPVI3 and MPVI4 are not affected (HP Tuners MPVI1 end-of-life FAQ)."
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "M04-000-00",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: M04-000-00'"
+          }
+        ]
+      },
+      "price": {
+        "value": 399.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'From: $399.99'"
+          }
+        ],
+        "note": "Regular list price on the maker page (\"From\"); credits are extra."
+      },
+      "includes": {
+        "value": ["MPVI4 Interface", "USB-C to C Cable", "Quick Start Guide"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "In the Box: 'MPVI4 Interface' 'USB-C to C Cable' 'Quick Start Guide'. Also 'comes standard with the Pro Feature Set'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["credits to license controllers (varies by make/model)", "VCM Suite 5.2+"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Requires credits to license controllers (varies by make/model)' and 'Credits Sold Separately'; 'Works with VCM Suite 5.2+'."
+          }
+        ]
+      },
+      "pairsWith": ["hpt-universal-credit", "gm-p01-0411-pcm", "gm-e38-ecm"],
+      "notes": "Tuning interface for the GM-PCM route (not an ECU). Filed under \"other\" so it is not read as an ECU alternative."
+    },
+    {
+      "id": "hpt-universal-credit",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "Universal Credits (GM Credits)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners products",
+            "note": "Credits section: 'Universal Credits' ... 'GM Credits $49.99'."
+          },
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Universal Credits' '$49.99 each'"
+          }
+        ]
+      },
+      "fills": ["other"],
+      "price": {
+        "value": 49.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'$49.99 each'"
+          },
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "note": "'GM Credits $49.99'"
+          }
+        ],
+        "note": "Per credit, regular price; both pages are hptuners.com, so one site. Two credits per ECM for the controllers below, so about USD 99.98 per car."
+      },
+      "requires": {
+        "value": [
+          "2 credits for the 98-02 Camaro 5.7, 97-04 Corvette 5.7, 05-13 Corvette 6.0/6.2/7.0, 10-15 Camaro 6.2/7.0 and Chevrolet Performance E67 crate-engine ECMs"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/vehicles/gm-tuning/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners GM vehicle support",
+            "note": "GM table: '98-02 | Camaro 5.7 | 2', '97-04 | Corvette 5.7 | 2', '05-13 | Corvette 6.0, 6.2, 7.0', '10-15 | Camaro 6.2, 7.0', '06-14 | Chevrolet Performance E67 Crate Engine PCM | 2'; 'Credit cost shown is for ECM licensing only.'"
+          }
+        ],
+        "note": "The 05-13 Corvette and 10-15 Camaro rows also read 2 credits on the page; the cell sits after a TDN icon, so only the row start is quoted."
+      },
+      "pairsWith": ["hpt-mpvi4"],
+      "notes": "Quantity matters: the schema has no quantity field, so the 2-credit count is in requires."
+    },
+    {
+      "id": "lt1swap-ls1-pcm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (1998-2002 Camaro/Trans Am LS1, 1997-2004 Corvette, 2004 GTO PCMs)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1, 1997-2004 Corvette,' '2004 GTO 5.7L LS1/LS6' and 'Swap Programming Service - USA Only'; the service is to 'remove anti-theft system' and 'I enable cooling fans for all swap applications'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 75,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-p01-0411-pcm"],
+      "notes": "US only: the page says 'NO LONGER SHIPPING INTERNATIONAL' and 'USA ONLY!', so it does not suit a Saudi-based build without a US forwarding step. Not a custom tune: it will not tune modified engines."
+    },
+    {
+      "id": "lt1swap-58x-ecm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (2007-2013 E37, E38, E67 ECMs incl. Camaro/Corvette 6.2L LS3)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99' and 'Swap Programming Service - USA Only'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-e38-ecm"],
+      "notes": "US only ('USA ONLY!'), as for the LS1 service."
+    },
+    {
+      "id": "psi-ls1-pcm-programmed",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "Related item on the HAR-G3CM page: 'LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01' at '$210.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 210,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$210.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com blocks curl), so not machine-checked; regular vs sale not shown in what was returned."
+      },
+      "pairsWith": ["psi-har-g3cm"]
+    },
+    {
+      "id": "psi-e38-ecm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "E38 LS3/Vortec Gen IV Engine ECM (2006+)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "Option on the HAR-G4WM page: 'E38 LS3/Vortec Gen IV Engine ECM (2006+)' at '$274.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 274,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$274.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; whether it is programmed for the swap was not stated in what WebFetch returned."
+      },
+      "pairsWith": ["psi-har-g4wm"]
+    },
+    {
+      "id": "chevrolet-performance-ls3-controller-kit",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Engine Controller Kit For 430HP LS3 6.2L",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19540147 - Engine Controller Kit For 430HP LS3 6.2L'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Chevrolet Performance LS3 430hp Controller Kit - Computer & Harness 19354328'"
+          },
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "title": "LS Series Crate Engine Control System, REV 19MY16",
+            "note": "GM instruction sheet 19171935: '19354328 LS3 Engine Control System Kit'"
+          }
+        ],
+        "note": "GM sheet: 'This control system is a stand alone, fully-integrated kit designed to run Chevrolet Performance Parts LS Series crate engines with 58x crankshaft reluctor wheels, 4x camshaft indexing, and electronic throttle control (ETC)'. No Chevrolet Performance controller kit for a 24x LS1 was found: Scoggin Dickey's catalogue searches for controller kits on 2026-09-29 (search pages not saved) returned only 58x LS and Gen V LT kits."
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "19540147",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19540147'"
+          }
+        ],
+        "note": "GM's instruction sheet (REV 19MY16) and Pro Touring Store's listing use the earlier number 19354328 for the LS3 kit; Scoggin Dickey sells it as 19540147 (its page metadata lists 19258270, 19354328 and 19540147 together, but no visible text states a supersession). Pro Touring Store's variant SKU is 19540148, which Scoggin Dickey uses for the LS376/480 kit, so that SKU looks like a listing error."
+      },
+      "price": {
+        "value": 2320.95,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'MSRP:' '$2,475.68' ... 'Now:' '$2,320.95'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,475.68). Pro Touring Store lists the kit under 19354328 at USD 2,257.74 ('$2,25774' on the page, cents in superscript)."
+      },
+      "includes": {
+        "value": [
+          "engine control module (flashed with the appropriate calibration)",
+          "engine harness with fuse/relay center",
+          "accelerator pedal (GM 10379038)",
+          "mass air flow (MAF) sensor and mounting boss",
+          "oxygen sensors (2) and mounting bosses (2)",
+          "MAP sensor jumper",
+          "instruction sheet"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'Included in the kit are the engine control module (flashed with the appropriate calibration), engine harness, accelerator pedal, mass air flow (MAF) sensor, MAF sensor mounting boss, oxygen sensors (2), and oxygen sensor mounting bosses (2).' Parts list: '10379038 Accelerator Pedal', '19202597 MAP Sensor Jumper LS3/LS376'; 'The harness includes a fuse/relay center'."
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'Most kits include:' ... 'A CTS style throttle pedal assembly (for use with the electronically operated throttle)' ... 'A complete wiring harness with fuse box and necessary cam sensor and MAP sensor jumpers' ... 'The programmed controller' ... 'An instruction sheet'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph",
+          "power and ground sources, a high-pressure fuel pump and an electric cooling fan",
+          "clutch and flywheel purchased separately (manual applications)"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'This control system requires a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph for the LS2/LS3/LS376s'; 'For manual applications, the clutch and flywheel used must be purchased separately'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'are power and ground sources, a high-pressure fuel pump and an electric cooling fan'"
+          }
+        ]
+      },
+      "pairsWith": ["qfs-c5-style-filter-regulator"],
+      "notes": "GM designs the kit for its own crate engines; the sheet does not cover use on a donor LS3. GM sheet: 'The axle drive ratio in the calibration is set to 3.42:1 and is okay for ratio from 3.08 to 4.11', and the speed input expects 40 pulses per revolution (4L60/4L80 automatics). The 3.42:1 base and tyre range matter for drift cars on other final drives. Scoggin Dickey's generic list adds an oil pressure sensor, fuel pump power module and fuel pressure sensor kit that GM's 2016 sheet does not list."
+    },
+    {
+      "id": "holley-terminator-x-550-903",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X MPFI, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-cable, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-903 - Terminator X Mpfi, Ls1' '24x Crank - 1x Cam - EV1 Injectors - 3.5 in. Touchscreen' and 'For GM LS1/LS6 engines with 24x crank reluctor - with EV1 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'24x / EV1 / DBC: 550-903' and '1997+ LS1/2/6 APPLICATIONS USING AN EV1 INJECTOR, 24X CRANK RELUCTOR, 1X CAM GEAR, AND DRIVE BY CABLE ONLY.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-903",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-903'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'24x / EV1 / DBC: 550-903'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1599.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'$1,599.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'$1,59995' (cents in superscript)"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown (Holley pricing is dealer-uniform). Both list it out of stock or backordered."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "Terminator X ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - Terminator X ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "No drive-by-wire control (drive by cable only, per Pro Touring Store's application note). It suits cable-throttle LS1s such as the F-body's; an LS1 on an electronic throttle needs the Max kit 550-929. Scoggin Dickey: 'Will not control Low Impedance Injectors'. EV6-injector version: 550-909, listed on the same Pro Touring Store page."
+    },
+    {
+      "id": "holley-terminator-x-max-550-929",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-929 - Terminator X Max Mpfi W/Dbw, Ls1' '24x Crank - 1x Cam - EV1 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'EV1 Bosch (LS1 / Jetronic) / Drive by wire / No'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-929",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-929'"
+          }
+        ],
+        "note": "Pro Touring Store sells the same variant (24x, EV1, drive by wire, no transmission control), but its page text does not print the part number; the store's product JSON (read with curl, not saved) gives 550-929."
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'$2,249.95' ... '$1,999.95' ... '$250.00'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,249.95, save USD 250.00); Pro Touring Store lists USD 1,999.95 with no compare-at price. Variant 550-929T swaps the handheld for a USB/CAN cable: USD 1,949.95 (MSRP 2,193.95) at Scoggin Dickey."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "For GM LS1/LS6 engines with a 24x reluctor, drive-by-wire throttle body and EV1 injectors. Scoggin Dickey: 'Recommended Pedal part number - 10379038' (pedal not included)."
+    },
+    {
+      "id": "holley-terminator-x-max-550-931",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW (58x crank, 4x cam, EV6 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-931 - Terminator X Max Mpfi W/Dbw' '58x Crank - 4x Cam - EV6 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen' and 'Designed for GM 4.8/5.3/6.0 LS Truck Engines and LS2/LS3 with 58x Crank, 4x Cam and a Drive-By-Wire Throttle Body, with EV6 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "Non-Max 58x kits on the same store's page: 'WILL NOT OPERATE FACTORY DRIVE BY WIRE LS3 THROTTLE BODIES' and 'USE TERMINATOR X MAX FOR DBW.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "550-931",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'$1,999.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown."
+      },
+      "includes": {
+        "value": [
+          "58x/4x LS Engine Main Harness",
+          "EV6 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 58x/4x LS Engine Main Harness - EV6 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "The match for a stock LS3 (58x, 4x cam, EV6 injectors, electronic throttle). The cheaper non-Max 58x kit 550-910 is EV1 and has no DBW control ('58x Crank - 4x Cam - EV1 Injectors - 3.5 in. Touchscreen', USD 1,599.95 at Scoggin Dickey), so it does not suit a stock LS3 without changes. Pedal not included; Scoggin Dickey recommends GM 10379038."
+    },
+    {
+      "id": "ws-ls1-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness - PRO SERIES'; 'Supports Engines with DRIVE BY CABLE THROTTLE ONLY'; 'Any F-Body 5.7L LS1 from 1999-2002 Camaro, Firebird, Trans Am or Corvette'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $899.00'"
+          }
+        ],
+        "note": "Base price; options add cost (e.g. CD009 or BMW ZF gearbox wiring +USD 45 each, PCM flash +USD 199, new PCM with tune +USD 299, coil harness +USD 149). Built to order, 2-8 weeks."
+      },
+      "includes": {
+        "value": [
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness",
+          "Wiring for 2 PCM-controlled electric cooling fans",
+          "self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump",
+          "Printable install instructions with pictures"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Main Engine and Transmission one-piece tucked harness' 'Alternator charge cable built into the main harness' 'Wiring for 2 PCM-controlled electric cooling fans' 'comes with a self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump' 'Printable install instructions with pictures'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a GM LS1 PCM with a startup tune (VATS off)",
+          "coil pack harness (option or existing)",
+          "hook up start signal, fuel pump wires and a few other wires for tach and speedo"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis'; 'Add PRO Coilpack Harness:' ... 'I Already Have a Coilpack Harness'; 'You just have to hook up start signal, fuel pump wires and a few other wires for tach and speedo'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "hpt-mpvi4"],
+      "notes": "Gearbox options on the page include 'T56', 'Tremec TR6060', 'Z33 CD009 6 Speed (+$45)' and 'BMW ZF Series (+$45)'. The page warns that 'some transmissions (350z, BMW ZF and S15 Silvia for example) do not have a speed sensor and will require a non-harness based solution like a GPS speedo'. Wiring Specialties also sells car-specific LS1 and LS3 harnesses for the S15, 350Z, E46 and FD RX-7 (ws-<car>-ls1/ls3-harness parts below); its LS menus list no Supra (its Supra MkIV harnesses are for the 1JZ-GTE)."
+    },
+    {
+      "id": "ws-ls1-standalone-harness-with-pcm",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness", "ecu"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI-PCU-HPT-COMBO",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI-PCU-HPT-COMBO'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1198,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,198.00'"
+          }
+        ],
+        "note": "Base price, options extra; no sale shown."
+      },
+      "includes": {
+        "value": [
+          "HP Tuners tuned & tested PCM",
+          "Main Engine and Transmission one-piece tucked harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "Title 'with HP Tuners tuned & tested PCM' and 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "notes": "Same drive-by-cable LS1 harness as ws-ls1-standalone-harness, sold with a tuned PCM. Which PCM family is supplied is not stated on the page."
+    },
+    {
+      "id": "ws-ls3-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES'; 'SUPPORTED ENGINES: GM 6.2 LITER LS3 ENGINES USING DRIVE BY WIRE / ELECTRONIC THROTTLE'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "WRS-PROLS3-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS3-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 999,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $999.00'"
+          }
+        ],
+        "note": "Base price; E38 PCM with flash +USD 299, CD009 or BMW ZF wiring +USD 45. Built to order."
+      },
+      "includes": {
+        "value": [
+          "Integrated Coil Pack Harnesses - both banks",
+          "Standalone 5 Circuit Bussmann Fuse/Relay Block",
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Integrated Coil Pack Harnesses - both banks now provided for no extra charge' 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided - no connections to OEM fuse boxes needed' 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "E38 PCM with a startup tune",
+          "electronic throttle pedal (Corvette/Camaro/CTS-V or Silverado/Escalade)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'LS3/L99 4th Generation using E38 PCM'; 'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis'; 'Electronic Throttle Pedal:' 'Using Chevrolet Corvette / Camaro / CTS-V Pedal'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "hpt-mpvi4"],
+      "notes": "Supported engines include '2008–2013 Chevrolet Corvette Base & Z51 (LS3 Vortec)' and '2010–2015 Chevrolet Camaro SS w/ Manual Trans (LS3 Vortec)'. Gearbox options include T56, T56 Magnum, Tremec TR6060, '350Z Z33 CD009 (+$45)' and 'BMW ZF Series (+$45)'."
+    },
+    {
+      "id": "psi-har-g3cm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic'; engines 'LS1, LS6, LR4, LM7, L59, LQ4, LQ9, LM4, L33' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "HAR-G3CM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G3CM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 599,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$599.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com returns a security check to curl), so not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["RED/BLUE 411 P01 PCM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'RED/BLUE 411 P01 PCM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "psi-ls1-pcm-programmed"]
+    },
+    {
+      "id": "psi-har-g4wm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "HAR-G4WM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G4WM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 624,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$624.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission wiring Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission wiring Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["E38 ECM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "psi-e38-ecm"]
+    },
+    {
+      "id": "qfs-c5-style-filter-regulator",
+      "vendor": "Quantum Fuel Systems (QFS)",
+      "product": {
+        "value": "LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "title": "High Flow Fuel",
+            "note": "'LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi + Straight/Curved AN or Barbed Fittings QFS'; 'this regulator has a fixed (non-adjustable) fuel pressure of 58psi'; '58PSI Fixed Pressure'; 'Fits All 1997+ Gen III and Gen IV LS Series 4.8, 5.3, 5.7L, 6.0, 6.2, 7.0L motors'; 'Supports 550-600HP'"
+          }
+        ],
+        "note": "An aftermarket copy of the GM C5 Corvette filter/regulator, not the GM part."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "QFS-F201-0",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'MPN: QFS-F201-0'"
+          }
+        ]
+      },
+      "price": {
+        "value": 55.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'$55.98 - $88.98'"
+          }
+        ],
+        "note": "Lowest price of the range shown; the option it belongs to (probably the regulator/filter only or barbed fittings) is not stated in the saved text. AN-fitting options cost up to USD 88.98."
+      },
+      "includes": {
+        "value": ["Choice of Fittings", "mounting bracket", "grounding strap"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'Includes Choice of Fittings + mounting bracket and grounding strap as shown.'"
+          }
+        ]
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Returnless LS rails need about 58-60 psi at a constant pressure. Hot Rod AN: 'The C5 Corvette filter/regulator (fixed 58 psi / 4 bar) makes a clean return-less LS fuel system'. GM's own controller-kit sheet asks for '400 kPa (60 psi) constant pressure' and says 'Vacuum reference the fuel system, it must run constant 400 kPa (60 psi).' The genuine GM part was not tied to a part number in a saved source (GM Parts Giant lists GM 10299146, now replaced by 19545386, as 'Fuel Filter', USD 114.06, MSRP 213.76, but the page does not say it is the Corvette regulator)."
+    },
+    {
+      "id": "acdelco-gf822-filter-regulator",
+      "vendor": "ACDelco (GM)",
+      "product": {
+        "value": "ACDelco GF822 Fuel Filter with integrated fuel pressure regulator (1999-2003 Corvette)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "title": "PartsHawk",
+            "note": "'ACDelco GF822 Fuel Filter for Chevrolet Corvette'; fitment '1999-2002 Chevrolet Corvette | Note: CONTAINS INTEGRATED FUEL PRESSURE REGULATOR' and '2003 Chevrolet Corvette | Note: EXCEPT 2ND DESIGN FUEL SYSTEM(FFS)'"
+          }
+        ],
+        "note": "This is the OE-brand version of the C5 Corvette filter/regulator that the QFS unit copies. The page does not state the regulated pressure; the 58 psi figure comes from the aftermarket sellers (QFS, Hot Rod AN)."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "GF822",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'ACDelco GF822'"
+          }
+        ]
+      },
+      "price": {
+        "value": 95.31,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'Special Price $95.31 Regular Price $105.90'"
+          }
+        ],
+        "note": "Sale (special) price; regular price USD 105.90."
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Aftermarket listings cross-reference it to GM 10299146 and 19239926, but no saved page states that link; GM Parts Giant lists GM 10299146 ('Fuel Filter', replaced by 19545386) at USD 114.06 without naming the Corvette regulator."
+    },
+    {
+      "id": "gm-t56-fbody-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 1998-2002 Camaro/Firebird LS1",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "Magnum-F page: 'a direct swap for 1998-02 F-cars with LS1 engines and internal slave hydraulics' and 'Like all Magnum transmissions, the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)'."
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'This T56 Concentric Slave Cylinder works with your Camaro Tremec T56 6-Speed Transmission from model years 1998-2002, it also works with all Pontiac GTO and Chevrolet Corvette variants.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Donor part, no price (no dated listing cited). Factory output is 27-spline (Tremec). Its shifter sits nearly 3 in further back than the Magnum standard position, which is why Tremec made the Magnum-F with the F-body location (see tremec-magnum-f-tuet16362). The LS bellhousing and concentric slave are separate parts. Input-shaft length of the donor T-56 was not found in a source."
+    },
+    {
+      "id": "gm-t56-gto-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 2004-2006 Pontiac GTO",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F.\""
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Other applications for installing the LS7 Chevrolet Performance Clutch Kit are the 2004-06 Pontiac GTO and 2008-09 G8.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": ["tremec-t56-ls-bellhousing", "collins-t56-slave-kit", "sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. The sources confirm it shares the T-56 LS bellhousing and slave with the F-body box; its shifter position, tailhousing and input-shaft length were not found in a source, so fitment in these chassis is unchecked."
+    },
+    {
+      "id": "tremec-magnum-tuet11009",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Magnum 6-speed for GM (hydraulic release), close ratio 2.66 first / 0.63 sixth",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "'TUET11009 GM Hyd 2.66 1.78 1.30 1.00 0.80 0.63 2.90'; quick specs 'Shifter Positions 3', 'Torque Capacity Up to 700 lb-ft.', 'Max Rated RPM 7800', 'Input Splines 26', 'Output Splines 31', 'Dry Weight 140 lbs / 64 kg'; \"Common 'T-56-style' bolt pattern allows for easy pairing to several late-model engines.\""
+          },
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf#page=6",
+            "accessed": "2026-09-29",
+            "title": "TREMEC catalog p. 6 drawing",
+            "note": "Dimensions read from the catalog drawing: (A) input shaft length from front face of trans 'GM 6.52 in' (Ford 5.70 in / 145 mm), (B) standard shifter location '21.05 in / 534.6 mm', (C) optional shifter location '17.53 in / 445.3 mm', (D) optional forward shifter location '13.25 in / 336.6 mm', (E) height at trans face '13.00 in / 330.2 mm', (F) width '12.25 in / 311.2 mm' (read from the page image, p. 6; the GM metric figure is partly hidden behind a photo)."
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "title": "American Powertrain",
+            "note": "'Tremec Magnum Close Ratio 6-speed for GM TUET11009' and '26-spline input shaft'"
+          },
+          {
+            "url": "https://tremec.com/aftermarket/products/magnum/",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Magnum page",
+            "note": "'Known in its original equipment form as the TR-6060, the Magnum is an aftermarket version of the same transmission'"
+          }
+        ],
+        "note": "Weight conflict: the 2020 catalog says 'Dry Weight 140 lbs / 64 kg'; Tremec's current web page and American Powertrain say 'Reasonably light at 135 lbs. dry'. Neither is used as a value here; if weight is needed, prefer the catalog's figure as the more specific (it gives kg too) and treat it as single-source."
+      },
+      "fills": ["gearbox"],
+      "partNumber": {
+        "value": "TUET11009",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'TUET11009 GM Hyd'"
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: TUET11009'"
+          }
+        ]
+      },
+      "price": {
+        "value": 3545.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'$3,545.00'"
+          }
+        ],
+        "note": "New, American Powertrain regular price (no sale shown). Pro Touring Store lists the same unit at USD 3,545.99 for pick-up ('$3,54599' on the page; freight +160 commercial or +210 residential)."
+      },
+      "requires": {
+        "value": [
+          "a 31-spline slip yoke (versus the factory T-56 27-spline)",
+          "separate 'forward' conversion shifter assembly (only for the forward shifter position)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)' is stated for 'all Magnum transmissions'; \"Requires use of separate 'forward' conversion shifter assembly.  Not included.\""
+          }
+        ],
+        "note": "The catalog double-spaces after the full stop; the checker ignores whitespace runs."
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Bolts to an LS through the separate T-56 LS bellhousing (Tremec 1386-212-005, not included). GM-style hydraulic units copy the 1998-2002 F-body clutch release ('units, clutch release provisions modeled after T-56 in 1998-2002 Camaro/Firebird'). Three shifter positions; the forward one needs an extra shifter assembly. Other GM versions in the catalog: TUET16885 (2.97 first / 0.63 sixth) and TUET11012 (2.97 / 0.50)."
+    },
+    {
+      "id": "tremec-t56-ls-bellhousing",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Aluminum T56 bell housing to LS engines (F-body & GTO pattern)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Aluminum T56 Bell Housing to LS & LT Engines - Tremec' and 'Genuine Tremec T56 to LS bell housing.'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "1386-212-005",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Part number 1386-212-005'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "note": "'1386-212-005'"
+          }
+        ]
+      },
+      "price": {
+        "value": 309.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'$30900' (cents in superscript)"
+          }
+        ],
+        "note": "Pro Touring Store price. Collins Performance Technologies lists the same part number at USD 650.00 ('Regular price' '$650.00'), more than twice as much; the lower price is used and the spread means this price is uncertain."
+      },
+      "requires": {
+        "value": ["Mounting Bolts Not Included"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Note: (Mounting Bolts Not Included)'"
+          }
+        ]
+      },
+      "notes": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F. Does NOT fit TR6060 transmissions.\" Needed for the T-56 / Magnum routes and for the Collins CD009 adapter route, which bolts the CD009 to this bellhousing."
+    },
+    {
+      "id": "collins-t56-slave-kit",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "T56 Slave Cylinder with Clutch Line and Adapter",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter' and '90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 310.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $310.00'"
+          }
+        ],
+        "note": "Regular price."
+      },
+      "includes": {
+        "value": [
+          "T56 Slave Cylinder",
+          "Clutch Line Adapter",
+          "90 Degree Teflon Coated -3AN High Pressure Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter -90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "pairsWith": ["tremec-t56-ls-bellhousing"],
+      "notes": "Concentric slave for 1998-2002 Camaro T56, GTO and Corvette variants. Collins says the line length suits '-Nissan Silvia (S15, JDM only) (with use of V8, or A340 Swap)', the 350Z and the MkIV Supra (A340 swap), among others."
+    },
+    {
+      "id": "sdpc-ls7-clutch-kit",
+      "vendor": "Scoggin Dickey Parts Center (SDPC)",
+      "product": {
+        "value": "SDPC SDLS7CK LS7 Clutch Kit - Pressure Plate, Disc & Flywheel",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'SDPC SDLS7CK - LS7 Clutch Kit - Pressure Plate, Disc & Flywheel'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "SDLS7CK",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: SDLS7CK'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'$899.99'"
+          }
+        ],
+        "note": "Listed price with the stock GM steel flywheel option; no MSRP or sale shown. A RAM aluminium flywheel upgrade is an option."
+      },
+      "includes": {
+        "value": [
+          "Corvette Z06 LS7 Pressure Plate",
+          "LS7 Disc",
+          "new GM Steel Flywheel",
+          "GM flywheel and pressure plate bolts"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'The SDPC LS7 clutch kit includes the Corvette Z06 LS7 Pressure Plate, LS7 Disc and a new GM Steel Flywheel.' 'We throw in a new set of GM flywheel and pressure plate bolts'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["factory replacement slave cylinder"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'In most applications, you will still use your factory replacement slave cylinder.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "gm-t56-fbody-donor",
+        "gm-t56-gto-donor",
+        "gm-tr6060-camaro-ss-donor",
+        "tremec-magnum-tuet11009"
+      ],
+      "notes": "For GM-spline gearboxes (T-56, Magnum, TR-6060). '1998-2002 F-Body, 2004-2006 GTO, 97-04 C5 Corvette, 2005-2013 LS2 and LS3 C6 Corvette, Pontiac G8, and 2010-2015 LS3 Camaro will all use their factory replacement slave cylinder'. Steel flywheel about 28 lb, optional RAM aluminium about 19 lb."
+    },
+    {
+      "id": "chevrolet-performance-19331079-clutch",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Clutch Kit LS3/LS7 Engines, 6-Bolt Crank (dual-disc, with flywheel)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19331079 - Clutch Kit LS3/LS7 Engines, 6-Bolt Crank'; 'High-performance dual-disc clutch and flywheel package for all LS engines with 6-bolt flywheel flange'; 'Rated for 800 lb.-ft. of torque'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "title": "GM Parts Giant",
+            "note": "'GM 19331079 Clutch Kit,Performance Upgrade Ls 6 Bolt T56 Mag'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "19331079",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19331079'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "note": "'Manufacturer Part Number | 19331079'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2683.6,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'$2,752.41' ... '$2,683.60'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,752.41, which GM Parts Giant also shows: '$2297.58 MSRP: $2752.41'). GM Parts Giant sells it for USD 2,297.58."
+      },
+      "includes": {
+        "value": ["flywheel", "pressure plate", "clutch disc", "additional hardware"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'Kit includes flywheel, pressure plate, clutch disc and additional hardware'"
+          }
+        ]
+      },
+      "pairsWith": ["tremec-magnum-tuet11009", "gm-t56-fbody-donor"],
+      "notes": "GM's own description ('T56 MAG') ties it to the T-56 Magnum; out of stock at Scoggin Dickey on 2026-09-29."
+    },
+    {
+      "id": "gm-tr6060-camaro-ss-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec TR-6060 6-speed from a 2010-2015 Camaro SS (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Product.Sheet_TR-6060.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC TR-6060 product sheet F-TR6060-0519",
+            "note": "Spec sheet: 'Clutch housing: Integrated'; Camaro SS ratios 2.66 / 1.78 / 1.30 / 1.00 / 0.74 / 0.50, reverse 2.90, input torque '617 Nm 455 lb-ft'; 'Transmission weight: Wet: 66.3 kg (146.2 lb)'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'This kit is a direct replacement for 1997 thru 2004 C5 Corvettes, 1998 thru 2002 LS equipped Firebirds and Camaros, and 2010 thru 2015 LS engine equipped Camaros.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "engines": ["ls3"],
+      "pairsWith": ["sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. Its clutch housing is cast in, so the separate T-56 LS bellhousing does not fit (Pro Touring Store: 'Does NOT fit TR6060 transmissions'). Tremec rates the Camaro SS version at 455 lb-ft input torque and the CTS-V version at 560 lb-ft. Tremec's aftermarket range (T-5, TKX, TR 4050, Magnum-F, Magnum, Magnum-XL on its site menu) has no TR-6060; the Magnum is its aftermarket version, so a new TR-6060 means a Magnum. engines lists only the LS3 because that is the donor car's engine; an LS1 fit was not checked in a source."
+    },
+    {
+      "id": "holley-302-1",
+      "vendor": "Holley",
+      "product": {
+        "value": "Holley 302-1 LS Swap Oil Pan (cast aluminium)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-302-1-gm-ls-swap-oil-pan-h302-1/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley 302-1 - Gm Ls Swap Oil Pan'; 'Fits GM rear wheel drive applications that were originally equipped with a Small Block or Big Block Chevy engine and traditional rear sump oil pan'; 'Maximum crankshaft stroke = 4.25'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-302-1-ls-swap-oil-pan-aluminum",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Holley 302-1 LS Swap Oil Pan - Aluminum'; 'Sump Oil Capacity - 5.5 Quarts'"
+          },
+          {
+            "url": "https://documents.holley.com/89540c5ccf259360822e2d78bc6f9f632df2423d.pdf",
+            "accessed": "2026-09-29",
+            "title": "Holley instruction sheet 199R10566",
+            "note": "'The Holley® P/N 302-1 LS Retro-fit oil pan is designed for LS engine retrofit installation in a wide range of popular GM muscle/classic car and truck chassis.'"
+          },
+          {
+            "url": "https://www.ss396.com/cars/holley-ls-oil-pans-how-to-choose/",
+            "accessed": "2026-09-29",
+            "title": "Ground Up Motors (SS396.com)",
+            "note": "'the Holley 302-1 oil pan measures just 5.71 inches, providing additional ground clearance' and 'The original 302-1 design mirrors the popular fourth-gen F-Body pan'"
+          },
+          {
+            "url": "https://poormanmotorsports.com/tsp-81074-retro-fit-lsx-aluminum-rear-sump-oil-pan-aluminum-natural1",
+            "accessed": "2026-09-29",
+            "title": "Poor Man Motorsports",
+            "note": "'Holley 302-1 LS Swap Oil Pan, Aluminum, Rear Sump, Natural'; specs 'Sump Location: Rear', 'Oil Pan Capacity: 5.50 quarts', 'Oil Pan Depth (in.): 5.690 in.'"
+          }
+        ],
+        "note": "Depth conflict: Poor Man Motorsports gives 5.690 in, Ground Up Motors 5.71 in (rail to lowest point). They differ by 0.02 in; neither is the maker. The notes use 5.69-5.71 in."
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "302-1",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-302-1-gm-ls-swap-oil-pan-h302-1/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H302-1'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-302-1-ls-swap-oil-pan-aluminum",
+            "accessed": "2026-09-29",
+            "note": "'Part number: 302-1'"
+          }
+        ]
+      },
+      "price": {
+        "value": 499.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-302-1-gm-ls-swap-oil-pan-h302-1/",
+            "accessed": "2026-09-29",
+            "note": "'$499.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-302-1-ls-swap-oil-pan-aluminum",
+            "accessed": "2026-09-29",
+            "note": "'$49995'"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown."
+      },
+      "includes": {
+        "value": [
+          "sump baffle",
+          "pick-up tube",
+          "sump plug",
+          "oil filter stud",
+          "oil passage cover"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-302-1-gm-ls-swap-oil-pan-h302-1/",
+            "accessed": "2026-09-29",
+            "note": "'Complete kit including sump baffle, pick-up tube, sump plug, oil filter stud & oil passage cover.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-302-1-ls-swap-oil-pan-aluminum",
+            "accessed": "2026-09-29",
+            "note": "'Complete kit including sump baffle, pick-up tube, sump plug, oil filter stud & oil passage cover.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Holley 302-15 Dipstick and Tube Kit, or LS3 dipstick GM 12669528 and tube GM 12625031",
+          "Oil pan gasket (Mr. Gasket 6665G or GM 12612350)",
+          "RTV sealer",
+          "oil filter (AC Delco PF48 or equivalent)",
+          "GM full-length windage tray"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://documents.holley.com/89540c5ccf259360822e2d78bc6f9f632df2423d.pdf",
+            "accessed": "2026-09-29",
+            "note": "'Requires use of Holley 302-15 Dipstick and Tube Kit or LS3 dipstick (GM P/N 12669528) and tube (GM P/N 12625031).' 'Oil Pan Gasket (Mr. Gasket P/N 6665G, GM® 12612350, or equivalent)' 'High Quality RTV sealer' '302-1 is designed to use a GM full length windage tray.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-302-1-ls-swap-oil-pan-aluminum",
+            "accessed": "2026-09-29",
+            "note": "'Requires use of Holley 302-15 Dipstick and Tube Kit or LS3 dipstick (GM P/N 12669528) and tube (GM P/N 12625031)'"
+          }
+        ]
+      },
+      "notes": "Max stroke 4.25 in; sump 5.5 qt, 6 qt with filter. Holley warns 'Engine location may need to be adjusted (up / down or fore / aft) for cross member or steering linkage clearance'. Rear sump, about 5.69-5.71 in deep (Poor Man Motorsports: rear sump, 5.690 in; Ground Up Motors: 5.71 in rail to lowest point), versus 7.75 in for the GM 19212593 pan. The maker's own spec page (holley.com) and Summit block both curl and WebFetch, so these come from retailers."
+    },
+    {
+      "id": "pmc-ls-e46-m3-getrag420-kit",
+      "vendor": "PMC Motorsport",
+      "product": {
+        "value": "Adapter Kit GM Chevrolet V8 LS 6-bolts - BMW E46 S54 M3 GETRAG 420 6-speed - 184mm / 7.25 in (S)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5414-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-184mm-7-25-S.html",
+            "accessed": "2026-09-29",
+            "title": "PMC Motorsport shop",
+            "note": "'Adapter Kit GM Chevrolet V8 LS 6-bolts - BMW E46 S54 M3 GETRAG 420 6-speed - 184mm / 7.25'; 'Symbol A-LS-E46-184S'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter", "clutch"],
+      "engines": ["ls1", "ls3"],
+      "partNumber": {
+        "value": "A-LS-E46-184S",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5414-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-184mm-7-25-S.html",
+            "accessed": "2026-09-29",
+            "note": "'Symbol A-LS-E46-184S'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1098.0,
+        "unit": "EUR",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5414-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-184mm-7-25-S.html",
+            "accessed": "2026-09-29",
+            "note": "'Regular price: (Discount %)' '1 098,00 EUR' 'incl. VAT'"
+          }
+        ],
+        "note": "Regular price incl. VAT on the maker's shop; listed as 'Product sold out' on 2026-09-29. US orders go through drifthq.com."
+      },
+      "includes": {
+        "value": [
+          "Gearbox adapter GM Chevrolet LS - BMW ZF5 M50-M54 S50-S54 M47 M57 N52 [Manual]",
+          "Flywheel GM Chevrolet LS - BMW ... Getrag 420G - 184mm 7.25 in (S)",
+          "mounting bolts",
+          "custom spherical (pivot) pin"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5414-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-184mm-7-25-S.html",
+            "accessed": "2026-09-29",
+            "note": "'Gearbox adapter GM Chevrolet LS - BMW ZF5 M50-M54 S50-S54 M47 M57 N52 [Manual] (1 pcs.)' and 'Flywheel GM Chevrolet LS - BMW M50 S50 M52 S52 M54 S54 ZF5 5-speed Getrag 420G - 184mm 7.25'; 'the kit includes all necessary mounting bolts'; 'Replace the original spherical pin (pivot pin) with the custom one from the kit.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "flywheel / ring gear from the automatic version of the GM Chevrolet LS (not inc.)",
+          "OE Chevrolet LS starter",
+          "bearing and clutch release fork from the existing gearbox"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://pmcmotorsport-shop.com/product-eng-5414-Adapter-Kit-GM-Chevrolet-V8-LS-6-bolts-BMW-E46-S54-M3-GETRAG-420-6-speed-184mm-7-25-S.html",
+            "accessed": "2026-09-29",
+            "note": "'You should use the flywheel / ring gear from the automatic version of the GM Chevrolet LS (not inc.)' 'The starter remains an OE Chevrolet LS.' 'The bearing and clutch release fork remain from the existing gearbox.'"
+          }
+        ],
+        "note": "The first requirement is quoted as printed; it probably means the ring gear or flexplate from an automatic LS, but the page does not say more."
+      },
+      "notes": "E46-specific (E46 M3 Getrag 420G gearbox): move to the E46 file. A 184 mm (7.25 in) flywheel implies a small-diameter racing clutch; the clutch itself is not listed as included, so 'clutch' here covers the flywheel only."
+    }
+  ],
+  "modifications": [
+    {
+      "value": "Sikky kit: the ABS module heat shield has to be removed.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+          "accessed": "2026-09-29",
+          "note": "'Removal of the ABS module heat shield is required for this swap.'"
+        },
+        {
+          "url": "https://www.sikky.com/product/sikky-stage-1-bmw-e46-ls-swap-package/",
+          "accessed": "2026-09-29",
+          "note": "'Removal of the ABS module heat shield is required for this swap.'"
+        }
+      ]
+    },
+    {
+      "value": "Sikky headers: the rear lower-control-arm mounts are replaced with aftermarket eye-ball arms and the steering shaft with a low-profile shaft.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/sikky-bmw-e46-lsx-swap-headers-1-7-8-304-stainless-steel/",
+          "accessed": "2026-09-29",
+          "note": "'For proper header fitment you will need to use aftermarket eye ball arms (rear attachment point for lower control arm) as well as Sikky’s low profile steering shaft.'"
+        }
+      ]
+    },
+    {
+      "value": "Sikky kit: no modification to the factory front subframe.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/bmw-e46-ls-swap-kit/",
+          "accessed": "2026-09-29",
+          "note": "'Requires no modifications to the factory front sub frame.'"
+        }
+      ]
+    },
+    {
+      "value": "TDR mounts: no modification to the crossmember (with a rear-sump pan).",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://tdrperformance.com/products/tdr-e46-lsx-engine-swap-mounts",
+          "accessed": "2026-09-29",
+          "note": "'Must Use a rear sump pan, Requires no modifications to the crossmember'"
+        }
+      ]
+    },
+    {
+      "value": "Vorshlag headers: two tubes need the driver-side inner fender panel trimmed near the ABS hydraulic pump.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://vorshlag-store.com/products/vorshlag-e46-ls1-full-length-header-kit-304ss",
+          "accessed": "2026-09-29",
+          "note": "'There is some trimming to clear two tubes necessary on the driver's side inner fender panel, near the ABS hydraulic pump.'"
+        }
+      ]
+    },
+    {
+      "value": "LS1 with the Wiring Specialties harness: the drive-by-wire pedal is converted to a cable throttle.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.wiringspecialties.com/bmw-e46-ls1-wiring-harness",
+          "accessed": "2026-09-29",
+          "note": "'Conversion from stock electronic Drive-By-Wire throttle pedal to cable throttle is REQUIRED'"
+        }
+      ]
+    },
+    {
+      "value": "Keeping the BMW ZF or Getrag gearbox in its factory place moves the engine 1.25 in forward; an adjustable crossmember can move engine and gearbox 2 in back.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://pennsyltuckyperformance.com/shop/e46-transmission-crossmember",
+          "accessed": "2026-09-29",
+          "note": "'When swapping a V8 in while maintaining the factory Getrag or ZF transmission it pushes the motor forward 1.25 inches shifting the weight over the front axle.' ... 'be used to move the transmission backwards towards the rear axle 2 inches.'"
+        }
+      ]
+    }
+  ],
+  "notes": "M3 vs 330i: the sources show three differences: M3-specific lower control-arm bushings for header clearance (Sikky CA-Bushing3), M3 and SMG options in the Wiring Specialties harnesses and CAN modules, and the gearbox route (the M3 Getrag 420G takes the PMC Getrag 420 kit or Rank One kit, which use an M3 clutch; the 330i ZF boxes take the PMC plate with a flywheel to suit). No source says whether the engine mounts or subframe differ. Gearbox routes: T56 or T56 Magnum (Sikky CM44, Vorshlag, Pennsyltucky), TR6060 (Sikky CM45, Pennsyltucky), Nissan CD009 (Sikky CM44 with TM03, Pennsyltucky), or the car's own ZF/Getrag with an adapter and the Pennsyltucky adjustable crossmember. Most mounts and headers are LHD-only. CAN: Wiring Specialties harnesses and RevCAN2 modules drive the tach, gauges and lamps; the tach needs a Dakota Digital SGi-8 with a V8."
+}

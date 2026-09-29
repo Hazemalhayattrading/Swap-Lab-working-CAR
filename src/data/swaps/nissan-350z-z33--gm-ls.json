@@ -1,0 +1,3414 @@
+{
+  "$comment": "Nissan 350Z (Z33) with a GM LS1 or LS3: the hardware real builds use, researched 2026-09-29 from the vendors' own product pages and install guides (Sikky Manufacturing, Hinson Motorsports, TDR Performance, Wiring Specialties); every page cited is saved and quote-checked. Primary sources are the listings themselves; prices are as listed on 2026-09-29 in USD. Covered: engine and transmission mounts, pans, driveshafts, headers, cooling, power steering, fuel lines, clutch hydraulics, the CD00x adapter route that keeps the Nissan 6-speed, car-specific harnesses, standalone ECU packages and CAN-bus cluster modules. Generic LS hardware (GM PCMs, T56/TR6060 gearboxes, clutches, universal pans and other LS-to-CD009 adapters) is in the common LS file. Not found: which factory GM pan clears the Z33 (both kit makers use their own rear-sump pans), an LS route for the RE5R05A automatic, and an RHD harness. CX Racing's site blocks automated reading, so its kits are not included. Merged 2026-09-29 with the hardware common to every LS swap (GM PCM, Chevrolet Performance and Holley ECU routes, standalone harnesses, GM and Tremec gearboxes, clutches, fuel regulators), which a separate research pass sourced; those parts repeat in each LS swap file until Phase 3 moves them into parts/.",
+  "id": "nissan-350z-z33--gm-ls",
+  "car": "nissan-350z-z33",
+  "engines": ["ls1", "ls3"],
+  "parts": [
+    {
+      "id": "sikky-350z-engine-mounts",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Spec Your Own Nissan 350Z LS Swap Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Spec Your Own Nissan 350Z LS Swap Kit",
+            "note": "'Sikky Spec Your Own Nissan 350Z LS Swap Kit' (product title). 'Can be used on LS1, LS2, LS3, LS6, L99, LQ4, LQ9, LSA, LS7, LS9, LSX and any other LS based engine using this engine mount and oil pan bolt pattern.'"
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "partNumber": {
+        "value": "MK003L",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: MK003L'"
+          }
+        ]
+      },
+      "price": {
+        "value": 593.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'$593.98' for the base kit (engine mounts). Everything else is a priced option on the same page, e.g. the transmission bracket 'CD009 (CM21)(TM03) (+$213.98)' and the oil pan 'Yes (OP008Z) (+$784.57)'."
+          }
+        ],
+        "note": "Base price covers the engine mounts only; the transmission bracket, pan, driveshaft, headers and lines are add-on options."
+      },
+      "includes": {
+        "value": [
+          "CNC-machined 6061-T6 aluminium engine mounts with urethane bushings (aluminium bushings optional)",
+          "High grade hardware kit"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'CAD/CAM Designed CNC Machined Solid 6061 T-6 Aluminum Mounts and Custom Urethane Bushings with True Isolation' ... 'High Grade Hardware Kit'. Bushing options: 'Urethane (UMA1)' ... 'Aluminum (AL-MA)'."
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Designed to fit perfectly in the Nissan 350z when using all Sikky made components",
+          "Transmission bracket chosen separately: T56, T56 Magnum, TR6060 or CD009"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Designed to fit perfectly in the Nissan 350z when using all Sikky made components'. Options: 'T56 (CM21)(TM01) (+$213.98)' ... 'TR6060 (CM22)(TM02) (+$213.98)' ... 'CD009 (CM21)(TM03) (+$213.98)'."
+          }
+        ]
+      },
+      "notes": "Sikky says the new design has 'a rear sump pan and a further back engine position', leaving room for a turbo and the radiator. The same mounts serve the LS1 and LS3. Sikky also sells these parts bundled as Stage 1 (mounts, trans mount, pan, driveshaft), Stage 2 (adds headers) and Stage 3 packages (adds the Wiring Specialties harness; separate LS1 and LS3 versions); those pages are cited under modifications. The mounts page says the base kit works on left- and right-hand-drive cars; the headers are LHD only."
+    },
+    {
+      "id": "hinson-350z-mount-kit",
+      "vendor": "Hinson Motorsports",
+      "product": {
+        "value": "Nissan 350Z LS V8 Swap Engine & Transmission Mount Kit LS1 LS2 LS3 LS7",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "title": "Nissan 350Z LS V8 Swap Engine & Transmission Mount Kit LS1 LS2 LS3 LS7",
+            "note": "'Nissan 350Z LS V8 Swap Engine & Transmission Mount Kit LS1 LS2 LS3 LS7' (product title)."
+          },
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-complete-nissan-350z-ls-swap-conversion-package",
+            "accessed": "2026-09-29",
+            "title": "Complete Nissan 350Z LS Swap Conversion Package",
+            "note": "Hinson's larger package: 'Complete Nissan 350Z LS Swap Conversion Package', 'SKU:HM-350z-LSXcomplete', '$5,359.99 USD'. It lists 'Mounting Equipment' ... 'Cooling System' ... 'Clutch Hydraulics' ... 'Power Steering Kit with GM Line' ... 'Modify your GM ECU' ... 'Modify your Nissan ECU' ... 'Nissan CAN Gateway' ... '1 7/8' long tube headers."
+          }
+        ]
+      },
+      "fills": ["engine-mounts", "transmission-mount", "oil-pan", "driveshaft"],
+      "partNumber": {
+        "value": "350ZME",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "note": "'SKU:350ZME'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1915.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "note": "'$1,915.00 USD'; the page also shows 'Out of stock' and 'Average lead time for this product is 4 weeks.'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Engine Mounts", "Transmission Mount", "Custom Oil Pan", "Driveshaft"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "note": "'Includes: Engine Mounts Transmission Mount Custom Oil Pan Driveshaft'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Our engine brackets bolt to the stock Nissan engine rubber mounts",
+          "The firewall will require a small modification.",
+          "You can use the stock Pontiac GTO shifter."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "note": "'Our engine brackets bolt to the stock Nissan engine rubber mounts' ... 'The firewall will require a small modification.' ... 'You can use the stock Pontiac GTO shifter.'"
+          }
+        ]
+      },
+      "notes": "Rear-sump custom pan with the oil filter pad on the pan (no remote filter). Hinson says its engine position allows the stock or an aftermarket equivalent radiator and the stock Pontiac GTO shifter. Optional: Hinson urethane mounts at OEM height (Corvette C5/C6/GTO). The page does not name the gearbox; the GTO shifter suggests a GTO-type T56. The complete package cited under product adds cooling, clutch hydraulics, power steering, headers and electronics, including a Nissan CAN gateway and a modified Nissan ECU for the cluster."
+    },
+    {
+      "id": "tdr-350z-engine-mounts",
+      "vendor": "TDR Performance",
+      "product": {
+        "value": "2003-2009 Nissan 350Z / Infiniti G35 LSX Engine Mounts",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "title": "2003-2009 Nissan 350Z / Infiniti G35 LSX Engine Mounts",
+            "note": "'2003-2009 Nissan 350Z / Infiniti G35 LSX Engine Mounts' (product title); 'TDR Performance LSX Engine into 350Z or G35 engine mount kit.'"
+          }
+        ]
+      },
+      "fills": ["engine-mounts"],
+      "price": {
+        "value": 325.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Default Title - $325.00 USD' (struck-through '$350.00')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Tig-welded, CNC laser-cut 1/4 in steel mounts, powder coated",
+          "Billet 6061 aluminium pedestal",
+          "Energy Suspension polyurethane inserts",
+          "All required hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Tig Welded' 'Cad Designed CNC Laser Cut' ... 'Powder Coated Black' 'Pedestal is CNC Machined from Billet 6061 aluminum' 'Energy Suspension Polyurethane Inserts' 'Includes all required hardware pictured for installation'"
+          }
+        ]
+      },
+      "pairsWith": ["tdr-350z-trans-mount"],
+      "notes": "The page gives no oil-pan, header or gearbox guidance for the engine mounts; the matching TDR transmission mount is for the T56, TR6060 and T56 Magnum."
+    },
+    {
+      "id": "sikky-350z-trans-crossmember",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky 350Z T56, CD009 Transmission Crossmember",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-t56-cd00x-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky 350Z T56, CD009 Transmission Crossmember",
+            "note": "'Sikky 350Z T56, CD009 Transmission Crossmember' (product title); 'Designed for use with the T56 6-speed and CD00x transmissions.'"
+          },
+          {
+            "url": "https://www.sikky.com/product/350z-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "title": "Sikky 350Z TR6060 Transmission Crossmember",
+            "note": "TR6060 version: 'Sikky 350Z TR6060 Transmission Crossmember'; 'Designed for use with the TR6060'."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "partNumber": {
+        "value": "CM21 with bracket TM01 (T56, T56 Magnum) or TM03 (CD009); CM22 with bracket TM02 (TR6060)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-t56-cd00x-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: CM21'; bracket options 'T56,T56 Mag (TM01) (+$67.99)' and 'CD009 (TM03) (+$67.99)'."
+          },
+          {
+            "url": "https://www.sikky.com/product/350z-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: CM22'; bracket option 'Yes TR6060 (TM02) (+$67.99)'."
+          },
+          {
+            "url": "https://www.sikky.com/product/sikky-cd009-transmission-mount-bracket/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky CD009 Transmission Mount Bracket' 'SKU: TM03' 'Designed for use with the CD009 Transmission and Sikky Transmission Cross member'"
+          }
+        ]
+      },
+      "price": {
+        "value": 145.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-t56-cd00x-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'$145.99' for the crossmember; the bracket is extra ('T56,T56 Mag (TM01) (+$67.99)')."
+          },
+          {
+            "url": "https://www.sikky.com/product/350z-tr6060-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'$145.99' for the TR6060 crossmember plus 'Yes TR6060 (TM02) (+$67.99)'."
+          }
+        ],
+        "note": "Crossmember only; add 67.99 USD for the gearbox-specific bracket (TM01, TM02 or TM03)."
+      },
+      "includes": {
+        "value": [
+          "Laser-cut, welded steel crossmember",
+          "High performance urethane bushing included with mount bolt"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-t56-cd00x-transmission-crossmember/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky transmission mounts are CAD/CAM designed and CNC Laser Cut from steel and welded in house. High performance urethane bushing included with mount bolt.'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-350z-engine-mounts"],
+      "notes": "Which gearbox it assumes: CM21 suits the T56, T56 Magnum and the Nissan CD00x (with the CD00X adapter kit); CM22 suits the TR6060. The Spec Your Own kit page's own trans-mount text still reads 'Designed for use with the T56 or T56 Magnum', while its Stage pages add the TR6060 and CD001-CD009 with the adapter; the standalone crossmember pages are the more specific and are used here."
+    },
+    {
+      "id": "tdr-350z-trans-mount",
+      "vendor": "TDR Performance",
+      "product": {
+        "value": "2003-2009 Nissan 350Z / Infiniti G35 LSX T56/ TR6060 /T56 Magnum Transmission Mount",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/copy-of-2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "title": "2003-2009 Nissan 350Z / Infiniti G35 LSX T56/ TR6060 /T56 Magnum Transmission Mount",
+            "note": "'2003-2009 Nissan 350Z / Infiniti G35 LSX T56/ TR6060 /T56 Magnum Transmission Mount' (product title)."
+          }
+        ]
+      },
+      "fills": ["transmission-mount"],
+      "price": {
+        "value": 199.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/copy-of-2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Default Title - $199.99 USD' (struck-through '$230.00')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Laser-cut and bent 1/4 in steel mount, powder coated",
+          "Energy Suspension polyurethane transmission bushing",
+          "All required hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tdrperformance.com/products/copy-of-2003-2009-nissan-350z-infiniti-g35-lsx-engine-mounts",
+            "accessed": "2026-09-29",
+            "note": "'Cad Designed CNC Laser Cut / Bent' ... 'Powder Coated Black' 'Energy Suspension Polyurethane Transmission Bushing' 'Includes all required hardware pictured for installation'"
+          }
+        ]
+      },
+      "pairsWith": ["tdr-350z-engine-mounts"],
+      "notes": "For the T56, TR6060 and T56 Magnum only; no CD00x version is listed."
+    },
+    {
+      "id": "sikky-350z-oil-pan",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan 350Z LS Swap Rear Sump Oil Pan",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Nissan 350Z LS Swap Rear Sump Oil Pan",
+            "note": "'Sikky Nissan 350Z LS Swap Rear Sump Oil Pan' (product title). 'Can be used on LS1, LS2, LS3, LS6, L99, LQ4, LQ9, LSA, LS7, LS9, LSX and any other LS based engine using this mount and pan bolt pattern.'"
+          }
+        ]
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "OP008Z-2 (listed as OP008Z in the kit configurator)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: OP008Z-2'"
+          },
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "The Spec Your Own kit lists the same pan as 'Yes (OP008Z) (+$784.57)'."
+          }
+        ]
+      },
+      "price": {
+        "value": 784.57,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'$784.57'. Options: 'Long Line Kit (RK002) (+$223.99)', 'Short Line Kit (RK001) (+$195.99)', gasket 'Yes (G01) (+$55.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Oil Pan",
+          "Pan mounted side port remote oil filter adapter",
+          "Magnetic drain plug",
+          "Hardware Kit (Pan install utilizes some factory hardware not included)",
+          "Custom Pickup Tube"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Oil Pan Kit Includes: Oil Pan Pan mounted side port remote oil filter adapter Magnetic drain plug Hardware Kit (Pan install utilizes some factory hardware not included) Custom Pickup Tube'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "To ensure proper fitment use with Sikky Mount kit",
+          "Pan install utilizes some factory hardware not included",
+          "OEM oil pan gasket and a remote oil filter relocation kit are separate options"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+            "accessed": "2026-09-29",
+            "note": "'To ensure proper fitment use with Sikky Mount kit' ... 'Pan install utilizes some factory hardware not included' ... 'Add OEM Oil Pan Gasket *Required' ... 'Add Oil Filter Relocation Kit *Required'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-350z-engine-mounts"],
+      "notes": "Rear sump, 'Designed to fit perfectly around the front sub frame of the Nissan 350z'. Capacity conflict: this page says 'Approximately 5 quart capacity', while the kit pages describe the same pan as a 'High capacity 6 quart sump'; the standalone pan page is preferred. Which factory GM pan clears the 350Z: no source found; both 350Z kit makers found (Sikky, Hinson) use their own rear-sump pan."
+    },
+    {
+      "id": "hinson-350z-oil-pan",
+      "vendor": "Hinson Motorsports",
+      "product": {
+        "value": "Nissan 350Z LSx V8 Swap Oil Pan LS1 LS2 LS3 LS6 LS7",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-lsx-v8-swap-oil-pan-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Nissan 350Z LSx V8 Swap Oil Pan LS1 LS2 LS3 LS6 LS7",
+            "note": "'Nissan 350Z LSx V8 Swap Oil Pan LS1 LS2 LS3 LS6 LS7' (product title); 'This rear sump oil pan by HINSON is ready to perform.'"
+          }
+        ]
+      },
+      "fills": ["oil-pan"],
+      "partNumber": {
+        "value": "350ZOilPan",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-lsx-v8-swap-oil-pan-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'SKU:350ZOilPan'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1185.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-lsx-v8-swap-oil-pan-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'$1,185.00 USD' (page shows 'Out of stock')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "New sheet-metal aluminium rear-sump pan with an oil filter pad",
+          "Custom pickup tube and windage tray"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-lsx-v8-swap-oil-pan-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'New Sheet Metal Aluminum Oil Pan' ... 'Oil Filter provision on the pan. No need for a remote oil filter.' 'Custom pickup tube & windage tray included.'"
+          }
+        ]
+      },
+      "pairsWith": ["hinson-350z-mount-kit"],
+      "notes": "'Custom fabricated to clear the Nissan crossmember'; 'Note: This is not a modified GM pan.' It is also part of the Hinson mount kit."
+    },
+    {
+      "id": "sikky-350z-driveshaft",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan 350Z LSx Swap Driveshaft",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Nissan 350Z LSx Swap Driveshaft",
+            "note": "'Sikky Nissan 350Z LSx Swap Driveshaft' (product title); 'Includes one piece driveshaft with high strength U-joints. Designed for 4 bolt differential flanges.'"
+          }
+        ]
+      },
+      "fills": ["driveshaft"],
+      "partNumber": {
+        "value": "SKNISH19-S / -A (T56), SKNISH20-S / -A (CD009), SKNISH18-S / -A (TR6060); SKNISH27-A (T56 Magnum, kit configurators only)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "note": "'T56-A (SKNISH19-A) (+$280.00)' 'T56-S (SKNISH19-S)' 'CD009-A (SKNISH20-A) (+$270.00)' 'CD009-S (SKNISH20-S) (+$40.00)' 'TR6060-A (SKNISH18-A) (+$855.00)' 'TR6060-S (SKNISH18-S) (+$690.00)'"
+          },
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'T56 Magnum F-A (SKNISH27-A) (+$949.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 589.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "note": "'$589.99' for the T56 steel shaft; other gearboxes and aluminium are surcharges, e.g. 'CD009-S (SKNISH20-S) (+$40.00)', 'TR6060-A (SKNISH18-A) (+$855.00)'."
+          }
+        ],
+        "note": "T56 steel shaft; CD009 steel 629.99, TR6060 steel 1,279.99 (base plus the listed surcharge)."
+      },
+      "includes": {
+        "value": ["One piece driveshaft with high strength U-joints"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-lsx-swap-driveshaft/",
+            "accessed": "2026-09-29",
+            "note": "'Includes one piece driveshaft with high strength U-joints.'"
+          }
+        ]
+      },
+      "notes": "Gearbox-specific: one shaft per gearbox (T56, CD009, TR6060; T56 Magnum in the kits). Steel -S or aluminium -A. The page text still says 'New transmission support is coming soon for the CD009' although it lists CD009 shafts; the kit pages describe the steel shaft with '1310 U-joints'."
+    },
+    {
+      "id": "hinson-350z-driveshaft",
+      "vendor": "Hinson Motorsports",
+      "product": {
+        "value": "Nissan 350Z LS V8 Swap Steel Driveshaft LS1 LS2 LS3 LS6 LS7",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/nissan-350z-ls-v8-swap-steel-driveshaft-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "title": "Nissan 350Z LS V8 Swap Steel Driveshaft LS1 LS2 LS3 LS6 LS7",
+            "note": "'Nissan 350Z LS V8 Swap Steel Driveshaft LS1 LS2 LS3 LS6 LS7' (product title)."
+          }
+        ]
+      },
+      "fills": ["driveshaft"],
+      "partNumber": {
+        "value": "350ZStDS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/nissan-350z-ls-v8-swap-steel-driveshaft-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'SKU:350ZStDS'"
+          }
+        ]
+      },
+      "price": {
+        "value": 650.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/nissan-350z-ls-v8-swap-steel-driveshaft-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'$650.00 USD' (page shows 'Out of stock'; 'Average lead time for this product is 5 business days.')"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["One-piece steel driveshaft, balanced, ready to install"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/nissan-350z-ls-v8-swap-steel-driveshaft-ls1-ls2-ls3-ls6-ls7",
+            "accessed": "2026-09-29",
+            "note": "'One Piece construction' 'Complete, balanced, and ready to install!'"
+          }
+        ]
+      },
+      "pairsWith": ["hinson-350z-mount-kit"],
+      "notes": "The page does not name the gearbox; it is sold with the Hinson mount kit (whose page mentions the stock Pontiac GTO shifter)."
+    },
+    {
+      "id": "sikky-350z-headers",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky Nissan 350Z LS Swap Headers",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-ls-swap-headers/",
+            "accessed": "2026-09-29",
+            "title": "Sikky Nissan 350Z LS Swap Headers",
+            "note": "'Sikky Nissan 350Z LS Swap Headers' (product title); 'Sikky Pro Series headers allow perfect drop-in fitment for Left hand drive Nissan 350Z with a Sikky LSx (LS1 / LS2 / LS3 / LS6 / LS7) Swap Kit.'"
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "partNumber": {
+        "value": "HDR022SS",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-ls-swap-headers/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: HDR022SS'"
+          },
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add 1 7/8″ Stainless Steel Headers (HDR022SS) (+$1,455.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1455.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-ls-swap-headers/",
+            "accessed": "2026-09-29",
+            "note": "'$1,455.99'"
+          }
+        ]
+      },
+      "includes": {
+        "value": ["Left and Right Header", "Gaskets and bolts", "v-band flanges and clamps"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-ls-swap-headers/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: Left and Right Header Gaskets and bolts v-band flanges and clamps'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "All Sikky chassis specific swap headers are designed around using the Sikky mount kits and components.",
+          "For maximum spark plug wire clearance use Taylor 79013 plug wires"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/350z-ls-swap-headers/",
+            "accessed": "2026-09-29",
+            "note": "'All Sikky chassis specific swap headers are designed around using the Sikky mount kits and components.' ... 'For maximum spark plug wire clearance use Taylor 79013 plug wires'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-350z-engine-mounts"],
+      "notes": "Left-hand drive only. 1 7/8 in primaries, 3 in collectors, '100% stainless steel construction'; 'Works with most transmission combinations'."
+    },
+    {
+      "id": "hinson-350z-headers",
+      "vendor": "Hinson Motorsports",
+      "product": {
+        "value": "Nissan 350Z LS V8 Engine Swap Headers 1 7/8\" Stainless",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-engine-swap-headers-1-7-8-stainless",
+            "accessed": "2026-09-29",
+            "title": "Nissan 350Z LS V8 Engine Swap Headers 1 7/8 Stainless",
+            "note": "'HINSON Stainless Steel 1 7/8' ... 'Headers for the LSx Swapped Nissan 350Z' (description heading)."
+          }
+        ]
+      },
+      "fills": ["headers"],
+      "partNumber": {
+        "value": "350Z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-engine-swap-headers-1-7-8-stainless",
+            "accessed": "2026-09-29",
+            "note": "'SKU:350Z' (the SKU printed on the page)"
+          }
+        ]
+      },
+      "price": {
+        "value": 1445.71,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-engine-swap-headers-1-7-8-stainless",
+            "accessed": "2026-09-29",
+            "note": "'$1,445.71 USD' (page shows 'Out of stock')."
+          }
+        ]
+      },
+      "includes": {
+        "value": ["1.875 in primaries", "3 in collectors"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-engine-swap-headers-1-7-8-stainless",
+            "accessed": "2026-09-29",
+            "note": "'Primaries: 1.875' ... 'Collectors: 3'"
+          }
+        ]
+      },
+      "pairsWith": ["hinson-350z-mount-kit"],
+      "notes": "Hinson notes 'These are required for the conversion. Not CARB certified.' (i.e. with its mount kit)."
+    },
+    {
+      "id": "hinson-350z-hose-clamp",
+      "vendor": "Hinson Motorsports",
+      "product": {
+        "value": "350Z LS V8 Swap Hose & Clamp Package - Stock Radiator",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-350z-ls-v8-swap-hose-amp-clamp-package-stock-radiator",
+            "accessed": "2026-09-29",
+            "title": "350Z LS V8 Swap Hose & Clamp Package - Stock Radiator",
+            "note": "'350Z LS V8 Swap Hose & Clamp Package - Stock Radiator' (product title)."
+          }
+        ]
+      },
+      "fills": ["cooling"],
+      "partNumber": {
+        "value": "350ZLS1Hose",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-350z-ls-v8-swap-hose-amp-clamp-package-stock-radiator",
+            "accessed": "2026-09-29",
+            "note": "'SKU:350ZLS1Hose'"
+          }
+        ]
+      },
+      "price": {
+        "value": 124.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-350z-ls-v8-swap-hose-amp-clamp-package-stock-radiator",
+            "accessed": "2026-09-29",
+            "note": "'$124.99 USD' (page shows 'Out of stock')."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Upper and lower radiator hoses, clamps, and aluminum tubing for the LSx V8 installation."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-350z-ls-v8-swap-hose-amp-clamp-package-stock-radiator",
+            "accessed": "2026-09-29",
+            "note": "'Upper and lower radiator hoses, clamps, and aluminum tubing for the LSx V8 installation.'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["The factory Nissan radiator (kept)"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+            "accessed": "2026-09-29",
+            "note": "'The HINSON mounts do not require a custom cooling system, and a radiator hose & clamp package is available from us to make your Nissan radiator work with the LSx V8.'"
+          }
+        ]
+      },
+      "pairsWith": ["hinson-350z-mount-kit"]
+    },
+    {
+      "id": "sikky-350z-ps-lines",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky LS1/LS2 350z Power Steering Line (LS3 version PS102A)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky LS1/LS2 350z Power Steering Line' (related-product title, '$145.99'); options 'LS1/LS2 Style Pump (PS102) (+$145.99)' and 'LS3 Style Pump (PS102A) (+$145.99)'."
+          }
+        ]
+      },
+      "fills": ["steering"],
+      "partNumber": {
+        "value": "PS102 (LS1/LS2-style pump); PS102A (LS3-style pump)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'LS1/LS2 Style Pump (PS102) (+$145.99)' 'LS3 Style Pump (PS102A) (+$145.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 145.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'LS1/LS2 Style Pump (PS102) (+$145.99)' 'LS3 Style Pump (PS102A) (+$145.99)'"
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "High-pressure power steering line with swivel fitting",
+          "Low-pressure return line with clamps"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit-stage-3/",
+            "accessed": "2026-09-29",
+            "note": "'Swiveling fitting for optimum fitment' ... 'Includes Low pressure power steering return line w/ clamps'"
+          }
+        ]
+      },
+      "notes": "Engine-specific version: PS102 for an LS1 (LS1/LS2-style pump), PS102A for an LS3; same price."
+    },
+    {
+      "id": "sikky-350z-fuel-lines",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky 350z LSx Fuel Line Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky 350z LSx Fuel Line Kit' (related product, '$190.99'); kit option 'Yes (FFK-350Z) (+$190.99)'."
+          }
+        ]
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "FFK-350Z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Yes (FFK-350Z) (+$190.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 190.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Yes (FFK-350Z) (+$190.99)'"
+          }
+        ]
+      },
+      "notes": "Contents are not listed on the kit page."
+    },
+    {
+      "id": "sikky-350z-clutch-master-kit",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky 350Z T56 Master Cylinder Conversion Kit (TR6060 and CD009 versions)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Sikky 350Z T56 Master Cylinder Conversion Kit' (related product, '$313.99'); options 'Add T56 Kit (MCK101) (+$313.99)', 'Add TR6060 Kit (MCK113) (+$335.99)', 'Add CD009 Kit (MCK117) (+$313.99)'."
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "MCK101 (T56); MCK113 (TR6060); MCK117 (CD009)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add T56 Kit (MCK101) (+$313.99)' 'Add TR6060 Kit (MCK113) (+$335.99)' 'Add CD009 Kit (MCK117) (+$313.99)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 313.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add T56 Kit (MCK101) (+$313.99)'; the TR6060 kit is 'Add TR6060 Kit (MCK113) (+$335.99)'."
+          }
+        ],
+        "note": "T56 and CD009 kits; the TR6060 kit is 335.99 USD."
+      },
+      "notes": "Gearbox-specific clutch hydraulics conversion; contents not listed on the kit page."
+    },
+    {
+      "id": "nissan-cd00x-retained",
+      "vendor": "Nissan (the car's own gearbox, kept)",
+      "product": {
+        "value": "Nissan CD001-CD009 6-speed manual (the 350Z's own gearbox)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "note": "'allows you to use any of the CD00x (CD001-CD009 6 speed) transmissions behind any GM LS engine. This readily available 6 speed transmission can be found in the Nissan 350z, 370z as well as the Infiniti G35, and G37.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "requires": {
+        "value": [
+          "An LS-to-CD00x adapter kit matching the gearbox: DE (2003-2006 cars) or HR",
+          "CD009 transmission bracket, CD009 driveshaft and CD009 clutch master cylinder kit",
+          "A speedometer solution: the 350Z gearbox has no speed sensor for the GM PCM"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Add CD00X DE (TAK002) (+$1,724.97)' 'Add CD00X HR (TAK001) (+$1,724.97)' ... 'CD009 (CM21)(TM03) (+$213.98)' ... 'CD009-S (SKNISH20-S) (+$629.99)' ... 'Add CD009 Kit (MCK117) (+$313.99)'"
+          },
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Please note that some transmissions (350z, BMW ZF and S15 Silvia for example) do not have a speed sensor and will require a non-harness based solution like a GPS speedo.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "sikky-cd00x-adapter",
+        "sikky-350z-trans-crossmember",
+        "sikky-350z-driveshaft",
+        "sikky-350z-clutch-master-kit"
+      ],
+      "notes": "This is the car file's fs6r31a-6mt; the vendors call the family CD00x (CD001-CD009). The DE and HR versions differ at the bellhousing: Sikky's guide puts the DE dowel pins in the lower holes and HR/JK in the upper ones, and its clearancing notes differ (see modifications). Automatic (RE5R05A) cars: no LS adapter for the RE5R05A was found; the kits offer T56, T56 Magnum, TR6060 or CD009, and the Wiring Specialties harnesses have an auto-to-manual option. Wiring Specialties harness options include CD009 with a wired-in Haltech GPS speed signal generator.",
+      "carGearbox": ["fs6r31a-6mt"]
+    },
+    {
+      "id": "sikky-cd00x-adapter",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "LS to CD009 Transmission Adapter Kit",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "title": "LS to CD009 Transmission Adapter Kit",
+            "note": "'LS to CD009 Transmission Adapter Kit' (product title); 'DE and HR compatible.'"
+          },
+          {
+            "url": "https://www.sikky.com/wp-content/uploads/2019/11/CG-006-TAK002-CD00X-DE-Installation-Guide-1.pdf",
+            "accessed": "2026-09-29",
+            "title": "CG-006 CD00X DE to LS Trans Adapter Plate Installation Guide",
+            "note": "'CD00X DE to LS Trans Adapter Plate Installation Guide' 'PN: TAK002' ... 'This kit will work with CD001-CD009 as well as CD00A.'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "TAK-CD (sold in the 350Z kits as TAK002 for DE gearboxes and TAK001 for HR gearboxes)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: TAK-CD'"
+          },
+          {
+            "url": "https://www.sikky.com/product/350z-ls1-basic-mount-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Yes – Add CD00X DE kit (TAK002) (+$1,724.97)' 'Yes – Add CD00X HR kit (TAK001) (+$1,724.97)'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1724.97,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "note": "'$1,724.97'; ARP bolts extra: 'Add (ARP244-2902) (+$39.99)'."
+          }
+        ]
+      },
+      "includes": {
+        "value": [
+          "Balanced, lightweight aluminum Flywheel",
+          "Fully machined Adapter Plate",
+          "Low profile Starter",
+          "Pilot Bearing Adapter allowing use of OEM or aftermarket Nissan pilot bearing",
+          "High grade hardware"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: Balanced, lightweight aluminum Flywheel Fully machined Adapter Plate Low profile Starter Pilot Bearing Adapter allowing use of OEM or aftermarket Nissan pilot bearing High grade hardware'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Will require the use of ARP flywheel bolts (part number 244-2902)",
+          "Relocation shifter may be required depending on the application",
+          "Uses any stock or aftermarket clutch designed for the 350Z"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+            "accessed": "2026-09-29",
+            "note": "'Will require the use of ARP flywheel bolts (part number 244-2902)' ... 'Relocation shifter may be required depending on the application' ... 'Uses any stock or aftermarket clutch designed for the 350Z'"
+          }
+        ]
+      },
+      "pairsWith": ["nissan-cd00x-retained", "sikky-350z-trans-crossmember"],
+      "notes": "Offered inside every Sikky 350Z kit configurator, which is why it is listed here; LS-to-CD009 adapters in general are in the common LS hardware file. The standalone page says DE and HR compatible while the kits sell DE (TAK002) and HR (TAK001) versions; the guide shows one plate with separate dowel-pin positions for the two. No flywheel spacer is needed and the bellhousing is not cut off."
+    },
+    {
+      "id": "sikky-cd009-shifter",
+      "vendor": "Sikky Manufacturing",
+      "product": {
+        "value": "Sikky CD009 Swap Shifter",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/cd009-relocation-shifter/",
+            "accessed": "2026-09-29",
+            "title": "Sikky CD009 Swap Shifter",
+            "note": "'Sikky CD009 Swap Shifter' (product title); 'Compatible with CD001 through CD009 (2003-2009), JK40C (2009-2013), and CD00A (current) 6-speed transmissions found in the Nissan 350Z'"
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "SH-CD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/cd009-relocation-shifter/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: SH-CD'"
+          }
+        ]
+      },
+      "price": {
+        "value": 499.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/cd009-relocation-shifter/",
+            "accessed": "2026-09-29",
+            "note": "'$499.99'; a shift rod or two-bolt adapter (+$39.99) and a clamp or offset (+$59.99) are required options."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["A shift rod or 2 bolt adapter", "A clamp or offset piece"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.sikky.com/product/cd009-relocation-shifter/",
+            "accessed": "2026-09-29",
+            "note": "'Add Shift Rod or Two Bolt Adapter *Required' ... 'Add Clamp or Offset *Required'"
+          }
+        ]
+      },
+      "pairsWith": ["sikky-cd00x-adapter", "nissan-cd00x-retained"],
+      "notes": "Only for the CD00x route, where the adapter moves the gearbox and its shifter; the adapter page says 'Relocation shifter may be required depending on the application'. 'Bolt-on design requires no cutting or welding.'"
+    },
+    {
+      "id": "ws-350z-ls1-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "LS1 / Vortec Wiring Harness for 350Z - CANBUS PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "title": "350Z LS1 Swap Wiring Harness",
+            "note": "'LS1 / Vortec Wiring Harness for 350Z - CANBUS PRO SERIES' (product title)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "partNumber": {
+        "value": "WRS-PROLS1-350Z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-350Z'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1369.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,369.00'; options include 'Send in my PCM for tuning (+$199)' and 'Add New PCM with Tune (+$299)'."
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "Complete engine and transmission harness (no core needed)",
+          "Proprietary CANbus controller for the 350Z cluster: tach, coolant temperature, CEL, speedometer, fuel gauge, illumination",
+          "Control of the factory cooling fans"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'NO CORE HARNESS or additional wiring required' ... 'ECU output functions such as Tach, Engine coolant temp, CEL, Speedometer, fuel gauge and illumination are all supported by the proprietary CANbus controller, included in this kit.' ... 'The Wiring Specialties CANbus Controller retains the factory fan functionality'"
+          },
+          {
+            "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit-stage-3/",
+            "accessed": "2026-09-29",
+            "note": "Sikky's Stage 3 LS1 package repeats Wiring Specialties' text (same origin, not an independent source): 'ECU output functions such as Tach, Engine coolant temp, CEL, Speedometer, fuel gauge and illumination are all supported by the proprietary CANbus controller, included in this kit.'"
+          }
+        ],
+        "note": "The Sikky page copies the Wiring Specialties description, so this is one origin."
+      },
+      "requires": {
+        "value": [
+          "Plug and play features of this harness require the OEM body harness, body control module and fuse boxes to be UNMODIFIED.",
+          "Supports Engines with DRIVE BY CABLE THROTTLE ONLY",
+          "For proper Oil Pressure Gauge function, the OEM oil pressure sending unit needs to be used."
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+            "accessed": "2026-09-29",
+            "note": "'Plug and play features of this harness require the OEM body harness, body control module and fuse boxes to be UNMODIFIED.' ... 'Supports Engines with DRIVE BY CABLE THROTTLE ONLY' ... 'For proper Oil Pressure Gauge function, the OEM oil pressure sending unit needs to be used.'"
+          }
+        ]
+      },
+      "notes": "Built for 'USDM LHD Z33 350z (2003-2006)'; the '2007-2008 350z (+$75)' chassis-year option covers VQ35HR-era cars. 'Traction / Stability control is not functional with this swap.' The same page promises 'ZERO fault lights for traction control or stability control': no warning lamps, but no TCS/VDC function. Gearbox options include 'Z33 CD009 6 Speed (+$45)' and 'CD009 w/ wired in Haltech GPS Speed Signal Generator (+150)'."
+    },
+    {
+      "id": "ws-350z-ls3-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "LS3 Gen IV 58x DBW Wiring Harness for Nissan 350Z - CANBUS PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'LS3 Gen IV 58x DBW Wiring Harness for Nissan 350Z - CANBUS PRO SERIES' (product title)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "partNumber": {
+        "value": "WRS-PROLS3-350Z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS3-350Z'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1495.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,495.00'; PCM option 'Add LS3 / L76 / Vortec E38 PCM w/ Flash (+$299) (Recommended)'."
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "Integrated coil pack harnesses for both banks",
+          "Standalone 5-circuit Bussmann fuse/relay block (ignition, fuel pump, fan 1, fan 2, A/C)",
+          "Wiring for dual PCM-controlled 30 A cooling fans"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Integrated Coil Pack Harnesses - both banks now provided for no extra charge' 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided - no connections to OEM fuse boxes needed' ... 'Proper gauge wiring support for Dual 30 Amp PCM-controlled electric cooling fans'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Factory Speedometer use requires the DD SGi-5 Signal Conditioner Box",
+          "Optional factory gauge sensor adapters require Nissan S13/S14 oil and temperature sensors (1-wire)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Factory Speedometer use requires the DD SGi-5 Signal Conditioner Box' ... 'Will require the use of Nissan S13/S14 Oil and Temp sensors (1-wire).'"
+          }
+        ]
+      },
+      "notes": "Chassis: 'Any USDM 350Z manufactured in 2003-2006 (Including ABS cars)', with a '2007-2008 350z (+$75)' option. 'Factory Tachometer & Alternator Warning light remain functional'. Pedal option 'Using Stock 350Z/G35 Pedal'. Its description does not repeat the LS1 harness's CANbus-controller text; Wiring Specialties sells the RevCAN2 module (ws-350z-revcan2-ls3) for the coolant gauge, CEL, fans and A/C over CAN."
+    },
+    {
+      "id": "ws-350z-rebel-gen3",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Haltech NEXUS Rebel for LS Gen III Engines PNP for Nissan 350z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'Haltech NEXUS Rebel for LS Gen III Engines PNP for Nissan 350z' (product title); 'Haltech Rebel LS Gen III ECU & Harness plus Wiring Specialties PNP Chassis Interface Harness'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "partNumber": {
+        "value": "WRS-HT-220201-350Z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-HT-220201-350Z'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2595.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'USD $2,595.00'"
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "HT-220001 Rebel ECU",
+          "HT-186500 main harness",
+          "HT-186504 cable throttle + IAC sub-harness",
+          "HT-186501 LS EV1 injector sub-harness",
+          "HT-187003 T56 transmission harness",
+          "HT-186508 Gen III knock sensor adaptor",
+          "Bosch LSU 4.9 wideband sensor and air temperature sensor with weld-on fittings",
+          "Wiring Specialties PNP chassis interface harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-for-ls-gen-iii-engines-pnp-for-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'HT-220001 - Rebel ECU' 'HT-186500 - Main Harness' 'HT-186504 - Cable Throttle + IAC sub-harness' 'HT-186501- LS EV1 Injector Sub-Harnes' 'HT-187003 - T56 Transmission Harness' ... 'HT-186508 - Gen III Knock Sensor Adaptor' ... 'Bosch LSU 4.9 Sensor' ... 'Air Temperature Sensor M14 x 1.5'"
+          }
+        ]
+      },
+      "notes": "Standalone ECU route for an LS1 (24x, cable throttle): 'giving you dashboard functionality and other Chassis CANBUS functions'. Gearbox options include '350Z CD009 (+$50)'; '2007-2008 350z (+$75)'."
+    },
+    {
+      "id": "ws-350z-rebel-gen4",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Haltech NEXUS Rebel for LS Gen IV Engines PNP for Nissan 350z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-ecu-for-ls-gen-iv-engines-in-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'Haltech NEXUS Rebel for LS Gen IV Engines PNP for Nissan 350z' (product title); 'Haltech Rebel LS Gen IV ECU & Harness plus Wiring Specialties PNP Chassis Interface Harness'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "partNumber": {
+        "value": "WRS-HT-220204-350z",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-ecu-for-ls-gen-iv-engines-in-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-HT-220204-350z'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2595.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-ecu-for-ls-gen-iv-engines-in-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'USD $2,595.00'"
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "HT-220001 Rebel ECU",
+          "HT-186500 main harness",
+          "HT-186505 6-pin DBW adaptor",
+          "HT-186507 Corvette pedal adaptor",
+          "HT-186502 LS EV6 injector sub-harness",
+          "HT-187003 T56 transmission harness",
+          "HT-186510 Gen IV oil pressure sensor adaptor harness",
+          "HT-186511 Gen IV MAP sensor adaptor harness",
+          "Wiring Specialties PNP chassis interface harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/haltech-nexus-rebel-ecu-for-ls-gen-iv-engines-in-nissan-350z/",
+            "accessed": "2026-09-29",
+            "note": "'HT-220001 - Rebel ECU' 'HT-186500 - Main Harness' 'HT-186505 - 6 Pin DBW Adaptor' 'HT-186507 - Corvette pedal adaptor' 'HT-186502- LS EV6 Injector Sub-Harnes' 'HT-187003 - T56 Transmission Harness' ... 'HT-186510 - Gen IV Oil pressure sensor adaptor harness' 'HT-186511 - Gen IV MAP sensor adaptor harness'"
+          }
+        ]
+      },
+      "notes": "Standalone ECU route for an LS3 (58x, drive by wire): 'Kit Supports Gen IV engines with drive by wire (DBW) using the 350z OEM Electronic Throttle Pedal.'"
+    },
+    {
+      "id": "ws-350z-revcan2-ls1",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Nissan 350z / Infiniti G35 with LS1 OEM PCM - CANBUS DIY Module + A/C Support",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls1-swap-ac-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Nissan 350z / Infiniti G35 with LS1 OEM PCM - CANBUS DIY Module + A/C Support' (product title)."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "WRS-RV2-350z-LS1",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls1-swap-ac-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-RV2-350z-LS1'"
+          }
+        ]
+      },
+      "price": {
+        "value": 395.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls1-swap-ac-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'USD $395.00'"
+          }
+        ]
+      },
+      "engines": ["ls1"],
+      "includes": {
+        "value": [
+          "Detailed User Guide and Wiring Instructions",
+          "Genuine OEM Mating Connector with Pins",
+          "Genuine GM Engine Coolant Temperature Sensor & Mating Connector with Pins"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls1-swap-ac-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Detailed User Guide and Wiring Instructions' ... 'Genuine OEM Mating Connector with Pins' ... 'Genuine GM Engine Coolant Temperature Sensor & Mating Connector with Pins'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Nissan Refrigerant Pressure Sensor & Mating Connector PN: 92136-1FA0A - Not Included"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls1-swap-ac-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Requires the use of Nissan Refrigerant Pressure Sensor & Mating Connector PN: 92136-1FA0A - Not Included'"
+          }
+        ]
+      },
+      "notes": "CAN-bus cluster integration for an OEM GM PCM: 'Tachometer' 'Engine Coolant Gauge' 'Check Engine Light' 'Chassis Fan Control' 'Chassis A/C Compressor Control' 'Retains OEM ABS Functionality' 'Mitigates all engine-swap related lamps', for the '350z (MY: 2003 - 2008)'. It does not claim traction or stability control."
+    },
+    {
+      "id": "ws-350z-revcan2-ls3",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Nissan 350z / Infiniti G35 with LS3 OEM E38 PCM - CANBUS DIY Module + A/C Support",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Nissan 350z / Infiniti G35 with LS3 OEM E38 PCM - CANBUS DIY Module + A/C Support' (product title)."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "WRS-RV2-350z-LS3",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-RV2-350z-LS3'"
+          }
+        ]
+      },
+      "price": {
+        "value": 395.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'USD $395.00'"
+          }
+        ]
+      },
+      "engines": ["ls3"],
+      "includes": {
+        "value": [
+          "Detailed User Guide and Wiring Instructions",
+          "Genuine OEM Mating Connector with Pins"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Detailed User Guide and Wiring Instructions' ... 'Genuine OEM Mating Connector with Pins'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "Nissan Refrigerant Pressure Sensor & Mating Connector PN: 92136-1FA0A - Not Included"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/350z-g35-ls3-canbus-module/",
+            "accessed": "2026-09-29",
+            "note": "'Requires the use of Nissan Refrigerant Pressure Sensor & Mating Connector PN: 92136-1FA0A - Not Included'"
+          }
+        ]
+      },
+      "notes": "Same functions as the LS1 module (tach, coolant gauge, CEL, fans, A/C, ABS kept, swap lamps mitigated) for an E38 PCM, '350z (MY: 2003 - 2008)'."
+    },
+    {
+      "id": "gm-p01-0411-pcm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "411 P01 PCM (red/blue connectors), 24x Gen III",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G3CM",
+            "note": "PSI's 24x drive-by-cable harness page lists as required and sold separately: 'RED/BLUE 411 P01 PCM' (read via WebFetch)."
+          },
+          {
+            "url": "https://www.ictbillet.com/products/ls-gen-3-ecm-engine-computer-connector-kit-blue-red-p01-pcm-0411-ls1-lm7-lq4-lr4",
+            "accessed": "2026-09-29",
+            "title": "ICT Billet WPECM30BR",
+            "note": "Connector kit for this PCM: 'LS Gen 3 ECM Engine Computer Connector Kit Blue Red P01 PCM 0411 LS1 LM7 LQ4 LR4', for 'LS1, LS6, LQ4, LQ9, LM7, L59, and LR4 engine-management systems using the matching blue and red PCM connectors'."
+          },
+          {
+            "url": "https://www.speartech.com/product_p/24xharnesscable.htm",
+            "accessed": "2026-09-29",
+            "title": "Speartech LS1 / Vortec Harness - Cable Throttle",
+            "note": "Speartech's 24x cable-throttle harness asks 'PCM connector style(required):' 'Red/Blue' or 'Blue/Green', and says 'PCM shown for reference only. Not included with harness.'"
+          }
+        ],
+        "note": "Speartech also offers a blue/green-connector version, so not every 24x PCM is the red/blue 0411; which LS1 donors used which connector set was not checked. No GM part number for the 0411 PCM was verified."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LSx engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS1-UNI",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis' and 'The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-ls1-pcm-programming",
+        "ws-ls1-standalone-harness",
+        "psi-har-g3cm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices licensing for the 98-02 Camaro 5.7 and 97-04 Corvette 5.7 ECMs at 2 credits each (see hpt-universal-credit). Wiring Specialties, PSI and lt1swap.com all sell or program these PCMs for swaps (separate parts)."
+    },
+    {
+      "id": "gm-e38-ecm",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "E38 ECM, 58x Gen IV (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties WRS-PROLS3-UNI",
+            "note": "Wiring Specialties' LS3 harness: 'LS3/L99 4th Generation using E38 PCM' and the option 'Add LS3 / L76 / Vortec E38 PCM w/ Flash (+$299) (Recommended)'."
+          },
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "Programming service line: '$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99'."
+          },
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion HAR-G4WM",
+            "note": "PSI's 58x manual harness: 'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)."
+          }
+        ],
+        "note": "E67 also runs 58x LS engines: lt1swap.com programs E37, E38 and E67 ECMs, and HP Tuners lists the Chevrolet Performance crate-engine controller as an E67 (see hpt-universal-credit). Which GM controller a given donor LS3 has was not checked car by car."
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "requires": {
+        "value": [
+          "basic tuning in order to run the LS engine in a different chassis",
+          "VATS alarm or Immobilizer ... disabled"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis. The VATS alarm or Immobilizer will prevent the engine from starting unless it is disabled.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "hpt-mpvi4",
+        "hpt-universal-credit",
+        "lt1swap-58x-ecm-programming",
+        "ws-ls3-standalone-harness",
+        "psi-har-g4wm"
+      ],
+      "notes": "Donor part, no price. HP Tuners prices the 05-13 Corvette 6.0/6.2/7.0 and 10-15 Camaro 6.2/7.0 ECMs at 2 credits each."
+    },
+    {
+      "id": "hpt-mpvi4",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "MPVI4",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners MPVI4",
+            "note": "Product page title 'MPVI4' with 'Introducing HP Tuners’ newest and most advanced vehicle interface.'"
+          }
+        ],
+        "note": "The MPVI4 is the current interface. HP Tuners ends support for the original MPVI1 on 1 January 2027; the MPVI2, MPVI3 and MPVI4 are not affected (HP Tuners MPVI1 end-of-life FAQ)."
+      },
+      "fills": ["other"],
+      "partNumber": {
+        "value": "M04-000-00",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: M04-000-00'"
+          }
+        ]
+      },
+      "price": {
+        "value": 399.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'From: $399.99'"
+          }
+        ],
+        "note": "Regular list price on the maker page (\"From\"); credits are extra."
+      },
+      "includes": {
+        "value": ["MPVI4 Interface", "USB-C to C Cable", "Quick Start Guide"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "In the Box: 'MPVI4 Interface' 'USB-C to C Cable' 'Quick Start Guide'. Also 'comes standard with the Pro Feature Set'."
+          }
+        ]
+      },
+      "requires": {
+        "value": ["credits to license controllers (varies by make/model)", "VCM Suite 5.2+"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Requires credits to license controllers (varies by make/model)' and 'Credits Sold Separately'; 'Works with VCM Suite 5.2+'."
+          }
+        ]
+      },
+      "pairsWith": ["hpt-universal-credit", "gm-p01-0411-pcm", "gm-e38-ecm"],
+      "notes": "Tuning interface for the GM-PCM route (not an ECU). Filed under \"other\" so it is not read as an ECU alternative."
+    },
+    {
+      "id": "hpt-universal-credit",
+      "vendor": "HP Tuners",
+      "product": {
+        "value": "Universal Credits (GM Credits)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners products",
+            "note": "Credits section: 'Universal Credits' ... 'GM Credits $49.99'."
+          },
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'Universal Credits' '$49.99 each'"
+          }
+        ]
+      },
+      "fills": ["other"],
+      "price": {
+        "value": 49.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/product/mpvi4/",
+            "accessed": "2026-09-29",
+            "note": "'$49.99 each'"
+          },
+          {
+            "url": "https://www.hptuners.com/products/",
+            "accessed": "2026-09-29",
+            "note": "'GM Credits $49.99'"
+          }
+        ],
+        "note": "Per credit, regular price; both pages are hptuners.com, so one site. Two credits per ECM for the controllers below, so about USD 99.98 per car."
+      },
+      "requires": {
+        "value": [
+          "2 credits for the 98-02 Camaro 5.7, 97-04 Corvette 5.7, 05-13 Corvette 6.0/6.2/7.0, 10-15 Camaro 6.2/7.0 and Chevrolet Performance E67 crate-engine ECMs"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.hptuners.com/vehicles/gm-tuning/",
+            "accessed": "2026-09-29",
+            "title": "HP Tuners GM vehicle support",
+            "note": "GM table: '98-02 | Camaro 5.7 | 2', '97-04 | Corvette 5.7 | 2', '05-13 | Corvette 6.0, 6.2, 7.0', '10-15 | Camaro 6.2, 7.0', '06-14 | Chevrolet Performance E67 Crate Engine PCM | 2'; 'Credit cost shown is for ECM licensing only.'"
+          }
+        ],
+        "note": "The 05-13 Corvette and 10-15 Camaro rows also read 2 credits on the page; the cell sits after a TDN icon, so only the row start is quoted."
+      },
+      "pairsWith": ["hpt-mpvi4"],
+      "notes": "Quantity matters: the schema has no quantity field, so the 2-credit count is in requires."
+    },
+    {
+      "id": "lt1swap-ls1-pcm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (1998-2002 Camaro/Trans Am LS1, 1997-2004 Corvette, 2004 GTO PCMs)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "title": "lt1swap.com programming services",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1, 1997-2004 Corvette,' '2004 GTO 5.7L LS1/LS6' and 'Swap Programming Service - USA Only'; the service is to 'remove anti-theft system' and 'I enable cooling fans for all swap applications'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 75,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$75 - 1998-2002 Camaro & TransAm 5.7L LS1'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-p01-0411-pcm"],
+      "notes": "US only: the page says 'NO LONGER SHIPPING INTERNATIONAL' and 'USA ONLY!', so it does not suit a Saudi-based build without a US forwarding step. Not a custom tune: it will not tune modified engines."
+    },
+    {
+      "id": "lt1swap-58x-ecm-programming",
+      "vendor": "LT1SWAP.COM",
+      "product": {
+        "value": "Swap Programming Service (2007-2013 E37, E38, E67 ECMs incl. Camaro/Corvette 6.2L LS3)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs' ... 'Camaro/Corvette 6.0L LS2, 6.2L LS3, L99' and 'Swap Programming Service - USA Only'."
+          }
+        ]
+      },
+      "fills": ["other"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 150,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.lt1swap.com/programming.htm",
+            "accessed": "2026-09-29",
+            "note": "'$150- 2007-2013 E37, E38, E67 ECMs'"
+          }
+        ],
+        "note": "Listed service price; no sale shown."
+      },
+      "pairsWith": ["gm-e38-ecm"],
+      "notes": "US only ('USA ONLY!'), as for the LS1 service."
+    },
+    {
+      "id": "psi-ls1-pcm-programmed",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "Related item on the HAR-G3CM page: 'LS/Vortec Engine PCM with Programming (Red/Blue) 411 P01' at '$210.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls1"],
+      "price": {
+        "value": 210,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$210.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com blocks curl), so not machine-checked; regular vs sale not shown in what was returned."
+      },
+      "pairsWith": ["psi-har-g3cm"]
+    },
+    {
+      "id": "psi-e38-ecm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "E38 LS3/Vortec Gen IV Engine ECM (2006+)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "Option on the HAR-G4WM page: 'E38 LS3/Vortec Gen IV Engine ECM (2006+)' at '$274.00' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["ecu"],
+      "engines": ["ls3"],
+      "price": {
+        "value": 274,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$274.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; whether it is programmed for the swap was not stated in what WebFetch returned."
+      },
+      "pairsWith": ["psi-har-g4wm"]
+    },
+    {
+      "id": "chevrolet-performance-ls3-controller-kit",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Engine Controller Kit For 430HP LS3 6.2L",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19540147 - Engine Controller Kit For 430HP LS3 6.2L'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Chevrolet Performance LS3 430hp Controller Kit - Computer & Harness 19354328'"
+          },
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "title": "LS Series Crate Engine Control System, REV 19MY16",
+            "note": "GM instruction sheet 19171935: '19354328 LS3 Engine Control System Kit'"
+          }
+        ],
+        "note": "GM sheet: 'This control system is a stand alone, fully-integrated kit designed to run Chevrolet Performance Parts LS Series crate engines with 58x crankshaft reluctor wheels, 4x camshaft indexing, and electronic throttle control (ETC)'. No Chevrolet Performance controller kit for a 24x LS1 was found: Scoggin Dickey's catalogue searches for controller kits on 2026-09-29 (search pages not saved) returned only 58x LS and Gen V LT kits."
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "19540147",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19540147'"
+          }
+        ],
+        "note": "GM's instruction sheet (REV 19MY16) and Pro Touring Store's listing use the earlier number 19354328 for the LS3 kit; Scoggin Dickey sells it as 19540147 (its page metadata lists 19258270, 19354328 and 19540147 together, but no visible text states a supersession). Pro Touring Store's variant SKU is 19540148, which Scoggin Dickey uses for the LS376/480 kit, so that SKU looks like a listing error."
+      },
+      "price": {
+        "value": 2320.95,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19540147-engine-controller-kit-for-430hp-ls3-62l-19540147/",
+            "accessed": "2026-09-29",
+            "note": "'MSRP:' '$2,475.68' ... 'Now:' '$2,320.95'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,475.68). Pro Touring Store lists the kit under 19354328 at USD 2,257.74 ('$2,25774' on the page, cents in superscript)."
+      },
+      "includes": {
+        "value": [
+          "engine control module (flashed with the appropriate calibration)",
+          "engine harness with fuse/relay center",
+          "accelerator pedal (GM 10379038)",
+          "mass air flow (MAF) sensor and mounting boss",
+          "oxygen sensors (2) and mounting bosses (2)",
+          "MAP sensor jumper",
+          "instruction sheet"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'Included in the kit are the engine control module (flashed with the appropriate calibration), engine harness, accelerator pedal, mass air flow (MAF) sensor, MAF sensor mounting boss, oxygen sensors (2), and oxygen sensor mounting bosses (2).' Parts list: '10379038 Accelerator Pedal', '19202597 MAP Sensor Jumper LS3/LS376'; 'The harness includes a fuse/relay center'."
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'Most kits include:' ... 'A CTS style throttle pedal assembly (for use with the electronically operated throttle)' ... 'A complete wiring harness with fuse box and necessary cam sensor and MAP sensor jumpers' ... 'The programmed controller' ... 'An instruction sheet'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph",
+          "power and ground sources, a high-pressure fuel pump and an electric cooling fan",
+          "clutch and flywheel purchased separately (manual applications)"
+        ],
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://static.summitracing.com/global/images/instructions/nal-19354328.pdf",
+            "accessed": "2026-09-29",
+            "note": "'This control system requires a fuel system which maintains 400 kPa (60 psi) constant pressure and can deliver 40 gph for the LS2/LS3/LS376s'; 'For manual applications, the clutch and flywheel used must be purchased separately'"
+          },
+          {
+            "url": "https://protouringstore.com/products/chevrolet-performance-ls3-430hp-controller-kit-computer-harness-19354328",
+            "accessed": "2026-09-29",
+            "note": "'are power and ground sources, a high-pressure fuel pump and an electric cooling fan'"
+          }
+        ]
+      },
+      "pairsWith": ["qfs-c5-style-filter-regulator"],
+      "notes": "GM designs the kit for its own crate engines; the sheet does not cover use on a donor LS3. GM sheet: 'The axle drive ratio in the calibration is set to 3.42:1 and is okay for ratio from 3.08 to 4.11', and the speed input expects 40 pulses per revolution (4L60/4L80 automatics). The 3.42:1 base and tyre range matter for drift cars on other final drives. Scoggin Dickey's generic list adds an oil pressure sensor, fuel pump power module and fuel pressure sensor kit that GM's 2016 sheet does not list."
+    },
+    {
+      "id": "holley-terminator-x-550-903",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X MPFI, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-cable, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-903 - Terminator X Mpfi, Ls1' '24x Crank - 1x Cam - EV1 Injectors - 3.5 in. Touchscreen' and 'For GM LS1/LS6 engines with 24x crank reluctor - with EV1 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'24x / EV1 / DBC: 550-903' and '1997+ LS1/2/6 APPLICATIONS USING AN EV1 INJECTOR, 24X CRANK RELUCTOR, 1X CAM GEAR, AND DRIVE BY CABLE ONLY.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-903",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-903'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'24x / EV1 / DBC: 550-903'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1599.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'$1,599.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "note": "'$1,59995' (cents in superscript)"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown (Holley pricing is dealer-uniform). Both list it out of stock or backordered."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "Terminator X ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-903-terminator-x-mpfi-ls1-h550-903/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - Terminator X ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "No drive-by-wire control (drive by cable only, per Pro Touring Store's application note). It suits cable-throttle LS1s such as the F-body's; an LS1 on an electronic throttle needs the Max kit 550-929. Scoggin Dickey: 'Will not control Low Impedance Injectors'. EV6-injector version: 550-909, listed on the same Pro Touring Store page."
+    },
+    {
+      "id": "holley-terminator-x-max-550-929",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW, LS1 (24x crank, 1x cam, EV1 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-929 - Terminator X Max Mpfi W/Dbw, Ls1' '24x Crank - 1x Cam - EV1 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'EV1 Bosch (LS1 / Jetronic) / Drive by wire / No'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "550-929",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-929'"
+          }
+        ],
+        "note": "Pro Touring Store sells the same variant (24x, EV1, drive by wire, no transmission control), but its page text does not print the part number; the store's product JSON (read with curl, not saved) gives 550-929."
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'$2,249.95' ... '$1,999.95' ... '$250.00'"
+          },
+          {
+            "url": "https://protouringstore.com/products/copy-of-holley-terminator-x-max-efi-system-ls1-ls2-ls3-ls6-ls7-truck?variant=41265221238938",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,249.95, save USD 250.00); Pro Touring Store lists USD 1,999.95 with no compare-at price. Variant 550-929T swaps the handheld for a USB/CAN cable: USD 1,949.95 (MSRP 2,193.95) at Scoggin Dickey."
+      },
+      "includes": {
+        "value": [
+          "24x LS Engine Main Harness",
+          "EV1 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-929-terminator-x-max-mpfi-wdbw-ls1-h550-929/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 24x LS Engine Main Harness - EV1 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "For GM LS1/LS6 engines with a 24x reluctor, drive-by-wire throttle body and EV1 injectors. Scoggin Dickey: 'Recommended Pedal part number - 10379038' (pedal not included)."
+    },
+    {
+      "id": "holley-terminator-x-max-550-931",
+      "vendor": "Holley EFI",
+      "product": {
+        "value": "Terminator X Max MPFI w/ DBW (58x crank, 4x cam, EV6 injectors, drive-by-wire, 3.5 in. touchscreen)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Holley EFI 550-931 - Terminator X Max Mpfi W/Dbw' '58x Crank - 4x Cam - EV6 Injectors - Drive-By-Wire Throttle Body Control - 3.5 in. Touchscreen' and 'Designed for GM 4.8/5.3/6.0 LS Truck Engines and LS2/LS3 with 58x Crank, 4x Cam and a Drive-By-Wire Throttle Body, with EV6 Injectors.'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-efi-system-ls1-ls2-ls3-ls6-ls7-truck-drive-by-cable?variant=20184096145501",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "Non-Max 58x kits on the same store's page: 'WILL NOT OPERATE FACTORY DRIVE BY WIRE LS3 THROTTLE BODIES' and 'USE TERMINATOR X MAX FOR DBW.'"
+          }
+        ]
+      },
+      "fills": ["ecu", "wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "550-931",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: H550-931'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'58x / EV6 / DBW / No trans: 550-931'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1999.95,
+        "unit": "USD",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'$1,999.95'"
+          },
+          {
+            "url": "https://protouringstore.com/products/holley-terminator-x-max-efi-system-58x-ls2-ls3-ls7-truck-gen-4?variant=41281650589850",
+            "accessed": "2026-09-29",
+            "note": "'$1,99995'"
+          }
+        ],
+        "note": "Same price at both retailers, no MSRP or sale shown."
+      },
+      "includes": {
+        "value": [
+          "58x/4x LS Engine Main Harness",
+          "EV6 Injector Harness",
+          "DBW Throttle Body Harness",
+          "Terminator X MAX ECU",
+          "ECU Main Power Harness",
+          "Bosch LSU 4.9 Wideband Oxygen Sensor",
+          "Input/Output Harness",
+          "assorted vacuum adapters"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/holley-efi-550-931-terminator-x-max-mpfi-wdbw-h550-931/",
+            "accessed": "2026-09-29",
+            "note": "'Includes: 58x/4x LS Engine Main Harness - EV6 Injector Harness - DBW Throttle Body Harness - Terminator X MAX ECU - ECU Main Power Harness - Bosch LSU 4.9 Wideband Oxygen Sensor - Input/Output Harness - and assorted vacuum adapters.'"
+          }
+        ]
+      },
+      "notes": "The match for a stock LS3 (58x, 4x cam, EV6 injectors, electronic throttle). The cheaper non-Max 58x kit 550-910 is EV1 and has no DBW control ('58x Crank - 4x Cam - EV1 Injectors - 3.5 in. Touchscreen', USD 1,599.95 at Scoggin Dickey), so it does not suit a stock LS3 without changes. Pedal not included; Scoggin Dickey recommends GM 10379038."
+    },
+    {
+      "id": "ws-ls1-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness - PRO SERIES'; 'Supports Engines with DRIVE BY CABLE THROTTLE ONLY'; 'Any F-Body 5.7L LS1 from 1999-2002 Camaro, Firebird, Trans Am or Corvette'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $899.00'"
+          }
+        ],
+        "note": "Base price; options add cost (e.g. CD009 or BMW ZF gearbox wiring +USD 45 each, PCM flash +USD 199, new PCM with tune +USD 299, coil harness +USD 149). Built to order, 2-8 weeks."
+      },
+      "includes": {
+        "value": [
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness",
+          "Wiring for 2 PCM-controlled electric cooling fans",
+          "self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump",
+          "Printable install instructions with pictures"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Main Engine and Transmission one-piece tucked harness' 'Alternator charge cable built into the main harness' 'Wiring for 2 PCM-controlled electric cooling fans' 'comes with a self-contained pre-wired fuse/relay block for ignition, cooling fans and fuel pump' 'Printable install instructions with pictures'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "a GM LS1 PCM with a startup tune (VATS off)",
+          "coil pack harness (option or existing)",
+          "hook up start signal, fuel pump wires and a few other wires for tach and speedo"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/ls1-swap-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'GM LS1 PCMs require basic tuning in order to run the LSx engine in a different chassis'; 'Add PRO Coilpack Harness:' ... 'I Already Have a Coilpack Harness'; 'You just have to hook up start signal, fuel pump wires and a few other wires for tach and speedo'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "hpt-mpvi4"],
+      "notes": "Gearbox options on the page include 'T56', 'Tremec TR6060', 'Z33 CD009 6 Speed (+$45)' and 'BMW ZF Series (+$45)'. The page warns that 'some transmissions (350z, BMW ZF and S15 Silvia for example) do not have a speed sensor and will require a non-harness based solution like a GPS speedo'. Wiring Specialties also sells car-specific LS1 and LS3 harnesses for the S15, 350Z, E46 and FD RX-7 (ws-<car>-ls1/ls3-harness parts below); its LS menus list no Supra (its Supra MkIV harnesses are for the 1JZ-GTE)."
+    },
+    {
+      "id": "ws-ls1-standalone-harness-with-pcm",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS1 / Vortec Wiring Harness with HP Tuners tuned & tested PCM- PRO SERIES'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness", "ecu"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "WRS-PROLS1-UNI-PCU-HPT-COMBO",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS1-UNI-PCU-HPT-COMBO'"
+          }
+        ]
+      },
+      "price": {
+        "value": 1198,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "'USD $1,198.00'"
+          }
+        ],
+        "note": "Base price, options extra; no sale shown."
+      },
+      "includes": {
+        "value": [
+          "HP Tuners tuned & tested PCM",
+          "Main Engine and Transmission one-piece tucked harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls1-vortec-wiring-harness-with-hp-tuners-tuned-tested-pcm-pro-series/",
+            "accessed": "2026-09-29",
+            "note": "Title 'with HP Tuners tuned & tested PCM' and 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "notes": "Same drive-by-cable LS1 harness as ws-ls1-standalone-harness, sold with a tuned PCM. Which PCM family is supplied is not stated on the page."
+    },
+    {
+      "id": "ws-ls3-standalone-harness",
+      "vendor": "Wiring Specialties",
+      "product": {
+        "value": "Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "title": "Wiring Specialties",
+            "note": "'Standalone LS3 6.0L / L99 6.2L 58x DBW Wiring Harness - PRO SERIES'; 'SUPPORTED ENGINES: GM 6.2 LITER LS3 ENGINES USING DRIVE BY WIRE / ELECTRONIC THROTTLE'"
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "WRS-PROLS3-UNI",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'WRS-PROLS3-UNI'"
+          }
+        ]
+      },
+      "price": {
+        "value": 999,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'USD $999.00'"
+          }
+        ],
+        "note": "Base price; E38 PCM with flash +USD 299, CD009 or BMW ZF wiring +USD 45. Built to order."
+      },
+      "includes": {
+        "value": [
+          "Integrated Coil Pack Harnesses - both banks",
+          "Standalone 5 Circuit Bussmann Fuse/Relay Block",
+          "Main Engine and Transmission one-piece tucked harness",
+          "Alternator charge cable built into the main harness"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'Integrated Coil Pack Harnesses - both banks now provided for no extra charge' 'Standalone 5 Circuit Bussmann Fuse/Relay Block provided - no connections to OEM fuse boxes needed' 'Main Engine and Transmission one-piece tucked harness'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "E38 PCM with a startup tune",
+          "electronic throttle pedal (Corvette/Camaro/CTS-V or Silverado/Escalade)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wiringspecialties.com/standalone-ls3-58x-dbw-wiring-harness/",
+            "accessed": "2026-09-29",
+            "note": "'LS3/L99 4th Generation using E38 PCM'; 'GM LS3 PCMs require basic tuning in order to run the LS engine in a different chassis'; 'Electronic Throttle Pedal:' 'Using Chevrolet Corvette / Camaro / CTS-V Pedal'"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "hpt-mpvi4"],
+      "notes": "Supported engines include '2008–2013 Chevrolet Corvette Base & Z51 (LS3 Vortec)' and '2010–2015 Chevrolet Camaro SS w/ Manual Trans (LS3 Vortec)'. Gearbox options include T56, T56 Magnum, Tremec TR6060, '350Z Z33 CD009 (+$45)' and 'BMW ZF Series (+$45)'."
+    },
+    {
+      "id": "psi-har-g3cm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '99-07 Gen 3 LS 24X Drive by Cable Standalone Harness | T56/Manual/Non-Electronic'; engines 'LS1, LS6, LR4, LM7, L59, LQ4, LQ9, LM4, L33' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls1"],
+      "partNumber": {
+        "value": "HAR-G3CM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G3CM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 599,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'$599.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch (psiconversion.com returns a security check to curl), so not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["RED/BLUE 411 P01 PCM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G3CM.html",
+            "accessed": "2026-09-29",
+            "note": "'RED/BLUE 411 P01 PCM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-p01-0411-pcm", "psi-ls1-pcm-programmed"]
+    },
+    {
+      "id": "psi-har-g4wm",
+      "vendor": "PSI Conversion",
+      "product": {
+        "value": "07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "title": "PSI Conversion",
+            "note": "Title '07 - 14+ Gen 4 LS/Vortec (58X) Drive by wire T56/TR6060 manual transmission Standalone harness' (read via WebFetch)."
+          }
+        ]
+      },
+      "fills": ["wiring-harness"],
+      "engines": ["ls3"],
+      "partNumber": {
+        "value": "HAR-G4WM",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "SKU 'HAR-G4WM' (read via WebFetch)"
+          }
+        ]
+      },
+      "price": {
+        "value": 624,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'$624.00' (read via WebFetch)"
+          }
+        ],
+        "note": "Read via WebFetch, not machine-checked; regular vs sale not shown."
+      },
+      "includes": {
+        "value": ["Complete engine and transmission wiring Harness", "Instruction Manual"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'Complete engine and transmission wiring Harness, Instruction Manual' (read via WebFetch)"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["E38 ECM"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.psiconversion.com/HAR-G4WM.html",
+            "accessed": "2026-09-29",
+            "note": "'ADDITIONAL ITEMS REQUIRED: E38 ECM' (read via WebFetch)"
+          }
+        ]
+      },
+      "pairsWith": ["gm-e38-ecm", "psi-e38-ecm"]
+    },
+    {
+      "id": "qfs-c5-style-filter-regulator",
+      "vendor": "Quantum Fuel Systems (QFS)",
+      "product": {
+        "value": "LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "title": "High Flow Fuel",
+            "note": "'LSx Swap Fuel Pressure Regulator/ Filter C5 Corvette 58psi + Straight/Curved AN or Barbed Fittings QFS'; 'this regulator has a fixed (non-adjustable) fuel pressure of 58psi'; '58PSI Fixed Pressure'; 'Fits All 1997+ Gen III and Gen IV LS Series 4.8, 5.3, 5.7L, 6.0, 6.2, 7.0L motors'; 'Supports 550-600HP'"
+          }
+        ],
+        "note": "An aftermarket copy of the GM C5 Corvette filter/regulator, not the GM part."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "QFS-F201-0",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'MPN: QFS-F201-0'"
+          }
+        ]
+      },
+      "price": {
+        "value": 55.98,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'$55.98 - $88.98'"
+          }
+        ],
+        "note": "Lowest price of the range shown; the option it belongs to (probably the regulator/filter only or barbed fittings) is not stated in the saved text. AN-fitting options cost up to USD 88.98."
+      },
+      "includes": {
+        "value": ["Choice of Fittings", "mounting bracket", "grounding strap"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.highflowfuel.com/lsx-swap-fuel-pressure-regulator-filter-c5-corvette-58psi-straight-curved-an-or-barbed-fittings-qfs/",
+            "accessed": "2026-09-29",
+            "note": "'Includes Choice of Fittings + mounting bracket and grounding strap as shown.'"
+          }
+        ]
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Returnless LS rails need about 58-60 psi at a constant pressure. Hot Rod AN: 'The C5 Corvette filter/regulator (fixed 58 psi / 4 bar) makes a clean return-less LS fuel system'. GM's own controller-kit sheet asks for '400 kPa (60 psi) constant pressure' and says 'Vacuum reference the fuel system, it must run constant 400 kPa (60 psi).' The genuine GM part was not tied to a part number in a saved source (GM Parts Giant lists GM 10299146, now replaced by 19545386, as 'Fuel Filter', USD 114.06, MSRP 213.76, but the page does not say it is the Corvette regulator)."
+    },
+    {
+      "id": "acdelco-gf822-filter-regulator",
+      "vendor": "ACDelco (GM)",
+      "product": {
+        "value": "ACDelco GF822 Fuel Filter with integrated fuel pressure regulator (1999-2003 Corvette)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "title": "PartsHawk",
+            "note": "'ACDelco GF822 Fuel Filter for Chevrolet Corvette'; fitment '1999-2002 Chevrolet Corvette | Note: CONTAINS INTEGRATED FUEL PRESSURE REGULATOR' and '2003 Chevrolet Corvette | Note: EXCEPT 2ND DESIGN FUEL SYSTEM(FFS)'"
+          }
+        ],
+        "note": "This is the OE-brand version of the C5 Corvette filter/regulator that the QFS unit copies. The page does not state the regulated pressure; the 58 psi figure comes from the aftermarket sellers (QFS, Hot Rod AN)."
+      },
+      "fills": ["fuel-system"],
+      "partNumber": {
+        "value": "GF822",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'ACDelco GF822'"
+          }
+        ]
+      },
+      "price": {
+        "value": 95.31,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://partshawk.com/chevrolet-corvette-fuel-filter-acdelco-gf822.html",
+            "accessed": "2026-09-29",
+            "note": "'Special Price $95.31 Regular Price $105.90'"
+          }
+        ],
+        "note": "Sale (special) price; regular price USD 105.90."
+      },
+      "pairsWith": ["chevrolet-performance-ls3-controller-kit"],
+      "notes": "Aftermarket listings cross-reference it to GM 10299146 and 19239926, but no saved page states that link; GM Parts Giant lists GM 10299146 ('Fuel Filter', replaced by 19545386) at USD 114.06 without naming the Corvette regulator."
+    },
+    {
+      "id": "gm-t56-fbody-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 1998-2002 Camaro/Firebird LS1",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "Magnum-F page: 'a direct swap for 1998-02 F-cars with LS1 engines and internal slave hydraulics' and 'Like all Magnum transmissions, the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)'."
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'This T56 Concentric Slave Cylinder works with your Camaro Tremec T56 6-Speed Transmission from model years 1998-2002, it also works with all Pontiac GTO and Chevrolet Corvette variants.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Donor part, no price (no dated listing cited). Factory output is 27-spline (Tremec). Its shifter sits nearly 3 in further back than the Magnum standard position, which is why Tremec made the Magnum-F with the F-body location (see tremec-magnum-f-tuet16362). The LS bellhousing and concentric slave are separate parts. Input-shaft length of the donor T-56 was not found in a source."
+    },
+    {
+      "id": "gm-t56-gto-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec T-56 6-speed from a 2004-2006 Pontiac GTO",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F.\""
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Other applications for installing the LS7 Chevrolet Performance Clutch Kit are the 2004-06 Pontiac GTO and 2008-09 G8.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "pairsWith": ["tremec-t56-ls-bellhousing", "collins-t56-slave-kit", "sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. The sources confirm it shares the T-56 LS bellhousing and slave with the F-body box; its shifter position, tailhousing and input-shaft length were not found in a source, so fitment in these chassis is unchecked."
+    },
+    {
+      "id": "tremec-magnum-tuet11009",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Magnum 6-speed for GM (hydraulic release), close ratio 2.66 first / 0.63 sixth",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Performance Product Catalog F_TRMC_0220_V1",
+            "note": "'TUET11009 GM Hyd 2.66 1.78 1.30 1.00 0.80 0.63 2.90'; quick specs 'Shifter Positions 3', 'Torque Capacity Up to 700 lb-ft.', 'Max Rated RPM 7800', 'Input Splines 26', 'Output Splines 31', 'Dry Weight 140 lbs / 64 kg'; \"Common 'T-56-style' bolt pattern allows for easy pairing to several late-model engines.\""
+          },
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf#page=6",
+            "accessed": "2026-09-29",
+            "title": "TREMEC catalog p. 6 drawing",
+            "note": "Dimensions read from the catalog drawing: (A) input shaft length from front face of trans 'GM 6.52 in' (Ford 5.70 in / 145 mm), (B) standard shifter location '21.05 in / 534.6 mm', (C) optional shifter location '17.53 in / 445.3 mm', (D) optional forward shifter location '13.25 in / 336.6 mm', (E) height at trans face '13.00 in / 330.2 mm', (F) width '12.25 in / 311.2 mm' (read from the page image, p. 6; the GM metric figure is partly hidden behind a photo)."
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "title": "American Powertrain",
+            "note": "'Tremec Magnum Close Ratio 6-speed for GM TUET11009' and '26-spline input shaft'"
+          },
+          {
+            "url": "https://tremec.com/aftermarket/products/magnum/",
+            "accessed": "2026-09-29",
+            "title": "TREMEC Magnum page",
+            "note": "'Known in its original equipment form as the TR-6060, the Magnum is an aftermarket version of the same transmission'"
+          }
+        ],
+        "note": "Weight conflict: the 2020 catalog says 'Dry Weight 140 lbs / 64 kg'; Tremec's current web page and American Powertrain say 'Reasonably light at 135 lbs. dry'. Neither is used as a value here; if weight is needed, prefer the catalog's figure as the more specific (it gives kg too) and treat it as single-source."
+      },
+      "fills": ["gearbox"],
+      "partNumber": {
+        "value": "TUET11009",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'TUET11009 GM Hyd'"
+          },
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: TUET11009'"
+          }
+        ]
+      },
+      "price": {
+        "value": 3545.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://americanpowertrain.com/shop/transmissions/tremec-t56-magnum-for-gm/",
+            "accessed": "2026-09-29",
+            "note": "'$3,545.00'"
+          }
+        ],
+        "note": "New, American Powertrain regular price (no sale shown). Pro Touring Store lists the same unit at USD 3,545.99 for pick-up ('$3,54599' on the page; freight +160 commercial or +210 residential)."
+      },
+      "requires": {
+        "value": [
+          "a 31-spline slip yoke (versus the factory T-56 27-spline)",
+          "separate 'forward' conversion shifter assembly (only for the forward shifter position)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Performance-Product-Catalog-F_TRMC_0220_V1.pdf",
+            "accessed": "2026-09-29",
+            "note": "'the Magnum-F requires a 31-spline slip yoke (versus the factory T-56 27-spline)' is stated for 'all Magnum transmissions'; \"Requires use of separate 'forward' conversion shifter assembly.  Not included.\""
+          }
+        ],
+        "note": "The catalog double-spaces after the full stop; the checker ignores whitespace runs."
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-t56-slave-kit",
+        "sdpc-ls7-clutch-kit",
+        "chevrolet-performance-19331079-clutch"
+      ],
+      "notes": "Bolts to an LS through the separate T-56 LS bellhousing (Tremec 1386-212-005, not included). GM-style hydraulic units copy the 1998-2002 F-body clutch release ('units, clutch release provisions modeled after T-56 in 1998-2002 Camaro/Firebird'). Three shifter positions; the forward one needs an extra shifter assembly. Other GM versions in the catalog: TUET16885 (2.97 first / 0.63 sixth) and TUET11012 (2.97 / 0.50)."
+    },
+    {
+      "id": "tremec-t56-ls-bellhousing",
+      "vendor": "TREMEC",
+      "product": {
+        "value": "Aluminum T56 bell housing to LS engines (F-body & GTO pattern)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "title": "Pro Touring Store",
+            "note": "'Aluminum T56 Bell Housing to LS & LT Engines - Tremec' and 'Genuine Tremec T56 to LS bell housing.'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Tremec T56 LS1/LS2 Bellhousing F-Body & GTO 1386-212-005'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "partNumber": {
+        "value": "1386-212-005",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Part number 1386-212-005'"
+          },
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-bellhousing-for-ls1-ls2",
+            "accessed": "2026-09-29",
+            "note": "'1386-212-005'"
+          }
+        ]
+      },
+      "price": {
+        "value": 309.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'$30900' (cents in superscript)"
+          }
+        ],
+        "note": "Pro Touring Store price. Collins Performance Technologies lists the same part number at USD 650.00 ('Regular price' '$650.00'), more than twice as much; the lower price is used and the spread means this price is uncertain."
+      },
+      "requires": {
+        "value": ["Mounting Bolts Not Included"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://protouringstore.com/products/aluminum-t56-bell-housing-to-ls-lt-engines-tremec",
+            "accessed": "2026-09-29",
+            "note": "'Note: (Mounting Bolts Not Included)'"
+          }
+        ]
+      },
+      "notes": "\"Fits all GM T56's and GTO T56's, including Magnum & Magnum F. Does NOT fit TR6060 transmissions.\" Needed for the T-56 / Magnum routes and for the Collins CD009 adapter route, which bolts the CD009 to this bellhousing."
+    },
+    {
+      "id": "collins-t56-slave-kit",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "T56 Slave Cylinder with Clutch Line and Adapter",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter' and '90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 310.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $310.00'"
+          }
+        ],
+        "note": "Regular price."
+      },
+      "includes": {
+        "value": [
+          "T56 Slave Cylinder",
+          "Clutch Line Adapter",
+          "90 Degree Teflon Coated -3AN High Pressure Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/t56-slave-cylinder-with-clutch-line-and-adapter",
+            "accessed": "2026-09-29",
+            "note": "'-T56 Slave Cylinder -Clutch Line Adapter -90 Degree Teflon Coated-3AN High Pressure Clutch Line'"
+          }
+        ]
+      },
+      "pairsWith": ["collins-ls-cd009-adapter-plate", "tremec-t56-ls-bellhousing"],
+      "notes": "Concentric slave for 1998-2002 Camaro T56, GTO and Corvette variants. Collins says the line length suits '-Nissan Silvia (S15, JDM only) (with use of V8, or A340 Swap)', the 350Z and the MkIV Supra (A340 swap), among others."
+    },
+    {
+      "id": "sdpc-ls7-clutch-kit",
+      "vendor": "Scoggin Dickey Parts Center (SDPC)",
+      "product": {
+        "value": "SDPC SDLS7CK LS7 Clutch Kit - Pressure Plate, Disc & Flywheel",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'SDPC SDLS7CK - LS7 Clutch Kit - Pressure Plate, Disc & Flywheel'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "SDLS7CK",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: SDLS7CK'"
+          }
+        ]
+      },
+      "price": {
+        "value": 899.99,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'$899.99'"
+          }
+        ],
+        "note": "Listed price with the stock GM steel flywheel option; no MSRP or sale shown. A RAM aluminium flywheel upgrade is an option."
+      },
+      "includes": {
+        "value": [
+          "Corvette Z06 LS7 Pressure Plate",
+          "LS7 Disc",
+          "new GM Steel Flywheel",
+          "GM flywheel and pressure plate bolts"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'The SDPC LS7 clutch kit includes the Corvette Z06 LS7 Pressure Plate, LS7 Disc and a new GM Steel Flywheel.' 'We throw in a new set of GM flywheel and pressure plate bolts'"
+          }
+        ]
+      },
+      "requires": {
+        "value": ["factory replacement slave cylinder"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "note": "'In most applications, you will still use your factory replacement slave cylinder.'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "gm-t56-fbody-donor",
+        "gm-t56-gto-donor",
+        "gm-tr6060-camaro-ss-donor",
+        "tremec-magnum-tuet11009"
+      ],
+      "notes": "For GM-spline gearboxes (T-56, Magnum, TR-6060). '1998-2002 F-Body, 2004-2006 GTO, 97-04 C5 Corvette, 2005-2013 LS2 and LS3 C6 Corvette, Pontiac G8, and 2010-2015 LS3 Camaro will all use their factory replacement slave cylinder'. Steel flywheel about 28 lb, optional RAM aluminium about 19 lb."
+    },
+    {
+      "id": "chevrolet-performance-19331079-clutch",
+      "vendor": "Chevrolet Performance",
+      "product": {
+        "value": "Clutch Kit LS3/LS7 Engines, 6-Bolt Crank (dual-disc, with flywheel)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'Chevrolet Performance 19331079 - Clutch Kit LS3/LS7 Engines, 6-Bolt Crank'; 'High-performance dual-disc clutch and flywheel package for all LS engines with 6-bolt flywheel flange'; 'Rated for 800 lb.-ft. of torque'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "title": "GM Parts Giant",
+            "note": "'GM 19331079 Clutch Kit,Performance Upgrade Ls 6 Bolt T56 Mag'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "partNumber": {
+        "value": "19331079",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'SKU: 19331079'"
+          },
+          {
+            "url": "https://www.gmpartsgiant.com/parts/gm-clutch-kit-perf-upgrade-ls-6-bolt-t56-mag-19331079.html",
+            "accessed": "2026-09-29",
+            "note": "'Manufacturer Part Number | 19331079'"
+          }
+        ]
+      },
+      "price": {
+        "value": 2683.6,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'$2,752.41' ... '$2,683.60'"
+          }
+        ],
+        "note": "Sale price at Scoggin Dickey (MSRP USD 2,752.41, which GM Parts Giant also shows: '$2297.58 MSRP: $2752.41'). GM Parts Giant sells it for USD 2,297.58."
+      },
+      "includes": {
+        "value": ["flywheel", "pressure plate", "clutch disc", "additional hardware"],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://sdparts.com/chevrolet-performance-19331079-clutch-kit-ls3ls7-engines-6-bolt-crank-19331079/",
+            "accessed": "2026-09-29",
+            "note": "'Kit includes flywheel, pressure plate, clutch disc and additional hardware'"
+          }
+        ]
+      },
+      "pairsWith": ["tremec-magnum-tuet11009", "gm-t56-fbody-donor"],
+      "notes": "GM's own description ('T56 MAG') ties it to the T-56 Magnum; out of stock at Scoggin Dickey on 2026-09-29."
+    },
+    {
+      "id": "gm-tr6060-camaro-ss-donor",
+      "vendor": "General Motors (donor part)",
+      "product": {
+        "value": "Tremec TR-6060 6-speed from a 2010-2015 Camaro SS (LS3)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://tremec.com/wp-content/uploads/2023/05/Product.Sheet_TR-6060.pdf",
+            "accessed": "2026-09-29",
+            "title": "TREMEC TR-6060 product sheet F-TR6060-0519",
+            "note": "Spec sheet: 'Clutch housing: Integrated'; Camaro SS ratios 2.66 / 1.78 / 1.30 / 1.00 / 0.74 / 0.50, reverse 2.90, input torque '617 Nm 455 lb-ft'; 'Transmission weight: Wet: 66.3 kg (146.2 lb)'"
+          },
+          {
+            "url": "https://sdparts.com/sdpc-sdls7ck-ls7-clutch-kit-pressure-plate-disc-flywheel-sdls7ck/",
+            "accessed": "2026-09-29",
+            "title": "Scoggin Dickey Parts Center",
+            "note": "'This kit is a direct replacement for 1997 thru 2004 C5 Corvettes, 1998 thru 2002 LS equipped Firebirds and Camaros, and 2010 thru 2015 LS engine equipped Camaros.'"
+          }
+        ]
+      },
+      "fills": ["gearbox"],
+      "engines": ["ls3"],
+      "pairsWith": ["sdpc-ls7-clutch-kit"],
+      "notes": "Donor part, no price. Its clutch housing is cast in, so the separate T-56 LS bellhousing does not fit (Pro Touring Store: 'Does NOT fit TR6060 transmissions'). Tremec rates the Camaro SS version at 455 lb-ft input torque and the CTS-V version at 560 lb-ft. Tremec's aftermarket range (T-5, TKX, TR 4050, Magnum-F, Magnum, Magnum-XL on its site menu) has no TR-6060; the Magnum is its aftermarket version, so a new TR-6060 means a Magnum. engines lists only the LS3 because that is the donor car's engine; an LS1 fit was not checked in a source."
+    },
+    {
+      "id": "collins-ls-cd009-adapter-plate",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX to 350Z/370Z Adapter Plate",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'LSX to 350Z/370Z Adapter Plate'; engines '-LSX (LS1/LS2/LS3/LQ9/LS7/LQ4/LS9/L33/LR4/LM7/L59/LM4/L76)'; transmissions '-350Z (CD001-CD009-Has Clutch Fork)' '-350ZHR (JK40 Series-No Clutch Fork, Internal Slave Cylinder)' '-370Z (JK40 Series-No Clutch Fork, Internal Slave Cylinder)'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "price": {
+        "value": 600.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $600.00'"
+          }
+        ],
+        "note": "Regular price (the page shows a generic 'Sale' badge but only the one price)."
+      },
+      "includes": {
+        "value": [
+          "LSX to 350Z/370Z Adapter Plate",
+          "Dowel Pins",
+          "Input Shaft Seal",
+          "LSX Pilot Bearing needed to adapt the input shaft on the LS1 Crank",
+          "LSX to 350Z Bolt Kit"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'What is Included:' '-LSX to 350Z/370Z Adapter Plate -Dowel Pins -Input Shaft Seal -LSX Pilot Bearing needed to adapt the input shaft on the LS1 Crank -LSX to 350Z Bolt Kit'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "T56 Bellhousing",
+          "Cast Flywheel or Lightweight Chromoly Flywheel",
+          "Clutch System",
+          "T56 Slave Cylinder + Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+            "accessed": "2026-09-29",
+            "note": "'You Will Need to Supply the Following: -T56 Bellhousing -Cast Flywheel or Lightweight Chromoly Flywheel -Clutch System -T56 Slave Cylinder + Clutch Line'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-lsx-clutch-system",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "Keeps the Nissan CD009 (350Z/370Z 6-speed). The CD009's own bellhousing is cut off ('Simply cut the existing bell housing off of the front of the Stock 350Z/370Z/VQ 6-Speed Transmission.'), see modifications. Collins also sells a version with an 11 in clutch disc (collins-ls-cd009-adapter-plate-11in-disc)."
+    },
+    {
+      "id": "collins-ls-cd009-adapter-plate-11in-disc",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Engine to 350Z, 370Z VQ 6-Speed Transmission Adapter Plate with 11 inch Clutch Disc",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "Variants '350Z - $699.00 USD', '350ZHR - $699.00 USD', '370Z - $699.00 USD'; 'including CD001–CD009 as well as the brand new 6GP0B and JK40 series'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter"],
+      "price": {
+        "value": 699.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $699.00'"
+          }
+        ],
+        "note": "Regular price, same for all three gearbox variants."
+      },
+      "includes": {
+        "value": [
+          "LSX Adapter Plate",
+          "Input Shaft Seal",
+          "Dowel Pins",
+          "LSX Engine Side Bolt Kit",
+          "LSX Pilot Bearing",
+          "Collins LS 11 in. Custom Clutch Disc (Clutch Bolts, Clutch Tool)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'-LSX Adapter Plate -Input Shaft Seal -Dowel Pins -LSX Engine Side Bolt Kit -LSX Pilot Bearing' and 'Custom Clutch Disc (Clutch Bolts, Clutch Tool)'"
+          }
+        ]
+      },
+      "requires": {
+        "value": [
+          "T56 Bellhousing",
+          "Cast Flywheel or Lightweight Chromoly Flywheel",
+          "Clutch System",
+          "T56 Slave Cylinder + Clutch Line"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate-with-11-clutch-disc-swap-kit-1",
+            "accessed": "2026-09-29",
+            "note": "'You Will Need to Supply the Following: -T56 Bellhousing -Cast Flywheel or Lightweight Chromoly Flywheel -Clutch System -T56 Slave Cylinder + Clutch Line'"
+          }
+        ],
+        "note": "The page lists 'Clutch System' as still needed although a disc is included, and its marketing text says the kit includes a flywheel while the included list does not; the included list is used."
+      },
+      "pairsWith": [
+        "tremec-t56-ls-bellhousing",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "The disc is sold per gearbox (350Z, 350Z HR and 370Z variants), so the input-shaft spline differs between CD009 and the later JK40/6GP0B boxes."
+    },
+    {
+      "id": "collins-lsx-clutch-system",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Clutch System, Stage 1 (500 ft-lb)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'Stage 1 (500FTLBS) - $599.00 USD', 'Stage 2 (680FTLBS) - $650.00 USD', 'Stage 3 (800FTLBS) Aggressive - $724.00 USD'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 599.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $599.00'"
+          }
+        ],
+        "note": "Regular price for Stage 1; Stage 2 USD 650, Stage 3 USD 724."
+      },
+      "includes": {
+        "value": [
+          "LSX ACT 6-Puck Clutch Disc",
+          "LS Pressure Plate",
+          "LS Clutch Bolts",
+          "Clutch Tool"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-stage-1-500ftlbs-clutch-system",
+            "accessed": "2026-09-29",
+            "note": "'-LSX ACT 6-Puck Clutch Disc -LS Pressure Plate -LS Clutch Bolts -Clutch Tool'"
+          }
+        ]
+      },
+      "pairsWith": [
+        "collins-ls-cd009-adapter-plate",
+        "collins-lsx-cast-flywheel",
+        "collins-t56-slave-kit"
+      ],
+      "notes": "For the LS-to-CD009 route (the disc carries the Nissan spline; listed for 350Z CD001-CD009, 350Z HR and 370Z boxes)."
+    },
+    {
+      "id": "collins-lsx-cast-flywheel",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX Cast Heavy Duty Flywheel",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-heavy-duty-flywheel",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'-LS Heavy Duty Flywheel' listed for '-350Z (CD001-CD009-Has Clutch Fork)'"
+          }
+        ]
+      },
+      "fills": ["clutch"],
+      "price": {
+        "value": 302.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/ls-heavy-duty-flywheel",
+            "accessed": "2026-09-29",
+            "note": "'Regular price $302.00'"
+          }
+        ],
+        "note": "Regular price. Collins also lists an ACT Prolite (lightweight) LS flywheel at USD 572 (not saved separately)."
+      },
+      "pairsWith": ["collins-ls-cd009-adapter-plate", "collins-lsx-clutch-system"]
+    },
+    {
+      "id": "collins-ls-cd009-bellhousing-swap-kit",
+      "vendor": "Collins Performance Technologies",
+      "product": {
+        "value": "LSX to Nissan 350Z/Infiniti G35 with Bellhousing Swap Kit (CD009 route)",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-nissan-350z-infiniti-g35-cd009-03-08-tranmission-swap-kit-test-good",
+            "accessed": "2026-09-29",
+            "title": "Collins Performance Technologies",
+            "note": "'LSX to Nissan 350Z/Infiniti G35 with Bellhousing Swap Kit'; 'This Kit will get the 350Z (CD009) and 370Z (JK40C) 6-Speed Transmissions bolted up into your Nissan 350Z (Z33) and Infiniti G35 with ease.'"
+          }
+        ]
+      },
+      "fills": ["bellhousing-adapter", "clutch"],
+      "price": {
+        "value": 2202.0,
+        "unit": "USD",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-nissan-350z-infiniti-g35-cd009-03-08-tranmission-swap-kit-test-good",
+            "accessed": "2026-09-29",
+            "note": "'Stage 1 Single Disc (500FTLBS) / Cast / T56 Slave Cylinder & Clutch Line - $2,202.00 USD' and 'Stage 1 Single Disc (500FTLBS) / No Flywheel / None - $1,627.00 USD'"
+          }
+        ],
+        "note": "Regular price of the default variant (Stage 1 clutch, cast flywheel, T56 slave and line). Variants run from USD 1,627 (no flywheel or slave) upward; Stage 3 with cast flywheel and slave is USD 2,302."
+      },
+      "includes": {
+        "value": [
+          "LSX Adapter Plate, Input Shaft Seal & Bolt Kit",
+          "LSX Pilot Bearing",
+          "T56 Bell Housing",
+          "Clutch System (Clutch Disc, Pressure Plate, Clutch Bolts, Clutch Tool)",
+          "flywheel and T56 slave cylinder with clutch line (per variant)"
+        ],
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://collinsperformancetechnologies.com/products/lsx-to-nissan-350z-infiniti-g35-cd009-03-08-tranmission-swap-kit-test-good",
+            "accessed": "2026-09-29",
+            "note": "'-LSX Adapter Plate, Input Shaft Seal & Bolt Kit -LSX Pilot Bearing -T56 Bell Housing' and options '-Clutch System (Clutch Disc, Pressure Plate, Clutch Bolts, Clutch Tool) -Flywheel (Does Not Include Flywheel Bolts) -T56 Slave Cylinder & Clutch Line'"
+          }
+        ]
+      },
+      "notes": "Sold for the 350Z/G35 but the contents are the same CD009-route gearbox hardware the other chassis use (the car-specific mounts are separate). Flywheel bolts are not included. It bundles collins-ls-cd009-adapter-plate, tremec-t56-ls-bellhousing, collins-lsx-clutch-system, collins-lsx-cast-flywheel and collins-t56-slave-kit."
+    }
+  ],
+  "modifications": [
+    {
+      "value": "Sikky kit: no cutting, drilling or welding, no change to the crossmember or subframe, and the secondary firewall stays in place.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/350z-ls1-basic-mount-kit/",
+          "accessed": "2026-09-29",
+          "note": "'Requires no cutting or welding and does not hang below the cross member when installed.' ... 'Does not require removal of the secondary firewall like our competitors kits do. No cutting, drilling spot welds or modifications required, making this an easy bolt in job.'"
+        },
+        {
+          "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-kit-stage-3/",
+          "accessed": "2026-09-29",
+          "note": "'Requires no modifications to the factory cross member or sub frame and does not hang below the cross member when installed.'"
+        }
+      ]
+    },
+    {
+      "value": "Sikky kit: some A/C compressor and bracket setups interfere with the right-side engine mount and need modifying or different accessories.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/350z-ls1-basic-mount-kit/",
+          "accessed": "2026-09-29",
+          "note": "'Some AC compressor and bracket setups may interfere with the right side engine mount and require modification or changing out for different accessories.'"
+        }
+      ]
+    },
+    {
+      "value": "Hinson kit: a small firewall modification is required (Hinson says it cannot be seen once the engine is in).",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://hinsonmotorsports.com/products/hinson-nissan-350z-ls-v8-swap-engine-transmission-mount-kit-ls1-ls2-ls3-ls7",
+          "accessed": "2026-09-29",
+          "note": "'The firewall will require a small modification. This is a minor service that cannot be seen after the engine is installed.'"
+        }
+      ]
+    },
+    {
+      "value": "Keeping the CD00x gearbox: the square casting lug on the LS block where the starter bolts is cut off.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2019/11/CG-006-TAK002-CD00X-DE-Installation-Guide-1.pdf",
+          "accessed": "2026-09-29",
+          "note": "'Remove the square casting lug from the engine block located at the bell housing side of the engine where the starter bolts.' ... 'This lug will interfere with the starter and needs to be removed.'"
+        }
+      ]
+    },
+    {
+      "value": "Keeping the CD00x gearbox: DE bellhousings may need a 1 x 1 in area sanded for flywheel clearance; HR bellhousings need a small piece removed for starter-gear clearance.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/lsx-cd00x-transmission-adapter-kit/",
+          "accessed": "2026-09-29",
+          "note": "'On DE models, due to casting inconsistencies some bell housing will require sanding a 1″x1″ area for flywheel clearance (very simple modification)' ... 'On HR models for proper starter gear clearance a small piece of the bell housing will need to be removed (very simple modification)'"
+        },
+        {
+          "url": "https://www.sikky.com/wp-content/uploads/2019/11/CG-006-TAK002-CD00X-DE-Installation-Guide-1.pdf",
+          "accessed": "2026-09-29",
+          "note": "'there is a small area on the inside of the bellhousing that needs to be clearanced slightly where the flywheel teeth will make slight contact.'"
+        }
+      ]
+    },
+    {
+      "value": "Factory oil pressure gauge: the Nissan sender is usually moved to a relocation line with an adapter.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.wiringspecialties.com/350z-ls1-wiring-harness",
+          "accessed": "2026-09-29",
+          "note": "'In most cases a relocation line and an adapter (available to the right in Options) needs to be used in order to use the Nissan sensor with the swap.'"
+        }
+      ]
+    },
+    {
+      "value": "Sikky pan with an aftermarket (especially dual-chain) oil pump: the windage tray, baffle and pan flange may need modifying.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sikky.com/product/nissan-350z-lsx-swap-rear-sump-oil-pan-kit/",
+          "accessed": "2026-09-29",
+          "note": "'Aftermarket oil pumps especially dual chain pumps may require modification of the windage tray and baffle as well as adding additional clearance on the pan flange.'"
+        }
+      ]
+    },
+    {
+      "value": "CD009 adapter route only: the Nissan gearbox's own bellhousing is cut off and the gearbox bolts to a T-56 LS bellhousing through the Collins plate.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://collinsperformancetechnologies.com/products/lsx-engine-to-350z-370z-vq-6-speed-transmission-adapter-plate",
+          "accessed": "2026-09-29",
+          "note": "'Simply cut the existing bell housing off of the front of the Stock 350Z/370Z/VQ 6-Speed Transmission. Then remove the front input shaft bearing cover, replace the pump cover gasket with Liquid gasket material. Bolt the adapter plate to the LSX bell housing, and then bolt the bell housing to the transmission!'"
+        }
+      ]
+    }
+  ],
+  "notes": "DE vs HR cars: no vendor lists separate DE and HR versions of the mounts, pans, headers or driveshafts (TDR titles its parts 2003-2009); the differences are at the gearbox (Sikky sells separate DE and HR CD00X adapter kits, with different dowel positions and clearancing) and in the wiring (Wiring Specialties prices its harnesses for 2003-2006 and charges extra for 2007-2008 chassis). Gearbox routes: T56, T56 Magnum or TR6060 (generic, in the LS file) with a Sikky or TDR crossmember, or the car's own CD00x with the Sikky CD00X adapter, TM03 bracket, CD009 driveshaft and CD009 clutch master kit. Hinson's kit mentions the stock Pontiac GTO shifter and keeps the stock radiator. CAN: the Wiring Specialties LS1 harness has its own CANbus controller; the RevCAN2 modules add cluster and A/C functions for an OEM PCM; Haltech Rebel packages drive the dash over CAN; Hinson's complete package uses a Nissan CAN gateway. Traction and stability control are reported not to work (Wiring Specialties)."
+}
