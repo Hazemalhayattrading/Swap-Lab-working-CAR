@@ -82,6 +82,12 @@ export const SwapSchema = z
     /** Which of the car's trims or years it covers, where not all (e.g. "2003-2006 cars"). */
     appliesTo: z.string().min(1).optional(),
     parts: z.array(SwapPartSchema).min(1),
+    /**
+     * Facts about the car that decide what fits, as a source states them
+     * (e.g. "the S14 front suspension member also fits the S15"). Anything a
+     * listing says about one part goes on that part instead.
+     */
+    fitment: z.array(sourced(z.string().min(1))).optional(),
     /** Cutting, drilling or relocation a source says the swap needs (or says it doesn't). */
     modifications: z.array(sourced(z.string().min(1))).optional(),
     notes: z.string().min(1).optional(),

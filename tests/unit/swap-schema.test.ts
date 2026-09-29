@@ -29,6 +29,7 @@ function swap(over: Record<string, unknown> = {}) {
       part('ecu-24x', ['ecu', 'wiring-harness'], { engines: ['ls1'] }),
       part('ecu-58x', ['ecu', 'wiring-harness'], { engines: ['ls3'] }),
     ],
+    fitment: [s('The S14 front suspension member also fits the S15.')],
     modifications: [s('No cutting of the firewall is needed.')],
     ...over,
   };
