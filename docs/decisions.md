@@ -418,4 +418,45 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 ### Cam-profile switching (VTEC) and two more limit components
 
 - **Decision:** Piston variants can record `camProfileSwitching` (Honda VTEC): which valves switch (`intake` or `intake-and-exhaust`) and the switch-over rpm where published. Rotary variants can't. The reported-limit components gain `rod-bolts` and `valvetrain`.
-- **Why:** VTEC changes the K24's breathing sharply at the switch point, which Phase 2's volumetric-efficiency fit has to know about, and cam phasing (`variableValveTiming`) doesn't cover it. Tuners quote LS and RB limits as rod-bolt or valve-spring limits, and filing those under `bottom-end` would lose that.
+- **Why:** VTEC changes the K24's breathing sharply at the switch point, which Phase 2's volumetric-efficiency fit has to know about, and cam phasing (`variableValveTiming`) doesn't cover it. The LS sources quote limits by part: OnAllCylinders gives a separate figure for the 2001-on LS1 rod bolts, and GM gives valvetrain speed limits (6,200 rpm LS1 fuel cut, 6,600 rpm LS3). Filing those under `bottom-end` would lose which part is the limit.
+
+### Swap files: sourced car facts and kept gearboxes
+
+- **Decision:** A swap file can list `fitment`: facts about the car that decide what fits, each with sources (e.g. that the S14 front suspension member also fits the S15). A part that is the car's own gearbox, kept behind the new engine, records the car file's transmission ids in `carGearbox`, and validate-data checks they exist (the 350Z's `fs6r31a-6mt`, the E46's `s5d320z-5mt`, `gs6-37bz-6mt` and `m3-6mt`).
+- **Why:** The research agents found car-level facts that only fitted in unsourced notes, and a kept gearbox otherwise has no link to the gearing data Phase 2 uses.
+
+### Merging the common LS hardware into each swap
+
+- **Decision:** One research pass covered the hardware that's the same for every LS swap (GM PCM, Chevrolet Performance and Holley ECU routes, standalone harnesses, GM and Tremec gearboxes, clutches, fuel regulators). It's merged into each car's swap file by a rule, not wholesale:
+  - every car gets the ECU routes, standalone harnesses and fuel regulators;
+  - a gearbox route goes in only where that car's kits support it: the TR6060 for the S15, 350Z, E46 and Supra (the Supra has a Sikky TR6060 crossmember but no TR6060 driveshaft), not the FD; the Tremec Magnum-F only for the Supra and FD, the two cars American Powertrain names for it; the CD009 adapter parts for the S15 and 350Z, while the Supra keeps its own Collins CD009 kit;
+  - a generic swap pan (GM 19212593, Holley 302-1/302-2) goes in only where a source for that car names it (the E46: Pennsyltucky's mounts are designed for the Holley 302-1). The generic pans are recorded as `sumpOptions` on the LS1 and LS3 instead;
+  - car-specific parts the common pass also found (the Wiring Specialties chassis harnesses, PMC's E46 plate, Collins' Supra kit) are kept once, from the car-specific pass.
+
+  The S15 and Supra files also get a donor CD009 gearbox part, sourced from the kit pages that offer that route.
+
+- **Why:** Adding every common part to every car would claim fitment that no source states, for example a Holley pan in an S15, or a TR6060 driveshaft route in an FD.
+
+### The S15 front suspension member is single-source
+
+- **Decision:** "The S14 front suspension member also fits the S15" is stored as `single-source` (3G Spares, a New Zealand used-parts seller), not `verified`.
+- **Why:** The research pass counted nissanpartsdeal.com as a second source, but that page only ties part 54401-85F00 (which replaces 54401-65F00) to the 1995-1998 240SX and says nothing about the S15. Sikky's single "S14/S15 (RHD)" mount set supports it indirectly and is noted as such.
+
+### One newsroom counts as one source
+
+- **Decision:** acuranews.com and hondanews.com are American Honda's one newsroom, so a value backed only by those two is `single-source` even though the domains differ. This is the same rule as goo-net and GAZOO (2026-09-27).
+- **Why:** Two copies of one press release aren't independent confirmation. The schema can't see this (it compares domains), so the research pass applied it by hand. It affects the 2006-2008 TSX and K24Z7 ratings.
+
+### Which K24s are modelled
+
+- **Decision:** Eight variants of the ones swap vendors recommend: the K24A2 (2004-05 and 2006-08 TSX), the JDM K24A with the RBB head (200 PS), the K24Z3 (2009-14 TSX), the K24Z7 (2012-13 and 2014-15 Civic Si) and the K24A1 CR-V block (split at Honda's 2006 re-rating, which changed the figure without a hardware change). Left out: the K24A4 and K24A8 (their pistons hit K20 valves, so builders use the K24A1 block), the K24Z1 (automatic only), the 190 hp Accord K24Z3, the later Z-series and Earth Dreams engines (no vendor recommends them), and the European K24A3 (no European source read).
+- **Why:** The brief asked for "the K24 variants that swappers actually use", and the vendors (KPower, Hybrid Racing, Hasport, Humble) name the same short list.
+
+### RB25DET NEO: manual and automatic are separate variants
+
+- **Decision:** The ER34 5MT (35.0 kgf·m to 2000-07, 37.0 kgf·m from 2000-08, with its own turbo, camshaft and ECU part numbers) and the 4AT (34.0 kgf·m) are separate variants, as are the WC34 Stagea (34.0 automatic, 35.0 on the 25t RS FOUR S 5MT), the C35 Laurel (automatic only) and the Y34 Cedric/Gloria 4WD (260 PS, then 250 PS from 2002-09).
+- **Why:** Nissan's own releases give different torque by gearbox. The 34.0 kgf·m figure usually quoted for the NEO is the automatic's.
+
+### Crate engines count as LS3 variants
+
+- **Decision:** The Chevrolet Performance LS3 crate engine (19540155, earlier 19301326) and the LS376/480 and LS376/525 are LS3 variants, since swappers buy them new. Their rating standard is `unknown`, because GM says only "SAE J1349 net or J1995 gross". The E-ROD LS3 isn't a separate variant: it is the same engine assembly, and no GM rating with rpm was found.
