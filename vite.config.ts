@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { catalogue } from './scripts/vite-plugin-catalogue';
 
 // GitHub Pages serves the site from /<repo>/, so production builds for Pages set
 // BASE_PATH (the deploy workflow does). Local dev and tests default to '/'.
@@ -6,6 +7,8 @@ const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
   base,
+  // The simulation's data, provenance stripped (src/data/loader.ts).
+  plugins: [catalogue()],
   build: {
     target: 'es2022',
     sourcemap: true,
@@ -23,5 +26,7 @@ export default defineConfig({
   },
   worker: {
     format: 'es',
+    // The simulation worker imports the catalogue too; worker bundles take their own plugins.
+    plugins: () => [catalogue()],
   },
 });
