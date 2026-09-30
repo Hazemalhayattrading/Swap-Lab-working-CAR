@@ -11,6 +11,10 @@ const SHOTS = 'test-results/screenshots';
 mkdirSync(SHOTS, { recursive: true });
 
 async function openSheet(page: Page): Promise<string[]> {
+  // CI draws in software; the acceleration notice has its own test (garage.spec.ts).
+  await page.addInitScript(() => {
+    sessionStorage.setItem('swaplab.gpuNoticeDismissed', 'swiftshader');
+  });
   const problems: string[] = [];
   page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`));
   page.on('console', (m) => {
@@ -37,10 +41,20 @@ test('shows the default car’s dyno sheet with a passed stock check', async ({ 
   await expect(page.locator('.chart')).toBeVisible();
   await expect(page.locator('.chart .chart__trace--power')).toHaveCount(1);
   await expect(page.locator('.chart .chart__band--power')).toHaveCount(1);
-  // Defaults: 45 °C and 95 RON.
+  // Defaults: 45 °C in Riyadh (about 600 m) on PG95.
   await expect(page.getByRole('radio', { name: '45', exact: true })).toBeChecked();
+  await expect(page.getByRole('radio', { name: 'Riyadh', exact: true })).toBeChecked();
   await expect(page.getByRole('radio', { name: '95', exact: true })).toBeChecked();
+  await expect(page.locator('#dyno-altitude-note')).toContainText('94.2 kPa');
   await expect(page.locator('.readouts-block__at')).toContainText('45');
+  await expect(page.locator('.readouts-block__at')).toContainText('Riyadh');
+  // The heat-soak test: on generic cooling sizing the stamp says estimated, not passed or failed.
+  await expect(page.locator('.soak')).toBeVisible();
+  await expect(page.locator('.soak-stamp')).toHaveText(/Estimated\s*generic sizing/);
+  await expect(page.locator('.soak-chart__line--coolant')).toHaveCount(1);
+  await expect(page.locator('.limit-tag--estimated')).toContainText('Cooling');
+  // Only the Supra carries a build-count exception on its sticker.
+  await expect(page.locator('.sticker__scope')).toHaveCount(0);
   // The sheet doesn't wait for the 3D view; the screenshot does, so it shows both.
   await expect(page.locator('html')).toHaveAttribute('data-scene-state', 'ready', {
     timeout: 240_000,
@@ -62,6 +76,10 @@ test('a cooler day, another trim and other units rerun the sheet', async ({ page
   await expect(page.locator('#dyno')).toHaveAttribute('data-trim', /^toyota-supra-jza80\//);
   await expect(page.locator('#dyno')).toHaveAttribute('data-state', 'ready');
   await expect(page.locator('.sheet__car')).toContainText('Toyota Supra');
+  await expect(page.locator('.sticker__scope')).toHaveText(
+    'Known builds: validated on stock turbos only; big-turbo builds unverified.',
+  );
+  await page.locator('.sticker').screenshot({ path: `${SHOTS}/dyno-supra-sticker.png` });
 
   await page.getByRole('radio', { name: 'PS', exact: true }).check();
   await expect(powerReadout(page)).toContainText('PS');
@@ -74,6 +92,47 @@ test('a cooler day, another trim and other units rerun the sheet', async ({ page
   await expect(page.locator('#dyno')).toHaveAttribute('data-trim', /^toyota-supra-jza80\//);
   await expect(page.getByRole('radio', { name: '25', exact: true })).toBeChecked();
   await expect(powerReadout(page)).toContainText('PS');
+  expect(problems).toEqual([]);
+});
+
+test('altitude and fuel rerun the sheet and say what they do', async ({ page }) => {
+  const problems = await openSheet(page);
+  const riyadh = Number.parseFloat((await powerReadout(page).textContent()) ?? '');
+
+  // The S15 is turbocharged: at sea level it needs less boost for the same air.
+  await page.getByRole('radio', { name: 'Jeddah', exact: true }).check();
+  await expect(page.locator('#dyno-altitude-note')).toContainText('101.3 kPa');
+  await expect(page.locator('.readouts-block__at')).toContainText('Jeddah');
+  await expect
+    .poll(async () => Number.parseFloat((await powerReadout(page).textContent()) ?? ''))
+    .toBeGreaterThanOrEqual(riyadh);
+
+  // A custom elevation takes a number and shows its pressure.
+  await page.getByRole('radio', { name: 'Custom', exact: true }).check();
+  const elevation = page.locator('#dyno-elevation');
+  await elevation.fill('2000');
+  await elevation.press('Enter');
+  await expect(page.locator('#dyno-elevation-pressure')).toContainText('79.5 kPa');
+  await expect(page.locator('.readouts-block__at')).toContainText('2,000 m');
+
+  // A naturally aspirated car loses power with the altitude.
+  await page.locator('#dyno-car').selectOption('nissan-350z-z33');
+  await expect(page.locator('#dyno')).toHaveAttribute('data-trim', /^nissan-350z-z33\//);
+  await expect(page.locator('#dyno')).toHaveAttribute('data-state', 'ready');
+  const high = Number.parseFloat((await powerReadout(page).textContent()) ?? '');
+  await page.getByRole('radio', { name: 'Jeddah', exact: true }).check();
+  await expect
+    .poll(async () => Number.parseFloat((await powerReadout(page).textContent()) ?? ''))
+    .toBeGreaterThan(high * 1.15);
+
+  // Fuel: where it is sold, and a tune for race fuel and E85.
+  await page.getByRole('radio', { name: '98', exact: true }).check();
+  await expect(page.locator('#dyno-fuel-note')).toContainText('Riyadh, Jeddah');
+  await page.getByRole('radio', { name: 'E85', exact: true }).check();
+  await expect(page.locator('#dyno-fuel-note')).toContainText('No E85 at Saudi pumps');
+  await expect(page.locator('#dyno-fuel-note')).toContainText('Needs a tune');
+  await expect(page.locator('.readouts-block__at')).toContainText('E85');
+  await page.screenshot({ path: `${SHOTS}/dyno-altitude-fuel.png` });
   expect(problems).toEqual([]);
 });
 
@@ -102,7 +161,19 @@ test('“How we calculate this” opens, lists every assumption and closes', asy
   await expect(drawer.getByRole('heading', { name: 'Airflow first' })).toBeVisible();
   await expect(drawer.locator('.manual__table--assumptions tbody tr')).not.toHaveCount(0);
   const rows = await drawer.locator('.manual__table--assumptions tbody tr').count();
-  expect(rows).toBeGreaterThanOrEqual(70);
+  expect(rows).toBeGreaterThanOrEqual(110);
+  // The known-build table, every build inside its 10 % mark.
+  await expect(drawer.getByRole('heading', { name: 'Known builds' })).toBeVisible();
+  await expect(drawer.locator('.manual__table--builds')).toBeVisible({ timeout: 60_000 });
+  expect(
+    await drawer.locator('.manual__table--builds tbody tr:not(.manual__car)').count(),
+  ).toBeGreaterThanOrEqual(15);
+  await expect(drawer.locator('.manual__miss')).toHaveCount(0);
+  await expect(drawer.locator('.manual__car', { hasText: 'Supra' })).toContainText(
+    'validated on stock turbos only; big-turbo builds unverified',
+  );
+  await drawer.getByRole('heading', { name: 'Known builds' }).scrollIntoViewIfNeeded();
+  await page.screenshot({ path: `${SHOTS}/dyno-manual-builds.png` });
   await page.screenshot({ path: `${SHOTS}/dyno-manual.png` });
   await page.keyboard.press('Escape');
   await expect(drawer).toBeHidden();

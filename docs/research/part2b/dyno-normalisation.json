@@ -1,0 +1,1346 @@
+{
+  "researchedOn": "2026-09-30",
+  "topic": "How chassis dynos and correction standards read, so real dyno sheets can be normalised to the simulation's target: roller inertia dyno (Dynojet-type) wheel power, SAE J1349 corrected.",
+  "summary": {
+    "mostReliable": [
+      "Correction formulas: EEC 80/1269 as amended (legal text read): αa = (99/ps)^1.2 · (T/298)^0.6, 25 °C / 99 kPa dry, valid only 0.93-1.07 and 15-35 °C. Dynojet's 'SAE' (own manual): CF = 1.18 · (99/pd) · sqrt(T/298) − 0.18 (J1349 JUN90, 85 % mechanical efficiency). SuperFlow's default 'SAE' has no friction term; MAHA's 'SAE' uses the ISO-type exponents. DIN 70020 (MAHA): (1013/p) · sqrt(T/293), total pressure.",
+      "STD (J607) vs SAE (J1349): Ford Racing says about 4 %. Recomputed from the formulas: 1.040 at 25 °C / 99 kPa, 1.034 at 45 °C, about 1.05 in cold air.",
+      "Best-controlled same-car test (Road & Track 2026, Dark Horse 6MT, 5th = 1:1, SAE, same week): vs Dynojet 248X 425.7 whp → Dynapack 1.012, SuperFlow 0.988, Mustang AWD 1.092. Dynojet whp was 0.851 of Ford's 500 hp rating.",
+      "DSPORT 2016 (same Supra and EVO IX on five dynos; conditions not stated): vs Dynojet 424xLC2 → Rototest 0.91-0.93, Dynapack 0.99-1.01 on the RWD car but 0.90-0.95 on the AWD car, Mustang 0.84-0.88 RWD but 1.00-1.02 AWD, SuperFlow 0.84-0.91.",
+      "Losses: component literature gives manual gearbox 92-97 % and hypoid axle 90-95 % at full load, with torque-dependent and torque-independent parts. On a MAHA twin-roller dyno a 2.0 RWD manual in 4th showed wheel/engine 0.85-0.87 at low and mid rpm, falling to 0.83 at 5000 and 0.74 at 6000 rpm because the loss grows with speed.",
+      "Dyno makers themselves model loss as speed-dependent (coast-down) plus a small torque-proportional share: SuperFlow K = 0.07-0.09 for manuals, up to 0.30 for automatics.",
+      "Sweep effects (Mustang manual): fast accelerating sweeps read lowest, longer sweeps read higher; inertia effect scales with overall ratio squared (top gear about 3 % of 1st). Pulls are made in the 1:1 gear (Ford, Dynojet, MAHA). Leaving out wheel inertia can cut an acceleration-test reading by up to 10 % (SuperFlow)."
+    ],
+    "biggestDoubts": [
+      "There is no single Mustang-to-Dynojet factor: measured ratios run from 0.84 to 1.09 depending on the car (RWD vs AWD), the software mode and the shop. The popular '10-15 % lower' only held for the RWD Supra.",
+      "Dyno Dynamics and Mainline ratios (about 15 % and 15-18 % below Dynojet) come only from experienced tuners on forums. On Dyno Dynamics even the wheel figure moves by about 15 % between shootout classes, so a DD sheet without its class is hard to use.",
+      "Whether a sheet is SAE, STD or uncorrected is often not printed. Dynojet's factory default and any date it changed from STD to SAE were not found.",
+      "The project default of 45 °C ambient is outside the 15-35 °C range that SAE J1349 (AUG2004) and EEC 80/1269 intend their corrections for; corrected numbers from very hot days are extrapolations.",
+      "Density corrections can over-correct modern boost-controlled turbo engines (auto motor und sport, MAHA/Porsche case). This matters for S15, JZA80 and FD3S sheets.",
+      "Fixed-vs-proportional loss on a Dynojet has no clean controlled test; the best same-car evidence is one forum anecdote (C5 Corvette, ~80 hp constant from 440 to 615 hp). The MAHA data comes from a twin-roller dyno, which has more tyre loss than a single Dynojet drum.",
+      "DSPORT did not state correction, gear or test dates; R&T is only one car."
+    ]
+  },
+  "dynoTypes": [
+    {
+      "dyno": "Mustang MD-AWD-500 (eddy-current load dyno)",
+      "comparedWith": "Dynojet 424xLC2",
+      "ratio": "Supra (RWD): 0.883 at low boost, 0.840 at high boost (peak to peak). EVO IX (AWD): 1.023 at low boost, 0.995 at high boost. So the Mustang read 12-16 % lower on the RWD car but about the same or slightly higher on the AWD car.",
+      "howMeasured": "Same two cars (1997 Toyota Supra, RWD, big single turbo; 2006 Mitsubishi EVO IX, AWD, 28 psi high boost on 91/E85 tune) run at low and high boost on five dynos at different shops (Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, SuperFlow AutoDyn 30 AWD), hood down, 15-minute cool-down with fans, three pulls per setting. The article text does NOT state the weather correction, the gear, or whether the sessions were on the same day. Values were read from the magazine's tables (images); the tables do not label units, so they are presumably wheel (hub) horsepower. Image file names suggest DSPORT issue #135; the web pages show 11 Apr 2016.",
+      "sources": [
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra Low Boost' (image)",
+          "quote": "Image table read: at 8000 RPM Dynojet 590.75, Dynapack 585.12 (-5.63), Mustang 521.67 (-69.08), Rototest 551.97 (-38.78), SuperFlow 496.40 (-94.35); these are the bold (peak) values for each dyno.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 741.98 @7000 RPM; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000. At 7000 RPM: Dynojet 741.98, Dynapack 744.79, Mustang 616.67, Rototest 675.77, SuperFlow 606.73.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-008-EVOLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO Low Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 323.85 @7200 RPM; Dynapack 290.59 @7200; Mustang 331.33 @7000; Rototest 294.83 @7200; SuperFlow 293.50 @7000.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-009-EVOHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 457.71 @7000 RPM; Dynapack 433.79 @7200; Mustang 455.33 @7000; Rototest 423.40 @7000; SuperFlow 418.50 @6500.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two: The Test Cars' (11 Apr 2016)",
+          "quote": "Lists the dynos: Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, Superflow AutoDyn 30 AWD. \"The Supra performed without fail and after making 30+ pulls on the various dynamometers, it drove home without a hiccup.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "http://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two', page 2 (EVO IX)",
+          "quote": "EVO IX ECU \"optimized for both 91-octane and E85, with the boost increased to 28 psi\"; it \"functioned flawlessly from facility to facility, making repeatable passes at low and high boost settings at each location\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-three-verdict-dyno-showcase/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Three: Verdict + Dyno Showcase'",
+          "quote": "\"Overall, repeatability to within two percent on average was a variance that the test dynos delivered on.\" ... \"While dyno figures provide a great point of reference, trying to compare the figures from one dyno to another is futile.\" Methodology: hood down, 15-minute cool down with fans on between runs.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium",
+      "notes": "Ratios are the researcher's arithmetic on the magazine's peak values. The sign flip between the RWD and AWD car means no single Mustang/Dynojet factor fits both."
+    },
+    {
+      "dyno": "Dynapack DP6000 (hydraulic hub dyno)",
+      "comparedWith": "Dynojet 424xLC2",
+      "ratio": "Supra (RWD): 0.990 low boost, 1.012 high boost. EVO IX (AWD): 0.897 low boost, 0.948 high boost.",
+      "howMeasured": "Same two cars (1997 Toyota Supra, RWD, big single turbo; 2006 Mitsubishi EVO IX, AWD, 28 psi high boost on 91/E85 tune) run at low and high boost on five dynos at different shops (Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, SuperFlow AutoDyn 30 AWD), hood down, 15-minute cool-down with fans, three pulls per setting. The article text does NOT state the weather correction, the gear, or whether the sessions were on the same day. Values were read from the magazine's tables (images); the tables do not label units, so they are presumably wheel (hub) horsepower. Image file names suggest DSPORT issue #135; the web pages show 11 Apr 2016.",
+      "sources": [
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra Low Boost' (image)",
+          "quote": "Image table read: at 8000 RPM Dynojet 590.75, Dynapack 585.12 (-5.63), Mustang 521.67 (-69.08), Rototest 551.97 (-38.78), SuperFlow 496.40 (-94.35); these are the bold (peak) values for each dyno.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 741.98 @7000 RPM; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000. At 7000 RPM: Dynojet 741.98, Dynapack 744.79, Mustang 616.67, Rototest 675.77, SuperFlow 606.73.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-008-EVOLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO Low Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 323.85 @7200 RPM; Dynapack 290.59 @7200; Mustang 331.33 @7000; Rototest 294.83 @7200; SuperFlow 293.50 @7000.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-009-EVOHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 457.71 @7000 RPM; Dynapack 433.79 @7200; Mustang 455.33 @7000; Rototest 423.40 @7000; SuperFlow 418.50 @6500.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two: The Test Cars' (11 Apr 2016)",
+          "quote": "Lists the dynos: Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, Superflow AutoDyn 30 AWD. \"The Supra performed without fail and after making 30+ pulls on the various dynamometers, it drove home without a hiccup.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "http://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two', page 2 (EVO IX)",
+          "quote": "EVO IX ECU \"optimized for both 91-octane and E85, with the boost increased to 28 psi\"; it \"functioned flawlessly from facility to facility, making repeatable passes at low and high boost settings at each location\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-three-verdict-dyno-showcase/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Three: Verdict + Dyno Showcase'",
+          "quote": "\"Overall, repeatability to within two percent on average was a variance that the test dynos delivered on.\" ... \"While dyno figures provide a great point of reference, trying to compare the figures from one dyno to another is futile.\" Methodology: hood down, 15-minute cool down with fans on between runs.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium",
+      "notes": "On the RWD car the hub dyno matched the Dynojet within about 1 % at peak, even though a hub dyno has no tyre-on-roller loss. Part Three says Supra gains on the Dynapack were within 1 % of the Dynojet up to 5,000 rpm but differed by up to 11.8 % higher up."
+    },
+    {
+      "dyno": "Rototest HUBDYNO 1005 (hub dyno)",
+      "comparedWith": "Dynojet 424xLC2",
+      "ratio": "Supra: 0.934 low boost, 0.911 high boost. EVO IX: 0.910 low boost, 0.925 high boost (Rototest reads 7-9 % lower).",
+      "howMeasured": "Same two cars (1997 Toyota Supra, RWD, big single turbo; 2006 Mitsubishi EVO IX, AWD, 28 psi high boost on 91/E85 tune) run at low and high boost on five dynos at different shops (Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, SuperFlow AutoDyn 30 AWD), hood down, 15-minute cool-down with fans, three pulls per setting. The article text does NOT state the weather correction, the gear, or whether the sessions were on the same day. Values were read from the magazine's tables (images); the tables do not label units, so they are presumably wheel (hub) horsepower. Image file names suggest DSPORT issue #135; the web pages show 11 Apr 2016.",
+      "sources": [
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra Low Boost' (image)",
+          "quote": "Image table read: at 8000 RPM Dynojet 590.75, Dynapack 585.12 (-5.63), Mustang 521.67 (-69.08), Rototest 551.97 (-38.78), SuperFlow 496.40 (-94.35); these are the bold (peak) values for each dyno.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 741.98 @7000 RPM; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000. At 7000 RPM: Dynojet 741.98, Dynapack 744.79, Mustang 616.67, Rototest 675.77, SuperFlow 606.73.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-008-EVOLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO Low Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 323.85 @7200 RPM; Dynapack 290.59 @7200; Mustang 331.33 @7000; Rototest 294.83 @7200; SuperFlow 293.50 @7000.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-009-EVOHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 457.71 @7000 RPM; Dynapack 433.79 @7200; Mustang 455.33 @7000; Rototest 423.40 @7000; SuperFlow 418.50 @6500.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two: The Test Cars' (11 Apr 2016)",
+          "quote": "Lists the dynos: Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, Superflow AutoDyn 30 AWD. \"The Supra performed without fail and after making 30+ pulls on the various dynamometers, it drove home without a hiccup.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "http://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two', page 2 (EVO IX)",
+          "quote": "EVO IX ECU \"optimized for both 91-octane and E85, with the boost increased to 28 psi\"; it \"functioned flawlessly from facility to facility, making repeatable passes at low and high boost settings at each location\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-three-verdict-dyno-showcase/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Three: Verdict + Dyno Showcase'",
+          "quote": "\"Overall, repeatability to within two percent on average was a variance that the test dynos delivered on.\" ... \"While dyno figures provide a great point of reference, trying to compare the figures from one dyno to another is futile.\" Methodology: hood down, 15-minute cool down with fans on between runs.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium",
+      "notes": "Most consistent offset of the five in this test (0.91-0.93 on both cars)."
+    },
+    {
+      "dyno": "SuperFlow AutoDyn 30 AWD (eddy-current load dyno)",
+      "comparedWith": "Dynojet 424xLC2",
+      "ratio": "Supra: 0.840 low boost, 0.848 high boost. EVO IX: 0.906 low boost, 0.914 high boost.",
+      "howMeasured": "Same two cars (1997 Toyota Supra, RWD, big single turbo; 2006 Mitsubishi EVO IX, AWD, 28 psi high boost on 91/E85 tune) run at low and high boost on five dynos at different shops (Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, SuperFlow AutoDyn 30 AWD), hood down, 15-minute cool-down with fans, three pulls per setting. The article text does NOT state the weather correction, the gear, or whether the sessions were on the same day. Values were read from the magazine's tables (images); the tables do not label units, so they are presumably wheel (hub) horsepower. Image file names suggest DSPORT issue #135; the web pages show 11 Apr 2016.",
+      "sources": [
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra Low Boost' (image)",
+          "quote": "Image table read: at 8000 RPM Dynojet 590.75, Dynapack 585.12 (-5.63), Mustang 521.67 (-69.08), Rototest 551.97 (-38.78), SuperFlow 496.40 (-94.35); these are the bold (peak) values for each dyno.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'Supra High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 741.98 @7000 RPM; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000. At 7000 RPM: Dynojet 741.98, Dynapack 744.79, Mustang 616.67, Rototest 675.77, SuperFlow 606.73.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-008-EVOLowBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO Low Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 323.85 @7200 RPM; Dynapack 290.59 @7200; Mustang 331.33 @7000; Rototest 294.83 @7200; SuperFlow 293.50 @7000.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-009-EVOHighBoost.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Dyno Tech Guide, table 'EVO High Boost' (image)",
+          "quote": "Image table read, bold (peak) values: Dynojet 457.71 @7000 RPM; Dynapack 433.79 @7200; Mustang 455.33 @7000; Rototest 423.40 @7000; SuperFlow 418.50 @6500.",
+          "readVia": "read from image"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two: The Test Cars' (11 Apr 2016)",
+          "quote": "Lists the dynos: Dynojet 424xLC2, Dynapack DP6000, Mustang MD-AWD-500, Rototest HUBDYNO 1005, Superflow AutoDyn 30 AWD. \"The Supra performed without fail and after making 30+ pulls on the various dynamometers, it drove home without a hiccup.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "http://dsportmag.com/the-tech/dyno-tech-guide-part-two-the-test-cars/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Two', page 2 (EVO IX)",
+          "quote": "EVO IX ECU \"optimized for both 91-octane and E85, with the boost increased to 28 psi\"; it \"functioned flawlessly from facility to facility, making repeatable passes at low and high boost settings at each location\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-three-verdict-dyno-showcase/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Three: Verdict + Dyno Showcase'",
+          "quote": "\"Overall, repeatability to within two percent on average was a variance that the test dynos delivered on.\" ... \"While dyno figures provide a great point of reference, trying to compare the figures from one dyno to another is futile.\" Methodology: hood down, 15-minute cool down with fans on between runs.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium",
+      "notes": ""
+    },
+    {
+      "dyno": "Mustang AWD dyno (model not named)",
+      "comparedWith": "Dynojet 248X",
+      "ratio": "1.092 (Mustang read 9.2 % HIGHER: 465 vs 425.7 whp)",
+      "howMeasured": "Road & Track (Matt Farah), 2 Apr 2026: one 2026 Ford Mustang Dark Horse (5.0 NA V8, Tremec 6-speed manual, RWD) on four dynos at four SoCal shops in one week, 74 F, 91-octane, all pulls in 5th gear (1:1), all four corrected with the same SAE factor, best of three pulls (the third each time). Read via the AOL syndication; the R&T original URL could not be fetched by the tool.",
+      "sources": [
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Road & Track / Matt Farah, 'We Put 4 Dynos to the Test With a Ford Mustang Dark Horse. Here's What We Learned' (AOL syndication, Thu 2 Apr 2026)",
+          "quote": "\"Luckily, I had a perfect week in SoCal: It was 74 degrees and sunny, with a light breeze. Each shop was in virtually identical conditions for the test.\" ... \"Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. Reported here are the best of three pulls, which, in all four cases, was the third.\" Results: \"SuperFlow AutoDyn ... Westech Performance Group ... Best WHP: 420.8 • Best WTQ: 367.2\"; \"Dynapack Hub Dyno ... Bisimoto Engineering ... Best WHP: 430.9 • Best WTQ: 376.6\"; \"Mustang AWD Dyno ... World Motorsports ... Best WHP: 465 • Best WTQ: 388\"; \"Dynojet Research 248X ... HK MotorSports ... Best WHP: 425.7 • Best WTQ: 378.8\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.roadandtrack.com/car-culture/a70590851/we-put-4-dynamometers-to-the-test/",
+          "accessed": "2026-09-30",
+          "title": "Road & Track original article URL (as linked by Carscoops); not fetchable by the tool",
+          "quote": "Not read directly; cited as the original of the AOL syndication.",
+          "readVia": "not read"
+        },
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Same article, shop comment",
+          "quote": "Craig Paisley: \"Yeah, we know the Mustang [dyno] reads a bit higher compared to the Dynojets, but this machine is so versatile, and a lot of the modern cars need the all-wheel-drive rollers to even get readings at all!\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "strong (for this one car and these four machines)",
+      "notes": "Opposite direction to the common 'Mustang reads lower' rule. The Mustang software mode/inertia settings used were not reported."
+    },
+    {
+      "dyno": "Dynapack hub dyno",
+      "comparedWith": "Dynojet 248X",
+      "ratio": "1.012 (430.9 vs 425.7 whp)",
+      "howMeasured": "Road & Track (Matt Farah), 2 Apr 2026: one 2026 Ford Mustang Dark Horse (5.0 NA V8, Tremec 6-speed manual, RWD) on four dynos at four SoCal shops in one week, 74 F, 91-octane, all pulls in 5th gear (1:1), all four corrected with the same SAE factor, best of three pulls (the third each time). Read via the AOL syndication; the R&T original URL could not be fetched by the tool.",
+      "sources": [
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Road & Track / Matt Farah, 'We Put 4 Dynos to the Test With a Ford Mustang Dark Horse. Here's What We Learned' (AOL syndication, Thu 2 Apr 2026)",
+          "quote": "\"Luckily, I had a perfect week in SoCal: It was 74 degrees and sunny, with a light breeze. Each shop was in virtually identical conditions for the test.\" ... \"Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. Reported here are the best of three pulls, which, in all four cases, was the third.\" Results: \"SuperFlow AutoDyn ... Westech Performance Group ... Best WHP: 420.8 • Best WTQ: 367.2\"; \"Dynapack Hub Dyno ... Bisimoto Engineering ... Best WHP: 430.9 • Best WTQ: 376.6\"; \"Mustang AWD Dyno ... World Motorsports ... Best WHP: 465 • Best WTQ: 388\"; \"Dynojet Research 248X ... HK MotorSports ... Best WHP: 425.7 • Best WTQ: 378.8\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.roadandtrack.com/car-culture/a70590851/we-put-4-dynamometers-to-the-test/",
+          "accessed": "2026-09-30",
+          "title": "Road & Track original article URL (as linked by Carscoops); not fetchable by the tool",
+          "quote": "Not read directly; cited as the original of the AOL syndication.",
+          "readVia": "not read"
+        }
+      ],
+      "strength": "strong (for this one car)",
+      "notes": "Agrees with the DSPORT RWD result (Dynapack within about 1 % of Dynojet)."
+    },
+    {
+      "dyno": "SuperFlow AutoDyn (about 30 years old, current software)",
+      "comparedWith": "Dynojet 248X",
+      "ratio": "0.988 (420.8 vs 425.7 whp)",
+      "howMeasured": "Road & Track (Matt Farah), 2 Apr 2026: one 2026 Ford Mustang Dark Horse (5.0 NA V8, Tremec 6-speed manual, RWD) on four dynos at four SoCal shops in one week, 74 F, 91-octane, all pulls in 5th gear (1:1), all four corrected with the same SAE factor, best of three pulls (the third each time). Read via the AOL syndication; the R&T original URL could not be fetched by the tool.",
+      "sources": [
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Road & Track / Matt Farah, 'We Put 4 Dynos to the Test With a Ford Mustang Dark Horse. Here's What We Learned' (AOL syndication, Thu 2 Apr 2026)",
+          "quote": "\"Luckily, I had a perfect week in SoCal: It was 74 degrees and sunny, with a light breeze. Each shop was in virtually identical conditions for the test.\" ... \"Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. Reported here are the best of three pulls, which, in all four cases, was the third.\" Results: \"SuperFlow AutoDyn ... Westech Performance Group ... Best WHP: 420.8 • Best WTQ: 367.2\"; \"Dynapack Hub Dyno ... Bisimoto Engineering ... Best WHP: 430.9 • Best WTQ: 376.6\"; \"Mustang AWD Dyno ... World Motorsports ... Best WHP: 465 • Best WTQ: 388\"; \"Dynojet Research 248X ... HK MotorSports ... Best WHP: 425.7 • Best WTQ: 378.8\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.roadandtrack.com/car-culture/a70590851/we-put-4-dynamometers-to-the-test/",
+          "accessed": "2026-09-30",
+          "title": "Road & Track original article URL (as linked by Carscoops); not fetchable by the tool",
+          "quote": "Not read directly; cited as the original of the AOL syndication.",
+          "readVia": "not read"
+        },
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Same article, shop comment",
+          "quote": "\"We purchased the shop turnkey from someone going out of business, including the dynos,\" ... \"But we run the latest software and have it serviced regularly.\" The chassis dyno is approximately 30 years old.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "strong (for this one car)",
+      "notes": "Much closer to the Dynojet than in the DSPORT test (0.84-0.91). SuperFlow's own software can add an 'operator' multiplier (default 1.10) for comparison with other dynos; whether this shop's number included it is not stated."
+    },
+    {
+      "dyno": "SuperFlow AutoDyn 30 (factory software default)",
+      "comparedWith": "'other dynamometer systems' (channels named DJWhTq / DJWhPw)",
+      "ratio": "Factory default multiplier 1.10 applied to SAE-corrected wheel power in the comparison channels, i.e. SuperFlow implies its own reading is about 0.91 of the other system",
+      "howMeasured": "Dyno maker's default configuration value, not a measurement. That 'DJ' stands for Dynojet is the researcher's inference; the document only says 'comparison to other dynamometer systems'.",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"Channel 78 is for entering the operator input correction factor. Channel 78 is used for comparison to other dynamometer systems and equation channels 58 - DJWhTq and 114 - DJWhPw use this factor. The channel is defaulted to a 10% (default value 1.10) correction factor.\" ... \"114 - DJWhPw Chp return(SAEPwr*Corfac); Channel 114 an \"operator\" corrected wheel power channel that uses the SAE J-1349 atmospheric correction applied to wheel power and then multiplies by an additional \"operator\" selected multiplier. Defaulted to 1.10 or 10%.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (maker default, not measured data)",
+      "notes": ""
+    },
+    {
+      "dyno": "Mustang (updated PCI units, newer PowerDyne software)",
+      "comparedWith": "Dynojet",
+      "ratio": "Mustang needed 12-13 % added to match the Dynojet, i.e. Mustang ≈ 0.885-0.893 × Dynojet",
+      "howMeasured": "Forum post by an HP Academy tutor: back-to-back tests in 2012 and again around 2020 on two pairs of dynos. Cars, corrections and gear not given.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Horsepower Dyno Readings, USA compared to AUS, et. al.'",
+          "quote": "Mike McGinnis: \"The updated PCI units and newer Powerdyne software needed about 12-13% added to get to Dynojet numbers when I back to back tested in 2012, and confirmed again around 2020 on 2 different pairs of dynos.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (rule of thumb from an experienced tuner)",
+      "notes": "Matches the DSPORT RWD Supra result (0.84-0.88) but not the R&T Dark Horse (1.09) or DSPORT EVO (1.0)."
+    },
+    {
+      "dyno": "Mainline (roller, Australia)",
+      "comparedWith": "Dynojet",
+      "ratio": "Mainline 15-18 % lower (sometimes 20 %+), i.e. about 0.82-0.85 × Dynojet",
+      "howMeasured": "Forum statement by HP Academy tutor Andre Simon, who owns a Mainline and a Dynapack; no controlled test data given. He adds that Mainline and Dyno Dynamics 'seem to read somewhat similar'.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Horsepower Dyno Readings, USA compared to AUS, et. al.'",
+          "quote": "Andre Simon: \"... the most common dynos in Australia tend to be Mainline and DD which conveniently seem to read somewhat similar. In the US the dominant dyno if you want big numbers is the Dynojet. I agree 100% that there is a massive difference between a Mainline and Dynojet number. I put it between 15-18% myself but that's a moving target and in some instances could easily be 20% or even more.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (rule of thumb from an experienced tuner)",
+      "notes": ""
+    },
+    {
+      "dyno": "Mainline (roller)",
+      "comparedWith": "Dynapack (hub)",
+      "ratio": "Mainline about 15-18 % lower than Dynapack",
+      "howMeasured": "Forum statement ('from my own testing'); cars and conditions not given.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/mainline-vs-dynapack-hp-numbers/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Mainline vs Dynapack hp numbers'",
+          "quote": "Andre Simon: \"From my own testing it seems that the mainline reads about 15-18% lower than Dynapack.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (rule of thumb)",
+      "notes": "Consistent with Dynapack ≈ Dynojet on RWD cars (DSPORT, R&T)."
+    },
+    {
+      "dyno": "Dyno Dynamics (eddy current, Australia/NZ)",
+      "comparedWith": "Dynojet",
+      "ratio": "about 0.85 (DD reads about 15 % lower)",
+      "howMeasured": "Forum statement by a DD 450ds owner comparing with competitors' Dynojets; no controlled data.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/mainline-vs-dynapack-hp-numbers/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Mainline vs Dynapack hp numbers'",
+          "quote": "Orlando Bello: \"I have this descusion all the time because i have a DynoDynamic and my competitors have Dynojet dyno and my DD also real like 15% lower than Dynojet\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (rule of thumb)",
+      "notes": "Search-result snippets pointed to same-car Evo X comparisons (about 12 % and 18 % lower), but those forum pages returned 403 or a paid-crawl gate, so they are not used (see notFound and gates)."
+    },
+    {
+      "dyno": "Dyno Dynamics 'comparison mode'",
+      "comparedWith": "Dyno Dynamics normal 'power at the wheels'",
+      "ratio": "about 1.10 (comparison mode about 10 % higher)",
+      "howMeasured": "Forum post; the poster says a DynoTech rep described the mode as calibrated 'to US standards'.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Horsepower Dyno Readings, USA compared to AUS, et. al.'",
+          "quote": "Blaeven: \"Our DynoDynamics single retarder dyno has a power readout setting called 'comparison mode' and when I asked the rep from DynoTech what that was for, he said 'Oh, it's so you can show power numbers that are calibrated to US standards, so you can share dyno numbers with people in America.' From my testing/calculations - it's ~10% higher than my normal 'power at the wheels' measurement.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak",
+      "notes": ""
+    },
+    {
+      "dyno": "Dyno Dynamics, different shootout classes",
+      "comparedWith": "the same Dyno Dynamics dyno in other shootout classes (same car, same session)",
+      "ratio": "Wheel hp 169 (S4) to 195 (S8f), a 15 % spread; 'flywheel' hp 203 to 253, a 25 % spread. Implied wheel/flywheel ratio 0.77-0.84 by class.",
+      "howMeasured": "A dyno operator posting on PistonHeads ran one naturally aspirated inline-6 car (the fetch tool's summary calls it a 4.0-litre 'Tuscan') through every shootout class in one session and repeated S4 at the end (205 vs 203 hp).",
+      "sources": [
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777659",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'dyno dynamics shootout mode comparison' (posts of 14 Nov 2018)",
+          "quote": "spitfire4v8: \"the list is arranged as so : first the shootout mode, then the peak hp recorded (flywheel) then wheels hp. ... Normally aspirated shootout runs: S4 203hp 169hp S6 218hp 175hp S8 237hp 187hp Forced induction shootout runs: S4f 211hp 176hp S6f 225hp 182hp S8f 253hp 195hp Rotary engine modes: S2r 206hp 172hp S3r 232hp 188hp Finally I did a run again in S4 to verify the car hadn't changed during the runs, it made 205hp so 2hp difference from where I first started.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777219",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'Dyno Dynamics - Shoot out modes' (posts of 12 Nov 2018)",
+          "quote": "AW111 (writes as 'we'; affiliation not stated): \"Shootout class controls 3 things: Ramp rate: more powerful classes tend to get higher ramp rates. Driveline Inertia: we assume a rotating inertia based on class. Losses: the flywheel -> roller loss algorithm uses different parameters for different classes.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (same car, same session; single forum report)",
+      "notes": "A DD sheet must say which class was used; even its 'wheel' figure depends on class because the ramp rate and assumed driveline inertia change."
+    },
+    {
+      "dyno": "Mainline ProHub (hub)",
+      "comparedWith": "Dynojet 224x",
+      "ratio": "1.11 (500 vs 450 whp)",
+      "howMeasured": "One car, same tune, reported by the shop that owns the Dynojet (blog). Conditions and corrections not given.",
+      "sources": [
+        {
+          "url": "https://goracebox.com/blogs/knowledge-base/dynojet-vs-mustang-vs-hub-dyno",
+          "accessed": "2026-09-30",
+          "title": "Racebox knowledge base, 'Dynojet vs Mustang vs Hub Dyno Compared'",
+          "quote": "Customer example: Mainline ProHub 500 whp; Racebox DynoJet 224x 450 whp; same car, same tune (50 whp delta).",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak",
+      "notes": ""
+    },
+    {
+      "dyno": "MAHA LPS 3000 (twin-roller eddy current; reports wheel power, drag power and an engine-power estimate)",
+      "comparedWith": "Dynojet",
+      "ratio": "not found (no same-car MAHA vs Dynojet data found)",
+      "howMeasured": "n/a",
+      "sources": [
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA LPS 3000 operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "\"The engine power accrues from the wheel power plus the drag power, which is automatically determined after the clutch is disengaged.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "n/a",
+      "notes": "See drivetrainLoss for what the MAHA wheel/engine split looks like on two manual cars."
+    }
+  ],
+  "corrections": [
+    {
+      "standard": "SAE J1349 (JUN1990 revision) as implemented by Dynojet WinPEP ('SAE' on Dynojet sheets)",
+      "reference": "25 °C (77 °F), 99 kPa dry air pressure (Dynojet prints 29.22 inHg and 537 °R; 99 kPa = 29.235 inHg), 0 % humidity",
+      "formula": "CF = 1.18 × (29.22 / Bdo) × sqrt((To + 460) / 537) − 0.18, with To = intake air temperature in °F and Bdo = dry ambient absolute pressure in inHg. Same thing in SI: CF = 1.18 × (99 / pd[kPa]) × sqrt((T[°C] + 273) / 298) − 0.18.",
+      "notes": "The 1.18 / −0.18 form is the J1349 friction assumption: Dynojet says it 'assumes a mechanical efficiency of 85%'. Dynojet applies it to the wheel power it measures. Dynojet's printed 29.22 inHg looks like a rounding slip for 29.23-29.235 inHg (99 kPa); other Dynojet and SuperFlow material uses 29.23/29.235. Ford quotes the J1349 conditions as '77 deg F inlet air, 29.31 inHg barometric pressure', which does not match 99 kPa dry exactly (maybe a total-pressure figure; not explained).",
+      "sources": [
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP User Guide For the Motorcycle Dynamometer, Document #98128101, Revision C 2/9/00",
+          "quote": "p. 9-5: \"Dynojet's WinPEP (Performance Evaluation Program for Windows 95) software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% and is much more accurate than earlier formulas at extreme conditions. The formula used is: CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure\" (square-root sign confirmed on the rendered page)",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/138/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP 7 User Guide, Part Number 98118103 Version 02 (08/2006)",
+          "quote": "p. 2-3: \"Dynojet's WinPEP 7 software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% and is much more accurate than earlier formulas at extreme conditions.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+          "accessed": "2026-09-30",
+          "title": "Dynojet University (Dynojet Research, Inc.), 'Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing', July 4th, 2025",
+          "quote": "\"SAE ... corrects the numbers to a standard of 29.235 inches of mercury (approximately 99 kPa) at 77°F (25°C) with 0% humidity.\"",
+          "readVia": "read directly (post text fetched from the blog's own content feed; the page itself is JavaScript)"
+        },
+        {
+          "url": "https://wahiduddin.net/calc/cf.htm",
+          "accessed": "2026-09-30",
+          "title": "Richard Shelquist (wahiduddin.net), 'Dyno Correction Factor' article",
+          "quote": "Equation image for SAE J1349 JUN90 reads: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180, with Pd = dry air pressure in mb and Tc in °C. Text: \"SAE J1349 JUN90 standard includes an assumed mechanical efficiency of 85% in order to provide an estimate of the true engine horsepower (without accessories).\"",
+          "readVia": "read directly (equation read from image)"
+        },
+        {
+          "url": "https://performanceparts.ford.com/download/pdfs/EnginePerformanceTechTips.pdf",
+          "accessed": "2026-09-30",
+          "title": "Ford Racing Performance Parts, 'Dynamometer Testing and Ford Racing Calibrations' (undated PDF)",
+          "quote": "\"... the closer the actual conditions are to the SAE J1349 standard (77 deg F inlet air, 29.31 inHg barometric pressure), the more comparable the results are to those quoted by the manufacturer.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "SAE J1349 (AUG2004 and later revisions)",
+      "reference": "25 °C, 99 kPa (990 mb) dry; intended range 15-35 °C air and 900-1050 mb dry pressure",
+      "formula": "cf = 1.176 × [(990 / Pd[mb]) × ((Tc + 273) / 298)^0.5] − 0.176",
+      "notes": "Numerically almost the same as the JUN90 form (difference under 0.05 % in normal conditions; see the derived entry below). The 2004 revision prefers measured friction power and keeps 85 % mechanical efficiency only as a fallback. The standard itself (SAE, paid) was not read; this comes from a careful secondary page. IMPORTANT for Swap Lab: the project default ambient of 45 °C is outside the stated 15-35 °C intended range.",
+      "sources": [
+        {
+          "url": "https://wahiduddin.net/calc/cf.htm",
+          "accessed": "2026-09-30",
+          "title": "Richard Shelquist (wahiduddin.net), 'Dyno Correction Factor' article",
+          "quote": "\"In August 2004 the SAE released J1349 Revised AUG2004 which specifies that the preferred method of determining the friction power used by the motor accessories is actual measurement, and that the assumption of 85% mechanical efficiency (as formerly used in SAE J1349 Revision JUN90) should only be used when actual friction data are not available.\" Equation image reads: cf = 1.176 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.176. \"Section 5.1 of the SAE J1349 AUG2004 revision also makes it clear that this correction factor is not intended to provide accurate corrections over an extremely wide range, but rather that the intended range of air temperatures is 15 to 35 deg C, and the intended range of dry air pressures is 900 to 1050 mb.\"",
+          "readVia": "read directly (equation read from image)"
+        }
+      ]
+    },
+    {
+      "standard": "'SAE J1349' as SuperFlow WinDyn implements it by default (AutoDyn 30 config)",
+      "reference": "77 °F (25 °C), 29.23 inHg (99 kPa) dry",
+      "formula": "SAECor = ((459.7 + AirInT[°F]) / 536.7)^0.5 × (29.23 / (Baro_P − Vap_P)) — a plain density ratio with NO 1.18 / −0.18 friction term",
+      "notes": "So an 'SAE' number is not the same on every dyno brand. Near 25 °C / 99 kPa the two forms agree; at 45 °C / 99 kPa the SuperFlow form is about 0.6 % lower than the Dynojet form (derived). SuperFlow also leaves coast-down losses uncorrected when it estimates engine power.",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"101 - SAECor factor return(((459.7+AirInT)/536.7)^0.5*(29.23/ (Baro_P-Vap_P))); Channel 101 is used to calculate the Society of Automotive Engineers (SAE) J1349 power correction factor. ... This factor estimates what the measured torque and power would be at 77° Fahrenheit [25°C] and 29.23 inches of mercury [99 kPa] air pressure.\" ... \"NOTE: The correction factors listed below are the default formulas provided by SuperFlow. WinDyn is capable of generating performance data corrected to any standard.\" ... Channel 64: \"Coast down losses are not corrected as they are very weakly affected by air density changes.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "SAE J607 ('STD' or 'STP' on many dyno sheets)",
+      "reference": "60 °F (15.6 °C), 29.92 inHg (101.3 kPa) dry",
+      "formula": "STPCor = ((459.7 + T[°F]) / 519.7)^0.5 × 29.92 / (Baro_P − Vap_P) (SuperFlow's default channel). No friction term.",
+      "notes": "Size of gap: Ford Racing says J1349 is 'typically about 4% lower' than J607; Fuel Moto says STD is 2-4 % higher; Dynojet only says STD 'often results in a higher displayed horsepower number'. The derived entry below gives 1.040 at the J1349 reference point and 1.034 at 45 °C. One unverified search snippet (forum page blocked) described a WinPEP 'standard corrected' mode using 29.92 inHg and 68 °F; this conflicts with the 60 °F used by SuperFlow, Fuel Moto and J607 and could not be checked. Fuel Moto says STD 'was canceled in 1988' (secondary source, not verified). SuperFlow's printed channel 102 has misplaced brackets ('/519.7^0.5*(29.92/Baro_P-Vap_P)'); the formula given here is the evident intended form, matching its own description (60 °F, 29.92 inHg). Fuel Moto's SAE reference '29.60 inHg, 36 % humidity' at 77 °F works out to about 99.1 kPa dry, so it is consistent with 99 kPa dry (researcher's check).",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); Channel 102 is used to calculate the Standard Temperature and Pressure (STP) J607 power correction factor. ... This factor estimates what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure [15.5°C and 101.3 kPa].\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://performanceparts.ford.com/download/pdfs/EnginePerformanceTechTips.pdf",
+          "accessed": "2026-09-30",
+          "title": "Ford Racing Performance Parts, 'Dynamometer Testing and Ford Racing Calibrations' (undated PDF)",
+          "quote": "\"The two most common standards are SAE J1349 and SAE J607 (sometimes known as “STD” on some dynos). For this article, understand that these correction factors will give results that are different from each other, with SAE J1349 typically about 4% lower than SAE J607. OEMs will almost always quote J1349 corrected numbers when advertising horsepower and torque. Some “tuning” shops will report STD numbers because they are always higher than SAE.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://university.fuelmotousa.com/article/dyno-corrections-factors-sae-vs-std/",
+          "accessed": "2026-09-30",
+          "title": "Fuel Moto University, 'Dyno Correction Factors SAE vs STD' (undated)",
+          "quote": "SAE: \"77°F, 29.60″ barometer, and 36% humidity\"; STD: \"60°F, 29.92″ barometer, and 0% humidity\"; \"STD correction results in 2-4% higher numbers than SAE.\"; STD was \"canceled in 1988\" and \"replaced by the SAE J1349 standard.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+          "accessed": "2026-09-30",
+          "title": "Dynojet University (Dynojet Research, Inc.), 'Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing', July 4th, 2025",
+          "quote": "\"STD (Standard): This factor typically corrects to slightly more favorable conditions (e.g., 60°F), which often results in a higher displayed horsepower number compared to SAE.\"",
+          "readVia": "read directly (blog content feed)"
+        },
+        {
+          "url": "https://wahiduddin.net/calc/cf.htm",
+          "accessed": "2026-09-30",
+          "title": "Richard Shelquist (wahiduddin.net), 'Dyno Correction Factor' article",
+          "quote": "\"Note: SAE J607 is an older standard which did not attempt to include any of the engine's internal friction losses. Consequently, J607 gives higher values, which fail to include the friction losses.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "DIN 70020",
+      "reference": "20 °C (293 K), 1013 mbar TOTAL pressure (no humidity term)",
+      "formula": "Ka = (1013 / p[mbar]) × (T[K] / 293)^0.5 (MAHA's implementation for petrol engines)",
+      "notes": "MAHA's worked example: p = 936 mbar, T = 290 K gives Ka = 1.07671 (checks out arithmetically). Because DIN uses total (not dry) pressure and a cooler, higher-pressure reference, DIN-corrected power comes out about 0-4 % above SAE J1349 depending on temperature and humidity (2.2 % at 25 °C with 1 kPa vapour pressure, 1.6 % at 45 °C; derived entry below). The Sodré & Soares paper also describes DIN 70020 with p0 = 1.01325 bar, T0 = 293 K and no humidity correction.",
+      "sources": [
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "p. 36, '2.9.3 Extrapolation of the Engine Power with Gasoline Engines': \"DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5\" ... \"p Atmospheric pressure at the dyno in mbar ... T Air temperature at the dyno in Kelvin ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K, based on DIN 70200 [sic] the result is: Ka = 1.07671\" (formula layout garbled in the PDF text; structure read from the extracted text)",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+          "accessed": "2026-09-30",
+          "title": "Sodré & Soares, 'Comparison of engine power correction factors for varying atmospheric conditions', J. Braz. Soc. Mech. Sci. & Eng., Sept 2003",
+          "quote": "\"This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity.\" Reference p0 = 1.01325 bar, T0 = 293 K.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ]
+    },
+    {
+      "standard": "EEC 80/1269 as amended (88/195/EEC, 1999/99/EC) = the ECE R85 / ISO 1585 form ('EEC' or 'EWG' on dyno sheets)",
+      "reference": "298 K (25 °C), 99 kPa dry ('based on a total pressure of 100 kPa and a water vapour pressure of 1 kPa')",
+      "formula": "αa = (99 / ps)^1.2 × (T / 298)^0.6, with ps = dry pressure in kPa and T = intake air temperature in K. Valid test only if 0.93 ≤ αa ≤ 1.07; test conditions 288 K ≤ T ≤ 308 K and 80 kPa ≤ ps ≤ 110 kPa for spark-ignition engines.",
+      "notes": "Applies to 'naturally aspirated or supercharged positive-ignition' engines. ECE R85 and ISO 1585 texts could not be read (UNECE returned 403; ISO is paid); MAHA states it uses this same formula for ISO 1585 (and for SAE J1349 and JIS D1001). A footnote sets the temperature exponent to zero for engines with automatic intake-air temperature control that is still operating at 25 °C.",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+          "accessed": "2026-09-30",
+          "title": "Council Directive 80/1269/EEC, consolidated text 1980L1269 — EN — 31.12.1999 (legislation.gov.uk copy of the EUR-Lex consolidation)",
+          "quote": "p. 12: \"6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa Note: The dry pressure is based on a total pressure of 100 kPa and a water vapour pressure of 1 kPa.\" \"6.3.1. ... For positive-ignition engines 288 K ≤ T ≤ 308 K\" \"6.3.2. Pressure (ps) 80 kPa ≤ ps ≤ 110 kPa.\" \"6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6\" \"For a test to be valid, the correction factor αa must be such that: 0,93 ≤ αa ≤ 1,07\" (formula checked on the rendered page)",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1988-03-30_en.pdf",
+          "accessed": "2026-09-30",
+          "title": "Council Directive 80/1269/EEC, consolidated text of 30.03.1988 (legislation.gov.uk copy)",
+          "quote": "Already contains '6.4. Determination of correction factors αa and αd' with the 1,2 and 0,6 exponents and the 99 kPa / 298 K reference, i.e. the change from the 1980 form came with the 1988 amendment.",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "p. 36: EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001 are each given as \"Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6\" (layout garbled in the PDF text).",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "EEC 80/1269 as originally adopted (1980)",
+      "reference": "25 °C, 990 mbar dry",
+      "formula": "Ka = (990 / ps[mbar]) × (T[K] / 298)^0.5; valid test only if 0.96 ≤ K ≤ 1.06",
+      "notes": "Same algebra as SuperFlow's default 'SAE' channel (density ratio, no friction term). An old dyno program's 'EEC' option could implement either this or the 1988+ form; which one a given program uses was not found.",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_adopted_en.pdf",
+          "accessed": "2026-09-30",
+          "title": "Council Directive 80/1269/EEC as adopted, OJ No L 375/54, 31.12.80 (legislation.gov.uk copy)",
+          "quote": "\"5.2.2.1. Temperature: 25 °C. 5.2.2.2. Dry pressure (ps): 990 mbar. 5.2.3. ... For a test to be valid, the correction factor K must be such that 0·96 ≤ K ≤ 1·06.\" \"5.2.4.1. Positive-ignition engines (carburettor or injection) — factor Ka. ... Ka = (990/ps) · (T/298)^0.5\" (checked on the rendered page)",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "JIS D 1001",
+      "reference": "Conflicting: MAHA implements it like ISO 1585 (25 °C, 99 kPa dry); the Sodré & Soares paper (as summarised by the fetch tool) describes JIS D 1001 (JIS, 1993) with 1013.25 mbar and 293 K",
+      "formula": "MAHA: Ka = (990 / p)^1.2 × (T / 298)^0.6. Paper (as summarised): CF = (p/p0) × sqrt(T0/T), p0 = 1013.25 mbar, T0 = 293 K.",
+      "notes": "Primary JIS text not read (paid). The fetch-tool summary of the paper also gave SAE J1349 and ISO 1585 formulas that do not match the primary sources above, so its JIS description is low confidence. Treat JIS-corrected sheets as ≈ ISO/EEC unless the sheet says otherwise; this is the researcher's judgement, not a sourced fact.",
+      "sources": [
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "p. 36 lists 'JIS D1001' with the same (990/p)^1,2 · (T/298)^0,6 formula as EEC 80/1269 and ISO 1585.",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+          "accessed": "2026-09-30",
+          "title": "Sodré & Soares, 'Comparison of engine power correction factors for varying atmospheric conditions', J. Braz. Soc. Mech. Sci. & Eng., Sept 2003",
+          "quote": "\"The JIS D 1001 standard (JIS, 1993) recommends the following correction factor (CF3)\" ... CF3 = (p/p0) × √(T0/T), p0 = 1013.25 mbar, T0 = 293 K (as returned by the fetch tool; not verified against the PDF, which returned 403).",
+          "readVia": "via page-fetch tool (low confidence)"
+        }
+      ]
+    },
+    {
+      "standard": "Uncorrected",
+      "reference": "none (as measured at the day's conditions)",
+      "formula": "CF = 1",
+      "notes": "To normalise an uncorrected sheet you need the day's temperature, pressure and humidity; without them it cannot be converted.",
+      "sources": [
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/138/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP 7 User Guide, Part Number 98118103 Version 02 (08/2006)",
+          "quote": "p. 2-2: \"Data can either be viewed as measured (“uncorrected”) or corrected to standard atmospheric conditions using WinPEP .\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"100 - WhlPwr hp return(InrPwr+DynLos+AbsPwr); Channel 100 is used to calculate wheel power from inertia power plus dyno losses plus absorber power from the strain gauge. No atmospheric correction is applied.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "standard": "Caveat: correction on modern boost-controlled turbo engines",
+      "reference": "n/a",
+      "formula": "n/a",
+      "notes": "A turbo engine whose ECU raises boost to compensate for altitude/air density can be over-corrected by any density-based factor ('double correction'). Relevant to S15, JZA80 and FD3S sheets from hot or high-altitude shops.",
+      "sources": [
+        {
+          "url": "https://www.auto-motor-und-sport.de/technik/die-technik-moderner-leistungspruefstaende/",
+          "accessed": "2026-09-30",
+          "title": "auto motor und sport, Marcus Schurig, 'Prüfstand: Die Tücken der Leistungsmessung' (11.02.2016)",
+          "quote": "\"Bei einem modernen Turbomotor darf diese Korrektur nach EWG-Norm aber nicht angewendet werden.\" [With a modern turbo engine this EEC-standard correction must not be applied.] \"Was damals passierte, war eine Doppelkorrektur. Das Steuergerät registrierte die Höhenlage und passte das System über die VTG für die Höhenlage an, gleichzeitig korrigierte Maha vorschriftsmäßig das Ergebnis laut EWG-Norm.\" [What happened was a double correction: the ECU registered the altitude and adapted the system via the VTG, while MAHA at the same time corrected the result per the EEC standard.]",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ]
+    },
+    {
+      "standard": "Dyno Dynamics correction (shootout / 'ATMC')",
+      "reference": "not found",
+      "formula": "not found",
+      "notes": "A forum poster says DD uses modes called 'shoot44' and 'ATMC2' that are 'not DIN or SAE'; another guesses 'a simple 1.15 correction factor'. Both unverified. No Dyno Dynamics documentation found.",
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/dyno-dynamics-correction-factors/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 'Dyno Dynamics correction factors'",
+          "quote": "DynoDom: \"If memory serves me right, it is a simple 1.15 correction factor.\" (the original poster asked about the \"shoot44 mode\" and \"ATMC2\" methods, noting they are \"not DIN or SAE\")",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ]
+    },
+    {
+      "standard": "Derived: how far apart the standards are (researcher's calculation, not a measurement)",
+      "reference": "Computed with the formulas above (Dynojet J1349 JUN90 form as the base = 1.000)",
+      "formula": "Ratios CF_x / CF_SAE(Dynojet). J607 = (101.325/pd)·sqrt(T/288.71); DIN = (101.3/ptotal)·sqrt(T/293.15); EEC/ISO = (99/pd)^1.2·(T/298.15)^0.6; no-friction 'SAE' = (99/pd)·sqrt(T/298.15).",
+      "notes": "At 25 °C, 99 kPa dry (+1 kPa vapour): STD/SAE 1.040, DIN/SAE 1.022 (1.032 if the air is dry), EEC/SAE 1.000, SuperFlow-style SAE/Dynojet SAE 1.000. At 45 °C, 99 kPa dry, 100 kPa total: STD/SAE 1.034, DIN/SAE 1.016, EEC/SAE 1.001, SuperFlow-style/Dynojet 0.994. At 10 °C, 101 kPa dry: STD/SAE 1.049, DIN/SAE 1.036. At 20 °C, 90 kPa dry (altitude): STD/SAE 1.025, SuperFlow-style/Dynojet 0.985. J1349 AUG2004 differs from JUN90 by < 0.05 %. So 'STD is about 4 % higher than SAE' is right near 25 °C but is 3.0-3.4 % in 45 °C heat and about 5 % in cold air.",
+      "strength": "derived (calculation from cited formulas)",
+      "sources": [
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP User Guide For the Motorcycle Dynamometer, Document #98128101, Revision C 2/9/00",
+          "quote": "J1349 JUN90 form as used by Dynojet (see first entry).",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "J607 and density-ratio forms (channels 101 and 102).",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "DIN 70020 form.",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+          "accessed": "2026-09-30",
+          "title": "Council Directive 80/1269/EEC, consolidated text 1980L1269 — EN — 31.12.1999 (legislation.gov.uk copy of the EUR-Lex consolidation)",
+          "quote": "EEC/ISO form.",
+          "readVia": "read directly"
+        }
+      ]
+    }
+  ],
+  "defaults": [
+    {
+      "software": "Dynojet WinPEP (Windows 95/98 era, motorcycle guide 2000)",
+      "default": "Uses the SAE J1349 JUN90 formula; SAE, DIN, EEC or STD selectable. The guide does not say which is the factory default.",
+      "sources": [
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP User Guide For the Motorcycle Dynamometer, Document #98128101, Revision C 2/9/00",
+          "quote": "p. 5-4: \"Graphs can be viewed using either SAE, DIN, EEC or STD (Standard) correction factors. To change the correction factor click on the “Correction Factor” pulldown and select the desired option.\" p. 9-5: WinPEP \"uses the SAE's latest correction formula (June 1990).\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "software": "Dynojet WinPEP 7 (2002-2006)",
+      "default": "Not stated. The manual's settings screenshot (Figure 7-6) shows 'Default Correction Factor: SAE', but the same screenshot shows smoothing 5 while the text says smoothing level three is the default, so the screenshot is not a reliable record of factory defaults. Options: SAE, DIN, EEC, JIS, STD, Uncorrected.",
+      "sources": [
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/138/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP 7 User Guide, Part Number 98118103 Version 02 (08/2006)",
+          "quote": "p. 7-8: \"Default Correction Factor — specifies the correction factor.\" Figure 7-6 'Graph Properties—General' (image, p. 7-7) shows 'Default Correction Factor: SAE' and 'Default Smoothing Factor (1-5): 5'. p. 3-5: \"The correction factor changes the view of the graph using either SAE, DIN, EEC, JIS, STD, or Uncorrected correction factors. Smoothing lets you to show six different levels of detail in the graph. Level zero shows the most detail while level five shows the least detail. Level three is the default setting.\"",
+          "readVia": "read directly (setting read from the manual's screenshot)"
+        }
+      ]
+    },
+    {
+      "software": "Dynojet Power Core / current Dynojet guidance (2025)",
+      "default": "Factory default not found. Dynojet's own training blog tells tuners to always correct to SAE.",
+      "sources": [
+        {
+          "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+          "accessed": "2026-09-30",
+          "title": "Dynojet University (Dynojet Research, Inc.), 'Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing', July 4th, 2025",
+          "quote": "\"For a tuner, it's crucial to always correct your dyno runs to SAE . This ensures that the results are comparable and reliable ...\"",
+          "readVia": "read directly (blog content feed)"
+        }
+      ]
+    },
+    {
+      "software": "Mustang Dynamometer PowerDyne PC (manual v2017-05-22)",
+      "default": "Optional checkbox 'Use SAE Corrections' = SAE J1349 (Jun90) or custom standards; the weather-correction formula is chosen by fuel type and induction type; results are stored both raw and corrected ('WCF'). The checkbox's factory state is not stated.",
+      "sources": [
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer, POWER DYNE PC Operator Manual (v2017-05-22)",
+          "quote": "\"Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.\" ... \"Fuel Type Gasoline (spark ignition) or diesel (compression ignition). Used to select a weather correction factor formula. Induction Type Normally aspirated, supercharged, or turbocharged. Used to select a weather correction factor formula.\" ... \"Maximum torque and power values ... in both raw and SAE/ambient conditions corrected (WCF, With Correction Factor) values.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "software": "SuperFlow WinDyn, AutoDyn 30 2WD configuration (2020)",
+      "default": "Default equation channels: SAE J1349 as a plain density ratio (no friction term) and STP J607; comparison channels 'DJWhTq/DJWhPw' multiply SAE wheel power by an operator factor defaulted to 1.10.",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"NOTE: The correction factors listed below are the default formulas provided by SuperFlow.\" ... \"Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "software": "MAHA LPS 3000",
+      "default": "User selects DIN 70020, EWG 80/1269, ISO 1585, SAE J1349 or JIS D1001 under 'Power Correction'; the factory default is not stated. MAHA's 'SAE J1349' uses the ISO-type (990/p)^1.2·(T/298)^0.6 formula.",
+      "sources": [
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "p. 77: \"The max. power is determined during a continous measurement and the engine power is calculated according to DIN 70020, EWG 80/1269, ISO 1585, SAE J1349 or JIS D1001 ... depending on which setting has been selected in category “Power Correction”.\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "software": "Mainline (CCS control system)",
+      "default": "'Automatic Power Correction to Multiple International Standards'; which standard is default not found.",
+      "sources": [
+        {
+          "url": "https://mainlinedyno.com.au/index.php/dynamometers/2wd600ccs-roller-chassis",
+          "accessed": "2026-09-30",
+          "title": "Mainline 2WD600CCS product page",
+          "quote": "\"Automatic Weather Station (Automatic Power Correction to Multiple International Standards)\"",
+          "readVia": "read directly"
+        }
+      ]
+    },
+    {
+      "software": "Dyno Dynamics",
+      "default": "Not found. Product pages only say 'Fully integrated auto weather station for full correction'. Shootout mode locks ramp rate, driveline inertia and loss settings by class (forum source).",
+      "sources": [
+        {
+          "url": "https://www.dyno.com.au/dyno-products/dynotech-series-ii-2wd",
+          "accessed": "2026-09-30",
+          "title": "Dyno Dynamics / DynoTech Series II 2WD product page",
+          "quote": "\"Fully integrated auto weather station for full correction\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777219",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'Dyno Dynamics - Shoot out modes' (posts of 12 Nov 2018)",
+          "quote": "AW111: \"Shootout class controls 3 things: Ramp rate ... Driveline Inertia ... Losses ...\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ]
+    },
+    {
+      "software": "Dynapack",
+      "default": "Not found (the public site does not describe its correction options).",
+      "sources": [
+        {
+          "url": "https://dynapack.com/software-features/",
+          "accessed": "2026-09-30",
+          "title": "Dynapack software features page",
+          "quote": "No mention of correction standards found on the page (checked for SAE, DIN, JIS, EEC, STD).",
+          "readVia": "read directly"
+        }
+      ]
+    }
+  ],
+  "drivetrainLoss": [
+    {
+      "finding": "A dyno maker models chassis-dyno loss as a speed-dependent part (measured on coast-down) PLUS a small torque-proportional part.",
+      "numbers": "SuperFlow AutoDyn: loss = C_DLos + (WhlPwr − C_DLos) × K_Fact, with K_Fact 0.07-0.09 for manuals (default 0.07) and up to 0.30 for automatics. Coast-down 'measures all of the speed dependent losses, but only a fraction of the torque dependent losses'.",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"77 - K_Fact 0.0700 Channel 77 is an Engine Power channel for entering the K_Factor for drivetrain losses. This value specifies what percentage of the total drivetrain losses on a vehicle are Torque Dependent vs. Speed Dependent. ... During a coast down, the dyno measures all of the speed dependent losses, but only a fraction of the torque dependent losses. The torque that is going through the vehicle drivetrain during coast down is much less than it was during the acceleration run. ... Typical values for manual transmission vehicles are 0.07 - 0.09. Automatic equipped vehicles may require values as high as 0.30. The default value is 0.07.\" ... \"66 - EsDTLs hp return(C_DLos+(WhlPwr-C_DLos)*K_Fact);\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker's model, not a measurement)"
+    },
+    {
+      "finding": "Mustang's software also splits losses: a speed-dependent vehicle-loss curve (A + B·v + C·v², from a coast-down 'Characterize Vehicle Losses' test) plus a drivetrain efficiency percentage for 'engine' figures. It publishes typical component efficiencies.",
+      "numbers": "Typical (2017): manual transmission 90-97 %, automatic 90-95 %, CVT 87-93 %, hypoid differential 90-95 %, spiral bevel 95-99 %, straight bevel 93-97 %; RWD overall = transmission × differential. Manual × hypoid gives 81-92 % overall (researcher's multiplication).",
+      "sources": [
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer, POWER DYNE PC Operator Manual (v2017-05-22)",
+          "quote": "p. 43: \"Drivetrain Efficiency (%) The overall drivetrain efficiency, from crankshaft to tires. Typical current (2017) values for some drivetrain components are given below: Item Typical efficiency range Manual transmission 90% - 97% Automatic transmission 90% - 95% CVT transmission 87% - 93% Hypoid differential 90% - 95% Spiral bevel differential 95% - 99% Straight bevel differential 93% - 97% For rear-wheel drive vehicles, you must multiply the transmission and differential values to get overall efficiency.\" p. 42: \"Vehicle Losses Curve A, B, C The coefficients for a force(speed) curve representing the extra losses incurred, above the dynamometer's parasitic losses, from having the vehicle on the dynamometer. These values are normally obtained using the “Characterize Vehicle Losses” function\" ... \"Force = (A) + (B*Speed) + (C*Speed^2)\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker's typical values)"
+    },
+    {
+      "finding": "Gearbox losses split into a torque-dependent part (gear mesh, loaded bearings) and a torque-independent part (seals, churning, rotary unions). In the direct (1:1) gear no gear pair carries load. Typical full-load gearbox efficiencies are given.",
+      "numbers": "Full-load overall efficiency (Naunheimer, quoted by BMW co-authors): manual 92-97 %, automatic 90-95 %, mechanical CVT 87-93 %, hydrostatic CVT 80-86 %. In automatics, wet-clutch drag can exceed 50 % of the total loss.",
+      "sources": [
+        {
+          "url": "https://ep.liu.se/ecp/043/048/ecp09430059.pdf",
+          "accessed": "2026-09-30",
+          "title": "Schlegel (Schlegel Simulation), Hösl (BMW Group), Diel (UAS Landshut), 'Detailed Loss Modelling of Vehicle Gearboxes', 7th Modelica Conference 2009, DOI 10.3384/ecp09430059",
+          "quote": "\"Naunheimer [3] gives a rough survey of typical overall efficiencies of vehicle gearboxes under full load: Manual gearbox 92 - 97 %, Automatic gearbox 90 – 95 %, Mechanical CVT 87 – 93 %, Hydrostatic CVT 80 – 86 %\" ... \"Losses of gears and bearings may be split up into a part depending on the transmitted torque and a torque independent part. ... Torque independent losses arise even if no torque is transmitted but the shafts rotate.\" ... \"the losses of wet multi-disc clutches in automatic gearboxes can account for even more than 50 % of the total power loss.\" ... \"In the 7 th gear, which is engaged by direct coupling of input and output shaft ... no gears are loaded in this case.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "strong (peer-reviewed conference paper; component level, not chassis dyno)"
+    },
+    {
+      "finding": "Manual-gearbox torque loss in the indirect gears depends much more on input torque than on input speed (i.e. a proportional component is real).",
+      "numbers": "No numbers in the abstract.",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/manual-transmission-efficiency-trends-characteristics-942274",
+          "accessed": "2026-09-30",
+          "title": "SAE 942274, Greenbaum, Kluger & Westmoreland (Southwest Research Institute), 'Manual Transmission Efficiency Trends and Characteristics' (1994), abstract page",
+          "quote": "\"torque losses, in other than direct-drive gears, are considerably more dependent on input torque than input speed.\" ... \"efficiency was significantly affected by the inclination angle and lube oil temperature.\"",
+          "readVia": "via page-fetch tool (abstract only; full paper is paid)"
+        }
+      ],
+      "strength": "medium (abstract only)"
+    },
+    {
+      "finding": "Measured on a MAHA LPS 3000 (twin roller), full load, 4th gear (1:1 on the RWD car): the absolute loss grows with speed, so the wheel/engine ratio falls from about 0.87 at low rpm to 0.74 at 6000 rpm. The drivetrain alone (after removing a calculated roller rolling-resistance term) peaks at 96.3 % (RWD) and 95.4 % (FWD).",
+      "numbers": "RWD 2.0 L, 85 kW, 5-speed (4th = 1:1, final drive 3.9): rpm → wheel kW / engine kW (wheel/engine): 1000 → 9.8/11.50 (0.852); 2000 → 23.60/27.10 (0.871); 3000 → 38.80/45.29 (0.857); 4000 → 51.90/61.01 (0.851); 5000 → 63.20/76.53 (0.826); 5500 → 62.20/78.68 (0.791); 6000 → 55.00/74.12 (0.742). Absolute loss 1.7 kW at 1000 rpm rising to 19.1 kW at 6000 rpm. FWD 1.4 L, 55 kW: wheel/engine 0.851 at 1000 rpm, 0.777 at 5000, 0.735 at 6000. Transmission efficiency after the rolling-resistance term: RWD 96.28 % max (1500 rpm), 90.46 % at 5000 rpm; FWD 95.4 % max.",
+      "sources": [
+        {
+          "url": "http://spiff.rit.edu/classes/phys216/workshops/w10c/car_engine/efficiency.pdf",
+          "accessed": "2026-09-30",
+          "title": "Irimescu, Mihon & Pădure, 'Automotive transmission efficiency measurement using a chassis dynamometer', Int. J. Automotive Technology 12(4):555-559 (2011), DOI 10.1007/s12239-011-0065-1 (copy hosted on an RIT course page)",
+          "quote": "\"Power measurements were performed on a MAHA LPS 3000 chassis dynamometer ... The tester measures wheel power (Pw), and the software calculates engine output (Pe) by measuring drag power in the additional stage following full load operation.\" ... \"Measuring power with this method ensures increased accuracy of ±2%\" ... Table 4 (RWD, 4th gear): \"1000 9.8 11.50 1.20 95.68 ... 1500 16.10 18.60 1.81 96.28 ... 5000 63.20 76.53 6.03 90.46 ... 6000 55.00 74.12 7.23 83.96\" ... \"Friction losses increase with increasing rotational speed. Thus, the efficiency is at its maximum for low speeds and decreases as top engine speed is approached\" ... \"Maximum calculated efficiency is 96.28 % for the RWD vehicle (table 4), while top value for the FWD car is 95.4 % (table 3), both with the 4th gear selected.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "strong (peer-reviewed; but engine power is MAHA's wheel + coast-down drag estimate, not an engine dyno, and a twin-roller dyno has higher tyre loss than a single Dynojet drum)"
+    },
+    {
+      "finding": "MAHA's 'engine power' is wheel power plus drag power measured on a declutched coast-down. That drag is measured with (almost) no torque through the gears, so it captures the speed-dependent part of the loss, not the torque-dependent part.",
+      "numbers": "No typical values in the manual.",
+      "sources": [
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "p. 78: \"The engine power accrues from the wheel power plus the drag power, which is automatically determined after the clutch is disengaged.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://dynomax.ee/can-dynos-measure-drivetrain-losses/",
+          "accessed": "2026-09-30",
+          "title": "Dynomax (dyno maker) blog, 'Can Dynos Measure Drivetrain Losses Accurately?' (22 Jul 2026)",
+          "quote": "\"During a power pull, the drivetrain is loaded in one direction. During coastdown, torque reverses and the components experience different clearances, oil behavior, bearing loads, and gear contact forces.\" ... \"coastdown-derived crank horsepower should be labeled clearly as calculated or estimated.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium"
+    },
+    {
+      "finding": "Same car, same manual driveline, three engines: loss stayed about constant in hp, so the percentage fell as power rose (supports a mostly fixed loss).",
+      "numbers": "C5 Corvette, manual, light clutch/flywheel: 440, 550 and 615 flywheel hp, all about 80 hp loss 'give or take a couple' → 18.2 %, 14.5 %, 13.0 % (percentages are the researcher's arithmetic). Chassis dyno brand not stated.",
+      "sources": [
+        {
+          "url": "https://www.speed-talk.com/forum/viewtopic.php?t=13866&start=60",
+          "accessed": "2026-09-30",
+          "title": "Speed-Talk forum: 'numbers from chassis dyno vs. engine dyno' (Dec 2008)",
+          "quote": "Tony Mamo @ AFR (16 Dec 2008): \"My C5 has seen three different engines with the exact same driveline....my loss is about 80 HP which is very good but inline with an efficient manual gear box and a lightweight clutch/flywheel combo. We are talking from 440 HP, to 550 HP, to 615 HP at the flywheel....all with the same 80 HP loss to the rear wheels give or take a couple depending on which chassis dyno run you wanted to count.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (one car, forum post by an industry person; dyno and corrections not stated)"
+    },
+    {
+      "finding": "Magazine-writer examples of the same engine on an engine dyno and then in the car on a chassis dyno.",
+      "numbers": "Small-block Ford 360 flywheel hp → 260 rwhp with automatic and full accessory drive (article says '90 hp or a 25 percent loss'; the stated numbers give 100 hp / 27.8 %, and the engine-dyno run had no accessory drive). Buick 455: 330 flywheel hp → 280 rwhp with Muncie 4-speed and 12-bolt axle (50 hp, 15 %). Removing an LS truck accessory drive is worth about 10-12 flywheel hp. Dyno brand not stated.",
+      "sources": [
+        {
+          "url": "https://www.onallcylinders.com/2023/08/07/ask-away-with-jeff-smith-drivetrain-loss-comparing-engine-horsepower-vs-hp-at-the-wheels/",
+          "accessed": "2026-09-30",
+          "title": "OnAllCylinders (Summit Racing), Jeff Smith, 'Ask Away! ... Drivetrain Loss & Comparing Engine Horsepower vs. HP at the Wheels' (07 Aug 2023, updated 22 May 2024)",
+          "quote": "\"He tested a small block Ford that made 360 flywheel horsepower and then tested the engine again in the car on a chassis dyno using the same headers but with a complete accessory drive hooked to an automatic transmission. The rear wheel power dropped to 260 hp. That's a loss of 90 hp or a 25 percent loss.\" ... \"It dyno'd with 330 flywheel horsepower at 4,500 rpm because it was near stock. With the engine in the car and spinning a Muncie four-speed and 12-bolt, the rear wheel horsepower dropped to 280 hp which is a difference of 50 hp. This calculates out at a 15 percent loss through the drivetrain.\" ... \"just removing the truck accessory drive from an LS engine can be worth roughly 10 to 12 flywheel horsepower.\" ... \"a simplistic percentage number isn't going to be valid across a wide variety of vehicles and power.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "weak-medium (experienced magazine tech writer; two old examples, not controlled)"
+    },
+    {
+      "finding": "Forum collection of engine-dyno vs chassis-dyno pairs (mostly automatics, V8s): wide spread.",
+      "numbers": "672→548 (TH350, 18.5 %); 550→475 (manual, 14 %); 525→425 (200-4R, 19 %); 622→518 (TH400, 17 %); 435→300 (TH350, 31 %); 495→325 (C6, 34 %); 676→575 (15 %).",
+      "sources": [
+        {
+          "url": "https://www.speed-talk.com/forum/viewtopic.php?f=1&t=13866",
+          "accessed": "2026-09-30",
+          "title": "Speed-Talk forum: 'numbers from chassis dyno vs. engine dyno' (Dec 2008)",
+          "quote": "Posts of 8-10 Dec 2008 listing these pairs, e.g. Jason G: \"672 HP @ 6300 RPM\" engine dyno, \"548 RWHP @ 6400 RPM\" chassis dyno, TH350; Andy F: \"550 hp on the engine dyno and 475 rwhp on the chassis dyno\", manual.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (uncontrolled forum reports)"
+    },
+    {
+      "finding": "Dyno Dynamics' 'flywheel' figure is its own class-based loss algorithm, not a measurement.",
+      "numbers": "Same car: implied loss 16.5-22.9 % of the 'flywheel' figure depending on shootout class (S4 16.7 %, S6 19.7 %, S8 21.1 %, S8f 22.9 %) — researcher's arithmetic on the posted figures.",
+      "sources": [
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777659",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'dyno dynamics shootout mode comparison' (posts of 14 Nov 2018)",
+          "quote": "S4 203/169, S6 218/175, S8 237/187, S4f 211/176, S6f 225/182, S8f 253/195 (flywheel/wheel hp).",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777219",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'Dyno Dynamics - Shoot out modes' (posts of 12 Nov 2018)",
+          "quote": "PeterBurgess: \"The software then adds what are considered to be transmission losses as deemed fit by the developers, there is no measurement of transmission losses.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (as evidence that DD flywheel numbers are model output)"
+    },
+    {
+      "finding": "One controlled modern data point, Dynojet 248X, manual RWD, 1:1 gear, SAE: wheel power is 85.1 % of the maker's crank rating.",
+      "numbers": "Ford Mustang Dark Horse: 425.7 whp vs 500 hp rated → 14.9 % below rating. (Whether this car makes exactly its rating is unknown.)",
+      "sources": [
+        {
+          "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+          "accessed": "2026-09-30",
+          "title": "Road & Track / Matt Farah via AOL (2 Apr 2026)",
+          "quote": "\"Ford claims it makes 500 hp and 418 lb-ft at the crankshaft, and forum posters seem to agree on about a 12 percent drivetrain loss for manual-equipped V-8 Stangs, or a net of around 440 WHP.\" Dynojet Research 248X: \"Best WHP: 425.7\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (one car)"
+    },
+    {
+      "finding": "Tyres are a large, variable part of roller-dyno loss and grow with power and heat (qualitative).",
+      "numbers": "No numbers.",
+      "sources": [
+        {
+          "url": "https://mainlinedyno.com.au/index.php/media1/press-articles/street-machine-tech-torque",
+          "accessed": "2026-09-30",
+          "title": "Street Machine article reprinted on Mainline's site ('Tech Torque')",
+          "quote": "\"Tyres are the biggest killer from a drivetrain loss perspective,\" ... \"slicks in particular will heat up quickly and increase losses dramatically with each pull,\" ... \"But the more horsepower you're dealing with, the greater tyre loss becomes.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://dynapack.com/benefits-of-dynapack/",
+          "accessed": "2026-09-30",
+          "title": "Dynapack, 'Benefits of Dynapack'",
+          "quote": "\"The Dynapack™ eliminates this variable by using a hub adapter that provides a direct coupling to our Power Absorption Units. There can be no tire slip, no rolling resistance ...\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (qualitative)"
+    },
+    {
+      "finding": "Encyclopedic rule of thumb.",
+      "numbers": "Wheel power 'generally 15–20 percent less' than engine-dyno power.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Dynamometer",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, 'Dynamometer'",
+          "quote": "\"the measured wheel brake horsepower is generally 15–20 percent less than the brake horsepower measured at the crankshaft or flywheel on an engine dynamometer\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "weak (rule of thumb)"
+    }
+  ],
+  "sweepEffects": [
+    {
+      "finding": "Faster accelerating sweeps read lower; steady-state reads more; decelerating sweeps read highest, because the engine and driveline absorb power to accelerate their own inertia.",
+      "numbers": "Ordering only; no numbers.",
+      "sources": [
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer, POWER DYNE PC Operator Manual (v2017-05-22)",
+          "quote": "p. 9: \"5. Type of testing performed: fast decelerating sweeps will generate the highest values, steady state tests will generate intermediate values, and fast accelerating sweeps will generate the lowest values, due to the internal power requirements of the engine and drive-train in the vehicle under test.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker)"
+    },
+    {
+      "finding": "Longer sweep time (lower acceleration rate) gives higher readings; Mustang recommends the longest sweep the car tolerates.",
+      "numbers": "No numbers.",
+      "sources": [
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer, POWER DYNE PC Operator Manual (v2017-05-22)",
+          "quote": "p. 136: \"A longer sweep time should generate higher power and torque readings, since a lower acceleration rate means that less power is absorbed by the vehicle's drive train.\" p. 134: \"Mustang Dynamometer recommends that you use the longest running time that the vehicle can comfortably tolerate\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker)"
+    },
+    {
+      "finding": "Driveline inertia seen by the dyno scales with overall gear ratio squared, so a low gear exaggerates inertia effects; top gear shows only a few percent of the first-gear effect.",
+      "numbers": "Gear ratios span about 6:1, so about 36:1 in inertia effect; top gear about 3 % of first gear.",
+      "sources": [
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer, POWER DYNE PC Operator Manual (v2017-05-22)",
+          "quote": "p. 43: \"This value will be large in 1st gear, and much smaller in top gear, as inertial effects are proportional to the overall gear ratio squared. Transmission gear ratios vary over about a 6:1 range, so squared that is 36:1, so the inertial effect in top gear may only be about 3% of the effect in 1st gear.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker)"
+    },
+    {
+      "finding": "Pulls are made in the 1:1 gear because efficiency drops away from 1:1 and because acceleration-related effects (engine, gearbox and wheel inertia, tyres) change with gear and axle ratio.",
+      "numbers": "No numbers.",
+      "sources": [
+        {
+          "url": "https://performanceparts.ford.com/download/pdfs/EnginePerformanceTechTips.pdf",
+          "accessed": "2026-09-30",
+          "title": "Ford Racing Performance Parts, 'Dynamometer Testing and Ford Racing Calibrations' (undated PDF)",
+          "quote": "\"Most chassis dyno tests are performed using the “roll-on” method ... Because of this constant acceleration, engine and transmission inertia, drive wheel inertia, tire characteristics, gear ratio and axle ratio can all affect the final measured horsepower. Generally a heavier wheel will take more torque to accelerate at the same rate as a lighter wheel, so heavier wheels will tend to reduce the measured wheel horsepower. Gear ratio comes into play because as the gear ratio strays from a 1:1, the efficiency drops and therefore the measured horsepower at the wheels also drops. This is why most dyno runs are run in the 1:1 gear (i.e., 4th gear in a 5-speed overdrive transmission) whenever possible.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+          "accessed": "2026-09-30",
+          "title": "Dynojet, WinPEP User Guide For the Motorcycle Dynamometer, Document #98128101, Revision C 2/9/00",
+          "quote": "p. 10-12: \"When testing the effects of modifications to the bike, use the 4th gear roll-on test. It is the simplest to perform and gives the most repeatable data.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+          "accessed": "2026-09-30",
+          "title": "MAHA, LPS 3000 Dynamometer operating instructions BA052301-en (file last modified 21 Jun 2023)",
+          "quote": "\"At the beginning of a test a pre-determined RPM value must be approached ('Test gear' / Gear transmission close to 1:1) while in a specific gear.\" ... (automatics) \"The test gear must always be the next to the last gear. The measurement starts after a preset start speed has been exceeded, which is normally set at 50 km/h for Car dynos.\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://www.auto-motor-und-sport.de/technik/die-technik-moderner-leistungspruefstaende/",
+          "accessed": "2026-09-30",
+          "title": "auto motor und sport, Marcus Schurig, 'Prüfstand: Die Tücken der Leistungsmessung' (11.02.2016)",
+          "quote": "\"Die Messung erfolgt in einem hohen Gang, aber vom Drehzahlniveau so, dass man die Beschleunigung bei circa 50 km/h starten kann.\" [The measurement is made in a high gear, at an rpm level that lets the pull start at about 50 km/h.]",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (OEM performance division + dyno makers; no numbers)"
+    },
+    {
+      "finding": "Leaving out wheel/tyre inertia in an acceleration test lowers the reading by up to 10 % on a SuperFlow load dyno (the software adds the power needed to spin up the wheels).",
+      "numbers": "Default wheel inertia 125 lb for cars (40 motorcycles, 200 trucks, 0 for AWD); setting 0 on 2WD shows 'up to 10%' lower in acceleration tests.",
+      "sources": [
+        {
+          "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+          "accessed": "2026-09-30",
+          "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, Pub. No. 200507 Rev. 2, June 2020",
+          "quote": "\"Channel 80 is the inertia value for wheels. Channel 80 is defaulted to 125lbs for 2WD systems. Suggest using 40 for motorcycles, 60 for quads or Razors, 125 for cars, and 200 for trucks for 2WD systems. Suggest using 0 for AWD systems. You can use 0 for 2wd systems, but will show significantly lower power numbers (up to 10%) when doing acceleration type tests.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium (dyno maker)"
+    },
+    {
+      "finding": "On Dyno Dynamics, the shootout class sets the ramp rate and an assumed driveline inertia; the same car read 169-195 wheel hp across classes. An operator found a faster ramp needed a different inertia setting to match steady state.",
+      "numbers": "S6 class uses a 12.5 km/h per second accel rate (per the thread); operator compared 10 and 20 km/h/s ramps; steady-state reference 159 bhp at about 5,300 rpm.",
+      "sources": [
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777659&i=20",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'dyno dynamics shootout mode comparison' (posts of 14 Nov 2018) page 2",
+          "quote": "spitfire4v8: \"I've managed to get an inertia value which is very good on a ramp rate of 10kmh/sec but on the faster 20kmh/sec rate the power is too high.\" ... \"the faster the engine accelerates the more power is consumed in accelerating the engine internals and other rotating components. The measured wheel power will therefore drop.\" Steady state: \"139 bhp at 4k rpm and 159 bhp at peak at about 5.3k rpm\".",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=66&t=1777219",
+          "accessed": "2026-09-30",
+          "title": "PistonHeads forum: 'Dyno Dynamics - Shoot out modes' (posts of 12 Nov 2018)",
+          "quote": "spitfire4v8: \"The ShootF modes use a faster ramp rate than the normally aspirated equivalent rate to try and reduce the thermal effects of a long slow dyno pull.\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (one operator's tests)"
+    },
+    {
+      "finding": "On a pure inertia dyno the ramp rate is not controlled: more power spins the drum up faster, so a bigger share goes into accelerating the car's own driveline (worse with heavy automatics).",
+      "numbers": "No numbers.",
+      "sources": [
+        {
+          "url": "https://www.onallcylinders.com/2023/08/07/ask-away-with-jeff-smith-drivetrain-loss-comparing-engine-horsepower-vs-hp-at-the-wheels/",
+          "accessed": "2026-09-30",
+          "title": "OnAllCylinders (Summit Racing), Jeff Smith, 'Ask Away! ... Drivetrain Loss & Comparing Engine Horsepower vs. HP at the Wheels' (07 Aug 2023, updated 22 May 2024)",
+          "quote": "\"Let's say we're driving a big heavy C6 transmission behind a 351W small block Ford engine making 400 flywheel horsepower. Now if we bump that to 600 hp, it will accelerate the chassis dyno wheel more quickly but it also must accelerate the big direct drum in the C6 automatic at a much faster rate. This will require more power to accomplish this ...\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://mainlinedyno.com.au/index.php/dynamometers/2wd600ccs-roller-chassis",
+          "accessed": "2026-09-30",
+          "title": "Mainline 2WD600CCS product page",
+          "quote": "\"Fully Loaded Dyno Ramp Pulls - power calculated from measured torque (Unlike inertia type dynos)\" \"Run duration (Time) can be maintained with increasing performance levels (Unlike inertia dynos)\"",
+          "readVia": "read directly"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Dynamometer",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, 'Dynamometer'",
+          "quote": "\"high powered engines commonly complete a '4th gear sweep' test in less than 10 seconds, which is not a reliable load condition as compared to operation in the real world\"",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        }
+      ],
+      "strength": "medium (qualitative)"
+    },
+    {
+      "finding": "Load and hub dynos let the operator set the ramp; boost build-up (turbo) then differs from an inertia dyno, which shows up as rpm-dependent differences on turbo cars.",
+      "numbers": "DSPORT Supra: Dynapack gains within 1 % of the Dynojet up to 5,000 rpm, up to 11.8 % different above; Mustang and SuperFlow 1-15 % different by rpm.",
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/dyno-tech-guide-part-three-verdict-dyno-showcase/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, 'Dyno Tech Guide Part Three: Verdict + Dyno Showcase'",
+          "quote": "Supra on Dynapack: \"within a percent of the gains noted on the Dynojet up to 5,000 RPM. At higher RPMs, the reading for power gains differed by up to 11.8 percent\"; Mustang and Superflow: \"anywhere from one to 15 percent different at any given RPM range\". The fetch tool summarised the cause as differences in how each platform applies load and transitions boost curves.",
+          "readVia": "via page-fetch tool (text may be lightly normalised)"
+        },
+        {
+          "url": "https://dynapack.com/benefits-of-dynapack/",
+          "accessed": "2026-09-30",
+          "title": "Dynapack, 'Benefits of Dynapack'",
+          "quote": "\"Another benefit of having virtually zero inertia is the ability to change the rate of acceleration at will.\"",
+          "readVia": "read directly"
+        }
+      ],
+      "strength": "medium"
+    }
+  ],
+  "gates": [
+    {
+      "url": "https://www.gtrlife.com/threads/dyno-dynamics-vs-dynojet.42037/",
+      "gate": "HTTP 307 redirect to tollbit.gtrlife.com (TollBit pay-per-crawl / licensing gate for automated readers). Not followed."
+    },
+    {
+      "url": "https://www.mr2oc.com/threads/dyno-dynamics-vs-dynojet-charts-inside.299806/",
+      "gate": "HTTP 307 redirect to tollbit.mr2oc.com (TollBit). Not followed."
+    },
+    {
+      "url": "https://www.vintage-mustang.com/threads/hot-rod-magazine-dyno-test-article.640689/",
+      "gate": "HTTP 307 redirect to tollbit.vintage-mustang.com (TollBit). Not followed. Thread discusses a Hot Rod dyno-comparison article."
+    },
+    {
+      "url": "https://www.moddedmustangs.com/threads/differences-in-dynos.368698/",
+      "gate": "HTTP 307 redirect to tollbit.moddedmustangs.com (TollBit). Not followed. Likely source of the Hot Rod 4.6 SOHC four-dyno numbers seen in a search snippet."
+    },
+    {
+      "url": "https://www.hellcat.org/threads/mustang-dyno-vs-dynojet-numbers.10743/",
+      "gate": "HTTP 307 redirect to tollbit.hellcat.org (TollBit). Not followed."
+    },
+    {
+      "url": "SAE J1349 / SAE J607 full standards; SAE papers 942274 and 1999-01-1259 full text (sae.org / saemobilus.sae.org)",
+      "gate": "Paid documents (purchase required). Not bought; only public abstracts and secondary sources used. A forum attachment that appears to be a copy of SAE J1349 was seen in search results and deliberately not opened."
+    },
+    {
+      "url": "ISO 1585 full text (iso.org and resellers)",
+      "gate": "Paid standard. Not bought."
+    },
+    {
+      "url": "JIS D 1001 full text (Japanese Standards Association / JISC)",
+      "gate": "Paid standard or a viewer that requires accepting terms; not attempted."
+    }
+  ],
+  "notFound": [
+    "When (or whether) Dynojet changed its default correction from STD to SAE: not found. WinPEP (2000) and WinPEP 7 (2006) manuals both say the software uses the SAE J1349 JUN90 formula and let the user pick; neither states the factory default in text. Current Power Core default not found.",
+    "Default correction standard for Dyno Dynamics, Dynapack and Mainline software: not found in any primary source. Official Dyno Dynamics documentation of shootout-mode ramp rates, inertia and loss parameters: not found (forum only).",
+    "Same-car ratios for MAHA LPS 3000 vs Dynojet, Land & Sea, Dastek, Cartec and Dynocom vs anything: not found. (cartec.nl turned out to be a car-care company; dastek.co.za is a workshop/Unichip maker page with no dyno data; land-and-sea.com and dynocom.net did not respond.)",
+    "Magazine-grade same-car tests for Dyno Dynamics or Mainline vs Dynojet (Street Machine, Hot4s, NZ Performance Car, Fast Car, Evo): not found; only forum rules of thumb.",
+    "Hot Rod test of a new 4.6 SOHC Mustang on four dynos: a search snippet quoted 'Dynojet (SAE) 222 rwhp / 263 rwtq' and 'Mustang Dyno (SAE) 219 rwhp / 239 rwtq'. The source page could not be opened (TollBit gate), so these numbers are UNVERIFIED and not used above.",
+    "Same-car Evo X comparisons of Dynojet vs Dyno Dynamics (snippets said about 12 % lower, and 369 vs 302 hp = 18 % lower): source forum pages returned 403 or TollBit; UNVERIFIED, not used.",
+    "ECE R85 and ISO 1585 texts: not read (UNECE 403, ISO paid). The EEC 80/1269 (as amended) text was read instead; MAHA states ISO 1585 uses the same formula.",
+    "Primary JIS D 1001 text: not read; secondary descriptions conflict (see corrections).",
+    "Engine-dyno plus chassis-dyno tests of the roster engines (SR20DET, 2JZ-GTE, 13B-REW, VQ35DE/HR, M54B30, S54B32): not searched in this session (topic belongs to the builds research).",
+    "Coast-down loss measured on the same car at different power levels (a clean fixed-vs-proportional test on a Dynojet-type dyno): not found. Best available evidence is the SuperFlow K-factor model, the component literature and one forum anecdote (C5 Corvette).",
+    "Dynojet drum inertia values (to compute ramp rates for a given car): not found.",
+    "Several forum pages (evolutionm.net, ls1tech.com, e90post.com, 1addicts.com, sau.com.au) returned HTTP 403 to both tools and could not be read.",
+    "The session's web-search quota ran out partway through; later sources were reached only by following links from pages already found."
+  ]
+}

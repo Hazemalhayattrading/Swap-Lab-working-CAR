@@ -29,6 +29,23 @@
 
       <p class="tape-note" id="bay-note">Bay empty. No car on the lift yet.</p>
 
+      <aside class="gpu-notice" id="gpu-notice" aria-labelledby="gpu-notice-title" hidden>
+        <h2 class="gpu-notice__title" id="gpu-notice-title">
+          This computer is drawing in software
+        </h2>
+        <p class="gpu-notice__lead" id="gpu-notice-lead"></p>
+        <details class="gpu-notice__how">
+          <summary>How to turn on hardware acceleration</summary>
+          <ul class="gpu-notice__steps" id="gpu-notice-steps"></ul>
+        </details>
+        <div class="gpu-notice__actions">
+          <button class="gpu-notice__button" id="gpu-notice-low" type="button">
+            Switch to Low quality
+          </button>
+          <button class="gpu-notice__button" id="gpu-notice-close" type="button">Dismiss</button>
+        </div>
+      </aside>
+
       <section class="telemetry" id="telemetry" aria-label="Render readouts and quality">
         <button
           class="telemetry__toggle"
@@ -51,7 +68,7 @@
             </div>
             <div class="readout">
               <dt>Rate</dt>
-              <dd><span id="readout-fps">--</span> fps</dd>
+              <dd id="readout-fps">--</dd>
             </div>
           </dl>
           <fieldset class="quality" id="quality">

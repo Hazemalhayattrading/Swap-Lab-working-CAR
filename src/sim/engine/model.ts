@@ -1,19 +1,20 @@
 import type { ModelConstants, SimEngine } from '../../data/sim-data';
 import { dryPressure, type Atmosphere } from '../atmosphere';
-import type { Fuel } from '../fuel';
+import { extraChargeCooling, type Fuel } from '../fuel';
 import { solveBoost, type BoostPlant, type BoostState } from '../induction/turbo';
 import {
   solveSupercharger,
   type SuperchargerPlant,
   type SuperchargerState,
 } from '../induction/supercharger';
-import { interpolate, omega } from '../math';
+import { bisect, interpolate, omega } from '../math';
 import {
   baseIndicatedEfficiency,
   exhaustTemperature,
   knockRetard,
   lambdaWorkFactor,
   retardEfficiency,
+  type Ignition,
   type KnockReference,
 } from './combustion';
 import { frictionMep, mepTorque } from './friction';
@@ -49,10 +50,29 @@ export interface EngineModel {
   };
   induction:
     | { kind: 'natural' }
-    | { kind: 'turbo'; plant: BoostPlant; /** Pa gauge per grid rpm */ targetBoost: number[] }
+    | {
+        kind: 'turbo';
+        plant: BoostPlant;
+        /**
+         * Pa absolute per grid rpm: the manifold pressure the boost control holds.
+         * An absolute target is what an ECU with a MAP sensor holds, so at altitude
+         * it opens the wastegate less and runs more gauge boost, until the turbo
+         * runs out of headroom (spool, surge, choke or its speed limit).
+         */
+        targetPressure: number[];
+      }
     | { kind: 'supercharger'; plant: SuperchargerPlant };
   /** Injectors fitted: count, and flow per injector in m³/s (primary + secondary). */
   injectors?: { count: number; flow: number; secondaryFlow?: number };
+  /** Stock ECU map, or a tune that runs each fuel at its knock limit (combustion.ts). */
+  ignition: Ignition;
+  /**
+   * Whether the boost control backs off when the fuel can't take the boost:
+   * knock would need more than `knock-max-retard` degrees (a knock-sensing ECU
+   * or a tuner does, rather than run the engine into knock). Off for a known
+   * build, whose boost is measured on the dyno day.
+   */
+  octaneLimitsBoost: boolean;
 }
 
 export interface Conditions {
@@ -87,6 +107,8 @@ export interface OperatingPoint {
   /** K, exhaust gas temperature estimate */
   exhaustTemperature: number;
   sparkRetard: number;
+  /** K the fuel's evaporation cools the charge beyond gasoline's (E85). */
+  evaporativeCooling: number;
   volumetricEfficiency: number;
   /** Brake thermal efficiency on the fuel supplied. */
   brakeEfficiency: number;
@@ -141,18 +163,27 @@ export function solvePoint(
     const backPressure = 1 - backPressureSlope * (backPressureRatio - bpRef);
     return veRef * temperature * backPressure;
   };
-  const airflowAt = (manifoldPressure: number, chargeTemperature: number, ratio: number) =>
-    ((veAt(chargeTemperature, ratio) * manifoldPressure * dryShare) / (rGas * chargeTemperature)) *
-    perSecond;
+  const lambda = model.lambda;
+  // A fuel that evaporates with more heat than gasoline (E85) cools the charge
+  // in the port: denser air and less knock. Gasoline's own cooling is in the fit.
+  const cooling = options.referenceRun ? 0 : extraChargeCooling(fuel, lambda, k);
+  const airflowAt = (manifoldPressure: number, chargeTemperature: number, ratio: number) => {
+    const t = chargeTemperature - cooling;
+    return ((veAt(t, ratio) * manifoldPressure * dryShare) / (rGas * t)) * perSecond;
+  };
   const retardAt = (chargeTemperature: number, manifoldPressure: number) =>
     options.referenceRun
       ? knockRef.retard
-      : knockRetard(knockRef, { chargeTemperature, manifoldPressure, ron: fuel.ron }, k);
-  const lambda = model.lambda;
+      : knockRetard(
+          knockRef,
+          { chargeTemperature: chargeTemperature - cooling, manifoldPressure, ron: fuel.ron },
+          k,
+          model.ignition,
+        );
   const egtAt = (chargeTemperature: number, manifoldPressure: number) =>
     exhaustTemperature(
       {
-        chargeTemperature,
+        chargeTemperature: chargeTemperature - cooling,
         lambda,
         retardDeg: retardAt(chargeTemperature, manifoldPressure),
         rotary: model.rotary,
@@ -170,18 +201,28 @@ export function solvePoint(
   let pumpingTorque = 0;
 
   if (model.induction.kind === 'turbo') {
-    turbo = solveBoost(
-      model.induction.plant,
-      {
-        rpm,
-        air,
-        targetBoost: interpolate(model.grid, model.induction.targetBoost, rpm),
-        airflow: airflowAt,
-        turbineInletTemperature: egtAt,
-        exhaustPerAir: 1 + 1 / (lambda * fuel.stoichAfr),
-      },
-      k,
-    );
+    const plant = model.induction.plant;
+    const boostAt = (targetPressure: number) =>
+      solveBoost(
+        plant,
+        {
+          rpm,
+          air,
+          targetPressure,
+          airflow: airflowAt,
+          turbineInletTemperature: egtAt,
+          exhaustPerAir: 1 + 1 / (lambda * fuel.stoichAfr),
+        },
+        k,
+      );
+    turbo = boostAt(interpolate(model.grid, model.induction.targetPressure, rpm));
+    // Octane limits boost (BUILD_PROMPT 6.4): past the knock limit the boost comes down.
+    const maxRetard = k['knock-max-retard'];
+    const over = (s: BoostState) => retardAt(s.chargeTemperature, s.manifoldPressure) - maxRetard;
+    if (model.octaneLimitsBoost && !options.referenceRun && over(turbo) > 1e-6) {
+      const p = bisect((x) => over(boostAt(x)), air.pressure, turbo.manifoldPressure, 50);
+      turbo = { ...boostAt(p ?? air.pressure), limit: 'octane' };
+    }
     manifoldPressure = turbo.manifoldPressure;
     chargeTemperature = turbo.chargeTemperature;
     backPressureRatio = turbo.turbineInletPressure / turbo.manifoldPressure;
@@ -202,7 +243,7 @@ export function solvePoint(
     driveTorque = supercharger.drivePower / omega(rpm);
   }
 
-  const ve = veAt(chargeTemperature, backPressureRatio);
+  const ve = veAt(chargeTemperature - cooling, backPressureRatio);
   const airflow =
     turbo?.airflow ??
     supercharger?.airflow ??
@@ -244,6 +285,7 @@ export function solvePoint(
     chargeTemperature,
     exhaustTemperature: exhaust,
     sparkRetard,
+    evaporativeCooling: cooling,
     volumetricEfficiency: ve,
     brakeEfficiency: (torque * w) / (fuelFlow * fuel.lhv),
     ...(injectorDuty !== undefined ? { injectorDuty } : {}),

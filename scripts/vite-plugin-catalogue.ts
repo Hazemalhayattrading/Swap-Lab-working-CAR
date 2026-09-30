@@ -26,17 +26,21 @@ export function readRawData(root: string): { raw: RawData; files: string[] } {
   const standards = join(data, 'standards');
   const model = join(data, 'model', 'assumptions.json');
   const read = (path: string): unknown => JSON.parse(readFileSync(path, 'utf8'));
+  const builds = jsonFiles(join(data, 'builds'));
   const raw = {
     cars: cars.map((f) => read(f)),
     engines: engines.map((f) => read(f)),
     powerRatings: read(join(standards, 'power-ratings.json')),
     fuels: read(join(standards, 'fuels.json')),
     weightBases: read(join(standards, 'weight-bases.json')),
+    locations: read(join(standards, 'locations.json')),
+    dynos: read(join(standards, 'dynos.json')),
+    builds: builds.map((f) => read(f)),
     assumptions: read(model),
   } as RawData;
   return {
     raw,
-    files: [...cars, ...engines, ...jsonFiles(standards), model],
+    files: [...cars, ...engines, ...jsonFiles(standards), ...builds, model],
   };
 }
 

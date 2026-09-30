@@ -355,6 +355,34 @@
     ],
     "note": "From the S14 (1994, English export) service manual. No S15 SR20DET figure was found: the S15 manual could not be opened. The S15 SR20DE figure is 3.5 L with filter (drycarbon.com)."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 7.0,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (1994), SR20DET (hosted by sr20tuning.net)",
+          "note": "Coolant and oil capacity Unit ℓ (Imp qt) Coolant (with reservoir tank) Approx. 7.0 (6-1/8) Reservoir tank 1.8 (1-5/8)"
+        }
+      ],
+      "note": "S14 manual (no S15 manual was found). The same manual's refill procedure gives 6.2 L, probably the drain-and-refill amount."
+    },
+    "oilCooler": {
+      "value": "oil-to-water",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (1994), SR20DET (hosted by sr20tuning.net)",
+          "note": "ENGINE COOLING SYSTEM ... Cooling Circuit Throttle body Intake manifold collector Oil cooler Heater Reservoir tank"
+        }
+      ]
+    }
+  },
   "internals": {
     "crank": {
       "value": "forged",
@@ -619,6 +647,26 @@
           }
         ],
         "note": "Side-mount beneath the left headlight, in front of the left front tyre (DSPORT magazine test of a JDM S15, corroborated by the silviaoc.com owner thread). Nissan's own releases say only 'intercooler turbo', without the position."
+      },
+      "exhaustBackPressure": {
+        "value": 62,
+        "unit": "kPa",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+            "note": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer.' ... 'After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.'"
+          },
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 3, The Bottom Line)",
+            "note": "Table: 'BASELINE 200.0 / TEST 1 PFC, PUMP, INJECTORS 211.1 / TEST 2 TANABE EXHAUST 216.2 / TEST 3 TANABE DOWNPIPE 232.6'."
+          }
+        ],
+        "method": "No measurement of the S15's exhaust pressure was found. On one JDM S15 at 12 psi on the same DTS dyno, DSPORT measured +2.4 % from a Tanabe cat-back (211.1 to 216.2 whp) and a further +7.6 % from the downpipe (216.2 to 232.6 whp), +10.2 % in all, far more than the model's generic factory exhaust (15 kPa) allows. 62 kPa at the stock peak flow gives the model +10.8 % for the two (it splits them about +4 % and +6 %). The known-build test uses DSPORT's S15s, so it isn't an independent check of this figure."
       },
       "injectorFlow": {
         "value": 480,
@@ -1013,6 +1061,26 @@
           }
         ],
         "note": "Assumed to be the same body-side intercooler as the MT car; forum evidence only."
+      },
+      "exhaustBackPressure": {
+        "value": 62,
+        "unit": "kPa",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+            "note": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer.' ... 'After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.'"
+          },
+          {
+            "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 3, The Bottom Line)",
+            "note": "Table: 'BASELINE 200.0 / TEST 1 PFC, PUMP, INJECTORS 211.1 / TEST 2 TANABE EXHAUST 216.2 / TEST 3 TANABE DOWNPIPE 232.6'."
+          }
+        ],
+        "method": "No measurement of the S15's exhaust pressure was found. On one JDM S15 at 12 psi on the same DTS dyno, DSPORT measured +2.4 % from a Tanabe cat-back (211.1 to 216.2 whp) and a further +7.6 % from the downpipe (216.2 to 232.6 whp), +10.2 % in all, far more than the model's generic factory exhaust (15 kPa) allows. 62 kPa at the stock peak flow gives the model +10.8 % for the two (it splits them about +4 % and +6 %). The known-build test uses DSPORT's S15s, so it isn't an independent check of this figure."
       },
       "injectorFlow": {
         "value": 370,

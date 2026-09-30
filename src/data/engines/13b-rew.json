@@ -158,6 +158,33 @@
     ],
     "note": "Total, dry engine (1993 US workshop manual): oil pan 4.2 L, oil cooler 0.85 L; 5.4 L on the US R1 with its extra oil cooler. Change: 3.6 L, 3.8 L with filter. The metering oil pump burns oil to lubricate the apex seals, so the level drops in normal use."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 8.8,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System",
+          "note": "Coolant capacity L {US qt, Imp qt} | 8.8 {9.3, 7.7}"
+        }
+      ]
+    },
+    "oilCooler": {
+      "value": "oil-to-air",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data",
+          "note": "Oil cooler | Type | Air-cooled, with bypass valve | Relief temperature °C {°F} | 60–65 {140–149} or below"
+        }
+      ]
+    }
+  },
   "rotor": {
     "generatingRadius": {
       "value": 105,

@@ -37,6 +37,8 @@ export interface SimRating {
   standard: RatingStandardId;
   /** As the source prints them, e.g. "280 PS" and "44.0 kgf·m". */
   printed: { power: string; torque: string };
+  /** RON the figure was rated on, where the maker says (else the market's rating fuel). */
+  fuelRon?: Rated;
 }
 
 export interface SimVariant {
@@ -52,6 +54,8 @@ export interface SimVariant {
   /** Sequential twin turbos: full-load rpm at which the second turbo comes on. */
   turboChangeover?: Rated;
   intercooler: Intercooler;
+  /** Pa: the factory exhaust's back pressure after the turbine at the stock peak flow, where known. */
+  exhaustBackPressure?: Rated;
   /** m³/s per injector (the primary, with staged fuelling). */
   injectorFlow?: Rated;
   /** m³/s per secondary injector (staged fuelling, e.g. the 13B-REW). */
@@ -83,6 +87,10 @@ interface SimEngineCommon {
   displacement: { value: number };
   firingOrder: number[];
   dryWeight?: Rated;
+  /** m³ of oil, with the filter. */
+  oilCapacity?: number;
+  /** The factory cooling system of the car it came in (m³ of coolant). */
+  cooling?: { coolantCapacity: number; oilCooler?: 'oil-to-water' | 'oil-to-air' | 'none' };
   reportedLimits: SimReportedLimit[];
   variants: SimVariant[];
 }
@@ -189,11 +197,85 @@ export interface SimReferenceFuel {
   confidence: Confidence;
 }
 
-/** A pump fuel the user can choose (part 2a: gasoline by RON). */
-export interface SimPumpFuel {
+export type FuelAvailability = 'pump-nationwide' | 'pump-some-stations' | 'drum' | 'not-sold';
+
+/** A fuel the user can choose: Saudi pump grades, race fuel, E85. SI units. */
+export interface SimFuel {
   id: string;
   name: string;
+  kind: 'pump-gasoline' | 'race-gasoline' | 'e85';
   ron: number;
+  /** J/kg; undefined means gasoline's (model constants). */
+  lhv?: number;
+  stoichAfr?: number;
+  /** kg/m³ */
+  density?: number;
+  /** J/kg */
+  heatOfVaporisation?: number;
+  ethanolShare?: number;
+  needsTune: boolean;
+  availability: { status: FuelAvailability; summary: string };
+  confidence: Confidence;
+}
+
+/** An altitude preset (standards/locations.json). */
+export interface SimLocation {
+  id: string;
+  name: string;
+  label: string;
+  /** m above sea level. */
+  elevation: number;
+  /** Pa, International Standard Atmosphere at that elevation. */
+  pressure: number;
+  /** Pa, mean summer station pressure where a climate record gives one. */
+  summerStationPressure?: number;
+  confidence: Confidence;
+}
+
+/** The International Standard Atmosphere, for pressure at an elevation. */
+export interface SimStandardAtmosphere {
+  /** Pa */
+  seaLevelPressure: number;
+  /** K */
+  seaLevelTemperature: number;
+  /** K/m */
+  lapseRate: number;
+  /** g0 M / (R L), about 5.256. */
+  exponent: number;
+}
+
+export type DynoId =
+  'dynojet' | 'mustang' | 'dynapack' | 'dyno-dynamics' | 'mainline' | 'superflow' | 'rototest';
+
+export interface SimDyno {
+  id: DynoId;
+  name: string;
+  kind: 'inertia-roller' | 'load-roller' | 'hub';
+  /** Reading on this dyno for a car a Dynojet reads 1.00 on. */
+  readingFactor: Rated;
+  /** The correction its software applies unless told otherwise. */
+  defaultCorrection: CorrectionId;
+}
+
+export type CorrectionId =
+  'sae-j1349' | 'sae-j607-std' | 'din-70020' | 'eec-80-1269' | 'uncorrected';
+
+/** cf = scale x (pRef / p)^pressureExponent x (T / TRef)^temperatureExponent - offset. */
+export interface SimCorrection {
+  id: CorrectionId;
+  name: string;
+  /** Undefined for `uncorrected`. */
+  reference?: {
+    /** K */
+    temperature: number;
+    /** Pa */
+    pressure: number;
+    pressureBasis: 'dry-air' | 'total';
+    scale: number;
+    offset: number;
+    pressureExponent: number;
+    temperatureExponent: number;
+  };
   confidence: Confidence;
 }
 
@@ -219,10 +301,13 @@ export const MODEL_CONSTANT_IDS = [
   'gasoline-lhv',
   'gasoline-stoich-afr',
   'gasoline-density',
+  'gasoline-heat-of-vaporisation',
+  'charge-cooling-share',
   // Mixture and efficiency
   'wot-lambda-na',
   'wot-lambda-turbo',
   'wot-lambda-rotary-turbo',
+  'wot-lambda-rotary-tuned',
   'lambda-peak-work',
   'lambda-peak-work-gain',
   'cycle-gamma',
@@ -245,10 +330,12 @@ export const MODEL_CONSTANT_IDS = [
   'knock-loss-linear-from',
   'knock-stock-retard-na',
   'knock-stock-retard-boosted',
+  'knock-max-retard',
   // Forced induction
   'compressor-peak-efficiency',
   'turbine-efficiency',
   'turbo-mechanical-efficiency',
+  'turbo-stock-turbine-margin',
   'compressor-stock-choke-position',
   'compressor-stock-pr-fraction',
   'intercooler-effectiveness-side',
@@ -257,6 +344,22 @@ export const MODEL_CONSTANT_IDS = [
   'intercooler-pressure-drop',
   'air-filter-pressure-drop',
   'exhaust-back-pressure',
+  // Aftermarket parts, as a known build or (Phase 3) a user's build fits them
+  'intercooler-effectiveness-aftermarket',
+  'intercooler-aftermarket-flow-scale',
+  'intercooler-pressure-drop-aftermarket',
+  'exhaust-back-pressure-cat-back',
+  'exhaust-back-pressure-turbo-back',
+  'air-filter-pressure-drop-aftermarket',
+  'na-intake-pressure-drop',
+  'na-intake-pressure-drop-aftermarket',
+  'na-exhaust-back-pressure',
+  'na-exhaust-back-pressure-cat-back',
+  'na-exhaust-back-pressure-headers',
+  'turbo-default-max-pressure-ratio',
+  'supercharger-default-choke-flow',
+  'supercharger-default-max-pressure-ratio',
+  'supercharger-drive-efficiency',
   'egt-fraction-piston',
   'egt-fraction-rotary',
   'egt-fraction-per-degree',
@@ -267,6 +370,37 @@ export const MODEL_CONSTANT_IDS = [
   'drivetrain-automated-manual',
   'drivetrain-final-drive',
   'drivetrain-tyre-roller',
+  // Thermal model and the heat-soak test (BUILD_PROMPT 6.2)
+  'heat-to-coolant-piston',
+  'heat-to-coolant-rotary',
+  'heat-to-oil-piston',
+  'heat-to-oil-rotary',
+  'radiator-design-coolant',
+  'radiator-design-ambient',
+  'radiator-design-face-velocity',
+  'radiator-velocity-exponent',
+  'oil-design-over-coolant',
+  'engine-default-mass',
+  'engine-thermal-mass-share',
+  'engine-metal-specific-heat',
+  'coolant-default-volume',
+  'oil-default-volume',
+  'coolant-density',
+  'coolant-specific-heat',
+  'oil-density',
+  'oil-specific-heat',
+  'thermostat-open',
+  'thermostat-span',
+  'oil-start-over-coolant',
+  'drift-load-low',
+  'drift-load-high',
+  'drift-load-period',
+  'drift-duration',
+  'drift-face-velocity',
+  'coolant-limit',
+  'oil-limit',
+  // Known builds
+  'dyno-default-relative-humidity',
   // Limits
   'injector-duty-limit',
   // Stock curve shape, where the maker publishes only the peaks
@@ -308,13 +442,132 @@ export interface SimAssumption {
   sources: { title: string; url: string }[];
 }
 
+/** An aftermarket turbo, from its maker's compressor map. */
+export interface SimTurboSpec {
+  model: string;
+  count: number;
+  /**
+   * kg/s at the map's choke line at the top of the map, corrected to the
+   * model's reference inlet (298.15 K, 101.325 kPa), per turbo.
+   */
+  chokeFlow: number;
+  /** Undefined where no map is published: the model's defaults apply. */
+  maxPressureRatio?: number;
+  peakEfficiency?: number;
+}
+
+/** A supercharger kit on a naturally aspirated engine. */
+export interface SimSuperchargerSpec {
+  model: string;
+  kind: 'centrifugal' | 'twin-screw' | 'roots';
+  /** Pa gauge the kit makes at `boostRpm` (engine rpm), as documented. */
+  boost: number;
+  boostRpm: number;
+  intercooled: boolean;
+  /** From the maker's map where published (else model defaults). */
+  peakEfficiency?: number;
+  chokeFlow?: number;
+  maxPressureRatio?: number;
+}
+
+/** What a build changes, as the simulation applies it. SI units. */
+export interface SimBuildSpec {
+  /** Gauge boost the controller holds, Pa, as documented on the dyno day. */
+  boost?: { peak: number; atPeakPower?: number; fullBoostRpm?: number };
+  turbo?: SimTurboSpec;
+  supercharger?: SimSuperchargerSpec;
+  /** `aftermarket`: a bigger air-to-air core, front-mount or in the stock place. */
+  intercooler: 'stock' | 'aftermarket';
+  /**
+   * `cat-back`: silencers and pipes after the catalyst. `full`: headers (naturally
+   * aspirated) or a downpipe (turbo) as well, with or without a catalyst.
+   */
+  exhaust: 'stock' | 'cat-back' | 'full';
+  intake: 'stock' | 'free-flow';
+  ecu: 'stock' | 'tuned';
+  fuel: { kind: SimFuel['kind']; ron: number; id?: string };
+  /**
+   * m³/s per injector (primaries), where the build changed them; `unstated`
+   * for bigger injectors of a size the source doesn't give (fuel not limited).
+   */
+  injectorFlow?: number | 'unstated';
+  /** m³/s per secondary injector (staged fuelling), where the build changed them. */
+  secondaryInjectorFlow?: number;
+  camshafts: 'stock' | 'aftermarket';
+}
+
+/**
+ * A documented real build with a published chassis-dyno result
+ * (src/data/builds/): the known-build calibration checks the model against it.
+ */
+export interface SimKnownBuild {
+  id: string;
+  carId: string;
+  trimId: string;
+  title: string;
+  /** Owner, shop or magazine. */
+  who: string;
+  /** When it was on the dyno (YYYY, YYYY-MM or a date), where the source says. */
+  date?: string;
+  spec: SimBuildSpec;
+  /** The parts list as documented, for people. */
+  described: string;
+  result: {
+    /** W at the wheels, as printed (converted to W). */
+    wheelPower: Rated;
+    printed: string;
+    powerRpm?: number;
+    dyno: DynoId;
+    correction: CorrectionId;
+    /** The sheet doesn't say: the dyno software's default is assumed. */
+    correctionAssumed: boolean;
+    /** Test-day air, where the sheet prints it. */
+    conditions?: { temperature: number; pressure: number; relativeHumidity?: number };
+    gear?: number;
+  };
+  source: { title: string; url: string };
+  /** Out of the 10 % gate, with the reason (see src/data/schema/build.ts). */
+  excluded?: { reason: string; decided: string };
+  scoring: SimBuildScoring;
+}
+
+/**
+ * Whether a build helped choose the model's fitted constants (`fit`: its score
+ * is in-sample) or was added later and first scored out-of-sample (`holdout`,
+ * with that first score kept). See src/data/schema/build.ts.
+ */
+export type SimBuildScoring =
+  | { sample: 'fit'; fitted: string }
+  | { sample: 'holdout'; firstError: number; scored: string; commit: string };
+
+/** Counted known builds every launch car needs (the owner: at least three per car). */
+export const MIN_KNOWN_BUILDS_PER_CAR = 3;
+
+/** The owner's exception to the three-builds-per-car rule, for one car. */
+export interface SimBuildCountException {
+  carId: string;
+  minBuilds: number;
+  reason: string;
+  decided: string;
+  /** What the car's stock-check sticker says about the gap. */
+  badge: string;
+}
+
 export interface SimCatalogue {
   cars: SimCar[];
   engines: SimEngine[];
   standards: SimRatingStandard[];
   unknownStandard: SimUnknownStandardRule[];
   referenceFuels: SimReferenceFuel[];
-  pumpFuels: SimPumpFuel[];
+  fuels: SimFuel[];
+  defaultFuel: string;
+  atmosphere: SimStandardAtmosphere;
+  locations: SimLocation[];
+  defaultLocation: string;
+  dynos: SimDyno[];
+  corrections: SimCorrection[];
+  knownBuilds: SimKnownBuild[];
+  buildCountExceptions: SimBuildCountException[];
   constants: ModelConstants;
   assumptions: SimAssumption[];
 }

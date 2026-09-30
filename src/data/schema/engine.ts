@@ -39,6 +39,12 @@ const Output = z.strictObject({
   torque: Torque,
   torqueRpm: Rpm,
   standard: RatingStandardSchema,
+  /**
+   * RON of the fuel the figure was rated on, where the maker says so. Without
+   * it the market's rating fuel applies (standards/fuels.json). A US octane
+   * (AKI) is converted to RON with the market rule's method, marked estimated.
+   */
+  ratingFuelRon: sourced(z.number().min(80).max(120)).optional(),
 });
 
 /**
@@ -95,6 +101,13 @@ export const EngineVariantSchema = z.strictObject({
    */
   turboChangeover: Rpm.optional(),
   intercooler: sourced(z.enum(['none', 'air-to-air-front', 'air-to-air-side', 'air-to-water'])),
+  /**
+   * Turbo variants: back pressure of the factory exhaust after the turbine
+   * (downpipe, catalysts, silencers) at the stock peak flow, where a same-car
+   * parts test pins it down. Without it the model's generic figure applies
+   * (model/assumptions.json, exhaust-back-pressure).
+   */
+  exhaustBackPressure: measured(UNITS.pressure).optional(),
   /** Flow of one injector; there's one per cylinder or rotor (with staged fuelling, the primary). */
   injectorFlow: measured(UNITS.flow).optional(),
   /**
@@ -210,6 +223,18 @@ const common = {
   sump: sourced(SumpPosition).optional(),
   sumpOptions: z.array(SumpOption).min(1).optional(),
   oilCapacity: measured(UNITS.volume).optional(),
+  /**
+   * The factory cooling system of the car the engine came in, for the thermal
+   * model (BUILD_PROMPT 6.2). `oilCooler`: where the oil's heat goes, into the
+   * coolant (an oil-to-water cooler, or the block) or straight to the air.
+   */
+  cooling: z
+    .strictObject({
+      /** With the reservoir, as the maker's capacity table gives it. */
+      coolantCapacity: measured(UNITS.volume),
+      oilCooler: sourced(z.enum(['oil-to-water', 'oil-to-air', 'none'])).optional(),
+    })
+    .optional(),
 };
 
 const PistonEngineSchema = z.strictObject({

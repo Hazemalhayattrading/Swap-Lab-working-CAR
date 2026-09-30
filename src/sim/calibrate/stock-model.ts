@@ -34,7 +34,9 @@ import { referenceCurve, type ReferenceCurve } from './reference-curve';
  *   model's combustion efficiency and friction.
  * - Turbocharged: the VE curve takes a generic turbo-engine shape; its level is
  *   set so the model's peak boost matches the published stock boost (or kept
- *   at its prior if no boost is published, and the boost is then inferred).
+ *   at its prior if no boost is published, and the boost is then inferred:
+ *   the prior is what the same engine's published-boost variants fit to, else
+ *   a generic value).
  *   The boost target curve follows from the reference torque; the compressor
  *   map is sized around the resulting operating line and the turbine so it
  *   just reaches the target at the spool point. Below that, the turbo model
@@ -151,6 +153,9 @@ function blankModel(
     },
     induction: { kind: 'natural' },
     ...(injectors ? { injectors } : {}),
+    // A factory ECU: its map, less what knock control takes away.
+    ignition: 'stock-map',
+    octaneLimitsBoost: true,
   };
 }
 
@@ -188,6 +193,7 @@ function fitTurbo(
   c: Conditions,
   k: ModelConstants,
   notes: string[],
+  vePrior: number | undefined,
 ): NonNullable<StockFit['boost']> {
   const { air, fuel } = c;
   const grid = curve.grid;
@@ -205,7 +211,7 @@ function fitTurbo(
   const rGas = k['air-gas-constant'];
   const retard = model.reference.knock.retard[0] ?? 0;
 
-  let level = k['ve-prior-peak-boosted'];
+  let level = vePrior ?? k['ve-prior-peak-boosted'];
   const p2 = grid.map(() => air.pressure * 1.6);
   const charge = grid.map(() => air.temperature + 35);
   const ratio = grid.map(() => 1.3);
@@ -220,7 +226,7 @@ function fitTurbo(
     return {
       rpm: n,
       air,
-      targetBoost: (p2[i] ?? air.pressure) - air.pressure,
+      targetPressure: p2[i] ?? air.pressure,
       airflow: (p, t) => ((level * (shape[i] ?? 1) * p * dryShare) / (rGas * t)) * perSecond,
       turbineInletTemperature: (t) =>
         exhaustTemperature(
@@ -264,7 +270,7 @@ function fitTurbo(
     const airFilter = { designFlow: peakFlow, pressureDrop: k['air-filter-pressure-drop'] };
     const exhaust = {
       designFlow: peakFlow * exhaustPerAir,
-      pressureDrop: k['exhaust-back-pressure'],
+      pressureDrop: variant.exhaustBackPressure?.value ?? k['exhaust-back-pressure'],
     };
     const line = idx.map((i) => {
       const flow = airflow[i] ?? 0;
@@ -328,8 +334,11 @@ function fitTurbo(
     if (sizes.length === 0) {
       notes.push('turbine sizing did not bracket; kept the previous capacity');
     } else {
-      // A hair smaller than the exact balance, so the sizing point holds its target.
-      capacity = Math.min(...sizes) * 0.999;
+      // Smaller than the exact balance: factory turbines are sized with the
+      // wastegate already cracking at the spool point, for response
+      // (turbo-stock-turbine-margin), which is what keeps exhaust back
+      // pressure high at the top end.
+      capacity = Math.min(...sizes) * 0.999 * k['turbo-stock-turbine-margin'];
     }
     for (const u of current.system.units) u.turbine.flowCapacity = capacity;
 
@@ -346,11 +355,13 @@ function fitTurbo(
   const spoolIndex = idx[0] ?? 0;
   const spoolBoost = (p2[spoolIndex] ?? air.pressure) - air.pressure;
   model.ve = shape.map((s) => level * s);
+  // Absolute targets, as the rating air defines them: an ECU holding manifold
+  // pressure (the owner's altitude rule, 2026-09-30; see decisions).
   model.induction = {
     kind: 'turbo',
     plant,
-    targetBoost: grid.map((_, i) =>
-      i < spoolIndex ? spoolBoost : (p2[i] ?? air.pressure) - air.pressure,
+    targetPressure: grid.map((_, i) =>
+      i < spoolIndex ? air.pressure + spoolBoost : (p2[i] ?? air.pressure),
     ),
   };
   if (compromise) notes.push('the generic compressor map could not fit the stock line cleanly');
@@ -380,8 +391,24 @@ function recordReference(model: EngineModel, c: Conditions, k: ModelConstants): 
   }
   model.reference.intakeTemperature = intake;
   model.reference.backPressureRatio = back;
-  model.reference.knock.chargeTemperature = temps;
-  model.reference.knock.manifoldPressure = pressures;
+  // The factory map is at its knock limit at its peak boost. Below that rpm the
+  // turbo hasn't spooled, and where the boost tapers towards redline the small
+  // turbos have run out; neither is the knock margin, so every rpm refers to
+  // the state at the peak.
+  const top = pressures.indexOf(Math.max(...pressures));
+  const peakPressure = pressures[top] ?? c.air.pressure;
+  const peakTemperature = temps[top] ?? c.air.temperature;
+  model.reference.knock.manifoldPressure = pressures.map(() => peakPressure);
+  model.reference.knock.chargeTemperature = temps.map(() => peakTemperature);
+}
+
+export interface FitOptions {
+  /**
+   * VE level to start a turbo variant from when its stock boost isn't
+   * published: the mean its engine's published-boost variants fit to (FitCache
+   * in src/sim/simulate.ts). Without it, the generic `ve-prior-peak-boosted`.
+   */
+  vePrior?: number;
 }
 
 export function fitStockEngine(
@@ -389,6 +416,7 @@ export function fitStockEngine(
   variant: SimVariant,
   rating: { air: Atmosphere; fuel: Fuel },
   k: ModelConstants,
+  options: FitOptions = {},
 ): StockFit {
   const notes: string[] = [];
   const isBoosted = boosted(variant);
@@ -396,7 +424,7 @@ export function fitStockEngine(
   const conditions: Conditions = { air: rating.air, fuel: rating.fuel };
   const model = blankModel(engine, variant, curve, conditions, k);
   let boost: StockFit['boost'];
-  if (isBoosted) boost = fitTurbo(model, variant, curve, conditions, k, notes);
+  if (isBoosted) boost = fitTurbo(model, variant, curve, conditions, k, notes, options.vePrior);
   else fitNatural(model, curve, conditions, k);
   recordReference(model, conditions, k);
   return { model, curve, conditions, ...(boost ? { boost } : {}), notes };

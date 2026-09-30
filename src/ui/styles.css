@@ -330,6 +330,159 @@ body {
   line-height: 1.55;
 }
 
+/*
+ * Caution sticker: shown when the browser draws the 3D view in software.
+ * Printed paper with a hazard-stripe edge, stuck under the shop tag.
+ */
+.gpu-notice {
+  position: absolute;
+  top: calc(var(--gutter) + env(safe-area-inset-top) + 4.4rem);
+  left: calc(var(--gutter) + env(safe-area-inset-left));
+  display: grid;
+  gap: 0.45rem;
+  width: min(23rem, calc(100vw - 2 * var(--gutter)));
+  /* Leaves room for the docked dyno sheet on the right. */
+  max-width: calc(100vw - var(--dock-width, 0px) - 3 * var(--gutter));
+  padding: 0.65rem 0.8rem 0.7rem 1.35rem;
+  border-radius: 1px;
+  background:
+    repeating-linear-gradient(-45deg, var(--signal-orange) 0 0.42rem, var(--ink) 0.42rem 0.84rem)
+      left / 0.55rem 100% no-repeat,
+    var(--paper);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.55);
+  color: var(--ink);
+  transform: rotate(0.4deg);
+}
+.gpu-notice[hidden] {
+  display: none;
+}
+.gpu-notice__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--step-1);
+  line-height: 1.1;
+}
+.gpu-notice__lead,
+.gpu-notice__steps {
+  margin: 0;
+  font-weight: 500;
+  font-size: var(--step-0);
+  line-height: 1.35;
+}
+.gpu-notice__how summary {
+  font-weight: 600;
+  font-size: var(--step-0);
+  cursor: pointer;
+}
+.gpu-notice__steps {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  padding-left: 1.1rem;
+  font-size: var(--step--1);
+}
+.gpu-notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.1rem;
+}
+.gpu-notice__button {
+  min-height: 1.9rem;
+  padding: 0.4rem 0.75rem 0.35rem;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  font: 600 var(--step--1) / 1 var(--font-display);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.gpu-notice__button:hover:not(:disabled) {
+  background: rgb(38 36 31 / 0.08);
+}
+.gpu-notice__button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.gpu-notice :focus-visible {
+  outline-color: var(--ink);
+}
+
+/* Frame-rate check (?fps=1): a test-bench readout in the telemetry's own type. */
+.fps-probe {
+  position: absolute;
+  top: calc(var(--gutter) + env(safe-area-inset-top) + 4.4rem);
+  left: calc(var(--gutter) + env(safe-area-inset-left));
+  display: grid;
+  gap: 0.35rem;
+  width: min(18rem, calc(100vw - 2 * var(--gutter)));
+  max-width: calc(100vw - var(--dock-width, 0px) - 3 * var(--gutter));
+  padding: 0.55rem 0.75rem 0.6rem;
+  border: 1px solid var(--steel-600);
+  border-left: 4px solid var(--aluminium);
+  border-radius: 2px;
+  background: rgb(13 14 16 / 0.92);
+  color: var(--paper);
+}
+/* The software-rendering notice takes that corner when it shows; the check moves down. */
+.gpu-notice:not([hidden]) ~ .fps-probe {
+  top: auto;
+  bottom: calc(4.5rem + env(safe-area-inset-bottom));
+}
+.fps-probe[data-state='held'] {
+  border-left-color: var(--coolant-cyan);
+}
+.fps-probe[data-state='missed'] {
+  border-left-color: var(--signal-orange);
+}
+.fps-probe__title {
+  margin: 0;
+  font: 700 var(--step-1) / 1.1 var(--font-display);
+}
+.fps-probe__verdict {
+  margin: 0;
+  font: 600 var(--step-0) / 1.2 var(--font-display);
+}
+.fps-probe[data-state='held'] .fps-probe__verdict {
+  color: var(--coolant-cyan);
+}
+.fps-probe[data-state='missed'] .fps-probe__verdict {
+  color: var(--signal-orange);
+}
+.fps-probe__stats {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0;
+}
+.fps-probe__stats div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fps-probe__stats dt {
+  color: var(--concrete);
+  font-weight: 500;
+  font-size: var(--step--1);
+}
+.fps-probe__stats dd {
+  margin: 0;
+  font-family: var(--font-data);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;
+}
+.fps-probe__setup,
+.fps-probe__note {
+  margin: 0;
+  color: var(--concrete);
+  font-weight: 500;
+  font-size: var(--step--1);
+  line-height: 1.35;
+}
+.fps-probe__setup {
+  color: var(--aluminium);
+}
+
 /* The empty-bay note only makes sense over a working view. */
 html:not([data-scene-state='ready']) .tape-note {
   visibility: hidden;
@@ -349,7 +502,8 @@ html:not([data-scene-state='ready']) .tape-note {
     border-color: Highlight;
   }
   .shop-tag,
-  .tape-note {
+  .tape-note,
+  .gpu-notice {
     forced-color-adjust: none;
   }
 }
@@ -369,6 +523,11 @@ html:not([data-scene-state='ready']) .tape-note {
   }
   .tape-note {
     font-size: var(--step-0);
+  }
+  .gpu-notice {
+    top: calc(var(--gutter) + env(safe-area-inset-top) + 3.4rem);
+    max-width: none;
+    transform: none;
   }
 }
 

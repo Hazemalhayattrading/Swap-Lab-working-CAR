@@ -1,16 +1,29 @@
+import type { KnownBuild, KnownBuildsFile } from './schema/build';
 import type { Car, Trim } from './schema/car';
 import type { Engine } from './schema/engine';
 import { MODEL_UNITS, type AssumptionsFile } from './schema/model';
-import type { FuelsFile, PowerRatingsFile, WeightBasesFile } from './schema/standards';
+import type {
+  DynosFile,
+  FuelsFile,
+  LocationsFile,
+  PowerRatingsFile,
+  WeightBasesFile,
+} from './schema/standards';
 import type {
   Rated,
   ModelConstantId,
   SimAssumption,
   SimCar,
   SimCatalogue,
+  SimCorrection,
+  SimDyno,
   SimEngine,
+  SimFuel,
+  SimKnownBuild,
+  SimLocation,
   SimRatingStandard,
   SimReportedLimit,
+  SimStandardAtmosphere,
   SimVariant,
   SimWeight,
 } from './sim-data';
@@ -30,6 +43,9 @@ export interface RawData {
   powerRatings: PowerRatingsFile;
   fuels: FuelsFile;
   weightBases: WeightBasesFile;
+  locations: LocationsFile;
+  dynos: DynosFile;
+  builds: readonly KnownBuildsFile[];
   assumptions: AssumptionsFile;
 }
 
@@ -72,6 +88,7 @@ function convertVariant(v: Engine['variants'][number]): SimVariant {
     ...(v.boost ? { boost: rated(v.boost) } : {}),
     ...(v.turboChangeover ? { turboChangeover: rpm(v.turboChangeover) } : {}),
     intercooler: v.intercooler.value,
+    ...(v.exhaustBackPressure ? { exhaustBackPressure: rated(v.exhaustBackPressure) } : {}),
     ...(v.injectorFlow ? { injectorFlow: rated(v.injectorFlow) } : {}),
     ...(v.secondaryInjectorFlow ? { secondaryInjectorFlow: rated(v.secondaryInjectorFlow) } : {}),
     ...(vvt ? { variableValveTiming: vvt } : {}),
@@ -90,6 +107,9 @@ function convertVariant(v: Engine['variants'][number]): SimVariant {
       torqueRpm: rpm(o.torqueRpm),
       standard: o.standard,
       printed: { power: printed(o.power), torque: printed(o.torque) },
+      ...(o.ratingFuelRon
+        ? { fuelRon: { value: o.ratingFuelRon.value, confidence: o.ratingFuelRon.confidence } }
+        : {}),
     },
     ...(curve
       ? {
@@ -122,6 +142,20 @@ export function convertEngine(engine: Engine): SimEngine {
     displacement: { value: engine.displacement.value },
     firingOrder: [...engine.firingOrder.value],
     ...(engine.dryWeight ? { dryWeight: rated(engine.dryWeight) } : {}),
+    ...(engine.oilCapacity
+      ? { oilCapacity: toSI(engine.oilCapacity.value, engine.oilCapacity.unit) }
+      : {}),
+    ...(engine.cooling
+      ? {
+          cooling: {
+            coolantCapacity: toSI(
+              engine.cooling.coolantCapacity.value,
+              engine.cooling.coolantCapacity.unit,
+            ),
+            ...(engine.cooling.oilCooler ? { oilCooler: engine.cooling.oilCooler.value } : {}),
+          },
+        }
+      : {}),
     reportedLimits: convertLimits(engine),
     variants: engine.variants.map(convertVariant),
   };
@@ -211,12 +245,24 @@ export function convertCar(car: Car, bases: WeightBasesFile): SimCar {
   };
 }
 
-function kelvin(m: { value: number; unit: '°C' | 'K' }): number {
-  return m.unit === 'K' ? m.value : m.value + 273.15;
+function kelvin(m: { value: number; unit: '°C' | 'K' | '°F' }): number {
+  if (m.unit === 'K') return m.value;
+  if (m.unit === '°F') return ((m.value - 32) * 5) / 9 + 273.15;
+  return m.value + 273.15;
 }
 
-function pascal(m: { value: number; unit: 'kPa' | 'hPa' | 'mbar' }): number {
-  return m.unit === 'kPa' ? m.value * 1000 : m.value * 100;
+function pascal(m: {
+  value: number;
+  unit: 'kPa' | 'hPa' | 'mbar' | 'inHg' | 'psi' | 'bar';
+}): number {
+  return toSI(m.value, m.unit);
+}
+
+/** The least sure of several confidences. */
+function weakest(...confidences: Rated['confidence'][]): Rated['confidence'] {
+  if (confidences.includes('estimated')) return 'estimated';
+  if (confidences.includes('single-source')) return 'single-source';
+  return 'verified';
 }
 
 function convertStandards(file: PowerRatingsFile): SimRatingStandard[] {
@@ -249,7 +295,7 @@ function convertAssumptions(file: AssumptionsFile): {
 } {
   const constants = {} as Record<ModelConstantId, number>;
   const assumptions = file.assumptions.map((a) => {
-    const value = a.value * MODEL_UNITS[a.unit];
+    const value = a.unit === '°C' ? a.value + 273.15 : a.value * MODEL_UNITS[a.unit];
     constants[a.id] = value;
     return {
       id: a.id,
@@ -264,8 +310,260 @@ function convertAssumptions(file: AssumptionsFile): {
   return { constants, assumptions };
 }
 
+function convertFuels(file: FuelsFile): SimFuel[] {
+  return file.fuels.map((f) => ({
+    id: f.id,
+    name: f.name,
+    kind: f.kind,
+    ron: f.ron.value,
+    ...(f.lhv ? { lhv: toSI(f.lhv.value, f.lhv.unit) } : {}),
+    ...(f.stoichAfr ? { stoichAfr: f.stoichAfr.value } : {}),
+    ...(f.density ? { density: toSI(f.density.value, f.density.unit) } : {}),
+    ...(f.heatOfVaporisation
+      ? { heatOfVaporisation: toSI(f.heatOfVaporisation.value, f.heatOfVaporisation.unit) }
+      : {}),
+    ...(f.ethanolShare ? { ethanolShare: f.ethanolShare.value } : {}),
+    needsTune: f.needsTune,
+    availability: { status: f.availability.status, summary: f.availability.summary.value },
+    confidence: weakest(
+      f.ron.confidence,
+      ...[f.lhv, f.stoichAfr, f.density, f.heatOfVaporisation]
+        .filter((x) => x !== undefined)
+        .map((x) => x.confidence),
+    ),
+  }));
+}
+
+function convertAtmosphere(file: LocationsFile): SimStandardAtmosphere {
+  const a = file.standardAtmosphere;
+  const seaLevelTemperature = kelvin(a.seaLevelTemperature);
+  return {
+    seaLevelPressure: pascal(a.seaLevelPressure),
+    seaLevelTemperature,
+    lapseRate: a.lapseRate.value,
+    exponent: a.exponent.value,
+  };
+}
+
+/** Pressure in the standard atmosphere at an elevation, Pa (the sim's standardPressure, for data). */
+function isaPressure(elevation: number, isa: SimStandardAtmosphere): number {
+  return (
+    isa.seaLevelPressure *
+    Math.pow(1 - (isa.lapseRate * elevation) / isa.seaLevelTemperature, isa.exponent)
+  );
+}
+
+function convertLocations(file: LocationsFile, isa: SimStandardAtmosphere): SimLocation[] {
+  return file.locations.map((l) => {
+    const elevation = toSI(l.elevation.value, l.elevation.unit);
+    return {
+      id: l.id,
+      name: l.name,
+      label: l.label,
+      elevation,
+      pressure: isaPressure(elevation, isa),
+      ...(l.summerStationPressure
+        ? { summerStationPressure: pascal(l.summerStationPressure) }
+        : {}),
+      confidence: l.elevation.confidence,
+    };
+  });
+}
+
+function convertDynos(file: DynosFile): { dynos: SimDyno[]; corrections: SimCorrection[] } {
+  return {
+    dynos: file.dynos.map((d) => ({
+      id: d.id,
+      name: d.name,
+      kind: d.kind,
+      readingFactor: { value: d.readingFactor.value, confidence: d.readingFactor.confidence },
+      defaultCorrection: d.defaultCorrection.value,
+    })),
+    corrections: file.corrections.map((c) => {
+      const t = c.referenceTemperature;
+      const p = c.referencePressure;
+      const basis = c.pressureBasis;
+      const terms = [c.scale, c.offset, c.pressureExponent, c.temperatureExponent];
+      const [scale, offset, pressureExponent, temperatureExponent] = terms;
+      const reference =
+        t && p && basis && scale && offset && pressureExponent && temperatureExponent
+          ? {
+              temperature: kelvin(t),
+              pressure: pascal(p),
+              pressureBasis: basis.value,
+              scale: scale.value,
+              offset: offset.value,
+              pressureExponent: pressureExponent.value,
+              temperatureExponent: temperatureExponent.value,
+            }
+          : undefined;
+      return {
+        id: c.id,
+        name: c.name,
+        ...(reference ? { reference } : {}),
+        confidence: weakest(
+          c.formula.confidence,
+          ...terms.filter((x) => x !== undefined).map((x) => x.confidence),
+        ),
+      };
+    }),
+  };
+}
+
+/**
+ * A map's corrected flow re-referenced to the model's inlet (298.15 K,
+ * 101.325 kPa). A flow quoted without its reference is taken as given.
+ */
+function toModelCorrectedFlow(
+  flow: { value: number; unit: 'lb/min' | 'kg/s' },
+  temperature?: { value: number; unit: '°C' | '°F' | 'K' },
+  pressure?: { value: number; unit: 'kPa' | 'psi' | 'inHg' | 'bar' },
+): number {
+  const t = temperature ? kelvin(temperature) : 298.15;
+  const p = pressure ? pascal(pressure) : 101_325;
+  return toSI(flow.value, flow.unit) * Math.sqrt(t / 298.15) * (101_325 / p);
+}
+
+function convertBuild(
+  carId: string,
+  b: KnownBuild,
+  dynos: SimDyno[],
+  isa: SimStandardAtmosphere,
+): SimKnownBuild {
+  const m = b.modifications;
+  const r = b.result;
+  const dyno = dynos.find((d) => d.id === r.dyno.value);
+  if (!dyno) throw new Error(`${b.id}: no dyno "${r.dyno.value}"`);
+  const stated = r.correction.value;
+  const c = r.conditions;
+  const conditionsPressure = c?.pressure
+    ? pascal(c.pressure)
+    : c?.elevation
+      ? isaPressure(toSI(c.elevation.value, c.elevation.unit), isa)
+      : undefined;
+  const sc = m.supercharger;
+  return {
+    id: b.id,
+    carId,
+    trimId: b.trim,
+    title: b.title,
+    who: b.who,
+    ...(b.date ? { date: b.date } : {}),
+    spec: {
+      ...(m.boost
+        ? {
+            boost: {
+              peak: toSI(m.boost.peak.value, m.boost.peak.unit),
+              ...(m.boost.atPeakPower
+                ? { atPeakPower: toSI(m.boost.atPeakPower.value, m.boost.atPeakPower.unit) }
+                : {}),
+              ...(m.boost.fullBoostRpm ? { fullBoostRpm: m.boost.fullBoostRpm.value } : {}),
+            },
+          }
+        : {}),
+      ...(m.turbo
+        ? {
+            turbo: {
+              model: m.turbo.model.value,
+              count: m.turbo.count,
+              chokeFlow: toModelCorrectedFlow(
+                m.turbo.compressorMaxFlow,
+                m.turbo.mapReferenceTemperature,
+                m.turbo.mapReferencePressure,
+              ),
+              ...(m.turbo.maxPressureRatio
+                ? { maxPressureRatio: m.turbo.maxPressureRatio.value }
+                : {}),
+              ...(m.turbo.peakEfficiency ? { peakEfficiency: m.turbo.peakEfficiency.value } : {}),
+            },
+          }
+        : {}),
+      ...(sc
+        ? {
+            supercharger: {
+              model: sc.model.value,
+              kind: sc.kind,
+              boost: toSI(sc.boost.value, sc.boost.unit),
+              boostRpm: sc.boostRpm.value,
+              intercooled: sc.intercooled.value,
+              ...(sc.peakEfficiency ? { peakEfficiency: sc.peakEfficiency.value } : {}),
+              ...(sc.compressorMaxFlow
+                ? {
+                    chokeFlow: toModelCorrectedFlow(
+                      sc.compressorMaxFlow,
+                      sc.mapReferenceTemperature,
+                      sc.mapReferencePressure,
+                    ),
+                  }
+                : {}),
+              ...(sc.maxPressureRatio ? { maxPressureRatio: sc.maxPressureRatio.value } : {}),
+            },
+          }
+        : {}),
+      intercooler: m.intercooler.value,
+      exhaust: m.exhaust.value,
+      intake: m.intake.value,
+      ecu: m.ecu.value,
+      fuel: {
+        kind: m.fuel.kind,
+        ron: m.fuel.ron.value,
+        ...(m.fuel.fuelId ? { id: m.fuel.fuelId } : {}),
+      },
+      ...(m.injectors
+        ? {
+            injectorFlow:
+              m.injectors.value === 'unstated'
+                ? ('unstated' as const)
+                : toSI(m.injectors.value, m.injectors.unit),
+          }
+        : {}),
+      ...(m.secondaryInjectors
+        ? {
+            secondaryInjectorFlow: toSI(m.secondaryInjectors.value, m.secondaryInjectors.unit),
+          }
+        : {}),
+      camshafts: m.camshafts.value,
+    },
+    described: m.described,
+    result: {
+      wheelPower: {
+        value: toSI(r.wheelPower.value, r.wheelPower.unit),
+        confidence: r.wheelPower.confidence,
+      },
+      printed: `${printed(r.wheelPower)} at the wheels`,
+      ...(r.powerRpm ? { powerRpm: r.powerRpm.value } : {}),
+      dyno: dyno.id,
+      correction: stated === 'not-stated' ? dyno.defaultCorrection : stated,
+      correctionAssumed: stated === 'not-stated',
+      ...(c && conditionsPressure !== undefined
+        ? {
+            conditions: {
+              temperature: kelvin(c.temperature),
+              pressure: conditionsPressure,
+              ...(c.relativeHumidity ? { relativeHumidity: c.relativeHumidity.value } : {}),
+            },
+          }
+        : {}),
+      ...(r.gear ? { gear: r.gear.value } : {}),
+    },
+    source: { title: b.sources[0]?.title ?? b.sources[0]?.url ?? '', url: b.sources[0]?.url ?? '' },
+    ...(b.excluded ? { excluded: { reason: b.excluded.reason, decided: b.excluded.decided } } : {}),
+    scoring:
+      b.scoring.sample === 'fit'
+        ? { sample: 'fit', fitted: b.scoring.fitted }
+        : {
+            sample: 'holdout',
+            firstError: b.scoring.firstScore.error,
+            scored: b.scoring.firstScore.scored,
+            commit: b.scoring.firstScore.commit,
+          },
+  };
+}
+
 export function buildCatalogue(raw: RawData): SimCatalogue {
   const { constants, assumptions } = convertAssumptions(raw.assumptions);
+  const atmosphere = convertAtmosphere(raw.locations);
+  const { dynos, corrections } = convertDynos(raw.dynos);
   return {
     cars: raw.cars.map((c) => convertCar(c, raw.weightBases)),
     engines: raw.engines.map(convertEngine),
@@ -282,12 +580,30 @@ export function buildCatalogue(raw: RawData): SimCatalogue {
       ron: f.ron.value,
       confidence: f.ron.confidence,
     })),
-    pumpFuels: raw.fuels.pumpFuels.map((f) => ({
-      id: f.id,
-      name: f.name,
-      ron: f.ron.value,
-      confidence: f.ron.confidence,
-    })),
+    fuels: convertFuels(raw.fuels),
+    defaultFuel: raw.fuels.defaultFuel,
+    atmosphere,
+    locations: convertLocations(raw.locations, atmosphere),
+    defaultLocation: raw.locations.defaultLocation,
+    dynos,
+    corrections,
+    knownBuilds: raw.builds.flatMap((file) =>
+      file.builds.map((b) => convertBuild(file.car, b, dynos, atmosphere)),
+    ),
+    buildCountExceptions: raw.builds.flatMap((file) => {
+      const e = file.buildCountException;
+      return e
+        ? [
+            {
+              carId: file.car,
+              minBuilds: e.minBuilds,
+              reason: e.reason,
+              decided: e.decided,
+              badge: e.badge,
+            },
+          ]
+        : [];
+    }),
     constants,
     assumptions,
   };

@@ -346,6 +346,28 @@
     ],
     "note": "Oil change with filter. BMW GB's 2001 technical specification prints \"Engine oil ltr 7\", which reads as the total fill. BMW specified Castrol 10W-60 (ST041)."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 10.7,
+      "unit": "L",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+          "accessed": "2026-09-30",
+          "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), Technical Specifications",
+          "note": "Cooling system incl. heating | ltr | 10.7 | Engine oil | ltr | 7"
+        },
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719, p. 181 Capacities",
+          "note": "Cooling system including heater circuit quarts (liters) approx. 7.1 (approx. 6.7)"
+        }
+      ],
+      "method": "Two BMW documents disagree: the US owner's manual gives about 6.7 L, BMW GB's technical specifications 10.7 L. The model takes 10.7 L, the figure published as a specification; 6.7 L would be less than the 330i's 8.4 L. A third source is needed to settle it."
+    }
+  },
   "internals": {
     "crank": {
       "value": "forged",

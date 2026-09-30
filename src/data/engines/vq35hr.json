@@ -357,6 +357,21 @@
     ],
     "note": "With a filter change. Without a filter change the 2008 owner's manual says 4.6 L and the 2007 one 4.4 L (the VQ35DE figure)."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 9.0,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/ZCoupe/2008/2008-ZCoupe-owner-manual.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2008 350Z Owner's Manual (US), Capacities and recommended fuel/lubricants, p. 9-2",
+          "note": "Cooling system With reservoir 9-1/2 qt 7-7/8 qt 9.0 ... Reservoir 7/8 qt 3/4 qt 0.8"
+        }
+      ]
+    }
+  },
   "internals": {
     "crank": {
       "value": "forged",

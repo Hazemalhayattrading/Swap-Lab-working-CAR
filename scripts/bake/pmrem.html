@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swap Lab environment bake</title>
+    <!--
+      Opened by scripts/bake-environment.ts in headless Chromium. It prefilters an
+      equirectangular HDR with three's own PMREMGenerator, so the baked atlas has
+      exactly the layout three samples at run time, and posts the half-float pixels back.
+      Then it checks the bake: spheres lit by three's runtime prefilter of the original
+      (unflipped) HDR against the same spheres lit by the baked atlas.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three/webgpu": "/three/three.webgpu.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="module">
+      import {
+        Color,
+        CubeUVReflectionMapping,
+        DataTexture,
+        EquirectangularReflectionMapping,
+        FloatType,
+        HalfFloatType,
+        LinearFilter,
+        LinearSRGBColorSpace,
+        Mesh,
+        MeshStandardNodeMaterial,
+        NoToneMapping,
+        PerspectiveCamera,
+        PMREMGenerator,
+        RenderTarget,
+        RGBAFormat,
+        RGBFormat,
+        Scene,
+        SphereGeometry,
+        UnsignedInt5999Type,
+        WebGPURenderer,
+      } from 'three/webgpu';
+
+      // The same identity-swizzle shim as src/render/webgpu-compat.ts: some Chromium
+      // releases reject three's swizzle: 'rgba' in createView().
+      if (typeof GPUTexture !== 'undefined') {
+        const createView = GPUTexture.prototype.createView;
+        GPUTexture.prototype.createView = function (descriptor) {
+          if (descriptor && descriptor.swizzle === 'rgba') {
+            const rest = { ...descriptor };
+            delete rest.swizzle;
+            return createView.call(this, rest);
+          }
+          return createView.call(this, descriptor);
+        };
+      }
+
+      const post = (path, body) => fetch(path, { method: 'POST', body });
+
+      function equirectTexture(floats, width, height) {
+        const texture = new DataTexture(floats, width, height, RGBAFormat, FloatType);
+        texture.mapping = EquirectangularReflectionMapping;
+        texture.colorSpace = LinearSRGBColorSpace;
+        texture.minFilter = LinearFilter;
+        texture.magFilter = LinearFilter;
+        texture.generateMipmaps = false;
+        texture.flipY = false;
+        texture.needsUpdate = true;
+        return texture;
+      }
+
+      /** Three spheres (mirror, satin, rough) lit only by `environment`, as linear half floats. */
+      async function spheres(renderer, environment, width, height) {
+        const scene = new Scene();
+        scene.background = new Color(0, 0, 0);
+        scene.environment = environment;
+        const geometry = new SphereGeometry(1, 96, 48);
+        [0.02, 0.35, 0.8].forEach((roughness, i) => {
+          const material = new MeshStandardNodeMaterial({
+            color: 0xffffff,
+            metalness: 1,
+            roughness,
+          });
+          const mesh = new Mesh(geometry, material);
+          mesh.position.x = (i - 1) * 2.2;
+          scene.add(mesh);
+        });
+        const camera = new PerspectiveCamera(30, width / height, 0.1, 100);
+        camera.position.set(0, 0.2, 7.2);
+        camera.lookAt(0, 0, 0);
+        const target = new RenderTarget(width, height, { type: HalfFloatType });
+        renderer.toneMapping = NoToneMapping;
+        renderer.setRenderTarget(target);
+        renderer.render(scene, camera);
+        renderer.setRenderTarget(null);
+        return renderer.readRenderTargetPixelsAsync(target, 0, 0, width, height);
+      }
+
+      async function bake() {
+        const meta = await (await fetch('/input.json')).json();
+        const flipped = new Float32Array(await (await fetch('/input.bin')).arrayBuffer());
+        const original = new Float32Array(await (await fetch('/original.bin')).arrayBuffer());
+        const renderer = new WebGPURenderer({ forceWebGL: meta.forceWebGL === true });
+        await renderer.init();
+        const generator = new PMREMGenerator(renderer);
+        const target = generator.fromEquirectangular(
+          equirectTexture(flipped, meta.width, meta.height),
+        );
+        const pixels = await renderer.readRenderTargetPixelsAsync(
+          target,
+          0,
+          0,
+          target.width,
+          target.height,
+        );
+        const backend = renderer.backend.isWebGPUBackend === true ? 'webgpu' : 'webgl2';
+        await post(
+          `/result?width=${target.width}&height=${target.height}&type=${pixels.constructor.name}&backend=${backend}`,
+          pixels,
+        );
+
+        // Check, on both backends: runtime prefilter of the original HDR against the packed atlas.
+        const packed = new Uint32Array(await (await fetch('/packed.bin')).arrayBuffer());
+        const atlasTexture = () => {
+          const atlas = new DataTexture(
+            packed,
+            target.width,
+            target.height,
+            RGBFormat,
+            UnsignedInt5999Type,
+          );
+          atlas.mapping = CubeUVReflectionMapping;
+          atlas.colorSpace = LinearSRGBColorSpace;
+          atlas.minFilter = LinearFilter;
+          atlas.magFilter = LinearFilter;
+          atlas.generateMipmaps = false;
+          atlas.flipY = false;
+          atlas.needsUpdate = true;
+          return atlas;
+        };
+        const w = 384;
+        const h = 128;
+        const gl = new WebGPURenderer({ forceWebGL: true });
+        await gl.init();
+        for (const [name, r] of [
+          ['webgpu', renderer],
+          ['webgl2', gl],
+        ]) {
+          const reference = await spheres(
+            r,
+            equirectTexture(original, meta.width, meta.height),
+            w,
+            h,
+          );
+          const baked = await spheres(r, atlasTexture(), w, h);
+          await post(`/check?backend=${name}&kind=reference&width=${w}&height=${h}`, reference);
+          await post(`/check?backend=${name}&kind=baked&width=${w}&height=${h}`, baked);
+        }
+        await post('/done', 'ok');
+      }
+
+      bake().catch(async (error) => {
+        await post('/error', String(error && error.stack ? error.stack : error));
+      });
+    </script>
+  </body>
+</html>

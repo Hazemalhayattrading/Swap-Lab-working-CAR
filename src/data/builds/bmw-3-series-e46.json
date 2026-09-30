@@ -1,0 +1,746 @@
+{
+  "$comment": "Known real builds of the E46 (BUILD_PROMPT 6.5), all E46 M3s (S54B32). Chosen before running the model, by the rules in docs/research-notes/part2b.md. Excluded: the Active Autowerke PRIMA supercharger sheet (the sheet says 426.69 whp, the maker's own page 395 whp for the same run), the CSL-airbox and MSS54HP builds (another engine program and a tuned-runner air box the model can't represent), the MotoIQ Stage 2 car (pulleys change what an inertia dyno reads), cam builds and the forged 330i turbo car. Research: docs/research/part2b/known-builds-bmw-3-series-e46.json.",
+  "car": "bmw-3-series-e46",
+  "builds": [
+    {
+      "id": "aa-m3-bone-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Bone-stock M3, Active Autowerke's baseline",
+      "trim": "usdm-m3-coupe-6mt",
+      "who": "Active Autowerke",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ],
+          "note": "Run file named 'bone stock E46M3'."
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "The sheet doesn't say. Taken as the lowest US premium grade, 91 AKI, about 95 RON (the same rule standards/fuels.json uses for US ratings). The stock ECU gains nothing from a better fuel, so a higher grade wouldn't change the model's figure."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ]
+        },
+        "described": "Stock E46 M3 ('bone stock E46M3' run file)."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 285.4,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            },
+            {
+              "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke, \"E46 BMW M3 Prima Supercharger Kit\" (product page)",
+              "note": "BASE PRIMA SUPERCHARGER DYNOJET RESULTS / Boost: 5.8 psi / Stock Horsepower: 285.4 WHP @ 7500 RPM / Stock Torque: 232.36 LB-FT @ 5250 RPM"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7500,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke, \"E46 BMW M3 Prima Supercharger Kit\" (product page)",
+              "note": "BASE PRIMA SUPERCHARGER DYNOJET RESULTS / Boost: 5.8 psi / Stock Horsepower: 285.4 WHP @ 7500 RPM / Stock Torque: 232.36 LB-FT @ 5250 RPM"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 232.36,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP 7)",
+        "correction": {
+          "value": "sae-j1349",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+              "accessed": "2026-09-30",
+              "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+              "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+            }
+          ],
+          "note": "WinPEP's 'SAE' setting is SAE J1349."
+        }
+      },
+      "sources": [
+        {
+          "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke: Dynojet WinPEP 7 screenshot \"Prima Vs stk\"",
+          "note": "DYNOJET RESEARCH ... CF: SAE Smoothing: 5 ... bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36"
+        },
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke, \"E46 BMW M3 Prima Supercharger Kit\" (product page)",
+          "note": "BASE PRIMA SUPERCHARGER DYNOJET RESULTS / Boost: 5.8 psi / Stock Horsepower: 285.4 WHP @ 7500 RPM / Stock Torque: 232.36 LB-FT @ 5250 RPM"
+        }
+      ],
+      "notes": "Gearbox, mileage and weather not given; the 6MT trim is assumed (engine and final drive are the same; the SMG changes only the drivetrain loss). The screenshot's clock reads 27 Jun 2014, not necessarily the run date."
+    },
+    {
+      "id": "eas-m3-elbow-catback-stock-tune",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "M3 on the factory tune with an intake elbow and cat-back, 91 octane",
+      "trim": "usdm-m3-coupe-6mt",
+      "who": "Buildjournal, at European Auto Source (Anaheim)",
+      "date": "2017-09-27",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "cat-back",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+              "note": "Stock list: 'Factory stock tune / Macht Schnell Elbow / Rogue Engineering El Diablo Exhaust + one (1) AR20 Resonator / 91 octane (CA) / ~172k miles'"
+            }
+          ]
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+              "note": "Macht Schnell Elbow"
+            }
+          ],
+          "note": "A larger elbow after the factory air box; the box and filter stay."
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+              "note": "Factory stock tune"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+                "accessed": "2026-09-30",
+                "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+                "note": "91 octane (CA)"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Buildjournal: '91 octane (CA)'. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+            }
+          ]
+        },
+        "described": "Factory tune, Macht Schnell elbow in the stock air box, Rogue Engineering El Diablo cat-back with one AR20 resonator, 91 octane, about 172,000 miles."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 286.37,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)",
+              "note": "Stock.wp8 [ At: 12:13:54 PM, Wednesday, September 27, 2017 ] [ As tested on Dynojet Model 224xLC ] [ CF: STD 1.03 ] ... Max Power = 286.37 at Engine RPM = 7297.68"
+            }
+          ],
+          "note": "The 2017 article's chart shows the same run file at 285.79 hp; the 2020 chart's figure is used."
+        },
+        "powerRpm": {
+          "value": 7298,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 245.43,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet 224xLC",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+        }
+      ],
+      "notes": "About 80 °F on the day (article text); pressure not printed, so the model runs at the STD reference air. Gear not stated."
+    },
+    {
+      "id": "eas-m3-headers-bspec-tune",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Same M3 with catless headers and the B-Spec tune, 91 octane",
+      "trim": "usdm-m3-coupe-6mt",
+      "who": "Buildjournal, at European Auto Source (Anaheim)",
+      "date": "2017-10",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+              "note": "Tuned list: 'B-Spec Tune / Macht Schnell Elbow / Rogue Engineering El Diablo Exhaust + one (1) AR20 Resonator / Evosport Headers / 91 octane (CA) / ~173k miles'"
+            }
+          ],
+          "note": "Evosport headers, catless, with the Rogue cat-back. One header bolt was missing on this run (an exhaust leak between 3,700 and 4,500 rpm, below the power peak)."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+            }
+          ],
+          "note": "Macht Schnell elbow in the stock air box."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+              "note": "We raised the rev limiter from the stock 8,000 RPM to 8,100 RPM on B-Spec Tune"
+            }
+          ],
+          "note": "Buildjournal's off-the-shelf B-Spec flash on the stock ECU."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+                "accessed": "2026-09-30",
+                "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)",
+                "note": "91 octane (CA)"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Buildjournal: '91 octane (CA)'. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+            }
+          ]
+        },
+        "described": "B-Spec flash, catless Evosport headers, Rogue Engineering cat-back with one resonator, Macht Schnell elbow, 91 octane."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 312.04,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)",
+              "note": "B-Spec Tune.wp8 Max Power = 312.04 at Engine RPM = 8.00 Max Torque = 248.08 at Engine RPM = 5.87 ... CF: STD Smoothing: 5"
+            }
+          ],
+          "note": "A second run with the same parts (RunFile_9, 21 Oct 2017, CF STD 1.02) shows 315.01 hp at 8,066 rpm."
+        },
+        "powerRpm": {
+          "value": 8000,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 248.08,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet 224xLC",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+              "accessed": "2026-09-30",
+              "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal, \"B-Spec Tune Dyno Results - BMW E46 M3\" (31 Oct 2017)"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal B-Spec article dyno sheet (Dynojet, European Auto Source, Anaheim)"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Buildjournal CSL-intake article dyno sheet (five runs 2017-2020, same car and dyno)"
+        }
+      ],
+      "notes": "Same car and dyno as the previous build, about 80 °F."
+    },
+    {
+      "id": "motoiq-m3-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Stock 46,000-mile M3, MotoIQ project car baseline, 93 octane",
+      "trim": "usdm-m3-coupe-6mt",
+      "who": "MotoIQ, at Modified by KC (Kansas City)",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 97,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+                "accessed": "2026-09-30",
+                "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+                "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "MotoIQ: 'Fuel octane 93 premium'. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "described": "Stock one-owner car, 46,000 miles, 93 octane."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 290.5,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 246.9,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3: Part 3 - Headers, software, dyno testing and more\"",
+              "note": "When we started, the car dyno'd a respectable 290whp on Modified by KC's Dynojet 248C."
+            }
+          ],
+          "note": "Part 3 names both a Dynojet 248C and a 424x for the same shop; both are Dynojet inertia dynos."
+        },
+        "dynoModel": "Dynojet 248C",
+        "correction": {
+          "value": "not-stated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+              "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+            }
+          ],
+          "note": "The article gives none; the sheet images couldn't be read."
+        },
+        "conditions": {
+          "temperature": {
+            "value": 40,
+            "unit": "°F",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+                "accessed": "2026-09-30",
+                "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+                "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+              }
+            ]
+          },
+          "elevation": {
+            "value": 675,
+            "unit": "ft",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+                "accessed": "2026-09-30",
+                "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+                "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+              }
+            ]
+          }
+        }
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, \"Project E46 M3, Part 1: Dyno and acceleration testing\", page 4",
+          "note": "Dyno hp: 290.5 whp ... Dyno trq: 246.9 lb-ft ... Altitude: 675 feet ... Fuel octane 93 premium ... Ambient temp 40F"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, \"Project E46 M3: Part 3 - Headers, software, dyno testing and more\"",
+          "note": "When we started, the car dyno'd a respectable 290whp on Modified by KC's Dynojet 248C."
+        }
+      ],
+      "notes": "Correction not stated: the Dynojet's default (SAE J1349) is assumed, and it matters here, 40 °F being far from the reference. Gearbox not stated; the 6MT trim is assumed."
+    }
+  ]
+}

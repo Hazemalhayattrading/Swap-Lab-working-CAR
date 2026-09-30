@@ -36,6 +36,13 @@ export const rawData = {
       import: 'default',
     }),
   ),
+  locations: one(
+    import.meta.glob('../../src/data/standards/locations.json', { eager: true, import: 'default' }),
+  ),
+  dynos: one(
+    import.meta.glob('../../src/data/standards/dynos.json', { eager: true, import: 'default' }),
+  ),
+  builds: all(import.meta.glob('../../src/data/builds/*.json', { eager: true, import: 'default' })),
   assumptions: one(
     import.meta.glob('../../src/data/model/assumptions.json', { eager: true, import: 'default' }),
   ),

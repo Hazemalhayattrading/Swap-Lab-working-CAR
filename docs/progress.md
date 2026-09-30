@@ -535,11 +535,70 @@ The owner split Phase 2: part 2a is the simulation engine, the data loader, the 
 10. **The panel's speed on real hardware isn't measured.** In headless Chromium a sweep takes about 30-80 ms, including the first fit for an engine.
 11. Carried over: the procedural floor, performance unmeasured on real hardware, no floor reflections, no code licence chosen.
 
-## Next: Phase 2, part 2b
+## Phase 2, part 2b: altitude, known builds, heat soak, fuels and rendering performance (2026-09-30)
 
-- Known-build calibration (`tests/calibration/known-builds.test.ts`): at least 3 documented builds per car (a published dyno sheet or build thread, linked) within 10 % of peak wheel power. That also tests the drivetrain-loss estimate, which the research found is part fixed and part proportional.
-- The thermal model (heat to coolant and oil, radiator, oil-cooler and intercooler capacity at the chosen ambient, the 3-minute drift-session test) and the cooling limit.
-- The fuel model: race fuel and E85 with their availability, per-variant rating fuels, and the fuel-pump limit.
+The owner answered the pressure question at the start: an altitude selector with Jeddah (sea level), Riyadh (about 600 m, the default) and a custom elevation, and turbo boost control that compensates at altitude until the turbo runs out of headroom.
+
+### What's built
+
+- **Altitude.** Jeddah, Riyadh and Custom keys on the sheet, with a custom elevation from -100 to 3,500 m, remembered per browser. Pressure comes from the US Standard Atmosphere 1976; Riyadh's 612 m gives 94.2 kPa. The sheet's conditions line says where and at what pressure ("At 45 °C in Riyadh (about 600 m, 94.2 kPa) on PG95"), and an altitude note says what the air costs: about 7 % for an NA engine in Riyadh.
+- **Turbos at altitude.** The stock boost target is an absolute manifold pressure (the owner's rule): the wastegate opens less where the air is thin, so gauge boost rises (the S15 peaks at 0.68 bar in Riyadh, 0.61 in Jeddah) and a turbo car loses almost nothing, until the compressor reaches choke, surge or its top pressure ratio, or the turbine can't make the power. The sheet names which. At 2,000 m the FD still holds its target and loses 2 % where the 350Z loses 25 %.
+- **Fuels.** Keys for 91, 95 and 98 RON, race fuel (VP MS109, 109 RON) and E85 (VP C85), each with where it can be bought in Saudi Arabia: PG91 and PG95 everywhere, PG98 in Riyadh, Jeddah, the Dammam area and on the highways between, race fuel and E85-type fuel in 5-gallon pails from VP's distributor in Jeddah (about 25 and 23.5 SAR a litre; no pump sells E85). Race fuel and E85 need a tune, and the sheet says the model assumes one. E85's heat of vaporisation cools the charge, and its extra volume shows the factory injectors running out.
+- **Octane limits timing and boost.** Knock is judged against the factory calibration at its peak boost, per fraction of manifold pressure (decisions). A factory ECU on too low an octane retards up to 15° from best timing and then holds the boost down, and the sheet says "fuel octane" limits it (the RX-7 on PG91). A factory map never gains from a better fuel; a tune on race fuel or E85 runs at the knock limit.
+- **Thermal model and the heat-soak test.** Heat to coolant and oil as shares of the fuel burnt (a rotary puts far more into its oil), engine and fluid thermal mass, a thermostat, an oil-to-water cooler (or the RX-7's oil-to-air cooler), and a radiator whose rejection falls with air speed. Each factory system is sized by one rule (105 °C at full rated power, 10 m/s, 40 °C day). The test is a 3-minute drift session at 70-90 % load with 3 m/s through the radiator at the chosen ambient, against limits of 115 °C coolant and 150 °C oil, with a coolant and oil trace against both. While a car has no radiator figures of its own, the stamp says "Estimated, generic sizing" instead of Passed or Failed, and so does the cooling check (the owner's ruling); a car's own radiator data brings back the hard stamp.
+- **Known-build calibration** (`tests/calibration/known-builds.test.ts`, in CI). Documented real builds per car (`src/data/builds/`), each with its dyno sheet or build thread linked, its dyno make and model, its correction standard and, where printed, the day's weather. Each runs through the model with its parts (boost, a turbo with its compressor's published flow, intercooler, intake, exhaust in three levels, injectors, ECU tune, fuel), is turned into what its own dyno would have printed (reading factor against a Dynojet, times the sheet's correction at the day's air), and must land within 10 % of the sheet's peak wheel power. A build whose sheet contradicts itself can be shown but not counted. Every car needs three counted builds, except the Supra, which counts two by the owner's exception in its own data; its sticker says "Known builds: validated on stock turbos only; big-turbo builds unverified". The 20 builds on file are the fit set (in-sample); a build added from now on is scored out-of-sample first and keeps that score, shown next to the current one in `docs/calibration.md` and the drawer. The drawer has the whole table.
+- **Dyno normalisation.** `src/data/standards/dynos.json`: Dynojet, Dynapack, Mustang, Dyno Dynamics, Mainline, SuperFlow and Rototest with their reading factors, each sourced or marked estimated, and SAE J1349, SAE J607 (STD), DIN 70020, EEC 80/1269 and uncorrected, with their reference air and formulas.
+- **Model changes the known builds forced** (decisions): the proportional knock law; knock referred to the factory's peak-boost state; the stock compressor's pressure-ratio fraction (0.65 to 0.52) and the turbo VE fall above peak (0.6 to 0.05), chosen with the builds; a VE prior from the engine's own published-boost variants; the JDM S15's factory exhaust restriction from DSPORT's same-car tests; the rotary's tuned mixture (lambda 0.73 against the factory 0.66).
+- **Rendering performance.**
+  - A notice when the browser renders in software (SwiftShader, the Microsoft Basic Render Driver or llvmpipe), with how to turn on hardware acceleration in Chrome, Edge and Firefox and a one-click switch to Low quality; dismissed per session.
+  - The 5.2 MB EXR is gone: `npm run bake-env` bakes the graded environment offline into a 485 kB prefiltered RGB9E5 file that loads without decoding or prefiltering in the browser.
+  - The garage renders on demand: nothing is drawn while nothing changes, and the frame rate reads "idle".
+  - The dyno chart's axes scale to the data with round steps (`src/ui/dyno/axes.ts`), for a 150 hp car and a 600 hp build alike.
+  - CI checks a performance budget (`perf-budget.json`, `npm run budget`) on the production build: 996 kB for a first visit today (with the frame-rate check) against 1,126 kB, three.js 341 of 380 kB, and frame budgets for draw calls and triangles.
+  - A frame-rate check: add `?fps=1` to the address (https://hazemalhayattrading.github.io/Swap-Lab-working-CAR/?fps=1). While it's open the garage draws every frame, and the panel shows the mean frame rate, the 1 % low, the worst frame, the share of frames over 18.3 ms, CPU time per frame, draw calls and triangles, with the backend, the GPU and the quality. It says whether the 60 fps target is held. Add `&quality=ultra` (or `low`, `high`) to measure each preset.
+
+### How it was verified
+
+- `npm run lint`, `npm run typecheck`, `npm test` (647 tests: the stock calibration, the known-build gate with the Supra's exception and the fit-set pin, and the unit tests), `npm run validate-data`, `npm run build` and `npm run budget` pass.
+- `npm run e2e`: 15 Playwright tests. New: the Riyadh default with the estimated heat-soak stamp, the Supra's sticker and drawer row, the frame-rate check (`?fps=1` keeps drawing with nothing moving, and reads "not held" on SwiftShader), altitude and fuel keys (2,000 m giving 79.5 kPa, the 350Z in Jeddah making more than 1.15 times its power at 2,000 m), the known-build table in the drawer, the software-rendering notice and its Low switch, rendering on demand (idle when nothing moves, a frame on a key press, within the frame budget), and quality presets switching back and forth. That last test found a crash going Low back to High (three disposed a light's shadow node that cached render objects still used); shadows are now switched with the renderer flag only.
+- The known-build results, the calibration constants and the heat-soak results were cross-checked with diagnostic runs (the grid searches in decisions), and the figures quoted in the constants' methods were re-measured after the final choice.
+- Screenshots (desktop dyno sheet, heat-soak card, the Supra's sticker, drawer with the known-build table, phone, software notice, frame-rate check) were reviewed by eye; the set is in `docs/screenshots/phase-2b/`.
+
+### Numbers marked `estimated`
+
+- **Model assumptions: 86 of 121** are estimated (27 single-source, 8 verified). New in 2b: 49 constants, 39 of them estimated: the heat shares and cooling-sizing rule, fluid properties' defaults, the thermostat, the drift-session profile and the limits, the aftermarket intercooler, intake and exhaust restrictions, the default top pressure ratio of an unmapped turbo, supercharger defaults, the factory ECU's knock authority, and charge cooling.
+- **Dynos:** the Mustang (0.885), Dyno Dynamics (0.85), Mainline (0.835) and SuperFlow (0.91) reading factors; the Dynojet factor is 1 by definition, Dynapack verified, Rototest single-source.
+- **Fuels:** race fuel's and E85's heating values and heats of vaporisation, and C85's ethanol share.
+- **Places:** Jeddah's elevation (rounded to sea level as the owner set it).
+- **The JDM S15's factory exhaust restriction** (62 kPa, calibrated to DSPORT's same-car tests).
+- **Known builds:** fields a sheet doesn't state (an exhaust described only as "exhaust", an unstated intake, US octane converted to RON, a boost read off a trace) are marked estimated with the reason in each build.
+
+### Known issues and gaps
+
+1. **The known-build gate is in-sample.** The same builds chose four constants and two rules, then pass. It shows the model can match all of them at once with physical constants, not that it predicts builds it hasn't seen. From now on a new build is scored out-of-sample first, before any refit, and the report keeps both scores (decisions).
+2. **Per-car leanings remain.** The DSPORT S15s land 7-9 % high and the FDs 6-10 % low. The FDs' two Mustang sheets carry about ±10 % from the Mustang reading factor alone.
+3. **Turbo builds peak later than their sheets** (by 60 rpm for the FD at 14.5 psi, up to 1,000 rpm for the EFR car), and the FDs' mid-range torque at boost is well under their sheets; the peaks match better than the shapes.
+4. **The turbine has one efficiency.** It can't give a late spool and spare energy at the top at once, so the stock-ECU S15 that crept to 12 psi is spool-limited at about 11 psi near redline in the model.
+5. **Knock has no rpm dependence**, and a factory ECU's knock control is modelled as sitting exactly at the borderline.
+6. **The heat soak is an estimate on every car.** With the generic sizing, every stock car goes over a limit at 45 °C (most at 25 °C too), so the stamp says "Estimated, generic sizing" until each car has its own radiator figures (next steps). Toyota's JZA80 ratings sit well under the rule's figure, so real data won't make that car pass. Intercooler heat soak isn't modelled.
+7. **Per-variant rating fuels:** the schema and model take a figure's own rating fuel (`ratingFuelRon`), but the variants that state one (BMW and Nissan Europe 98 RON, some Holden figures) aren't entered yet.
+8. **The fuel-pump limit has no data** and still reads "No data".
+9. **60 fps on the reference laptop (integrated Intel Arc) isn't measured yet.** This environment renders in SwiftShader only, which says nothing about real hardware. The owner measures it with `?fps=1`.
+10. **The DSPORT GT3582R Supra is excluded** from the gate (its sheet contradicts itself; see decisions); it would be 10.4 % low.
+11. Carried over: the procedural floor, no floor reflections, no code licence chosen.
+12. **The Supra counts two builds, by the owner's exception.** No third JZA80 build meets the inclusion rules (three research passes, five near-misses in the last). Both counted builds run the factory twins, so big-turbo Supra builds are unverified, and the sticker says so. Still open: the owner is looking for a Saudi tuner's sheet (a stock bottom end, a named turbo with a published flow, the correction or the weather printed), which would also test the altitude model. The closest near-miss was rejected.
+13. **For Phase 3, logged, not refitted (owner):**
+    - **E46 bolt-on gains look overstated.** Like for like (the same STD correction, air and Dynojet), the model gives +16.9 whp (+5.7 %) for the intake elbow and cat-back on the stock tune: +12.0 from the cat-back, +4.9 from the intake. The "+31 whp" first quoted compares that STD figure with an SAE stock one; the correction difference is about 15 whp of it. The real car's own stock run isn't on file, and it reads 14-19 whp below the two stock M3s once all three are on STD, so one car can't give the real gain, but it doesn't support +17 either. This matters before the parts catalogue shows gains to users.
+    - **The RX-7 is low on every build, and more so with boost:** -6.0 % (EFR 7670), -6.7 % at 12.5 psi, -9.5 % at 14.5 psi on the same car. The 13B's response to boost looks underestimated.
+    - **Three builds sit within a point of the 10 % limit:** the E46 elbow build +9.6 %, the S15 on its stock ECU +9.3 %, and the FD at 14.5 psi -9.5 %.
+
+## Next: Phase 3, parts, compatibility and cost
+
+- The parts catalogue (turbos with compressor maps, superchargers, intercoolers, intakes, exhausts, injectors, pumps, ECUs, cooling parts), the compatibility checks and the full cost, per BUILD_PROMPT section 3 onward.
+- Cooling parts are where the heat-soak failures get fixed; intercooler heat soak belongs with them.
+- **Radiator data per car:** OEM radiator core dimensions (height, width, thickness, rows), which replacement-radiator sellers publish, for each launch car, so its heat soak runs on its own radiator (`basis: car-data`) and gets a hard Passed or Failed.
+- **Before the parts catalogue shows gains:** check the bolt-on gains (intake, cat-back, headers) against same-car before-and-after sheets, and the 13B's response to boost (known issue 13). Any new known build is scored out-of-sample first.
+- **The Supra's third build** when the owner finds a sheet; the exception then comes out of its builds file.
 - Carried from Phase 1: Phase 3 (parts, compatibility, cost) should:
   - move the common LS hardware out of the five swap files into `parts/`;
   - add swap files for S15<-2JZ, RX-7<-2JZ and E46<-S54;

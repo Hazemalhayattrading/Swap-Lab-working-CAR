@@ -1,0 +1,156 @@
+{
+  "$comment": "Altitude presets (owner, 2026-09-30): Jeddah at sea level, Riyadh at about 600 m (the default, with the 45 °C default ambient) and a custom elevation. Pressure at an elevation comes from the International Standard Atmosphere below. Research: docs/research/part2b/altitude-and-fuels.json.",
+  "standardAtmosphere": {
+    "seaLevelPressure": {
+      "value": 101.325,
+      "unit": "kPa",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335)",
+          "note": "The reference-level value for P_b for b = 0 is the defined sea-level value, P_0 = 101325.0 N/m² (1013.250 mb)."
+        },
+        {
+          "url": "https://www.weather.gov/media/epz/wxcalc/pressureAltitude.pdf",
+          "accessed": "2026-09-30",
+          "title": "NOAA National Weather Service (El Paso), weather calculator notes: \"Pressure Altitude\"",
+          "note": "h_alt = (1 − (P_sta/1013.25)^0.190284) × 145366.45 [feet; 1013.25 mb at sea level]"
+        }
+      ]
+    },
+    "seaLevelTemperature": {
+      "value": 288.15,
+      "unit": "K",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335)",
+          "note": "The standard sea-level temperature T0 is 288.15 K. This value is based upon two international agreements."
+        }
+      ]
+    },
+    "lapseRate": {
+      "value": 0.0065,
+      "unit": "K/m",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335)",
+          "note": "TABLE 4 ... Subscript b 0 | Geopotential height H_b (km') 0 | Molecular-scale temperature gradient L_M,b (K/km') −6.5"
+        }
+      ]
+    },
+    "exponent": {
+      "value": 5.25588,
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335)",
+          "note": "TABLE 2.—Adopted constants ... R* 8.31432 × 10³ N·m/(kmol·K) ... g0' 9.80665 m²/(s²·m') ... M0 28.9644 kg/kmol"
+        }
+      ],
+      "note": "g0' M0 / (R* L) = 9.80665 × 28.9644 / (8314.32 × 0.0065) = 5.25588, from the Standard's own constants (arithmetic, not printed). The NWS formula's 0.190284 is its inverse to four figures."
+    },
+    "formula": {
+      "value": "p = p0 × (1 − L h / T0)^(g0' M0 / (R* L)), h in geopotential metres, below 11 km",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335)",
+          "note": "P = P_b · [T_M,b / (T_M,b + L_M,b · (H − H_b))]^[g0'·M0 / (R*·L_M,b)] (33a)"
+        }
+      ]
+    }
+  },
+  "locations": [
+    {
+      "id": "jeddah",
+      "name": "Jeddah",
+      "label": "sea level",
+      "elevation": {
+        "value": 0,
+        "unit": "m",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.geonames.org/105343/jeddah.html",
+            "accessed": "2026-09-30",
+            "title": "GeoNames: Jeddah (geonameId 105343)",
+            "note": "ca. 7 m ... SRTM3 7 m · ASTER 10 m"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Jeddah",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia: Jeddah (infobox)",
+            "note": "Elevation: 12 m (39 ft)"
+          }
+        ],
+        "method": "Rounded to sea level as the owner set the preset (101.3 kPa). The city stands 7-12 m above the sea; 12 m would take 0.14 kPa off the pressure."
+      },
+      "summerStationPressure": {
+        "value": 1001.6,
+        "unit": "hPa",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/Jeddah_KAIA_41024.csv",
+            "accessed": "2026-09-30",
+            "title": "WMO Climate Normals 1991-2020, Jeddah KAIA (WMO 41024, 17 m), NOAA NCEI accession 0253808",
+            "note": "41024,10,Mean,1,1011.5,1011.5,1009.3,1007.0,1005.2,1002.5,1001.6,... [mean station-level pressure, hPa; July = 1001.6]"
+          }
+        ]
+      },
+      "notes": "July mean at the airport barometer (17 m): the hot season's low pressure sits about 1 kPa under the standard atmosphere."
+    },
+    {
+      "id": "riyadh",
+      "name": "Riyadh",
+      "label": "about 600 m",
+      "elevation": {
+        "value": 612,
+        "unit": "m",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.geonames.org/108410/riyadh.html",
+            "accessed": "2026-09-30",
+            "title": "GeoNames: Riyadh (geonameId 108410)",
+            "note": "ca. 612 m ... SRTM3 612 m · ASTER 616 m"
+          },
+          {
+            "url": "https://www.britannica.com/place/Riyadh",
+            "accessed": "2026-09-30",
+            "title": "Encyclopaedia Britannica: Riyadh",
+            "note": "The city of Riyadh is located approximately 1,950 feet (600 meters) above sea level"
+          }
+        ],
+        "note": "The city spreads over a sloping plateau (600-635 m across sources); the in-city weather station is at 620 m and King Khalid airport at 625.8 m."
+      },
+      "summerStationPressure": {
+        "value": 933.9,
+        "unit": "hPa",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhNew_40437.csv",
+            "accessed": "2026-09-30",
+            "title": "WMO Climate Normals 1991-2020, Riyadh New (King Khalid airport, WMO 40437, barometer 614 m), NOAA NCEI accession 0253808",
+            "note": "40437,10,Mean,1,948.4,946.9,944.7,942.6,940.3,936.4,933.9,935.2,... [mean station-level pressure, hPa; July = 933.9]"
+          }
+        ]
+      },
+      "notes": "The standard atmosphere gives 94.2 kPa at 612 m, the owner's 'about 94 kPa'. On a July afternoon the barometer averages 93.4 kPa: hot air is lighter, which costs about 1 % more power than the preset shows."
+    }
+  ],
+  "defaultLocation": "riyadh"
+}

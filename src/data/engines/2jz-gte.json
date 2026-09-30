@@ -331,6 +331,34 @@
     ],
     "note": "Neither source says whether this includes the filter. engine-specs.net gives 5.3 L without / 5.6 L with filter (not Supra-specific), ultimatespecs.com 5 L with filter for the European car."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 9.5,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ, \"Japanese MKIV Specifications\" (transcription of Toyota JDM data)",
+          "note": "Cooling water total capacity (L) [required amount of replacement] | 7.3 | 8.3 | 9.5 | 9.5 | 8.9 | 8.8 [2JZ-GTE: copper radiator 1993/05-1996/04 MT and AT 9.5; aluminium radiator from 1996/04 8.9 MT, 8.8 AT]"
+        }
+      ],
+      "note": "Cars from April 1996 with the aluminium radiator hold 8.9 L (MT) or 8.8 L (AT)."
+    },
+    "oilCooler": {
+      "value": "oil-to-water",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf083.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US) New Car Features 1993, p. 83 (page scans hosted by mkiv.com)",
+          "note": "The 2JZ-GTE engine is equipped with a water-cooled, multi-plate, full-flow type oil cooler between the oil filter and oil filter bracket, to cool the engine oil."
+        }
+      ]
+    }
+  },
   "internals": {
     "crank": {
       "value": "forged",

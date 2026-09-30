@@ -1,5 +1,8 @@
 import { backendLabel, type BackendName } from '../render/backend';
 import { isQualityLevel, type QualityLevel } from '../render/quality';
+import { accelerationAdvice, type SoftwareRenderer } from '../render/software-renderer';
+
+const NOTICE_DISMISSED_KEY = 'swaplab.gpuNoticeDismissed';
 
 function byId(id: string): HTMLElement {
   const el = document.getElementById(id);
@@ -85,7 +88,50 @@ export class Hud {
 
   setFrameStats(frameMs: number, fps: number): void {
     this.frameEl.textContent = frameMs.toFixed(1);
-    this.fpsEl.textContent = String(Math.round(fps));
+    this.fpsEl.textContent = `${String(Math.round(fps))} fps`;
+  }
+
+  /** Nothing is being drawn: the garage only renders while something changes. */
+  setIdle(): void {
+    this.fpsEl.textContent = 'idle';
+  }
+
+  /**
+   * The caution sticker for software rendering: what's wrong, how to fix it, and
+   * a one-click switch to the Low preset. Dismissed for the rest of the session.
+   */
+  showSoftwareNotice(renderer: SoftwareRenderer, onLowQuality: () => void): void {
+    try {
+      if (sessionStorage.getItem(NOTICE_DISMISSED_KEY) === renderer.kind) return;
+    } catch {
+      // No session storage: the notice just shows on every visit.
+    }
+    const notice = byId('gpu-notice');
+    const advice = accelerationAdvice(renderer);
+    byId('gpu-notice-lead').textContent = advice.lead;
+    byId('gpu-notice-steps').replaceChildren(
+      ...advice.steps.map((step) => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        return li;
+      }),
+    );
+    notice.dataset.kind = renderer.kind;
+    notice.hidden = false;
+    const low = byId('gpu-notice-low') as HTMLButtonElement;
+    low.onclick = () => {
+      onLowQuality();
+      low.disabled = true;
+      low.textContent = 'Low quality on';
+    };
+    byId('gpu-notice-close').onclick = () => {
+      notice.hidden = true;
+      try {
+        sessionStorage.setItem(NOTICE_DISMISSED_KEY, renderer.kind);
+      } catch {
+        // Not remembered; it will show again next visit.
+      }
+    };
   }
 
   showFault(title: string, body: string): void {

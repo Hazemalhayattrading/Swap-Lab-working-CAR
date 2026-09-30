@@ -1,5 +1,5 @@
 {
-  "$comment": "referenceFuels: the fuel a market's factory figures are taken to be rated on (by the variant's first market). pumpFuels: what a user can pick. Per-variant rating fuels (some figures state 98 or 91 RON) are left for the part 2b fuel model.",
+  "$comment": "referenceFuels: the fuel a market's factory figures are taken to be rated on (by the variant's first market), unless the variant states its own (engines/*.json, output.ratingFuelRon). fuels: what a user can pick, with where each is sold in Saudi Arabia. Gasoline grades use the model's gasoline properties (model/assumptions.json); race fuel and E85 carry their own.",
   "referenceFuels": [
     {
       "market": "JDM",
@@ -124,10 +124,11 @@
       }
     }
   ],
-  "pumpFuels": [
+  "fuels": [
     {
       "id": "saudi-91",
       "name": "PG91",
+      "kind": "pump-gasoline",
       "ron": {
         "value": 91,
         "confidence": "verified",
@@ -151,11 +152,34 @@
             "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
           }
         ]
+      },
+      "needsTune": false,
+      "availability": {
+        "status": "pump-nationwide",
+        "summary": {
+          "value": "At Aramco and other stations across the country.",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+              "accessed": "2026-09-30",
+              "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+              "note": "Saudi Arabia currently sells 91 RON and 95 RON petrol, using the Research Octane Number (RON) standard applied across Europe, Asia and most of the Middle East."
+            },
+            {
+              "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+              "accessed": "2026-09-30",
+              "title": "Retail fuels – our gasoline and diesel range including current Saudi Arabia prices. Available at Aramco Stations | Aramco",
+              "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+            }
+          ]
+        }
       }
     },
     {
       "id": "saudi-95",
       "name": "PG95",
+      "kind": "pump-gasoline",
       "ron": {
         "value": 95,
         "confidence": "verified",
@@ -179,11 +203,34 @@
             "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
           }
         ]
+      },
+      "needsTune": false,
+      "availability": {
+        "status": "pump-nationwide",
+        "summary": {
+          "value": "At Aramco and other stations across the country.",
+          "confidence": "verified",
+          "sources": [
+            {
+              "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+              "accessed": "2026-09-30",
+              "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+              "note": "Saudi Arabia currently sells 91 RON and 95 RON petrol, using the Research Octane Number (RON) standard applied across Europe, Asia and most of the Middle East."
+            },
+            {
+              "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+              "accessed": "2026-09-30",
+              "title": "Retail fuels – our gasoline and diesel range including current Saudi Arabia prices. Available at Aramco Stations | Aramco",
+              "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+            }
+          ]
+        }
       }
     },
     {
       "id": "saudi-98",
       "name": "PG98",
+      "kind": "pump-gasoline",
       "ron": {
         "value": 98,
         "confidence": "verified",
@@ -208,7 +255,248 @@
           }
         ]
       },
+      "needsTune": false,
+      "availability": {
+        "status": "pump-some-stations",
+        "summary": {
+          "value": "At Aramco stations in Riyadh, Jeddah and the Dammam area and on the highways between them (since early 2026).",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+              "accessed": "2026-09-30",
+              "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+              "note": "Saudi Aramco will introduce a 98-octane petrol grade in Saudi Arabia from early 2026 ... The initial rollout will cover Riyadh, Jeddah and the Dammam metropolitan area, as well as key highways linking these cities."
+            },
+            {
+              "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+              "accessed": "2026-09-30",
+              "title": "Aramco: Retail fuels (gasoline and diesel range, current Saudi Arabia prices)",
+              "note": "PG91 and PG95 gasoline is suitable for all vehicles, while PG98 gasoline is an additional option for high-performance and sports vehicles. [September 2026 prices: 2.18 / 2.33 / 4.64 SAR per litre]"
+            }
+          ]
+        }
+      },
       "notes": "New grade from early 2026; the first stations are in Riyadh, Jeddah, the Dammam area and on the highways between them (F&L Asia, 9 Jan 2026)."
+    },
+    {
+      "id": "race-vp-ms109",
+      "name": "Race fuel (VP MS109)",
+      "kind": "race-gasoline",
+      "ron": {
+        "value": 109,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Specification Sheet: Motorsport 109 (Typical Values) Color = Colorless Specific Gravity = 0.7250 MON = 99 RON = 109 (R+M)/2 = 104 Oxygen Content = 9.32% ... Leaded: No ... Stoichiometric A/F Ratio = 13.34"
+          }
+        ]
+      },
+      "lhv": {
+        "value": 39.4,
+        "unit": "MJ/kg",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.sunocoracefuels.com/fuels/260-gt",
+            "accessed": "2026-09-30",
+            "title": "Sunoco Race Fuels: 260 GT, technical details",
+            "note": "Stoichiometric Air/Fuel Ratio | 14.1 | ... Lower Heating Value (Btu/Pound) | 17,900 [41.6 MJ/kg: 2.95 MJ per kg of air]"
+          },
+          {
+            "url": "https://www.sunocoracefuels.com/fuels/260gt-plus",
+            "accessed": "2026-09-30",
+            "title": "Sunoco Race Fuels: 260 GT Plus, technical details",
+            "note": "Stoichiometric Air/Fuel Ratio | 13.7 | ... Lower Heating Value (Btu/Pound) | 17,400 [40.5 MJ/kg: 2.95 MJ per kg of air]"
+          }
+        ],
+        "method": "VP publishes no heating value. Fuels release about the same energy per kilogram of air they burn with: Sunoco's own sheets give 2.95 MJ per kg of air for both 260 GT and 260 GT Plus. MS109's stoichiometric ratio (13.34) times 2.95 MJ/kg gives 39.4 MJ/kg."
+      },
+      "stoichAfr": {
+        "value": 13.34,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Stoichiometric A/F Ratio = 13.34"
+          }
+        ]
+      },
+      "density": {
+        "value": 725,
+        "unit": "kg/m³",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Specific Gravity = 0.7250"
+          }
+        ]
+      },
+      "heatOfVaporisation": {
+        "value": 400,
+        "unit": "kJ/kg",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+            "accessed": "2026-09-30",
+            "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\", Oak Ridge National Laboratory (2016)",
+            "note": "at 25°C, the heat of vaporization of gasoline boiling-range hydrocarbons is 350 to 400 kJ/kg, while that of ethanol is 924 kJ/kg."
+          }
+        ],
+        "method": "VP publishes none and doesn't say which oxygenates make up its 9.32 % oxygen. The model takes the top of ORNL's range for gasoline hydrocarbons (350-400 kJ/kg); oxygenates only raise it."
+      },
+      "needsTune": true,
+      "availability": {
+        "status": "drum",
+        "summary": {
+          "value": "In 5-gallon pails from VP Racing's distributor in Jeddah (Scan Tool Line, pickup only), about 25 SAR a litre.",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/2222-race-fuel-ms109-5gallon-3291",
+              "accessed": "2026-09-30",
+              "title": "Scan Tool Line (VP Racing's Saudi distributor), Jeddah: online shop, 'RACE FUEL MS109 - 5GALLON'",
+              "note": "RACE FUEL MS109 - 5GALLON | pickup from branch only | ... 480.00 | SR | VAT Excluded"
+            },
+            {
+              "url": "https://sl-front.proguscommerce.com/api/locations?shopId=2154&shop=vpracingfuels.myshopify.com",
+              "accessed": "2026-09-30",
+              "title": "VP Racing Fuels store-locator data (behind vpracingfuels.com/pages/international-locator)",
+              "note": "{\"name\": \"SCAN TOOL LINE CORPORATE OFFICE\", \"country\": \"Saudi Arabia\", \"city\": \"Jeddah\", ... Distributor ... \"PRODUCTS SOLD:\\nContainers\\nFuel\\nFuel Additives ...\"}"
+            }
+          ]
+        }
+      },
+      "notes": "Unleaded, 9.32 % oxygen: at a stoichiometric ratio of 13.34 a stock ECU's full-load fuelling runs about 10 % leaner than on gasoline, so the model assumes a tune for it. 480 SR per 5 US gallons (18.9 L) excluding VAT."
+    },
+    {
+      "id": "e85-vp-c85",
+      "name": "E85 (VP C85)",
+      "kind": "e85",
+      "ron": {
+        "value": 106,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Note: Do not use with fuel injectors that are not compatible with MTBE. ... Specification Sheet: C85 (Typical Values) Color = Yellow Specific Gravity = 0.7940 MON = 86.5 RON = 106 (R+M)/2 = 96.3 Oxygen Content = 31.97% ... Leaded: No ... Stoichiometric A/F Ratio = 9.20"
+          }
+        ],
+        "note": "Research papers put E85 at 104-108 RON (Ford's test E85: 108)."
+      },
+      "lhv": {
+        "value": 27.1,
+        "unit": "MJ/kg",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.sunocoracefuels.com/fuels/260-gt",
+            "accessed": "2026-09-30",
+            "title": "Sunoco Race Fuels: 260 GT, technical details",
+            "note": "Stoichiometric Air/Fuel Ratio | 14.1 | ... Lower Heating Value (Btu/Pound) | 17,900 [41.6 MJ/kg: 2.95 MJ per kg of air]"
+          },
+          {
+            "url": "https://www.sunocoracefuels.com/fuels/260gt-plus",
+            "accessed": "2026-09-30",
+            "title": "Sunoco Race Fuels: 260 GT Plus, technical details",
+            "note": "Stoichiometric Air/Fuel Ratio | 13.7 | ... Lower Heating Value (Btu/Pound) | 17,400 [40.5 MJ/kg: 2.95 MJ per kg of air]"
+          },
+          {
+            "url": "https://afdc.energy.gov/files/u/publication/fuel_comparison_chart.pdf",
+            "accessed": "2026-09-30",
+            "title": "US DOE Alternative Fuels Data Center, \"Fuel Properties Comparison\" (March 2024)",
+            "note": "E85 LHV 83,950-95,450 Btu/gal [23.4-26.6 MJ/L]"
+          }
+        ],
+        "method": "VP publishes no heating value. At Sunoco's 2.95 MJ per kg of air (their 260 GT and 260 GT Plus sheets), C85's stoichiometric ratio of 9.2 gives 27.1 MJ/kg. At C85's 0.794 kg/L that is 21.5 MJ/L, under AFDC's 23.4-26.6 MJ/L for pump E85, as a blend this rich in ethanol should be."
+      },
+      "stoichAfr": {
+        "value": 9.2,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Note: Do not use with fuel injectors that are not compatible with MTBE. ... Specification Sheet: C85 (Typical Values) Color = Yellow Specific Gravity = 0.7940 MON = 86.5 RON = 106 (R+M)/2 = 96.3 Oxygen Content = 31.97% ... Leaded: No ... Stoichiometric A/F Ratio = 9.20"
+          }
+        ]
+      },
+      "density": {
+        "value": 794,
+        "unit": "kg/m³",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+            "accessed": "2026-09-30",
+            "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (product page text)",
+            "note": "Note: Do not use with fuel injectors that are not compatible with MTBE. ... Specification Sheet: C85 (Typical Values) Color = Yellow Specific Gravity = 0.7940 MON = 86.5 RON = 106 (R+M)/2 = 96.3 Oxygen Content = 31.97% ... Leaded: No ... Stoichiometric A/F Ratio = 9.20"
+          }
+        ]
+      },
+      "heatOfVaporisation": {
+        "value": 840,
+        "unit": "kJ/kg",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+            "accessed": "2026-09-30",
+            "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\", Oak Ridge National Laboratory (2016)",
+            "note": "at 25°C, the heat of vaporization of gasoline boiling-range hydrocarbons is 350 to 400 kJ/kg, while that of ethanol is 924 kJ/kg."
+          }
+        ],
+        "method": "No measured value for E85 was found. Mass-weighted from ORNL's 924 kJ/kg for ethanol and 350-400 kJ/kg for gasoline hydrocarbons, at about 85 % ethanol by volume (86 % by mass): 840 kJ/kg."
+      },
+      "ethanolShare": {
+        "value": 0.85,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/6452-ethanol-c85-5-gallon-3282",
+            "accessed": "2026-09-30",
+            "title": "Scan Tool Line (VP Racing's Saudi distributor), Jeddah: online shop, 'ETHANOL C85 5 GALLON'",
+            "note": "ETHANOL C85 5 GALLON | pickup from branch only | If you're committed to using E85 type fuels, VP C85 is by far your best choice. ... 444.00 | SR | VAT Excluded"
+          }
+        ],
+        "method": "VP sells C85 as an 'E85 type fuel' and doesn't print its ethanol content; it contains MTBE as well. Taken as 85 % by volume from the name."
+      },
+      "needsTune": true,
+      "availability": {
+        "status": "drum",
+        "summary": {
+          "value": "No E85 at Saudi pumps. E85-type race fuel in 5-gallon pails from VP Racing's distributor in Jeddah (Scan Tool Line, pickup only), about 23.5 SAR a litre.",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/6452-ethanol-c85-5-gallon-3282",
+              "accessed": "2026-09-30",
+              "title": "Scan Tool Line (VP Racing's Saudi distributor), Jeddah: online shop, 'ETHANOL C85 5 GALLON'",
+              "note": "ETHANOL C85 5 GALLON | pickup from branch only | If you're committed to using E85 type fuels, VP C85 is by far your best choice. ... 444.00 | SR | VAT Excluded"
+            },
+            {
+              "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+              "accessed": "2026-09-30",
+              "title": "Aramco: Retail fuels (gasoline and diesel range, current Saudi Arabia prices)",
+              "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+            }
+          ]
+        }
+      },
+      "notes": "For the same air it takes 58 % more fuel by mass than gasoline (stoichiometric 9.2 against 14.57), about 49 % more by volume at 0.794 against 0.745 kg/L, so bigger injectors and a tune. 444 SR per 5 US gallons excluding VAT. VP warns C85 contains MTBE: injectors must be MTBE-compatible."
     }
-  ]
+  ],
+  "defaultFuel": "saudi-95"
 }

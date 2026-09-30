@@ -1,14 +1,14 @@
 import {
-  DataUtils,
-  EquirectangularReflectionMapping,
-  FloatType,
-  HalfFloatType,
-  type DataTexture,
+  CubeUVReflectionMapping,
+  DataTexture,
+  LinearFilter,
+  LinearSRGBColorSpace,
+  RGBFormat,
+  UnsignedInt5999Type,
   type Scene,
 } from 'three/webgpu';
-import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
 import manifest from '../data/assets.json';
-import { applyNightGrade } from './night-grade';
+import { decodeEnvironment, isGzip } from './pmrem-file';
 
 /** The HDRI used for image-based lighting. Its licence and origin live in src/data/assets.json. */
 export const ENVIRONMENT_ASSET_ID = 'autoshop_01';
@@ -20,24 +20,40 @@ export function environmentFileUrl(assetId: string, baseUrl: string): string {
   return `${baseUrl}${file.slice('public/'.length)}`;
 }
 
+async function gunzip(bytes: Uint8Array<ArrayBuffer>): Promise<ArrayBuffer> {
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return new Response(stream).arrayBuffer();
+}
+
 /**
- * Loads the HDRI as the scene's lighting environment (reflections and ambient).
+ * Loads the baked environment as the scene's lighting (reflections and ambient).
  * It is never drawn as the background: the modelled shop shell is what you see.
  *
- * The file is decoded as 32-bit float so the night grade (night-grade.ts) can
- * dim the daylight skylights, then packed to half float for the GPU, which is
- * what EXRLoader would have produced anyway.
+ * The file is Poly Haven's Autoshop 01, night-graded (night-grade.ts) and
+ * prefiltered offline by scripts/bake-environment.ts into three's cube-UV
+ * atlas, stored as RGB9E5 and gzipped (pmrem-file.ts). A texture with
+ * CubeUVReflectionMapping is used as it is, so the browser neither decodes an
+ * EXR nor prefilters anything at start-up. If a server already undid the
+ * gzip (Content-Encoding), the bytes are used as they come.
  */
 export async function applyEnvironment(scene: Scene, baseUrl: string): Promise<DataTexture> {
-  const loader = new EXRLoader().setDataType(FloatType);
-  const texture = await loader.loadAsync(environmentFileUrl(ENVIRONMENT_ASSET_ID, baseUrl));
-  const floats = texture.image.data as unknown as Float32Array;
-  applyNightGrade(floats);
-  const halves = new Uint16Array(floats.length);
-  for (let i = 0; i < floats.length; i++) halves[i] = DataUtils.toHalfFloat(floats[i] ?? 0);
-  texture.image.data = halves;
-  texture.type = HalfFloatType;
-  texture.mapping = EquirectangularReflectionMapping;
+  const response = await fetch(environmentFileUrl(ENVIRONMENT_ASSET_ID, baseUrl));
+  if (!response.ok) throw new Error(`Environment map: HTTP ${String(response.status)}`);
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  const atlas = decodeEnvironment(isGzip(bytes) ? await gunzip(bytes) : bytes.buffer);
+  const texture = new DataTexture(
+    atlas.texels,
+    atlas.width,
+    atlas.height,
+    RGBFormat,
+    UnsignedInt5999Type,
+  );
+  texture.mapping = CubeUVReflectionMapping;
+  texture.colorSpace = LinearSRGBColorSpace;
+  texture.minFilter = LinearFilter;
+  texture.magFilter = LinearFilter;
+  texture.generateMipmaps = false;
+  texture.flipY = false;
   texture.name = ENVIRONMENT_ASSET_ID;
   texture.needsUpdate = true;
   scene.environment = texture;

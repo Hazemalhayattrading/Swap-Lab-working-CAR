@@ -1,0 +1,1989 @@
+{
+  "car": "bmw-3-series-e46",
+  "researchedOn": "2026-09-30",
+  "builds": [
+    {
+      "id": "eas-2003-m3-6mt-stock-tune-91-2017",
+      "summary": "2003 E46 M3 6MT on the factory tune with a Macht Schnell elbow and Rogue cat-back: 286.37 whp (Dynojet 224xLC, CF STD 1.03, 27 Sep 2017), 91 octane.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3 (body style not stated in text; photo shows a coupe)",
+        "market": "US (inferred: California car on 'catted headers', i.e. US-spec headers with built-in cats)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "6MT",
+        "year": "2003"
+      },
+      "engine": "S54B32, stock displacement, stock internals, ~172k miles at this test",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "224xLC",
+        "type": "inertia roller",
+        "mode": "not stated (224xLC has an eddy-current load unit; sweep/load mode not printed); smoothing 5",
+        "where": "European Auto Source (EAS), 4015 E. Leaverton Court, Anaheim, CA (printed on the sheet header)"
+      },
+      "correction": {
+        "value": "STD (SAE J607-style); correction factor 1.03 on this run",
+        "howKnown": "printed on both sheets: 'CF: STD Smoothing: 5'; run line on the 2020 chart: '[ CF: STD 1.03 ]'"
+      },
+      "testConditions": {
+        "temperature": "about 80 F",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "B-Spec article: 'we were able to manage scheduling both runs with an ambient temperature of about 80°F'"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "286.37 hp at 7,298 rpm (run file Stock.wp8, 27 Sep 2017). The 2017 B-Spec article's chart shows its stock run as 285.79 hp at 7,270 rpm.",
+        "peakWheelTorque": "245.43 lb-ft at 5,129 rpm (B-Spec chart: 245.37 lb-ft at 5,190 rpm)",
+        "howRead": "read off both sheet images"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "91 octane (California pump fuel, US AKI rating)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "factory catted headers; Rogue Engineering El Diablo exhaust + one AR20 resonator (cat-back)",
+        "intake": "Macht Schnell elbow with the stock airbox ('MS Elbow')",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "factory stock tune (MSS54 family; exact ECU version not stated)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock 6MT",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+          "accessed": "2026-09-30",
+          "title": "B-Spec Tune Dyno Results - BMW E46 M3 (Buildjournal, published 2017-10-31)",
+          "kind": "article",
+          "quote": "'Andrew's car, the white 2003 BMW E46 M3 6MT, was the test vehicle for both baseline and B-Spec Tune dyno runs. It has over 170K miles' ... 'On the stock run, it put down a respectable 285 whp and 245 wtq – very reasonable with stock headers, factory stock tune, aftermarket exhaust + resonator, and (crappy) California 91 octane.' ... Stock list: 'Factory stock tune / Macht Schnell Elbow / Rogue Engineering El Diablo Exhaust + one (1) AR20 Resonator / 91 octane (CA) / ~172k miles' ... 'The dyno at EAS is a Dynojet 224xLC.'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+          "accessed": "2026-09-30",
+          "title": "B-Spec article dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH / european auto source - 4015 E. Leaverton Court, Anaheim, CA 92807'; 'CF: STD Smoothing: 5'; 'Stock.wp8 Max Power = 285.79 at Engine RPM = 7.27 Max Torque = 245.37 at Engine RPM = 5.19'; note line 'Stock.wp8 Notes: Stock tune, MS Elbow, Rogue Muffler, 91 octane'"
+        },
+        {
+          "url": "https://thebuildjournal.com/reviews/turner-motorsport-csl-style-intake-unboxing-review-dyno-results/",
+          "accessed": "2026-09-30",
+          "title": "Turner Motorsport CSL Style Intake Unboxing, Review, Dyno Results (Buildjournal, published 2020-06-15)",
+          "kind": "article",
+          "quote": "'Stock (91 octane) run is on catted headers, RE exhaust, stock intake.'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "CSL intake article dyno sheet (5 runs, 2017-2020)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Stock.wp8 [ At: 12:13:54 PM, Wednesday, September 27, 2017 ] [ As tested on Dynojet Model 224xLC ] [ CF: STD 1.03 ] ... Notes: Stock tune, MS Elbow, Rogue Muffler, 91 octane'; 'Stock.wp8 Max Power = 286.37 at Engine RPM = 7297.68 Max Torque = 245.43 at Engine RPM = 5128.91'"
+        }
+      ],
+      "confidence": "High for the numbers, dyno model and correction (printed). Two slightly different values exist for the 'stock' run (286.37 vs 285.79 hp); I can't tell whether they are two pulls or one file shown two ways. Not bone stock: intake elbow and cat-back. Gear, pressure and humidity not given.",
+      "notes": "Same car as the other three 'eas-2003-m3-6mt-*' entries. Evidence: both the 2017 B-Spec chart and the 2020 CSL chart carry a 'Stock.wp8' run with the identical note 'Stock tune, MS Elbow, Rogue Muffler, 91 octane'; the B-Spec article names 'Andrew's car, the white 2003 BMW E46 M3 6MT' as the test car; a reader comment on the CSL article addresses the author as Andrew; the ARH article overlays run file RunFile_44, which is the 13 Jun 2020 CSL run. Dyno at European Auto Source, Anaheim, CA. All EAS sheets print 'CF: STD' (SAE J607-style standard correction), which reads higher than SAE J1349 for the same run: convert before comparing with SAE sheets. Good light-bolt-on baseline on 91 octane."
+    },
+    {
+      "id": "eas-2003-m3-6mt-evosport-headers-bspec-tune-2017",
+      "summary": "Same 2003 M3 6MT plus catless Evosport headers and the Buildjournal B-Spec tune: 312.04 whp (B-Spec chart) / 315.01 whp (RunFile_9, 21 Oct 2017, CF STD 1.02), 91 octane.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (inferred, see stock entry)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "6MT",
+        "year": "2003"
+      },
+      "engine": "S54B32, stock displacement, stock internals, ~173k miles",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "224xLC",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "European Auto Source, Anaheim, CA"
+      },
+      "correction": {
+        "value": "STD; correction factor 1.02 on RunFile_9",
+        "howKnown": "printed: 'CF: STD Smoothing: 5' (B-Spec chart) and '[ CF: STD 1.02 ]' (RunFile_9 line on the 2020 chart)"
+      },
+      "testConditions": {
+        "temperature": "about 80 F (B-Spec article runs)",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "B-Spec article text"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "312.04 hp at 8,000 rpm (B-Spec article chart, run 'B-Spec Tune.wp8'); a second run with the same parts, RunFile_9 (21 Oct 2017), shows 315.01 hp at 8,066 rpm",
+        "peakWheelTorque": "248.08 lb-ft at 5,870 rpm (RunFile_9: 247.33 lb-ft at 5,067 rpm)",
+        "howRead": "read off both sheet images; the article's table also gives 312.04 whp / 248.08 wtq"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "91 octane (California pump fuel, US AKI)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "Evosport headers (catless; installed by Racewerkz Engineering, Burbank CA) + Rogue Engineering El Diablo exhaust + one AR20 resonator",
+        "intake": "Macht Schnell elbow with the stock airbox",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "Buildjournal 'B-Spec Tune' (off-the-shelf flash on the stock ECU); rev limit raised from 8,000 to 8,100 rpm",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock 6MT",
+        "other": "On the B-Spec article run one header bolt was missing, causing an exhaust leak and a dip between 3,700 and 4,500 rpm."
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/news/b-spec-tune-dyno-results-e46-m3/",
+          "accessed": "2026-09-30",
+          "title": "B-Spec Tune Dyno Results - BMW E46 M3 (Buildjournal, 2017-10-31)",
+          "kind": "article",
+          "quote": "Tuned list: 'B-Spec Tune / Macht Schnell Elbow / Rogue Engineering El Diablo Exhaust + one (1) AR20 Resonator / Evosport Headers / 91 octane (CA) / ~173k miles'; 'For the tuned run, Andrew had Evosport headers installed by our friends, Casey and Daniel, at Racewerkz Engineering in Burbank, CA.'; 'We raised the rev limiter from the stock 8,000 RPM to 8,100 RPM on B-Spec Tune'; 'Andrew's headers is missing one bolt which created an exhaust leak.'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2017/04/buildjournal-b-spec-tune-e46-m3-v1.jpg",
+          "accessed": "2026-09-30",
+          "title": "B-Spec article dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'B-Spec Tune.wp8 Max Power = 312.04 at Engine RPM = 8.00 Max Torque = 248.08 at Engine RPM = 5.87'; notes 'Buildjournal B-Spec Tune, MS Elbow, Rogue Muffler, Evosport Headers, 91 octane'; 'CF: STD Smoothing: 5'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "CSL intake article dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'RunFile_9.wp8 [ At: 10:26:16 AM, Saturday, October 21, 2017 ] [ As tested on Dynojet Model 224xLC ] [ CF: STD 1.02 ] ... [Title: MS Elbow, Rogue Muffler, Headers, BuidlJournal Tune]' (spelling as printed); 'RunFile_9.wp8 Max Power = 315.01 at Engine RPM = 8066.08 Max Torque = 247.33 at Engine RPM = 5067.49'"
+        },
+        {
+          "url": "https://thebuildjournal.com/reviews/turner-motorsport-csl-style-intake-unboxing-review-dyno-results/",
+          "accessed": "2026-09-30",
+          "title": "Turner Motorsport CSL Style Intake review (Buildjournal, 2020-06-15)",
+          "kind": "article",
+          "quote": "setup list: 'Catless + B-Spec Tune (91 octane)'; 'Catless + B-Spec Tune + Eventuri intake (91 octane)'"
+        }
+      ],
+      "confidence": "High for numbers, dyno and correction (printed). Two runs of this configuration differ by about 1% (312.04 vs 315.01). The exhaust leak affects the mid-range only. Header primary sizes are not given.",
+      "notes": "Same car as the other three 'eas-2003-m3-6mt-*' entries. Evidence: both the 2017 B-Spec chart and the 2020 CSL chart carry a 'Stock.wp8' run with the identical note 'Stock tune, MS Elbow, Rogue Muffler, 91 octane'; the B-Spec article names 'Andrew's car, the white 2003 BMW E46 M3 6MT' as the test car; a reader comment on the CSL article addresses the author as Andrew; the ARH article overlays run file RunFile_44, which is the 13 Jun 2020 CSL run. Dyno at European Auto Source, Anaheim, CA. All EAS sheets print 'CF: STD' (SAE J607-style standard correction), which reads higher than SAE J1349 for the same run: convert before comparing with SAE sheets. Extra point on the same chart: RunFile_18 (17 Mar 2018, CF STD 1.01, 'Eventuri Intake, Rogue Muffler, Headers, BuildJournal Tune') = 321.17 hp at 8,079 rpm / 246.23 lb-ft at 4,984 rpm."
+    },
+    {
+      "id": "eas-2003-m3-6mt-csl-airbox-mss54hp-2020",
+      "summary": "Same 2003 M3 6MT with a Turner CSL-style airbox, MSS54HP ECU on the factory CSL program, MAP conversion, catless headers and Bimmerworld exhaust: 340.60 whp on 91 (CF STD 1.02) and 342.83 whp on an ethanol blend (CF STD 1.03), 13 Jun 2020.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (inferred)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "6MT (per the 2017 article; not restated here)",
+        "year": "2003"
+      },
+      "engine": "S54B32, stock displacement; article: 'No cams. No crazy engine internals.'",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "224xLC",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "European Auto Source, Anaheim, CA"
+      },
+      "correction": {
+        "value": "STD; 1.02 (91-octane run), 1.03 (ethanol run)",
+        "howKnown": "printed per run on the sheet: '[ CF: STD 1.02 ]' and '[ CF: STD 1.03 ]'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not printed; only the correction factors are shown. Article: 'these tests were not done all on the same day'"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "340.60 hp at 7,976 rpm (RunFile_39, 91 octane); 342.83 hp at 7,957 rpm (RunFile_44, ethanol blend)",
+        "peakWheelTorque": "263.27 lb-ft at 5,219 rpm (91); 264.87 lb-ft at 5,166 rpm (ethanol)",
+        "howRead": "read off the sheet image"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "91 octane (CA) for 340.60 hp. Ethanol run: the article says '~E35 blend', the run title says 'e85', and the 2022 ARH article labels the same run file 'E30 ethanol'. Treat the blend as roughly E30-E35, not E85.",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "catless Evosport headers + Bimmerworld race exhaust (per the ARH article, the Evosport setup had the 'CSL airbox, Bimmerworld race exhaust')",
+        "intake": "Turner Motorsport CSL-style carbon airbox (CSL air filter, IAT relocation kit)",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "MSS54HP (CSL-type) ECU running the factory CSL program ('OEM CSL tune'), with a MAP sensor conversion; rev limit hard cut at 8,000 rpm",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "6MT",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/reviews/turner-motorsport-csl-style-intake-unboxing-review-dyno-results/",
+          "accessed": "2026-09-30",
+          "title": "Turner Motorsport CSL Style Intake Unboxing, Review, Dyno Results (Buildjournal, 2020-06-15)",
+          "kind": "article",
+          "quote": "'I'm simply running an OEM CSL tune, Turner Motorsport airbox, headers, BW exhaust. No cams. No crazy engine internals.'; 'we went to European Auto Source in Anaheim, CA to run the dyno'; setups: 'Catless + MSS54HP CSL + CSL intake (91 octane)' and 'Catless + MSS54HP CSL + CSL intake (~E35 blend)'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2020/06/e46-m3-csl-intake-dyno-turner-buildjournal-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "CSL intake article dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'RunFile_39.wp8 [ At: 10:34:12 AM, Saturday, June 13, 2020 ] [ As tested on Dynojet Model 224xLC ] [ CF: STD 1.02 ] ... [Title: CSL Intake]' Max Power = 340.60 at 7976.46, Max Torque = 263.27 at 5218.79; 'RunFile_44.wp8 [ At: 11:49:04 AM, Saturday, June 13, 2020 ] [ As tested on Dynojet Model 224xLC ] [ CF: STD 1.03 ] ... [Title: CSL Intake, e85]' Max Power = 342.83 at 7957.05, Max Torque = 264.87 at 5165.99"
+        },
+        {
+          "url": "https://thebuildjournal.com/reviews/arh-e46-m3-headers-dyno-results-and-review/",
+          "accessed": "2026-09-30",
+          "title": "ARH E46 M3 Headers Dyno Results and Review (Buildjournal, 2022-02-08)",
+          "kind": "article",
+          "quote": "table: 'Evosport Headers (E30 ethanol) 342.90 ... 264.88'; '⚠️ Evosport run result is running OEM CSL tune from MSS54HP and the limiter has a hard cut at 8k RPM.'; 'All the others supporting mods are the same e.g. CSL airbox, Bimmerworld race exhaust, E30 ethanol, etc.'"
+        }
+      ],
+      "confidence": "High for numbers, dyno, correction and date (printed). Medium on the exact exhaust (text says 'headers, BW exhaust'; the Evosport brand comes from the 2022 article) and the ethanol blend (E30/~E35/'e85' all appear). The power curve is cut by the 8,000 rpm limiter.",
+      "notes": "Same car as the other three 'eas-2003-m3-6mt-*' entries. Evidence: both the 2017 B-Spec chart and the 2020 CSL chart carry a 'Stock.wp8' run with the identical note 'Stock tune, MS Elbow, Rogue Muffler, 91 octane'; the B-Spec article names 'Andrew's car, the white 2003 BMW E46 M3 6MT' as the test car; a reader comment on the CSL article addresses the author as Andrew; the ARH article overlays run file RunFile_44, which is the 13 Jun 2020 CSL run. Dyno at European Auto Source, Anaheim, CA. All EAS sheets print 'CF: STD' (SAE J607-style standard correction), which reads higher than SAE J1349 for the same run: convert before comparing with SAE sheets. The ARH article's overlay of RunFile_44 reads 342.90 hp / 264.88 lb-ft (a 0.07 hp display difference). The article's 'stock' comparison run is Stock.wp8 (286.37 hp)."
+    },
+    {
+      "id": "eas-2003-m3-6mt-arh-6into1-hte-tune-2022",
+      "summary": "Same 2003 M3 with ARH 6-into-1 long-tube headers, Bimmerworld sections 2 and 3, Turner CSL airbox, Kassel MAP kit and an HTE custom tune on MSS54HP: 350.68 whp on 91 and 354.62 whp on E30 (Dynojet at EAS, CF STD).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (inferred)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "6MT (2017 article); 3.91 final drive fitted by 2022",
+        "year": "2003"
+      },
+      "engine": "S54B32, stock displacement; no cams or internals mentioned (the 2020 article said 'No cams')",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed on this sheet (the same EAS dyno is printed as 'Dynojet Model 224xLC' on the 2017-2020 runs)",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "European Auto Source, Anaheim, CA"
+      },
+      "correction": {
+        "value": "STD (per-run factor not printed)",
+        "howKnown": "printed: 'CF: STD Smoothing: 5'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "350.68 hp at 8,130 rpm (RunFile_49, tuned, 91 octane); 354.62 hp at 8,220 rpm (RunFile_53, tuned, E30)",
+        "peakWheelTorque": "260.60 lb-ft at 5,990 rpm (91); 263.09 lb-ft at 5,090 rpm (E30)",
+        "howRead": "read off the sheet images; the article's table gives the same values"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "91 octane (CA); E30 blend via an APE flex-fuel kit",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "American Racing Headers (ARH) 6-into-1 long tube: six 1.75-in primaries into one 3.5-in section 1, T304 stainless, 0.049-in wall (no cats); Bimmerworld 'street/track' section 2; Bimmerworld Race 3.5-in section 3",
+        "intake": "Turner Motorsport CSL airbox",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "MSS54HP with an HTE (Hassan) custom dyno tune; Kassel Performance MAP sensor conversion",
+        "cams": "not stated (none mentioned)",
+        "internals": "not stated (none mentioned)",
+        "gearbox": "6MT with 3.91 final drive ('I am running shorter 3.91 gears')",
+        "other": "APE flex-fuel kit; described as a track-only car"
+      },
+      "sources": [
+        {
+          "url": "https://thebuildjournal.com/reviews/arh-e46-m3-headers-dyno-results-and-review/",
+          "accessed": "2026-09-30",
+          "title": "ARH E46 M3 Headers Dyno Results and Review (Buildjournal, 2022-02-08)",
+          "kind": "article",
+          "quote": "'I'm running the ARH headers, Bimmerworld 'street/track' section 2 mated to a Bimmerworld Race 3.5″ section 3. Supporting engine mods include a Turner Motorsport CSL Airbox and Kassel Performance MAP sensor all controlled by the MSS54HP ECU with a HTE custom dyno tune.'; 'Red line = baseline run (no tune) on 91 octane / Blue line = tuned on 91 octane / Green line = tuned on E30 ethanol blend (APE Flex Fuel kit)'; table: 'ARH Baseline Run (91 octane) 328.62 ... 244.34', 'ARH Tuned Run (91 octane) 350.68 ... 260.60', 'ARH Tuned Run (E30 ethanol) 354.62 ... 263.09'; 'It consists of six individual 1.75″ primaries mating to one 3.5″ section 1 all made in T304 stainless steel with .049 wall.'; 'Also worth to note, I am running shorter 3.91 gears'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2022/02/e46-m3-arh-headers-dyno-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "ARH article dyno sheet 1",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Dynojet Research', 'CF: STD Smoothing: 5'; 'RunFile_45.wp8 Max Power = 328.62 at Engine RPM = 8.14 Max Torque = 244.34 at Engine RPM = 5.87'; 'RunFile_49.wp8 Max Power = 350.68 at Engine RPM = 8.13 Max Torque = 260.60 at Engine RPM = 5.99'; 'RunFile_53.wp8 Max Power = 354.62 at Engine RPM = 8.22 Max Torque = 263.09 at Engine RPM = 5.09'"
+        },
+        {
+          "url": "https://thebuildjournal.com/wp-content/uploads/2022/02/e46-m3-arh-headers-vs-evosport-dyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "ARH vs Evosport overlay",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'RunFile_53.wp8 Max Power = 354.62 at Engine RPM = 8.22'; 'RunFile_44.wp8 Max Power = 342.90 at Engine RPM = 7.97 Max Torque = 264.88 at Engine RPM = 5.19'"
+        }
+      ],
+      "confidence": "High for numbers and correction (printed). The dyno model is only inferred for this sheet. Run dates, weather and correction factors are not printed. 'Baseline run (no tune)' isn't explained; it is probably the previous ECU program, but that isn't stated.",
+      "notes": "Same car as the other three 'eas-2003-m3-6mt-*' entries. Evidence: both the 2017 B-Spec chart and the 2020 CSL chart carry a 'Stock.wp8' run with the identical note 'Stock tune, MS Elbow, Rogue Muffler, 91 octane'; the B-Spec article names 'Andrew's car, the white 2003 BMW E46 M3 6MT' as the test car; a reader comment on the CSL article addresses the author as Andrew; the ARH article overlays run file RunFile_44, which is the 13 Jun 2020 CSL run. Dyno at European Auto Source, Anaheim, CA. All EAS sheets print 'CF: STD' (SAE J607-style standard correction), which reads higher than SAE J1349 for the same run: convert before comparing with SAE sheets. Untuned first run with the ARH headers: RunFile_45 = 328.62 hp at 8,140 rpm / 244.34 lb-ft at 5,870 rpm (91 octane). The article reports a large torque loss below 5,000 rpm against the Evosport headers."
+    },
+    {
+      "id": "motoiq-project-e46-m3-stock-baseline",
+      "summary": "MotoIQ Project E46 M3, one-owner 46k-mile car: 290.5 whp / 246.9 lb-ft on Modified by KC's Dynojet, 93 octane, 40 F, 675 ft; correction not stated.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (inferred: car bought locally in the Kansas City area)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32, stock; 46k miles; compression 165-175 psi across cylinders",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "248C (Part 3 page 1). Part 3 page 3 names 'Modified by KC's Dynojet 424x' for the same shop: conflicting.",
+        "type": "inertia roller",
+        "mode": "not stated",
+        "where": "Modified by KC (Kansas City area, USA)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the text; the dyno graphs are images the image host refused to serve to a script ('Bad bot'), so the sheet header could not be read"
+      },
+      "testConditions": {
+        "temperature": "40 F (baseline); 38 F on the after-mods runs",
+        "pressure": "not stated (altitude 675 ft)",
+        "humidity": "not stated",
+        "howKnown": "Part 1 page 4 test summary"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "290.5 whp (rpm not captured)",
+        "peakWheelTorque": "246.9 lb-ft (rpm not captured)",
+        "howRead": "text quote (test summary on Part 1 page 4)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "93 octane premium (US AKI)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock (US catted headers)",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock (type not stated)",
+        "other": "Sumitomo HTR-Z3 tyres, 255/40-18 rear"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3, Part 1: Dyno and acceleration testing (MotoIQ, Pablo Mazlumian)",
+          "kind": "article",
+          "quote": "'I picked it up locally in the KC area as a one-owner car in great shape, with only 46k miles.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/2/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3, Part 1, page 2",
+          "kind": "article",
+          "quote": "'A 290 whp baseline proves that our car is an extraordinarily healthy example, and our 300 whp goal for today is looking very promising.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-1-dyno-and-acceleration-testing/4/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3, Part 1, page 4",
+          "kind": "article",
+          "quote": "test summary: 'Dyno hp: 290.5 whp' / 'Dyno hp: 304.5 whp'; 'Dyno trq: 246.9 lb-ft' / 'Dyno trq: 253.9 lb-ft'; 'Altitude: 675 feet'; 'Rear tire size: 255/40-18'; 'Fuel octane 93 premium'; 'Ambient temp 40F' / 'Ambient temp 38F'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3 - Headers, software, dyno testing and more (MotoIQ)",
+          "kind": "article",
+          "quote": "'When we started, the car dyno'd a respectable 290whp on Modified by KC's Dynojet 248C.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/3/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3, page 3",
+          "kind": "article",
+          "quote": "'On Modified by KC's Dynojet 424x the headers alone provided a noticeable gain both down low and up top.'"
+        }
+      ],
+      "confidence": "Medium. Clear magazine numbers with fuel, temperature and altitude, but the correction is unknown (it matters: 40 F is far from 60 F/77 F reference), the Dynojet model is inconsistent between pages, and gear, gearbox and rpm aren't captured. MotoIQ text was read through the fetch tool; the raw page is behind a JavaScript check for scripts.",
+      "notes": "Publication dates were not captured. After fluids, plugs, a Macht Schnell intake and Epic Motorsports software the same article reports 304.5 whp / 253.9 lb-ft (38 F)."
+    },
+    {
+      "id": "motoiq-project-e46-m3-fabspeed-headers-epic-stage2",
+      "summary": "Same MotoIQ M3 with Macht Schnell intake, pulleys, Fabspeed/VAC headers on the stock catted Section 1, full exhaust and Epic Motorsports Stage 2 software: 323 whp at 7,200 rpm (82 F, 675 ft); correction not stated.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (inferred)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32, stock displacement and internals",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "248C or 424x (the article names both for Modified by KC)",
+        "type": "inertia roller",
+        "mode": "not stated",
+        "where": "Modified by KC (Kansas City area, USA)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the text; graphs not readable (image host blocks scripts)"
+      },
+      "testConditions": {
+        "temperature": "82 F (both the 307 and 323 whp runs)",
+        "pressure": "not stated (altitude 675 ft)",
+        "humidity": "not stated",
+        "howKnown": "Part 3 page 5 chart caption, as relayed by the fetch tool: 'Ambient Temperature: 82F', 'Altitude: 675 feet'"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "323 whp at 7,200 rpm (Stage 2). Earlier steps: 307 whp at 7,200 rpm (intake, pulleys, Epic Stage 1); 290.5 whp stock.",
+        "peakWheelTorque": "Part 3 page 4 (as relayed by the fetch tool): '256.7 lb-ft at 4300 RPM' with the Stage 2 tune",
+        "howRead": "text quote of chart captions (Part 3 page 5)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "93 octane premium was used in Part 1; octane for the Part 3 runs not restated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "Fabspeed headers (sold by VAC Motorsports, Swain Tech 'White Lightning' coated) replacing the US catted headers; stock Section 1 with cats kept; cat-back ('full exhaust'; brand not captured)",
+        "intake": "Macht Schnell high-flow filter element in the stock airbox with silicone boot",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "Epic Motorsports software (Randy Mueller), Stage 2",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "not stated",
+        "other": "pulleys (brand not captured); NGK DCPR8EIX plugs; fluids; Bavarian Autosport ignition coils and Radium Engineering catch can also fitted in Part 3"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3, page 1 (MotoIQ)",
+          "kind": "article",
+          "quote": "'After a fluids flush, new plugs, stock-box intake, software tune, pulleys and cat-back exhaust, we're up to over 307whp.'; 'We'll be testing Fabspeed headers sold exclusively by VAC Motorsports. We sent these units to Swain Tech for their 'White Lightning' treatment.'; 'Our previous tune in Part 1 came from Randy Mueller at Epic Motorsports.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/3/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3, page 3",
+          "kind": "article",
+          "quote": "'Compared to the stock headers, with no other changes, the Fabspeed/VAC units were good for 11whp up top, as well as 9whp at a usable 3300 RPM.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/5/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3, page 5",
+          "kind": "article",
+          "quote": "chart captions (via the fetch tool): 'Upgrades: Intake, pulleys, Stage1 ECU' - '307whp @ 7200 RPM'; 'plus full exhaust, Stage2 ECU' - '323whp @ 7200 RPM'; 'It should be noted that, while Fabspeed offers high-flow catalytic converters to its Section 1 upgrade, we kept ours stock to reduce cost.'"
+        },
+        {
+          "url": "https://motoiq.com/project-e46-m3-part-3-headers-software-dyno-testing-and-more/7/",
+          "accessed": "2026-09-30",
+          "title": "Project E46 M3: Part 3, page 7",
+          "kind": "article",
+          "quote": "(via the fetch tool) 'up nearly 40whp over stock (a 14% improvement!)'"
+        }
+      ],
+      "confidence": "Medium-low. The headline numbers come from chart captions relayed by a summarising fetch tool (two passes agreed on 307 and 323 whp); I could not see the graphs, so correction and exact parts on the chart are unverified. 'Nearly 40 whp over stock' on page 7 doesn't match 323 - 290.5 = 32.5 whp exactly.",
+      "notes": "Useful as a same-car, same-dyno delta: stock 290.5 -> 307 -> 323 whp. Prefer the Buildjournal/EAS series where the sheets are readable."
+    },
+    {
+      "id": "aa-bone-stock-e46-m3-dynojet-sae-2014",
+      "summary": "Active Autowerke's published baseline: 'bone stock E46M3' 285.40 whp / 232.36 lb-ft on a Dynojet, CF SAE (WinPEP 7 screenshot, clock 27 Jun 2014).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated (US shop)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32, 'bone stock' per the run file name",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated (WinPEP 7 software)",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "not stated (the sheet's Location field is empty; Active Autowerke is in Miami, FL and also uses a Mustang dyno, so the Dynojet may belong to a partner shop)"
+      },
+      "correction": {
+        "value": "SAE",
+        "howKnown": "printed: WinPEP toolbar 'Correction Factor: SAE' and header 'CF: SAE Smoothing: 5'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "285.40 hp (sheet legend); AA page text: '285.4 WHP @ 7500 RPM'",
+        "peakWheelTorque": "232.36 lb-ft (sheet); AA page text: '232.36 LB-FT @ 5250 RPM' (the curve is nearly flat at about 230 lb-ft from roughly 4,200 to 5,300 rpm)",
+        "howRead": "read from the screenshot image; rpm from the page text"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "not stated",
+        "other": "'bone stock' is Active Autowerke's own label"
+      },
+      "sources": [
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke E46 BMW M3 Prima Supercharger Kit (product page; published 2014-08-10 per the store's product data)",
+          "kind": "shop page",
+          "quote": "'BASE PRIMA SUPERCHARGER DYNOJET RESULTS / Boost: 5.8 psi / Stock Horsepower: 285.4 WHP @ 7500 RPM / Stock Torque: 232.36 LB-FT @ 5250 RPM / Supercharged Horsepower: 395 WHP @ 8150 RPM / Supercharged Torque: 297.99 LB-FT @ 7200 RPM' (read via the store's public product JSON, https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit.json)"
+        },
+        {
+          "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+          "accessed": "2026-09-30",
+          "title": "Prima Vs stk (Dynojet WinPEP 7 screenshot embedded in the product page)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: SAE Smoothing: 5', 'PRIMA_5.8psi.drf Max Power = 426.69 Max Torque = 297.99', 'bone stock E46M3.drf Max Power = 285.40 Max Torque = 232.36'; Windows clock '6:13 PM 6/27/2014'"
+        }
+      ],
+      "confidence": "High for the value and SAE correction (printed). Unknown: car details, gearbox, mileage, weather, shop, gear. Screenshot clock date is not necessarily the run date.",
+      "notes": "The cleanest SAE stock baseline found. Agrees within about 2% with the MotoIQ stock car (290.5 whp, correction unknown). Active Autowerke's PRIMA PLUS page separately says 'A stock BMW E46 M3 is around 265 WHP' (probably their Mustang dyno; not stated)."
+    },
+    {
+      "id": "aa-prima-rotrex-c38-92-5-8psi-dynojet-sae-2014",
+      "summary": "Active Autowerke PRIMA kit (Rotrex C38-92, no intercooler, Alpha-N tune) at 5.8 psi: 426.69 whp / 297.99 lb-ft on a Dynojet, CF SAE (sheet). AA's current page text says 395 WHP for the same result.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated (US shop)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated (kit sold in 6-speed and SMG versions)",
+        "year": "not stated"
+      },
+      "engine": "S54B32, stock internals as far as stated (the page stresses the stock 11.5:1 compression)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated (WinPEP 7)",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "SAE",
+        "howKnown": "printed: 'CF: SAE Smoothing: 5'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "426.69 hp (sheet legend, run 'PRIMA_5.8psi.drf'); page text says '395 WHP @ 8150 RPM'; the curve peaks near 8,100 rpm",
+        "peakWheelTorque": "297.99 lb-ft (sheet); page text: '297.99 LB-FT @ 7200 RPM'",
+        "howRead": "read from the screenshot image; rpm from the page text"
+      },
+      "boost": {
+        "peak": "5.8 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal: boost rises with rpm; the rpm at which 5.8 psi is reached is not stated)",
+        "howKnown": "run file name 'PRIMA_5.8psi.drf' and page text 'Boost: 5.8 psi'"
+      },
+      "fuel": "not stated for this run (the PRIMA PLUS page says its own results were on 93 octane)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Active Autowerke PRIMA kit: Rotrex C38-92, GEN 9 intake plenum, double blow-off valves, dedicated supercharger oil cooling, no intercooler",
+        "superchargerSpecs": {
+          "model": "Rotrex C38-92 (Active Autowerke PRIMA kit; non-intercooled)",
+          "makerData": "Rotrex C38 datasheet Rev. 6.4 (C38-91/92 column): power range '260-530kW (354-720hp)'; max mass flow '0.63 kg/s'; max pressure ratio '2.94'; drive ratio '1:7.5' (internal traction drive); max drive efficiency '97%'; peak input shaft speed '12,000 RPM'; peak impeller speed '90,000 RPM'; pulley rings available '70, 75, 80, 85, 90, 95, 100, 105, 110 mm 8 rib'; unit weight '6.0 Kg'.",
+          "compressorMap": "Published (datasheet page 6, 'C38-91/92 Compressor map', corrected to 15 deg C and 101.3 kPa): peak-efficiency point labelled 75 (percent) at about 0.31 kg/s and pressure ratio about 1.64, near the 60k rpm speed line (read from image); speed lines 30k-90k rpm; flow axis to 0.7 kg/s.",
+          "kitPulley": "not published by Active Autowerke",
+          "kitBoost": "5.8 psi (run name and page text)",
+          "impellerSize": "not published on the datasheet I read",
+          "source": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf ; https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit"
+        },
+        "intercooler": "none ('PRIMA is a fully bolt-on non-intercooled system')",
+        "exhaust": "not stated",
+        "intake": "Active Autowerke green filter and filter cover (kit)",
+        "injectors": "'High Capacity Fuel Injectors' (size not published)",
+        "fuelPump": "not stated",
+        "ecu": "'Alpha N Software tune w/ SIMON 4 interface' (kit)",
+        "cams": "stock",
+        "internals": "stock (not stated otherwise)",
+        "gearbox": "not stated",
+        "other": "'Colder Heat Range Spark Plugs' (kit). Kit contents are from the current page; the 2014 test car may have had an earlier revision."
+      },
+      "sources": [
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke E46 BMW M3 Prima Supercharger Kit",
+          "kind": "shop page",
+          "quote": "'Rotrex C38-92 Supercharger System / Active Autowerke GEN 9 Intake Manifold plenum / Active Autowerke DOUBLE Blow-off Valve Set-up / Active Autowerke Green Filter & Filter Cover / Alpha N Software tune w/ SIMON 4 interface included / High Capacity Fuel Injectors / Colder Heat Range Spark Plugs / Dedicated oil cooling system'; 'PRIMA is a fully bolt-on non-intercooled system'; 'BASE PRIMA SUPERCHARGER DYNOJET RESULTS / Boost: 5.8 psi ... Supercharged Horsepower: 395 WHP @ 8150 RPM / Supercharged Torque: 297.99 LB-FT @ 7200 RPM'"
+        },
+        {
+          "url": "http://images.activeautowerke.com/dyno/3-Series/E46/M3/products/Prima%20Kit%20Supercharger/images/Prima%20Vs%20stk.bmp",
+          "accessed": "2026-09-30",
+          "title": "Prima Vs stk (Dynojet WinPEP 7 screenshot)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'PRIMA_5.8psi.drf Max Power = 426.69 Max Torque = 297.99'; 'CF: SAE Smoothing: 5'"
+        },
+        {
+          "url": "https://www.urotuning.com/products/active-autowerke-rotrex-c38-prima-kit-e46-m3-12-021",
+          "accessed": "2026-09-30",
+          "title": "UroTuning listing of the same kit",
+          "kind": "shop page",
+          "quote": "(via the fetch tool) supercharged horsepower '426.69 WHP @ 8,150 RPM', boost '5.8 psi' - resellers carry the sheet value"
+        },
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-plus-supercharger-with-600-horsepower-kit",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke PRIMA PLUS page",
+          "kind": "shop page",
+          "quote": "'A stock BMW E46 M3 is around 265 WHP. PRIMA SC makes 390 WHP. PRIMA PLUS SC makes 465 WHP.'"
+        },
+        {
+          "url": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+          "accessed": "2026-09-30",
+          "title": "Rotrex C38 Technical Datasheet Rev. 6.4",
+          "kind": "article",
+          "quote": "C38-91/92: 'Max mass flow rate 0.63 kg/s', 'Max pressure ratio (Pout/Pin) 2.94', 'Drive ratio 1:7.5', 'Peak impeller speed 90,000 RPM'"
+        }
+      ],
+      "confidence": "Medium. The SAE sheet is clear, but Active Autowerke's own text gives 395 WHP (and 'PRIMA SC makes 390 WHP' elsewhere), 7-9% below the sheet, with no explanation. The torque value in the text matches the sheet exactly, so '395' may be a later, conservative edit. Pulley size, injector size, fuel, exhaust, gear and weather are not stated.",
+      "notes": "Best supercharged E46 M3 candidate with a readable sheet. Pair it with the 'bone stock' run from the same screenshot. The kit was developed with Frank Smith of TuningTechFS (Maryland), whose published charts are Dynocom sheets, so this Dynojet run may have been done elsewhere; the location isn't stated."
+    },
+    {
+      "id": "chaos-e46-330i-turbo-gtx3582r-replica-28psi-e85-2021",
+      "summary": "E46 330i, M54B30 with 9.5:1 CP pistons and a replica GTX3582R on E85, tuned on the stock MS43: 605.94 whp at 28 psi (Dynojet, CF STD 1.04, 85 F), 5 Nov 2021.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 330i (body style not stated; the photo appears to show a sedan)",
+        "market": "US (inferred: Miami, FL shop)",
+        "grade": "330i (M54B30)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "M54B30 at stock displacement, 'semi built': 9.5:1 CP pistons, stock rods, M12 head studs, Cometic head gasket",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated (WinPEP 8 Data Center)",
+        "type": "inertia roller",
+        "mode": "not stated; smoothing 5",
+        "where": "Miami Performance Inc. (rented), Miami, FL"
+      },
+      "correction": {
+        "value": "STD; factor 1.03 (first run) and 1.04 (final run)",
+        "howKnown": "printed: 'CF: STD Smoothing: 5' and run legends 'STD:1.03', 'STD:1.04'"
+      },
+      "testConditions": {
+        "temperature": "84.22 F (first run), 85.03 F (final run)",
+        "pressure": "14.71 psi (first), 14.67 psi (final)",
+        "humidity": "63.11% (first), 66.57% (final)",
+        "howKnown": "printed in the run legends"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "605.94 hp at 5,840 rpm (final pull at 28 psi); first pull at about 15 psi: 427.65 hp at 6,110 rpm",
+        "peakWheelTorque": "589.80 lb-ft at 4,940 rpm (final); 408.97 lb-ft at 4,750 rpm (first)",
+        "howRead": "read off the photo of the WinPEP 8 screen"
+      },
+      "boost": {
+        "peak": "28 psi (final pulls); about 15 psi on the first pull",
+        "atPeakPower": "not shown on the sheet",
+        "fullBoostRpm": "not shown on the sheet",
+        "howKnown": "blog text only; no boost trace on the sheet"
+      },
+      "fuel": "E85",
+      "mods": {
+        "turbo": "'China GTX3582R' (replica of the Garrett GTX3582R) on a 'China cast manifold'; wheel trims and turbine A/R not stated",
+        "turboSpecs": {
+          "note": "The car used a replica; its real wheels and housings are unknown. Reference only: Garrett's genuine GTX3582R Gen II 66mm.",
+          "garrettGenII66mm": "compressor inducer 66 mm, exducer 82 mm; turbine inducer 68 mm, exducer 62 mm; turbine housing kits A/R 0.63, 0.82, 1.06 (T3 inlet, V-band outlet, free float); Garrett rating 450-900 hp (flywheel, 'calculated based strictly on choke flow of the compressor map'); maximum turbo speed 130 krpm",
+          "compressorMap": "Garrett publishes one on the same page (not read into numbers here)",
+          "genI": "Garrett's Gen I GTX3582R page returned HTTP 404; not checked",
+          "source": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gtx3582r-gen-ii/"
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Mishimoto 3-inch front-mount intercooler; 2.5-inch charge pipes",
+        "exhaust": "3-inch downpipe (rest not stated)",
+        "intake": "M50 intake manifold; PMAS HPX MAF",
+        "injectors": "Bosch 1000cc ('We ran out of injector at this point')",
+        "fuelPump": "single Walbro 450; stock fuel pressure regulator",
+        "ecu": "stock Siemens MS43 with a Chaos Calibrations custom tune; GFB boost controller; cam timing (VANOS) adjusted in the tune",
+        "cams": "not stated as aftermarket",
+        "internals": "9.5:1 CP pistons, stock rods",
+        "gearbox": "not stated",
+        "other": "M12 head studs; Cometic head gasket; stock pencil coils"
+      },
+      "sources": [
+        {
+          "url": "https://www.chaoscalibrations.com/chaos-calibrations-tuned-600-whp-turbo-e46-330i",
+          "accessed": "2026-09-30",
+          "title": "Chaos Calibrations Tuned 600+whp Turbo E46 330i (blog, 7 Nov 2021)",
+          "kind": "shop page",
+          "quote": "'On November 5th, 2021 we finished up a 600whp 330i turbo setup.'; 'Our initial pull is indicated by the red line shown above, which was at about 15psi with a conservative base map. We tuned this car entirely on the stock MS43 ecu.'; 'We continued on till about 28-29 psi ... We turned the car down to 28 psi.'; 'This customers car was still using the stock fuel pressure regulator with Bosch 1000cc injectors and a single Walbro 450. We ran out of injector at this point.'; 'This engine was semi built and the builders for some reasons decided to leave stock rods in it'; specs: 'M54B30 / M12 Headstuds / Cometic Head Gasket / 9.5:1 CP Pistons / Stock Rods / 2.5” Charge Pipes / Mishimoto 3” Intercooler / 3” Downpipe / Bosch 1000cc Injectors / Walbro 450 / China GTX3582R / M50 Intake Manifold / China Cast Manifold / PMAS HPX MAF / E85'; 'Thank you to our good friends at Miami Performance Inc. for the dyno rental.'; 'We dynoed this car, as most of our others, on a DynoJet.'; 'Red line on the dyno graph indicates our first baseline run. Blue line is one of the final pulls at 28psi.'"
+        },
+        {
+          "url": "https://cdn.website-editor.net/s/97f3c6c5b9d44c62838eb701784dcb27/dms3rep/multi/chaoscalibrations_600whp_e46_dyno_draph.jpeg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the WinPEP 8 screen (loaded through the signed image link embedded in the blog page)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Dynojet Research', 'CF: STD Smoothing: 5', dates '11/5/2021'; '84.22°F, 14.71psi, Humidity: 63.11%, STD:1.03 ■ Max Power = 427.65 at Engine RPM = 6.11 ■ Max Torque = 408.97 at Engine RPM = 4.75'; '85.03°F, 14.67psi, Humidity: 66.57%, STD:1.04 ■ Max Power = 605.94 at Engine RPM = 5.84 ■ Max Torque = 589.80 at Engine RPM = 4.94'"
+        },
+        {
+          "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gtx3582r-gen-ii/",
+          "accessed": "2026-09-30",
+          "title": "GTX3582R GEN II 66mm - Garrett Motion",
+          "kind": "shop page",
+          "quote": "reference table: 'Comp Inducer 66mm / Comp Exducer 82mm / Turbine Inducer 68mm / Turbine Exducer 62mm'; 'Horsepower: 450 - 900'; 'Maximum allowable turbocharger speed is 130krpm'; turbine kits 'A/R 0.63 / 0.82 / 1.06'"
+        }
+      ],
+      "confidence": "High for the sheet numbers, correction, weather and date (printed). Medium for boost (text only, 'about'). Low for turbo data (replica of unknown spec). Not a stock engine: lower-compression forged pistons, M50 manifold.",
+      "notes": "The only E85 and the only 330i forced-induction build with a readable sheet. Hard test case: a physics model needs the real compression ratio (9.5:1), E85 properties and a turbo map that may not match the replica. The first pull (about 15 psi, 'conservative base map') is a second data point but was not a finished tune."
+    },
+    {
+      "id": "motortalk-2003-330i-euro4-maha-lps3000-2009",
+      "summary": "German 2003 E46 330i (Euro 4, 231 PS rated) on a MAHA LPS 3000 4WD reference dyno in 4th gear: wheel power 156.5 PS, drag loss 60.9 PS, standard engine power 225.8 PS at 5,940 rpm; owner text only.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "E46 330i (body not stated)",
+        "market": "Germany (European spec, Euro 4 emissions)",
+        "grade": "330i, 231 PS rated (poster: 'an die 231 PS und 300Nm')",
+        "gearbox": "not stated",
+        "year": "2003"
+      },
+      "engine": "M54B30, no modifications mentioned",
+      "dyno": {
+        "make": "MAHA",
+        "model": "LPS 3000, 4WD reference bench ('LPS 3000 Allrad Referenzprüfstand')",
+        "type": "not stated in the source (roller; the poster contrasts it with benches that only accelerate a mass, implying a braked design)",
+        "mode": "three runs in 4th gear from 40 km/h to the rev limiter; rotating mass determined as 70 kg",
+        "where": "MAHA (the poster's former employer), Germany; exact site not stated"
+      },
+      "correction": {
+        "value": "'Normleistung' (standard power); the standard is not named. The wheel and drag-loss figures appear to be uncorrected.",
+        "howKnown": "poster: air pressure, intake air temperature, relative humidity and ambient temperature were included in the 'Hochrechnung zur Normleistung'. My arithmetic: 156.5 + 60.9 = 217.4 PS = the 'Motorleistung' exactly, and 225.8 / 217.4 = 1.039, so only the engine figure carries the correction."
+      },
+      "testConditions": {
+        "temperature": "not given",
+        "pressure": "not given",
+        "humidity": "not given",
+        "howKnown": "the poster says they were measured and used, but gives no values"
+      },
+      "gear": "4th",
+      "result": {
+        "peakWheelPower": "156.5 PS (MAHA 'Radleistung') at 5,940 rpm / 195.4 km/h; = 115.1 kW = 154.4 hp (my conversion)",
+        "peakWheelTorque": "not given at the wheel; engine torque 291 Nm at 3,475 rpm (114.3 km/h)",
+        "howRead": "text quote from the thread starter (no printout visible on page 1)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock (none mentioned)",
+        "intake": "stock (none mentioned)",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock (none mentioned)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "not stated",
+        "other": "two people sat in the boot during the runs to give the tyres grip on the rollers"
+      },
+      "sources": [
+        {
+          "url": "https://www.motor-talk.de/forum/leistungsmessung-330i-euro4-bj-2003-t2105021.html",
+          "accessed": "2026-09-30",
+          "title": "Leistungsmessung 330i Euro4 Bj 2003 (MOTOR-TALK forum, thread starter post 6 Jan 2009)",
+          "kind": "thread",
+          "quote": "'Zum Prüfstand: LPS 3000 Allrad Referenzprüfstand der Firma Maha, 100% geeicht und alle Umgebungsbedingungen sind bei der endgültigen Leistungshochrechnung berücksichtigt.' 'Ich bin selbst drei mal im 4ten Gang von 40kmh bis Begrenzer gefahren ... Die Rotierenden Massen sind mit 70kg bestimmt worden.' 'Messwerte: Normleistung: 225,8 PS / Motorleistung: 217,4 PS / Radleistung: 156,5 PS / Schleppleistung: 60,9 PS / bei 5940 U/min 195,4 km/h / Drehmoment: 291 Nm bei 3475 U/min 114,3 km/h' and later: 'Wobei bei mir die Schleppleistung etwas höher ist, da ich zwei Personen im Kofferraum hocken hatte, um genug Grip auf die Rolle zu bringen'. (Translation: MAHA LPS 3000 4WD reference dyno, calibrated, all ambient conditions used for the standard-power calculation; three runs in 4th gear from 40 km/h to the limiter; rotating mass 70 kg; standard power 225.8 PS, engine power 217.4 PS, wheel power 156.5 PS, drag power 60.9 PS at 5,940 rpm, 195.4 km/h; torque 291 Nm at 3,475 rpm. Drag power was somewhat higher because two people sat in the boot for grip.)"
+        },
+        {
+          "url": "https://www.motor-talk.de/forum/leistungsmessung-330i-euro4-bj-2003-t2105021.html",
+          "accessed": "2026-09-30",
+          "title": "Same thread, reply by another member (6 Jan 2009)",
+          "kind": "thread",
+          "quote": "'Eine derart hohe Verlustleistung habe ich bei noch keinem 330 gesehen und eine Radleistung von 195PS ist keinesfalls zu hoch denn die Pverlust sollte sich zwischen 20-25kw bewegen.' (He has never seen such a high loss on a 330 and expects 20-25 kW loss.)"
+        }
+      ],
+      "confidence": "Medium. Owner text only, but from a self-described former MAHA dyno specialist, with method, gear and all four MAHA figures. The split between wheel and loss power is disputed in the thread (60.9 PS loss, possibly raised by the extra weight); the corrected engine figure (225.8 PS vs 231 PS rated) is the more robust number. The printout he offered to scan is not on page 1.",
+      "notes": "Use with care: MAHA 'Radleistung' is taken at the roller surface and its drag-loss method gives far lower wheel numbers than a US inertia-dyno whp for the same car (compare about 190-200 whp commonly quoted for US 330i Dynojet runs, a figure I did not verify on a sheet). Best used as a Euro-spec crank check (P-Norm) or with a MAHA-style loss model."
+    },
+    {
+      "id": "22rpd-e46-m3-stage2-decat-tms-airbox-2021",
+      "summary": "22RPD street E46 M3 (220k miles, Megan Racing catless section 1, Stage 2 tune): 312.8 whp, then 334.7 whp with a Turner CSL airbox and retune (5 May 2021); weather printed, dyno make not stated.",
+      "usable": false,
+      "whyNotUsable": "Dyno make not stated in the text or on the sheet (the sheet shows only 'www.sportdevices.com' software). The shop's current booking page describes 'Our 2000 HP eddy-current controlled All-Wheel-Drive dyno' without a make, and that 2026 page may not describe the 2021 dyno. Correction not printed.",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (Washington state shop, 425 area code; inferred)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32, about 220,000 miles",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "eddy-current roller (per the shop's current page; not confirmed for 2021)",
+        "mode": "not stated",
+        "where": "22RPD (Washington state, USA; inferred from phone area code)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed"
+      },
+      "testConditions": {
+        "temperature": "74.9 F (stage 2 run), 81.0 F (airbox run)",
+        "pressure": "1014.6 mbar, 1011.0 mbar",
+        "humidity": "38.2%, 38.3%",
+        "howKnown": "printed in the sheet table"
+      },
+      "gear": "not stated (sheet shows 129.0 and 132.1 mph at peak)",
+      "result": {
+        "peakWheelPower": "312.8 hp at 7,331 rpm (stock intake, Stage 2, decat); 334.7 hp at 7,305 rpm (Turner box, 22RPD tuned)",
+        "peakWheelTorque": "266.07 lb-ft at 4,591 rpm; 277.71 lb-ft at 4,362 rpm",
+        "howRead": "read off the sheet image"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "Megan Racing section 1 (catless per run name 'DECAT'); rest stock",
+        "intake": "stock airbox, then Turner Motorsport CSL-style airbox",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "22RPD Stage 2 tune, then retuned for the airbox",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://22rpd.com/blog/s54-turner-motorsport-airbox-on-the-dyno",
+          "accessed": "2026-09-30",
+          "title": "S54 Turner Motorsport Airbox On The Dyno! (22RPD blog, 14 May 2021)",
+          "kind": "shop page",
+          "quote": "'A mild street built E46 M3 with stock exhaust (Except for Megan Racing section 1)'; 'The mostly stock, 220,000 mile E46 M3 on the dyno with the TMS CSL airbox:'; 'Already making 312whp in Stage 2 form, the M3 put down 334whp through the TMS airbox for a gain of +22whp and +12wtq!'"
+        },
+        {
+          "url": "https://22rpd.com/storage/uploads/blogs/images/16210206311641.png",
+          "accessed": "2026-09-30",
+          "title": "22RPD dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'E46 M3 STOCK INTAKE STG2 DECAT_2292 | 312.8 / 7331 | 266.07 / 4591 | 129.0 | 74.9 | 38.2 | 1014.6 | 5/5/2021 1:44:52 PM'; 'E46 M3 TURNER BOX 22RPD TUNED_2312 | 334.7 / 7305 | 277.71 / 4362 | 132.1 | 81.0 | 38.3 | 1011.0 | 5/5/2021 6:49:06 PM'; 'www.sportdevices.com'"
+        },
+        {
+          "url": "https://22rpd.com/book-a-dyno/",
+          "accessed": "2026-09-30",
+          "title": "22RPD Book A Dyno (current page)",
+          "kind": "shop page",
+          "quote": "'Our 2000 HP eddy-current controlled All-Wheel-Drive dyno is state of the art and works with nearly all vehicles.'"
+        }
+      ],
+      "confidence": "Numbers and weather are clear; dyno make and correction are the missing pieces.",
+      "notes": "Near-usable. If the owner can confirm the dyno make and correction with 22RPD, this becomes a good bolt-on data point with printed weather."
+    },
+    {
+      "id": "ttfs-2004-m3-smg-euro-headers-2014",
+      "summary": "Right Foot Down author's 2004 M3 SMG (163k miles) at Tuning Tech FS, Maryland: 300.2 whp baseline on an unknown previous tune (Dynocom-style sheet with weather and CF 0.99); headers and retune runs don't match the article text.",
+      "usable": false,
+      "whyNotUsable": "Dyno make is not printed on this sheet (layout matches the TTFS sheets that carry '(c)Dynocom Industries Inc.', so it is very likely TTFS's Dynocom, but that is an inference). The baseline car already had an unknown tune. The second run on the sheet (319.1 hp) matches neither of the article's figures (310 after headers, 325 after the new tune).",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "US (US-spec catted headers per the article)",
+        "grade": "M3 (S54B32)",
+        "gearbox": "SMG",
+        "year": "2004"
+      },
+      "engine": "S54B32, 163k miles",
+      "dyno": {
+        "make": "not printed (very likely Dynocom; see whyNotUsable)",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Tuning Tech FS (Frank Smith), Maryland, USA"
+      },
+      "correction": {
+        "value": "CF 0.99 (run 1), 1.00 (run 7); standard not named",
+        "howKnown": "printed in the sheet table. My arithmetic (not from the source): with the printed weather, SAE J1349 gives about 0.99 and 1.00 while SAE J607/STD would give about 1.01 and 1.02, so the printed factors look like SAE J1349."
+      },
+      "testConditions": {
+        "temperature": "68.2 F (run 1), 77.4 F (run 7)",
+        "pressure": "29.76 inHg, 29.69 inHg",
+        "humidity": "65%, 53%",
+        "howKnown": "printed in the sheet table"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "Run #1: 300.2 hp at 7,550 rpm; Run #7: 319.1 hp at 8,250 rpm (configuration of run 7 unclear)",
+        "peakWheelTorque": "244.1 lb-ft at 5,150 rpm; 249.8 lb-ft at 5,450 rpm",
+        "howRead": "read off the sheet image; the sheet also lists 'Eng HP' 345.2 and 367.0, a computed crank figure (about 13% above the wheel figure)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "factory catted headers at baseline; later European-market headers, catless, rest factory",
+        "intake": "drop-in filter (sheet title 'E46 M3 Drop in filter')",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "unknown previous tune at baseline; later a Frank Smith (TTFS) tune plus SMG software",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "SMG",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://rightfootdown.com/rfd-garage/euro-headers-installed-e46-m3/",
+          "accessed": "2026-09-30",
+          "title": "Euro Headers Installed on the E46 M3 (Right Foot Down, Josh Taylor, 2 Sep 2014)",
+          "kind": "article",
+          "quote": "'I scheduled the installation with Frank Smith at his small shop in Maryland called Tuning Tech FS. I arrived bright and early to start the day with a dyno run so that we could baseline the car's power at 163k miles'; 'My car, with factory headers put down 300! Frank informed me that my M3 already had a tune (unknown tuner)'; 'Buttoned up and strapped back on the dyno it put down 310 horsepower and 254 torque.'; 'With Frank's tune it made 325 horsepower.'; 'Frank also included his software for the SMG transmission.'"
+        },
+        {
+          "url": "http://www.rightfootdown.com/wp-content/uploads/2014/09/dyno_headers_small-1024x579.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet in the article",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'E46 M3 Drop in filter : Power(HP) & Torque(lb·ft) VS Engine Speed(RPMx1000)'; 'Max Power=300.2(HP)@7550(RPM), Max Torque=244.1(ft·lbs)@5150(RPM)'; 'Max Power=319.1(HP)@8250(RPM), Max Torque=249.8(ft·lbs)@5450(RPM)'; table: 'Run #1 | 8/30/14 | 5:44 | 300.2 HP | 345.2 HP | ... | 68.2 °F | 29.76 in Hg | 65 % | 0.99 | Medium load setting out to 15' and 'Run #7 | 8/30/14 | 13:13 | 319.1 HP | 367.0 HP | ... | 77.4 °F | 29.69 in Hg | 53 % | 1.00'"
+        }
+      ],
+      "confidence": "Sheet values and weather are clear; the configuration behind each run and the dyno make are not.",
+      "notes": "Near-usable as an SMG light-mod data point if TTFS confirms the dyno (Dynocom) and what run #7 was."
+    },
+    {
+      "id": "ttfs-louis-e46-m3-schrick-cams-dynocom",
+      "summary": "TTFS (Tuning Tech FS) customer E46 M3 with European headers, CSL airbox and Schrick 288/280 cams: 369.7 hp on a Dynocom (second run 358.3 hp); owner said 325 whp before the cams on the same dyno.",
+      "usable": false,
+      "whyNotUsable": "Aftermarket cams (Schrick 288/280; the brief prefers builds without them) with no cam data; no correction or weather on the sheet; tune and exhaust beyond the headers not stated; the two runs are unlabelled.",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32 with Schrick 288/280 camshafts",
+      "dyno": {
+        "make": "Dynocom",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Tuning Tech FS, Maryland (inferred from the image file name 'ttfs_...')"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "369.7 hp at 8,000 rpm (other run 358.3 hp at 7,850 rpm)",
+        "peakWheelTorque": "267.2 lb-ft at 4,700 rpm (other run 260.3 lb-ft at 4,850 rpm)",
+        "howRead": "read off the sheet image; article calls it '370 WHP'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "European headers (rest not stated)",
+        "intake": "CSL airbox",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated (a CSL airbox needs a MAF-less or MAP tune)",
+        "cams": "Schrick 288/280",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://rightfootdown.com/opinions/a-tuners-guide-to-the-e46-m3-engine/",
+          "accessed": "2026-09-30",
+          "title": "A Tuner's Guide to the E46 M3 (Right Foot Down, 29 Dec 2020)",
+          "kind": "article",
+          "quote": "caption: '370 WHP from European headers, CSL airbox, and Shrick 288/280 cams'; 'In the dyno sheet above, the owner stated the car had put down 325 WHP prior to the Schrick cams from the same tuner on the same dyno.'"
+        },
+        {
+          "url": "https://rightfootdown.com/wp-content/uploads/2020/12/ttfs_schrick_288_dyno_370whp.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynocom sheet 'Louis E46 M3'",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Louis E46 M3 : Power(HP) & Torque(lb·ft) VS Engine Speed(RPMx1000)'; 'Max Power=358.3(HP)@7850(RPM), Max Torque=260.3(ft·lbs)@4850(RPM)'; 'Max Power=369.7(HP)@8000(RPM), Max Torque=267.2(ft·lbs)@4700(RPM)'; '(c)Dynocom Industries Inc.'"
+        }
+      ],
+      "confidence": "Numbers readable; build detail thin.",
+      "notes": "Context only: shows what cams add on an NA S54 on this dyno."
+    },
+    {
+      "id": "aa-prima-plus-9psi-meth-dynocom",
+      "summary": "Active Autowerke PRIMA PLUS (centrifugal, no intercooler, water/methanol, 9.0/9.5 psi, 93 octane, headers/section 1/rear exhaust): Dynocom chart 'E46 M3 TTFS Prima Plus 9 PSI' shows 514.2 / 512.3 / 518.5 HP.",
+      "usable": false,
+      "whyNotUsable": "The chart does not say whether the figures are wheel or estimated engine power, and the same page's text says 'PRIMA PLUS SC makes 465 WHP' and '550+ HP' (crank). TTFS's other Dynocom sheets plot wheel HP (with a separate 'Eng HP' column), so 514-518 is probably wheel HP, but that conflicts with the vendor's own text by about 10%. Correction and weather not printed; methanol injection adds a hard-to-model variable.",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated",
+        "grade": "M3 (S54B32)",
+        "gearbox": "not stated (kit sold for SMG and 6-speed)",
+        "year": "not stated"
+      },
+      "engine": "S54B32, 'stock motor' per the page",
+      "dyno": {
+        "make": "Dynocom",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "TuningTechFS (Maryland), per the chart title 'TTFS'"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "518.5 HP at 8,200 rpm (best of three runs; others 514.2 and 512.3 HP at 8,150 rpm) - wheel vs engine not labelled",
+        "peakWheelTorque": "336.0 lb-ft at 7,600 rpm (best torque of the three)",
+        "howRead": "read off the chart image"
+      },
+      "boost": {
+        "peak": "9 psi (chart title); page: settings of 9.0 and 9.5 psi, falls back to 6.0 psi on a fault",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal)",
+        "howKnown": "chart title and page text"
+      },
+      "fuel": "93 octane plus water/methanol injection",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Active Autowerke PRIMA PLUS (upgrade of the Rotrex-based PRIMA; unit model not restated on the page)",
+        "superchargerSpecs": null,
+        "intercooler": "none (water/methanol instead)",
+        "exhaust": "'headers, section 1 and a rear exhaust'",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "complete water/methanol kit"
+      },
+      "sources": [
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-plus-supercharger-with-600-horsepower-kit",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke E46 M3 Prima PLUS + Supercharger (product page, published 2020-01-07)",
+          "kind": "shop page",
+          "quote": "'variable boost settings of 9.0 psi and 9.5 psi'; 'A stock BMW E46 M3 is around 265 WHP. PRIMA SC makes 390 WHP. PRIMA PLUS SC makes 465 WHP.'; 'Running without a front mounted intercooler, the PRIMA PLUS + relies on Water/Methanol and precise tuning'; 'When activated by the flip of a switch, the system develops 9.5 psi of boost and 465+ WHP.*'; 'Dyno results achieved with stock motor on BMW E46 M3 running 93 octane fuel. Car equipped with exhaust mods like headers, section 1 and a rear exhaust.'"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0578/5357/files/PRIMA_20PLUS-1.jpg?1628",
+          "accessed": "2026-09-30",
+          "title": "PRIMA PLUS dyno chart",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'E46 M3 TTFS Prima Plus 9 PSI : Power(HP) & Torque(lb·ft) VS Engine Speed(RPMx1000)'; 'Max Power=514.2(HP)@8150(RPM), Max Torque=336.0(ft·lbs)@7600(RPM)'; 'Max Power=512.3(HP)@8150(RPM), Max Torque=335.6(ft·lbs)@7400(RPM)'; 'Max Power=518.5(HP)@8200(RPM), Max Torque=335.3(ft·lbs)@8100(RPM)'; '(c)Dynocom Industries Inc.'"
+        }
+      ],
+      "confidence": "Chart is clear; its meaning is not.",
+      "notes": "Could become usable if AA or TTFS confirms the chart is wheel power and the correction used."
+    },
+    {
+      "id": "mishimoto-e46-330i-intake-headers-2015",
+      "summary": "Mishimoto R&D 330i with unnamed aftermarket headers: stock intake about 192 hp vs Mishimoto intake about 199 hp near 5,500-5,750 rpm (re-plotted chart).",
+      "usable": false,
+      "whyNotUsable": "Dyno make not stated for this test (Mishimoto had both a Dynojet 424X and a Dynapack in 2016); the chart is an Excel re-plot that stops at about 5,750 rpm, below where the M54B30 usually peaks; headers unnamed; no correction, gear or fuel.",
+      "vehicle": {
+        "chassis": "E46 330i",
+        "market": "not stated",
+        "grade": "330i (M54B30)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "M54B30 with aftermarket headers",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Mishimoto R&D (USA)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "about 192 hp (stock intake) and about 199 hp (Mishimoto intake), read off the re-plotted chart; exact peaks not given",
+        "peakWheelTorque": "about 205-213 lb-ft region (read off chart)",
+        "howRead": "read off the chart image (approximate)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "aftermarket headers (unnamed)",
+        "intake": "stock vs Mishimoto prototype intake",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mishimoto.com/engineering/2015/12/bmw-e46-330i-performance-intake-part-2-dyno-results",
+          "accessed": "2026-09-30",
+          "title": "2001-2006 BMW 330i Intake, Part 2: Dyno Results (Mishimoto, 22 Dec 2015)",
+          "kind": "article",
+          "quote": "'Please note, our test car was outfitted with aftermarket headers, so results will certainly vary from vehicle to vehicle.'; 'we netted max gains of 11.91 hp and 16.13 ft-lbs of torque, while the peak gains hit 6.48 hp and 9.36 ft-lbs of torque.'"
+        },
+        {
+          "url": "https://www.mishimoto.com/media/magefan_blog/2015/12/dyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "BMW E46 330 Mishimoto Intake Dyno Results (chart)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: legend 'HP - Stock Intake w/ aftermarket headers' and 'HP - Mishimoto Intake w/ aftermarket headers'; x-axis ends at 6,000 rpm with data to about 5,750"
+        },
+        {
+          "url": "https://www.mishimoto.com/engineering/2016/07/equipment-profile-mishimoto-is-dyno-mite",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto is Dyno-mite (equipment profile, 16 Jul 2016)",
+          "kind": "article",
+          "quote": "'Mishimoto's R&D facility houses not one, but two dyno systems: A Dynojet™ 424X and a 4-pod Dynapack™ system.'"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": "Only 330i bolt-on chart found on an open page; not good enough for calibration."
+    },
+    {
+      "id": "aa-e46-330-mustang-dyno-archive-pdf",
+      "summary": "Active Autowerke dyno-archive PDF labelled 'E46-330': Mustang dyno report with two unlabelled runs, max 'Eng Power T' 197 HP and 288 HP.",
+      "usable": false,
+      "whyNotUsable": "No description of the car or the mods for either run, no year on the run dates, no gear, and the channel 'Eng Power T' is not explained (could be wheel or a derived engine figure). Probably stock vs AA supercharger kit, but that is a guess.",
+      "vehicle": {
+        "chassis": "E46 330 (per archive label)",
+        "market": "not stated",
+        "grade": "330 (M54B30 presumed)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "not stated",
+      "dyno": {
+        "make": "Mustang Dynamometer (PowerDyne software)",
+        "model": "not stated",
+        "type": "eddy-current roller (Mustang; not stated on the report)",
+        "mode": "not stated",
+        "where": "Active Autowerke, 9940 S.W 168th Terrace, Miami, FL (printed)"
+      },
+      "correction": {
+        "value": "not stated (channel names end in 'WC', meaning unknown)",
+        "howKnown": "report header"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "run 1: 197 HP max; run 2: 288 HP max ('Eng Power T (HP)')",
+        "peakWheelTorque": "run 1: 183 lb-ft; run 2: 263 lb-ft ('Eng Torque T WC')",
+        "howRead": "read from the PDF (report printed 2015/03/31; runs dated 01/18 and 08/09, no year)"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "not given"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://store.activeautowerke.com/pages/dyno-archive",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke Dyno Archives page (link 'E46-330')",
+          "kind": "shop page",
+          "quote": "link text 'E46-330' pointing to the PDF"
+        },
+        {
+          "url": "http://images.activeautowerke.com/new%20dyno/2-3-4Series/E46-330.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer Test Report (Active Autowerke)",
+          "kind": "dyno sheet image",
+          "quote": "read from PDF: 'Mustang Dynamometer Test Report', 'Date Printed : 2015/03/31', 'Eng Torque T WC (Ft-Lb' max '183' (run 1) '263' (run 2), 'Eng Power T (HP)' max '197' (run 1) '288' (run 2); test comments blank"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": "Kit reference for the AA 330 kit is in kitReference."
+    },
+    {
+      "id": "motortalk-330ci-bosch-heilbronn-2009",
+      "summary": "Second poster in the Motor-Talk thread: a 330Ci measured at Bosch Heilbronn, text claims 195.84 PS wheel power and 236 PS engine power; the attached printout only shows corrected engine power vs road speed.",
+      "usable": false,
+      "whyNotUsable": "The printout plots only 'P-max Motorleistung (korr.)' (corrected engine power, about 171-172 kW peak read off the graph) against km/h; the wheel figure is text only; car year and mods unknown; dyno model not named; the thread starter disputes the measurement.",
+      "vehicle": {
+        "chassis": "E46 330Ci",
+        "market": "Germany",
+        "grade": "330Ci",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "M54B30 (presumed; not stated)",
+      "dyno": {
+        "make": "Bosch (dyno at 'bosch Heilbronn'; model not stated)",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Bosch service, Heilbronn, Germany"
+      },
+      "correction": {
+        "value": "'korr.' (corrected); standard not named",
+        "howKnown": "printout title"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "text: '195,84 ps radleistung' (not on the printout)",
+        "peakWheelTorque": "not stated",
+        "howRead": "text quote; printout shows engine power only"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.motor-talk.de/forum/leistungsmessung-330i-euro4-bj-2003-t2105021.html",
+          "accessed": "2026-09-30",
+          "title": "Leistungsmessung 330i Euro4 Bj 2003 (reply, 6 Jan 2009)",
+          "kind": "thread",
+          "quote": "'305 NM 236 ps motorleistung 176,4 kw korrigiert 174kw ... meiner hatte 195,84 ps radleistung .'; 'bei bosch Heilbronn'"
+        },
+        {
+          "url": "https://www.motor-talk.de/forum/aktion/Attachment.html?attachmentId=621818",
+          "accessed": "2026-09-30",
+          "title": "Attached printout (photo)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: title 'P-max Motorleistung (korr.) / Drehmoment (korr.) / Geschwindigkeit', kW axis, x-axis km/h 60-250, peak near 171-172 kW at about 225 km/h. (The printout also shows the owner's name and number plate; not recorded here.)"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": ""
+    },
+    {
+      "id": "carpassion-swiss-e46-m3-maha-2005",
+      "summary": "Swiss E46 M3 with Alpha-N and airbox on a MAHA dyno: owner reports 417, 409 and 209 PS 'P-Norm'.",
+      "usable": false,
+      "whyNotUsable": "Readings are plainly wrong (the car's dyno mode was not activated, which the thread discusses); no sheet posted; owner still waiting for the e-mailed results.",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "Switzerland",
+        "grade": "M3",
+        "gearbox": "probably SMG (the post says 'S6 rein', which reads as an SMG shift setting; my reading)",
+        "year": "not stated"
+      },
+      "engine": "S54B32 with Alpha-N and airbox conversion",
+      "dyno": {
+        "make": "MAHA",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Zurich area ('vom Strassenverkehrsamt Zürich geprüft')"
+      },
+      "correction": {
+        "value": "'nach EWG-Norm' (EEC directive)",
+        "howKnown": "owner text"
+      },
+      "testConditions": {
+        "temperature": "18 C ambient, 47 C intake air (from memory)",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "owner text"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "not given (only P-Norm engine figures 417 / 409 / 209 PS)",
+        "peakWheelTorque": "not given",
+        "howRead": "text"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "airbox conversion",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Alpha-N",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.carpassion.com/forum/thema/17357-leistungsmessung-e46-m3-maha-pr%C3%BCfstand/",
+          "accessed": "2026-09-30",
+          "title": "Leistungsmessung E46 M3 - MAHA Prüfstand (Carpassion forum, 10 May 2005)",
+          "kind": "thread",
+          "quote": "'P-Norm Leistung nach EWG-Norm: 417PS ... zweite Messung ergab dann 409PS nach EWG-Norm ... die dritte messung ergab dann 209PS nach EWG-Norm'; 'Es war ein MAHA Prüfstand, vom Strassenverkehrsamt Zürich geprüft.'"
+        }
+      ],
+      "confidence": "Numbers unreliable by the owner's own account.",
+      "notes": ""
+    },
+    {
+      "id": "dsport-vf620-trinity-m3",
+      "summary": "DSPORT feature: VF620-supercharged M3 at 9.0 psi, 570 whp on a Dynojet 424xLC2.",
+      "usable": false,
+      "whyNotUsable": "Wrong chassis: the article is about the E9x M3 with the S65 V8, not the E46.",
+      "vehicle": {
+        "chassis": "E9x M3 (not E46)",
+        "market": "not stated",
+        "grade": "M3 (S65)",
+        "gearbox": "six-speed manual",
+        "year": "not stated"
+      },
+      "engine": "S65 V8",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "424xLC2",
+        "type": "inertia roller",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "570 whp",
+        "peakWheelTorque": "not captured",
+        "howRead": "text (via the fetch tool)"
+      },
+      "boost": {
+        "peak": "9.0 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a",
+        "howKnown": "text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "VF620",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/supercharging-takes-bmw-m3-power-to-the-next-level/2/",
+          "accessed": "2026-09-30",
+          "title": "Supercharging Takes BMW M3 Power To The Next Level (DSPORT)",
+          "kind": "article",
+          "quote": "(via the fetch tool) 'the supercharged M3 reached a peak boost pressure of 9.0 psi and produced 570 whp'; the article mentions the S65 V8"
+        }
+      ],
+      "confidence": "n/a",
+      "notes": "Suggests the VF620 name belongs to the E9x kit line."
+    },
+    {
+      "id": "bmwblog-173k-mile-e46-m3-2021",
+      "summary": "Video article: 173,000-mile E46 M3 with a tune shows 289 whp.",
+      "usable": false,
+      "whyNotUsable": "Dyno make, correction and exact mods not stated; the gearbox description conflicts between outlets (BMWBlog says SMG; a Motor1 search-result snippet said it was converted to manual, not verified).",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated",
+        "grade": "M3",
+        "gearbox": "SMG per BMWBlog (conflicting)",
+        "year": "not stated"
+      },
+      "engine": "S54B32, 173,000 miles",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "289 whp",
+        "peakWheelTorque": "not stated",
+        "howRead": "text (via the fetch tool)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "a tune ('supposed to raise the power up by 20-30 HP')",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.bmwblog.com/2021/09/06/video-bmw-e46-m3-with-173000-miles-hops-on-the-dyno/",
+          "accessed": "2026-09-30",
+          "title": "Video: BMW E46 M3 with 173,000 miles hops on the dyno (BMWBlog, 6 Sep 2021)",
+          "kind": "article",
+          "quote": "(via the fetch tool) 'The car showed 289 horsepower at the wheels.'"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": ""
+    },
+    {
+      "id": "evolve-de-e46-m3-remap-summary",
+      "summary": "Evolve Automotive Germany: 'most E46 M3s make 315-320 PS on our dyno', about 335 PS after their remap.",
+      "usable": false,
+      "whyNotUsable": "Summary text only: no sheet, no dyno make, not stated whether wheel or engine power.",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "Europe",
+        "grade": "M3 (343 PS)",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "S54B32",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Evolve Automotive, Germany"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not given"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "not given as wheel power",
+        "peakWheelTorque": "not given",
+        "howRead": "text"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "no forced induction"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Evolve remap",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.evolveautomotive.de/e46-m3-softwareoptimierung/",
+          "accessed": "2026-09-30",
+          "title": "E46 M3 S54 - Evolve Automotive Deutschland",
+          "kind": "shop page",
+          "quote": "(via the fetch tool) 'Die meisten E46 M3 erreichen 315-320 PS auf unserem Prüfstand. Mit dem ECU-Remap gelingt es uns in der Regel, nach kurzer Adaptionsphase, auf etwa 335 PS bei einem Serienfahrzeug zu kommen'"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": "Hints that Euro M3s commonly measure below the 343 PS rating on this tuner's dyno."
+    },
+    {
+      "id": "aa-gen9-5-level1-mustang-claim",
+      "summary": "Active Autowerke Gen 9.5 Level 1 kit (Rotrex, front-mount intercooler, 7-8 psi): 'over 365 WHP (440 engine horsepower)' on AA's Mustang dyno at 94+ F and 60%+ humidity.",
+      "usable": false,
+      "whyNotUsable": "Vendor text with a lower-bound figure ('over'), no sheet, no car or exhaust details. The store listing title in search results said '525+ HP!' while the page says 440 BHP (title changed; the '415 WHP' figure seen in a search snippet is not on the page today).",
+      "vehicle": {
+        "chassis": "E46 M3",
+        "market": "not stated",
+        "grade": "M3",
+        "gearbox": "SMG and 6-speed versions sold",
+        "year": "not stated"
+      },
+      "engine": "S54B32",
+      "dyno": {
+        "make": "Mustang",
+        "model": "not stated",
+        "type": "eddy-current roller (Mustang; not stated)",
+        "mode": "not stated",
+        "where": "Active Autowerke, Miami, FL"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "'hot 94 + degree Fahrenheit'",
+        "pressure": "not stated",
+        "humidity": "'60% + range'",
+        "howKnown": "page text"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "'over 365 WHP'",
+        "peakWheelTorque": "not stated",
+        "howRead": "text"
+      },
+      "boost": {
+        "peak": "7-8 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a",
+        "howKnown": "page 'Boost Level 7-8 psi'"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Rotrex '92 Trim' (page wording)",
+        "superchargerSpecs": null,
+        "intercooler": "front-mount air-to-air",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://store.activeautowerke.com/products/active-autowerke-bmw-e46-m3-supercharger-kit-generation-8-level-1",
+          "accessed": "2026-09-30",
+          "title": "Active Autowerke BMW E46 M3 Supercharger Kit Generation 9.5 Level 1",
+          "kind": "shop page",
+          "quote": "'Consistent, repeatable runs of over 365 WHP (440 engine horsepower) were also recorded on the Active Autowerke Mustang chassis dyno in hot 94 + degree Fahrenheit conditions with humidity in the 60% + range.'; 'Power 440 BHP @ 7650 rpm / Torque 280 ft/lbs @ 5400 rpm / Boost Level 7-8 psi / Rotrex 92 Trim Supercharger / ... Front Mount Air to Air Intercooler / Larger Fuel Injectors'"
+        }
+      ],
+      "confidence": "Low.",
+      "notes": ""
+    }
+  ],
+  "kitReference": [
+    {
+      "item": "Vortech V-3 Si-Trim supercharger head unit (used by ESS VT kits and VF-Engineering E46 M3 kits)",
+      "specs": "internal step-up ratio 3.61:1 (helical gears); max speed 52,000 rpm; max boost 22 psi; max flow 1,150 CFM; max power 775 HP; peak efficiency 78%; inducer diameter 3.1 in",
+      "compressorMap": "not published on the product page read",
+      "source": "https://vortechsuperchargers.com/products/v-3-si-trim-supercharger",
+      "accessed": "2026-09-30",
+      "quote": "'Internal Step-Up Ratio: 3.61:1 / Max Speed: 52,000 RPM / Max Boost: 22 PSI / Max Flow: 1,150 CFM / Max Power: 775 HP / Peak Efficiency: 78% / Inducer Diameter: 3.1\"'",
+      "confidence": "verified (maker page)"
+    },
+    {
+      "item": "Rotrex C38-81 (Active Autowerke E46 330 Level 1 kit)",
+      "specs": "power range 220-485 kW (300-660 hp); max mass flow 0.58 kg/s; max pressure ratio 2.85; drive ratio 1:7.5; max drive efficiency 97%; peak impeller speed 90,000 rpm; peak input shaft speed 12,000 rpm; pulley rings 70-110 mm (8-rib)",
+      "compressorMap": "published (datasheet page 5, corrected to 15 C / 101.3 kPa); peak-efficiency point labelled 72 at about 0.25 kg/s, pressure ratio about 1.66 (read from image)",
+      "source": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+      "accessed": "2026-09-30",
+      "quote": "C38-81 column: '220-485kW (300-660hp)', '0.58 kg/s', '2.85'; common rows 'Drive ratio 1:7.5', 'Peak impeller speed 90,000 RPM'",
+      "confidence": "verified (maker datasheet)"
+    },
+    {
+      "item": "Rotrex C38-91/92 (Active Autowerke PRIMA uses the C38-92)",
+      "specs": "power range 260-530 kW (354-720 hp); max mass flow 0.63 kg/s; max pressure ratio 2.94; other data as C38-81",
+      "compressorMap": "published (datasheet page 6); peak-efficiency point labelled 75 at about 0.31 kg/s, pressure ratio about 1.64 (read from image)",
+      "source": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+      "accessed": "2026-09-30",
+      "quote": "C38-91/92 column: '260-530kW (354-720hp)', '0.63 kg/s', '2.94'",
+      "confidence": "verified (maker datasheet)"
+    },
+    {
+      "item": "ESS Tuning S54 VT1-475 (non-intercooled)",
+      "specs": "Vortech V-3 Si; 6.5 psi; claimed 470 hp SAE / 475 DIN and 330 lb-ft (crank claims)",
+      "compressorMap": "n/a",
+      "source": "https://vortechsuperchargers.com/products/ess-tuning-2001-2006-bmw-e46-m3-vt1-supercharger-system",
+      "accessed": "2026-09-30",
+      "quote": "'The non-intercooled S54 VT1-475 supercharger system from ESS Tuning produces 470hp SAE (475DIN) and 330lb-ft of torque at 6.5psi of boost.'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning S54 VT2-525 (front-mount intercooler)",
+      "specs": "Vortech V-3 Si; 8 psi; claimed 525 SAE / 529 DIN hp, 340 lb-ft",
+      "compressorMap": "n/a",
+      "source": "https://vortechsuperchargers.com/products/ess-tuning-2001-2006-bmw-e46-m3-vt2-supercharger-system",
+      "accessed": "2026-09-30",
+      "quote": "'Boost pressure: 8 PSI / 525SAE / 529 DIN (50% gain over stock) / 340 ft/lbs'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning S54 VT2-575 (Gen.3, FMIC)",
+      "specs": "Vortech V3 Si-trim; 10 psi; claimed 575 hp SAE, 360 lb-ft; Bosch injectors; requires 93 AKI / 98 RON",
+      "compressorMap": "n/a",
+      "source": "https://esstuning.com/e46-m3-g580-supercharger-system-gen-4/",
+      "accessed": "2026-09-30",
+      "quote": "'Boost pressure: 10 PSI / Horsepower: 575SAE (65% gain over stock) / Torque: 360 ft/lbs'; 'The VT2-575 requires the use of 93AKI/98RON and above fuel quality.'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning S54 G540 (Gen.4)",
+      "specs": "ESS G1 supercharger; 8-9 psi; claimed 540 hp SAE, 350 lb-ft; Siemens 630cc injectors",
+      "compressorMap": "not published",
+      "source": "https://europeanautosource.com/products/ess-tuning-g540-supercharger-system-gen-4-bmw-e46-m3",
+      "accessed": "2026-09-30",
+      "quote": "'Boost pressure: 8-9 PSI / Horsepower: 540SAE (66% gain over stock) / Torque: 350 ft/lbs.' (ESS text as carried by European Auto Source)",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning S54 G580 (Gen.4)",
+      "specs": "ESS G1 supercharger; 7PK belt drive; 3.5-in FMIC; Siemens 630cc injectors; 10 psi; claimed 580 hp SAE, 365 lb-ft; 93 AKI / 98 RON; ESS says its hp figures are RWHP divided by 0.85",
+      "compressorMap": "not published",
+      "source": "https://esstuning.com/e46-m3-g580-supercharger-system-gen-4/",
+      "accessed": "2026-09-30",
+      "quote": "'Boost pressure: 10 PSI / Horsepower: 580SAE (66% gain over stock) / Torque: 365 ft/lbs / Correction factor for drivetrain loss is 15% above RWHP as seen in dynograph (RWHP/0.85)'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning M54B30 G1 (330i)",
+      "specs": "ESS G1 supercharger; 6PK belt drive; Siemens 355cc injectors; 7 psi; claimed 330 hp SAE, 300 lb-ft; 91 AKI / 95 RON minimum, 93 AKI / 98 RON for rated power",
+      "compressorMap": "not published",
+      "source": "https://esstuning.com/m54b30-g1-supercharger-system/",
+      "accessed": "2026-09-30",
+      "quote": "'Boost pressure: 7 PSI / Horsepower: 330SAE (46% gain over stock) / Torque: 300 ft/lbs'; 'The M54B30 G1 requires the use of 91AKI/95RON and above fuel quality. 93AKI/98RON or higher is required to achieve rated power gain.'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "ESS Tuning M52TU/M54 VT1 (older 330i kit)",
+      "specs": "Vortech V-3 Si based; larger Bosch injectors; '40-50%' power gain claim",
+      "compressorMap": "n/a",
+      "source": "https://vortechsuperchargers.com/products/ess-tuning-2000-2006-bmw-e46-330i-330ci-330xi",
+      "accessed": "2026-09-30",
+      "quote": "'ESS Tuning is proud to offer the newly developed Vortech V-3 Si based VT1 supercharger system for the BMW M52TÜ and M54 engine family ... The supercharger system will bump the power output by 40-50% depending on engine size'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "VF-Engineering E46 M3 supercharger (three power levels)",
+      "specs": "Vortech V-3 Si Super Quiet; cast manifold with slide-in air-to-water intercooler; Bosch EV14 injectors; 420 hp / 320 lb-ft at 4.0-4.5 psi; 480 hp / 340 lb-ft at 5.5-6.0 psi; 570 hp / 380 lb-ft at 8.5-9.0 psi (crank claims)",
+      "compressorMap": "n/a",
+      "source": "https://vortechsuperchargers.com/products/vf-engineering-2001-2006-bmw-e46-m3-supercharger-systems",
+      "accessed": "2026-09-30",
+      "quote": "'Based upon the Vortech V-3 Si Super Quiet unit'; '420 hp / 320 ft/lbs 4.0-4.5 PSI'; '480 hp / 340 ft/lbs 5.5-6.0 PSI'; '570 hp / 380 ft/lbs 8.5-9.0 PSI'; 'Cast manifold with slide-in air/water intercooler cartridge'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "Active Autowerke PRIMA (E46 M3)",
+      "specs": "Rotrex C38-92; no intercooler; Alpha-N tune; 5.8 psi; injector size and pulley not published",
+      "compressorMap": "see Rotrex C38-91/92",
+      "source": "https://store.activeautowerke.com/products/active-autowerke-e46-m3-prima-supercharger-kit",
+      "accessed": "2026-09-30",
+      "quote": "see build 'aa-prima-rotrex-c38-92-5-8psi-dynojet-sae-2014'",
+      "confidence": "single-source (vendor)"
+    },
+    {
+      "item": "Active Autowerke E46 330 Level 1 (330i)",
+      "specs": "Rotrex C38-81; 8 psi; six higher-flow injectors; factory ECU with AA software; 91-93 octane; claimed 320 BHP at 7,000 rpm and 260 lb-ft at 5,400 rpm",
+      "compressorMap": "see Rotrex C38-81",
+      "source": "https://store.activeautowerke.com/products/active-autowerke-e46-330-supercharger-kit-level-2",
+      "accessed": "2026-09-30",
+      "quote": "'Rotrex C38-81 trim supercharger / 8 psi boost level / ... 6 higher flow fuel Injectors'; 'Specifically designed to run with 91-93 octane pump fuel and your factory ECU'; 'Power 320 BHP @ 7000 rpm / Torque 260 ft/lbs @ 5400 rpm / Boost Level 8.0 psi'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "Dinan E46 330 packages (claims only, no sheets)",
+      "specs": "Dinan S1-330: 240 hp at 5,900 rpm / 224 lb-ft at 3,500 rpm; parts: software +6 hp, exhaust +5 hp, intake +11 hp, throttle body +6 hp; optional 3.15 final drive for manuals (stock 2.93 per Dinan)",
+      "compressorMap": "n/a",
+      "source": "https://pictures.dealer.com/crownbmwgreensboro/bbe8a1310a0d02b7009ad840b6a85610.pdf",
+      "accessed": "2026-09-30",
+      "quote": "'Dinan S1 - 330: 240 hp @ 5900 rpm / 224 lb-ft torque @ 3500 rpm'; 'Dinan lowers the 330 or 328's 2.93 final drive gearing to a 3.15:1 ratio'",
+      "confidence": "single-source (vendor claim)"
+    },
+    {
+      "item": "Warning about Vortech kit pages",
+      "specs": "Every Vortech BMW kit page read carries a boilerplate paragraph about a Ford Mustang Bullitt ('the stock Bullitt produced 239 hp ... jumped to 329 hp') on Vortech's Mustang dyno. That is not BMW data; don't use it.",
+      "compressorMap": "n/a",
+      "source": "https://vortechsuperchargers.com/products/ess-tuning-2001-2006-bmw-e46-m3-vt1-supercharger-system",
+      "accessed": "2026-09-30",
+      "quote": "'Run on Vortech's own Mustang chassis dyno (lower numbers than a comparable Dynojet), the stock Bullitt produced 239 hp and 243 lb-ft of torque.'",
+      "confidence": "verified (boilerplate)"
+    }
+  ],
+  "gates": [
+    "https://www.e46fanatics.com/threads/dyno-time-ess-tuning-vt2-550-meth.888688/ and https://www.e46fanatics.com/threads/330i-supercharged-dyno-results.1318667/ - automated requests are redirected (HTTP 307) to tollbit.e46fanatics.com, a TollBit paid/licensed-access host for bots. Not followed. Most E46 dyno threads found in search (stock M3/330i baselines, ESS/VF/Dinan builds) are on this site.",
+    "https://www.bimmerfest.com/threads/review-new-supercharger-system-ess-m54-52-vt1.872898/ - redirected to tollbit.bimmerfest.com (TollBit paid access). Not followed.",
+    "https://www.bimmerwerkz.com/threads/vf-engineering-e46-m3-supercharger-check-out-these-dynos.49946/ - redirected to tollbit.bimmerwerkz.com (TollBit paid access). Not followed.",
+    "https://nam3forum.com/forums/forum/main-forum/e46-2001-2006/1925-s54-dyno-database/page4 - the S54 dyno database's sheet images are forum attachments that need a login. Not logged in.",
+    "http://www.zhpmafia.com/forums/archive/index.php/t-15936.html (ESS M54/52 VT1 review archive) - Cloudflare 'Just a moment...' challenge, HTTP 403. Stopped.",
+    "https://forums.m3cutters.co.uk/threads/supercharged-dyno-results-ess-575.188901/ and https://forums.m3cutters.co.uk/threads/real-life-power-from-stock-e46.123295/ - Cloudflare 'Attention Required!' block, HTTP 403. Stopped.",
+    "https://oetuning.com/blog/e46-330i-dyno-results/ - redirects to a SiteGround captcha (/.well-known/sgcaptcha/). Stopped.",
+    "https://www.turnermotorsport.com/t-project-e46-m3 (stock 283 whp vs Shark Injector 301 whp per search snippets) and https://www.turnermotorsport.com/p-338935-e46-330ixi-shark-injector-performance-software/ - Cloudflare 'Just a moment...', HTTP 403. Stopped.",
+    "https://e46m3.bimmerpost.com/forums/showthread.php?t=635016 and https://www.m3post.com/forums/showthread.php?t=655269 - HTTP 403 to automated requests (plain browser user agent as well). Not a terms page; did not try further.",
+    "https://www.6speedonline.com/forums/bmw-m/111917-500whp-vf-engineering-e46-m3-stage-2-supercharger.html - HTTP 403. Stopped.",
+    "photos.motoiq.com (MotoIQ Project E46 M3 dyno graphs) - HTTP 403 'Bad bot' for images; motoiq.com pages show a JavaScript 'One moment, please' check to curl. Article text was read through the fetch tool; the graphs were not viewed and I did not try to get around the block.",
+    "https://www.motor-talk.de/forum/leistungsmessung-330i-euro4-bj-2003-t2105021.html?page=2 - page 2 displays 'Auf dieser Seite können leider keine Beiträge angezeigt werden' (no posts shown; possibly login-only). Did not log in.",
+    "https://www.chitownm.com/forum/sponsors-and-vendors-section/performance-eurowerks/7525-dyno-data-logging-karbonius-cf-airbox-oe-csl-dme-map-conversion (Karbonius CF airbox + CSL DME test on a Dynojet 248x per a search snippet) - TLS handshake failure with curl and HTTP 503 via the fetch tool. Unreachable, not a terms gate."
+  ],
+  "notFound": [
+    "A publicly readable dyno sheet for a stock US-spec 330i/330Ci or 330i ZHP (M54B30) on a Dynojet or Mustang. All candidates found in search sit on gated or bot-blocked forums (e46fanatics, bimmerfest, zhpmafia). The only open 330i data are the German MAHA reading (owner text) and the Mishimoto chart (rejected).",
+    "A supercharged E46 330i/330Ci with a readable sheet on an open page (ESS VT1/G1, Active Autowerke C38-81, Vortech, Dinan). Active Autowerke's own 'E46-330' Mustang PDF has no build description (listed as rejected).",
+    "Leads behind gates, with numbers seen only in search-result snippets (NOT verified, not used): e46fanatics 'Dyno Time: ESS Tuning VT2-550 + Meth!!!' (snippet: 463.62 whp / 307.94 wtq on a Dynojet); e46fanatics/bimmerpost 'EAS | ESS VT2-500 Supercharger Build - E46 M3' (snippet: 388 rwhp / 280 rwtq, Dynojet SAE, 91 octane); e46fanatics/bimmerfest/zhpmafia 'ESS M54/52 VT1' review on a 2004 330i ZHP with UUC TSE3 exhaust, Gruppe M intake and ESS software (snippet: 190 -> 290 whp at 7-8 psi, and a remark that the sheet was STD, about 276 whp SAE); e46fanatics 'My Evolve tuned VF570 M3 & stock M3 DYNO results'; e46fanatics 'My Dinan Supercharged Stage 1 E46 M3' (snippet: 371.03 whp); Turner Motorsport project page (snippet: stock 283 whp / 232 wtq, Shark Injector 301 whp). The owner could read these himself.",
+    "Any E46 M3 CSL (360 PS) chassis-dyno result.",
+    "A European-spec M3 (343 PS) wheel-power sheet. Only Evolve Germany's summary text and a Swiss thread with bogus MAHA readings were found.",
+    "Rototest hub-dyno data for any E46 (not found; the search budget ran out).",
+    "Wheel-power sheets from European tuners (G-Power, Hartge, AC Schnitzer, Alpha-N, Schmiedmann): none found; search results showed only crank-power claims.",
+    "Performance BMW, Roundel or European Car magazine dyno tests of the E46 online: not found.",
+    "ESS and VF pulley sizes, impeller trims and compressor maps for their E46 kits: not published on the pages read. ESS G1 unit specifications: not published. The Vortech V-3 Si page gives head-unit data but no map.",
+    "Kit names VT1-535, VT2-600, VT2-625 and VF560/VF620 were not found as E46 M3 kits on the maker pages I read. Search-result titles tie VT2-625 and VT1-535 (m5board/bimmerfest) and VF620 (DSPORT) to the E9x M3. The E46 M3 ESS line on the pages read is VT1-475, VT2-525, VT2-575, G500/G540/G580; the VF E46 M3 line is the 420/480/570 hp levels (sold as VF480, VF570).",
+    "VF-Engineering's own website returned a WordPress error (HTTP 500), so no VF dyno charts were found.",
+    "Correction standard for the MotoIQ runs (graphs not viewable).",
+    "Gearbox for the MotoIQ, Active Autowerke, Chaos and Motor-Talk cars.",
+    "The MAHA printout scan the Motor-Talk poster offered to post: not on page 1; page 2 shows no posts.",
+    "Web search budget ran out before I could look for more 330i shop pages or magazine archives."
+  ]
+}

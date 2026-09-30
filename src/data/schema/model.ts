@@ -16,10 +16,24 @@ import { checkConfidence, ConfidenceSchema, SourceSchema } from './source';
  *   reasoning in `method`.
  */
 
-/** Units an assumption may be written in, and the factor to the SI value the model uses. */
+/**
+ * Units an assumption may be written in, and the factor to the SI value the
+ * model uses. `°C` is the one offset unit: the loader adds 273.15 (to K).
+ */
 export const MODEL_UNITS = {
   'J/(kg·K)': 1,
+  'kJ/(kg·K)': 1000,
   'MJ/kg': 1e6,
+  'kJ/kg': 1000,
+  '°C': 1,
+  K: 1,
+  s: 1,
+  'm/s': 1,
+  'km/h': 1 / 3.6,
+  'kW/K': 1000,
+  kg: 1,
+  'kg/s': 1,
+  L: 0.001,
   'kg/m³': 1,
   ratio: 1,
   kPa: 1000,

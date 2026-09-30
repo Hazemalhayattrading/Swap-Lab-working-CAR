@@ -1,6 +1,18 @@
 import type { DynoReport } from '../sim/report';
 import type { UserConditions } from '../sim/simulate';
-import type { CatalogueIndex, WorkerRequest, WorkerResponse } from './sim-protocol';
+import type {
+  BuildCountExceptionRow,
+  CatalogueIndex,
+  KnownBuildRow,
+  WorkerRequest,
+  WorkerResponse,
+} from './sim-protocol';
+
+export interface KnownBuildTable {
+  builds: KnownBuildRow[];
+  exceptions: BuildCountExceptionRow[];
+  tolerance: number;
+}
 
 /**
  * The page's side of the simulation worker. Only the latest request matters:
@@ -15,6 +27,11 @@ export class SimClient {
     number,
     { resolve: (r: { report: DynoReport; ms: number }) => void; reject: (e: Error) => void }
   >();
+  private readonly tables = new Map<
+    number,
+    { resolve: (t: KnownBuildTable) => void; reject: (e: Error) => void }
+  >();
+  private knownBuildTable: Promise<KnownBuildTable> | undefined;
   readonly ready: Promise<CatalogueIndex>;
 
   constructor() {
@@ -31,6 +48,19 @@ export class SimClient {
         resolveReady(message.index);
         return;
       }
+      const table = this.tables.get(message.id);
+      if (table) {
+        this.tables.delete(message.id);
+        if (message.type === 'known-builds')
+          table.resolve({
+            builds: message.builds,
+            exceptions: message.exceptions,
+            tolerance: message.tolerance,
+          });
+        else if (message.type === 'error') table.reject(new Error(message.message));
+        return;
+      }
+      if (message.type === 'known-builds') return;
       const waiting = this.pending.get(message.id);
       this.pending.delete(message.id);
       if (!waiting) return;
@@ -41,8 +71,21 @@ export class SimClient {
       const error = new Error(event.message || 'The simulation worker failed to start.');
       rejectReady(error);
       for (const waiting of this.pending.values()) waiting.reject(error);
+      for (const waiting of this.tables.values()) waiting.reject(error);
       this.pending.clear();
+      this.tables.clear();
     });
+  }
+
+  /** The known-build calibration table (BUILD_PROMPT 6.5), run once and kept. */
+  knownBuilds(): Promise<KnownBuildTable> {
+    this.knownBuildTable ??= new Promise<KnownBuildTable>((resolve, reject) => {
+      const id = this.nextId++;
+      this.tables.set(id, { resolve, reject });
+      const request: WorkerRequest = { type: 'known-builds', id };
+      this.worker.postMessage(request);
+    });
+    return this.knownBuildTable;
   }
 
   /** Resolves with the report, or with undefined if a newer request superseded it. */

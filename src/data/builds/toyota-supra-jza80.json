@@ -1,0 +1,713 @@
+{
+  "$comment": "Known real builds of the JZA80 Supra (BUILD_PROMPT 6.5), all on the factory longblock. Chosen before running the model (docs/research-notes/part2b.md). Excluded: builds with forged pistons of unstated bore, cams or ported heads; a 560 whp single-turbo car said to run the factory 440 cc injectors (they can't supply that power at factory pressure); a Dynapack sheet with no correction and no weather; Dastek, V-Tech, Dyno Developments and Dynocom sheets (no reading factor on file); E85 cars. Two counted builds by the owner's exception (buildCountException, 2026-09-30); the GT3582R build is shown but not counted. Research: docs/research/part2b/known-builds-toyota-supra-jza80.json, known-builds-gapfill-supra-rx7.json and known-builds-gapfill-supra-2.json.",
+  "car": "toyota-supra-jza80",
+  "buildCountException": {
+    "minBuilds": 2,
+    "reason": "No third JZA80 build meets the inclusion rules yet: three research passes found only near-misses (docs/research-notes/part2b.md). Both counted builds run the factory twins (stock boost, and 1 bar with a front-mount cooler), so big-turbo builds are unverified. The owner is looking for a Saudi tuner's sheet to fill the third slot.",
+    "decided": "2026-09-30",
+    "approvedBy": "owner",
+    "badge": "validated on stock turbos only; big-turbo builds unverified"
+  },
+  "builds": [
+    {
+      "id": "gotboost-supra-stock-twins",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Stock Supra Twin Turbo on its factory twins, low boost (0.6-0.7 bar)",
+      "trim": "eudm-turbo-6mt",
+      "who": "Owner, at GotBoost Performance Tuning (Bridgend, Wales)",
+      "date": "2011-03-27",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 0.68,
+            "unit": "bar",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ],
+            "note": "Read off the sheet's manifold-pressure trace: about 0.67-0.69 bar at most, about 0.6 bar at peak power; owners on the thread say 0.8 bar is normal, so the car ran below its stock boost."
+          },
+          "atPeakPower": {
+            "value": 0.61,
+            "unit": "bar",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ]
+          },
+          "fullBoostRpm": {
+            "value": 4200,
+            "unit": "rpm",
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ],
+            "method": "Read off the trace: boost peaks just after 110 km/h in 4th, about 4,200 rpm by the sheet's own km/h-to-rpm scale."
+          }
+        },
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+              "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+            }
+          ]
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+              "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+            }
+          ]
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+              "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+              "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+                "accessed": "2026-09-30",
+                "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+                "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+              }
+            ],
+            "method": "Not stated. UK pump premium unleaded is 95 RON; the stock ECU gains nothing from a better grade."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+              "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+            }
+          ]
+        },
+        "described": "Stock 2JZ-GTE on its factory sequential twins, manual gearbox, running 0.6-0.7 bar."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 240.3,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+              "accessed": "2026-09-30",
+              "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+              "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+            }
+          ],
+          "note": "The better of two pulls in 4th (233.7 and 240.3 hp); 233.2 hp in 5th."
+        },
+        "powerRpm": {
+          "value": 5650,
+          "unit": "rpm",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+              "accessed": "2026-09-30",
+              "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+              "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+            }
+          ],
+          "method": "148 km/h in 4th by the sheet's own scale (140 km/h = 5,340 rpm)."
+        },
+        "dyno": {
+          "value": "mainline",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+              "accessed": "2026-09-30",
+              "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+              "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+            }
+          ]
+        },
+        "dynoModel": "Mainline DynoLog",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+              "accessed": "2026-09-30",
+              "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+              "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+            }
+          ]
+        },
+        "conditions": {
+          "temperature": {
+            "value": 29,
+            "unit": "°C",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ]
+          },
+          "pressure": {
+            "value": 1009,
+            "unit": "mbar",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ]
+          },
+          "relativeHumidity": {
+            "value": 0.18,
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+                "accessed": "2026-09-30",
+                "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+                "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+              }
+            ]
+          }
+        },
+        "gear": {
+          "value": 4,
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+              "accessed": "2026-09-30",
+              "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+              "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+          "accessed": "2026-09-30",
+          "title": "GotBoost Performance Tuning (Bridgend): Mainline DynoLog sheet, 4th gear",
+          "note": "Mainline DynoLog Chassis Dyno Report ... Test Date: 27-Mar-2011 12:42 ... Vehicle: TOYOTA SUPRA TT ... Gear: 4 ... Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%) ... Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH ... [x-axis] 140 5340 ... [Manifold Pressure (Bar) trace between about 0.48 and 0.68]"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net: \"dyno results... something need attention?\" (28 Mar 2011)",
+          "note": "Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos."
+        }
+      ],
+      "notes": "UK registration; whether it is a UK-market car or an import isn't stated. The European Twin Turbo trim is assumed; the run is compared at the boost it actually made."
+    },
+    {
+      "id": "trinidad-supra-stock-twins-1bar",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Supra (automatic) on factory twins at 1 bar, front-mount cooler, decat exhaust",
+      "trim": "jdm-rz-s-4at-1995",
+      "who": "Owner, on a Dynojet in Trinidad",
+      "date": "2016-01-30",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 15,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+                "accessed": "2026-09-30",
+                "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+                "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+              }
+            ]
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+              "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+            }
+          ],
+          "note": "Front-mount, make not stated."
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+              "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+            }
+          ],
+          "note": "3.25-inch Blitz Nur Spec, fully decatted."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+              "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+            }
+          ],
+          "note": "GReddy foam filter."
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+              "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+            }
+          ],
+          "note": "Stock ECU with an HKS fuel-cut defender, which only lifts the boost cut."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+                "accessed": "2026-09-30",
+                "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+                "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+              }
+            ],
+            "method": "The owner says '95 octane' without the scale. Taken as 95 RON; on the AKI scale it would be about 99 RON, the Japanese rating fuel, and the stock ECU would run its own map either way."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+              "accessed": "2026-09-30",
+              "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+              "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+            }
+          ]
+        },
+        "described": "A non-turbo JZA80 converted to twin turbo with a stock 2JZ-GTE from a 1995 Aristo on its J-spec sequential twins, A340 automatic, front-mount intercooler, 3.25-inch decat Blitz exhaust, GReddy filter, Aeromotive pump, stock ECU with HKS FCD, 1 bar, 35 °C."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 314.64,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/uploads/monthly_2016_07/IMG-20160130-1201.JPG.219090ff0e7ec5fe13e5836f816427c9.JPG",
+              "accessed": "2026-09-30",
+              "title": "Photo of the Dynojet WinPEP 7 screen (Trinidad, 30 Jan 2016)",
+              "note": "DYNOJET RESEARCH 1-868-678-3880/ 636-0822 ... CF: SAE Smoothing: 5 ... Chrisen_006.drf Max Power = 314.64 Max Torque = 300.92 ... Chrisen_005.drf Max Power = 311.95 Max Torque = 295.50"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 300.92,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/uploads/monthly_2016_07/IMG-20160130-1201.JPG.219090ff0e7ec5fe13e5836f816427c9.JPG",
+              "accessed": "2026-09-30",
+              "title": "Photo of the Dynojet WinPEP 7 screen (Trinidad, 30 Jan 2016)",
+              "note": "DYNOJET RESEARCH 1-868-678-3880/ 636-0822 ... CF: SAE Smoothing: 5 ... Chrisen_006.drf Max Power = 314.64 Max Torque = 300.92 ... Chrisen_005.drf Max Power = 311.95 Max Torque = 295.50"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/uploads/monthly_2016_07/IMG-20160130-1201.JPG.219090ff0e7ec5fe13e5836f816427c9.JPG",
+              "accessed": "2026-09-30",
+              "title": "Photo of the Dynojet WinPEP 7 screen (Trinidad, 30 Jan 2016)",
+              "note": "DYNOJET RESEARCH 1-868-678-3880/ 636-0822 ... CF: SAE Smoothing: 5 ... Chrisen_006.drf Max Power = 314.64 Max Torque = 300.92 ... Chrisen_005.drf Max Power = 311.95 Max Torque = 295.50"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP 7)",
+        "correction": {
+          "value": "sae-j1349",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.mkivsupra.net/uploads/monthly_2016_07/IMG-20160130-1201.JPG.219090ff0e7ec5fe13e5836f816427c9.JPG",
+              "accessed": "2026-09-30",
+              "title": "Photo of the Dynojet WinPEP 7 screen (Trinidad, 30 Jan 2016)",
+              "note": "DYNOJET RESEARCH 1-868-678-3880/ 636-0822 ... CF: SAE Smoothing: 5 ... Chrisen_006.drf Max Power = 314.64 Max Torque = 300.92 ... Chrisen_005.drf Max Power = 311.95 Max Torque = 295.50"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_07/IMG-20160130-1201.JPG.219090ff0e7ec5fe13e5836f816427c9.JPG",
+          "accessed": "2026-09-30",
+          "title": "Photo of the Dynojet WinPEP 7 screen (Trinidad, 30 Jan 2016)",
+          "note": "DYNOJET RESEARCH 1-868-678-3880/ 636-0822 ... CF: SAE Smoothing: 5 ... Chrisen_006.drf Max Power = 314.64 Max Torque = 300.92 ... Chrisen_005.drf Max Power = 311.95 Max Torque = 295.50"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/230725-na-tt-auto-bpu-dyno/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net: \"NA-TT Auto BPU Dyno\" (15 Jul 2016)",
+          "note": "Engine Type - TT (From a 1995 Aristo) / Mods - Front mount intercooler, HKS FCD set to 9, Greddy foam filter, Aeromotive stealth fuel pump / Engine Spec - Stock / Turbo - Stock JSpec twins / Fuel Used - 95 octane / Exhaust - 3.25\" Blitz NUR Spec fully decatted / Transmission - A340 Auto / ECU - Stock / Dyno Used - Dynoget / Power figure - ~315rwhp (314.64whp to be exact) / Torque figure - ~300 ftlb / Boost Pressure - 15psi (1 bar) / Ambient temperature - 35 degrees celcius"
+        }
+      ],
+      "notes": "The engine and J-spec twins come from a 1995 Aristo (JZS147), the same 2JZ-GTE; the JDM RZ-S automatic trim is used for its engine figures and gearbox. 35 °C on the day; pressure not shown, so the model runs at the SAE reference."
+    },
+    {
+      "id": "dsport-supra-gt3582r-22psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "1994 Supra on the factory longblock with a Garrett GT3582R at 22 psi, 110-octane race fuel",
+      "trim": "usdm-turbo-6mt-1994",
+      "who": "DSPORT magazine (car tuned by Titan Motorsports)",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 22,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+                "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+              },
+              {
+                "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+                "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+              }
+            ]
+          }
+        },
+        "turbo": {
+          "model": {
+            "value": "Garrett GT3582R (GT35R frame, 0.63 A/R turbine housing)",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+                "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+              },
+              {
+                "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+                "accessed": "2026-09-30",
+                "title": "Garrett Motion: GT3582R Turbocharger (performance catalogue page and compressor map)",
+                "note": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 ... [compressor map, read by eye: choke about 69-70 lb/min at the 130,000 rpm line near pressure ratio 2.8; peak efficiency island 79 %]"
+              }
+            ]
+          },
+          "count": 1,
+          "compressorMaxFlow": {
+            "value": 69.5,
+            "unit": "lb/min",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+                "accessed": "2026-09-30",
+                "title": "Garrett Motion: GT3582R Turbocharger (performance catalogue page and compressor map)",
+                "note": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 ... [compressor map, read by eye: choke about 69-70 lb/min at the 130,000 rpm line near pressure ratio 2.8; peak efficiency island 79 %]"
+              }
+            ],
+            "note": "Read by eye off Garrett's map where the top speed line meets choke; the map's reference inlet conditions weren't read, so the model takes the flow as given."
+          },
+          "peakEfficiency": {
+            "value": 0.79,
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+                "accessed": "2026-09-30",
+                "title": "Garrett Motion: GT3582R Turbocharger (performance catalogue page and compressor map)",
+                "note": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 ... [compressor map, read by eye: choke about 69-70 lb/min at the 130,000 rpm line near pressure ratio 2.8; peak efficiency island 79 %]"
+              }
+            ]
+          },
+          "maxPressureRatio": {
+            "value": 2.8,
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+                "accessed": "2026-09-30",
+                "title": "Garrett Motion: GT3582R Turbocharger (performance catalogue page and compressor map)",
+                "note": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 ... [compressor map, read by eye: choke about 69-70 lb/min at the 130,000 rpm line near pressure ratio 2.8; peak efficiency island 79 %]"
+              }
+            ],
+            "note": "Where the top speed line reaches choke. The surge line tops out higher (about 4.0) at much less flow; 2.8 keeps the map honest at the flow this build runs."
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ],
+          "method": "The spec sheet's intercooler line wasn't captured by the research; a 560 whp single-turbo Supra runs a front-mount, and the factory core sits in the front bumper, so aftermarket is assumed."
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ],
+          "method": "A single-turbo conversion replaces the factory turbos' downpipe; the spec sheet's exhaust line wasn't captured, so a full turbo-back is assumed."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ],
+          "method": "A single-turbo conversion replaces the factory twin-turbo intake; an open filter is assumed."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ],
+          "note": "AEM EMS, tuned by Titan Motorsports."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 110,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+                "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+              }
+            ],
+            "method": "'110-octane' race fuel, brand not stated. Modelled with gasoline's properties at 110 RON: at 22 psi on this fuel the tune reaches best timing whatever the exact grade."
+          }
+        },
+        "injectors": {
+          "value": "unstated",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ],
+          "method": "The injectors aren't in the captured text; a 560 whp 2JZ can't run the factory 440 cc units, so bigger ones are assumed and fuel doesn't limit the model."
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            },
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+              "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+            }
+          ],
+          "note": "'Leaving the longblock in factory form'; factory 8.5:1 compression."
+        },
+        "described": "Factory 2JZ-GTE longblock (8.5:1), Garrett GT3582R single turbo on a 0.63 A/R housing, AEM EMS tuned by Titan Motorsports, 22 psi on 110-octane race fuel, factory 6-speed."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 560,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+              "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+            },
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+              "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 470,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+              "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+              "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+            }
+          ]
+        },
+        "correction": {
+          "value": "not-stated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+              "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\", spec sheet (page 3)",
+          "note": "Peak Boost: 22 psi / Fuel: 110-octane / ... Peak Horsepower (@ RPM): 560 whp @ 5,200 RPM / Peak Torque (@ RPM): 470 lb-ft @ 4,800 RPM / Dyno Type: Dynojet / Pistons/Compression Ratio: Factory 8.5:1 compression / ... Turbocharger: Garrett GT3582R / Frame: GT35R / Compressor Wheel Specs: 61.4mm lesser, 82mm greater / Turbine Wheel Specs: 68mm / Turbine Housing: .63 A/R"
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT, \"560 WHP Track Carving Single Turbo Toyota Supra\" (web 18 Oct 2015), page 1",
+          "note": "Leaving the longblock in factory form, it was time to find a turbocharger better suited ... a Garrett GT3582R ball-bearing turbocharger. ... With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi ... Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque."
+        },
+        {
+          "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+          "accessed": "2026-09-30",
+          "title": "Garrett Motion: GT3582R Turbocharger (performance catalogue page and compressor map)",
+          "note": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 ... [compressor map, read by eye: choke about 69-70 lb/min at the 130,000 rpm line near pressure ratio 2.8; peak efficiency island 79 %]"
+        }
+      ],
+      "notes": "The spec sheet's '560 whp @ 5,200 RPM' can't sit with '470 lb-ft @ 4,800 RPM' (560 hp at 5,200 rpm needs about 565 lb-ft), so its rpm figures aren't used; the peak power is the headline figure. Correction not stated: the Dynojet default (SAE J1349) is assumed.",
+      "excluded": {
+        "reason": "DSPORT's spec sheet contradicts itself: 560 whp at 5,200 rpm needs about 566 lb-ft, above its stated 470 lb-ft peak (with 470 lb-ft, 560 hp needs at least 6,260 rpm). The research flagged this before the model ran; the build was kept at first and taken out under the inconsistent-sheet rule once the model was settled, where it lands 10.4 % low with its power still rising at the factory redline.",
+        "decided": "2026-09-30"
+      }
+    }
+  ]
+}

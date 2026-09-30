@@ -1,0 +1,888 @@
+{
+  "$comment": "Known real builds of the S15 Spec-R (BUILD_PROMPT 6.5), all on the factory T28 ball-bearing turbo. Chosen before running the model (docs/research-notes/part2b.md). Excluded: DSPORT's DTS AWD dyno runs (no known reading factor for that dyno), cam builds (HKS STEP1, Tomei), builds on a tubular exhaust manifold (the model has no turbine-manifold input), a 22 psi car whose turbo isn't named, and a Dynapack figure the owner only reported in text. Research: docs/research/part2b/known-builds-nissan-silvia-s15.json.",
+  "car": "nissan-silvia-s15",
+  "builds": [
+    {
+      "id": "dsport-s15-stock-creep",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Stock S15 with boost creeping to 12 psi, 91 octane",
+      "trim": "jdm-spec-r-6mt",
+      "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 12,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+                "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+              }
+            ],
+            "note": "The stock 9 psi crept to about 12 psi on this run, by DSPORT's own reading of the boost log."
+          }
+        },
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+                "note": "the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "DSPORT ran California 91-octane pump fuel. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "described": "Completely stock 2001 JDM Silvia Spec-R, factory T28 turbo and side-mount intercooler; boost crept from the stock 9 psi to about 12 psi."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 206.47,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 191.78,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "dynoModel": "Dynojet 248C",
+        "correction": {
+          "value": "not-stated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ],
+          "note": "The article gives no correction and no sheet was published."
+        }
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+          "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+          "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1"
+        }
+      ],
+      "notes": "Correction not stated: the Dynojet default (SAE J1349) is assumed. The factory ECU was calibrated on Japanese premium (about 99 RON), so it retards on 91 AKI."
+    },
+    {
+      "id": "dsport-s15-12psi-power-fc-turboback",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "S15 at 12 psi on the stock turbo, Power FC, downpipe and cat-back, 91 octane",
+      "trim": "jdm-spec-r-6mt",
+      "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 12,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+                "note": "After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range"
+              }
+            ]
+          }
+        },
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+              "note": "the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust"
+            }
+          ],
+          "note": "Tanabe 80 mm downpipe and cat-back, with the factory catalyst still fitted for this state."
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+              "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+            }
+          ]
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+              "note": "We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density."
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+                "note": "the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "DSPORT ran California 91-octane pump fuel. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "injectors": {
+          "value": 850,
+          "unit": "cc/min",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+              "note": "Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors"
+            }
+          ]
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1"
+            }
+          ]
+        },
+        "described": "A'PEXi Power FC D-Jetro (speed density) and Boost Up kit tuned at 12 psi, Power Enterprise 850 cc injectors, A'PEXi N1 pump, Tanabe Medalion Concept G Blue downpipe and cat-back with the stock catalyst, stock side-mount intercooler and intake."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 230.34,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+              "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 230.35,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+              "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+              "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+            }
+          ]
+        },
+        "dynoModel": "Dynojet 248C",
+        "correction": {
+          "value": "not-stated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+              "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 3 (The Bottom Line)",
+          "note": "We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, Test & Tune: 2001 Nissan Silvia S15, page 2 (The Dyno)",
+          "note": "The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1"
+        }
+      ],
+      "notes": "The boost on the Dynojet day isn't printed; it is the 12 psi the car was tuned at the same week."
+    },
+    {
+      "id": "dsport-s15-18psi-fmic",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "S15 at 18 psi on the stock turbo, front-mount cooler, intake and catless turbo-back, 91 octane",
+      "trim": "jdm-spec-r-6mt",
+      "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 18,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+                "note": "Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar). ... removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit. ... The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system."
+              }
+            ]
+          },
+          "fullBoostRpm": {
+            "value": 4000,
+            "unit": "rpm",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+                "note": "the maximum torque kicks in at just past 4,000 RPM"
+              }
+            ],
+            "note": "Where DSPORT says full torque arrives."
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+              "note": "The Blitz LM intercooler kit for the S15 (p/n:12333) comes complete with aluminum piping"
+            }
+          ]
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+              "note": "Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar). ... removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit. ... The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system."
+            }
+          ],
+          "note": "Tanabe 80 mm turbo-back with the cat-delete pipe."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+              "note": "Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar). ... removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit. ... The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system."
+            }
+          ],
+          "note": "A'PEXi Super Suction kit."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+              "note": "Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar). ... removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit. ... The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system."
+            }
+          ],
+          "note": "Power FC D-Jetro, retuned at 18 psi."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+                "accessed": "2026-09-30",
+                "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+                "note": "the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "DSPORT ran California 91-octane pump fuel. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "injectors": {
+          "value": 850,
+          "unit": "cc/min",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #57, \"Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine\", page 1",
+              "note": "Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors"
+            }
+          ]
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+              "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+            }
+          ]
+        },
+        "described": "As the 12 psi build plus a Blitz LM front-mount intercooler with Blitz hot pipe and blow-off valve, A'PEXi Super Suction intake, the Tanabe cat-delete pipe (no catalyst), 18 psi."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 262.17,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+              "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 271.56,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+              "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+              "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+            }
+          ]
+        },
+        "dynoModel": "Dynojet 248C",
+        "correction": {
+          "value": "not-stated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+              "accessed": "2026-09-30",
+              "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+              "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58, Test & Tune: 2001 Nissan Silvia S15, page 3",
+          "note": "Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34. ... generating 271.56 lb-ft of peak torque at 4,150 RPM."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58, \"Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP\", page 1",
+          "note": "Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar). ... removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit. ... The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system."
+        }
+      ],
+      "notes": "DSPORT's DTS dyno read this state at 268.9 whp SAE J1349 the same week, 2.6 % above the Dynojet."
+    },
+    {
+      "id": "apex-s15-17psi-98-mainline",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "S15 at 17 psi on the stock turbo, Power FC, front-mount cooler and full 3-inch exhaust, 98 RON",
+      "trim": "jdm-spec-r-6mt",
+      "who": "Tuned by Apex (Melbourne)",
+      "date": "2026-09-22",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 17,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+                "note": "193KW @17psi, Power fc, nismo injectors, full exhaust, FMIC, manual boost controller. ... Engine SR20 / Fuel 98 RON / ECU Apexi Power FC"
+              }
+            ],
+            "note": "Read off the sheet's MAP trace: 17-17.5 psi near 4,600-5,000 rpm."
+          },
+          "atPeakPower": {
+            "value": 16,
+            "unit": "psi",
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              }
+            ],
+            "method": "Read off the MAP trace at 5,842 rpm (small plot, about ±1 psi)."
+          },
+          "fullBoostRpm": {
+            "value": 4050,
+            "unit": "rpm",
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              }
+            ],
+            "method": "Read off the MAP trace: about 17 psi from 4,000-4,100 rpm."
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ],
+          "note": "'FULL 3\"' on the stock manifold."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ],
+          "note": "Cold-air intake."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+              "note": "193KW @17psi, Power fc, nismo injectors, full exhaust, FMIC, manual boost controller. ... Engine SR20 / Fuel 98 RON / ECU Apexi Power FC"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 98,
+            "confidence": "verified",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              },
+              {
+                "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+                "note": "Fuel 98 RON"
+              }
+            ]
+          }
+        },
+        "injectors": {
+          "value": "unstated",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+              "note": "193KW @17psi, Power fc, nismo injectors, full exhaust, FMIC, manual boost controller. ... Engine SR20 / Fuel 98 RON / ECU Apexi Power FC"
+            }
+          ],
+          "note": "Nismo injectors, size not given."
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "described": "Stock T28, head, cams and manifold; A'PEXi Power FC with a manual boost controller, Nismo injectors, fuel system upgrade, front-mount intercooler, cold-air intake, full 3-inch exhaust, ULP98."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 192.9,
+          "unit": "kW",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 5842,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 363.8,
+          "unit": "Nm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "mainline",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "dynoModel": "Mainline DynoLog (AWD roller)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        },
+        "conditions": {
+          "temperature": {
+            "value": 17.7,
+            "unit": "°C",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              }
+            ]
+          },
+          "pressure": {
+            "value": 1010,
+            "unit": "mbar",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              }
+            ]
+          },
+          "relativeHumidity": {
+            "value": 0.46,
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+                "accessed": "2026-09-30",
+                "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+                "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+              }
+            ]
+          }
+        },
+        "gear": {
+          "value": 5,
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+              "accessed": "2026-09-30",
+              "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+              "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Mainline DynoLog sheet for this car",
+          "note": "Mainline DynoLog Dyno Report ... Test Date: 22-Sep-2026 15:57 ... Vehicle: NISSAN SILVIA S15 ... Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%) ... Heads: STOCK / Camshaft: STOCK / Exhaust: FULL 3\" / Manifolds: STOCK / Induction: FMIC + CAI ... Fuel: ULP98 ... Gear: 5 ... Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+          "note": "193KW @17psi, Power fc, nismo injectors, full exhaust, FMIC, manual boost controller. ... Engine SR20 / Fuel 98 RON / ECU Apexi Power FC"
+        }
+      ],
+      "notes": "The shop page's 'Hubs · SAE J1349' line is a site-wide template; the sheet itself prints SAE J607 on a Mainline roller dyno. The pull ends just under 6,000 rpm."
+    }
+  ]
+}

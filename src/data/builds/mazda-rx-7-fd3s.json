@@ -1,0 +1,742 @@
+{
+  "$comment": "Known real builds of the FD3S RX-7 (BUILD_PROMPT 6.5), all on stock-port 13B-REW engines. Chosen before running the model (docs/research-notes/part2b.md). Excluded: ported engines (street port, bridge port), shop-rebuilt engines whose porting isn't stated, a 402 rwhp EFR 8374 sheet with no intercooler or rpm on it, and E85 cars with fuel-pump limits. Mustang sheets carry an estimated reading factor (standards/dynos.json); the Dynojet sheet is the firmer check. Research: docs/research/part2b/known-builds-mazda-rx-7-fd3s.json.",
+  "car": "mazda-rx-7-fd3s",
+  "builds": [
+    {
+      "id": "turblown-fd-efr7670-91",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Stock-port FD on a BorgWarner EFR 7670 single turbo, 14 psi falling to 9, 91 octane",
+      "trim": "usdm-1994-base-5mt",
+      "who": "Turblown Engineering",
+      "date": "2015-11-20",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 14,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "http://www.ausrotary.com/download/file.php?id=50246",
+                "accessed": "2026-09-30",
+                "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+                "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+              }
+            ],
+            "note": "At peak torque."
+          },
+          "atPeakPower": {
+            "value": 9,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "http://www.ausrotary.com/download/file.php?id=50246",
+                "accessed": "2026-09-30",
+                "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+                "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+              }
+            ]
+          },
+          "fullBoostRpm": {
+            "value": 3500,
+            "unit": "rpm",
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "http://www.ausrotary.com/download/file.php?id=50246",
+                "accessed": "2026-09-30",
+                "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+                "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+              }
+            ],
+            "method": "Where the sheet's torque peaks (about 3,500 rpm), which the annotation ties to the 14 psi peak."
+          }
+        },
+        "turbo": {
+          "model": {
+            "value": "BorgWarner EFR 7670 (T4 0.92 A/R internal wastegate, Turblown kit)",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+                "accessed": "2026-09-30",
+                "title": "TurboSource blog (Turblown), \"Turblown BorgWarner EFR IWG Rx7 Single Turbo Kit\" (12 Oct 2015)",
+                "note": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel . This is the smallest EFR that will work on a 2 rotor"
+              },
+              {
+                "url": "http://www.ausrotary.com/download/file.php?id=50246",
+                "accessed": "2026-09-30",
+                "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+                "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+              }
+            ]
+          },
+          "count": 1,
+          "compressorMaxFlow": {
+            "value": 64,
+            "unit": "lb/min",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+                "accessed": "2026-09-30",
+                "title": "TurboSource blog (Turblown), \"Turblown BorgWarner EFR IWG Rx7 Single Turbo Kit\" (12 Oct 2015)",
+                "note": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel . This is the smallest EFR that will work on a 2 rotor"
+              }
+            ],
+            "note": "The kit seller's figure; BorgWarner's own map wasn't reached, so the flow's reference conditions aren't known and the model takes it as given. Peak efficiency and top pressure ratio are the model's defaults."
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ],
+          "note": "PFS medium stock-mount intercooler."
+        },
+        "exhaust": {
+          "value": "full",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ],
+          "note": "3-inch downpipe with the stock catalyst, PFS cat-back."
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ],
+          "method": "The sheet doesn't list the intake; a single-turbo kit replaces the factory twin-turbo inlet pipework, so an open filter is assumed."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ],
+          "note": "Adaptronic standalone."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "http://www.ausrotary.com/download/file.php?id=50246",
+                "accessed": "2026-09-30",
+                "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+                "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "The sheet: '91 Octane Pump Gas'. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/viewtopic.php?t=246747",
+              "accessed": "2026-09-30",
+              "title": "AusRotary forum: \"EFR 7670 IWG Dyno Results\" (Turblown, 21 Nov 2015)",
+              "note": "I have attached a dyno sheet of a pump gas, fresh stock port, stock coil/plug, medium stock mount intercooler, stock cat 7670 iwg dyno from today."
+            }
+          ],
+          "note": "A rotary has no camshafts; 'fresh stock port' engine."
+        },
+        "described": "Fresh stock-port 13B-REW, Turblown BorgWarner EFR 7670 internal-wastegate kit, 3-inch downpipe with the stock catalyst, PFS cat-back, PFS medium stock-mount intercooler, Adaptronic, OEM coils and plugs, 91 octane."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 294.18,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 6381,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ],
+          "note": "The sheet's cursor at 293.95 hp; the peak itself is 294.18 hp."
+        },
+        "wheelTorque": {
+          "value": 287.82,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.ausrotary.com/download/file.php?id=50246",
+              "accessed": "2026-09-30",
+              "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+              "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "http://www.ausrotary.com/download/file.php?id=50246",
+          "accessed": "2026-09-30",
+          "title": "Turblown Dynojet sheet \"EFR 7670 IWG pump gas dyno\" (AusRotary attachment)",
+          "note": "DYNOJET RESEARCH ... CF: STD ... Date 11/20/2015 ... _011.drf Max Power = 294.18 Max Torque = 287.82 ... Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp."
+        },
+        {
+          "url": "http://www.ausrotary.com/viewtopic.php?t=246747",
+          "accessed": "2026-09-30",
+          "title": "AusRotary forum: \"EFR 7670 IWG Dyno Results\" (Turblown, 21 Nov 2015)",
+          "note": "I have attached a dyno sheet of a pump gas, fresh stock port, stock coil/plug, medium stock mount intercooler, stock cat 7670 iwg dyno from today."
+        },
+        {
+          "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), \"Turblown BorgWarner EFR IWG Rx7 Single Turbo Kit\" (12 Oct 2015)",
+          "note": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel . This is the smallest EFR that will work on a 2 rotor"
+        }
+      ],
+      "notes": "Year from the run-file folder ('1994 7670 FD'); market and gearbox not stated (US 5MT trim assumed). Weather not visible on the sheet photo."
+    },
+    {
+      "id": "banzai-fd-twins-12p5psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "1995 FD on the factory twins at 12.5 psi, Power FC, upgraded stock-mount cooler",
+      "trim": "usdm-1995-base-5mt",
+      "who": "Banzai Racing, at Greer Performance (Fort Wayne, Indiana)",
+      "date": "2013-09-27",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 12.5,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+                "accessed": "2026-09-30",
+                "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+                "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+              }
+            ]
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "'Upgraded SMIC': a bigger core in the stock place, make not stated."
+        },
+        "exhaust": {
+          "value": "cat-back",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "method": "Banzai lists an 'APEXi Exhaust' without the model; A'PEXi's FD exhausts are cat-backs, and no downpipe or midpipe is listed, so a cat-back is assumed."
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "method": "No intake is listed on the car's pages, so the factory intake is assumed."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "A'PEXi Power FC, dyno-tuned by Banzai Racing."
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "A rotary has no camshafts; no porting is listed."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+                "accessed": "2026-09-30",
+                "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+                "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "The fuel isn't stated: the lowest US premium is assumed. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "secondaryInjectors": {
+          "value": 1300,
+          "unit": "cc/min",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+              "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+            },
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ]
+        },
+        "described": "Factory sequential twins with the wastegate ported, A'PEXi Power FC, 550 cc primary and 1300 cc secondary injectors, upgraded stock-mount intercooler, A'PEXi exhaust, HKS Twin Power, Koyo radiator; 12.5 psi."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 290.7,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+              "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+            }
+          ]
+        },
+        "powerRpm": {
+          "value": 7142,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+              "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 240.9,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+              "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "mustang",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+              "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+            }
+          ]
+        },
+        "dynoModel": "Mustang (PowerDyne)",
+        "correction": {
+          "value": "sae-j1349",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+              "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+            },
+            {
+              "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+              "accessed": "2026-09-30",
+              "title": "Mustang Dynamometer, Power Dyne PC Dynamometer Operator Manual v2017-05-22",
+              "note": "Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option. ... WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions."
+            }
+          ],
+          "method": "The printout says 'with WCF' (Mustang's weather correction) without the standard; Mustang's manual names SAE J1349 (Jun90) as its correction."
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, low-boost run (Banzai Racing)",
+          "note": "Mustang Dynamometer HorsePower Curve Test Results ... Tested By Greer Performance ... 1995 mazda rx7 ... Time Tested 9/27/2013 10:54:58 AM ... Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7 ... Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+          "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+        }
+      ],
+      "notes": "106,000 miles, original engine as far as the pages say. Low-boost half of a same-day pair on the same dyno."
+    },
+    {
+      "id": "banzai-fd-twins-14p5psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
+      "title": "Same FD at 14.5 psi, same day and dyno",
+      "trim": "usdm-1995-base-5mt",
+      "who": "Banzai Racing, at Greer Performance (Fort Wayne, Indiana)",
+      "date": "2013-09-27",
+      "modifications": {
+        "boost": {
+          "peak": {
+            "value": 14.5,
+            "unit": "psi",
+            "confidence": "single-source",
+            "sources": [
+              {
+                "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+                "accessed": "2026-09-30",
+                "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+                "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+              }
+            ],
+            "note": "Banzai's figure; the logged channel shows 15.28 psi at most and 14.23 psi on average over the pull."
+          }
+        },
+        "intercooler": {
+          "value": "aftermarket",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "'Upgraded SMIC': a bigger core in the stock place, make not stated."
+        },
+        "exhaust": {
+          "value": "cat-back",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "method": "Banzai lists an 'APEXi Exhaust' without the model; A'PEXi's FD exhausts are cat-backs, and no downpipe or midpipe is listed, so a cat-back is assumed."
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "method": "No intake is listed on the car's pages, so the factory intake is assumed."
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "A'PEXi Power FC, dyno-tuned by Banzai Racing."
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ],
+          "note": "A rotary has no camshafts; no porting is listed."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+                "accessed": "2026-09-30",
+                "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+                "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "The fuel isn't stated: the lowest US premium is assumed. US pumps post AKI, (RON + MON)/2. ORNL pairs 93 AKI with 97 RON and 88 AKI with 91 RON; as in standards/fuels.json, 91 AKI is taken as 95 RON and 93 AKI as 97 RON."
+          }
+        },
+        "secondaryInjectors": {
+          "value": 1300,
+          "unit": "cc/min",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+              "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+            },
+            {
+              "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+              "accessed": "2026-09-30",
+              "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+              "note": "'95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+            }
+          ]
+        },
+        "described": "As the 12.5 psi run, turned up to 14.5 psi."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 309.7,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+              "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+            }
+          ],
+          "note": "306.5 hp uncorrected on the graph of the same run."
+        },
+        "powerRpm": {
+          "value": 7239,
+          "unit": "rpm",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+              "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 262.2,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+              "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "mustang",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+              "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+            }
+          ]
+        },
+        "dynoModel": "Mustang (PowerDyne)",
+        "correction": {
+          "value": "sae-j1349",
+          "confidence": "estimated",
+          "sources": [
+            {
+              "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+              "accessed": "2026-09-30",
+              "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+              "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+            },
+            {
+              "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+              "accessed": "2026-09-30",
+              "title": "Mustang Dynamometer, Power Dyne PC Dynamometer Operator Manual v2017-05-22",
+              "note": "Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option. ... WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions."
+            }
+          ],
+          "method": "'with WCF' on the printout; Mustang's manual names SAE J1349 (Jun90) as its correction."
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, high-boost run (Banzai Racing)",
+          "note": "Time Tested 9/27/2013 11:02:40 AM ... Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7 ... Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/paulK_dyno_09-27-13.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer Test Report graph of the high-boost run (Banzai Racing)",
+          "note": "Max: 'Eng Torque T (Ft-Lbs) 261.244', 'Eng Power T (HP) 306.532', 'AFR (Ratio) 11.534', '-15 to 45 (PSI) 15.280' ... Avg: ... 14.228 [psi]"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: customer page for a 1995 RX-7 (stage 1 work and dyno sheets)",
+          "note": "Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+        }
+      ],
+      "notes": "Logged air-fuel ratio 10.3-11.5 (about lambda 0.70-0.78)."
+    }
+  ]
+}

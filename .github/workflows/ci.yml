@@ -21,7 +21,7 @@ env:
 
 jobs:
   checks:
-    name: Lint, typecheck, unit + calibration tests, data validation
+    name: Lint, typecheck, unit + calibration tests, data validation, performance budget
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -33,9 +33,12 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      # Includes tests/calibration once Phase 2 adds it: calibration failures fail CI.
+      # Includes tests/calibration: stock (±3 %) and known-build (±10 %) failures fail CI.
       - run: npm test
       - run: npm run validate-data
+      # Performance budget: what a first visit downloads, against perf-budget.json.
+      - run: npm run build
+      - run: npm run budget
 
   e2e:
     name: Build, smoke tests, screenshots

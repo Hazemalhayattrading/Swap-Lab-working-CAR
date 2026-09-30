@@ -15,11 +15,14 @@ import type { OperatingPoint } from './engine/model';
  *   when exceeded but don't bend the curve: the engine still makes the power,
  *   the part just isn't rated for it. Most stock parts have no rating on file
  *   yet (the Phase 3 parts catalogue adds them), and the check says so.
- * - Cooling capacity comes with the thermal model (part 2b).
+ * - Octane: the spark retard knock forces, and where a factory ECU has to
+ *   hold the boost down because the fuel can't take more (engine/model.ts).
+ * - Cooling is the 3-minute drift session (thermal.ts); simulate.ts fills it in.
  */
 export type LimitId =
   | 'injector-duty'
   | 'fuel-pump'
+  | 'fuel-octane'
   | 'compressor-surge'
   | 'compressor-choke'
   | 'turbo-overspeed'
@@ -29,7 +32,12 @@ export type LimitId =
   | 'diff-axle'
   | 'cooling';
 
-export type LimitStatus = 'ok' | 'bottleneck' | 'over-rating' | 'no-data' | 'not-modelled';
+/**
+ * `estimated`: modelled, but on generic figures rather than the car's own (the
+ * heat soak while no radiator data is on file), so neither OK nor over.
+ */
+export type LimitStatus =
+  'ok' | 'bottleneck' | 'over-rating' | 'estimated' | 'no-data' | 'not-modelled';
 
 export interface LimitCheck {
   id: LimitId;
@@ -159,6 +167,26 @@ function compressorChecks(points: readonly OperatingPoint[]): LimitCheck[] {
   ];
 }
 
+function octaneCheck(points: readonly OperatingPoint[]): LimitCheck {
+  const held = points.filter((p) => p.turbo?.limit === 'octane');
+  const worst = points.reduce<OperatingPoint | undefined>(
+    (a, p) => (!a || p.sparkRetard > a.sparkRetard ? p : a),
+    undefined,
+  );
+  const range = rangeOf(held);
+  const retard = worst ? `${String(Math.round(worst.sparkRetard))}°` : '0°';
+  return {
+    id: 'fuel-octane',
+    name: 'Fuel octane',
+    status: held.length > 0 ? 'bottleneck' : 'ok',
+    ...(range ? { rpm: range } : {}),
+    detail:
+      held.length > 0 && range
+        ? `On this fuel the factory ECU runs out of knock retard and holds the boost down from ${num(range[0])} to ${rpmText(range[1])}.`
+        : `Spark timing sits up to ${retard} behind best-torque timing${worst ? ` (at ${rpmText(worst.rpm)})` : ''} to stay out of knock.`,
+  };
+}
+
 function describeLimit(l: SimReportedLimit): string {
   const unit =
     l.quantity === 'rpm'
@@ -221,6 +249,7 @@ export function applyLimits(
       status: 'no-data',
       detail: 'No stock fuel-pump flow is on file yet; pump ratings come with the parts catalogue.',
     },
+    octaneCheck(points),
     ...compressorChecks(points),
     internalsCheck(limited, opts.engine, opts.drivetrain),
     {
@@ -246,8 +275,7 @@ export function applyLimits(
       id: 'cooling',
       name: 'Cooling',
       status: 'not-modelled',
-      detail:
-        'Radiator, oil and intercooler capacity against the heat load come with the thermal model (part 2b).',
+      detail: 'The heat-soak test runs with the user’s conditions (simulate.ts).',
     },
   ];
   return { ...limited, checks };

@@ -1,12 +1,25 @@
 import catalogue from 'virtual:swaplab/catalogue';
+import { KNOWN_BUILD_TOLERANCE, simulateKnownBuild } from '../sim/known-builds';
 import { gearboxLabel, toReport } from '../sim/report';
-import { AMBIENT_PRESETS_C, DEFAULT_CONDITIONS, FitCache, simulateTrim } from '../sim/simulate';
-import type { CatalogueIndex, WorkerRequest, WorkerResponse } from './sim-protocol';
+import {
+  AMBIENT_PRESETS_C,
+  ELEVATION_RANGE_M,
+  FitCache,
+  defaultConditions,
+  simulateTrim,
+} from '../sim/simulate';
+import type {
+  BuildCountExceptionRow,
+  CatalogueIndex,
+  KnownBuildRow,
+  WorkerRequest,
+  WorkerResponse,
+} from './sim-protocol';
 
 /**
  * The simulation's Web Worker (CLAUDE.md rule 8): the 3D view never waits on
  * the numbers. Stock fits are cached per engine variant, so changing the
- * ambient or fuel only reruns the sweep.
+ * ambient, the altitude or the fuel only reruns the sweep.
  */
 
 interface WorkerScope {
@@ -24,10 +37,13 @@ function gearboxOf(t: Parameters<typeof gearboxLabel>[0] | undefined): string {
   return t ? gearboxLabel(t) : 'gearbox not on file';
 }
 
+const carLabel = (car: (typeof catalogue.cars)[number]) =>
+  `${car.make} ${car.model} (${car.chassis})`;
+
 const index: CatalogueIndex = {
   cars: catalogue.cars.map((car) => ({
     id: car.id,
-    label: `${car.make} ${car.model} (${car.chassis})`,
+    label: carLabel(car),
     trims: car.trims.map((t) => ({
       id: t.id,
       label: t.name,
@@ -36,22 +52,78 @@ const index: CatalogueIndex = {
       gearbox: gearboxOf(car.transmissions.find((g) => g.id === t.transmission)),
     })),
   })),
-  pumpFuels: catalogue.pumpFuels,
+  fuels: catalogue.fuels,
+  locations: catalogue.locations,
+  atmosphere: catalogue.atmosphere,
+  elevationRange: ELEVATION_RANGE_M,
   standards: catalogue.standards,
   assumptions: catalogue.assumptions,
-  defaults: DEFAULT_CONDITIONS,
+  defaults: defaultConditions(catalogue),
   ambientPresets: AMBIENT_PRESETS_C,
 };
+
+let knownBuilds: KnownBuildRow[] | undefined;
+
+function knownBuildRows(): KnownBuildRow[] {
+  knownBuilds ??= catalogue.knownBuilds.map((build) => {
+    const r = simulateKnownBuild(catalogue, build, cache);
+    const car = catalogue.cars.find((c) => c.id === build.carId);
+    const dyno = catalogue.dynos.find((d) => d.id === build.result.dyno);
+    const correction = catalogue.corrections.find((c) => c.id === build.result.correction);
+    return {
+      id: build.id,
+      car: car ? carLabel(car) : build.carId,
+      title: build.title,
+      who: build.who,
+      ...(build.date ? { date: build.date } : {}),
+      dyno: dyno?.name ?? build.result.dyno,
+      correction: correction?.name ?? build.result.correction,
+      correctionAssumed: build.result.correctionAssumed,
+      measured: r.measured,
+      predicted: r.predicted,
+      error: r.error,
+      pass: r.pass,
+      source: build.source,
+      ...(build.excluded ? { excluded: build.excluded.reason } : {}),
+      sample: build.scoring.sample,
+      ...(build.scoring.sample === 'holdout' ? { firstError: build.scoring.firstError } : {}),
+    };
+  });
+  return knownBuilds;
+}
+
+function exceptionRows(): BuildCountExceptionRow[] {
+  return catalogue.buildCountExceptions.map((e) => {
+    const car = catalogue.cars.find((c) => c.id === e.carId);
+    return {
+      car: car ? carLabel(car) : e.carId,
+      minBuilds: e.minBuilds,
+      badge: e.badge,
+      reason: e.reason,
+      decided: e.decided,
+    };
+  });
+}
 
 scope.onmessage = (event) => {
   const request = event.data;
   const started = performance.now();
   try {
+    if (request.type === 'known-builds') {
+      scope.postMessage({
+        type: 'known-builds',
+        id: request.id,
+        builds: knownBuildRows(),
+        exceptions: exceptionRows(),
+        tolerance: KNOWN_BUILD_TOLERANCE,
+      });
+      return;
+    }
     const sim = simulateTrim(catalogue, request.carId, request.trimId, request.conditions, cache);
     scope.postMessage({
       type: 'result',
       id: request.id,
-      report: toReport(sim, request.conditions),
+      report: toReport(sim, request.conditions, catalogue),
       ms: performance.now() - started,
     });
   } catch (error) {
