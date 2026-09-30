@@ -6,7 +6,7 @@ One phase per session (CLAUDE.md rule 1). The phase plan is in BUILD_PROMPT.md s
 | --- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | 0   | Scaffold, CI, Pages deploy, decisions, asset shopping list              | Done (merged)                                                                                                                      |
 | 1   | Data layer: Zod schemas, 5 cars (every trim), 12 engines, with sources  | **Done** (parts 1, 2, 3a and 3b): all 5 cars, all 12 launch-swap engines (+ 4 stock-only), swap hardware for the 5 LS launch swaps |
-| 2   | Simulation engine, dyno chart, calibration tests                        | Not started                                                                                                                        |
+| 2   | Simulation engine, dyno chart, calibration tests                        | **Part 2a done**: simulation engine, data loader, stock calibration (296 of 296 trims), dyno sheet. Part 2b next                   |
 | 3   | Parts catalogue, compatibility engine, cost, best-combo solver          | Not started                                                                                                                        |
 | 4   | Asset pipeline, showroom with real or placeholder models, part swapping | Not started                                                                                                                        |
 | 5   | Engine bay and cutaway animation                                        | Not started                                                                                                                        |
@@ -476,10 +476,71 @@ The seed list names the swap engines without figures: "LS3 6.2 V8", "LS1 5.7 V8"
 | `engines/2jz-gte.json`, `2jz-ge.json`, `sr20de.json` | 0         |                                                                                                                                                                                                                                                                       |
 | `swaps/*.json` (5 files)                             | 0         | every part value is single-source or verified                                                                                                                                                                                                                         |
 
-## Next: Phase 2
+## Phase 2, part 2a: simulation engine, stock calibration, dyno sheet (2026-09-30)
 
-- Phase 2 (simulation, dyno chart, calibration tests) should add a `tsconfig` for `src/sim/` with no DOM library, alongside the ESLint guard, and normalise the weight standards. Its airflow model and the Phase 6 sound synthesis must use `src/data/displacement.ts` for rotaries. A Phase 2 loader should strip provenance for the client bundle (the data files are about 7.8 MB with their sources).
-- Phase 3 (parts, compatibility, cost) should:
+The owner split Phase 2: part 2a is the simulation engine, the data loader, the stock calibration and the dyno sheet; part 2b is the known-build calibration, the thermal model and the fuel model.
+
+### What's built
+
+- **Simulation engine (`src/sim/`).** Pure TypeScript with no DOM or Three.js: ESLint blocks the imports at every folder depth, and `tsconfig.sim.json` compiles it without the DOM library. It runs in a Web Worker (`src/app/sim-worker.ts`), so the 3D view never waits for it.
+  - **Airflow first:** for every 100 rpm from idle to redline, the air mass per revolution is the swept volume per revolution times volumetric efficiency (VE) times dry-air density. Rotaries use `src/data/displacement.ts`: one intake per rotor per eccentric-shaft turn, so the 13B takes 1.308 litres per turn. Fuel is added at the full-throttle lambda (0.87 NA, 0.80 turbo, 0.72 rotary turbo). Torque comes from the fuel energy times an efficiency set by compression ratio and lambda, less friction (Blair's piston FMEP; a separate rotary fit), pumping and back pressure.
+  - **Knock:** hotter charge air, higher manifold pressure and lower octane move ignition timing away from the factory calibration (Russ, SAE 960497), and retarded timing costs torque (MIT and GM data). The model never adds timing beyond the stock map.
+  - **Turbos:** a simplified compressor map (surge and choke lines, efficiency islands, a speed limit), turbine flow and power, a wastegate, spool, and a pull-back when the compressor reaches surge, choke or overspeed. Single, parallel and sequential twins (one turbo below the changeover rpm), with intercooler effectiveness and pressure drop.
+  - **Superchargers:** positive-displacement (Roots and twin-screw, with leakage and bypass) and centrifugal (head rising with tip speed squared, on a map), with the drive power subtracted. Unit-tested; no stock car in the roster has one, so they get used when Phase 3 adds supercharger parts.
+  - **Limits, each a named warning on the sheet:** injector duty over 85 % and compressor surge, choke or overspeed cap the curve where they bind. Rod and piston, clutch, gearbox and diff/axle ratings are flagged when exceeded but don't bend the curve; most stock ratings aren't on file yet, so these show "No data". Fuel pump: no data. Cooling: not modelled until 2b.
+  - **Drivetrain loss:** an estimate of what a roller chassis dyno reads, pulled in the gear nearest 1:1: gearbox (manual in its direct gear 2 %, other manual gears 4 %, automatic 10 %, SMG 2 %) x final drive (6 %) x tyre on the roller (8 %), about 15 % for a manual.
+  - **Uncertainty band:** the factory figure's own tolerance, an unprinted rating standard, the distance from a published point (the curve between peaks is the model's shape), the turbo spool region, the distance between your conditions and the rating's, and the calibration's own residual, added as independent parts.
+- **Data loader** (`src/data/loader.ts`, served by `scripts/vite-plugin-catalogue.ts` as a build-time module). It strips every source, note and method, converts to SI and normalises curb weights to one basis, full tank and no driver: an EU "mass in running order" loses its 75 kg driver, a DIN or 90 %-tank figure gets a range up to 6 kg heavier, and a weight whose basis isn't stated keeps its figure with a range down to 75 kg lighter. The site's worker, catalogue included, is 283 kB (39 kB gzipped), and neither bundle contains Zod.
+- **Reference data, all sourced:**
+  - `src/data/standards/power-ratings.json`: the reference air of JIS D 1001, SAE J1349, DIN 70020 and EEC 80/1269 / ECE R85, from the EU texts (Publications Office), the JIS text (kikakurui.com), ISO 1585 (free preview) and secondary sources for SAE and DIN, whose texts are paid. Plus the rules for figures printed without a standard (see decisions).
+  - `src/data/standards/fuels.json`: the fuel each market's figures are taken to be rated on, and the Saudi pump fuels PG91, PG95 and PG98 (Aramco started selling 98 in early 2026 in Riyadh, Jeddah, the Dammam area and on the highways between them).
+  - `src/data/standards/weight-bases.json`: what each market's published weight includes.
+  - `src/data/model/assumptions.json`: all 72 model constants, each with its value, unit, confidence and sources or method.
+  - `2jz-gte.json`, `13b-rew.json` and `20b-rew.json` gained the sequential turbos' changeover rpm (single-source).
+- **Stock calibration** (`tests/calibration/stock.test.ts`, run in CI): every trim (296 across the 5 cars) and every engine variant (95, including the swap-only engines) is within 3 % of its factory peak power and torque, with each peak within 250 rpm, compared under its own rating standard on its market's rating fuel. The two published Nissan Europe 350Z torque curves match at every point (17 and 18 points, all within 0.01 %; the fit uses those points directly, so this checks the solver more than the physics). The largest peak miss anywhere is 0.23 %, the European 350Z's power. The fit can't pass by inventing an impossible engine: VE must stay between 0.45 and 1.25, and an inferred stock boost must be plausible. The full table is in `docs/calibration.md`.
+- **Dyno sheet.** A docked panel on the right (a collapsible bottom sheet on a phone):
+  - car and trim pickers, with trims grouped by market; ambient keys 25/35/45/50 °C (default 45); fuel keys 91/95/98 RON (default 95); unit keys for hp/PS/kW, N·m/lb-ft, bar/psi and °C/°F; all remembered per browser;
+  - a paper stock-check sticker: the factory figures, their standard and reference air, the model at the same conditions, and the pass mark;
+  - peak crank power and torque with their band, estimated wheel power, and peak boost (or charge-air temperature for NA engines);
+  - the chart (custom SVG): power solid and torque dashed in paper white, the band, dotted traces at the rating conditions, crosses on the factory figures, masking-tape peak labels, a hatched spool region and a boost strip for turbo engines, and a crosshair you can drive with the arrow keys;
+  - the curve as a table, the named limits, and a list of what is estimated for that trim;
+  - the "How we calculate this" drawer, in plain language, with the standards table and every assumption, its confidence and its sources.
+
+  CLAUDE.md rule 3 is enforced in the worker: a trim that fails its stock check gets a report with no simulated numbers at all, only the factory figures and the reasons, so the page can't show them by mistake. No trim fails today.
+
+### How it was verified
+
+- `npm run lint`, `npm run typecheck` (app, scripts, e2e and the DOM-free sim config), `npm test` (597 tests: the calibration suite above, plus physics, loader and report unit tests) and `npm run validate-data` all pass.
+- `npm run e2e`: 11 Playwright tests against the production build, the six garage tests plus five for the dyno sheet: the default car with a passed check, a cooler day giving more power, trim and unit changes persisting over a reload, the keyboard crosshair, the drawer, and the phone layout (collapsed bar, opened sheet, no sideways scroll). Each also checks for console errors and failed requests.
+- Physics checks in the unit tests: air density, vapour pressure (Buck), the rotary's 1.308 litres per turn, 1 % torque loss at 6 degrees of retard, a hot day losing power, EGT between 750 and 950 °C at peak power, about 15 % drivetrain loss, the injector cap, and P = T x ω.
+- An independent cross-check on the rating standards: Holden quoted the same Gen III V8 at 460 N·m DIN and 450 N·m ECE (GoAuto, 2002), 2.2 % apart. The model, fitted once, puts the LS1 2.7 % higher at the DIN reference than at ECE (a test now holds it within 1 %).
+- Screenshots (desktop, drawer, phone collapsed and open) were reviewed by eye; the set is in `docs/screenshots/phase-2a/`.
+
+### Numbers marked `estimated`
+
+- **Model assumptions: 46 of 72** are estimated, 20 single-source and 6 verified. The estimated ones are modelling choices where no source gives a number: the lambda and cycle constants, the efficiency scales, the rotary friction fit, stock spark retard, turbo mechanical efficiency and the stock-turbo sizing rules, intercooler effectiveness and pressure drops, EGT fractions, two gearbox efficiencies, the injector duty limit, the curve template (idle, spool, power drop past peak), the VE prior, the sequential changeover fallback, and all the band widths. The drawer lists every one.
+- **Reference data:** the water-vapour pressure at the JIS, SAE and DIN references (1 kPa); the four market rating fuels (JDM 99, USDM 95, EUDM 98, AUDM 91 RON); the five rules for figures printed without a standard; and the fuel fill of two weight bases.
+
+### Known issues and gaps
+
+1. **A stock match is the starting point, not the proof.** The calibration fits each engine to its own factory figures, so passing shows the model reproduces them, not that it predicts a modified engine. The known-build check (3 documented builds per car within 10 %) is part 2b.
+2. **Boost curve shapes are the model's.** Only a single boost figure is published for any stock engine, so the model infers the rest of the curve from the torque curve. For the 2JZ-GTE it lets boost fall from 0.75 bar to about 0.45 bar by 6,000 rpm to follow the published torque; the real stock boost probably holds flatter while VE falls. The sheet lists this as estimated; known builds should settle it.
+3. **Rating fuel is set per market, not per engine.** Several figures state their own fuel (BMW and Nissan Europe 98 RON, Holden VT II and VF II 91 RON, the VZ Monaro 95 RON). The per-variant fuel belongs with the 2b fuel model.
+4. **Unlabelled rating standards are assumed.** The European BMW and Toyota figures, the Australian Nissan, Mazda, HSV and later Holden figures, and the GM crate engines print no standard. The market rules (in decisions) are estimated; the Australian split at 2002 is extrapolated from Holden's own statement. These trims show a wider band and say so.
+5. **2JZ-GTE US boost conflict (not changed):** the data holds 11.6 psi (single-source), while Toyota's 1997 repair manual gives 61-75 kPa (8.8-10.8 psi) at 5,600 rpm and up.
+6. **13B-REW changeover conflict:** 4,500 rpm (fd3s.net) is used; Mazda's 1993 workshop manual tests at 5,500 rpm.
+7. **No factory compressor maps are public,** so each stock turbo is sized to its own engine's figures. Aftermarket turbo maps come with the Phase 3 parts.
+8. **Part ratings are mostly missing,** so most limit tags read "No data" until the Phase 3 parts catalogue adds them.
+9. **Pressure defaults to sea level (101.3 kPa).** Riyadh, at about 600 m, is closer to 94 kPa, which costs an NA engine about 7 % more.
+10. **The panel's speed on real hardware isn't measured.** In headless Chromium a sweep takes about 30-80 ms, including the first fit for an engine.
+11. Carried over: the procedural floor, performance unmeasured on real hardware, no floor reflections, no code licence chosen.
+
+## Next: Phase 2, part 2b
+
+- Known-build calibration (`tests/calibration/known-builds.test.ts`): at least 3 documented builds per car (a published dyno sheet or build thread, linked) within 10 % of peak wheel power. That also tests the drivetrain-loss estimate, which the research found is part fixed and part proportional.
+- The thermal model (heat to coolant and oil, radiator, oil-cooler and intercooler capacity at the chosen ambient, the 3-minute drift-session test) and the cooling limit.
+- The fuel model: race fuel and E85 with their availability, per-variant rating fuels, and the fuel-pump limit.
+- Carried from Phase 1: Phase 3 (parts, compatibility, cost) should:
   - move the common LS hardware out of the five swap files into `parts/`;
   - add swap files for S15<-2JZ, RX-7<-2JZ and E46<-S54;
   - backfill `sumpOptions` for the six earlier launch-swap engines;

@@ -460,3 +460,68 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 ### Crate engines count as LS3 variants
 
 - **Decision:** The Chevrolet Performance LS3 crate engine (19540155, earlier 19301326) and the LS376/480 and LS376/525 are LS3 variants, since swappers buy them new. Their rating standard is `unknown`, because GM says only "SAE J1349 net or J1995 gross". The E-ROD LS3 isn't a separate variant: it is the same engine assembly, and no GM rating with rpm was found.
+
+## 2026-09-30 (Phase 2, part 2a)
+
+### Calibrate each stock engine by fitting its breathing to its own factory figures
+
+- **Decision:** No engine file carries a VE curve, so the calibration builds one per engine variant. It takes the published torque curve where one exists (Nissan Europe's 350Z curves) or else a reference curve drawn through the published peaks (an idle point, the spool point for turbo engines, the peak-to-peak shape and a drop past peak power). It then solves VE rpm by rpm so that the model at the figure's own rating conditions reproduces that curve. For a turbo engine, VE is a generic shape scaled to fit the published boost, and the stock compressor and turbine are sized from the engine's own operating line. Where no boost is published, the VE level is a prior: the mean of the published-boost fits (1.00), which a test keeps in step. Fits run in the worker at first use and are cached per variant; nothing is generated into the repo.
+- **Why:** It's the only way to get a model of all 95 variants without inventing VE tables, which rule 2 forbids. The physical bounds (VE 0.45-1.25, a plausible inferred boost) stop a fit passing by inventing an impossible engine.
+- **Alternatives:** Hand-written VE tables per engine (invented data). Published full-load curves for every engine (only Nissan Europe publishes them for this roster). A generated calibration file (would drift from the data).
+- **Limit, said plainly in the drawer:** a stock match shows the model reproduces the stock engine, not that it predicts a modified one. The known-build check in part 2b is the real test.
+
+### Each figure is checked under its own rating standard, with market rules for unlabelled ones
+
+- **Decision:** `src/data/standards/power-ratings.json` holds the reference air of each standard: JIS D 1001 and EEC 80/1269 / ECE R85 at 25 °C and 99 kPa dry air, SAE J1349 the same (from a secondary source; the SAE text is paid), and DIN 70020 at 20 °C and 1013 mbar total pressure. Each figure is compared at its standard's air, on its market's rating fuel. Figures printed without a standard follow a market rule, flagged as assumed on the sheet and given a wider band:
+  - JDM: JIS net (every JDM figure in the data prints it anyway);
+  - USDM and CDM: SAE J1349 net. GM's crate-engine footnotes couldn't be read, and the LS376 pair may be rated otherwise;
+  - EUDM and UKDM: EEC 80/1269, the type-approval method in force for every unlabelled European figure in the data (1993 on). BMW calls the European M3 figure its "ECE" rating;
+  - AUDM before 2002: DIN 70020, and from 2002: EEC 80/1269. Holden printed its VT II figures as DIN and told GoAuto in 2002 that its VX II figures were DIN and the VY had moved to ECE. No Australian design rule for engine power was found, so the same split is assumed for Nissan, Mazda and HSV (estimated). The rules can carry a date window for this.
+- **DIN's water vapour:** DIN ignores humidity, but the model needs a vapour pressure to split total pressure into dry air and vapour; it uses ISO 1585's 1 kPa (estimated). Cross-check: Holden's same engine at 460 N·m DIN and 450 N·m ECE is 2.2 % apart; the model puts the LS1 2.7 % apart.
+- **Alternatives:** Treat every figure as one standard (up to about 3 % wrong between DIN and the rest). Leave unlabelled figures out of the calibration (would hide 18 variants' numbers). Edit the Holden variants' standards in the engine data: the `standard` field has no source slot, so the date rule, whose reason carries the sources, is used instead.
+
+### Rating fuel by market for now
+
+- **Decision:** JDM figures are taken as rated on premium at 99 RON (JIS K 2202 sets 96 minimum; JAMA and an OEM engineer put premium as sold at 98-100), USDM on 95 RON (the lowest premium, 91 AKI), EUDM on 98 RON (what BMW and Nissan Europe state), AUDM on 91 RON (Holden's stated fuel). All estimated. Per-variant rating fuels wait for the 2b fuel model.
+- **Why:** A rating fuel is needed for the knock model to compare your fuel with the one the figure was made on. The model never adds timing beyond the stock map, so a fuel better than the rating fuel gains nothing; the choice only matters when you pick a lower-octane fuel than the rating one.
+- **Saudi pump fuels:** PG91, PG95 and PG98. The brief names 91 and 95; Aramco started selling PG98 in early 2026 (F&L Asia, Aramco), so it is offered too.
+
+### Curb weights normalised to full tank, no driver
+
+- **Decision:** Every trim's weight basis is recorded (`basis` on `curbWeight`), and the loader normalises to a full tank with no driver: an EU mass in running order loses its 75 kg driver; a DIN or 90 %-tank figure gets a range up to 6 kg heavier; an unstated basis keeps its figure with a range down to 75 kg lighter. Definitions and sources are in `src/data/standards/weight-bases.json` (Japanese Road Transport Vehicle Act and NALTEC, 49 CFR 571.3 and 40 CFR 86.1803-01, Regulation (EU) 1230/2012 and 92/21/EEC, the Australian Design Rules, the UK Construction and Use Regulations).
+- **Why:** The same car is printed 75 kg apart in Germany and the UK, and Phase 2's power-to-weight and later the chassis model need one basis. The range keeps the doubt visible instead of guessing.
+
+### Model constants live in a sourced data file
+
+- **Decision:** All 72 constants the model uses (gas properties, fuel energy, lambda, efficiency scales, friction, knock sensitivities, turbo and intercooler defaults, drivetrain losses, curve-template and band widths) are in `src/data/model/assumptions.json`, each with value, unit, confidence and sources or method. The schema requires `estimated` for every `model-choice` entry, validate-data checks it, and the drawer shows the whole list.
+- **Why:** Rule 2 applies to the model's own numbers as much as to car data; this makes them visible and reviewable in one place.
+
+### Numbers that fail calibration never leave the worker
+
+- **Decision:** `toReport` leaves the curve, peaks and limits out of the report when a trim's stock check fails. The page gets the factory figures and the failure reasons, never the model's numbers.
+- **Why:** Rule 3 then can't be broken by a UI bug, and it's a unit test instead of a visual check.
+
+### Limits: cap what physics caps, flag what a part rating flags
+
+- **Decision:** Injector duty above 85 % caps fuelling (the tune holds it there), and the boost solver pulls boost back to the compressor map's surge, choke or speed edge; both change the curve and are named. Rod and piston, clutch, gearbox and diff/axle ratings are flagged when exceeded but don't bend the curve. Fuel pump flow has no data yet; cooling waits for the thermal model.
+- **Why:** An engine makes the power whether or not a clutch is rated for it; what changes is what breaks. Bending the curve at a part rating would hide the problem.
+
+### Drivetrain loss as a chassis-dyno reading
+
+- **Decision:** Wheel power is labelled an estimate of a roller chassis dyno's reading, in the gear nearest 1:1: gearbox x final drive (0.94) x tyre on the roller (0.92).
+- **Why:** That is what owners compare against (dyno sheets), and it's what the known-build check in 2b will test. The research found real losses are part fixed, part proportional; the proportional model is the simpler start, and 2b will tell if it's good enough.
+
+### Sequential turbos carry a changeover rpm
+
+- **Decision:** Engine variants gained `turboChangeover` (sequential twins only; the schema rejects it elsewhere): 4,000 rpm for the 2JZ-GTE, 4,500 for the 13B-REW, 3,500 for the 20B-REW, all single-source. Without one, the model assumes 65 % of the way to peak power (estimated).
+- **Why:** A turbine sized for the primary turbo alone can't hold boost once both turbos run. Four sequential variants missed their power figure by 14-28 % until the turbine was also sized at the changeover point, which needs the changeover rpm.
+
+### Build-time data module, and Vite's module-runner config loader
+
+- **Decision:** `scripts/vite-plugin-catalogue.ts` serves `virtual:swaplab/catalogue` to the worker: the loader's output, built when the site builds, with no sources and no Zod. Unit lists moved to a Zod-free `src/data/unit-list.ts` so the page can convert units without the schema library. `npm run dev`, `build` and `preview` pass `--configLoader runner`, because the config now imports TypeScript from `src/data/` without file extensions, which Vite's upcoming native config loader would reject (it warns today).
+- **Alternatives:** Import the raw JSON (7.8 MB with sources) into the bundle and strip at runtime. A pre-build script writing a generated JSON file (another artefact to keep in step).
+
+### The dyno sheet's look
+
+- **Decision:** Dyno-software conventions on a dark screen: power solid and torque dashed, both in paper white, as on a single-run Dynojet sheet; boost in signal orange on its own strip; factory figures as tape-coloured crosses; masking-tape peak labels; a printed paper sticker for the stock check; stamped metal tags for limits. Custom SVG, no chart library. Docked right on desktop, a collapsible bottom sheet on a phone (collapsed by default, so the bay stays the hero).
+- **Why:** Section 8 asks for telemetry and dyno software with physical labels, not a dashboard. SVG keeps text crisp and selectable, and the chart needs no dependency.
