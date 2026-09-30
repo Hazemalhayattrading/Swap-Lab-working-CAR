@@ -4,6 +4,27 @@ import prettier from 'eslint-config-prettier';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
+/**
+ * src/sim/ may only import from itself and src/data/. Import patterns match the
+ * import string, not the resolved path, so the rule is written per folder
+ * depth: `up` is the relative prefix that leaves src/sim/ from that depth.
+ * @param {string} up
+ */
+function simImports(up) {
+  return /** @type {const} */ ([
+    'error',
+    {
+      patterns: [
+        { group: ['three', 'three/*'], message: 'src/sim/ must not depend on Three.js.' },
+        {
+          group: [`${up}*`, `!${up}data`, `${up}*/**`, `!${up}data/**`, `${up}../**`],
+          message: 'src/sim/ may only import from src/sim/ and src/data/.',
+        },
+      ],
+    },
+  ]);
+}
+
 export default tseslint.config(
   {
     ignores: [
@@ -48,18 +69,8 @@ export default tseslint.config(
     // itself and from src/data/.
     files: ['src/sim/**/*.ts'],
     rules: {
-      'no-restricted-imports': [
-        'error',
-        {
-          patterns: [
-            { group: ['three', 'three/*'], message: 'src/sim/ must not depend on Three.js.' },
-            {
-              group: ['../*', '!../data', '../*/**', '!../data/**', '../../**'],
-              message: 'src/sim/ may only import from src/sim/ and src/data/.',
-            },
-          ],
-        },
-      ],
+      // For files two folders down; the blocks below set the rule for depths 0 and 1.
+      'no-restricted-imports': simImports('../../../'),
       'no-restricted-syntax': [
         'error',
         {
@@ -81,6 +92,8 @@ export default tseslint.config(
       ],
     },
   },
+  { files: ['src/sim/*.ts'], rules: { 'no-restricted-imports': simImports('../') } },
+  { files: ['src/sim/*/*.ts'], rules: { 'no-restricted-imports': simImports('../../') } },
   {
     files: ['eslint.config.js'],
     ...tseslint.configs.disableTypeChecked,
