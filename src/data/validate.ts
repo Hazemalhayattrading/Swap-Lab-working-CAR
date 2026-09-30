@@ -3,9 +3,12 @@ import { AssetManifestSchema, type Asset, type AssetManifest } from './schema/as
 import { CarSchema, type Car } from './schema/car';
 import { EngineSchema, type Engine } from './schema/engine';
 import { SwapSchema, type Swap } from './schema/swap';
+import { KnownBuildsFileSchema, type KnownBuildsFile } from './schema/build';
 import { AssumptionsFileSchema } from './schema/model';
 import {
+  DynosFileSchema,
   FuelsFileSchema,
+  LocationsFileSchema,
   PowerRatingsFileSchema,
   WeightBasesFileSchema,
   type FuelsFile,
@@ -103,6 +106,21 @@ export const SCHEMA_RULES: readonly SchemaRule[] = [
     schema: WeightBasesFileSchema,
   },
   {
+    description: 'altitude presets and the standard atmosphere',
+    test: (p) => p === 'src/data/standards/locations.json',
+    schema: LocationsFileSchema,
+  },
+  {
+    description: 'chassis dynos and their correction standards',
+    test: (p) => p === 'src/data/standards/dynos.json',
+    schema: DynosFileSchema,
+  },
+  {
+    description: 'known real builds with dyno results (one file per car)',
+    test: (p) => /^src\/data\/builds\/[a-z0-9-]+\.json$/.test(p),
+    schema: KnownBuildsFileSchema,
+  },
+  {
     description: 'simulation model assumptions',
     test: (p) => p === 'src/data/model/assumptions.json',
     schema: AssumptionsFileSchema,
@@ -151,8 +169,35 @@ function checkReferences(
   swaps: readonly { path: string; swap: Swap }[] = [],
   ratings?: { path: string; file: PowerRatingsFile },
   fuels?: { path: string; file: FuelsFile },
+  builds: readonly { path: string; file: KnownBuildsFile }[] = [],
 ): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
+  // Known builds: one file per car, named for it, on real trims and real fuels.
+  for (const { path, file } of builds) {
+    const car = cars.find((c) => c.car.id === file.car)?.car;
+    if (file.car !== fileStem(path)) {
+      issues.push({ path, message: `car "${file.car}" must match the file name.` });
+    }
+    if (!car) {
+      issues.push({ path: `${path}.car`, message: `No car file for "${file.car}".` });
+      continue;
+    }
+    file.builds.forEach((b, i) => {
+      if (!car.trims.some((t) => t.id === b.trim)) {
+        issues.push({
+          path: `${path}.builds[${String(i)}].trim`,
+          message: `Car "${car.id}" has no trim "${b.trim}".`,
+        });
+      }
+      const fuelId = b.modifications.fuel.fuelId;
+      if (fuelId && fuels && !fuels.file.fuels.some((f) => f.id === fuelId)) {
+        issues.push({
+          path: `${path}.builds[${String(i)}].modifications.fuel.fuelId`,
+          message: `No fuel "${fuelId}" in ${fuels.path}.`,
+        });
+      }
+    });
+  }
   // Every factory rating must be comparable under its own standard: the
   // standard has reference conditions (or, if unlabelled, a rule for its
   // market), and its market has a rating fuel.
@@ -377,6 +422,7 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
   const swaps: { path: string; swap: Swap }[] = [];
   let ratings: { path: string; file: PowerRatingsFile } | undefined;
   let fuels: { path: string; file: FuelsFile } | undefined;
+  const builds: { path: string; file: KnownBuildsFile }[] = [];
 
   for (const file of files) {
     const rule = SCHEMA_RULES.find((r) => r.test(file.path));
@@ -406,6 +452,9 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
     }
     if (rule.schema === FuelsFileSchema)
       fuels = { path: file.path, file: result.data as FuelsFile };
+    if (rule.schema === KnownBuildsFileSchema) {
+      builds.push({ path: file.path, file: result.data as KnownBuildsFile });
+    }
     if (rule.schema !== AssetManifestSchema) {
       collectConfidence(result.data, file.path, { counts, estimated });
     }
@@ -426,6 +475,6 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       }
     }
   }
-  issues.push(...checkReferences(cars, engines, swaps, ratings, fuels));
+  issues.push(...checkReferences(cars, engines, swaps, ratings, fuels, builds));
   return { issues, checkedFiles, counts, estimated, noAiFiles };
 }

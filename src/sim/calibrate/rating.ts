@@ -9,7 +9,8 @@ import { pumpGasoline, type Fuel } from '../fuel';
 
 /**
  * The conditions a factory figure was rated under: its standard's reference
- * atmosphere and the market's rating fuel. Figures whose standard isn't
+ * atmosphere and its rating fuel (the variant's own where the maker states
+ * it, else its market's, standards/fuels.json). Figures whose standard isn't
  * printed (`unknown`) take the standard the data assumes for their market
  * (src/data/standards/power-ratings.json, `unknownStandard`), flagged as assumed.
  */
@@ -63,6 +64,6 @@ export function ratingConditions(catalogue: SimCatalogue, variant: SimVariant): 
     printedStandard,
     assumed: printedStandard === 'unknown',
     air: ratingAtmosphere(standard),
-    fuel: pumpGasoline(reference.ron, catalogue.constants),
+    fuel: pumpGasoline(variant.rating.fuelRon?.value ?? reference.ron, catalogue.constants),
   };
 }

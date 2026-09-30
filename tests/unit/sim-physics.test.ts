@@ -170,14 +170,14 @@ describe('turbo engine', () => {
     expect(high.turbo?.wastegateShare ?? 0).toBeGreaterThan(0);
   });
 
-  it('holds the same boost on a hotter day but makes less power from the hotter, knockier charge', () => {
+  it('holds the same manifold pressure on a hotter day but makes less power from the hotter, knockier charge', () => {
     const hot = {
       air: ambientAir({ temperatureC: 45, pressureKPa: 101.325, relativeHumidity: 0.1 }),
       fuel: conditions.fuel,
     };
     const ref = solvePoint(fit.model, 5500, conditions, k);
     const warm = solvePoint(fit.model, 5500, hot, k);
-    expect(warm.boost).toBeCloseTo(ref.boost, -2);
+    expect(warm.manifoldPressure).toBeCloseTo(ref.manifoldPressure, -2);
     expect(warm.chargeTemperature).toBeGreaterThan(ref.chargeTemperature + 15);
     expect(warm.sparkRetard).toBeGreaterThan(ref.sparkRetard);
     expect(warm.torque).toBeLessThan(ref.torque);
@@ -195,7 +195,7 @@ describe('turbo engine', () => {
       ...fit.model,
       induction: {
         ...(fit.model.induction as Extract<typeof fit.model.induction, { kind: 'turbo' }>),
-        targetBoost: fit.model.grid.map(() => 150_000),
+        targetPressure: fit.model.grid.map(() => conditions.air.pressure + 150_000),
       },
     };
     const p = solvePoint(model, 3000, conditions, k);

@@ -209,11 +209,11 @@
     },
     {
       "id": "wot-lambda-rotary-turbo",
-      "label": "Full-load lambda, turbocharged rotary",
+      "label": "Full-load lambda, turbocharged rotary, factory map",
       "kind": "literature",
-      "value": 0.72,
+      "value": 0.66,
       "unit": "ratio",
-      "confidence": "single-source",
+      "confidence": "estimated",
       "sources": [
         {
           "url": "https://vehiclefield.com/blog/fd3s4rx-7fc/",
@@ -222,7 +222,30 @@
           "note": "茶色い細い線がAPEXデーター時で、ブーストの立ち上がり時はA/Fが9.5ぐらいまで濃くなります。 それをブーストHI LO共に10.5～10.8前後に合わせてやるとトルクが良い感じに上がってゆきます。 (EN: with the Apexi base data the A/F goes as rich as about 9.5 at boost onset; set to about 10.5-10.8 at both boost settings, torque rises nicely.)"
         }
       ],
-      "note": "No factory figure found. A Japanese tuning shop set a 13B-REW to 10.5-10.8:1 (lambda 0.71-0.73) and reports the Apexi base map richer still (about 9.5:1 at boost onset)."
+      "method": "No factory figure found. A Japanese tuning shop logs the Apexi Power FC base map (a copy of the factory calibration for a stock engine) as rich as 9.5:1 at boost onset; the model takes 9.7:1 (lambda 0.66) across full load. Factory rotary maps run this rich to cool the rotors and apex seals."
+    },
+    {
+      "id": "wot-lambda-rotary-tuned",
+      "label": "Full-load lambda, turbocharged rotary, tuned",
+      "kind": "literature",
+      "value": 0.73,
+      "unit": "ratio",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://vehiclefield.com/blog/fd3s4rx-7fc/",
+          "accessed": "2026-09-30",
+          "title": "Vehicle Field (tuning shop, Okazaki), \"FD3S 4型 RX-7 パワーFCセッティング完成\" (2015-08-17)",
+          "note": "茶色い細い線がAPEXデーター時で、ブーストの立ち上がり時はA/Fが9.5ぐらいまで濃くなります。 それをブーストHI LO共に10.5～10.8前後に合わせてやるとトルクが良い感じに上がってゆきます。 (EN: with the Apexi base data the A/F goes as rich as about 9.5 at boost onset; set to about 10.5-10.8 at both boost settings, torque rises nicely.)"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/paulK_dyno_09-27-13.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Mustang Dynamometer report of a Power FC-tuned FD on its factory twins",
+          "note": "Max: ... 'AFR (Ratio) 11.534' ... Min: ... 10.254 ... Avg: ... 11.154"
+        }
+      ],
+      "note": "The shop set 10.5-10.8:1 (lambda 0.71-0.73) on a Power FC; a US shop's logged full pull on a tuned FD reads 10.3-11.5:1 (average 11.2, lambda 0.76). A tune for a known build (or a tuned fuel) runs this instead of the factory map."
     },
     {
       "id": "lambda-peak-work",
@@ -434,7 +457,7 @@
     },
     {
       "id": "knock-octane-per-kpa",
-      "label": "Octane requirement per kPa of manifold pressure",
+      "label": "Octane requirement per kPa of manifold pressure, near one atmosphere",
       "kind": "literature",
       "value": 0.35,
       "unit": "ON/kPa",
@@ -445,9 +468,21 @@
           "accessed": "2026-09-30",
           "title": "SAE 960497 abstract, Russ, S. (Ford), \"A Review of the Effect of Engine Operating Conditions on Borderline Knock\"",
           "note": "Compression Ratio: \"5 ON/CR\" ... Intake Air Temperature: \"1 ON/7 K\" ... Intake Pressure: \"3-4 ON/10 kPa\" ... Spark Advance: \"1 ON/1° SA\""
+        },
+        {
+          "url": "https://saemobilus.sae.org/papers/four-octane-number-method-predicting-anti-knock-behavior-fuels-engines-780080",
+          "accessed": "2026-09-30",
+          "title": "SAE 780080 abstract, Douaud, A. M. and Eyzat, P. (Institut Francais du Petrole), \"Four-Octane-Number Method for Predicting the Anti-Knock Behavior of Fuels and Engines\" (1978)",
+          "note": "\"The 'Four-Octane-Number Method' is a practical determination of the knock-resistance of fuels based on the autoignition delay concept ...\" [The correlation's pressure exponent, 1.7, is as later papers quote it; the full paper was not read.]"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/2222-race-fuel-ms109-5gallon-3291",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah: product page 'RACE FUEL MS109 - 5GALLON' (VP Racing)",
+          "note": "An unleaded, highly oxygenated fuel ... Recommended for applications with up to 25 lbs of boost and naturally aspirated engines with compression ratios up to 13:1."
         }
       ],
-      "note": "Russ: 3-4 ON per 10 kPa. Vendor rules of thumb are weaker (Sunoco: 1 ON per 2-3 psi). Only changes against the stock boost at the same rpm count."
+      "note": "Russ: 3-4 ON per 10 kPa, from naturally aspirated engines. The model applies it per fraction of pressure: 0.35 x 101.3 kPa x ln(p / p_ref), about 3.5 ON per 10 % more manifold pressure, because autoignition delay is a power law in pressure (Douaud & Eyzat's correlation, SAE 780080, as used for knock prediction). A straight line in kPa would ask 30-40 degrees of retard at 18 psi on 91 AKI and would rule out VP's rating of MS109 (109 RON) for up to 25 psi of boost. The reference is the factory's own peak boost and charge temperature on its rating fuel."
     },
     {
       "id": "knock-loss-quadratic",
@@ -545,6 +580,16 @@
       "method": "No source found. Model choice for journal- and ball-bearing turbos of the period; the turbine sizing absorbs it for stock engines."
     },
     {
+      "id": "turbo-stock-turbine-margin",
+      "label": "Factory turbine size against the largest that just holds boost at the spool point",
+      "kind": "model-choice",
+      "value": 1.0,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "The factory turbine is sized as the largest that just holds the stock boost, wastegate shut, at the model's full-boost point (turbo-spool-offset-rpm below the torque peak). Smaller turbines were tried in the known-build calibration: 0.6 fitted the modified S15s slightly better but moved the stock Supra's full boost down to 1,500 rpm, so 1.0 stays."
+    },
+    {
       "id": "compressor-stock-choke-position",
       "label": "Where a stock turbo's peak flow sits between surge and choke",
       "kind": "model-choice",
@@ -552,17 +597,17 @@
       "unit": "ratio",
       "confidence": "estimated",
       "sources": [],
-      "method": "No compressor maps for these factory turbos were found. Model choice: the stock peak flow sits 85 % of the way from the surge line to the choke line, near the edge as small factory turbos do at redline."
+      "method": "No compressor maps for these factory turbos were found. Model choice: the stock peak flow sits 85 % of the way from the surge line to the choke line, near the edge as small factory turbos do at redline. Rechecked in the known-build calibration (0.6-0.9 tried): with it, builds that raise the boost on factory turbos run out of flow near redline and peak 60-1,000 rpm after their sheets do (0.6 put every one at redline), and DSPORT's S15 going from 12 to 18 psi gains 12 % in the model against the 14 % it measured."
     },
     {
       "id": "compressor-stock-pr-fraction",
       "label": "Stock peak pressure ratio as a share of the map's height",
       "kind": "model-choice",
-      "value": 0.65,
+      "value": 0.52,
       "unit": "ratio",
       "confidence": "estimated",
       "sources": [],
-      "method": "Model choice with the choke position: the stock peak pressure ratio sits at 65 % of the map's top pressure ratio, leaving room for more boost as real maps do."
+      "method": "Model choice with the choke position: the stock peak pressure ratio sits at this share of the map's top pressure ratio, leaving room for more boost as real maps do. Set by the known builds: the documented boost has to be reachable. DSPORT ran the S15's factory T28 at 18 psi, a pressure ratio of about 2.3 before the intercooler; 0.52 gives that turbo a top ratio of 2.35, where 0.65 stopped it at about 15.5 psi."
     },
     {
       "id": "intercooler-effectiveness-side",
@@ -884,13 +929,13 @@
     },
     {
       "id": "ve-prior-peak-boosted",
-      "label": "Peak VE of a turbo engine whose stock boost isn't published",
+      "label": "Peak VE of a turbo engine whose stock boost isn't published, when no variant of the same engine publishes one",
       "kind": "model-choice",
       "value": 1,
       "unit": "ratio",
       "confidence": "estimated",
       "sources": [],
-      "method": "The average VE level the calibration fits for the ten turbo variants whose stock boost is published (0.86-1.09, mean 1.00). The calibration test checks this stays within 0.05 of that mean."
+      "method": "A variant without published boost first takes the mean VE level its own engine's published-boost variants fit to (src/sim/simulate.ts, FitCache); this generic value is the fallback when none does. It is the average level the calibration fits for the ten turbo variants whose stock boost is published (0.91-1.10, mean 1.01); the calibration test checks it stays within 0.05 of that mean."
     },
     {
       "id": "ve-prior-low-droop",
@@ -906,11 +951,11 @@
       "id": "ve-prior-high-droop",
       "label": "Turbo VE shape: fall above its peak rpm",
       "kind": "model-choice",
-      "value": 0.6,
+      "value": 0.05,
       "unit": "ratio",
       "confidence": "estimated",
       "sources": [],
-      "method": "See ve-prior-low-droop."
+      "method": "Calibrated in-sample against the known builds (tests/calibration/known-builds.test.ts): the builds that hold more boost to redline on factory turbos (FD twins at 12.5-14.5 psi, S15 at 12-18 psi) need the VE to stay near its peak level, so a factory engine's power fall past its peak comes from its small turbos running out (compressor-stock-choke-position) rather than from the VE. At 0.15 the FD at 14.5 psi already lands 10.6 % low; the old 0.6 put it 14 % low. The known builds were used to choose this, so they aren't an independent check of it."
     },
     {
       "id": "sequential-changeover-fraction",
@@ -1001,6 +1046,698 @@
       "confidence": "estimated",
       "sources": [],
       "method": "Model choice, as band-per-kelvin, for fuel octane."
+    },
+    {
+      "id": "heat-to-coolant-piston",
+      "label": "Share of fuel energy into the coolant at full load, piston engine",
+      "kind": "literature",
+      "value": 0.2,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines, Lecture 18 \"Engine Heat Transfer\" (reproduces Heywood Table 12.1 and Gruden, Kuper and Porsche)",
+          "note": "TABLE 12.1 Energy balance for automotive engines at maximum power ... SI engine 25–28 [brake] 17–26 [coolant] ... (percentage of fuel heating value); Porsche chart at 9.2 bar BMEP, 2000 rpm: coolant about 14.5 %, oil about 2.5 %"
+        }
+      ],
+      "method": "Heywood's range at maximum power is 17-26 % of fuel energy, for older engines with 25-28 % brake efficiency; Porsche's chart gives 14.5 % at 9.2 bar. The model takes 20 %, the lower half of Heywood's range for later, more efficient engines. It sets how fast the coolant heats; the stock radiator is sized from the same share, so it barely moves the pass/fail line."
+    },
+    {
+      "id": "heat-to-coolant-rotary",
+      "label": "Share of fuel energy into the coolant at full load, rotary",
+      "kind": "literature",
+      "value": 0.12,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda), \"Rotary Engine\" (1971), heat balance at full load",
+          "note": "At 0.95, the ratio which gives maximum output, letting heat generated equal 100%, the breakdown is : Effective heat ........ 26% Heat absorbed by lubrication oil ........ 7% Heat absorbed by cooling water ........ 12% Heat of exhaust gas ........ 36%"
+        }
+      ],
+      "note": "Mazda's figure for an early naturally aspirated rotary at the mixture of maximum output. Richer full-load mixtures (turbo rotaries) cut the coolant share further (8.5 % at excess-air ratio 0.83 in the same chart), so this errs on the hot side."
+    },
+    {
+      "id": "heat-to-oil-piston",
+      "label": "Share of fuel energy into the oil at full load, piston engine",
+      "kind": "literature",
+      "value": 0.025,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines, Lecture 18 \"Engine Heat Transfer\" (reproduces Heywood Table 12.1 and Gruden, Kuper and Porsche)",
+          "note": "Energy distribution in SI engine, 2000 rpm, water cooled SI engine 2L displacement [Gruden, Kuper and Porsche]: oil about 2.5 % of fuel energy at 9.2 bar BMEP (read from the chart)"
+        },
+        {
+          "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/3974309",
+          "accessed": "2026-09-30",
+          "title": "US Patent 3,974,309 (Ford Motor Company), background on engine oil heat",
+          "note": "Typically the oil used in a piston engine will carry only 12% of the heat loss that is extracted by the water cooling system."
+        }
+      ],
+      "note": "Read from the Porsche chart near full load (±2 points); the Ford patent's 12 % of coolant heat gives 2.4 % with the model's 20 % coolant share."
+    },
+    {
+      "id": "heat-to-oil-rotary",
+      "label": "Share of fuel energy into the oil at full load, rotary",
+      "kind": "literature",
+      "value": 0.07,
+      "unit": "ratio",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda), \"Rotary Engine\" (1971), heat balance at full load",
+          "note": "At 0.95, the ratio which gives maximum output, letting heat generated equal 100%, the breakdown is : Effective heat ........ 26% Heat absorbed by lubrication oil ........ 7% Heat absorbed by cooling water ........ 12% Heat of exhaust gas ........ 36%"
+        },
+        {
+          "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/3974309",
+          "accessed": "2026-09-30",
+          "title": "US Patent 3,974,309 (Ford Motor Company), background on engine oil heat",
+          "note": "the oil lubricating system of a Wankel engine will carry away at least 50% of the heat removed from the engine by the water cooling system and will dissipate 7% of the total energy used by the engine."
+        }
+      ],
+      "note": "Rotors are oil-cooled, so the oil carries far more of the heat than in a piston engine."
+    },
+    {
+      "id": "radiator-design-coolant",
+      "label": "Coolant temperature the factory radiator is sized to hold at full power",
+      "kind": "model-choice",
+      "value": 105,
+      "unit": "°C",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org full text: thermostat, radiator cap and cooling fan",
+          "note": "Valve opening temperature 76 - 79°C ... Maximum valve lift 8.6 mm / 90°C ... Cap relief pressure Standard 78 - 98 kPa ... Engine coolant temperature is 100°C (212°F) or more | HI"
+        }
+      ],
+      "method": "No maker publishes its radiator sizing. Model choice: the factory system holds 105 °C at sustained full power, above where the VQ35DE's fan goes to high speed (100 °C) and well under boiling at the factory caps (about 125 °C at 78 kPa with 50 % glycol)."
+    },
+    {
+      "id": "radiator-design-ambient",
+      "label": "Ambient temperature the factory radiator is sized for",
+      "kind": "model-choice",
+      "value": 40,
+      "unit": "°C",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No maker publishes it. Model choice: a hot-market design day. With the design coolant temperature and face velocity it sizes every factory radiator from the engine's own rated fuel power, so a more powerful engine gets a bigger radiator, as the factories did."
+    },
+    {
+      "id": "radiator-design-face-velocity",
+      "label": "Air speed through the radiator at the design point (top speed)",
+      "kind": "model-choice",
+      "value": 10,
+      "unit": "m/s",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://html.scirp.org/file/_6-1520083_1.htm",
+          "accessed": "2026-09-30",
+          "title": "Toure, Sheng and Fayzimatov, \"Radiator Heat Dissipation Performance\", Journal of Electronics Cooling and Thermal Control, Table 1",
+          "note": "Va (m/s) 3.00 5.00 6.00 8.00 10.00 | Qn (kw) | 50.5 L/min: 30.90 41.08 45.25 50.67 55.30 | 165.7 L/min: 33.09 48.06 53.87 62.49 69.65"
+        },
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ, \"Japanese MKIV Specifications\" (transcription of Toyota JDM data): radiator heat dissipation",
+          "note": "2JZ-GTE copper radiator: low-speed 46.1 kW (MT) / 49.4 kW (AT), high-speed above 82.7 kW / 87.9 kW; aluminium radiator (1996-04 on): 48.8 kW low-speed, 92.0 kW high-speed. Test conditions not given."
+        }
+      ],
+      "method": "The design point is sustained full power, i.e. top speed. Model choice: 10 m/s through the core, the top of the range radiators are tested over (3-10 m/s). Toyota's high-speed/low-speed ratings for the JZA80 radiator (92.0/48.8 kW = 1.9x) match the 3 to 10 m/s ratio in the SCIRP table (1.8-2.1x), which supports reading them as about 10 and 3 m/s."
+    },
+    {
+      "id": "radiator-velocity-exponent",
+      "label": "How radiator heat rejection scales with air speed through the core",
+      "kind": "literature",
+      "value": 0.55,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://html.scirp.org/file/_6-1520083_1.htm",
+          "accessed": "2026-09-30",
+          "title": "Toure, Sheng and Fayzimatov, \"Radiator Heat Dissipation Performance\", Journal of Electronics Cooling and Thermal Control, Table 1",
+          "note": "Va (m/s) 3.00 5.00 6.00 8.00 10.00 | Qn (kw) | 50.5 L/min: 30.90 41.08 45.25 50.67 55.30 | 165.7 L/min: 33.09 48.06 53.87 62.49 69.65"
+        }
+      ],
+      "note": "Heat rejection ∝ (air speed)^n at a fixed temperature difference. From 3 to 10 m/s the table's rejection rises 1.79x (50.5 L/min of coolant) to 2.10x (165.7 L/min): n = 0.48 to 0.62. The model takes 0.55."
+    },
+    {
+      "id": "oil-design-over-coolant",
+      "label": "How far the oil runs above the coolant at full rated power",
+      "kind": "model-choice",
+      "value": 15,
+      "unit": "K",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719",
+          "note": "Engine oil temperature | The general operating temperature is between 175 °F (80 °C) and 250 °F (120 °C). During performance-oriented driving, do not exceed the maximum temperature of 300 °F (150 °C)."
+        }
+      ],
+      "method": "Model choice: at sustained full power the oil runs 15 K above the coolant, inside BMW's normal oil band of 80-120 °C for coolant near 100 °C. It sizes the oil-to-coolant path (block and water-cooled oil cooler) or the oil-to-air cooler at the design point."
+    },
+    {
+      "id": "engine-default-mass",
+      "label": "Engine mass where the engine file has none",
+      "kind": "model-choice",
+      "value": 180,
+      "unit": "kg",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for engines without a dry weight: the middle of the roster (SR20DET 166 kg, M54B30 170 kg, S54B32 217 kg, 2JZ-GTE 230 kg). Every launch car's engine has its own figure."
+    },
+    {
+      "id": "engine-thermal-mass-share",
+      "label": "Share of the engine's mass that heats with the coolant over a few minutes",
+      "kind": "model-choice",
+      "value": 0.5,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the block and head around the water jackets follow the coolant within a minute or two; the crank, rods, cams, sump, manifolds and ancillaries lag or follow the oil. Only the S54's bare block (48 kg of 217 kg) is published among the roster, so the split can't be checked."
+    },
+    {
+      "id": "engine-metal-specific-heat",
+      "label": "Specific heat of the engine's metal",
+      "kind": "literature",
+      "value": 0.7,
+      "unit": "kJ/(kg·K)",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/specific-heat-metals-d_152.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Metals - Specific Heats\"",
+          "note": "Aluminum 0.91 | Cast Iron 0.46 (kJ/kgK)"
+        }
+      ],
+      "method": "Cast iron 0.46 and aluminium 0.91 kJ/(kg·K). The roster mixes iron blocks with aluminium heads (2JZ-GTE, S54B32) and all-aluminium engines (SR20DET, VQ35); the model takes 0.7 for all."
+    },
+    {
+      "id": "coolant-default-volume",
+      "label": "Coolant in the system where the engine file has none",
+      "kind": "model-choice",
+      "value": 8.5,
+      "unit": "L",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the middle of the roster's factory figures (SR20DET 7.0 L, M54B30 8.4 L, VQ35DE 8.7 L, 13B-REW 8.8 L, VQ35HR 9.0 L, 2JZ-GTE 9.5 L). Launch engines carry their own."
+    },
+    {
+      "id": "oil-default-volume",
+      "label": "Engine oil where the engine file has none",
+      "kind": "model-choice",
+      "value": 5,
+      "unit": "L",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the middle of the roster's factory figures (SR20DET 3.7 L, VQ35DE 4.7 L, 13B-REW 4.9 L, 2JZ-GTE 5.0 L, S54B32 5.5 L, M54B30 6.5 L). Every engine file carries its own."
+    },
+    {
+      "id": "coolant-density",
+      "label": "Density of 50 % ethylene glycol coolant, hot",
+      "kind": "physics",
+      "value": 1042,
+      "unit": "kg/m³",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/ethylene-glycol-d_146.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Ethylene Glycol Heat-Transfer Fluid Properties\"",
+          "note": "Mass fraction 0.5: density 1055 (60 °C), 1042 (80 °C), 1030 (100 °C) kg/m3; specific heat 0.88075 Btu/lb°F at 90 °C"
+        }
+      ],
+      "note": "At 80 °C, 50 % glycol by weight. Factory fills are about 50/50 by volume, slightly richer in glycol by weight."
+    },
+    {
+      "id": "coolant-specific-heat",
+      "label": "Specific heat of 50 % ethylene glycol coolant, hot",
+      "kind": "physics",
+      "value": 3.69,
+      "unit": "kJ/(kg·K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.meglobal.biz/wp-content/uploads/2024/03/MEG_Guide_Rev_2024_W2.pdf",
+          "accessed": "2026-09-30",
+          "title": "MEGlobal, \"Ethylene Glycol Product Guide\" (rev. 2024), Figure 8 specific heats of aqueous ethylene glycol",
+          "note": "Specific Heats = A + BT + CT2 ... 50 wt%: A 0.81485, B 7.3219E-4, C 0.0 (Btu/lb/°F, T in °C): 0.8808 Btu/lb°F = 3.688 kJ/(kg·K) at 90 °C"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/ethylene-glycol-d_146.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Ethylene Glycol Heat-Transfer Fluid Properties\"",
+          "note": "Mass fraction 0.5: density 1055 (60 °C), 1042 (80 °C), 1030 (100 °C) kg/m3; specific heat 0.88075 Btu/lb°F at 90 °C"
+        }
+      ],
+      "note": "At 90 °C, 50 % glycol by weight. The two tables agree exactly, so Engineering ToolBox probably copies MEGlobal's data: counted as one source."
+    },
+    {
+      "id": "oil-density",
+      "label": "Density of engine oil, hot",
+      "kind": "model-choice",
+      "value": 850,
+      "unit": "kg/m³",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No source was fetched this session. Model choice: 0.85 kg/L for a hot multigrade engine oil (about 0.87 at room temperature, falling as it warms). It only turns the engine's oil capacity into a heat capacity."
+    },
+    {
+      "id": "oil-specific-heat",
+      "label": "Specific heat of engine oil",
+      "kind": "physics",
+      "value": 2.09,
+      "unit": "kJ/(kg·K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/specific-heat-fluids-d_151.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Specific Heat of Common Liquids and Fluids\"",
+          "note": "Light Oil, 60 oF 1.8 | Light Oil, 300 oF 2.3 | Lubricating oil 2.09 (kJ/kgK)"
+        }
+      ],
+      "note": "\"Lubricating oil\"; the same table gives 2.3 for light oil at 149 °C, so hot oil holds a little more heat than this."
+    },
+    {
+      "id": "thermostat-open",
+      "label": "Coolant temperature at which the thermostat starts to open",
+      "kind": "literature",
+      "value": 80,
+      "unit": "°C",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (1994), SR20DET, LC section (hosted by sr20tuning.net)",
+          "note": "Valve opening temperature °C (°F) 76.5 (170) Maximum valve lift mm/°C (in/°F) More than 10/90 (0.39/194)"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System",
+          "note": "Thermostat | Opening temperature °C 80.5–83.5 | Full-open temperature °C 95 ... Cap valve opening pressure kPa 113–142"
+        }
+      ],
+      "method": "Factory figures found: SR20DET and VQ35DE 76.5 °C, 13B-REW 80.5-83.5 °C, S54B32 80 °C. The model takes 80 °C for all engines; the 2JZ-GTE, M54B30 and VQ35HR figures were not found."
+    },
+    {
+      "id": "thermostat-span",
+      "label": "Coolant temperature rise from the thermostat opening to fully open",
+      "kind": "literature",
+      "value": 14,
+      "unit": "K",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System",
+          "note": "Thermostat | Opening temperature °C 80.5–83.5 | Full-open temperature °C 95 ... Cap valve opening pressure kPa 113–142"
+        },
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (1994), SR20DET, LC section (hosted by sr20tuning.net)",
+          "note": "Valve opening temperature °C (°F) 76.5 (170) Maximum valve lift mm/°C (in/°F) More than 10/90 (0.39/194)"
+        }
+      ],
+      "note": "Mazda: opens 80.5-83.5 °C, fully open 95 °C (about 13 K); Nissan: opens 76.5 °C, full lift at 90 °C (13.5 K)."
+    },
+    {
+      "id": "oil-start-over-coolant",
+      "label": "How far the oil is above the coolant when the session starts",
+      "kind": "model-choice",
+      "value": 5,
+      "unit": "K",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the session starts from a warm engine at light load, with the thermostat half open and the oil a few kelvin over the coolant."
+    },
+    {
+      "id": "drift-load-low",
+      "label": "Heat-soak test: lowest load during the session",
+      "kind": "model-choice",
+      "value": 0.7,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "BUILD_PROMPT.md Section 6.2 defines the heat-soak test: \"3 minutes at 70–90% load with low airspeed\". Load is the share of full-load fuel flow at the power peak, where a drift is held."
+    },
+    {
+      "id": "drift-load-high",
+      "label": "Heat-soak test: highest load during the session",
+      "kind": "model-choice",
+      "value": 0.9,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "BUILD_PROMPT.md Section 6.2 defines the heat-soak test: \"3 minutes at 70–90% load with low airspeed\"."
+    },
+    {
+      "id": "drift-load-period",
+      "label": "Heat-soak test: time between load peaks (one transition to the next)",
+      "kind": "model-choice",
+      "value": 8,
+      "unit": "s",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: load swings between 70 and 90 % every 8 s, a transition each way. No sourced rpm or load trace of a drift run was found; the average (80 %) is what decides the result."
+    },
+    {
+      "id": "drift-duration",
+      "label": "Heat-soak test: session length",
+      "kind": "model-choice",
+      "value": 180,
+      "unit": "s",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "BUILD_PROMPT.md Section 6.2 defines the heat-soak test: \"3 minutes at 70–90% load with low airspeed\"."
+    },
+    {
+      "id": "drift-face-velocity",
+      "label": "Heat-soak test: air speed through the radiator while sliding",
+      "kind": "model-choice",
+      "value": 3,
+      "unit": "m/s",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.iieta.org/download/file/fid/64083",
+          "accessed": "2026-09-30",
+          "title": "Padmaraman, Mathivanan and Ponangi, \"Heat Dissipation Characteristics of a FSAE Racecar Radiator\", IIETA",
+          "note": "The average velocity of air downstream of the radiator ... was found to be 1.2m/s on the racecar ... This air velocity due to the radiator fan, corresponds to the car is in standstill and idling position."
+        },
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399, \"Study of Advanced Rotary Combustion Engines for Commuter Aircraft\" (Curtiss-Wright)",
+          "note": "The engine is rejecting heat at close to its maximum rate (near full fuel flow) while the aircraft is at a relatively low air speed. Maximum coolant and oil temperatures will occur during this flight phase."
+        }
+      ],
+      "method": "No measurement at drift angles exists. Model choice: 3 m/s, the bottom of the radiator test range. Sliding at 30-60° of yaw the grille no longer faces the air, so little ram air gets through; a fan alone pulls about 1.2 m/s through a small radiator at standstill (FSAE measurement). High load at low airspeed is the worst cooling case (NASA)."
+    },
+    {
+      "id": "coolant-limit",
+      "label": "Heat-soak test: coolant temperature that fails the session",
+      "kind": "model-choice",
+      "value": 115,
+      "unit": "°C",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org full text: thermostat, radiator cap and cooling fan",
+          "note": "Valve opening temperature 76 - 79°C ... Maximum valve lift 8.6 mm / 90°C ... Cap relief pressure Standard 78 - 98 kPa ... Engine coolant temperature is 100°C (212°F) or more | HI"
+        },
+        {
+          "url": "https://www.meglobal.biz/wp-content/uploads/2024/03/MEG_Guide_Rev_2024_W2.pdf",
+          "accessed": "2026-09-30",
+          "title": "MEGlobal, \"Ethylene Glycol Product Guide\" (rev. 2024), Figure 8 specific heats of aqueous ethylene glycol",
+          "note": "Specific Heats = A + BT + CT2 ... 50 wt%: A 0.81485, B 7.3219E-4, C 0.0 (Btu/lb/°F, T in °C): 0.8808 Btu/lb°F = 3.688 kJ/(kg·K) at 90 °C"
+        }
+      ],
+      "method": "Makers print no warning temperature. Model choice: 115 °C, about 10 K under the boiling point of 50 % glycol at the lowest factory cap in the roster (78 kPa: about 124.6 °C at sea level, from MEGlobal's Antoine constants), leaving room for the hotter spots in the head where boiling starts first."
+    },
+    {
+      "id": "oil-limit",
+      "label": "Heat-soak test: oil temperature that fails the session",
+      "kind": "model-choice",
+      "value": 150,
+      "unit": "°C",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719",
+          "note": "Engine oil temperature | The general operating temperature is between 175 °F (80 °C) and 250 °F (120 °C). During performance-oriented driving, do not exceed the maximum temperature of 300 °F (150 °C)."
+        }
+      ],
+      "method": "The only maker's oil limit found is BMW's for the S54 (150 °C during performance driving). The model applies it to every engine."
+    },
+    {
+      "id": "gasoline-heat-of-vaporisation",
+      "label": "Heat of vaporisation of gasoline",
+      "kind": "physics",
+      "value": 350,
+      "unit": "kJ/kg",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\", Oak Ridge National Laboratory (2016)",
+          "note": "at 25°C, the heat of vaporization of gasoline boiling-range hydrocarbons is 350 to 400 kJ/kg, while that of ethanol is 924 kJ/kg. ... Figure 1 ... Intercept=349.6 Slope=6.49 [kJ/kg vs ethanol vol%]"
+        }
+      ],
+      "note": "The bottom of ORNL's 350-400 kJ/kg for gasoline hydrocarbons, where its blend fit meets E0 (349.6 kJ/kg). Only the difference between a fuel and gasoline enters the model (charge-cooling-share)."
+    },
+    {
+      "id": "charge-cooling-share",
+      "label": "Share of the extra evaporation cooling that cools the charge, port injection",
+      "kind": "literature",
+      "value": 0.1,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2009-01-1907/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2009-01-1907, Kar, Cheng and Ishii (MIT), \"Effects of Ethanol Content on Gasohol PFI Engine Wide-Open-Throttle Operation\" (abstract)",
+          "note": "The NOx emission and knock characteristics of a PFI engine operating on ethanol/gasoline mixtures were assessed at 1500 and 2000 rpm with λ =1 under Wide-Open-Throttle condition. There was no significant charge cooling due to fuel evaporation."
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1284/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1284, Kasseris and Heywood, \"Charge Cooling Effects on Knock Limits in SI DI Engines Using Gasoline/Ethanol Blends: Part 2\" (abstract)",
+          "note": "Unlike the charge cooling benefit which is realized mostly in SI DI engines, the chemical benefit of ethanol blends exists in Port Fuel Injected (PFI) engines as well."
+        }
+      ],
+      "method": "Every engine in the roster is port-injected, where the fuel mostly evaporates off the port walls and valves: MIT measured no significant charge cooling at full throttle (SAE 2009-01-1907), and the charge-cooling benefit is realised mostly with direct injection (SAE 2012-01-1284). The model gives E85 and oxygenated race fuel 10 % of their extra evaporation heat as colder charge; their octane does the rest."
+    },
+    {
+      "id": "knock-max-retard",
+      "label": "Most spark retard a factory ECU uses before boost has to come down",
+      "kind": "model-choice",
+      "value": 15,
+      "unit": "deg",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No maker publishes its knock-control authority. Model choice: a factory ECU on too low an octane pulls up to about 10° beyond its base map (15° from MBT with the 5° the model assumes for a stock boosted map); past that, the model lowers the boost until the timing fits, as factory boost cuts do."
+    },
+    {
+      "id": "intercooler-effectiveness-aftermarket",
+      "label": "Aftermarket air-to-air intercooler effectiveness",
+      "kind": "model-choice",
+      "value": 0.8,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.mishimoto.com/engineering/2015/04/drop-intake-temperatures-drop-track-times-drop-mouths-the-ultimate-guide-for-intercooler-selection",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering, \"The Ultimate Guide For Intercooler Selection\"",
+          "note": "On average, we are able to drop temperatures in our coolers by 10%–40% compared to stock intercoolers."
+        }
+      ],
+      "method": "No measured effectiveness was found. Model choice: a larger bar-and-plate front-mount or stock-location core, above the model's factory side-mount (0.6) and front-mount (0.7) values; one maker reports 10-40 % lower outlet temperatures than stock."
+    },
+    {
+      "id": "intercooler-aftermarket-flow-scale",
+      "label": "Aftermarket intercooler design flow against the factory core's",
+      "kind": "model-choice",
+      "value": 1.6,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: an aftermarket core has about 1.6 times the factory core's flow area, so at the same airflow its pressure drop (which rises with flow squared) is about 40 % of the factory core's."
+    },
+    {
+      "id": "intercooler-pressure-drop-aftermarket",
+      "label": "Aftermarket intercooler pressure drop at its design flow",
+      "kind": "model-choice",
+      "value": 4,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice, below the factory core's 6 kPa at its design flow; together with the flow scale, about 1.6 kPa at the factory core's design flow."
+    },
+    {
+      "id": "air-filter-pressure-drop-aftermarket",
+      "label": "Aftermarket intake pressure drop at stock peak flow (turbo)",
+      "kind": "model-choice",
+      "value": 1.2,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a cone filter or open intake about halves the factory air box's 2.5 kPa at the same flow."
+    },
+    {
+      "id": "exhaust-back-pressure-cat-back",
+      "label": "Back pressure after the turbine with a cat-back exhaust",
+      "kind": "model-choice",
+      "value": 11,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a cat-back takes away the silencers but keeps the factory downpipe and catalyst, the main restrictions; 11 kPa against the factory 15 kPa at the same flow."
+    },
+    {
+      "id": "exhaust-back-pressure-turbo-back",
+      "label": "Back pressure after the turbine with a turbo-back exhaust",
+      "kind": "model-choice",
+      "value": 6,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a larger downpipe and full exhaust (with or without a high-flow catalyst), 6 kPa against the factory 15 kPa at the same flow."
+    },
+    {
+      "id": "na-intake-pressure-drop",
+      "label": "Factory intake pressure drop at peak power, naturally aspirated",
+      "kind": "model-choice",
+      "value": 2.5,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: air box, filter and air-flow meter at peak-power flow. The stock fit already includes it; only the change a freer intake makes counts."
+    },
+    {
+      "id": "na-intake-pressure-drop-aftermarket",
+      "label": "Aftermarket intake pressure drop at peak power, naturally aspirated",
+      "kind": "model-choice",
+      "value": 1.2,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a cone filter or larger air box about halves the factory drop."
+    },
+    {
+      "id": "na-exhaust-back-pressure",
+      "label": "Factory exhaust back pressure at peak power, naturally aspirated",
+      "kind": "model-choice",
+      "value": 15,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: factory manifolds or catted headers, catalysts and silencers at peak-power flow. The stock fit already includes it; only the change counts."
+    },
+    {
+      "id": "na-exhaust-back-pressure-cat-back",
+      "label": "Exhaust back pressure with a cat-back, naturally aspirated",
+      "kind": "model-choice",
+      "value": 12,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a cat-back takes away the silencers; the factory manifolds and catalysts stay."
+    },
+    {
+      "id": "na-exhaust-back-pressure-headers",
+      "label": "Exhaust back pressure with headers and a full exhaust, naturally aspirated",
+      "kind": "model-choice",
+      "value": 8,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: tubular headers (or catless or high-flow sections) and a full exhaust. Wave tuning from the headers is not modelled; it only shifts where in the rev range the gain lands."
+    },
+    {
+      "id": "turbo-default-max-pressure-ratio",
+      "label": "Top pressure ratio of an aftermarket compressor whose map isn't published",
+      "kind": "model-choice",
+      "value": 3.5,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+          "accessed": "2026-09-30",
+          "title": "Garrett: GT3582R Turbocharger (performance catalog page and compressor map)",
+          "note": "[compressor map, read by eye: choke about 69-70 lb/min where the 130,000 rpm speed line ends, near pressure ratio 2.8; surge line tops out near pressure ratio 4.0]"
+        }
+      ],
+      "method": "Model choice for a known build whose turbo has no published map: 3.5, between where Garrett's GT3582R map reaches choke at full speed (about 2.8) and the tip of its surge line (about 4.0). Street builds rarely run near either."
+    },
+    {
+      "id": "supercharger-default-choke-flow",
+      "label": "Centrifugal supercharger choke flow where the kit publishes no map",
+      "kind": "model-choice",
+      "value": 0.55,
+      "unit": "kg/s",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+          "accessed": "2026-09-30",
+          "title": "Rotrex Technical Datasheet C38 (Rev 6.4)",
+          "note": "C38-81: 0.58 kg/s max mass flow, 2.85 max pressure ratio; C38-91/92: 0.63 kg/s, 2.94"
+        }
+      ],
+      "method": "Model choice for a kit without a published map: a little under Rotrex's C38-81 (0.58 kg/s), the size used on six-cylinder street kits."
+    },
+    {
+      "id": "supercharger-default-max-pressure-ratio",
+      "label": "Centrifugal supercharger top pressure ratio where the kit publishes no map",
+      "kind": "model-choice",
+      "value": 2.8,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+          "accessed": "2026-09-30",
+          "title": "Rotrex Technical Datasheet C38 (Rev 6.4)",
+          "note": "C38-81: 0.58 kg/s max mass flow, 2.85 max pressure ratio; C38-91/92: 0.63 kg/s, 2.94"
+        }
+      ],
+      "method": "Model choice for a kit without a published map, paired with the default choke flow: a little under the C38-81's 2.85."
+    },
+    {
+      "id": "supercharger-drive-efficiency",
+      "label": "Belt and gear drive efficiency of a centrifugal supercharger",
+      "kind": "literature",
+      "value": 0.95,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://rotrex.com/wp-content/uploads/2025/11/Rotrex-Technical-Datasheet-C38-Rev6.4.pdf",
+          "accessed": "2026-09-30",
+          "title": "Rotrex Technical Datasheet C38 (Rev 6.4)",
+          "note": "max drive efficiency 97%"
+        }
+      ],
+      "method": "Rotrex gives 97 % for its traction drive at best; the model takes 95 % with the belt."
+    },
+    {
+      "id": "dyno-default-relative-humidity",
+      "label": "Relative humidity on a dyno day where the sheet prints none",
+      "kind": "model-choice",
+      "value": 0.3,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: 30 %, about 1 kPa of water vapour at 25 °C, the vapour the rating standards' dry-air references imply (SAE J1349: 99 kPa dry of 100 kPa). It only matters for sheets without a correction or with one on dry air."
     }
   ]
 }

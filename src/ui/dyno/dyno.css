@@ -716,6 +716,184 @@
   color: var(--tape);
 }
 
+/* ---- Altitude and fuel notes under their keys ------------------------ */
+
+.conditions-group {
+  display: grid;
+  gap: 0.3rem;
+}
+.conditions-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.45rem;
+  max-width: 34rem;
+  margin: 0;
+  color: var(--concrete);
+  font-weight: 500;
+  font-size: var(--step--1);
+  line-height: 1.35;
+}
+p.conditions-note {
+  display: block;
+}
+.conditions-note__field {
+  color: var(--concrete);
+}
+.conditions-note input {
+  width: 5.5rem;
+  padding: 0.3rem 0.4rem 0.25rem;
+  border: 1px solid var(--steel-600);
+  border-radius: 2px;
+  background: var(--steel-900);
+  color: var(--paper);
+  font: 500 var(--step--1) / 1 var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+.conditions-note input:focus-visible {
+  outline: 2px solid var(--signal-orange);
+  outline-offset: 1px;
+}
+.conditions-note__tune {
+  color: var(--tape);
+}
+
+.readouts-block__notes {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.15rem 0 0;
+  padding-left: 1rem;
+  color: var(--aluminium);
+  font-weight: 500;
+  font-size: var(--step--1);
+  line-height: 1.35;
+  list-style: square;
+}
+.readouts-block__notes li::marker {
+  color: var(--signal-orange);
+}
+
+/* ---- Heat-soak test: an inspection tag with an inked stamp ------------ */
+
+.soak {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.6rem 0.7rem 0.65rem;
+  border: 1px solid var(--steel-600);
+  border-left: 4px solid var(--coolant-cyan);
+  border-radius: 2px;
+  background: var(--steel-800);
+}
+.soak__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.75rem;
+}
+.soak__brief,
+.soak__verdict {
+  margin: 0.15rem 0 0;
+  color: var(--concrete);
+  font-weight: 500;
+  font-size: var(--step--1);
+  line-height: 1.35;
+}
+.soak__verdict {
+  color: var(--aluminium);
+}
+/* An ink stamp: double rule, a little crooked, the colour of what failed or held. */
+.soak-stamp {
+  display: grid;
+  justify-items: center;
+  margin: 0.1rem 0.2rem 0 0;
+  padding: 0.25rem 0.55rem 0.3rem;
+  border: 3px double currentColor;
+  border-radius: 3px;
+  transform: rotate(-5deg);
+  opacity: 0.92;
+}
+.soak-stamp--pass {
+  color: var(--coolant-cyan);
+}
+.soak-stamp--fail {
+  color: #ff5a43;
+}
+.soak-stamp__word {
+  font: 700 var(--step-2) / 0.95 var(--font-display);
+  letter-spacing: 0.04em;
+}
+.soak-stamp__when {
+  font: 500 0.66rem / 1.2 var(--font-data);
+  white-space: nowrap;
+}
+.soak-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.soak-chart__grid {
+  stroke: var(--steel-600);
+  stroke-width: 0.6;
+}
+.soak-chart__tick {
+  fill: var(--concrete);
+  font: 400 8px var(--font-data);
+}
+.soak-chart__line {
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linejoin: round;
+}
+.soak-chart__line--coolant {
+  stroke: var(--coolant-cyan);
+}
+.soak-chart__line--oil {
+  stroke: var(--tape);
+}
+.soak-chart__limit {
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  opacity: 0.75;
+}
+.soak-chart__limit--coolant {
+  stroke: var(--coolant-cyan);
+}
+.soak-chart__limit--oil {
+  stroke: var(--tape);
+}
+.soak-chart__fail {
+  stroke: #ff5a43;
+  stroke-width: 1;
+}
+.soak__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  margin: 0;
+  padding: 0;
+  color: var(--concrete);
+  font-weight: 500;
+  font-size: var(--step--1);
+  list-style: none;
+}
+.soak__key li::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+  border-top: 2px solid var(--concrete);
+}
+.soak__key-coolant::before {
+  border-top-color: var(--coolant-cyan) !important;
+}
+.soak__key-oil::before {
+  border-top-color: var(--tape) !important;
+}
+.soak__key-limit::before {
+  border-top-style: dashed !important;
+}
+
 /* ---- "How we calculate this" drawer ----------------------------------- */
 
 .manual {
@@ -835,6 +1013,34 @@
 .confidence--estimated td:nth-child(3) {
   color: var(--tape);
 }
+.manual__table--builds td:nth-child(n + 3) {
+  text-align: right;
+}
+.manual__car th {
+  padding-top: 0.8rem;
+  color: var(--tape);
+  font-weight: 600;
+  font-size: var(--step-0);
+}
+.manual__who {
+  display: block;
+  color: var(--concrete);
+  font-size: 0.7rem;
+}
+.manual__miss td:last-child {
+  color: #ff6a55;
+}
+/* Shown for the record, not counted: greyed, with the reason under the title. */
+.manual__excluded td {
+  color: var(--concrete);
+}
+.manual__why {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--concrete);
+  font-size: 0.7rem;
+  font-style: italic;
+}
 
 /* ---- Phones: a bottom sheet above the telemetry strip ----------------- */
 
@@ -880,8 +1086,13 @@
     border-color: Highlight;
   }
   .sticker,
-  .chart__tape {
+  .chart__tape,
+  .soak-stamp {
     forced-color-adjust: none;
+  }
+  .soak-chart__line,
+  .soak-chart__limit {
+    stroke: CanvasText;
   }
   .chart__trace,
   .chart__ghost {

@@ -1,7 +1,8 @@
-import type { SimTransmission, SimWeight } from '../data/sim-data';
+import type { FuelAvailability, SimCatalogue, SimTransmission, SimWeight } from '../data/sim-data';
 import type { StockCheck } from './calibrate/check';
 import type { LimitCheck } from './limits';
-import type { TrimSimulation, UserConditions } from './simulate';
+import { CUSTOM_LOCATION, pressureFor, type TrimSimulation, type UserConditions } from './simulate';
+import type { HeatSoakSample } from './thermal';
 
 /**
  * What the dyno sheet shows, as plain data: the worker posts this to the
@@ -44,6 +45,26 @@ export interface DynoReport {
   };
   calibration: StockCheck;
   conditions: UserConditions;
+  /** Where the sweep ran and on what, as the sheet's header states it. */
+  environment: {
+    locationName: string;
+    /** "about 600 m", or the custom elevation. */
+    locationLabel: string;
+    elevationM: number;
+    /** Pa, barometric. */
+    pressurePa: number;
+    fuel: {
+      id: string;
+      name: string;
+      ron: number;
+      kind: 'pump-gasoline' | 'race-gasoline' | 'e85';
+      availability: { status: FuelAvailability; summary: string };
+      /** The model assumes a tune for this fuel. */
+      tuned: boolean;
+    };
+    /** What the air and fuel do to this engine, in plain words. */
+    notes: string[];
+  };
   curve: {
     source: 'published-curve' | 'peaks';
     anchors: number[];
@@ -87,19 +108,39 @@ export interface DynoReport {
     boost?: { value: number; rpm: number };
   };
   limits?: LimitCheck[];
+  /** The 3-minute drift session; withheld with the other numbers when the stock check fails. */
+  heatSoak?: {
+    pass: boolean;
+    samples: HeatSoakSample[];
+    peakCoolant: number;
+    peakOil: number;
+    failedAt?: number;
+    failedOn?: 'coolant' | 'oil';
+    limits: { coolant: number; oil: number };
+    /** K */
+    ambient: number;
+    /** s */
+    duration: number;
+    /** Share of full load the session swings between. */
+    load: [number, number];
+    /** m/s through the radiator while sliding. */
+    faceVelocity: number;
+  };
   /** Plain-language list of the inputs that are modelled or assumed rather than published. */
   estimates: string[];
 }
 
 /** A report whose stock check passed, so it carries the simulated numbers. */
-export type PassedReport = DynoReport & Required<Pick<DynoReport, 'channels' | 'peaks' | 'limits'>>;
+export type PassedReport = DynoReport &
+  Required<Pick<DynoReport, 'channels' | 'peaks' | 'limits' | 'heatSoak'>>;
 
 export function hasNumbers(report: DynoReport): report is PassedReport {
   return (
     report.calibration.pass &&
     report.channels !== undefined &&
     report.peaks !== undefined &&
-    report.limits !== undefined
+    report.limits !== undefined &&
+    report.heatSoak !== undefined
   );
 }
 
@@ -121,8 +162,54 @@ export function gearboxLabel(t: SimTransmission): string {
   return `${String(t.ratios.length)}-speed ${GEARBOX[t.type]}`;
 }
 
-export function toReport(sim: TrimSimulation, input: UserConditions): DynoReport {
+function environmentNotes(sim: TrimSimulation, pressure: number): string[] {
+  const notes: string[] = [];
+  const kPa = `${(pressure / 1000).toFixed(1)} kPa`;
+  const boosted = sim.variant.induction !== 'naturally-aspirated';
+  if (!boosted) {
+    notes.push(
+      `Naturally aspirated: at ${kPa} the engine breathes thinner air, and power falls with it.`,
+    );
+  } else {
+    const start = sim.fit.curve.start;
+    const short = sim.run.points.filter(
+      (p) =>
+        p.rpm >= start &&
+        p.turbo !== undefined &&
+        (p.turbo.limit === 'overspeed' || p.turbo.limit === 'choke' || p.turbo.limit === 'surge'),
+    );
+    const first = short[0];
+    notes.push(
+      first
+        ? `At ${kPa} the boost control aims for the same absolute pressure as at sea level, so the turbo works harder; it runs out of headroom from ${first.rpm.toLocaleString('en-US')} rpm and boost falls there.`
+        : `At ${kPa} the boost control aims for the same absolute pressure as at sea level, and the turbo has the headroom to hold it: more boost on the gauge, the same air in the engine.`,
+    );
+  }
+  if (sim.run.points.some((p) => p.turbo?.limit === 'octane')) {
+    notes.push(
+      `${sim.fuel.name} is below what the factory calibration was rated on, and the ECU holds the boost down where knock retard runs out.`,
+    );
+  }
+  if (sim.tuned) {
+    notes.push(
+      `${sim.fuel.name} needs a tune; the model assumes one, with timing at the knock limit on this fuel and the factory boost.`,
+    );
+  }
+  return notes;
+}
+
+export function toReport(
+  sim: TrimSimulation,
+  input: UserConditions,
+  catalogue: SimCatalogue,
+): DynoReport {
   const { car, trim, variant, engine, run, ratingRun, fit, rating } = sim;
+  const k = catalogue.constants;
+  const pressure = pressureFor(input, catalogue);
+  const preset =
+    input.location === CUSTOM_LOCATION
+      ? undefined
+      : catalogue.locations.find((l) => l.id === input.location);
   const points = run.points;
   const boosted = variant.induction !== 'naturally-aspirated';
   const wheelPower = points.map((p) => p.power * sim.drivetrain.efficiency);
@@ -168,6 +255,12 @@ export function toReport(sim: TrimSimulation, input: UserConditions): DynoReport
       `No redline is published; the sweep stops at ${String(points[points.length - 1]?.rpm ?? 0)} rpm.`,
     );
   }
+  estimates.push(
+    'No maker publishes its radiator’s capacity: the heat-soak test sizes the factory cooling by rule (it holds 105 °C at full power at top speed on a 40 °C day) and assumes 3 m/s of air through the radiator while sliding.',
+  );
+  if (sim.fuel.availability.status !== 'pump-nationwide') {
+    estimates.push(`${sim.fuel.name}: ${sim.fuel.availability.summary}`);
+  }
   if (trim.weight.basis === 'unstated') {
     estimates.push('The source doesn’t say what the curb weight includes (driver or not).');
   }
@@ -182,7 +275,8 @@ export function toReport(sim: TrimSimulation, input: UserConditions): DynoReport
   }
 
   // CLAUDE.md rule 3: a trim that fails its stock check gets no simulated numbers.
-  const numbers: Partial<Pick<PassedReport, 'channels' | 'peaks' | 'limits'>> = sim.calibration.pass
+  const numbers: Partial<Pick<PassedReport, 'channels' | 'peaks' | 'limits' | 'heatSoak'>> = sim
+    .calibration.pass
     ? {
         channels: {
           rpm: points.map((p) => p.rpm),
@@ -208,6 +302,20 @@ export function toReport(sim: TrimSimulation, input: UserConditions): DynoReport
           ...(boostPeak ? { boost: boostPeak } : {}),
         },
         limits: run.checks,
+        heatSoak: {
+          pass: sim.heatSoak.pass,
+          samples: sim.heatSoak.samples,
+          peakCoolant: sim.heatSoak.peakCoolant,
+          peakOil: sim.heatSoak.peakOil,
+          ...(sim.heatSoak.failedAt !== undefined && sim.heatSoak.failedOn
+            ? { failedAt: sim.heatSoak.failedAt, failedOn: sim.heatSoak.failedOn }
+            : {}),
+          limits: sim.heatSoak.limits,
+          ambient: sim.heatSoak.ambient,
+          duration: k['drift-duration'],
+          load: [k['drift-load-low'], k['drift-load-high']],
+          faceVelocity: k['drift-face-velocity'],
+        },
       }
     : {};
 
@@ -247,6 +355,21 @@ export function toReport(sim: TrimSimulation, input: UserConditions): DynoReport
     },
     calibration: sim.calibration,
     conditions: input,
+    environment: {
+      locationName: preset?.name ?? 'Custom',
+      locationLabel: preset?.label ?? `${Math.round(input.elevationM).toLocaleString('en-US')} m`,
+      elevationM: preset?.elevation ?? input.elevationM,
+      pressurePa: pressure,
+      fuel: {
+        id: sim.fuel.id,
+        name: sim.fuel.name,
+        ron: sim.fuel.ron,
+        kind: sim.fuel.kind,
+        availability: sim.fuel.availability,
+        tuned: sim.tuned,
+      },
+      notes: environmentNotes(sim, pressure),
+    },
     curve: {
       source: fit.curve.source,
       anchors: fit.curve.anchors,

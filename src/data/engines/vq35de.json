@@ -281,6 +281,33 @@
     ],
     "note": "Drain and refill with a filter change. Without a filter change 4.4 L; a dry (rebuilt) engine takes 5.4 L (2004 service manual, LU-9 and LU-16)."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 8.7,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org full text",
+          "note": "REFILL CAPACITIES | ... Engine coolant ( With reservoir tank ) | 8.7 | 9 - 1/4 qt"
+        }
+      ]
+    },
+    "oilCooler": {
+      "value": "oil-to-water",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org full text",
+          "note": "14. Disconnect oil cooler water hoses, and remove oil cooler water pipe mounting bolt. Refer to LU-10, \"OIL COOLER\" ."
+        }
+      ]
+    }
+  },
   "variants": [
     {
       "id": "z33-jdm",

@@ -3,6 +3,7 @@ import type { LimitCheck, LimitStatus } from '../../sim/limits';
 import { hasNumbers, type DynoReport, type PassedReport } from '../../sim/report';
 import { renderChart, type ChartHandle } from './chart';
 import { h } from './dom';
+import { heatSoakBlock } from './heat-soak';
 import {
   num,
   percentText,
@@ -227,16 +228,31 @@ function readouts(report: PassedReport, units: DisplayUnits): HTMLElement {
       ),
     );
   }
-  const c = report.conditions;
   return h(
     'section',
     { class: 'readouts-block', attrs: { 'aria-label': 'Peak figures at your conditions' } },
-    h('p', {
-      class: 'readouts-block__at',
-      text: `At ${temperatureText(c.temperatureC + 273.15, units.temperature)} ambient, ${num(c.pressureKPa, 1)} kPa, ${String(c.fuelRon)} RON fuel`,
-    }),
+    h('p', { class: 'readouts-block__at', text: conditionsText(report, units) }),
     h('dl', { class: 'readout-grid' }, ...cells),
+    report.environment.notes.length > 0
+      ? h(
+          'ul',
+          { class: 'readouts-block__notes' },
+          ...report.environment.notes.map((n) => h('li', { text: n })),
+        )
+      : null,
   );
+}
+
+/** "At 45 °C in Riyadh (about 600 m, 94.2 kPa) on PG95": where and on what the sweep ran. */
+export function conditionsText(report: DynoReport, units: DisplayUnits): string {
+  const e = report.environment;
+  const where =
+    e.locationName === 'Custom'
+      ? `at ${e.locationLabel}`
+      : `in ${e.locationName} (${e.locationLabel}`;
+  const pressure = `${num(e.pressurePa / 1000, 1)} kPa`;
+  const place = e.locationName === 'Custom' ? `${where} (${pressure})` : `${where}, ${pressure})`;
+  return `At ${temperatureText(report.conditions.temperatureC + 273.15, units.temperature)} ${place} on ${e.fuel.name}`;
 }
 
 function legend(report: PassedReport): HTMLElement {
@@ -402,6 +418,7 @@ export function buildSheet(report: DynoReport, units: DisplayUnits): Sheet {
     legend(report),
     cursorLine,
     curveTable(report, units),
+    heatSoakBlock(report, units),
     limitsBlock(report.limits),
   );
   const estimates = estimatesBlock(report);
@@ -446,6 +463,10 @@ export function summaryText(
       report.peaks.torque.value,
       units.torque,
     )}`,
-    at: ` at ${temperatureText(report.conditions.temperatureC + 273.15, units.temperature)}`,
+    at: ` at ${temperatureText(report.conditions.temperatureC + 273.15, units.temperature)}, ${
+      report.environment.locationName === 'Custom'
+        ? report.environment.locationLabel
+        : report.environment.locationName
+    }`,
   };
 }

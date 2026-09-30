@@ -73,8 +73,8 @@ export function activeTurbo(system: TurboSystem, rpm: number): TurboUnit {
 export interface BoostDemand {
   rpm: number;
   air: Atmosphere;
-  /** Pa gauge the wastegate and ECU aim for. */
-  targetBoost: number;
+  /** Pa absolute the wastegate and ECU aim for (never below the ambient pressure). */
+  targetPressure: number;
   /** Engine dry-air mass flow, kg/s, at a manifold state. */
   airflow(manifoldPressure: number, chargeTemperature: number, backPressureRatio: number): number;
   /** Turbine inlet temperature, K, at a charge state. */
@@ -83,8 +83,8 @@ export interface BoostDemand {
   exhaustPerAir: number;
 }
 
-/** What held the boost where it ended up. */
-export type BoostLimit = 'target' | 'spool' | 'surge' | 'choke' | 'overspeed';
+/** What held the boost where it ended up ('octane': the fuel couldn't take more, engine/model.ts). */
+export type BoostLimit = 'target' | 'spool' | 'surge' | 'choke' | 'overspeed' | 'octane';
 
 export interface BoostState {
   /** Pa absolute */
@@ -202,7 +202,7 @@ export function boostStateAt(
  * operating point falls off the map.
  */
 export function solveBoost(plant: BoostPlant, demand: BoostDemand, k: ModelConstants): BoostState {
-  const target = demand.air.pressure + demand.targetBoost;
+  const target = Math.max(demand.targetPressure, demand.air.pressure);
   const floor = demand.air.pressure * 0.85;
   const at = (p: number) => boostStateAt(plant, demand, p, k);
   let state = at(target);

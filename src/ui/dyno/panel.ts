@@ -1,7 +1,8 @@
 import type { SimClient } from '../../app/sim-client';
 import type { CatalogueIndex } from '../../app/sim-protocol';
+import { standardPressure } from '../../sim/atmosphere';
 import type { DynoReport } from '../../sim/report';
-import type { UserConditions } from '../../sim/simulate';
+import { CUSTOM_LOCATION, type UserConditions } from '../../sim/simulate';
 import { byId, h, keyRow } from './dom';
 import {
   DEFAULT_UNITS,
@@ -44,10 +45,21 @@ interface DynoState {
   carId: string;
   trimId: string;
   ambientC: number;
-  fuelRon: number;
+  /** A location preset id, or `custom`. */
+  location: string;
+  /** m, for the custom location. */
+  elevationM: number;
+  fuelId: string;
   units: DisplayUnits;
   /** Undefined until the user toggles: then it follows the screen size. */
   open: boolean | undefined;
+}
+
+/** The fuel's key: the octane for pump grades, the kind for the rest. */
+function fuelKey(f: { kind: string; ron: number }): string {
+  if (f.kind === 'race-gasoline') return 'Race';
+  if (f.kind === 'e85') return 'E85';
+  return String(f.ron);
 }
 
 function pick<T extends string>(value: unknown, options: readonly T[], fallback: T): T {
@@ -99,7 +111,9 @@ export class DynoPanel {
       carId: typeof stored.carId === 'string' ? stored.carId : DEFAULT_CAR,
       trimId: typeof stored.trimId === 'string' ? stored.trimId : DEFAULT_TRIM,
       ambientC: typeof stored.ambientC === 'number' ? stored.ambientC : 45,
-      fuelRon: typeof stored.fuelRon === 'number' ? stored.fuelRon : 95,
+      location: typeof stored.location === 'string' ? stored.location : '',
+      elevationM: typeof stored.elevationM === 'number' ? stored.elevationM : 0,
+      fuelId: typeof stored.fuelId === 'string' ? stored.fuelId : '',
       units: {
         power: pick(units.power, POWER_UNITS, DEFAULT_UNITS.power),
         torque: pick(units.torque, TORQUE_UNITS, DEFAULT_UNITS.torque),
@@ -140,8 +154,15 @@ export class DynoPanel {
       this.state.trimId = car.trims[0]?.id ?? '';
     if (!index.ambientPresets.includes(this.state.ambientC))
       this.state.ambientC = index.defaults.temperatureC;
-    if (!index.pumpFuels.some((f) => f.ron === this.state.fuelRon))
-      this.state.fuelRon = index.defaults.fuelRon;
+    const known =
+      this.state.location === CUSTOM_LOCATION ||
+      index.locations.some((l) => l.id === this.state.location);
+    if (!known) {
+      this.state.location = index.defaults.location;
+      this.state.elevationM = index.defaults.elevationM;
+    }
+    if (!index.fuels.some((f) => f.id === this.state.fuelId))
+      this.state.fuelId = index.defaults.fuelId;
     this.buildControls();
     this.buildFoot();
     await this.run();
@@ -174,10 +195,85 @@ export class DynoPanel {
     const defaults = this.index?.defaults;
     return {
       temperatureC: this.state.ambientC,
-      pressureKPa: defaults?.pressureKPa ?? 101.325,
+      location: this.state.location,
+      elevationM: this.state.elevationM,
       relativeHumidity: defaults?.relativeHumidity ?? 0.1,
-      fuelRon: this.state.fuelRon,
+      fuelId: this.state.fuelId,
     };
+  }
+
+  /** The line under the altitude keys: the preset's elevation and pressure, or the custom input. */
+  private altitudeLine(): HTMLElement {
+    const index = this.index;
+    const line = h('div', { class: 'conditions-note', id: 'dyno-altitude-note' });
+    if (!index) return line;
+    const kPa = (pa: number) => `${num(pa / 1000, 1)} kPa`;
+    if (this.state.location !== CUSTOM_LOCATION) {
+      const preset = index.locations.find((l) => l.id === this.state.location);
+      if (preset) line.textContent = `${preset.name}, ${preset.label}: ${kPa(preset.pressure)}`;
+      return line;
+    }
+    const [low, high] = index.elevationRange;
+    const input = h('input', {
+      id: 'dyno-elevation',
+      attrs: {
+        type: 'number',
+        inputmode: 'numeric',
+        min: String(low),
+        max: String(high),
+        step: '10',
+        value: String(Math.round(this.state.elevationM)),
+        'aria-describedby': 'dyno-elevation-pressure',
+      },
+    });
+    const pressure = h('span', { id: 'dyno-elevation-pressure', attrs: { 'aria-live': 'polite' } });
+    const show = (m: number) => {
+      pressure.textContent = `above sea level: ${kPa(standardPressure(m, index.atmosphere))}`;
+    };
+    show(this.state.elevationM);
+    input.addEventListener('input', () => {
+      const m = Number(input.value);
+      if (Number.isFinite(m)) show(Math.min(high, Math.max(low, m)));
+    });
+    input.addEventListener('change', () => {
+      const m = Number(input.value);
+      if (!Number.isFinite(m) || input.value === '') {
+        input.value = String(Math.round(this.state.elevationM));
+        return;
+      }
+      const clamped = Math.min(high, Math.max(low, Math.round(m)));
+      input.value = String(clamped);
+      this.state.elevationM = clamped;
+      show(clamped);
+      this.changed(true);
+    });
+    line.append(
+      h(
+        'label',
+        { class: 'conditions-note__field', attrs: { for: 'dyno-elevation' } },
+        'Elevation',
+      ),
+      input,
+      h('span', { text: 'm' }),
+      pressure,
+    );
+    return line;
+  }
+
+  /** The line under the fuel keys: where it's sold, and whether it needs a tune. */
+  private fuelLine(): HTMLElement {
+    const fuel = this.index?.fuels.find((f) => f.id === this.state.fuelId);
+    return h(
+      'p',
+      { class: 'conditions-note', id: 'dyno-fuel-note' },
+      fuel ? `${fuel.name}, ${String(fuel.ron)} RON. ${fuel.availability.summary}` : '',
+      fuel?.needsTune
+        ? h('span', {
+            class: 'conditions-note__tune',
+            text: ' Needs a tune; the model assumes one.',
+          })
+        : null,
+    );
   }
 
   private changed(rerun: boolean): void {
@@ -238,21 +334,55 @@ export class DynoPanel {
         this.changed(true);
       },
     );
+    const altitudeNote = this.altitudeLine();
+    const altitude = keyRow(
+      'dyno-location',
+      'Altitude',
+      [
+        ...index.locations.map((l) => ({
+          value: l.id,
+          label: l.name,
+          title: `${l.label}, ${num(l.pressure / 1000, 1)} kPa`,
+        })),
+        { value: CUSTOM_LOCATION, label: 'Custom', title: 'Type an elevation' },
+      ],
+      this.state.location,
+      (value) => {
+        this.state.location = value;
+        const preset = index.locations.find((l) => l.id === value);
+        if (preset) this.state.elevationM = preset.elevation;
+        this.changed(true);
+        this.refreshNotes();
+        if (value === CUSTOM_LOCATION) document.getElementById('dyno-elevation')?.focus();
+      },
+    );
     const fuel = keyRow(
       'dyno-fuel',
-      'Fuel, RON',
-      index.pumpFuels.map((f) => ({ value: f.ron, label: String(f.ron), title: f.name })),
-      this.state.fuelRon,
+      'Fuel',
+      index.fuels.map((f) => ({ value: f.id, label: fuelKey(f), title: f.name })),
+      this.state.fuelId,
       (value) => {
-        this.state.fuelRon = value;
+        this.state.fuelId = value;
         this.changed(true);
+        this.refreshNotes();
       },
     );
     this.controls.replaceChildren(
       h('label', { class: 'field' }, h('span', { text: 'Car' }), carSelect),
       h('label', { class: 'field' }, h('span', { text: 'Trim' }), trimSelect),
-      h('div', { class: 'dyno__conditions' }, ambient, fuel),
+      h(
+        'div',
+        { class: 'dyno__conditions' },
+        ambient,
+        h('div', { class: 'conditions-group' }, altitude, altitudeNote),
+        h('div', { class: 'conditions-group' }, fuel, this.fuelLine()),
+      ),
     );
+  }
+
+  private refreshNotes(): void {
+    document.getElementById('dyno-altitude-note')?.replaceWith(this.altitudeLine());
+    document.getElementById('dyno-fuel-note')?.replaceWith(this.fuelLine());
   }
 
   private buildFoot(): void {
@@ -321,7 +451,9 @@ export class DynoPanel {
   private openManual(): void {
     if (!this.index) return;
     if (this.manualUnits !== this.state.units) {
-      this.manualBody.replaceChildren(...buildManual(this.index, this.state.units));
+      this.manualBody.replaceChildren(
+        ...buildManual(this.index, this.state.units, this.client.knownBuilds()),
+      );
       this.manualUnits = this.state.units;
     }
     this.manual.showModal();

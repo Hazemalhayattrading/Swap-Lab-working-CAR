@@ -1,4 +1,4 @@
-import type { ModelConstants, SimRatingStandard } from '../data/sim-data';
+import type { ModelConstants, SimRatingStandard, SimStandardAtmosphere } from '../data/sim-data';
 
 /** Air at the engine's intake, SI. */
 export interface Atmosphere {
@@ -54,4 +54,16 @@ export function ratingAtmosphere(standard: SimRatingStandard): Atmosphere {
     pressure,
     vapourPressure: standard.vapourPressure,
   };
+}
+
+/**
+ * Barometric pressure at an elevation in the International Standard Atmosphere
+ * (troposphere): p = p0 (1 - L h / T0)^n, Pa, with the sea-level values, lapse
+ * rate L and exponent n = g0 M / (R L) of standards/locations.json.
+ */
+export function standardPressure(elevation: number, isa: SimStandardAtmosphere): number {
+  return (
+    isa.seaLevelPressure *
+    Math.pow(1 - (isa.lapseRate * elevation) / isa.seaLevelTemperature, isa.exponent)
+  );
 }

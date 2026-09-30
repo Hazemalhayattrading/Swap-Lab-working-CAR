@@ -1,0 +1,861 @@
+{
+  "$comment": "Chassis dynos and their correction standards (BUILD_PROMPT 6.5), for normalising known-build sheets (src/sim/dyno-correction.ts). readingFactor: what the dyno reads for a car a Dynojet (inertia roller) reads 1.00 on, same car and correction; the model's wheel power is a Dynojet-type reading. Research: docs/research/part2b/dyno-normalisation.json.",
+  "dynos": [
+    {
+      "id": "dynojet",
+      "name": "Dynojet (inertia roller)",
+      "kind": "inertia-roller",
+      "readingFactor": {
+        "value": 1.0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+            "accessed": "2026-09-30",
+            "title": "Road & Track (Matt Farah), \"We Put 4 Dynos to the Test With a Ford Mustang Dark Horse\" (syndicated, 2 Apr 2026)",
+            "note": "It was 74 degrees and sunny ... Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. [Dynojet 248X 425.7 whp; Dynapack 430.9; SuperFlow AutoDyn 420.8; Mustang AWD 465, on a car Ford rates at 500 hp.]"
+          }
+        ],
+        "note": "The reference by definition. Check on the model's own chain: R&T's Dynojet 248X read 425.7 whp from a car rated 500 hp (0.851); the model's manual crank-to-wheel chain is 0.98 x 0.94 x 0.92 = 0.848."
+      },
+      "defaultCorrection": {
+        "value": "sae-j1349",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/138/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP 7 User Guide, part 98118103 v02 (08/2006)",
+            "note": "p. 2-2: 'Data can either be viewed as measured (“uncorrected”) or corrected to standard atmospheric conditions using WinPEP.' p. 7-8: 'Default Correction Factor — specifies the correction factor.' Figure 7-6 shows 'Default Correction Factor: SAE'."
+          },
+          {
+            "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+            "accessed": "2026-09-30",
+            "title": "Dynojet University, \"Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing\" (4 Jul 2025)",
+            "note": "SAE ... corrects the numbers to a standard of 29.235 inches of mercury (approximately 99 kPa) at 77°F (25°C) with 0% humidity. ... For a tuner, it's crucial to always correct your dyno runs to SAE."
+          }
+        ],
+        "method": "No factory default is published. WinPEP 7's settings screenshot shows 'Default Correction Factor: SAE' and Dynojet tells tuners to always correct to SAE, so a sheet that doesn't say is taken as SAE. STD would read about 3-4 % higher."
+      }
+    },
+    {
+      "id": "dynapack",
+      "name": "Dynapack (hydraulic hub dyno)",
+      "kind": "hub",
+      "readingFactor": {
+        "value": 1.0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra High Boost\": one RWD Supra on five dynos",
+            "note": "Peak values (read from the table image): Dynojet 741.98 @7000 rpm; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000."
+          },
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra Low Boost\"",
+            "note": "At 8000 rpm (peak): Dynojet 590.75, Dynapack 585.12, Mustang 521.67, Rototest 551.97, SuperFlow 496.40."
+          },
+          {
+            "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+            "accessed": "2026-09-30",
+            "title": "Road & Track (Matt Farah), \"We Put 4 Dynos to the Test With a Ford Mustang Dark Horse\" (syndicated, 2 Apr 2026)",
+            "note": "It was 74 degrees and sunny ... Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. [Dynojet 248X 425.7 whp; Dynapack 430.9; SuperFlow AutoDyn 420.8; Mustang AWD 465, on a car Ford rates at 500 hp.]"
+          }
+        ],
+        "note": "Rear-drive cars: DSPORT's Supra 0.990 (low boost) and 1.012 (high boost) of the Dynojet; R&T's Dark Horse 1.012. On an AWD car DSPORT measured 0.90-0.95, so this holds for rear drive only."
+      },
+      "defaultCorrection": {
+        "value": "sae-j1349",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "Not published on Dynapack's site; SAE J1349 assumed as the common chassis-dyno choice. Sheets that print their correction use it instead."
+      }
+    },
+    {
+      "id": "mustang",
+      "name": "Mustang (eddy-current load roller)",
+      "kind": "load-roller",
+      "readingFactor": {
+        "value": 0.885,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra High Boost\": one RWD Supra on five dynos",
+            "note": "Peak values (read from the table image): Dynojet 741.98 @7000 rpm; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000."
+          },
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra Low Boost\"",
+            "note": "At 8000 rpm (peak): Dynojet 590.75, Dynapack 585.12, Mustang 521.67, Rototest 551.97, SuperFlow 496.40."
+          },
+          {
+            "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+            "accessed": "2026-09-30",
+            "title": "HP Academy forum, \"Horsepower Dyno Readings, USA compared to AUS, et. al.\"",
+            "note": "Mike McGinnis: 'The updated PCI units and newer Powerdyne software needed about 12-13% added to get to Dynojet numbers ...' Andre Simon: 'the most common dynos in Australia tend to be Mainline and DD which conveniently seem to read somewhat similar ... I put it between 15-18% myself but that's a moving target ...'"
+          },
+          {
+            "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+            "accessed": "2026-09-30",
+            "title": "Road & Track (Matt Farah), \"We Put 4 Dynos to the Test With a Ford Mustang Dark Horse\" (syndicated, 2 Apr 2026)",
+            "note": "It was 74 degrees and sunny ... Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. [Dynojet 248X 425.7 whp; Dynapack 430.9; SuperFlow AutoDyn 420.8; Mustang AWD 465, on a car Ford rates at 500 hp.]"
+          }
+        ],
+        "method": "Same-car comparisons disagree by machine and mode: DSPORT's rear-drive Supra 0.883 and 0.840, HP Academy's tutor 0.885-0.893 (12-13 % added to match), but R&T's rear-drive Dark Horse 1.092 on an AWD Mustang. 0.885, the middle of the rear-drive results, is used; expect about ±10 %."
+      },
+      "defaultCorrection": {
+        "value": "sae-j1349",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+            "accessed": "2026-09-30",
+            "title": "Mustang Dynamometer, PowerDyne PC user manual (2017-05-22)",
+            "note": "Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option."
+          }
+        ],
+        "method": "PowerDyne offers SAE J1349 (Jun90) as its 'Use SAE Corrections' option; its factory state isn't stated, so an unstated Mustang sheet is taken as SAE."
+      }
+    },
+    {
+      "id": "dyno-dynamics",
+      "name": "Dyno Dynamics (eddy-current roller)",
+      "kind": "load-roller",
+      "readingFactor": {
+        "value": 0.85,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+            "accessed": "2026-09-30",
+            "title": "HP Academy forum, \"Horsepower Dyno Readings, USA compared to AUS, et. al.\"",
+            "note": "Mike McGinnis: 'The updated PCI units and newer Powerdyne software needed about 12-13% added to get to Dynojet numbers ...' Andre Simon: 'the most common dynos in Australia tend to be Mainline and DD which conveniently seem to read somewhat similar ... I put it between 15-18% myself but that's a moving target ...'"
+          },
+          {
+            "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/mainline-vs-dynapack-hp-numbers/",
+            "accessed": "2026-09-30",
+            "title": "HP Academy forum, \"Mainline vs Dynapack hp numbers\"",
+            "note": "Andre Simon: 'From my own testing it seems that the mainline reads about 15-18% lower than Dynapack.' Orlando Bello: 'my DD also real like 15% lower than Dynojet'"
+          }
+        ],
+        "method": "Tuners' rules of thumb only: about 15 % below a Dynojet (a DD owner) and 'somewhat similar' to Mainline. Shootout classes move the same car's reading by about 15 %, so a DD sheet needs its class."
+      },
+      "defaultCorrection": {
+        "value": "sae-j1349",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "Dyno Dynamics' own correction modes (shootout, ATMC) are not documented publicly; SAE J1349 is assumed only so an unstated sheet has a reference air, and such sheets are not used for the calibration."
+      }
+    },
+    {
+      "id": "mainline",
+      "name": "Mainline (eddy-current roller)",
+      "kind": "load-roller",
+      "readingFactor": {
+        "value": 0.835,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.hpacademy.com/forum/off-topic-discussion/show/horsepower-dyno-readings-usa-compared-to-aus-et-al/",
+            "accessed": "2026-09-30",
+            "title": "HP Academy forum, \"Horsepower Dyno Readings, USA compared to AUS, et. al.\"",
+            "note": "Mike McGinnis: 'The updated PCI units and newer Powerdyne software needed about 12-13% added to get to Dynojet numbers ...' Andre Simon: 'the most common dynos in Australia tend to be Mainline and DD which conveniently seem to read somewhat similar ... I put it between 15-18% myself but that's a moving target ...'"
+          },
+          {
+            "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/mainline-vs-dynapack-hp-numbers/",
+            "accessed": "2026-09-30",
+            "title": "HP Academy forum, \"Mainline vs Dynapack hp numbers\"",
+            "note": "Andre Simon: 'From my own testing it seems that the mainline reads about 15-18% lower than Dynapack.' Orlando Bello: 'my DD also real like 15% lower than Dynojet'"
+          }
+        ],
+        "method": "An HP Academy tutor who owns a Mainline and a Dynapack puts the Mainline 15-18 % below a Dynojet (and the same below a Dynapack); 0.835 is the middle. A Supra tuner in the research quotes x1.18 to convert Mainline to Dynojet (0.847). No controlled test was found."
+      },
+      "defaultCorrection": {
+        "value": "sae-j607-std",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "Mainline's software offers several standards; the Mainline sheets found in the research print 'SAE J607', so an unstated one is taken as J607."
+      }
+    },
+    {
+      "id": "superflow",
+      "name": "SuperFlow AutoDyn (eddy-current roller)",
+      "kind": "load-roller",
+      "readingFactor": {
+        "value": 0.91,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra High Boost\": one RWD Supra on five dynos",
+            "note": "Peak values (read from the table image): Dynojet 741.98 @7000 rpm; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000."
+          },
+          {
+            "url": "https://www.aol.com/articles/put-4-dynos-test-ford-130000191.html",
+            "accessed": "2026-09-30",
+            "title": "Road & Track (Matt Farah), \"We Put 4 Dynos to the Test With a Ford Mustang Dark Horse\" (syndicated, 2 Apr 2026)",
+            "note": "It was 74 degrees and sunny ... Fifth gear is the 1:1 ratio in the Dark Horse's Tremec, so all pulls were done in fifth. All four readings were calibrated using the same SAE weather correction factor. [Dynojet 248X 425.7 whp; Dynapack 430.9; SuperFlow AutoDyn 420.8; Mustang AWD 465, on a car Ford rates at 500 hp.]"
+          },
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ],
+        "method": "DSPORT's rear-drive Supra read 0.840-0.848 of the Dynojet, R&T's Dark Horse 0.988, and SuperFlow's own comparison channel multiplies its SAE wheel power by 1.10 by default (0.91). 0.91 is used; expect about ±8 %."
+      },
+      "defaultCorrection": {
+        "value": "sae-j1349",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ],
+        "note": "SuperFlow's default SAE channel is a plain density ratio without the 85 % friction term; near 25 °C it agrees with Dynojet's form, and at 45 °C it reads about 0.6 % lower."
+      }
+    },
+    {
+      "id": "rototest",
+      "name": "Rototest (hub dyno)",
+      "kind": "hub",
+      "readingFactor": {
+        "value": 0.92,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-006-SupraHighBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra High Boost\": one RWD Supra on five dynos",
+            "note": "Peak values (read from the table image): Dynojet 741.98 @7000 rpm; Dynapack 750.97 @7500; Mustang 623.33 @7500; Rototest 675.77 @7000; SuperFlow 629.30 @8000."
+          },
+          {
+            "url": "https://dsportmag.com/wp-content/uploads/135-Tech-DynoTests-005-SupraLowBoost.jpg",
+            "accessed": "2026-09-30",
+            "title": "DSPORT Dyno Tech Guide (2016), table \"Supra Low Boost\"",
+            "note": "At 8000 rpm (peak): Dynojet 590.75, Dynapack 585.12, Mustang 521.67, Rototest 551.97, SuperFlow 496.40."
+          }
+        ],
+        "note": "DSPORT: 0.934 (low boost) and 0.911 (high boost) of the Dynojet on the rear-drive Supra, and 0.910-0.925 on the AWD car."
+      },
+      "defaultCorrection": {
+        "value": "eec-80-1269",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "Not published; Rototest is a Swedish maker whose European customers correct to EEC 80/1269 (ISO 1585 form). Assumed only so an unstated sheet has a reference air."
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "id": "sae-j1349",
+      "name": "SAE J1349 (Jun90)",
+      "referenceTemperature": {
+        "value": 25,
+        "unit": "°C",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+            "accessed": "2026-09-30",
+            "title": "Dynojet University, \"Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing\" (4 Jul 2025)",
+            "note": "SAE ... corrects the numbers to a standard of 29.235 inches of mercury (approximately 99 kPa) at 77°F (25°C) with 0% humidity. ... For a tuner, it's crucial to always correct your dyno runs to SAE."
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 99,
+        "unit": "kPa",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+            "accessed": "2026-09-30",
+            "title": "Dynojet University, \"Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing\" (4 Jul 2025)",
+            "note": "SAE ... corrects the numbers to a standard of 29.235 inches of mercury (approximately 99 kPa) at 77°F (25°C) with 0% humidity. ... For a tuner, it's crucial to always correct your dyno runs to SAE."
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ],
+        "note": "Dynojet's manual prints 29.22 inHg; its training blog and other sources give 29.235 inHg (99 kPa)."
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://www.dynojetuniversity.com/pages/blog?p=understanding-dyno-correction-factors-sae-std-din-and-smoothing",
+            "accessed": "2026-09-30",
+            "title": "Dynojet University, \"Understanding Dyno Correction Factors (SAE, STD, DIN) and Smoothing\" (4 Jul 2025)",
+            "note": "SAE ... corrects the numbers to a standard of 29.235 inches of mercury (approximately 99 kPa) at 77°F (25°C) with 0% humidity. ... For a tuner, it's crucial to always correct your dyno runs to SAE."
+          }
+        ]
+      },
+      "scale": {
+        "value": 1.18,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ]
+      },
+      "offset": {
+        "value": 0.18,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ]
+      },
+      "pressureExponent": {
+        "value": 1,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ]
+      },
+      "temperatureExponent": {
+        "value": 0.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ]
+      },
+      "formula": {
+        "value": "cf = 1.18 x (99 / pd) x sqrt(T / 298) - 0.18 (pd dry pressure in kPa, T in K): the 85 % mechanical-efficiency form",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/144/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP User Guide for the Motorcycle Dynamometer, document 98128101 rev. C (2000), p. 9-5",
+            "note": "Dynojet's WinPEP ... software uses the SAE's latest correction formula (June 1990). This formula assumes a mechanical efficiency of 85% ... CF= 1.18 x (29.22/Bdo) x √(To+460 / 537) - 0.18 Where: To = Intake air temperature in degrees F Bdo = Dry ambient absolute barometric pressure"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist, \"Dyno Correction Factor\" (wahiduddin.net)",
+            "note": "SAE J1349 JUN90: cf = 1.180 · [(990/Pd) · ((Tc + 273)/298)^0.5] − 0.180 ... includes an assumed mechanical efficiency of 85% (equation read from the page image)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sae-j607-std",
+      "name": "SAE J607 (STD)",
+      "referenceTemperature": {
+        "value": 60,
+        "unit": "°F",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          },
+          {
+            "url": "https://university.fuelmotousa.com/article/dyno-corrections-factors-sae-vs-std/",
+            "accessed": "2026-09-30",
+            "title": "Fuel Moto University, \"Dyno Correction Factors SAE vs STD\"",
+            "note": "STD: '60°F, 29.92″ barometer, and 0% humidity'; 'STD correction results in 2-4% higher numbers than SAE.'"
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 29.92,
+        "unit": "inHg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          },
+          {
+            "url": "https://university.fuelmotousa.com/article/dyno-corrections-factors-sae-vs-std/",
+            "accessed": "2026-09-30",
+            "title": "Fuel Moto University, \"Dyno Correction Factors SAE vs STD\"",
+            "note": "STD: '60°F, 29.92″ barometer, and 0% humidity'; 'STD correction results in 2-4% higher numbers than SAE.'"
+          }
+        ]
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          },
+          {
+            "url": "https://university.fuelmotousa.com/article/dyno-corrections-factors-sae-vs-std/",
+            "accessed": "2026-09-30",
+            "title": "Fuel Moto University, \"Dyno Correction Factors SAE vs STD\"",
+            "note": "STD: '60°F, 29.92″ barometer, and 0% humidity'; 'STD correction results in 2-4% higher numbers than SAE.'"
+          }
+        ]
+      },
+      "scale": {
+        "value": 1,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ]
+      },
+      "offset": {
+        "value": 0,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ]
+      },
+      "pressureExponent": {
+        "value": 1,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ]
+      },
+      "temperatureExponent": {
+        "value": 0.5,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ]
+      },
+      "formula": {
+        "value": "cf = (29.92 / pd) x sqrt(T / 519.7 °R): no friction term, so it reads about 3-4 % above SAE J1349",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          },
+          {
+            "url": "https://performanceparts.ford.com/download/pdfs/EnginePerformanceTechTips.pdf",
+            "accessed": "2026-09-30",
+            "title": "Ford Racing Performance Parts, \"Dynamometer Testing and Ford Racing Calibrations\"",
+            "note": "SAE J1349 and SAE J607 (sometimes known as “STD” on some dynos) ... with SAE J1349 typically about 4% lower than SAE J607."
+          }
+        ]
+      }
+    },
+    {
+      "id": "din-70020",
+      "name": "DIN 70020",
+      "referenceTemperature": {
+        "value": 20,
+        "unit": "°C",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 1013,
+        "unit": "mbar",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "pressureBasis": {
+        "value": "total",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "scale": {
+        "value": 1,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "offset": {
+        "value": 0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "pressureExponent": {
+        "value": 1,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "temperatureExponent": {
+        "value": 0.5,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      },
+      "formula": {
+        "value": "cf = (1013 / p) x sqrt(T / 293) (p total pressure in mbar, T in K); no humidity term",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          },
+          {
+            "url": "https://www.scielo.br/j/jbsmse/a/PYvWVw3p3Zbt7syV5zXtSdN/?lang=en",
+            "accessed": "2026-09-30",
+            "title": "Sodré and Soares, \"Comparison of engine power correction factors for varying atmospheric conditions\", J. Braz. Soc. Mech. Sci. & Eng.",
+            "note": "This method for power correction, recommended by DIN70020 standard (DIN, 1986), does not account for changes in air humidity. (p0 = 1.01325 bar, T0 = 293 K)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eec-80-1269",
+      "name": "EEC 80/1269 (as amended; the ISO 1585 form)",
+      "referenceTemperature": {
+        "value": 298,
+        "unit": "K",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 99,
+        "unit": "kPa",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "scale": {
+        "value": 1,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "offset": {
+        "value": 0,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "pressureExponent": {
+        "value": 1.2,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "temperatureExponent": {
+        "value": 0.6,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      },
+      "formula": {
+        "value": "cf = (99 / ps)^1.2 x (T / 298)^0.6 (ps dry pressure in kPa, T in K)",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.uk/eudr/1980/1269/pdfs/eudr_19801269_1999-12-31_en.pdf",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC, consolidated text to 31.12.1999 (legislation.gov.uk), p. 12",
+            "note": "6.2.1. Temperature (To): 298 K (25 ºC) 6.2.2. Dry pressure (pso): 99 kPa ... 6.4.1. Naturally aspirated or supercharged positive-ignition engine — Factor αa: αa = (99/ps)^1,2 · (T/298)^0,6 ... 0,93 ≤ αa ≤ 1,07"
+          },
+          {
+            "url": "https://www.maha.de/restriction/check-asset/support_documents/dokumente/Betriebsanleitungen/04%20Leistungsmesstechnik/BA052301-en.pdf",
+            "accessed": "2026-09-30",
+            "title": "MAHA, LPS 3000 operating instructions BA052301-en (2023), p. 36",
+            "note": "DIN 70020 Ka = (1013 / p [mbar]) · (T [K] / 293)^0,5 ... e.g. ambient air pressure p = 936 mbar, ambient temperature T = 17°C = 290K ... Ka = 1.07671. EEC 80/1269, ISO 1585, SAE J1349 and JIS D1001: Ka = (990 / p [mbar])^1,2 · (T [K] / 298)^0,6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "uncorrected",
+      "name": "Uncorrected (as measured)",
+      "formula": {
+        "value": "cf = 1: the power at the day's air, so the sheet needs that air to be compared",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.dynojet.com/amfile/file/download/file/138/category/290/",
+            "accessed": "2026-09-30",
+            "title": "Dynojet, WinPEP 7 User Guide, part 98118103 v02 (08/2006)",
+            "note": "p. 2-2: 'Data can either be viewed as measured (“uncorrected”) or corrected to standard atmospheric conditions using WinPEP.' p. 7-8: 'Default Correction Factor — specifies the correction factor.' Figure 7-6 shows 'Default Correction Factor: SAE'."
+          },
+          {
+            "url": "https://superflow.com/wp-content/themes/SuperFlow2020/downloads/SF-AD30-2WD_Chassis_Dyno_Config_File_Desc.pdf",
+            "accessed": "2026-09-30",
+            "title": "SuperFlow, AutoDyn-30-2WD Chassis Dyno Configuration File Description, pub. 200507 rev. 2 (June 2020)",
+            "note": "102 - STPCor factor return(((459.7+AirInT)/519.7^0.5*(29.92/Baro_P-Vap_P))); ... the Standard Temperature and Pressure (STP) J607 power correction factor ... what the measured torque and power would be at 60° Fahrenheit and 29.92 inches of mercury barometric pressure. ... 100 - WhlPwr ... No atmospheric correction is applied. ... Channel 78 ... is defaulted to a 10% (default value 1.10) correction factor [for comparison to other dynamometer systems]."
+          }
+        ]
+      }
+    }
+  ]
+}

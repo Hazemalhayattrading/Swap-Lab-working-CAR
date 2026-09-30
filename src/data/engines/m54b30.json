@@ -270,6 +270,22 @@
     ],
     "note": "Oil and filter change, rear-drive 330i. The 330xi's pan takes about 7.5 L."
   },
+  "cooling": {
+    "coolantCapacity": {
+      "value": 8.4,
+      "unit": "L",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7304367/7304367.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW 3 Series Sedan Owner's Manual (320i/325i/330i/xi), Part No. 01 41 0 156 168 (c) 09/01, p. 143 Capacities",
+          "note": "Cooling system including heater circuit quarts (liters) approx. 8.9 (approx. 8.4)"
+        }
+      ],
+      "note": "The manual gives one figure for all E46 sedan engines."
+    }
+  },
   "variants": [
     {
       "id": "e46-eudm",

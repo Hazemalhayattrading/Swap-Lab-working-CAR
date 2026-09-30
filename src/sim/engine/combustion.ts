@@ -59,22 +59,43 @@ export interface KnockReference {
 }
 
 /**
- * Spark retard the knock control ends up at. The stock ECU's map is taken as
- * right at the knock limit on its rating fuel. A hotter charge, more manifold
+ * How the ignition timing is set.
+ * - `stock-map`: a factory ECU. Its map is taken as right at the knock limit
+ *   on its rating fuel; knock control only takes timing away, so a better
+ *   fuel gains nothing (no adaptive advance).
+ * - `knock-limited`: a tune set up on a dyno for this fuel and these parts,
+ *   which runs every point at its knock limit, never past MBT.
+ */
+export type Ignition = 'stock-map' | 'knock-limited';
+
+/** Pa. Russ's octane-requirement slopes come from naturally aspirated engines, near one atmosphere. */
+const ONE_ATMOSPHERE = 101_325;
+
+/**
+ * Spark retard from MBT that knock leaves. A hotter charge, more manifold
  * pressure or a lower octane raises the octane the engine needs; each octane
- * number short costs `knock-retard-per-octane` degrees. A better fuel doesn't
- * advance a stock map past its own base timing (no adaptive advance).
+ * number short costs `knock-retard-per-octane` degrees, and each one to spare
+ * gives it back, down to MBT, when the ignition is `knock-limited`.
+ *
+ * Pressure counts per fraction, not per kPa: autoignition delay is a power law
+ * in pressure (Douaud & Eyzat), so Russ's slope at one atmosphere, 3.5 ON per
+ * 10 kPa, becomes 3.5 ON per 10 % more manifold pressure. A straight line
+ * would ask for 30-40 degrees of retard at 18 psi on 91 AKI, far beyond what
+ * tuners run (model/assumptions.json, knock-octane-per-kpa).
  */
 export function knockRetard(
   ref: KnockReference,
   state: { chargeTemperature: number; manifoldPressure: number; ron: number },
   k: ModelConstants,
+  ignition: Ignition = 'stock-map',
 ): number {
+  const perFraction = (k['knock-octane-per-kpa'] * ONE_ATMOSPHERE) / 1000;
   const needed =
     k['knock-octane-per-kelvin'] * (state.chargeTemperature - ref.chargeTemperature) +
-    (k['knock-octane-per-kpa'] * (state.manifoldPressure - ref.manifoldPressure)) / 1000;
+    perFraction * Math.log(state.manifoldPressure / ref.manifoldPressure);
   const shortfall = needed - (state.ron - ref.ron);
-  return ref.retard + Math.max(0, k['knock-retard-per-octane'] * shortfall);
+  const retard = ref.retard + k['knock-retard-per-octane'] * shortfall;
+  return ignition === 'knock-limited' ? Math.max(0, retard) : Math.max(ref.retard, retard);
 }
 
 /**

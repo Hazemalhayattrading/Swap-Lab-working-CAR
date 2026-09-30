@@ -1,0 +1,1010 @@
+{
+  "$comment": "Known real builds of the 350Z (BUILD_PROMPT 6.5), all on Z Car Garage's Dynojet in San Jose with STD correction: one dyno, one shop, several cars. Chosen before running the model (docs/research-notes/part2b.md). Excluded: supercharged cars (boost not printed), cam builds, SuperFlow and Dyno Dynamics sheets whose values were read off small images, and owner-reported figures without sheets. Research: docs/research/part2b/known-builds-nissan-350z-z33.json.",
+  "car": "nissan-350z-z33",
+  "builds": [
+    {
+      "id": "zcg-2003-stock",
+      "title": "Stock 2003 350Z (VQ35DE, 287 hp)",
+      "trim": "usdm-base-coupe-6mt-my2003-2004",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2018-07",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+                "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "described": "2003 350Z before any engine parts (the baseline for the next two builds)."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 245.0,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 237.42,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+          "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+          "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+        }
+      ],
+      "notes": "Date is the blog post's. The post calls it a car 'waiting to be modified' rather than stock; the parts listed were fitted after this run. Gearbox inferred as 6MT (the owner took UpRev's manual-only launch option)."
+    },
+    {
+      "id": "zcg-2003-intake-spacer-catback",
+      "title": "Same 2003 350Z with a POP charger intake, plenum spacer and Bassani cat-back",
+      "trim": "usdm-base-coupe-6mt-my2003-2004",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2018-07",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "cat-back",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ],
+          "note": "JWT POP charger cone filter in place of the air box."
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+                "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "described": "JWT POP charger intake, Motordyne 5/16-inch plenum spacer, Bassani cat-back, stock ECU."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 256.78,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 239.87,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+              "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+          "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Baseline to Mods\" (Dynojet)",
+          "note": "DYNOJET RESEARCH / Z Car Garage - 140 Archer St San Jose, CA 95112 ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.00 Max Torque = 237.42 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87"
+        }
+      ],
+      "notes": "The model has no input for the plenum spacer; its gain has to come from the intake and cat-back, so the model should read a little low here."
+    },
+    {
+      "id": "zcg-2003-intake-spacer-catback-uprev",
+      "title": "Same 2003 350Z with the bolt-ons and an UpRev tune",
+      "trim": "usdm-base-coupe-6mt-my2003-2004",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2018-07",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "cat-back",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ],
+          "note": "UpRev reflash of the factory ECU, tuned on the dyno."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+                "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+              "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+            }
+          ]
+        },
+        "described": "JWT POP charger, Motordyne plenum spacer, Bassani cat-back and an UpRev dyno tune."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 267.22,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Mods to UpRev Final\" (Dynojet)",
+              "note": "CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87 ... RunFile_008.drf Max Power = 267.22 Max Torque = 252.19"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 252.19,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Mods to UpRev Final\" (Dynojet)",
+              "note": "CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87 ... RunFile_008.drf Max Power = 267.22 Max Torque = 252.19"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Mods to UpRev Final\" (Dynojet)",
+              "note": "CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87 ... RunFile_008.drf Max Power = 267.22 Max Torque = 252.19"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Mods to UpRev Final\" (Dynojet)",
+              "note": "CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87 ... RunFile_008.drf Max Power = 267.22 Max Torque = 252.19"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage, San Jose): \"Rick's 350z\" (13 Jul 2018)",
+          "note": "He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo: JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. ... On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline"
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Mods to UpRev Final\" (Dynojet)",
+          "note": "CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 256.78 Max Torque = 239.87 ... RunFile_008.drf Max Power = 267.22 Max Torque = 252.19"
+        }
+      ],
+      "notes": "What the tune changed (timing, fuel, cam timing) isn't published; the model's tune only moves the spark to the knock limit."
+    },
+    {
+      "id": "zcg-2004-roadster-intake",
+      "title": "2004 350Z Roadster 6MT with a POP charger intake",
+      "trim": "usdm-enthusiast-roadster-6mt-my2004",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2021-11",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+                "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "described": "JWT POP charger intake (and sway bars), 47,000 miles, stock ECU."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 245.53,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 242.18,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+          "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+          "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+        }
+      ],
+      "notes": "Grade not stated; every 2004 Roadster 6MT has the same engine and gearbox. Date is the blog post's."
+    },
+    {
+      "id": "zcg-2004-roadster-intake-uprev",
+      "title": "Same 2004 Roadster with an UpRev tune",
+      "trim": "usdm-enthusiast-roadster-6mt-my2004",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2021-11",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "intake": {
+          "value": "free-flow",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "ecu": {
+          "value": "tuned",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ],
+          "note": "UpRev dyno tune."
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+                "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+              "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+            }
+          ]
+        },
+        "described": "JWT POP charger intake and an UpRev dyno tune."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 254.27,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 250.45,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage): \"Datsun Destiny: Christine's 2004 Nissan 350Z Roadster\" (17 Nov 2021)",
+          "note": "her 2004 Nissan 350Z 6MT Roadster ... Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear ... Icing on the cake was a dyno tune."
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Baseline to Final UpRev\" (Dynojet)",
+          "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 245.53 Max Torque = 242.18 ... RunFile_010.drf Max Power = 254.27 Max Torque = 250.45"
+        }
+      ]
+    },
+    {
+      "id": "zcg-2008-nismo-stock",
+      "title": "2008 Nismo 350Z (VQ35HR) before its supercharger",
+      "trim": "usdm-nismo-coupe-6mt-my2008",
+      "who": "Z Car Garage (San Jose)",
+      "date": "2021",
+      "modifications": {
+        "intercooler": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+              "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+            }
+          ],
+          "note": "Naturally aspirated: no intercooler."
+        },
+        "exhaust": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+              "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+            }
+          ]
+        },
+        "intake": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+              "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+            }
+          ]
+        },
+        "ecu": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+              "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+            }
+          ]
+        },
+        "fuel": {
+          "kind": "pump-gasoline",
+          "ron": {
+            "value": 95,
+            "confidence": "estimated",
+            "sources": [
+              {
+                "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+                "accessed": "2026-09-30",
+                "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+                "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+              },
+              {
+                "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+                "accessed": "2026-09-30",
+                "title": "U.S. Energy Information Administration, \"Gasoline explained: octane in depth\"",
+                "note": "Premium (the highest octane fuel—generally 91–94) ... (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+              },
+              {
+                "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+                "accessed": "2026-09-30",
+                "title": "ORNL/TM-2016/42, \"Summary of High-Octane, Mid-Level Ethanol Blends Study\" (2016)",
+                "note": "the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel"
+              }
+            ],
+            "method": "Z Car Garage doesn't print the fuel. California premium is 91 AKI, taken as 95 RON (the rule standards/fuels.json uses for US ratings)."
+          }
+        },
+        "camshafts": {
+          "value": "stock",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+              "accessed": "2026-09-30",
+              "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+              "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+            }
+          ]
+        },
+        "described": "Original-owner 2008 Nismo 350Z, 52,000 miles, no engine parts mentioned before the supercharger."
+      },
+      "result": {
+        "wheelPower": {
+          "value": 295.07,
+          "unit": "hp",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Stillen Supercharger\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 295.07 Max Torque = 259.95"
+            }
+          ]
+        },
+        "wheelTorque": {
+          "value": 259.95,
+          "unit": "lb-ft",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Stillen Supercharger\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 295.07 Max Torque = 259.95"
+            }
+          ]
+        },
+        "dyno": {
+          "value": "dynojet",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Stillen Supercharger\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 295.07 Max Torque = 259.95"
+            }
+          ]
+        },
+        "dynoModel": "Dynojet (WinPEP)",
+        "correction": {
+          "value": "sae-j607-std",
+          "confidence": "single-source",
+          "sources": [
+            {
+              "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+              "accessed": "2026-09-30",
+              "title": "Z Car Garage dyno sheet \"Baseline to Stillen Supercharger\" (Dynojet)",
+              "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 295.07 Max Torque = 259.95"
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage): \"Brad's Stillen-Supercharged Nismo 350Z\" (29 Oct 2021)",
+          "note": "Brad L is the original owner of this 2008 Nismo 350z #1188. ... With 52k miles on the odometer we installed a CARB-legal Stillen supercharger"
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+          "accessed": "2026-09-30",
+          "title": "Z Car Garage dyno sheet \"Baseline to Stillen Supercharger\" (Dynojet)",
+          "note": "DYNOJET RESEARCH ... CF: STD Smoothing: 5 ... RunFile_001.drf Max Power = 295.07 Max Torque = 259.95"
+        }
+      ],
+      "notes": "The post doesn't say 'stock', but lists no parts before the supercharger. The sheet's image folder is dated July 2021."
+    }
+  ]
+}
