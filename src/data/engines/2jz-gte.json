@@ -582,6 +582,38 @@
         ],
         "note": "Owner-club figure, not a Toyota specification. Toyota does not publish stock boost in the JDM catalogues. The same page puts the factory boost cut at about 16 psi."
       },
+      "turboChangeover": {
+        "value": 4000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://2jz.se/application/files/1614/3781/4822/New_MKiV_Features.pdf",
+            "accessed": "2026-09-30",
+            "title": "Toyota Supra (JZA80) New Car Features, 1993, US edition - 2JZ-GTE control valves and operation (2jz.se copy)",
+            "note": "\"Exhaust Bypass Valve: Integrated into the No. 2 turbocharger, this valve controls the boost pressure of the entire system by bypassing the exhaust gas from the No. 2 turbocharger during a single-turbocharger boost operation (when only the No. 1 turbocharger is boosting).\" Toyota gives no rpm: the start of No. 2 is determined by engine speed and varied by load."
+          },
+          {
+            "url": "https://forums.linkecu.com/blogs/entry/1-how-to-get-factory-turbos-working-sequentially-with-link-ecus/",
+            "accessed": "2026-09-30",
+            "title": "Link Engine Management, \"How to get factory turbo's working sequentially with Link ECU's\" (2JZ tuning tips blog)",
+            "note": "Seen as a search summary only: \"At <4k rpm the EBV (Exhaust Bypass Valve) is working as a wastegate for the no1 turbo, and a prespool for the no 2. At >4k rpm the second turbo is online, meaning both the EGV (Exhaust Gas Valve) and IGV (Intake Gas Valve) are open.\""
+          },
+          {
+            "url": "https://www.toymods.org.au/forums/threads/47226-Checking-2JZGTE-Sequential-System",
+            "accessed": "2026-09-30",
+            "title": "toymods.org.au forum, \"Checking 2JZGTE Sequential System\"",
+            "note": "Seen as a search summary only (the page returned HTTP 503): \"The exhaust bypass valve opens at 3.5k rpm to allow the second turbo to prespool. | At about 4000 rpm, and after the EBV has opened, the ECU energises the EGCV VSV to open the EGCV\"."
+          },
+          {
+            "url": "https://projectjdm.org/blog/engine-2jz-gte-deep-dive",
+            "accessed": "2026-09-30",
+            "title": "Project JDM, \"Toyota 2JZ-GTE deep dive\"",
+            "note": "Seen as a search summary only: \"Below 3,600 rpm: Only the front turbocharger (CT20A #1) is operational. | At 3,600-4,000 rpm, a pre-boost transition phase begins. | Above 4,000 rpm: Both turbos operate in parallel.\""
+          }
+        ],
+        "note": "Toyota prints no changeover rpm. Three tuner and enthusiast sources agree on about 4,000 rpm, but each was seen only as a search summary, so this counts as single-source. The sources describe the system generally, not one market."
+      },
       "intercooler": {
         "value": "air-to-air-side",
         "confidence": "verified",
@@ -977,6 +1009,38 @@
           "notes": "Sequential pair. Ceramic turbine wheels on the Japanese turbos (Wikipedia: 'ceramic for Japanese models'; NZ club: 'Ceramic (exhaust side only)'), which are known to shed blades at raised boost. NZ club: turbine 60/48 mm, compressor 62/37 mm (inducer/exducer; a second table on the same page says 62/39 mm), A/R 0.42."
         }
       ],
+      "turboChangeover": {
+        "value": 4000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://2jz.se/application/files/1614/3781/4822/New_MKiV_Features.pdf",
+            "accessed": "2026-09-30",
+            "title": "Toyota Supra (JZA80) New Car Features, 1993, US edition - 2JZ-GTE control valves and operation (2jz.se copy)",
+            "note": "\"Exhaust Bypass Valve: Integrated into the No. 2 turbocharger, this valve controls the boost pressure of the entire system by bypassing the exhaust gas from the No. 2 turbocharger during a single-turbocharger boost operation (when only the No. 1 turbocharger is boosting).\" Toyota gives no rpm: the start of No. 2 is determined by engine speed and varied by load."
+          },
+          {
+            "url": "https://forums.linkecu.com/blogs/entry/1-how-to-get-factory-turbos-working-sequentially-with-link-ecus/",
+            "accessed": "2026-09-30",
+            "title": "Link Engine Management, \"How to get factory turbo's working sequentially with Link ECU's\" (2JZ tuning tips blog)",
+            "note": "Seen as a search summary only: \"At <4k rpm the EBV (Exhaust Bypass Valve) is working as a wastegate for the no1 turbo, and a prespool for the no 2. At >4k rpm the second turbo is online, meaning both the EGV (Exhaust Gas Valve) and IGV (Intake Gas Valve) are open.\""
+          },
+          {
+            "url": "https://www.toymods.org.au/forums/threads/47226-Checking-2JZGTE-Sequential-System",
+            "accessed": "2026-09-30",
+            "title": "toymods.org.au forum, \"Checking 2JZGTE Sequential System\"",
+            "note": "Seen as a search summary only (the page returned HTTP 503): \"The exhaust bypass valve opens at 3.5k rpm to allow the second turbo to prespool. | At about 4000 rpm, and after the EBV has opened, the ECU energises the EGCV VSV to open the EGCV\"."
+          },
+          {
+            "url": "https://projectjdm.org/blog/engine-2jz-gte-deep-dive",
+            "accessed": "2026-09-30",
+            "title": "Project JDM, \"Toyota 2JZ-GTE deep dive\"",
+            "note": "Seen as a search summary only: \"Below 3,600 rpm: Only the front turbocharger (CT20A #1) is operational. | At 3,600-4,000 rpm, a pre-boost transition phase begins. | Above 4,000 rpm: Both turbos operate in parallel.\""
+          }
+        ],
+        "note": "Toyota prints no changeover rpm. Three tuner and enthusiast sources agree on about 4,000 rpm, but each was seen only as a search summary, so this counts as single-source. The sources describe the system generally, not one market."
+      },
       "intercooler": {
         "value": "air-to-air-side",
         "confidence": "verified",
@@ -1258,6 +1322,38 @@
           }
         ],
         "note": "Toyota Motor Sales' own figure for the US Turbo, printed in the 1993 and 1998 dealer product guides (two Toyota documents on one hosting site, so one source); read as gauge boost. The repair manual's overboost fail-safe (DTC 34) stops fuel injection when manifold absolute pressure stays at 200 kPa (2.0 kgf/cm², 29 psi absolute, roughly 14 psi of boost at sea level) or more for 2 s with the throttle open 20° or more above 2,400 rpm (US Supra repair manual, 2JZ-GTE Engine Troubleshooting, p. EG-546, archive.org item manualzilla-id-6877352)."
+      },
+      "turboChangeover": {
+        "value": 4000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://2jz.se/application/files/1614/3781/4822/New_MKiV_Features.pdf",
+            "accessed": "2026-09-30",
+            "title": "Toyota Supra (JZA80) New Car Features, 1993, US edition - 2JZ-GTE control valves and operation (2jz.se copy)",
+            "note": "\"Exhaust Bypass Valve: Integrated into the No. 2 turbocharger, this valve controls the boost pressure of the entire system by bypassing the exhaust gas from the No. 2 turbocharger during a single-turbocharger boost operation (when only the No. 1 turbocharger is boosting).\" Toyota gives no rpm: the start of No. 2 is determined by engine speed and varied by load."
+          },
+          {
+            "url": "https://forums.linkecu.com/blogs/entry/1-how-to-get-factory-turbos-working-sequentially-with-link-ecus/",
+            "accessed": "2026-09-30",
+            "title": "Link Engine Management, \"How to get factory turbo's working sequentially with Link ECU's\" (2JZ tuning tips blog)",
+            "note": "Seen as a search summary only: \"At <4k rpm the EBV (Exhaust Bypass Valve) is working as a wastegate for the no1 turbo, and a prespool for the no 2. At >4k rpm the second turbo is online, meaning both the EGV (Exhaust Gas Valve) and IGV (Intake Gas Valve) are open.\""
+          },
+          {
+            "url": "https://www.toymods.org.au/forums/threads/47226-Checking-2JZGTE-Sequential-System",
+            "accessed": "2026-09-30",
+            "title": "toymods.org.au forum, \"Checking 2JZGTE Sequential System\"",
+            "note": "Seen as a search summary only (the page returned HTTP 503): \"The exhaust bypass valve opens at 3.5k rpm to allow the second turbo to prespool. | At about 4000 rpm, and after the EBV has opened, the ECU energises the EGCV VSV to open the EGCV\"."
+          },
+          {
+            "url": "https://projectjdm.org/blog/engine-2jz-gte-deep-dive",
+            "accessed": "2026-09-30",
+            "title": "Project JDM, \"Toyota 2JZ-GTE deep dive\"",
+            "note": "Seen as a search summary only: \"Below 3,600 rpm: Only the front turbocharger (CT20A #1) is operational. | At 3,600-4,000 rpm, a pre-boost transition phase begins. | Above 4,000 rpm: Both turbos operate in parallel.\""
+          }
+        ],
+        "note": "Toyota prints no changeover rpm. Three tuner and enthusiast sources agree on about 4,000 rpm, but each was seen only as a search summary, so this counts as single-source. The sources describe the system generally, not one market."
       },
       "intercooler": {
         "value": "air-to-air-side",
@@ -1647,6 +1743,38 @@
           "notes": "Sequential pair with steel turbine wheels (export). NZ club: turbine 52/44 mm, compressor 58/39 mm (inducer/exducer), A/R 0.53."
         }
       ],
+      "turboChangeover": {
+        "value": 4000,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://2jz.se/application/files/1614/3781/4822/New_MKiV_Features.pdf",
+            "accessed": "2026-09-30",
+            "title": "Toyota Supra (JZA80) New Car Features, 1993, US edition - 2JZ-GTE control valves and operation (2jz.se copy)",
+            "note": "\"Exhaust Bypass Valve: Integrated into the No. 2 turbocharger, this valve controls the boost pressure of the entire system by bypassing the exhaust gas from the No. 2 turbocharger during a single-turbocharger boost operation (when only the No. 1 turbocharger is boosting).\" Toyota gives no rpm: the start of No. 2 is determined by engine speed and varied by load."
+          },
+          {
+            "url": "https://forums.linkecu.com/blogs/entry/1-how-to-get-factory-turbos-working-sequentially-with-link-ecus/",
+            "accessed": "2026-09-30",
+            "title": "Link Engine Management, \"How to get factory turbo's working sequentially with Link ECU's\" (2JZ tuning tips blog)",
+            "note": "Seen as a search summary only: \"At <4k rpm the EBV (Exhaust Bypass Valve) is working as a wastegate for the no1 turbo, and a prespool for the no 2. At >4k rpm the second turbo is online, meaning both the EGV (Exhaust Gas Valve) and IGV (Intake Gas Valve) are open.\""
+          },
+          {
+            "url": "https://www.toymods.org.au/forums/threads/47226-Checking-2JZGTE-Sequential-System",
+            "accessed": "2026-09-30",
+            "title": "toymods.org.au forum, \"Checking 2JZGTE Sequential System\"",
+            "note": "Seen as a search summary only (the page returned HTTP 503): \"The exhaust bypass valve opens at 3.5k rpm to allow the second turbo to prespool. | At about 4000 rpm, and after the EBV has opened, the ECU energises the EGCV VSV to open the EGCV\"."
+          },
+          {
+            "url": "https://projectjdm.org/blog/engine-2jz-gte-deep-dive",
+            "accessed": "2026-09-30",
+            "title": "Project JDM, \"Toyota 2JZ-GTE deep dive\"",
+            "note": "Seen as a search summary only: \"Below 3,600 rpm: Only the front turbocharger (CT20A #1) is operational. | At 3,600-4,000 rpm, a pre-boost transition phase begins. | Above 4,000 rpm: Both turbos operate in parallel.\""
+          }
+        ],
+        "note": "Toyota prints no changeover rpm. Three tuner and enthusiast sources agree on about 4,000 rpm, but each was seen only as a search summary, so this counts as single-source. The sources describe the system generally, not one market."
+      },
       "intercooler": {
         "value": "air-to-air-side",
         "confidence": "verified",

@@ -1,0 +1,1006 @@
+{
+  "$comment": "Every number the simulation assumes, with its source or its reasoning (src/data/schema/model.ts). Car and engine facts live in cars/ and engines/.",
+  "assumptions": [
+    {
+      "id": "air-gas-constant",
+      "label": "Gas constant of dry air",
+      "kind": "physics",
+      "value": 287.05,
+      "unit": "J/(kg·K)",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gas_constant",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, \"Gas constant\" (specific gas constant for dry air)",
+          "note": "R_specific for dry air: 287.052874 J⋅kg−1⋅K−1"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/individual-universal-gas-constant-d_588.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Gases - Individual and Universal Gas Constants\"",
+          "note": "Air | A mixture | 28.9647 | 287.05 ... Water vapor | H2O | 18.015 | 461.52"
+        }
+      ]
+    },
+    {
+      "id": "vapour-gas-constant",
+      "label": "Gas constant of water vapour",
+      "kind": "physics",
+      "value": 461.52,
+      "unit": "J/(kg·K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/individual-universal-gas-constant-d_588.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Gases - Individual and Universal Gas Constants\"",
+          "note": "Air | A mixture | 28.9647 | 287.05 ... Water vapor | H2O | 18.015 | 461.52"
+        }
+      ]
+    },
+    {
+      "id": "air-cp",
+      "label": "Heat capacity of air at constant pressure",
+      "kind": "physics",
+      "value": 1005,
+      "unit": "J/(kg·K)",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://patents.google.com/patent/US8931271B2/en",
+          "accessed": "2026-09-30",
+          "title": "US 8931271 B2, \"Method for determining a position set point of a by-pass actuator, intended for a turbosupercharger\"",
+          "note": "Cpt, the specific heat capacity of the exhaust gas at constant pressure is equal to 1136 J/kg/K ... γt ... is equal to 1.34 ... Cpc, the specific heat capacity of the intake air at constant pressure is equal to 1005 J/kg/K ... γc ... is equal to 1.4"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/air-specific-heat-capacity-d_705.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox, \"Air - Specific Heat vs. Temperature at Constant Pressure\"",
+          "note": "300 K (26.9 °C): cp 1.006 kJ/kg K"
+        }
+      ],
+      "note": "The patent prints 1005 J/(kg·K); Engineering ToolBox 1.006 kJ/(kg·K) at 300 K."
+    },
+    {
+      "id": "air-gamma",
+      "label": "Heat capacity ratio of air",
+      "kind": "physics",
+      "value": 1.4,
+      "unit": "ratio",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Heat_capacity_ratio",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, \"Heat capacity ratio\" (table of gases)",
+          "note": "Dry air | 20 | 1.400"
+        },
+        {
+          "url": "https://patents.google.com/patent/US8931271B2/en",
+          "accessed": "2026-09-30",
+          "title": "US 8931271 B2, \"Method for determining a position set point of a by-pass actuator, intended for a turbosupercharger\"",
+          "note": "Cpt, the specific heat capacity of the exhaust gas at constant pressure is equal to 1136 J/kg/K ... γt ... is equal to 1.34 ... Cpc, the specific heat capacity of the intake air at constant pressure is equal to 1005 J/kg/K ... γc ... is equal to 1.4"
+        }
+      ]
+    },
+    {
+      "id": "exhaust-cp",
+      "label": "Heat capacity of exhaust gas at constant pressure",
+      "kind": "literature",
+      "value": 1136,
+      "unit": "J/(kg·K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://patents.google.com/patent/US8931271B2/en",
+          "accessed": "2026-09-30",
+          "title": "US 8931271 B2, \"Method for determining a position set point of a by-pass actuator, intended for a turbosupercharger\"",
+          "note": "Cpt, the specific heat capacity of the exhaust gas at constant pressure is equal to 1136 J/kg/K ... γt ... is equal to 1.34 ... Cpc, the specific heat capacity of the intake air at constant pressure is equal to 1005 J/kg/K ... γc ... is equal to 1.4"
+        }
+      ]
+    },
+    {
+      "id": "exhaust-gamma",
+      "label": "Heat capacity ratio of exhaust gas",
+      "kind": "literature",
+      "value": 1.34,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://patents.google.com/patent/US8931271B2/en",
+          "accessed": "2026-09-30",
+          "title": "US 8931271 B2, \"Method for determining a position set point of a by-pass actuator, intended for a turbosupercharger\"",
+          "note": "Cpt, the specific heat capacity of the exhaust gas at constant pressure is equal to 1136 J/kg/K ... γt ... is equal to 1.34 ... Cpc, the specific heat capacity of the intake air at constant pressure is equal to 1005 J/kg/K ... γc ... is equal to 1.4"
+        }
+      ]
+    },
+    {
+      "id": "gasoline-lhv",
+      "label": "Lower heating value of ethanol-free gasoline",
+      "kind": "literature",
+      "value": 43.2,
+      "unit": "MJ/kg",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.concawe.eu/wp-content/uploads/2017/01/rpt_13-13-2014-00668-01-e.pdf",
+          "accessed": "2026-09-30",
+          "title": "CONCAWE report no. 13/13, \"Assessment of the impact of ethanol content in gasoline on fuel consumption\" (Dec 2013), Table 1",
+          "note": "Key physical properties of gasoline (Unleaded Gasoline 95RON) and ethanol ... Density (kg/litre) 0.745 0.794 ... Lower Heating Value (MJ/kg) 43.2 26.8 ... Stoichiometric Air-Fuel (A/F) ratio (AFR) 14.57 8.94"
+        },
+        {
+          "url": "https://courses.grainger.illinois.edu/npre470/sp2018/web/Lower_and_Higher_Heating_Values_of_Gas_Liquid_and_Solid_Fuels.pdf",
+          "accessed": "2026-09-30",
+          "title": "Biomass Energy Data Book, \"Lower and Higher Heating Values of Gas, Liquid and Solid Fuels\" (GREET 1.8d.1)",
+          "note": "Conventional gasoline 116,090 18,679 43.448 124,340 20,007 46.536 2,819"
+        }
+      ],
+      "note": "CONCAWE 43.2 MJ/kg (EU 95 RON); GREET 43.448 MJ/kg (US conventional gasoline). The lower figure is used; no Saudi-specific value was found, and an MTBE blend would sit slightly lower."
+    },
+    {
+      "id": "gasoline-stoich-afr",
+      "label": "Stoichiometric air-fuel ratio of ethanol-free gasoline",
+      "kind": "literature",
+      "value": 14.57,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.concawe.eu/wp-content/uploads/2017/01/rpt_13-13-2014-00668-01-e.pdf",
+          "accessed": "2026-09-30",
+          "title": "CONCAWE report no. 13/13, \"Assessment of the impact of ethanol content in gasoline on fuel consumption\" (Dec 2013), Table 1",
+          "note": "Key physical properties of gasoline (Unleaded Gasoline 95RON) and ethanol ... Density (kg/litre) 0.745 0.794 ... Lower Heating Value (MJ/kg) 43.2 26.8 ... Stoichiometric Air-Fuel (A/F) ratio (AFR) 14.57 8.94"
+        }
+      ],
+      "note": "CONCAWE 14.57 for EU 95 RON; tuning references round it to 14.7 (HP Tuners). It depends on the fuel's H/C ratio and oxygenates."
+    },
+    {
+      "id": "gasoline-density",
+      "label": "Gasoline density at 15 °C",
+      "kind": "literature",
+      "value": 745,
+      "unit": "kg/m³",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.concawe.eu/wp-content/uploads/2017/01/rpt_13-13-2014-00668-01-e.pdf",
+          "accessed": "2026-09-30",
+          "title": "CONCAWE report no. 13/13, \"Assessment of the impact of ethanol content in gasoline on fuel consumption\" (Dec 2013), Table 1",
+          "note": "Key physical properties of gasoline (Unleaded Gasoline 95RON) and ethanol ... Density (kg/litre) 0.745 0.794 ... Lower Heating Value (MJ/kg) 43.2 26.8 ... Stoichiometric Air-Fuel (A/F) ratio (AFR) 14.57 8.94"
+        }
+      ],
+      "note": "EN 228 allows 720-775 kg/m³."
+    },
+    {
+      "id": "wot-lambda-na",
+      "label": "Full-load lambda, naturally aspirated",
+      "kind": "literature",
+      "value": 0.87,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.hptuners.com/articles/air-fuel-ratios-lambda-and-stoichiometry-explained/",
+          "accessed": "2026-09-30",
+          "title": "HP Tuners, \"Air-Fuel Ratios, Lambda, and Stoichiometry Explained\" (2024-06-15)",
+          "note": "For pure gasoline, this ideal ratio is 14.7:1. ... For naturally aspirated engines, a gasoline AFR of 12.8:1 to 13:1 is typically optimal for maximum torque and horsepower. ... A gasoline AFR of 11.5:1 (Lambda 0.78 to 0.8) is often used."
+        }
+      ],
+      "note": "HP Tuners gives 12.8-13.0:1 for peak torque and power (lambda 0.87-0.88 at 14.7:1). No factory figure was found."
+    },
+    {
+      "id": "wot-lambda-turbo",
+      "label": "Full-load lambda, turbocharged piston engine",
+      "kind": "literature",
+      "value": 0.8,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.hptuners.com/articles/air-fuel-ratios-lambda-and-stoichiometry-explained/",
+          "accessed": "2026-09-30",
+          "title": "HP Tuners, \"Air-Fuel Ratios, Lambda, and Stoichiometry Explained\" (2024-06-15)",
+          "note": "For pure gasoline, this ideal ratio is 14.7:1. ... For naturally aspirated engines, a gasoline AFR of 12.8:1 to 13:1 is typically optimal for maximum torque and horsepower. ... A gasoline AFR of 11.5:1 (Lambda 0.78 to 0.8) is often used."
+        }
+      ],
+      "note": "HP Tuners: 11.5:1, lambda 0.78-0.80. SAE 2015-01-0393 reports below 11:1 for highly downsized modern engines. No factory figure for these engines was found."
+    },
+    {
+      "id": "wot-lambda-rotary-turbo",
+      "label": "Full-load lambda, turbocharged rotary",
+      "kind": "literature",
+      "value": 0.72,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://vehiclefield.com/blog/fd3s4rx-7fc/",
+          "accessed": "2026-09-30",
+          "title": "Vehicle Field (tuning shop, Okazaki), \"FD3S 4型 RX-7 パワーFCセッティング完成\" (2015-08-17)",
+          "note": "茶色い細い線がAPEXデーター時で、ブーストの立ち上がり時はA/Fが9.5ぐらいまで濃くなります。 それをブーストHI LO共に10.5～10.8前後に合わせてやるとトルクが良い感じに上がってゆきます。 (EN: with the Apexi base data the A/F goes as rich as about 9.5 at boost onset; set to about 10.5-10.8 at both boost settings, torque rises nicely.)"
+        }
+      ],
+      "note": "No factory figure found. A Japanese tuning shop set a 13B-REW to 10.5-10.8:1 (lambda 0.71-0.73) and reports the Apexi base map richer still (about 9.5:1 at boost onset)."
+    },
+    {
+      "id": "lambda-peak-work",
+      "label": "Lambda of the most work per kilogram of air",
+      "kind": "literature",
+      "value": 0.88,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.hptuners.com/articles/air-fuel-ratios-lambda-and-stoichiometry-explained/",
+          "accessed": "2026-09-30",
+          "title": "HP Tuners, \"Air-Fuel Ratios, Lambda, and Stoichiometry Explained\" (2024-06-15)",
+          "note": "For pure gasoline, this ideal ratio is 14.7:1. ... For naturally aspirated engines, a gasoline AFR of 12.8:1 to 13:1 is typically optimal for maximum torque and horsepower. ... A gasoline AFR of 11.5:1 (Lambda 0.78 to 0.8) is often used."
+        },
+        {
+          "url": "https://patents.google.com/patent/US7137382B2/en",
+          "accessed": "2026-09-30",
+          "title": "US 7137382 B2, \"Optimal wide open throttle air/fuel ratio control\" (Visteon)",
+          "note": "the air to fuel ratio AFR at wide open throttle (WOT) is adjusted to maximize the engine torque output ... the fastest laminar flame speed usually occurs at an equivalence ratio ϕ equal to 1.1"
+        }
+      ],
+      "method": "Peak torque lambda is about 0.83-0.91 across the sources found: HP Tuners puts peak torque at 12.8-13.0:1 (lambda 0.87-0.88) and Visteon notes the fastest flame at equivalence ratio 1.1 (lambda 0.91). 0.88 sits in the middle; no single authoritative source states it."
+    },
+    {
+      "id": "lambda-peak-work-gain",
+      "label": "Extra work per kilogram of air at that lambda, over stoichiometric",
+      "kind": "model-choice",
+      "value": 3,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a mild rise to the peak, then a parabolic fall as extra fuel only cools the charge. It only matters when a build changes lambda (part 2b fuel model); stock engines are calibrated at their own lambda."
+    },
+    {
+      "id": "cycle-gamma",
+      "label": "Effective heat capacity ratio for the compression-ratio trend",
+      "kind": "model-choice",
+      "value": 1.3,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the air-standard Otto trend 1 - CR^(1-gamma) with gamma 1.3, a burned-gas-like value, stands in for the fuel-air cycle trend. It sets how efficiency changes with compression ratio (about 1 percentage point per ratio point near 10:1, as MIT OCW 2.61 states)."
+    },
+    {
+      "id": "indicated-efficiency-scale-piston",
+      "label": "Real indicated efficiency as a share of the model trend, piston engines",
+      "kind": "model-choice",
+      "value": 0.78,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/79a4fb328edcbb374b313f305396bd6a_MIT2_61S17_lec6.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OCW 2.61 Internal Combustion Engines (Spring 2017, W. Cheng), fuel-air cycle lecture",
+          "note": "1. The maximum indicated fuel conversion efficiency of an actual engine is about 0.85 times the efficiency of the equivalent fuel-air cycle."
+        }
+      ],
+      "method": "Model choice guided by MIT OCW 2.61: a real engine reaches about 0.85 of its fuel-air-cycle efficiency, and the air-standard trend runs a little above the fuel-air cycle, so 0.78 of the trend. With it the fitted peak VE of the NA engines lands at 0.9-1.19, inside the published range for their head designs."
+    },
+    {
+      "id": "indicated-efficiency-scale-rotary",
+      "label": "Real indicated efficiency as a share of the model trend, rotary engines",
+      "kind": "model-choice",
+      "value": 0.64,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wankel_engine",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, \"Wankel engine\" (citing the Bosch Automotive Handbook)",
+          "note": "Wankel engines can reach a typical maximum thermal efficiency of about 30 percent."
+        }
+      ],
+      "method": "Model choice: a Wankel's long, thin chamber loses more heat and leaks at the seals. Wikipedia (citing Bosch) gives about 30 % peak thermal efficiency for Wankels; 0.64 puts a 13B-REW's full-load brake efficiency at about 22-24 %, below that peak as full-load rich running would be."
+    },
+    {
+      "id": "ve-temperature-exponent",
+      "label": "Volumetric efficiency against intake temperature (exponent)",
+      "kind": "literature",
+      "value": 0.5,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.rose-hulman.edu/ME410/PDFs/Day32.pdf",
+          "accessed": "2026-09-30",
+          "title": "Rose-Hulman ME 410, Day 32 lecture notes, \"Volumetric Efficiency\"",
+          "note": "Volumetric efficiency varies like [(T_i / T_ao)]^(1/2) ... T i is the inlet temperature T ao is the ambient air temperature"
+        }
+      ],
+      "note": "VE rises with the square root of intake temperature (warmer air picks up less heat from the ports), so NA airflow falls as T^-0.5, not T^-1."
+    },
+    {
+      "id": "fmep-piston-a",
+      "label": "Friction MEP, piston engines: constant part",
+      "kind": "literature",
+      "value": 100,
+      "unit": "kPa",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://hpwizard.com/fmep.html",
+          "accessed": "2026-09-30",
+          "title": "hpwizard.com, \"FMEP - Engine\" (tabulating G. P. Blair, Design and Simulation of Four-Stroke Engines, 1999, p. 536)",
+          "note": "4-stroke SI | plain | eng. displ. > 500 cc | 100 000 | 10 500 ... Source: Design and simulation of four-stroke engines, Gordon P. Blair, 1999, p. 536"
+        }
+      ],
+      "note": "Blair: FMEP = 100 kPa + 10.5 kPa per m/s of mean piston speed, four-stroke SI, plain bearings, over 500 cc."
+    },
+    {
+      "id": "fmep-piston-b",
+      "label": "Friction MEP, piston engines: per m/s of mean piston speed",
+      "kind": "literature",
+      "value": 10.5,
+      "unit": "kPa/(m/s)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://hpwizard.com/fmep.html",
+          "accessed": "2026-09-30",
+          "title": "hpwizard.com, \"FMEP - Engine\" (tabulating G. P. Blair, Design and Simulation of Four-Stroke Engines, 1999, p. 536)",
+          "note": "4-stroke SI | plain | eng. displ. > 500 cc | 100 000 | 10 500 ... Source: Design and simulation of four-stroke engines, Gordon P. Blair, 1999, p. 536"
+        }
+      ]
+    },
+    {
+      "id": "fmep-piston-c",
+      "label": "Friction MEP, piston engines: per (m/s)² of mean piston speed",
+      "kind": "literature",
+      "value": 0,
+      "unit": "kPa/(m/s)²",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://hpwizard.com/fmep.html",
+          "accessed": "2026-09-30",
+          "title": "hpwizard.com, \"FMEP - Engine\" (tabulating G. P. Blair, Design and Simulation of Four-Stroke Engines, 1999, p. 536)",
+          "note": "4-stroke SI | plain | eng. displ. > 500 cc | 100 000 | 10 500 ... Source: Design and simulation of four-stroke engines, Gordon P. Blair, 1999, p. 536"
+        }
+      ],
+      "note": "Blair's correlation is linear in piston speed."
+    },
+    {
+      "id": "fmep-rotary-a",
+      "label": "Friction MEP, rotary: constant part",
+      "kind": "model-choice",
+      "value": 50,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No rotary friction data was found. Model choice: lower than a piston engine at the same shaft speed (no reciprocating parts or valvetrain), rising with seal and bearing speed. The stock fit absorbs it; it matters only when a build changes the rev range."
+    },
+    {
+      "id": "fmep-rotary-b",
+      "label": "Friction MEP, rotary: per 1000 rpm",
+      "kind": "model-choice",
+      "value": 15,
+      "unit": "kPa/krpm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Same basis as fmep-rotary-a: no rotary friction data was found, so this is a model choice."
+    },
+    {
+      "id": "fmep-rotary-c",
+      "label": "Friction MEP, rotary: per (1000 rpm)²",
+      "kind": "model-choice",
+      "value": 1.5,
+      "unit": "kPa/krpm²",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Same basis as fmep-rotary-a: no rotary friction data was found, so this is a model choice."
+    },
+    {
+      "id": "knock-retard-per-octane",
+      "label": "Spark retard per octane number the fuel is short",
+      "kind": "literature",
+      "value": 1,
+      "unit": "deg/ON",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/a-review-effect-engine-operating-conditions-borderline-knock-960497",
+          "accessed": "2026-09-30",
+          "title": "SAE 960497 abstract, Russ, S. (Ford), \"A Review of the Effect of Engine Operating Conditions on Borderline Knock\"",
+          "note": "Compression Ratio: \"5 ON/CR\" ... Intake Air Temperature: \"1 ON/7 K\" ... Intake Pressure: \"3-4 ON/10 kPa\" ... Spark Advance: \"1 ON/1° SA\""
+        }
+      ],
+      "note": "Inverted from Russ (Ford): 1 ON of requirement per 1° of spark advance at borderline knock."
+    },
+    {
+      "id": "knock-octane-per-kelvin",
+      "label": "Octane requirement per kelvin of charge temperature",
+      "kind": "literature",
+      "value": 0.143,
+      "unit": "ON/K",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/a-review-effect-engine-operating-conditions-borderline-knock-960497",
+          "accessed": "2026-09-30",
+          "title": "SAE 960497 abstract, Russ, S. (Ford), \"A Review of the Effect of Engine Operating Conditions on Borderline Knock\"",
+          "note": "Compression Ratio: \"5 ON/CR\" ... Intake Air Temperature: \"1 ON/7 K\" ... Intake Pressure: \"3-4 ON/10 kPa\" ... Spark Advance: \"1 ON/1° SA\""
+        }
+      ],
+      "note": "Russ: 1 ON per 7 K of intake air temperature. Trade sources range from 1 ON per 14 K to about 1 ON per 3.7 K."
+    },
+    {
+      "id": "knock-octane-per-kpa",
+      "label": "Octane requirement per kPa of manifold pressure",
+      "kind": "literature",
+      "value": 0.35,
+      "unit": "ON/kPa",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/a-review-effect-engine-operating-conditions-borderline-knock-960497",
+          "accessed": "2026-09-30",
+          "title": "SAE 960497 abstract, Russ, S. (Ford), \"A Review of the Effect of Engine Operating Conditions on Borderline Knock\"",
+          "note": "Compression Ratio: \"5 ON/CR\" ... Intake Air Temperature: \"1 ON/7 K\" ... Intake Pressure: \"3-4 ON/10 kPa\" ... Spark Advance: \"1 ON/1° SA\""
+        }
+      ],
+      "note": "Russ: 3-4 ON per 10 kPa. Vendor rules of thumb are weaker (Sunoco: 1 ON per 2-3 psi). Only changes against the stock boost at the same rpm count."
+    },
+    {
+      "id": "knock-loss-quadratic",
+      "label": "Torque loss per degree² of spark retard from MBT",
+      "kind": "literature",
+      "value": 0.0003,
+      "unit": "1/deg²",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/f8aec73c2e9233c4e8e3674d77428483_MIT2_61S17_lec9.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OCW 2.61 Internal Combustion Engines (Spring 2017), SI combustion lecture",
+          "note": "Torque curve relatively flat: roughly 5 to 7oCA retard from MBT results in 1% loss in torque"
+        },
+        {
+          "url": "https://patents.google.com/patent/US4809660A/en",
+          "accessed": "2026-09-30",
+          "title": "US 4809660 A, \"Engine spark timing control for torque management of a motor vehicle drivetrain\" (GM)",
+          "note": "a torque loss of 10 ft-lbs from MBT torque is seen to correspond to a spark retard of 9 degrees from the MBT setting ... an overtorque value of 30 ft-lbs ... is seen to correspond to a spark retard of 16 degrees from the MBT setting"
+        }
+      ],
+      "note": "MIT: roughly 1 % torque loss at 5-7° retard, so about 0.0003 per degree². GM's patent gives 10 ft-lb at 9° and 30 ft-lb at 16° (the same squared shape; its MBT torque isn't given)."
+    },
+    {
+      "id": "knock-loss-linear-from",
+      "label": "Retard beyond which the loss continues linearly",
+      "kind": "model-choice",
+      "value": 16,
+      "unit": "deg",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "GM's data keeps the squared shape out to 16° of retard; beyond that the model continues the slope linearly rather than extrapolating the parabola."
+    },
+    {
+      "id": "knock-stock-retard-na",
+      "label": "Stock full-load spark retard from MBT, naturally aspirated",
+      "kind": "model-choice",
+      "value": 2,
+      "unit": "deg",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No stock spark maps are published. Model choice: a premium-fuel NA calibration runs close to MBT at full load. It only sets how steeply extra retard costs torque."
+    },
+    {
+      "id": "knock-stock-retard-boosted",
+      "label": "Stock full-load spark retard from MBT, turbo",
+      "kind": "model-choice",
+      "value": 5,
+      "unit": "deg",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No stock spark maps are published. Model choice: turbo engines run knock-limited at full boost (SAE 2015-01-0393: delayed spark advances), assumed 5° behind MBT on their rating fuel."
+    },
+    {
+      "id": "compressor-peak-efficiency",
+      "label": "Peak isentropic efficiency of a factory turbo compressor",
+      "kind": "literature",
+      "value": 0.7,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cefrc.princeton.edu/sites/g/files/toruqf1071/files/reitz_princeton-day1-hour3-2018.pdf",
+          "accessed": "2026-09-30",
+          "title": "R. Reitz, Princeton-CEFRC Combustion Summer School 2018, \"Internal Combustion Engines\" (quoting Herold 2011)",
+          "note": "typically, compressors, superchargers, and fixed geometry turbines have isentropic efficiencies of 0.7."
+        }
+      ]
+    },
+    {
+      "id": "turbine-efficiency",
+      "label": "Isentropic efficiency of a fixed-geometry turbine",
+      "kind": "literature",
+      "value": 0.7,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cefrc.princeton.edu/sites/g/files/toruqf1071/files/reitz_princeton-day1-hour3-2018.pdf",
+          "accessed": "2026-09-30",
+          "title": "R. Reitz, Princeton-CEFRC Combustion Summer School 2018, \"Internal Combustion Engines\" (quoting Herold 2011)",
+          "note": "typically, compressors, superchargers, and fixed geometry turbines have isentropic efficiencies of 0.7."
+        }
+      ]
+    },
+    {
+      "id": "turbo-mechanical-efficiency",
+      "label": "Turbo shaft (bearing) efficiency",
+      "kind": "model-choice",
+      "value": 0.95,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No source found. Model choice for journal- and ball-bearing turbos of the period; the turbine sizing absorbs it for stock engines."
+    },
+    {
+      "id": "compressor-stock-choke-position",
+      "label": "Where a stock turbo's peak flow sits between surge and choke",
+      "kind": "model-choice",
+      "value": 0.85,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No compressor maps for these factory turbos were found. Model choice: the stock peak flow sits 85 % of the way from the surge line to the choke line, near the edge as small factory turbos do at redline."
+    },
+    {
+      "id": "compressor-stock-pr-fraction",
+      "label": "Stock peak pressure ratio as a share of the map's height",
+      "kind": "model-choice",
+      "value": 0.65,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice with the choke position: the stock peak pressure ratio sits at 65 % of the map's top pressure ratio, leaving room for more boost as real maps do."
+    },
+    {
+      "id": "intercooler-effectiveness-side",
+      "label": "Factory side-mount intercooler effectiveness",
+      "kind": "model-choice",
+      "value": 0.6,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "No factory figures found. Model choice: small side-mount cores of the period, lower than front-mount cores. The stock fit absorbs it; it sets how much a hotter day or more boost heats the charge."
+    },
+    {
+      "id": "intercooler-effectiveness-front",
+      "label": "Factory front-mount intercooler effectiveness",
+      "kind": "model-choice",
+      "value": 0.7,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "See intercooler-effectiveness-side."
+    },
+    {
+      "id": "intercooler-effectiveness-water",
+      "label": "Air-to-water intercooler effectiveness",
+      "kind": "model-choice",
+      "value": 0.75,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "See intercooler-effectiveness-side. No launch car has one; for Phase 3 parts."
+    },
+    {
+      "id": "intercooler-pressure-drop",
+      "label": "Intercooler pressure drop at stock peak flow",
+      "kind": "model-choice",
+      "value": 6,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for a factory core at its design flow; the drop rises with the square of flow."
+    },
+    {
+      "id": "air-filter-pressure-drop",
+      "label": "Air filter and intake pressure drop at stock peak flow (turbo)",
+      "kind": "model-choice",
+      "value": 2.5,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for a factory air box at its design flow; the drop rises with the square of flow."
+    },
+    {
+      "id": "exhaust-back-pressure",
+      "label": "Back pressure after the turbine at stock peak flow",
+      "kind": "model-choice",
+      "value": 15,
+      "unit": "kPa",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for a factory downpipe, catalyst and silencers at full flow; it rises with the square of flow."
+    },
+    {
+      "id": "egt-fraction-piston",
+      "label": "Share of the energy released that leaves as exhaust heat, piston",
+      "kind": "model-choice",
+      "value": 0.33,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://ethanolrfa.org/file/781/Literature-Review-of-Ethanol-Use-for-High-Octane-Fuels.pdf",
+          "accessed": "2026-09-30",
+          "title": "Ricardo Inc. for the Renewable Fuels Association, \"Literature Review of Ethanol Use for High Octane Fuels\"",
+          "note": "Although turbocharged SI engines typically have a 950°C turbine inlet temperature limit"
+        }
+      ],
+      "method": "Model choice: a first-law split that puts a rich (lambda 0.8) turbo engine's turbine-inlet temperature at about 850-900 °C, under the 950 °C limit Ricardo cites for turbocharged SI engines."
+    },
+    {
+      "id": "egt-fraction-rotary",
+      "label": "Share of the energy released that leaves as exhaust heat, rotary",
+      "kind": "model-choice",
+      "value": 0.42,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a rotary's exhaust port opens early in expansion, so more heat leaves with the exhaust than in a piston engine."
+    },
+    {
+      "id": "egt-fraction-per-degree",
+      "label": "Extra exhaust-heat share per degree of spark retard",
+      "kind": "model-choice",
+      "value": 0.006,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: retarded combustion finishes later in the expansion stroke and dumps more heat into the exhaust."
+    },
+    {
+      "id": "drivetrain-manual-direct",
+      "label": "Manual gearbox efficiency in the direct (1:1) gear",
+      "kind": "literature",
+      "value": 0.98,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Layshaft",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, \"Layshaft\" (citing L. J. K. Setright, The Anatomy of the Motor Car)",
+          "note": "A typical gearbox had 2% losses in each gear set, so 4% for intermediate ranges through their two gears, but approaching 0% for the direct-drive top gear."
+        },
+        {
+          "url": "https://perek.it/help/engine-power-calculation-on-roller-chassis-dynamometer/",
+          "accessed": "2026-09-30",
+          "title": "PEREK (chassis dynamometer maker), \"Engine power calculation on roller chassis dynamometer\"",
+          "note": "The second power loss along the way is a loss from power transfer on wheel-roller patch. We take it from experimental data, and it is around 8% of the transferred power. Third one is power transfer loss in gearbox. The easiest one is the common manual gearbox or automatized manual gearbox. It looses around 4% of transferred power."
+        }
+      ],
+      "method": "Setright (via Wikipedia): gear-mesh losses approach 0 % in the direct gear. PEREK and NRC put a manual gearbox at about 4 % overall. The direct gear avoids the two meshes, so about 2 % is left for bearings and oil churning."
+    },
+    {
+      "id": "drivetrain-manual-indirect",
+      "label": "Manual gearbox efficiency in an indirect gear",
+      "kind": "literature",
+      "value": 0.96,
+      "unit": "ratio",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Layshaft",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia, \"Layshaft\" (citing L. J. K. Setright, The Anatomy of the Motor Car)",
+          "note": "A typical gearbox had 2% losses in each gear set, so 4% for intermediate ranges through their two gears, but approaching 0% for the direct-drive top gear."
+        },
+        {
+          "url": "https://perek.it/help/engine-power-calculation-on-roller-chassis-dynamometer/",
+          "accessed": "2026-09-30",
+          "title": "PEREK (chassis dynamometer maker), \"Engine power calculation on roller chassis dynamometer\"",
+          "note": "The second power loss along the way is a loss from power transfer on wheel-roller patch. We take it from experimental data, and it is around 8% of the transferred power. Third one is power transfer loss in gearbox. The easiest one is the common manual gearbox or automatized manual gearbox. It looses around 4% of transferred power."
+        }
+      ]
+    },
+    {
+      "id": "drivetrain-automatic",
+      "label": "Automatic gearbox (torque converter) efficiency at full load",
+      "kind": "literature",
+      "value": 0.9,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.nationalacademies.org/read/21744/chapter/7",
+          "accessed": "2026-09-30",
+          "title": "National Research Council (2015), \"Cost, Effectiveness, and Deployment of Fuel Economy Technologies for Light-Duty Vehicles\", chapter 5",
+          "note": "The efficiency of conventional automatic transmissions ranges from 86 to 94 percent ... Automated manual transmissions (AMTs) are essentially manual transmissions with either electromechanical or electrohydraulic actuators added"
+        },
+        {
+          "url": "https://19january2021snapshot.epa.gov/sites/static/files/2016-10/documents/2016-01-1142-effect-adv-auto-trans-fuel-cons.pdf",
+          "accessed": "2026-09-30",
+          "title": "Moskalik, Hula, Barba, Kargul (US EPA), SAE 2016-01-1142, \"Investigating the Effect of Advanced Automatic Transmissions on Fuel Consumption\"",
+          "note": "The study predicted a 6.9% improvement in fuel consumption when comparing a 96% efficient eight-speed automatic transmission with early torque converter (TC) lockup to a 92% efficient five-speed transmission without early TC lockup."
+        }
+      ],
+      "note": "NRC: conventional automatics are 86-94 % efficient; the 90 % midpoint is used. EPA/ANL model a 1990s-type five-speed without early lock-up at 92 %."
+    },
+    {
+      "id": "drivetrain-automated-manual",
+      "label": "Automated manual (SMG) efficiency in the direct gear",
+      "kind": "literature",
+      "value": 0.98,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.nationalacademies.org/read/21744/chapter/7",
+          "accessed": "2026-09-30",
+          "title": "National Research Council (2015), \"Cost, Effectiveness, and Deployment of Fuel Economy Technologies for Light-Duty Vehicles\", chapter 5",
+          "note": "The efficiency of conventional automatic transmissions ranges from 86 to 94 percent ... Automated manual transmissions (AMTs) are essentially manual transmissions with either electromechanical or electrohydraulic actuators added"
+        },
+        {
+          "url": "https://perek.it/help/engine-power-calculation-on-roller-chassis-dynamometer/",
+          "accessed": "2026-09-30",
+          "title": "PEREK (chassis dynamometer maker), \"Engine power calculation on roller chassis dynamometer\"",
+          "note": "The second power loss along the way is a loss from power transfer on wheel-roller patch. We take it from experimental data, and it is around 8% of the transferred power. Third one is power transfer loss in gearbox. The easiest one is the common manual gearbox or automatized manual gearbox. It looses around 4% of transferred power."
+        }
+      ],
+      "method": "NRC: automated manuals have losses nearly equivalent to manuals; PEREK uses the same loss for both. Taken as the manual direct-gear figure."
+    },
+    {
+      "id": "drivetrain-final-drive",
+      "label": "Final drive (hypoid) efficiency",
+      "kind": "literature",
+      "value": 0.94,
+      "unit": "ratio",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://gearsolutions.com/departments/tooth-tips-stefanie-burns/",
+          "accessed": "2026-09-30",
+          "title": "Stefanie Burns, \"Right-Angle Gearboxes Using Hypoid Gears\", Gear Solutions",
+          "note": "The efficiency of a hypoid gear is less than a similar set of spiral bevel gearing (90-95% as compared to 99% for many spiral bevel gearing)"
+        },
+        {
+          "url": "https://www.zakgear.com/Hypoid_worm.html",
+          "accessed": "2026-09-30",
+          "title": "ZAK gear, \"Increasing driving efficiency of an automotive drive axle\"",
+          "note": "The driving efficiency of a spiral bevel gear is 99%, The driving efficiency of an automotive hypoid gear is 92%-96%."
+        }
+      ],
+      "note": "Gear Solutions: 90-95 %; ZAK: 92-96 %. 0.94 lies in both ranges."
+    },
+    {
+      "id": "drivetrain-tyre-roller",
+      "label": "Tyre-to-roller transfer on a chassis dyno",
+      "kind": "literature",
+      "value": 0.92,
+      "unit": "ratio",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://perek.it/help/engine-power-calculation-on-roller-chassis-dynamometer/",
+          "accessed": "2026-09-30",
+          "title": "PEREK (chassis dynamometer maker), \"Engine power calculation on roller chassis dynamometer\"",
+          "note": "The second power loss along the way is a loss from power transfer on wheel-roller patch. We take it from experimental data, and it is around 8% of the transferred power. Third one is power transfer loss in gearbox. The easiest one is the common manual gearbox or automatized manual gearbox. It looses around 4% of transferred power."
+        }
+      ],
+      "note": "Wheel figures are what a roller dyno would read. With the manual direct gear and final drive this gives about 15 % crank-to-wheel loss, as Road & Track measured on a Dynojet (14.9 %) and OnAllCylinders' 15-17 % tuner figure."
+    },
+    {
+      "id": "injector-duty-limit",
+      "label": "Injector duty above which the fuel system is the limit",
+      "kind": "model-choice",
+      "value": 85,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "BUILD_PROMPT 6.1 names injector duty above 85 % as a limit; it is the common tuner margin for pulse-width headroom. Not a physical constant."
+    },
+    {
+      "id": "idle-rpm",
+      "label": "Idle speed the dyno sweep starts at",
+      "kind": "model-choice",
+      "value": 800,
+      "unit": "rpm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: a typical warm idle, and where Nissan's published 350Z curves start."
+    },
+    {
+      "id": "sweep-margin-rpm",
+      "label": "How far past peak power the sweep runs when no redline is published",
+      "kind": "model-choice",
+      "value": 500,
+      "unit": "rpm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for engines without a published redline or fuel cut; the chart marks the end as estimated."
+    },
+    {
+      "id": "na-idle-torque-fraction",
+      "label": "NA torque at idle as a share of peak torque, where only peaks are published",
+      "kind": "model-choice",
+      "value": 0.64,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "From Nissan's own published curves in the data (VQ35DE 206 kW and 221 kW): 234/363 and 222/353 N·m at 800 rpm, 0.64 and 0.63 of peak."
+    },
+    {
+      "id": "na-idle-slope-factor",
+      "label": "NA torque rise at idle against the straight line to the peak",
+      "kind": "model-choice",
+      "value": 2.4,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Fitted to the same Nissan curves: with 2.4 the model shape passes within about 3 % of both published curves between 800 rpm and peak torque."
+    },
+    {
+      "id": "turbo-spool-offset-rpm",
+      "label": "Turbo full-boost point below the published torque peak",
+      "kind": "model-choice",
+      "value": 500,
+      "unit": "rpm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: factory turbo engines reach full boost a little before their torque peak. Below it the turbo model decides the torque, and the band widens."
+    },
+    {
+      "id": "turbo-spool-torque-fraction",
+      "label": "Torque at the full-boost point as a share of peak torque",
+      "kind": "model-choice",
+      "value": 0.96,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: torque still rises slightly from full boost to the torque peak as VE climbs."
+    },
+    {
+      "id": "power-drop-na",
+      "label": "NA power fall past peak power, per unit of rpm overshoot",
+      "kind": "model-choice",
+      "value": 0.4,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "From Nissan's published curves: 3.4 % down 6.5 % past peak power (206 kW engine) and 1.8 % down 9.4 % past it (221 kW); 0.4 gives 2.6 % and 3.8 %."
+    },
+    {
+      "id": "power-drop-boosted",
+      "label": "Turbo power fall past peak power, per unit of rpm overshoot",
+      "kind": "model-choice",
+      "value": 0.5,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: slightly steeper than NA, as small factory turbos run out of flow at the top."
+    },
+    {
+      "id": "ve-prior-peak-boosted",
+      "label": "Peak VE of a turbo engine whose stock boost isn't published",
+      "kind": "model-choice",
+      "value": 1,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "The average VE level the calibration fits for the ten turbo variants whose stock boost is published (0.86-1.09, mean 1.00). The calibration test checks this stays within 0.05 of that mean."
+    },
+    {
+      "id": "ve-prior-low-droop",
+      "label": "Turbo VE shape: fall below its peak rpm",
+      "kind": "model-choice",
+      "value": 0.35,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice for a generic turbo-engine VE shape; the published figures fix the torque, so this only shapes the spool region and the split between VE and boost."
+    },
+    {
+      "id": "ve-prior-high-droop",
+      "label": "Turbo VE shape: fall above its peak rpm",
+      "kind": "model-choice",
+      "value": 0.6,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "See ve-prior-low-droop."
+    },
+    {
+      "id": "sequential-changeover-fraction",
+      "label": "Sequential twin-turbo changeover as a share of peak-power rpm",
+      "kind": "model-choice",
+      "value": 0.65,
+      "unit": "ratio",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice where the changeover rpm isn't published; it puts the 2JZ-GTE near 3,600 rpm and the 13B-REW near 4,200 rpm."
+    },
+    {
+      "id": "band-rating-tolerance",
+      "label": "Band: tolerance of the factory figure itself",
+      "kind": "model-choice",
+      "value": 3,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice matching the ±3 % calibration gate: a factory figure is not exact, and each engine differs."
+    },
+    {
+      "id": "band-standard-unknown",
+      "label": "Band: extra where the maker doesn't print the rating standard",
+      "kind": "model-choice",
+      "value": 2,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "About half the gap between DIN 70020 and EEC/ISO reference conditions, the two candidates for unlabelled European and Australian figures."
+    },
+    {
+      "id": "band-shape-na",
+      "label": "Band: NA curve shape far from any published point",
+      "kind": "model-choice",
+      "value": 6,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: how far a real NA curve can sit from the model shape between and beyond its published peaks."
+    },
+    {
+      "id": "band-shape-boosted",
+      "label": "Band: turbo curve shape far from any published point",
+      "kind": "model-choice",
+      "value": 8,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: turbo curves vary more between their peaks than NA ones."
+    },
+    {
+      "id": "band-spool",
+      "label": "Band: below a turbo engine's full-boost point",
+      "kind": "model-choice",
+      "value": 12,
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: below full boost only the turbo model, not a published figure, sets the torque."
+    },
+    {
+      "id": "band-shape-distance",
+      "label": "Band: rpm from a published point to full shape uncertainty",
+      "kind": "model-choice",
+      "value": 1500,
+      "unit": "rpm",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: the shape band grows linearly from zero at a published point to its full width 1,500 rpm away."
+    },
+    {
+      "id": "band-per-kelvin",
+      "label": "Band: per kelvin between the rating and your intake temperature",
+      "kind": "model-choice",
+      "value": 0.2,
+      "unit": "%/K",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice: every temperature and knock correction is approximate, so the band widens as your conditions move away from the rating's."
+    },
+    {
+      "id": "band-per-octane",
+      "label": "Band: per octane number between the rating fuel and yours",
+      "kind": "model-choice",
+      "value": 0.5,
+      "unit": "%/ON",
+      "confidence": "estimated",
+      "sources": [],
+      "method": "Model choice, as band-per-kelvin, for fuel octane."
+    }
+  ]
+}

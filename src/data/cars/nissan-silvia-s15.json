@@ -502,6 +502,7 @@
         "note": "Open differential as standard. The factory option was a rear viscous LSD bundled with the cold-climate pack; the Spec-S Aero 5MT 'Handling package' instead got the helical LSD (Nissan launch release)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1200,
         "unit": "kg",
         "confidence": "verified",
@@ -745,6 +746,7 @@
         "note": "Open differential as standard. The factory option was a rear viscous LSD bundled with the cold-climate pack; the Spec-S Aero 5MT 'Handling package' instead got the helical LSD (Nissan launch release)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1230,
         "unit": "kg",
         "confidence": "verified",
@@ -980,6 +982,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -1212,6 +1215,7 @@
         "note": "Nissan's launch release limits the helical LSD to 6MT cars, and goo-net says an LSD is standard on the Spec-R AT, so it is a different type; the only statement that it is a viscous LSD is a Q&A answer (JDM) and an Australian review (AUDM). Kept as single-source."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1270,
         "unit": "kg",
         "confidence": "verified",
@@ -1430,6 +1434,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -1631,6 +1636,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1200,
         "unit": "kg",
         "confidence": "verified",
@@ -1826,6 +1832,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1200,
         "unit": "kg",
         "confidence": "verified",
@@ -2024,6 +2031,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1230,
         "unit": "kg",
         "confidence": "verified",
@@ -2233,6 +2241,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -2399,6 +2408,7 @@
         "note": "Nissan's launch release limits the helical LSD to 6MT cars, and goo-net says an LSD is standard on the Spec-R AT, so it is a different type; the only statement that it is a viscous LSD is a Q&A answer (JDM) and an Australian review (AUDM). Kept as single-source."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1270,
         "unit": "kg",
         "confidence": "verified",
@@ -2565,6 +2575,7 @@
         "note": "Open differential as standard; rear viscous LSD optional with the cold-climate pack."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1330,
         "unit": "kg",
         "confidence": "verified",
@@ -2743,6 +2754,7 @@
         "note": "Open differential as standard; rear viscous LSD optional with the cold-climate pack."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1360,
         "unit": "kg",
         "confidence": "verified",
@@ -2933,6 +2945,7 @@
         "note": "Sources disagree: Australian Car.Reviews says manual cars have a helical LSD (consistent with Nissan's JDM Spec-R 6MT spec); the project200sx owner calls his stock diff viscous. Helical kept because it matches the factory JDM 6MT hardware; treat as unconfirmed for Australia."
       },
       "curbWeight": {
+        "basis": "au-kerb-mass",
         "value": 1265,
         "unit": "kg",
         "confidence": "single-source",
@@ -3064,6 +3077,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "au-kerb-mass",
         "value": 1285,
         "unit": "kg",
         "confidence": "single-source",
@@ -3208,6 +3222,7 @@
         "note": "Sources disagree: Australian Car.Reviews says manual cars have a helical LSD (consistent with Nissan's JDM Spec-R 6MT spec); the project200sx owner calls his stock diff viscous. Helical kept because it matches the factory JDM 6MT hardware; treat as unconfirmed for Australia."
       },
       "curbWeight": {
+        "basis": "au-kerb-mass",
         "value": 1284,
         "unit": "kg",
         "confidence": "single-source",
@@ -3339,6 +3354,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "au-kerb-mass",
         "value": 1304,
         "unit": "kg",
         "confidence": "single-source",

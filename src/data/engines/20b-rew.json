@@ -601,6 +601,20 @@
         ],
         "note": "Japanese Wikipedia only; no Mazda or specialist figure found. Whether it is the primary-only or the full figure isn’t stated."
       },
+      "turboChangeover": {
+        "value": 3500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.drifted.com/20b-engine/",
+            "accessed": "2026-09-30",
+            "title": "DRIFTED, \"Ultimate Mazda 20B Engine Guide\" (Joe Terrell, 2021; no sources cited)",
+            "note": "\"As the second turbo spooled up in the background, lying in wait, it would then be unleashed from 3,500 rpm and beyond, with the turbos eventually reaching 10 psi.\""
+          }
+        ],
+        "note": "An uncited enthusiast article; no Mazda document was found."
+      },
       "intercooler": {
         "value": "air-to-air-front",
         "confidence": "verified",

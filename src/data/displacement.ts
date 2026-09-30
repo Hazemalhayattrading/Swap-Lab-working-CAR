@@ -1,5 +1,3 @@
-import type { PistonEngine, RotaryEngine } from './schema/engine';
-
 /**
  * How much an engine breathes per turn of its output shaft. This is where the
  * rotary's displacement and cycle convention lives (docs/decisions.md, "Rotary
@@ -19,10 +17,15 @@ import type { PistonEngine, RotaryEngine } from './schema/engine';
  * tachometer shows and what every rating is quoted at.
  */
 
-/** The fields these helpers need; any engine from the data files has them. */
+/**
+ * The fields these helpers need, in cc as the maker states them. Any engine from
+ * the data files has them, and so does the simulation's stripped copy
+ * (src/data/sim-data.ts), which is why this is a structural type rather than
+ * the Zod schema's: src/sim/ must not pull the schemas into the worker.
+ */
 export type Breathing =
-  | Pick<RotaryEngine, 'layout' | 'rotors' | 'displacement'>
-  | Pick<PistonEngine, 'layout' | 'cylinders' | 'displacement'>;
+  | { layout: 'rotary'; rotors: number; displacement: { value: number } }
+  | { layout: 'inline' | 'V' | 'flat'; cylinders: number; displacement: { value: number } };
 
 /** Volume drawn in per output-shaft revolution at 100 % volumetric efficiency, in cc. */
 export function intakeVolumePerRevCc(engine: Breathing): number {

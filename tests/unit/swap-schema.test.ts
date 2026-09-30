@@ -194,7 +194,7 @@ describe('validateData: swaps', () => {
         transmission: 's15-6mt',
         finalDrive: v(3.692),
         differential: v('helical-lsd'),
-        curbWeight: v(1240, 'kg'),
+        curbWeight: { ...v(1240, 'kg'), basis: 'jis-vehicle-weight' },
         tyres: { front: v('215/45R17'), rear: v('215/45R17') },
       },
     ],

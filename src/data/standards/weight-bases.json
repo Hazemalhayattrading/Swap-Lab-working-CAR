@@ -1,0 +1,447 @@
+{
+  "$comment": "What each published curb weight includes. The loader normalises every weight to one basis: full fuel, no driver. A tank filled to 90 % or an unstated fill widens the range upward; an unstated driver widens it downward by the largest driver allowance here (the EU's 75 kg).",
+  "bases": [
+    {
+      "id": "jis-vehicle-weight",
+      "name": "Japanese vehicle weight (車両重量)",
+      "definition": {
+        "value": "Weight 'in the state equipped as necessary for operation' (Road Transport Vehicle Act art. 40): full fuel, oil and coolant and the fixed equipment the vehicle needs; no occupants (55 kg per seat is added only for gross vehicle weight). Spare tyre, tools and other portable items are removed when the car is weighed (NALTEC examination rules).",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://laws.e-gov.go.jp/api/1/lawdata/326AC0000000185",
+            "accessed": "2026-09-30",
+            "title": "道路運送車両法（昭和二十六年法律第百八十五号）第四十条 — e-Gov 法令API (Road Transport Vehicle Act, art. 40)",
+            "note": "五 車輪にかかる荷重の車両重量（運行に必要な装備をした状態における自動車の重量をいう。）に対する割合 / 三 車両総重量（車両重量、最大積載量及び五十五キログラムに乗車定員を乗じて得た重量の総和をいう。） || EN: (5) ratio of wheel load to vehicle weight (車両重量: the weight of the motor vehicle in the state equipped as necessary for operation) / (3) gross vehicle weight (the sum of the vehicle weight, the maximum payload, and 55 kilograms multiplied by the riding capacity)."
+          },
+          {
+            "url": "https://laws.e-gov.go.jp/api/1/lawdata/326M50000800067",
+            "accessed": "2026-09-30",
+            "title": "道路運送車両の保安基準（昭和二十六年運輸省令第六十七号）第一条第六号 — e-Gov 法令API (Safety Regulations for Road Vehicles, art. 1(6))",
+            "note": "「空車状態」とは、道路運送車両が、原動機及び燃料装置に燃料、潤滑油、冷却水等の全量を搭載し及び当該車両の目的とする用途に必要な固定的な設備を設ける等運行に必要な装備をした状態をいう。 || EN: 'Unladen state' means the state in which the road vehicle carries the full amount of fuel, lubricating oil, coolant, etc. in its engine and fuel system, and is fitted with the equipment necessary for operation, such as the fixed equipment necessary for the vehicle's intended use."
+          },
+          {
+            "url": "https://www.naltec.go.jp/publication/regulation/hbh5ss0000002mk7-att/gtg5d20000000fl0.pdf",
+            "accessed": "2026-09-30",
+            "title": "独立行政法人自動車技術総合機構審査事務規程 第1章 総則（最終改正：第74次）1-3 用語の定義「空車状態」 (NALTEC Examination Rules, ch. 1, 1-3 Definitions)",
+            "note": "空車状態: 道路運送車両が、原動機及び燃料装置に燃料、潤滑油、冷却水等の全量を搭載し及び当該車両の目的とする用途に必要な固定的な設備を設ける等運行に必要な装備を装着した状態をいう。この場合において、次に掲げるものは「運行に必要な装備」とし、スペアタイヤ、予備部品、工具その他の携帯物品は「運行に必要な装備」には該当しないものとする。 || EN: Unladen state: the state in which the road vehicle carries the full amount of fuel, lubricating oil, coolant, etc. in its engine and fuel system and is fitted with the equipment necessary for operation, such as fixed equipment necessary for its…"
+          },
+          {
+            "url": "https://www.naltec.go.jp/publication/regulation/hbh5ss0000002mk7-att/gtg5d20000000fn8.pdf",
+            "accessed": "2026-09-30",
+            "title": "独立行政法人自動車技術総合機構審査事務規程 第4章 自動車の検査等に係る審査の実施方法（最終改正：第74次）4-1(2)①シ",
+            "note": "シ 寸法及び重量を計測する場合にあっては、スペアタイヤ、予備部品、工具その他の携帯物品を取外した空車状態 || EN: (shi) When measuring dimensions and weight: the unladen state with the spare tyre, spare parts, tools and other portable items removed."
+          }
+        ],
+        "note": "Legal definition (not a JIS text). Carsensor (2016) says the spare tyre and tools are included; NALTEC and Goo-net say they are not. When the exclusion began was not found."
+      },
+      "driverIncluded": {
+        "value": false,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://laws.e-gov.go.jp/api/1/lawdata/326AC0000000185",
+            "accessed": "2026-09-30",
+            "title": "道路運送車両法（昭和二十六年法律第百八十五号）第四十条 — e-Gov 法令API (Road Transport Vehicle Act, art. 40)",
+            "note": "五 車輪にかかる荷重の車両重量（運行に必要な装備をした状態における自動車の重量をいう。）に対する割合 / 三 車両総重量（車両重量、最大積載量及び五十五キログラムに乗車定員を乗じて得た重量の総和をいう。） || EN: (5) ratio of wheel load to vehicle weight (車両重量: the weight of the motor vehicle in the state equipped as necessary for operation) / (3) gross vehicle weight (the sum of the vehicle weight, the maximum payload, and 55 kilograms multiplied by the riding capacity)."
+          },
+          {
+            "url": "https://www.goo-net.com/magazine/carmaintenance/inspection/219051/",
+            "accessed": "2026-09-30",
+            "title": "車両重量と車両総重量の違いとは？車検時に聞く自動車重量税って何？ (Goo-net magazine, posted 2018-08-29, updated 2023-01-20)",
+            "note": "車両重量とは、ドライバーが運転できる状態の車の重さを指します。つまり、車自体の重さに加えて、満タンの燃料やバッテリー、規定量のオイルや冷却水などの重量が含まれています。ただし、スペアタイヤ（パンク修理キット）やジャッキ、工具などは含まれません。 車両総重量とは、車両重量に最大乗車定員（1人あたりの重量を55kgとして計算）を加えた重量のことです。 || EN: Vehicle weight is the weight of the car in a state the driver can drive it: the car plus a full tank of fuel, battery, specified oil and coolant. However, the spare tyre (puncture repair kit), jack, tools etc. are not included. Gross veh…"
+          }
+        ]
+      },
+      "fuelFill": {
+        "value": "full",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://laws.e-gov.go.jp/api/1/lawdata/326M50000800067",
+            "accessed": "2026-09-30",
+            "title": "道路運送車両の保安基準（昭和二十六年運輸省令第六十七号）第一条第六号 — e-Gov 法令API (Safety Regulations for Road Vehicles, art. 1(6))",
+            "note": "「空車状態」とは、道路運送車両が、原動機及び燃料装置に燃料、潤滑油、冷却水等の全量を搭載し及び当該車両の目的とする用途に必要な固定的な設備を設ける等運行に必要な装備をした状態をいう。 || EN: 'Unladen state' means the state in which the road vehicle carries the full amount of fuel, lubricating oil, coolant, etc. in its engine and fuel system, and is fitted with the equipment necessary for operation, such as the fixed equipment necessary for the vehicle's intended use."
+          },
+          {
+            "url": "https://www.naltec.go.jp/publication/regulation/hbh5ss0000002mk7-att/gtg5d20000000fl0.pdf",
+            "accessed": "2026-09-30",
+            "title": "独立行政法人自動車技術総合機構審査事務規程 第1章 総則（最終改正：第74次）1-3 用語の定義「空車状態」 (NALTEC Examination Rules, ch. 1, 1-3 Definitions)",
+            "note": "空車状態: 道路運送車両が、原動機及び燃料装置に燃料、潤滑油、冷却水等の全量を搭載し及び当該車両の目的とする用途に必要な固定的な設備を設ける等運行に必要な装備を装着した状態をいう。この場合において、次に掲げるものは「運行に必要な装備」とし、スペアタイヤ、予備部品、工具その他の携帯物品は「運行に必要な装備」には該当しないものとする。 || EN: Unladen state: the state in which the road vehicle carries the full amount of fuel, lubricating oil, coolant, etc. in its engine and fuel system and is fitted with the equipment necessary for operation, such as fixed equipment necessary for its…"
+          }
+        ]
+      }
+    },
+    {
+      "id": "us-curb-weight",
+      "name": "US curb weight",
+      "definition": {
+        "value": "Standard equipment with the maximum capacity of fuel, oil and coolant, no occupants or cargo (49 CFR 571.3; SAE J1100). EPA's definition (40 CFR 86.1803-01) also counts options fitted to more than a third of a car line.",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.law.cornell.edu/cfr/text/49/571.3",
+            "accessed": "2026-09-30",
+            "title": "49 CFR § 571.3 - Definitions (NHTSA, FMVSS) — Cornell LII copy of the eCFR text",
+            "note": "Curb weight means the weight of a motor vehicle with standard equipment; maximum capacity of engine fuel, oil, and coolant; and, if so equipped, air conditioning and additional weight optional engine. Unloaded vehicle weight means the weight of a vehicle with maximum capacity of all fluids necessary for operation of the vehicle, but without cargo, occupants, or accessories that are ordinarily removed from the vehicl…"
+          },
+          {
+            "url": "https://www.law.cornell.edu/cfr/text/40/86.1803-01",
+            "accessed": "2026-09-30",
+            "title": "40 CFR § 86.1803-01 - Definitions (EPA) — Cornell LII copy of the eCFR text",
+            "note": "Curb weight means the actual or the manufacturer's estimated weight of the vehicle in operational status with all standard equipment, and weight of fuel at nominal tank capacity, and the weight of optional equipment computed in accordance with § 86.1832-01; incomplete light-duty trucks shall have the curb weight specified by the manufacturer. Loaded vehicle weight means the vehicle's curb weight plus 300 pounds."
+          },
+          {
+            "url": "https://archive.org/download/gov.law.sae.j1100.2001/sae.j1100.2001.html",
+            "accessed": "2026-09-30",
+            "title": "SAE J1100 REV. FEB2001, Motor Vehicle Dimensions, §3.2 Vehicle Weights (Public.Resource.Org copy on archive.org)",
+            "note": "J1100 REV. FEB2001 Issued 1973-09 Revised 2001-02 Superseding J1100 JUN1998 … 3.2.1 CURB WEIGHT—The weight of a motor vehicle with standard equipment only: maximum capacity of engine fuel, oil, and coolant. For heavy trucks, the weight does not include engine fuel. 3.2.2 DESIGN LOAD WEIGHT—Passenger Car-Curb weight, plus passengers and luggage or cargo load as specified by manufacturer, each passenger weighing 68 kg…"
+          }
+        ]
+      },
+      "driverIncluded": {
+        "value": false,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.law.cornell.edu/cfr/text/40/86.1803-01",
+            "accessed": "2026-09-30",
+            "title": "40 CFR § 86.1803-01 - Definitions (EPA) — Cornell LII copy of the eCFR text",
+            "note": "Curb weight means the actual or the manufacturer's estimated weight of the vehicle in operational status with all standard equipment, and weight of fuel at nominal tank capacity, and the weight of optional equipment computed in accordance with § 86.1832-01; incomplete light-duty trucks shall have the curb weight specified by the manufacturer. Loaded vehicle weight means the vehicle's curb weight plus 300 pounds."
+          },
+          {
+            "url": "https://archive.org/download/gov.law.sae.j1100.2001/sae.j1100.2001.html",
+            "accessed": "2026-09-30",
+            "title": "SAE J1100 REV. FEB2001, Motor Vehicle Dimensions, §3.2 Vehicle Weights (Public.Resource.Org copy on archive.org)",
+            "note": "J1100 REV. FEB2001 Issued 1973-09 Revised 2001-02 Superseding J1100 JUN1998 … 3.2.1 CURB WEIGHT—The weight of a motor vehicle with standard equipment only: maximum capacity of engine fuel, oil, and coolant. For heavy trucks, the weight does not include engine fuel. 3.2.2 DESIGN LOAD WEIGHT—Passenger Car-Curb weight, plus passengers and luggage or cargo load as specified by manufacturer, each passenger weighing 68 kg…"
+          }
+        ],
+        "note": "Loaded weights are built by adding occupants to curb weight (EPA: + 300 lb; SAE J1100: + 68 kg per passenger)."
+      },
+      "fuelFill": {
+        "value": "full",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.law.cornell.edu/cfr/text/49/571.3",
+            "accessed": "2026-09-30",
+            "title": "49 CFR § 571.3 - Definitions (NHTSA, FMVSS) — Cornell LII copy of the eCFR text",
+            "note": "Curb weight means the weight of a motor vehicle with standard equipment; maximum capacity of engine fuel, oil, and coolant; and, if so equipped, air conditioning and additional weight optional engine. Unloaded vehicle weight means the weight of a vehicle with maximum capacity of all fluids necessary for operation of the vehicle, but without cargo, occupants, or accessories that are ordinarily removed from the vehicl…"
+          },
+          {
+            "url": "https://archive.org/download/gov.law.sae.j1100.2001/sae.j1100.2001.html",
+            "accessed": "2026-09-30",
+            "title": "SAE J1100 REV. FEB2001, Motor Vehicle Dimensions, §3.2 Vehicle Weights (Public.Resource.Org copy on archive.org)",
+            "note": "J1100 REV. FEB2001 Issued 1973-09 Revised 2001-02 Superseding J1100 JUN1998 … 3.2.1 CURB WEIGHT—The weight of a motor vehicle with standard equipment only: maximum capacity of engine fuel, oil, and coolant. For heavy trucks, the weight does not include engine fuel. 3.2.2 DESIGN LOAD WEIGHT—Passenger Car-Curb weight, plus passengers and luggage or cargo load as specified by manufacturer, each passenger weighing 68 kg…"
+          }
+        ]
+      }
+    },
+    {
+      "id": "din-kerb-weight",
+      "name": "DIN kerb weight (Leergewicht nach DIN)",
+      "definition": {
+        "value": "DIN 70020 part 2 (1972, withdrawn 2006): ready to drive with the tank at least 90 % full and all fluids, no driver. The EU figure is the DIN figure plus 75 kg.",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Leergewicht",
+            "accessed": "2026-09-30",
+            "title": "Leergewicht — Wikipedia (de), revision 256540419 of 2025-05-31 (read as wikitext; markup stripped)",
+            "note": "Nach der zurückgezogenen DIN 70020 Teil 2 Allgemeine Begriffe im Kraftfahrzeugbau – Gewichte setzt sich das Leergewicht eines Straßenfahrzeuges (z. B. eines PKWs) aus der Masse des Fahrzeuges bei zu mindestens 90 % gefülltem Tank und je nach Fahrzeugart noch dem mit 80 kg angesetzten Fahrzeugführergewicht zusammen; die Normausgabe vom Juni 1972 galt für Kraftfahrzeuge und deren Anhängefahrzeuge mit Ausnahme von Kraf…"
+          },
+          {
+            "url": "https://newsroom.porsche.com/dam/jcr:c2df00bd-1b93-4d45-98a6-ccf4d3e8fc05/Fahrzeuginformationen%20Cayenne%20Electric%20S-GO%20416E.pdf",
+            "accessed": "2026-09-30",
+            "title": "Porsche Cayenne Electric — Fahrzeuginformationen S-GO 416E (vehicle information PDF hosted on newsroom.porsche.com; undated)",
+            "note": "Leergewicht nach DIN 2.525 kg Leergewicht nach EU-Richtlinie 2.600 kg … Nach EG-Norm gilt das Leergewicht für Fahrzeuge in serienmäßiger Ausstattung. Sonderausstattungen erhöhen diesen Wert. Im angegebenen Wert sind 75 kg für den Fahrer berücksichtigt. || EN: Unladen weight to DIN 2,525 kg; unladen weight to EU directive 2,600 kg ... Under the EC standard, unladen weight applies to vehicles with standard equipment.…"
+          },
+          {
+            "url": "https://www.evo.co.uk/features/21040/what-is-kerb-weight-and-how-much-does-your-car-weigh",
+            "accessed": "2026-09-30",
+            "title": "What is kerb weight and how much does your car weigh? — evo (UK), John Barker, 2018-03-31",
+            "note": "The kerb weight that we like to quote here at evo is the the DIN figure – that’s Deutsches Institut für Normung, or German Institute for Standardisation. This is the weight of the car with all the fluids necessary for operation, including a 90 per cent full tank of fuel. For the Z4 M Coupe this is 1420kg. BMW also quotes an EU kerb weight (sometimes called EEC kerb weight) of 1495kg. This is the DIN figure plus an e…"
+          },
+          {
+            "url": "https://www.carsales.com.au/editorial/details/vehicle-weights-whats-the-difference-109425/",
+            "accessed": "2026-09-30",
+            "title": "Vehicle weights - What's the difference? — carsales.com.au, Alan Swanson, 2017-10-17",
+            "note": "DIN kerb weight is measured in a similar way to the Australian definition, although the fuel level is required to be 90 per cent of the tank's capacity. EU kerb weight is easily calculated from the DIN weight. Quite simply, EU kerb weight is always 75kg more than DIN. The European Union adds this 75kg ballast to account for a driver and a small amount of luggage."
+          }
+        ],
+        "note": "The DIN text was not read. German Wikipedia adds an 80 kg driver 'je nach Fahrzeugart' (by vehicle type); Porsche, evo, carsales and Carwow all treat the passenger-car DIN weight as driver-free."
+      },
+      "driverIncluded": {
+        "value": false,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://newsroom.porsche.com/dam/jcr:c2df00bd-1b93-4d45-98a6-ccf4d3e8fc05/Fahrzeuginformationen%20Cayenne%20Electric%20S-GO%20416E.pdf",
+            "accessed": "2026-09-30",
+            "title": "Porsche Cayenne Electric — Fahrzeuginformationen S-GO 416E (vehicle information PDF hosted on newsroom.porsche.com; undated)",
+            "note": "Leergewicht nach DIN 2.525 kg Leergewicht nach EU-Richtlinie 2.600 kg … Nach EG-Norm gilt das Leergewicht für Fahrzeuge in serienmäßiger Ausstattung. Sonderausstattungen erhöhen diesen Wert. Im angegebenen Wert sind 75 kg für den Fahrer berücksichtigt. || EN: Unladen weight to DIN 2,525 kg; unladen weight to EU directive 2,600 kg ... Under the EC standard, unladen weight applies to vehicles with standard equipment.…"
+          },
+          {
+            "url": "https://www.evo.co.uk/features/21040/what-is-kerb-weight-and-how-much-does-your-car-weigh",
+            "accessed": "2026-09-30",
+            "title": "What is kerb weight and how much does your car weigh? — evo (UK), John Barker, 2018-03-31",
+            "note": "The kerb weight that we like to quote here at evo is the the DIN figure – that’s Deutsches Institut für Normung, or German Institute for Standardisation. This is the weight of the car with all the fluids necessary for operation, including a 90 per cent full tank of fuel. For the Z4 M Coupe this is 1420kg. BMW also quotes an EU kerb weight (sometimes called EEC kerb weight) of 1495kg. This is the DIN figure plus an e…"
+          },
+          {
+            "url": "https://www.carsales.com.au/editorial/details/vehicle-weights-whats-the-difference-109425/",
+            "accessed": "2026-09-30",
+            "title": "Vehicle weights - What's the difference? — carsales.com.au, Alan Swanson, 2017-10-17",
+            "note": "DIN kerb weight is measured in a similar way to the Australian definition, although the fuel level is required to be 90 per cent of the tank's capacity. EU kerb weight is easily calculated from the DIN weight. Quite simply, EU kerb weight is always 75kg more than DIN. The European Union adds this 75kg ballast to account for a driver and a small amount of luggage."
+          }
+        ]
+      },
+      "fuelFill": {
+        "value": "90%",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Leergewicht",
+            "accessed": "2026-09-30",
+            "title": "Leergewicht — Wikipedia (de), revision 256540419 of 2025-05-31 (read as wikitext; markup stripped)",
+            "note": "Nach der zurückgezogenen DIN 70020 Teil 2 Allgemeine Begriffe im Kraftfahrzeugbau – Gewichte setzt sich das Leergewicht eines Straßenfahrzeuges (z. B. eines PKWs) aus der Masse des Fahrzeuges bei zu mindestens 90 % gefülltem Tank und je nach Fahrzeugart noch dem mit 80 kg angesetzten Fahrzeugführergewicht zusammen; die Normausgabe vom Juni 1972 galt für Kraftfahrzeuge und deren Anhängefahrzeuge mit Ausnahme von Kraf…"
+          },
+          {
+            "url": "https://www.evo.co.uk/features/21040/what-is-kerb-weight-and-how-much-does-your-car-weigh",
+            "accessed": "2026-09-30",
+            "title": "What is kerb weight and how much does your car weigh? — evo (UK), John Barker, 2018-03-31",
+            "note": "The kerb weight that we like to quote here at evo is the the DIN figure – that’s Deutsches Institut für Normung, or German Institute for Standardisation. This is the weight of the car with all the fluids necessary for operation, including a 90 per cent full tank of fuel. For the Z4 M Coupe this is 1420kg. BMW also quotes an EU kerb weight (sometimes called EEC kerb weight) of 1495kg. This is the DIN figure plus an e…"
+          },
+          {
+            "url": "https://www.carsales.com.au/editorial/details/vehicle-weights-whats-the-difference-109425/",
+            "accessed": "2026-09-30",
+            "title": "Vehicle weights - What's the difference? — carsales.com.au, Alan Swanson, 2017-10-17",
+            "note": "DIN kerb weight is measured in a similar way to the Australian definition, although the fuel level is required to be 90 per cent of the tank's capacity. EU kerb weight is easily calculated from the DIN weight. Quite simply, EU kerb weight is always 75kg more than DIN. The European Union adds this 75kg ballast to account for a driver and a small amount of luggage."
+          }
+        ]
+      }
+    },
+    {
+      "id": "eu-mass-in-running-order",
+      "name": "EU mass in running order",
+      "definition": {
+        "value": "Tank at least 90 % full, other fluids full, standard equipment, spare wheel and tools if fitted, plus a 75 kg driver (68 kg occupant and 7 kg luggage) (Regulation (EU) 1230/2012; Directives 92/21/EEC and 2007/46/EC). German law uses the same basis (StVZO § 42).",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/32012R1230",
+            "accessed": "2026-09-30",
+            "title": "Commission Regulation (EU) No 1230/2012 (masses and dimensions), Article 2 — OJ L 353, 21.12.2012 (EU Publications Office Cellar; EUR-Lex CELEX 32012R1230)",
+            "note": "(4) ‘mass in running order’ means (a) in the case of a motor vehicle: the mass of the vehicle, with its fuel tank(s) filled to at least 90 % of its or their capacity/ies, including the mass of the driver, of the fuel and liquids, fitted with the standard equipment in accordance with the manufacturer’s specifications and, when they are fitted, the mass of the bodywork, the cabin, the coupling and the spare wheel(s) a…"
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/32007L0046",
+            "accessed": "2026-09-30",
+            "title": "Directive 2007/46/EC (Framework Directive), Annex I item 2.6 and footnote (o) — OJ L 263, 9.10.2007 (Cellar; CELEX 32007L0046)",
+            "note": "Mass of the vehicle with bodywork and, in the case of a towing vehicle of category other than M 1 , with coupling device, if fitted by the manufacturer, in running order, or mass of the chassis or chassis with cab, without bodywork and/or coupling device if the manufacturer does not fit the bodywork and/or coupling device (including liquids, tools, spare wheel, if fitted, and driver and, for buses and coaches, a cre…"
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31992L0021",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 92/21/EEC (masses and dimensions of M1 vehicles), Annex I 1.1 and Appendix — OJ L 129, 14.5.1992 (Cellar; CELEX 31992L0021)",
+            "note": "'Mass of the vehicle in running order' means the mass of the vehicle with bodywork in running oder (including coolant, oils, fuel, spare wheele, tools and driver). … the mass for each occupant (driver included) is taken to be 75 kg (68 kg + 7 kg of luggage); ['oder' and 'wheele' are typos in the original]"
+          },
+          {
+            "url": "https://www.gesetze-im-internet.de/stvzo_2012/__42.html",
+            "accessed": "2026-09-30",
+            "title": "§ 42 StVZO (Straßenverkehrs-Zulassungs-Ordnung) Anhängelast hinter Kraftfahrzeugen und Leergewicht, Abs. 3 — gesetze-im-internet.de",
+            "note": "(3) Das Leergewicht ist das Gewicht des betriebsfertigen Fahrzeugs ohne austauschbare Ladungsträger (Behälter, die dazu bestimmt und geeignet sind, Ladungen aufzunehmen und auf oder an verschiedenen Trägerfahrzeugen verwendet zu werden, wie Container, Wechselbehälter), aber mit zu 90 Prozent gefüllten eingebauten Kraftstoffbehältern und zu 100 Prozent gefüllten Systemen für andere Flüssigkeiten (ausgenommen Systeme…"
+          }
+        ]
+      },
+      "driverIncluded": {
+        "value": true,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/32012R1230",
+            "accessed": "2026-09-30",
+            "title": "Commission Regulation (EU) No 1230/2012 (masses and dimensions), Article 2 — OJ L 353, 21.12.2012 (EU Publications Office Cellar; EUR-Lex CELEX 32012R1230)",
+            "note": "(4) ‘mass in running order’ means (a) in the case of a motor vehicle: the mass of the vehicle, with its fuel tank(s) filled to at least 90 % of its or their capacity/ies, including the mass of the driver, of the fuel and liquids, fitted with the standard equipment in accordance with the manufacturer’s specifications and, when they are fitted, the mass of the bodywork, the cabin, the coupling and the spare wheel(s) a…"
+          },
+          {
+            "url": "https://newsroom.porsche.com/dam/jcr:c2df00bd-1b93-4d45-98a6-ccf4d3e8fc05/Fahrzeuginformationen%20Cayenne%20Electric%20S-GO%20416E.pdf",
+            "accessed": "2026-09-30",
+            "title": "Porsche Cayenne Electric — Fahrzeuginformationen S-GO 416E (vehicle information PDF hosted on newsroom.porsche.com; undated)",
+            "note": "Leergewicht nach DIN 2.525 kg Leergewicht nach EU-Richtlinie 2.600 kg … Nach EG-Norm gilt das Leergewicht für Fahrzeuge in serienmäßiger Ausstattung. Sonderausstattungen erhöhen diesen Wert. Im angegebenen Wert sind 75 kg für den Fahrer berücksichtigt. || EN: Unladen weight to DIN 2,525 kg; unladen weight to EU directive 2,600 kg ... Under the EC standard, unladen weight applies to vehicles with standard equipment.…"
+          }
+        ]
+      },
+      "driverMass": {
+        "value": 75,
+        "unit": "kg",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31992L0021",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 92/21/EEC (masses and dimensions of M1 vehicles), Annex I 1.1 and Appendix — OJ L 129, 14.5.1992 (Cellar; CELEX 31992L0021)",
+            "note": "'Mass of the vehicle in running order' means the mass of the vehicle with bodywork in running oder (including coolant, oils, fuel, spare wheele, tools and driver). … the mass for each occupant (driver included) is taken to be 75 kg (68 kg + 7 kg of luggage); ['oder' and 'wheele' are typos in the original]"
+          },
+          {
+            "url": "https://www.evo.co.uk/features/21040/what-is-kerb-weight-and-how-much-does-your-car-weigh",
+            "accessed": "2026-09-30",
+            "title": "What is kerb weight and how much does your car weigh? — evo (UK), John Barker, 2018-03-31",
+            "note": "The kerb weight that we like to quote here at evo is the the DIN figure – that’s Deutsches Institut für Normung, or German Institute for Standardisation. This is the weight of the car with all the fluids necessary for operation, including a 90 per cent full tank of fuel. For the Z4 M Coupe this is 1420kg. BMW also quotes an EU kerb weight (sometimes called EEC kerb weight) of 1495kg. This is the DIN figure plus an e…"
+          }
+        ]
+      },
+      "fuelFill": {
+        "value": "90%",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/32012R1230",
+            "accessed": "2026-09-30",
+            "title": "Commission Regulation (EU) No 1230/2012 (masses and dimensions), Article 2 — OJ L 353, 21.12.2012 (EU Publications Office Cellar; EUR-Lex CELEX 32012R1230)",
+            "note": "(4) ‘mass in running order’ means (a) in the case of a motor vehicle: the mass of the vehicle, with its fuel tank(s) filled to at least 90 % of its or their capacity/ies, including the mass of the driver, of the fuel and liquids, fitted with the standard equipment in accordance with the manufacturer’s specifications and, when they are fitted, the mass of the bodywork, the cabin, the coupling and the spare wheel(s) a…"
+          },
+          {
+            "url": "https://www.gesetze-im-internet.de/stvzo_2012/__42.html",
+            "accessed": "2026-09-30",
+            "title": "§ 42 StVZO (Straßenverkehrs-Zulassungs-Ordnung) Anhängelast hinter Kraftfahrzeugen und Leergewicht, Abs. 3 — gesetze-im-internet.de",
+            "note": "(3) Das Leergewicht ist das Gewicht des betriebsfertigen Fahrzeugs ohne austauschbare Ladungsträger (Behälter, die dazu bestimmt und geeignet sind, Ladungen aufzunehmen und auf oder an verschiedenen Trägerfahrzeugen verwendet zu werden, wie Container, Wechselbehälter), aber mit zu 90 Prozent gefüllten eingebauten Kraftstoffbehältern und zu 100 Prozent gefüllten Systemen für andere Flüssigkeiten (ausgenommen Systeme…"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kerb-no-driver",
+      "name": "Kerb weight without driver",
+      "definition": {
+        "value": "A kerb weight the maker's footnote says excludes the driver and includes coolant, oils, fuel, spare wheel and tools (Nissan's UK 350Z brochure). The UK's legal 'kerbside weight' is the same idea: no person and a full tank (Construction and Use Regulations 1986).",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-350z-car-brochure-2004/NISSAN350Z.zip/PAGE39.jpg",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) UK sales brochure 'Nissan 350Z', part number 99999-53698 - 05/2004 (archive.org item nissan-350z-car-brochure-2004), PAGE39.jpg ('FACTS & FIGURES' table 'Nissan 350Z'; transcribed from the scan, crops in uk_brochure_2004/)",
+            "note": "Kerb weight footnote: without driver, including coolant, oils, fuel, spare wheel and tools (as saved in the 350Z car data)."
+          },
+          {
+            "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/3/made",
+            "accessed": "2026-09-30",
+            "title": "The Road Vehicles (Construction and Use) Regulations 1986 (SI 1986/1078), regulation 3(2), as made — legislation.gov.uk",
+            "note": "kerbside weight the weight of a vehicle when it carries— (a) in the case of a motor vehicle, (i) no person; and (ii) a full supply of fuel in its tank, an adequate supply of other liquids incidental to its propulsion and no load other than the loose tools and equipment with which it is normally equipped; (b) in the case of a trailer, no person and is otherwise unladen."
+          }
+        ]
+      },
+      "driverIncluded": {
+        "value": false,
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-350z-car-brochure-2004/NISSAN350Z.zip/PAGE39.jpg",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) UK sales brochure 'Nissan 350Z', part number 99999-53698 - 05/2004 (archive.org item nissan-350z-car-brochure-2004), PAGE39.jpg ('FACTS & FIGURES' table 'Nissan 350Z'; transcribed from the scan, crops in uk_brochure_2004/)",
+            "note": "Kerb weight footnote: without driver (as saved in the 350Z car data)."
+          },
+          {
+            "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/3/made",
+            "accessed": "2026-09-30",
+            "title": "The Road Vehicles (Construction and Use) Regulations 1986 (SI 1986/1078), regulation 3(2), as made — legislation.gov.uk",
+            "note": "kerbside weight the weight of a vehicle when it carries— (a) in the case of a motor vehicle, (i) no person; and (ii) a full supply of fuel in its tank, an adequate supply of other liquids incidental to its propulsion and no load other than the loose tools and equipment with which it is normally equipped; (b) in the case of a trailer, no person and is otherwise unladen."
+          }
+        ]
+      },
+      "fuelFill": {
+        "value": "not stated",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://archive.org/download/nissan-350z-car-brochure-2004/NISSAN350Z.zip/PAGE39.jpg",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) UK sales brochure 'Nissan 350Z', part number 99999-53698 - 05/2004 (archive.org item nissan-350z-car-brochure-2004), PAGE39.jpg ('FACTS & FIGURES' table 'Nissan 350Z'; transcribed from the scan, crops in uk_brochure_2004/)",
+            "note": "Kerb weight footnote lists 'fuel' without a fill level (as saved in the 350Z car data)."
+          }
+        ],
+        "method": "Nissan's footnote says 'fuel' without a fill level, so a part-filled tank is allowed for."
+      }
+    },
+    {
+      "id": "au-kerb-mass",
+      "name": "Australian kerb mass",
+      "definition": {
+        "value": "ADR 'Kerb Mass' (= Unladen Mass): the vehicle in running order, unoccupied and unladen, all fluid reservoirs including fuel filled to nominal capacity, with all standard equipment.",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.au/F2005L03850/2024-10-31/2024-10-31/text/original/pdf",
+            "accessed": "2026-09-30",
+            "title": "Vehicle Standard (Australian Design Rule – Definitions and Vehicle Categories) 2005, Compilation No. 15 — Federal Register of Legislation (F2005L03850)",
+            "note": "Compilation No. 15 Compilation date:31/10/2024 Includes amendments:Vehicle Standard (Australian Design Rule) Twin Steer Amendments 2024 Prepared by:Vehicle Safety Policy and Partnerships, Department of Infrastructure, Transport, Regional Development, Communications and the Arts Authorised Version F2024C01065 registered 06/11/2024 … KERB MASS - see ‘Unladen Mass’ … UNLADEN MASS - the mass of the vehicle in running or…"
+          },
+          {
+            "url": "https://www.carsales.com.au/editorial/details/vehicle-weights-whats-the-difference-109425/",
+            "accessed": "2026-09-30",
+            "title": "Vehicle weights - What's the difference? — carsales.com.au, Alan Swanson, 2017-10-17",
+            "note": "DIN kerb weight is measured in a similar way to the Australian definition, although the fuel level is required to be 90 per cent of the tank's capacity. EU kerb weight is easily calculated from the DIN weight. Quite simply, EU kerb weight is always 75kg more than DIN. The European Union adds this 75kg ballast to account for a driver and a small amount of luggage."
+          },
+          {
+            "url": "https://www.mazda.com.au/mazda-news/mazda-bt-50-vehicle-weights-explained/",
+            "accessed": "2026-09-30",
+            "title": "Mazda BT-50 Vehicle Weights Explained — Mazda Australia, 2023-10-20",
+            "note": "In Australia, Kerb Weight refers to the weight of a standard vehicle (with any factory-fitted options or accessories) with all of its key fluids (various oils and coolants) and with a full tank of fuel. This weight figure doesn’t include driver and passengers, luggage or cargo in the tray."
+          }
+        ],
+        "note": "carsales says options are not included; Mazda Australia says factory-fitted options are."
+      },
+      "driverIncluded": {
+        "value": false,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.au/F2005L03850/2024-10-31/2024-10-31/text/original/pdf",
+            "accessed": "2026-09-30",
+            "title": "Vehicle Standard (Australian Design Rule – Definitions and Vehicle Categories) 2005, Compilation No. 15 — Federal Register of Legislation (F2005L03850)",
+            "note": "Compilation No. 15 Compilation date:31/10/2024 Includes amendments:Vehicle Standard (Australian Design Rule) Twin Steer Amendments 2024 Prepared by:Vehicle Safety Policy and Partnerships, Department of Infrastructure, Transport, Regional Development, Communications and the Arts Authorised Version F2024C01065 registered 06/11/2024 … KERB MASS - see ‘Unladen Mass’ … UNLADEN MASS - the mass of the vehicle in running or…"
+          },
+          {
+            "url": "https://www.mazda.com.au/mazda-news/mazda-bt-50-vehicle-weights-explained/",
+            "accessed": "2026-09-30",
+            "title": "Mazda BT-50 Vehicle Weights Explained — Mazda Australia, 2023-10-20",
+            "note": "In Australia, Kerb Weight refers to the weight of a standard vehicle (with any factory-fitted options or accessories) with all of its key fluids (various oils and coolants) and with a full tank of fuel. This weight figure doesn’t include driver and passengers, luggage or cargo in the tray."
+          }
+        ]
+      },
+      "fuelFill": {
+        "value": "full",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.au/F2005L03850/2024-10-31/2024-10-31/text/original/pdf",
+            "accessed": "2026-09-30",
+            "title": "Vehicle Standard (Australian Design Rule – Definitions and Vehicle Categories) 2005, Compilation No. 15 — Federal Register of Legislation (F2005L03850)",
+            "note": "Compilation No. 15 Compilation date:31/10/2024 Includes amendments:Vehicle Standard (Australian Design Rule) Twin Steer Amendments 2024 Prepared by:Vehicle Safety Policy and Partnerships, Department of Infrastructure, Transport, Regional Development, Communications and the Arts Authorised Version F2024C01065 registered 06/11/2024 … KERB MASS - see ‘Unladen Mass’ … UNLADEN MASS - the mass of the vehicle in running or…"
+          },
+          {
+            "url": "https://www.carsales.com.au/editorial/details/vehicle-weights-whats-the-difference-109425/",
+            "accessed": "2026-09-30",
+            "title": "Vehicle weights - What's the difference? — carsales.com.au, Alan Swanson, 2017-10-17",
+            "note": "DIN kerb weight is measured in a similar way to the Australian definition, although the fuel level is required to be 90 per cent of the tank's capacity. EU kerb weight is easily calculated from the DIN weight. Quite simply, EU kerb weight is always 75kg more than DIN. The European Union adds this 75kg ballast to account for a driver and a small amount of luggage."
+          }
+        ]
+      }
+    },
+    {
+      "id": "unstated",
+      "name": "Basis not stated",
+      "definition": {
+        "value": "The figure prints no basis: it may be a DIN weight (no driver, 90 % fuel), an EU weight (75 kg driver) or a full-tank kerb weight. The loader keeps the printed figure and widens its range by the EU driver's 75 kg below and a part tank above.",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "Covers the bases above; the largest driver allowance among them (EU, 75 kg) sets how far down the range goes."
+      },
+      "fuelFill": {
+        "value": "not stated",
+        "confidence": "estimated",
+        "sources": [],
+        "method": "No fill level is known for an unlabelled figure, so a part-filled tank is allowed for."
+      }
+    }
+  ]
+}

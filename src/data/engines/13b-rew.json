@@ -738,6 +738,26 @@
           }
         ]
       },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
+      },
       "intercooler": {
         "value": "air-to-air-front",
         "confidence": "verified",
@@ -1089,6 +1109,26 @@
             "note": "1993FSM TD-4 (as checked in part3a.md section 1): Charge air cooler/Intercooler | Type | Air cooled; Core size 294 x 114 x 65 mm; Turbocharger | System type | Sequential twin turbocharged; Cooling method | Water + engine oil"
           }
         ]
+      },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
       },
       "intercooler": {
         "value": "air-to-air-front",
@@ -1442,6 +1482,26 @@
           }
         ]
       },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
+      },
       "intercooler": {
         "value": "air-to-air-front",
         "confidence": "verified",
@@ -1788,6 +1848,26 @@
           }
         ]
       },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
+      },
       "intercooler": {
         "value": "air-to-air-front",
         "confidence": "verified",
@@ -2122,6 +2202,26 @@
           }
         ]
       },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
+      },
       "intercooler": {
         "value": "air-to-air-front",
         "confidence": "verified",
@@ -2375,6 +2475,26 @@
             "note": "1993FSM TD-4 (as checked in part3a.md section 1): Charge air cooler/Intercooler | Type | Air cooled; Core size 294 x 114 x 65 mm; Turbocharger | System type | Sequential twin turbocharged; Cooling method | Water + engine oil"
           }
         ]
+      },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
       },
       "intercooler": {
         "value": "air-to-air-front",
@@ -2642,6 +2762,26 @@
             "note": "1993FSM TD-4 (as checked in part3a.md section 1): Charge air cooler/Intercooler | Type | Air cooled; Core size 294 x 114 x 65 mm; Turbocharger | System type | Sequential twin turbocharged; Cooling method | Water + engine oil"
           }
         ]
+      },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
       },
       "intercooler": {
         "value": "air-to-air-front",
@@ -2970,6 +3110,26 @@
             "note": "1993FSM TD-4 (as checked in part3a.md section 1): Charge air cooler/Intercooler | Type | Air cooled; Core size 294 x 114 x 65 mm; Turbocharger | System type | Sequential twin turbocharged; Cooling method | Water + engine oil"
           }
         ]
+      },
+      "turboChangeover": {
+        "value": 4500,
+        "unit": "rpm",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.fd3s.net/boost_problems.html",
+            "accessed": "2026-09-30",
+            "title": "fd3s.net, \"Turbo / Boost Problem Troubleshooting\" (enthusiast page, updated 2003)",
+            "note": "\"RPM PSI | 3,000 10 | 4,500 8 as secondary turbo comes on | 4,500 + 10 recovers almost immediately | 6,000 + 8 and holds to redline\""
+          },
+          {
+            "url": "http://foxed.ca/rx7manual/manuals/1993FSM/(F)fuel_and_emissions_control_systems.pdf",
+            "accessed": "2026-09-30",
+            "title": "1993 Mazda RX-7 Workshop Manual (US), Section F, p. F-176 ECU terminal table (foxed.ca scan, transcribed)",
+            "note": "\"4R Solenoid valve (Turbo control): Idle - OFF; Engine speed: above 5,500 rpm (MT) / Engine speed: above 5,250 rpm (AT) - ON; Remark: Initial acceleration\". A test condition, not the switching map: Mazda says the switch point depends on engine speed and load."
+          }
+        ],
+        "note": "fd3s.net's full-throttle boost trace has the secondary coming on at about 4,500 rpm. Mazda's workshop manual lists \"above 5,500 rpm (MT) / 5,250 rpm (AT)\" as the test condition for the turbo control solenoid, which is not the full-load switching map; the conflict is unresolved, and the FD figure is used for every FD3S variant."
       },
       "intercooler": {
         "value": "air-to-air-front",

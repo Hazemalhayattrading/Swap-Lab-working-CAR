@@ -994,6 +994,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "single-source",
@@ -1264,6 +1265,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "single-source",
@@ -1515,6 +1517,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1540,
         "unit": "kg",
         "confidence": "single-source",
@@ -1735,6 +1738,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "estimated",
@@ -1985,6 +1989,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "estimated",
@@ -2260,6 +2265,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1575,
         "unit": "kg",
         "confidence": "single-source",
@@ -2557,6 +2563,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1575,
         "unit": "kg",
         "confidence": "single-source",
@@ -2836,6 +2843,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1610,
         "unit": "kg",
         "confidence": "single-source",
@@ -3089,6 +3097,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1575,
         "unit": "kg",
         "confidence": "estimated",
@@ -3392,6 +3401,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "single-source",
@@ -3703,6 +3713,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "single-source",
@@ -3988,6 +3999,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1540,
         "unit": "kg",
         "confidence": "single-source",
@@ -4243,6 +4255,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1540,
         "unit": "kg",
         "confidence": "estimated",
@@ -4477,6 +4490,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "estimated",
@@ -4768,6 +4782,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1505,
         "unit": "kg",
         "confidence": "estimated",
@@ -5077,6 +5092,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1660,
         "unit": "kg",
         "confidence": "single-source",
@@ -5356,6 +5372,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1675,
         "unit": "kg",
         "confidence": "single-source",
@@ -5610,6 +5627,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1705,
         "unit": "kg",
         "confidence": "single-source",
@@ -5859,6 +5877,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1705,
         "unit": "kg",
         "confidence": "estimated",
@@ -6087,6 +6106,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "eu-mass-in-running-order",
         "value": 1675,
         "unit": "kg",
         "confidence": "estimated",
@@ -6348,6 +6368,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3318,
         "unit": "lb",
         "confidence": "single-source",
@@ -6635,6 +6656,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "verified",
@@ -6989,6 +7011,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "verified",
@@ -7319,6 +7342,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3373,
         "unit": "lb",
         "confidence": "single-source",
@@ -7576,6 +7600,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "verified",
@@ -7900,6 +7925,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "verified",
@@ -8234,6 +8260,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "single-source",
@@ -8534,6 +8561,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "estimated",
@@ -8799,6 +8827,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "estimated",
@@ -9045,6 +9074,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3351,
         "unit": "lb",
         "confidence": "single-source",
@@ -9374,6 +9404,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "single-source",
@@ -9769,6 +9800,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "single-source",
@@ -10139,6 +10171,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3395,
         "unit": "lb",
         "confidence": "single-source",
@@ -10437,6 +10470,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "single-source",
@@ -10801,6 +10835,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "single-source",
@@ -11171,6 +11206,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "single-source",
@@ -11531,6 +11567,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3285,
         "unit": "lb",
         "confidence": "estimated",
@@ -11818,6 +11855,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3362,
         "unit": "lb",
         "confidence": "estimated",
@@ -12099,6 +12137,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3627,
         "unit": "lb",
         "confidence": "single-source",
@@ -12422,6 +12461,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "verified",
@@ -12810,6 +12850,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "verified",
@@ -13173,6 +13214,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3704,
         "unit": "lb",
         "confidence": "verified",
@@ -13539,6 +13581,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3704,
         "unit": "lb",
         "confidence": "verified",
@@ -13903,6 +13946,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "single-source",
@@ -14240,6 +14284,7 @@
         "note": "The E46's compact HAG 188-series final drive has no limited-slip option: \"Limited slip differential is no longer possible with the compact differential\" (ST034). Traction aids are brake-based (ADB, later DTC). The ETK lists only plain final drives for every 330."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "estimated",
@@ -14527,6 +14572,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "din-kerb-weight",
         "value": 1495,
         "unit": "kg",
         "confidence": "single-source",
@@ -15006,6 +15052,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "din-kerb-weight",
         "value": 1495,
         "unit": "kg",
         "confidence": "estimated",
@@ -15441,6 +15488,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1655,
         "unit": "kg",
         "confidence": "single-source",
@@ -15919,6 +15967,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1655,
         "unit": "kg",
         "confidence": "estimated",
@@ -16324,6 +16373,7 @@
         "note": "Same variable M differential lock as the M3 (the ETK shows the same assembly); no CSL-specific calibration is documented."
       },
       "curbWeight": {
+        "basis": "din-kerb-weight",
         "value": 1385,
         "unit": "kg",
         "confidence": "verified",
@@ -16748,6 +16798,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "din-kerb-weight",
         "value": 1495,
         "unit": "kg",
         "confidence": "estimated",
@@ -17173,6 +17224,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "din-kerb-weight",
         "value": 1495,
         "unit": "kg",
         "confidence": "estimated",
@@ -17610,6 +17662,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3415,
         "unit": "lb",
         "confidence": "verified",
@@ -18119,6 +18172,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3415,
         "unit": "lb",
         "confidence": "estimated",
@@ -18568,6 +18622,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3781,
         "unit": "lb",
         "confidence": "verified",
@@ -19077,6 +19132,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3781,
         "unit": "lb",
         "confidence": "estimated",
@@ -19501,6 +19557,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3415,
         "unit": "lb",
         "confidence": "estimated",
@@ -19920,6 +19977,7 @@
         "note": "BMW's \"variable M differential lock\", developed with GKN Viscodrive: a sealed shear pump (about 46 g of silicone fluid) builds pressure in proportion to the left-right wheel-speed difference; a piston (max. 38 bar) clamps multi-plate clutches. Earlier M cars used a torque-sensing LSD with a 25% lock value (ST041 p. 10). BMW says that in an extreme case all drive power can go to one wheel; no preload or lock curve is published. 210 mm ring gear."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3415,
         "unit": "lb",
         "confidence": "estimated",
