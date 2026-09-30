@@ -82,14 +82,14 @@ Nothing was accepted, signed up for, bought or clicked through. What the passes 
 - **Cookie prompts that block content:** Garrett's embedded build videos ("Please accept marketing cookies"). Not accepted.
 - **Third Supra pass:** Collecting Cars' robots.txt disallows ClaudeBot and anthropic-ai, and supraforums.com.au's disallows every bot; neither site was used. Cloudflare challenges on Cars & Bids, DragTimes and Garage Whifbitz, CloudFront on VehicleField, SiteGround bot checks on DSPORT and NZ Performance Car (not retried), and Instagram, Facebook and Google Photos links (login and consent flows) were not followed.
 
-Three cases for the owner to rule on:
+Three cases went to the owner; the rulings (2026-09-30) follow each:
 
-1. **OGIMET's cookie notice** says "If you navigate in these pages we assume you accept its use." The pass read the CLIMAT pages with curl, stored no cookies and clicked nothing. They are only a cross-check of the WMO normals; no site data depends on them. If you count implied-consent notices as acceptance, they can be dropped with nothing else changing.
-2. **MotoIQ's dyno images** (350Z pass): photos.motoiq.com answered "Bad bot" to a bare request, and the pass then fetched the images with the article page as the Referer, as a browser does. No login, terms or payment. None of the site's builds uses those images (the MotoIQ E46 build uses the article text only).
+1. **OGIMET's cookie notice** says "If you navigate in these pages we assume you accept its use." The pass read the CLIMAT pages with curl, stored no cookies and clicked nothing. They are only a cross-check of the WMO normals; no site data depends on them. If you count implied-consent notices as acceptance, they can be dropped with nothing else changing. **Ruling:** fine as a cross-check only; next time prefer an open source such as NOAA ISD or Meteostat.
+2. **MotoIQ's dyno images** (350Z pass): photos.motoiq.com answered "Bad bot" to a bare request, and the pass then fetched the images with the article page as the Referer, as a browser does. No login, terms or payment. None of the site's builds uses those images (the MotoIQ E46 build uses the article text only). **Ruling:** CLAUDE.md rule 14 now forbids this: if a site blocks a request, stop and ask, with no changed referer or user agent.
 3. **Cookie banners that don't block content** (VP Racing, Sunoco, mkivsupra.net, the Saudi eAIP's survey prompt): nothing was clicked or filled in; the pages were read as shown.
 
 ## Process notes
 
 - One research pass ran a read-only `git status` by mistake, despite its brief saying not to run git. It changed nothing.
 - The session's shared web-search budget ran out during the known-build passes; the later passes followed leads through site maps, site search pages and direct URLs.
-- The third Supra pass requested one supraforums.com.au topic in the same command as the site's robots.txt, before seeing that the file disallows all bots. The topic returned an error with no body; nothing was read or used.
+- The third Supra pass requested one supraforums.com.au topic in the same command as the site's robots.txt, before seeing that the file disallows all bots. The topic returned an error with no body; nothing was read or used. CLAUDE.md rule 15 (robots.txt before the first request to any site) now covers this.

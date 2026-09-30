@@ -572,6 +572,7 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 - **Decision:** The known-build test keeps asking for three counted builds per car, so it fails for the Supra, which has two, and the phase doesn't merge until the owner rules. A third search (docs/research-notes/part2b.md) found no JZA80 build that meets the rules above; the five nearest each fail one or two (internals not stated, no boost figure, no correction or weather, no sheet, an unnamed turbo and fuel). None of them was run through the model, so the choice can't lean on the result.
 - **Why:** The owner set three builds per car, and rule 2 says never quietly fill a gap. Taking a near-miss or lowering the count for one car is the owner's call, not mine.
 - **Alternatives:** Count the closest near-miss (Zee's Garage's S364 car on E85: Mainline, SAE J607 and weather printed, but its internals and cams are never stated and it has HKS cam gears); count the Supra at two as a logged exception until a sheet turns up; count the DSPORT GT3582R build again (its sheet contradicts itself, and it lands 10.4 % low); a sheet from the owner, for example a Saudi tuner's, which would also test the altitude model.
+- **Outcome (owner, 2026-09-30):** the logged exception, with the conditions in the next section; the near-miss is rejected, and the owner's search for a Saudi tuner's sheet stays open.
 
 ### Normalising dyno sheets
 
@@ -600,5 +601,34 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 
 ### CI budgets for what a visit downloads and draws
 
-- **Decision:** `npm run budget` fails CI when the production build's first-visit download exceeds `perf-budget.json`: 1,126 kB in all, 380 kB for three.js, 40 kB for the app, 80 kB for the worker, 512 kB for the environment (gzip for text, raw for binaries; 994 kB in all today). The e2e test checks the default view's draw calls and triangles (79 and 717 measured on High, budgets 88 and 1,000).
+- **Decision:** `npm run budget` fails CI when the production build's first-visit download exceeds `perf-budget.json`: 1,126 kB in all, 380 kB for three.js, 40 kB for the app, 80 kB for the worker, 512 kB for the environment (gzip for text, raw for binaries; 996 kB in all today). The e2e test checks the default view's draw calls and triangles (79 and 717 measured on High, budgets 88 and 1,000).
 - **Why:** The owner asked for a performance budget. Raising a number needs a reason here.
+
+## 2026-09-30 (Phase 2, part 2b: the owner's rulings)
+
+### The Supra's build-count exception
+
+- **Decision (owner):** The Supra counts two known builds instead of three, as an explicit exception in its own data (`buildCountException` in `src/data/builds/toyota-supra-jza80.json`: `minBuilds` 2, the reason, the date, `approvedBy: owner`), not a lowered gate. CI still asks every other car for three: the test pins the global three and the list of cars with an exception, and fails once the Supra has a third counted build and the exception is no longer needed. The Supra's stock-check sticker says "Known builds: validated on stock turbos only; big-turbo builds unverified", and so does its row in the drawer. The closest near-miss (Zee's Garage's S364 car) is rejected; the owner is looking for a Saudi tuner's sheet.
+- **Why:** No third JZA80 build meets the inclusion rules, and both counted builds run the factory twins, so the badge says what the calibration covers.
+- **Alternatives:** Lowering the gate for every car; counting the near-miss (both rejected by the owner).
+
+### New known builds are scored out-of-sample first
+
+- **Decision (owner):** Every build now says which sample it belongs to (`scoring` in its builds file). The 20 builds on file are the `fit` set: they chose the constants fitted on 2026-09-30, so their scores are in-sample. A build added later is a `holdout`: it is scored before any constant is refitted, and that first score is kept (`firstScore`: error, date, commit). `docs/calibration.md` lists both scores, and the drawer shows a holdout's first score under its current one. The test pins the fit set, so a new build can't join it without a visible change to that list.
+- **Why:** The gate is in-sample; out-of-sample scores are the only evidence that the model predicts builds it hasn't seen.
+
+### Heat soak on generic cooling sizing is an estimate, not a verdict
+
+- **Decision (owner):** While a car has no radiator figures of its own, its heat-soak result is stamped "Estimated, generic sizing" instead of Passed or Failed, and the cooling check reads "Estimated". The trace, the limits and the time the generic-sized system would cross a limit still show. A car's own radiator data (`basis: car-data`) brings back the hard stamp. Next step: OEM radiator core dimensions, which replacement-radiator sellers publish, per car.
+- **Why:** A stamp that fails every stock car tells the user nothing about their car; the failures come from one sizing rule.
+
+### Frame-rate check (`?fps=1`)
+
+- **Decision:** `?fps=1` opens a frame-rate check and makes the garage draw every display refresh while it's open: mean fps, 1 % low (the 99th-percentile frame), worst frame, the share of frames over 18.3 ms (one 60 fps frame plus 10 %), the CPU time each frame takes to submit, draw calls and triangles, the backend, the GPU and the quality. It reads "held" when the mean is within 2 % of 60 fps or above and at most 1 % of frames are over 18.3 ms. The display's refresh rate caps the rate, and GPU time isn't measured separately.
+- **Why:** The owner measures the 60 fps target on the Intel Arc laptop; on-demand rendering would otherwise read "idle".
+- **Alternatives:** GPU timestamp queries (not every browser exposes them; a later addition if the CPU and frame figures aren't enough).
+
+### Research gates: the owner's rulings
+
+- **Decision (owner):** OGIMET's pages stay as a cross-check only; next time, prefer an open source such as NOAA ISD or Meteostat. Two rules join CLAUDE.md (14 and 15): if a site blocks a request, stop, with no changed referer, user agent or other workaround, and ask the owner; and read a site's robots.txt before the first request to it, and respect it. Both pass on to every agent, as rule 13 does.
+- **Why:** The MotoIQ image fetch with the article as the referrer, and the supraforums.com.au topic requested before its robots.txt was read, are what these rules now forbid. Neither was used by the site's data.
