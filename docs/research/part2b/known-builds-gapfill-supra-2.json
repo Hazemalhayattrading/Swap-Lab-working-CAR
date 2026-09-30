@@ -1,0 +1,996 @@
+{
+  "car": "toyota-supra-jza80",
+  "researchedOn": "2026-09-30",
+  "builds": [
+    {
+      "id": "jza80-rz-bw-s364-e85-mainline-j607-zeesgarage-calgary-2023",
+      "summary": "JDM 1994 Supra RZ (JZA80, V160) in Calgary with a BorgWarner S364 single turbo (HKS exhaust manifold/downpipes/intercooler/cam gears), Link ECU, 1400cc injectors, flex fuel; E85 at 19-20 psi (seller): 667.9 hp @ 6,190 rpm and 588.5 ft-lb @ 5,661 rpm on a Mainline DynoLog at Zee's Garage, 9 Jun 2023, sheet prints 'Correction: 18.7 SAE J607 (26.8\u00b0C, 886 mBrA, 41%)' at about 1,050 m altitude. Closest candidate on the dyno side, but the engine internals and camshafts are never stated.",
+      "usable": false,
+      "whyNotUsable": "Criterion 2 not documented: neither the BaT description nor the seller says the bottom end, head and camshafts are stock (they are simply not mentioned; only 'ARP cylinder head fasteners' and HKS 'camshaft gears' are listed). Also: turbo only named 'BorgWarner S364' (S300SX-E variant not stated; flow figure below assumes S364SX-E); boost comes from a seller comment, not the sheet; intake and rear exhaust not listed. Usable only if the owner accepts 'no internal/cam parts listed' as stock.",
+      "vehicle": {
+        "chassis": "JZA80 (JEVIC export certificate photo in the listing shows chassis prefix 'JZA80-')",
+        "market": "JDM (right-hand drive), imported to Canada 2017",
+        "grade": "RZ",
+        "gearbox": "V160 six-speed manual, factory Torsen LSD",
+        "year": "1994"
+      },
+      "engine": "2JZ-GTE (non-VVT-i implied by 1994 RZ; not stated). Internals, head and camshafts: not stated. 'ARP cylinder head fasteners' fitted; HKS 'camshaft gears' fitted.",
+      "dyno": {
+        "make": "Mainline",
+        "model": "DynoLog chassis dyno (sheet title 'Mainline DynoLog Dyno Report'; model not printed)",
+        "type": "load roller (Mainline chassis dyno; derived engine speed from axle speed)",
+        "where": "Zee's Garage, Calgary, Alberta, Canada (sheet header; listing: 'tuned in June 2023 by Zee\u2019s Garage of Alberta')"
+      },
+      "correction": {
+        "value": "SAE J607 (STD basis)",
+        "howKnown": "printed on sheet: 'Correction: 18.7 SAE J607 (26.8\u00b0C, 886mBrA, 41%)' and '[Cor'd]' on the graph title; 18.7 is read as the % correction applied (my reading; not labelled). The third pressure digit is slightly blurred; my own check (SAE J607 dry-air formula at 26.8 \u00b0C, 41 % RH) gives about 18.5 % at 886 mbar, consistent with the printed 18.7 (inference)."
+      },
+      "testConditions": {
+        "temperature": "26.8 \u00b0C",
+        "pressure": "886 mbar absolute ('886mBrA'; one digit slightly blurred)",
+        "humidity": "41 %",
+        "howKnown": "printed in the sheet's correction line; sheet also prints 'Air Density: 84.0%'. Calgary shop (about 1,050 m elevation - general knowledge, not on the sheet)."
+      },
+      "result": {
+        "peakWheelPower": "667.9 hp at 6,190 rpm (derived engine speed), corrected SAE J607",
+        "peakWheelTorque": "588.5 ft-lb at 5,661 rpm ('dTorque' = derived torque from wheel power)",
+        "howRead": "read from the photographed sheet: 'Max: dTorque= 588.5FtLb @ 5,661 RPM   Power= 667.9HP @ 6,190 RPM'; 'Test ID E85 Final'; 'Test Date: 9-Jun-2023 19:03'; 'Gear: 4'; x-axis 'Axle Speed (RPM) / Engine Speed [Derived] @ 160RPM/Sec UP, 8.8 Sec'. Consistency check: 588.5 x 5,661 / 5,252 = 634.3 hp at the torque peak; 667.9 hp at 6,190 rpm implies 566.7 ft-lb there - both agree with the plotted curves."
+      },
+      "boost": {
+        "peak": "19-20 psi on the E85 tune (seller comment)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated; torque rises steeply from about 4,300 to 5,400 rpm (read off the curve)",
+        "howKnown": "BaT seller comment 2023-10-16: '19-20 psi on the E85 tune.' Not printed on the sheet."
+      },
+      "fuel": "E85 for the sheet run (sheet 'Test ID E85 Final'; listing 'Dynamometer test results obtained using E85 fuel'); car is flex-fuel; seller: pump 91 tune about 540 whp (no sheet)",
+      "mods": {
+        "turbo": "BorgWarner S364 (listing wording; SX-E generation and turbine/A-R not stated)",
+        "turboSpecs": {
+          "compressorMaxFlow": "83 lb/min if it is the S364SX-E 8776 (Full-Race seller page: 'Max Flow Rate: 83 lb/min', inducer 64.5 mm, exducer 87.37 mm); BorgWarner's own S300SX-E sheet gives dimensions only (64.47/87.37 mm), no flow",
+          "maxPressureRatio": "not stated by the sources read",
+          "peakEfficiency": "not stated by the sources read"
+        },
+        "intercooler": "HKS (part of the 'HKS kit'); model not stated",
+        "exhaust": "HKS replacement exhaust manifold and downpipes; TiAL wastegate; rest of exhaust not stated",
+        "intake": "not stated",
+        "injectors": "1400cc (make not stated)",
+        "ecu": "Link Engine Management ECU (model not stated), tuned June 2023 by Zee's Garage; MAC boost solenoid; Radium FPR, fuel rail and flex-fuel kit; Walbro Hellcat 525 lph pump",
+        "cams": "not stated (HKS camshaft gears fitted)",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-155/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: Modified 1994 Toyota Supra RZ 6-Speed (auction ended 2023-10-16)",
+          "kind": "article",
+          "quote": "'This 1994 Toyota Supra RZ is a Japanese-market example that was brought to Canada in 2017 and subsequently modified with a single-turbocharger conversion, installation of aftermarket bodywork, and a repaint in red.' 'The 3.0L 2JZ-GTE inline-six was fitted with a BorgWarner S364 turbocharger using an HKS kit featuring a replacement exhaust manifold, downpipes, intercooler, and camshaft gears in 2022.' 'Further modifications are said to include: Link Engine Management ECU MAC boost controller solenoid Powerhouse Racing spark plug cover Radium Engineering fuel pressure regulator, fuel rail, and flex-fuel kit 1400cc fuel injectors TiAL blow-off valve and wastegate Mishimoto radiator APR carbon-fiber cooling plate' 'A Walbro Hellcat 525-lph fuel pump and ARP cylinder head fasteners were installed and the engine was tuned in June 2023 by Zee\u2019s Garage of Alberta, Canada. Dynamometer test results obtained using E85 fuel are shown above. Power is sent to the rear wheels through a V160 six-speed manual transmission and a Torsen limited-slip differential.'"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-155/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: seller comments on the same listing (2023-10-12 and 2023-10-16)",
+          "kind": "thread",
+          "quote": "Seller: 'The car has a full flex fuel kit and is running on both pump 91 and E85. On pump it's tuned to 540WHP and on E85 its currently at 670WHP.' Seller: '19-20 psi on the E85 tune.'"
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/09/IMG_3786-2-scaled.jpg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the Zee's Garage Mainline DynoLog Dyno Report (listing gallery; cropped copy inline at .../1994_toyota_supra_img_3786-3-31435.jpg)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Zee's Garage  Page 1 of 1', 'Mainline DynoLog Dyno Report', 'Test ID E85 Final', 'Test Date: 9-Jun-2023 19:03', 'Test #: 1025.18', 'Vehicle: Toyota Supra 2JZ-GTE', 'Air Density: 84.0%', 'Correction: 18.7 SAE J607 (26.8\u00b0C, 886mBrA, 41%)' (pressure digits slightly blurred), 'Gear: 4', 'RPM/KPH: 2', 'Derived Torque(FtLb) and Power(HP) [Cor'd]', 'Axle Speed (RPM) / Engine Speed [Derived] @ 160RPM/Sec UP, 8.8 Sec', 'Max: dTorque= 588.5FtLb @ 5,661 RPM', 'Power= 667.9HP @ 6,190 RPM'. Customer name and registration on the sheet deliberately not copied."
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/09/IMG_3787-2-scaled.jpg",
+          "accessed": "2026-09-30",
+          "title": "JEVIC odometer certificate photo (listing gallery image)",
+          "kind": "article",
+          "quote": "read from image: 'Model/Make: SUPRA / TOYOTA', 'Date of Verification: 10th March 2017', 'Location of Verification: YOKOHAMA', 'Vehicle Identification Number: JZA80-...' (number not copied), 'Odometer Reading: 142893 km'"
+        },
+        {
+          "url": "https://www.full-race.com/borgwarner-airwerks-s364sx-e-64-5mm-8776",
+          "accessed": "2026-09-30",
+          "title": "Full-Race: BorgWarner AirWerks S364SX-E - 64.5mm Enhanced S300SX-E 8776",
+          "kind": "maker page",
+          "quote": "seller page (via WebFetch): 'BorgWarner AirWerks S364SX-E - 64.5mm Enhanced S300SX-E 8776'; inducer 64.5mm; exducer 87.37mm; 'Max Flow Rate: 83 lb/min'; 'Max Shaft Speed: 122374 RPM'; turbine wheel 76mm; housings 0.70 T3, 0.88 T4 open, 0.91 T4 twin scroll, 1.00 T4 twin scroll. Max PR and peak efficiency not stated."
+        },
+        {
+          "url": "https://www.borgwarner.com/docs/default-source/iam/boosting-technologies/s300sx-e.pdf?sfvrsn=c29f8f3c_2",
+          "accessed": "2026-09-30",
+          "title": "BorgWarner S300SX-E Super-Core dimensional sheet (PDF)",
+          "kind": "maker page",
+          "quote": "text extracted from PDF: table rows '13009097008 3.44 87.37 2.54 64.47 3.00 76.20 2.66 67.56' and '13009097055 3.44 87.37 2.54 64.47 3.14 79.76 2.89 73.37' (comp O.D. in/mm, inducer in/mm, turbine O.D. in/mm, exducer in/mm); 'S300SX-E 320 - 1000 HP'. No flow figures in this PDF."
+        }
+      ],
+      "confidence": "High for the sheet values, correction and weather (clear photo; one pressure digit slightly blurred). Medium-low for the build: turbo generation, intake, rear exhaust and above all internals/cams are not stated; boost is the seller's word. High altitude (about 886 mbar) means an 18.7 % J607 correction - model should be run at the printed conditions or compared on the uncorrected figure (667.9 / 1.187 = about 563 hp observed, my arithmetic)."
+    },
+    {
+      "id": "jza80-vvti-g35-1050-e85-mainline-j607-tunedbyapex-melbourne-2022",
+      "summary": "MK4 Supra (JZA80) with a VVT-i 2JZ-GTE 'stock cammed', Garrett G35-1050, 4-inch downpipe, 4-inch GReddy FMIC, Haltech, flex fuel: 419.9 kW @ 6,617 rpm and 693 Nm @ 4,833 rpm at the wheels on E85 (Mainline DynoLog, 'Correction: 3.13 SAE J607 (19\u00b0C, ~999 hPa, 61%)', 7 Dec 2022, Tuned By Anton / Tuned by Apex, Melbourne); compare run 298.4 kW / 470 Nm (tuner text: 290 kW on petrol). Boost is not published anywhere.",
+      "usable": false,
+      "whyNotUsable": "Criterion 4: peak boost is not stated on the sheet, on the result page or anywhere public found (tuner's old site tunedbyanton.com is gone; Instagram not accessible). Criterion 2 only partly documented: cams stated stock ('stock cammed'); bottom end and head not stated (the result page's parts categories omit the 'Engine Components' category that Apex lists for its built-engine Supras - supporting inference only). Turbine A/R, injectors and exhaust details not stated. The red compare run is not labelled as the petrol tune on the sheet.",
+      "vehicle": {
+        "chassis": "JZA80 (page: 'Model Supra Series MK4'; sheet: 'Vehicle: Supra 2j vvti')",
+        "market": "not stated (car in Melbourne, Australia)",
+        "grade": "not stated",
+        "gearbox": "not stated (2WD; run in 'Gear: 4')",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE VVT-i, 'stock cammed' (tuner). Bottom end and head: not stated.",
+      "dyno": {
+        "make": "Mainline",
+        "model": "Mainline AWD (page: 'Bay 02 \u00b7 Mainline AWD'); sheet 'Mainline DynoLog Chassis Dyno Report'",
+        "type": "load roller (AWD rollers; Mainline derived engine speed, 'RPM/KPH: 37')",
+        "where": "Tuned by Apex, 9/21 View Rd, Epping VIC (Melbourne), Australia; sheet header 'Skylight Automotive', 'Tuned By Anton', '2/50 Barretta Rd Ravenhall'"
+      },
+      "correction": {
+        "value": "SAE J607 on the sheet (the web page says 'SAE J1349')",
+        "howKnown": "printed on sheet: 'Correction: 3.13 SAE J607 (19\u00b0C, ... , 61%)' and 'Derived Torque(NM) [Cor'd]'. The result page instead says 'Hubs \u00b7 SAE J1349 \u00b7 Median of 3 pulls' - conflict; the sheet is the primary record. My J607 dry-air check at 19 \u00b0C / 61 % RH / 999 hPa gives about 3.4 %, close to the printed 3.13 % (inference)."
+      },
+      "testConditions": {
+        "temperature": "19 \u00b0C",
+        "pressure": "about 999 hPa (printed digits/unit blurred at the only available 513x728 resolution; reads like '999.0 KPa' or '99.9 KPa')",
+        "humidity": "61 %",
+        "howKnown": "printed in the sheet's correction line; 'Air Density: 97.6%' also printed"
+      },
+      "result": {
+        "peakWheelPower": "419.9 kW (563 hp, my conversion) at 6,617 rpm - E85 run; compare run 298.4 kW at 6,691 rpm",
+        "peakWheelTorque": "693 Nm at 4,833 rpm (derived torque) - E85 run; compare run 470 Nm at 4,610 rpm",
+        "howRead": "read from sheet: 'Max: dTorque= 693NM @ 4,833  Power= 419.9KW @ 6,617  Motive Force= 2184.4Lb @ 4,758' and 'Max: dTorque= 470NM @ 4,610  Power= 298.4KW @ 6,691  Motive Force= 1483.0Lb @ 4,610'; 'Compare Run: Baseline Test / 21193.40, 6-Dec-2022, 12:03'. Consistency: 693 Nm at 4,833 rpm = 350.7 kW; 419.9 kW at 6,617 rpm = 606 Nm - both match the plotted curves. Result page: 'Tuned 419 kW ... at the hubs', 'Tuned 693 Nm ... at the hubs' (its 'Stock 200 kW / 284 Nm' baseline is a template value that also appears on other Apex Supra pages - not a measurement of this car)."
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated; torque climbs from about 310 Nm at 3,000 rpm to its peak by about 4,800 rpm (read off the curve); tuner: 'broad powerband 3000-7700rpm'",
+        "howKnown": "not on sheet or page"
+      },
+      "fuel": "E85 for the 419.9 kW run (tuner: '420kw on e85'); petrol run about 290 kW (tuner text; page lists 'Fuel 98 RON \u00b7 E85 \u00b7 Flex Fuel')",
+      "mods": {
+        "turbo": "Garrett G35-1050 (A/R not stated)",
+        "turboSpecs": {
+          "compressorMaxFlow": "about 100 lb/min (0.76 kg/s) at the end of the 130,000 rpm speed line near PR 2.6 - read by eye from Garrett's published map (garrettmotion.com, '35-1050-Comp-Map-kg-sec'); Garrett page: 'Horsepower: 700 - 1050', inducer 68 mm, exducer 84 mm, trim 65",
+          "maxPressureRatio": "about 4.1 (top of the surge line, read from the map)",
+          "peakEfficiency": "78 % (Garrett: '78% MAXIMUM COMPRESSOR EFFICIENCY'; 78 % island on map)"
+        },
+        "intercooler": "GReddy 4-inch front mount",
+        "exhaust": "4-inch downpipe; aftermarket headers/exhaust manifold and exhaust (page categories 'Exhaust', 'Down Pipe', 'Headers'; details not stated)",
+        "intake": "aftermarket intake (page category 'Intake'; details not stated)",
+        "injectors": "not stated ('Fuel System Upgrade' category only)",
+        "ecu": "Haltech (model not stated), tuned by Anton Krstic (Tuned by Apex / Tuned By Anton)",
+        "cams": "stock ('2JZ VVTi stock cammed')",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/toyota-supra-2jz-vvti",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Toyota Supra 2JZ VVTi Dyno Results (tunedbyapex.com redirects here with HTTP 308)",
+          "kind": "article",
+          "quote": "'Stage 3 Haltech Toyota Supra 2JZ VVTi Tuned \u00b7 09 Dec 22 Bay 02 \u00b7 Mainline AWD' 'Make Toyota Model Supra Series MK4 Engine 2JZGTE Fuel 98 RON \u00b7 E85 \u00b7 Flex Fuel ECU Haltech Drivetrain 2WD' '2JZ VVTi stock cammed paired with a G35-1050 unit, 4in downpipe & 4in Greddy fmic. Power produced on petrol 290kw & 420kw on e85 with a broad powerband 3000-7700rpm.' 'Anton Krstic \u00b7 Lead tuner \u00b7 Bay 02' 'Hubs \u00b7 SAE J1349 \u00b7 Median of 3 pulls Power Stock 200 kW \u2192 Tuned 419 kW ... at the hubs' 'Torque Stock 284 Nm \u2192 Tuned 693 Nm' 'Hardware Modifications. 8 categories \u00b7 Stage 3 build \u00b7 Intake \u00b7 Exhaust \u00b7 Down Pipe \u00b7 Intercooler \u00b7 Fuel System Upgrade \u00b7 Ignition Upgrade \u00b7 Turbocharger \u00b7 Headers'"
+        },
+        {
+          "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/05/ve1me5jwok5q2y4bnnhapkjp/fallback.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mainline DynoLog Chassis Dyno Report linked as the page's dyno graph (513x728 px)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Skylight Automotive  Page 1 of 1', 'Tuned By Anton', 'Mainline DynoLog Chassis Dyno Report', 'Test ID: Baseline Test', 'Test Date: 7-Dec-2022 21:45', 'Operator: Anton', 'Vehicle: Supra 2j vvti', 'Air Density: 97.6%', 'Correction: 3.13 SAE J607 (19\u00b0C, 999.0 KPa(?), 61%)' (pressure digits/unit blurred), 'Induction: fmic', 'Cylinders: 6', 'RPM/KPH: 37', 'Gear: 4', 'Derived Torque(NM) [Cor'd]', 'Max: dTorque= 693NM @ 4,833  Power= 419.9KW @ 6,617', 'Max: dTorque= 470NM @ 4,610  Power= 298.4KW @ 6,691', 'Power Total (KW)'. Customer name and registration not copied."
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/1000hp-toyota-supra",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: other MK4 Supra result (for the 'Engine Components' category comparison)",
+          "kind": "article",
+          "quote": "'Precision 7175, 40psi of boost Stock port with Kelford T202D camshafts' ... 'Hardware Modifications. 10 categories \u00b7 Stage 3 build \u00b7 Intake \u00b7 Exhaust \u00b7 Down Pipe \u00b7 Intercooler \u00b7 Fuel System Upgrade \u00b7 Ignition Upgrade \u00b7 Engine Components \u00b7 Transmission Components \u00b7 Turbocharger \u00b7 Headers'"
+        },
+        {
+          "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/g-series-g35-1050/",
+          "accessed": "2026-09-30",
+          "title": "Garrett G-Series G35-1050 68mm product page",
+          "kind": "maker page",
+          "quote": "(via WebFetch) 'Horsepower: 700 - 1050'; 'Displacement: 2.0L - 5.5L'; compressor inducer 68mm, exducer 84mm, trim 65; '78% MAXIMUM COMPRESSOR EFFICIENCY'; turbine 68/62 mm; A/Rs 0.83, 1.01 (standard rotation). Max flow not stated in text."
+        },
+        {
+          "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/35-1050-Comp-Map-kg-sec-scaled.jpg",
+          "accessed": "2026-09-30",
+          "title": "Garrett G35-1050 compressor map",
+          "kind": "maker page",
+          "quote": "read from image: y-axis PRESSURE RATIO 1-4.5; x-axis CORRECTED AIR FLOW in LBS/MIN and KG/SEC; speed lines 50000-130000 with 'MAX RPM 130000'; 130000 line ends at about 100 lb/min (0.76 kg/s) near PR 2.6; surge line tops out at about PR 4.1; islands 78 % (centre), 77, 76 ... 60 %. Values read by eye, +/- about 2 lb/min and 0.05 PR."
+        }
+      ],
+      "confidence": "High for the sheet numbers and correction line (one pressure digit/unit blurred). Build partly documented (tuner's one-paragraph note). No boost figure, so the model cannot be set up from public data; usable only if the owner obtains the boost from the tuner."
+    },
+    {
+      "id": "jza80-us-1997-pt6466bb-stock-bottom-end-mustang-soundperformance-2023",
+      "summary": "US 1997 Supra Turbo 15th Anniversary 6-speed, Sound Performance single-turbo conversion (2022-23): Precision 6466 BB T4 divided 1.0 A/R on an SP manifold, SP intake manifold, 1260cc injectors, ETS 4-inch FMIC, ProEFI flex fuel; Sound Performance confirmed 'definitely a stock bottom end'. Mustang Dynamometer screen: '300kpa 716/681 E65' and '200kpa 475/429 pump gas' (whp/wtq, engine-rpm axis). No correction or weather shown.",
+      "usable": false,
+      "whyNotUsable": "Criterion 6: the only published dyno record is a Mustang PowerDyne screen capture with no correction standard and no test-day weather. Also: Precision PT6466 max flow (lb/min) not found from the maker (precisionturbo.com bot-gated) or a seller (Full-Race gives only 'Rated at 900 BHP' for the Gen2); Gen1/Gen2 not stated; pump-gas octane not stated; head and cams are not explicitly stated as stock (they are absent from a very detailed build list and from the SP invoices, and the stock cam gears were powder-coated) - strong but indirect. Dyno make is on the screen but the screen labels the traces 'Eng Power'/'Eng Torque' (the owner's build list calls the same numbers 'whp'/'wtq').",
+      "vehicle": {
+        "chassis": "JZA80 (US-market 1997 Supra Turbo; listing)",
+        "market": "US",
+        "grade": "Turbo, 15th Anniversary Edition",
+        "gearbox": "six-speed manual (V160 per listing), Torsen LSD; Clutch Masters FX500 8-puck clutch",
+        "year": "1997"
+      },
+      "engine": "2JZ-GTE non-VVT-i (US 1997). Bottom end: 'definitely a stock bottom end' (Sound Performance via seller); SP compression test before the build 165/160/160/160/160/170 psi; engine refreshed with new seals and gaskets; oil pans resealed. Head/cams: no parts or machining listed.",
+      "dyno": {
+        "make": "Mustang",
+        "model": "not shown (Mustang Dynamometer PowerDyne Graph Viewer screen)",
+        "type": "load roller (Mustang eddy-current chassis dyno - general knowledge of the brand; not stated on screen)",
+        "where": "not stated on the screen; the car was prepared 'for dyno' at Sound Performance, Bensenville IL (SP invoice 16962, Jan 2023) - inference that SP ran it"
+      },
+      "correction": {
+        "value": "not shown",
+        "howKnown": "the PowerDyne screen shows no correction standard or factor"
+      },
+      "testConditions": {
+        "temperature": "not shown",
+        "pressure": "not shown",
+        "humidity": "not shown",
+        "howKnown": "not on the screen"
+      },
+      "result": {
+        "peakWheelPower": "716 hp at about 6,700 rpm (E65, 300 kPa); 475 hp at about 6,800-7,000 rpm (pump gas, 200 kPa) - rpm read off the curve",
+        "peakWheelTorque": "681 ft-lb at about 5,100 rpm (E65); 429 ft-lb at about 4,100 rpm (pump gas) - rpm read off the curve",
+        "howRead": "run labels on the screen: 'Run #1 300kpa 716/681 E65', 'Run #2 200kpa 475/429 pump gas'; axes 'Eng Power' 0-725, 'Eng Torq' 0-725, 'Engine Speed' 3250-7200. Consistency: 681 ft-lb at 5,100 rpm = 661 hp (curve shows about 660 there); 716 hp at 6,700 rpm = 561 ft-lb (curve about 560) - self-consistent."
+      },
+      "boost": {
+        "peak": "300 kPa (E65 run) and 200 kPa (pump run) as labelled - presumably absolute, i.e. about 29 psi and 14 psi gauge, matching the build list's '29 psi' and '14 psi'",
+        "atPeakPower": "not shown",
+        "fullBoostRpm": "not shown; E65 torque rises steeply 3,650-4,800 rpm (read off curve)",
+        "howKnown": "screen run labels + owner's build list; SP invoice: 'Set WGs to 14.5'"
+      },
+      "fuel": "E65 (screen label) / 'E85' (build list) for the 716 whp run; 'pump gas' (octane not stated; car in Chicago area) for the 475 whp run",
+      "mods": {
+        "turbo": "Precision 6466 BB (ball bearing), T4 divided 1.0 A/R, on SP F1 exhaust manifold; 2x Precision PW46 wastegates; TiAL BOV",
+        "turboSpecs": {
+          "compressorMaxFlow": "not found in lb/min (Full-Race PT6466 Gen2 page: 'Rated at 900 BHP', inducer 64.39 mm, exducer 86.61 mm; generation of this unit not stated)",
+          "maxPressureRatio": "not stated",
+          "peakEfficiency": "not stated"
+        },
+        "intercooler": "ETS 4-inch with custom pipes",
+        "exhaust": "SP F1 exhaust manifold; SP 4-inch custom exhaust (build list) / 'Custom exhaust system with Stainless Bros resonator and muffler' (listing); an HKS Carbon Ti exhaust was invoiced in April 2022 - which exhaust was fitted at the dyno is not certain",
+        "intake": "SP forward-facing intake manifold with 75 mm throttle body (build list; invoice says 3-inch throttle body)",
+        "injectors": "SP 1260cc (SP fuel system with dual Walbro 525 lph Hellcat pumps)",
+        "ecu": "ProEFI with Tweak'd harness, flex fuel; installed/configured by Sound Performance (Jan 2023)",
+        "cams": "not stated (none listed or invoiced; stock cam gears powder-coated)",
+        "internals": "stock bottom end (Sound Performance via seller)"
+      },
+      "sources": [
+        {
+          "url": "https://bringatrailer.com/listing/1997-toyota-supra-68/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: Modified 1997 Toyota Supra Turbo 15th Anniversary 6-Speed (auction 2023-09)",
+          "kind": "article",
+          "quote": "'The 3.0L 2JZ-GTE inline-six was fitted with a single Precision 6466 turbocharger in 2022 by Sound Performance of Bensenville, Illinois.' '... ProEFI engine management system Tweak\u2019d Performance wiring harness ETS 4\u2033 intercooler Precision PW46 46mm wastegates TiAL blow-off valve SP intake manifold and 3\u2033 throttle body SP fuel system w/1,260cc injectors and dual Walbro pumps SP single-turbocharger exhaust manifold ... Custom exhaust system with Stainless Bros resonator and muffler Dyno test results are viewable in the gallery below, along with a modification list provided by the seller.'"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1997-toyota-supra-68/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: seller comment (2023-09-12)",
+          "kind": "thread",
+          "quote": "'According to Sound Performance - technically the engine was opened because the pans were resealed by them. They also confirmed \u201cit\u2019s definitely a stock bottom end\u201d'"
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/07/1997_toyota_supra_1997_toyota_supra_C9530345-93B4-40AD-800D-D3159F7D15A4-23498-1-06523.jpeg",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer PowerDyne Graph Viewer screen (listing gallery, item after the two build-list pages)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'PowerDyne Graph Viewer', 'MUSTANG DYNAMOMETER', 'Eng Power' / 'Eng Torq' axes 0-725, 'Engine Speed' 3250-7200, 'Eng Torque T (Ft' / 'Eng Power T (HP' legends, 'Run #1 300kpa 716/681 E65', 'Run #2 200kpa 475/429 pump gas'. No correction or weather on the screen."
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/07/1997_toyota_supra_Supra-Build-List-1-06967-scaled.jpg",
+          "accessed": "2026-09-30",
+          "title": "Owner's build list, pages 1-2 (listing gallery images)",
+          "kind": "article",
+          "quote": "read from image: 'Turbo: SP Turbo kit SP F1 Exhaust Manifold with a 6466 BB (Ball bearing) T4 divided turbo 1.0 A/R 2 Precision WG Tial BOV'; 'SP Forward Facing Intake Manifold with a 75mm Throttle Body'; 'SP Fuel system with 1260cc injectors, Radium dual fuel pump hanger 2x Walbro 525lph Hellcats Pumps'; 'ETS 4\" intercooler with custom intercooler pipes'; 'SP 4\" custom exhaust'; 'ProEFI with Oil & fuel pressure sensor, coolant Flex fuel'; 'Pump 475 whp 429 wtq -14 psi'; 'E85 716 whp 681 wtq \u2013 29 psi'. Page 2 lists fluids, 'Spark plugs (NGK 6282 \u2013 BCPR7ES) \u2013 Gapped to .025\"', suspension, wheels, interior - no camshafts, head work or pistons on either page."
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/07/1997_toyota_supra_202204-REDACTED-1997_toyota_supra_64474486-A428-47CE-ABD7-8ADE508C8BF7-67746-scaled-1-02018.jpg",
+          "accessed": "2026-09-30",
+          "title": "Sound Performance invoice 16116 (4/1/2022), pages 1-3 (listing gallery images)",
+          "kind": "article",
+          "quote": "read from images: page 1 'Compression test 1-165, 2-160, 3-160, 4-160, 5-160, 6-170 JJ 2/11/22', '-Remove stock twins, remove intake, harness', 'Coating Cam Gears - Satin Black', 'SP Intake M... Includes Manifold,(battery relocated to trunk) 3\" Throttle Body, Ford TPS...', 'Precision PW46 46mm Wastegate - 085-2001' x2; page 2 '**********Engine Assembly************ -Clean and paint engine, new seals and gaskets, weld water pipe ... -Install exhaust and intake manifolds, Set WGs to 14.5 and install ... -Install turbo and oil return, install fuel rail'; page 3 'SP Fuel System for MKIV Supra w/ SP 1260cc injectors & Dual Walbro \"Hellcat\" 525 lph pumps', 'HKS Carbon Ti Exhaust for 93-98 MKIV Supra TT - 3112-EX006'. No camshaft line on any page viewed."
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2023/07/1997_toyota_supra_202302-REDACTED-1997_toyota_supra_4D45B12A-88C7-4F50-8945-3EDB23E5261E-67545-scaled-1-02064.jpg",
+          "accessed": "2026-09-30",
+          "title": "Sound Performance invoice 16962 (2/8/2023), pages 1-2 (listing gallery images)",
+          "kind": "article",
+          "quote": "read from images: 'ProEFI wire tuck, check all fluids, ... load basemap, config ECU, car starts!!! TM 1/18/22 8' (date as printed); 'Check car for dyno, nut and bolt check all suspension, brakes, wheels etc ... TM 1/19/23 10'; 'Mount Vossen wheels, get ready for dyno, rear end toe alignment TM & DK 1/20/23 2.5'"
+        },
+        {
+          "url": "https://www.full-race.com/precision-turbo-64mm-gen2-pte-6466-cea-turbo",
+          "accessed": "2026-09-30",
+          "title": "Full-Race: Precision Turbo 64mm GEN2 PTE 6466 CEA Turbo",
+          "kind": "maker page",
+          "quote": "(via WebFetch) 'Rated at 900 BHP'; inducer '64.39mm'; exducer '86.61mm'; turbine 74.17/66 mm; T4 divided A/R 0.84, 1.00, 1.15, 1.32. Max flow in lb/min not stated."
+        }
+      ],
+      "confidence": "High for the build (owner list + SP invoices + SP statement relayed by seller) and for the screen numbers; zero for correction/weather. Would become a strong case only if the original Mustang printout (with correction and weather) could be obtained."
+    },
+    {
+      "id": "jza80-rzs-vvti-bw-s362sxe-25psi-98ron-flameperformance-nzpc-2026",
+      "summary": "NZ Performance Car issue 312 feature: 1999 Supra RZ-S (JZA80), VVT-i 2JZ-GTE with factory block and factory head, BorgWarner S362SX-E 0.91 A/R T4 twin-scroll on a Sinco manifold, 25 psi, BP Ultimate 98, Link G4+ Fury tuned by Flame Performance (Christchurch): 432 kW / 754 Nm at the wheels. Best-documented engine spec found, but no dyno sheet, dyno make, correction or rpm is published.",
+      "usable": false,
+      "whyNotUsable": "Criteria 5, 6 and 7: the article gives only '432kW at the wheels' and '754Nm at the wheels' - no dyno make, no correction, no weather, no rpm. Flame Performance's website says it runs 'Dynapack Hub Dynos', so the figure is probably a Dynapack hub figure, but that is an inference, and Dynapack printouts may carry a TCF multiplier (see Phoenix's Power entry) - unknown here.",
+      "vehicle": {
+        "chassis": "JZA80 ('1999 Toyota Supra RZ-S (JZA80)')",
+        "market": "JDM (car in Christchurch, New Zealand)",
+        "grade": "RZ-S (Series 2)",
+        "gearbox": "factory six-speed Getrag V161, Exedy HD clutch and lightweight flywheel, factory A03B Torsen LSD",
+        "year": "1999"
+      },
+      "engine": "2JZ-GTE VVT-i 3000cc; 'BLOCK: Factory'; 'HEAD: Factory'; text: 'still rocking the stock bottom and top end'",
+      "dyno": {
+        "make": "not stated in the article (tuner Flame Performance advertises Dynapack hub dynos - inference only)",
+        "model": "not stated",
+        "type": "hub (if Flame's Dynapack was used - inference)",
+        "where": "not stated (tuner: Flame Performance, Christchurch NZ)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "no sheet published"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "no sheet published"
+      },
+      "result": {
+        "peakWheelPower": "432 kW at the wheels (rpm not stated)",
+        "peakWheelTorque": "754 Nm at the wheels (rpm not stated)",
+        "howRead": "article text and spec list 'POWER: 432kW at the wheels' 'TORQUE: 754Nm at the wheels'. Only check possible: peak power needs at least 432,000 / (754 x 2\u03c0/60) = about 5,470 rpm - plausible, not verifiable."
+      },
+      "boost": {
+        "peak": "25 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "spec list 'BOOST: 25psi'; text 'all on 25psi of boost'"
+      },
+      "fuel": "BP Ultimate 98 (98 RON pump fuel, NZ)",
+      "mods": {
+        "turbo": "BorgWarner S362SX-E, 0.91 A/R T4 twin-scroll turbine housing (turbine wheel size 76 or 80 mm not stated); Turbosmart ProGate50 Gen V; TiAL Q 50 mm BOV",
+        "turboSpecs": {
+          "compressorMaxFlow": "78 lb/min (Full-Race seller page for the S362SX-E 8376: 'Max Flow Rate: 78 lb/min', inducer 61.44 mm, exducer 83.47 mm); BorgWarner PDF confirms 61.44/83.47 mm for both S362SX-E super-cores (13009097056 with 76 mm turbine, 13009097053 with 80 mm) but gives no flow",
+          "maxPressureRatio": "not stated by the sources read",
+          "peakEfficiency": "not stated by the sources read"
+        },
+        "intercooler": "Blitz front-mount, custom 3-inch aluminium charge pipes",
+        "exhaust": "Sinco Customs steampipe top-mount twin-scroll manifold, custom 3.5-inch stainless downpipe and exhaust, AdrenalinR resonator and 7-inch muffler (no cat listed)",
+        "intake": "K&N 4-inch pod filter, Bosch Motorsport 74 mm drive-by-wire throttle body with Venom adaptor (intake manifold not listed - presumably factory, not stated)",
+        "injectors": "custom 1000cc side-feed, modified factory rail, Aeromotive FPR, Walbro 465 lph",
+        "ecu": "Link G4+ Fury, tuned by Geoff at Flame Performance; MAC 3-port boost solenoid",
+        "cams": "factory (head listed as 'Factory')",
+        "internals": "factory ('BLOCK: Factory')"
+      },
+      "sources": [
+        {
+          "url": "https://nzperformancecar.co.nz/the-sixth-sense-432kw-single-turbo-jza80-supra/",
+          "accessed": "2026-09-30",
+          "title": "NZ Performance Car: The Sixth Sense - 432kW Single Turbo JZA80 Supra (published 2026-03-23; 'originally appeared in New Zealand Performance Car issue 312')",
+          "kind": "article",
+          "quote": "'Under the hood, the 2JZ-GTE VVTi is still rocking the stock bottom and top end with a  BorgWarner S362SX turbo perched on a Sinco manifold ... With a 3.5-inch exhaust system, Walbro 465lph in-tank fuel pump, custom 1000cc injectors, and a Link G4+ Fury ECU, the 2JZ cranks out a solid 432kW and 754Nm at the rears, all on 25psi of boost courtesy of Geoff from Flame Performance working his magic.' Spec list: '1999 Toyota Supra RZ-S (JZA80)', 'ENGINE: 2JZ-GTE VVTi, 3000cc six-cylinder', 'BLOCK: Factory', 'HEAD: Factory', 'TURBO: BorgWarner S362SX-E turbo, 0.91A/R T4 twin-scroll turbine housing', 'POWER: 432kW at the wheels', 'TORQUE: 754Nm at the wheels', 'BOOST: 25psi', 'FUEL TYPE: BP Ultimate 98', 'TUNER: Geoff at Flame Performance', 'GEARBOX: Factory six-speed Getrag V161'"
+        },
+        {
+          "url": "https://www.flameperformance.co.nz/services.html",
+          "accessed": "2026-09-30",
+          "title": "Flame Performance: Services",
+          "kind": "maker page",
+          "quote": "'We Run your vehicle up on our state of the art Dynapack Hub Dynos to put your vehicle through a range of simulated road conditions & high power ramp runs ... A Comprehensive Printout showing the Power Output Curve of the vehicle will be supplied.'"
+        },
+        {
+          "url": "https://www.full-race.com/borgwarner-airwerks-s362sx-e-63mm",
+          "accessed": "2026-09-30",
+          "title": "Full-Race: BorgWarner Airwerks S362SX-E (61.44mm S300SX-E 8376)",
+          "kind": "maker page",
+          "quote": "(via WebFetch) part numbers '13009097056-177207 (0.91 A/R Turbine Housing)'; inducer 61.44mm; exducer 83.47mm; 'Max Flow Rate: 78 lb/min'; 'Max Shaft Speed: 128,136 RPM (560 m/s)'; turbine wheel 76mm; housings 0.88 open, 0.91 twin scroll, 1.00 twin scroll. HP rating, max PR and peak efficiency not stated."
+        },
+        {
+          "url": "https://www.borgwarner.com/docs/default-source/iam/boosting-technologies/s300sx-e.pdf?sfvrsn=c29f8f3c_2",
+          "accessed": "2026-09-30",
+          "title": "BorgWarner S300SX-E Super-Core dimensional sheet (PDF)",
+          "kind": "maker page",
+          "quote": "text extracted from PDF: '13009097056 3.29 83.47 2.42 61.44 3.00 76.20 2.66 67.56' and '13009097053 3.29 83.47 2.42 61.44 3.14 79.76 2.89 73.37'; housings '177207 0.91 Volute, Twin Flow' (76mm turbine) and '177208 0.91 Volute, Twin Flow' (80mm turbine)"
+        }
+      ],
+      "confidence": "High for the engine/parts spec (magazine spec list). Result figures are magazine text only; dyno type inferred; no correction. Not a validation case unless the tuner's printout (with TCF and correction) is obtained."
+    },
+    {
+      "id": "jza80-us-1994-precision67mm-racefuel-dynojet-std-psi-portland-2018",
+      "summary": "US 1994 Supra Turbo 6-speed (replacement 2JZ-GTE taken from a stock car in 2005), 'Precision 67mm' single turbo on an RPS equal-length manifold, 4-inch downpipe/midpipe, GReddy FMIC, 720cc injectors, Link G4 tuned by Portland Speed Industries: 648.23 hp / 567.34 ft-lb at 25.03 psi on high-octane race fuel, Dynojet WinPEP 7, 'CF: STD', '121.86 \u00b0F, 29.55 in-Hg, Humidity: 2%, STD: 1.06', 11 Apr 2018.",
+      "usable": false,
+      "whyNotUsable": "Criterion 3: turbo only described as 'Precision 67mm' (PT6765/6766/6767 etc. - model, generation, housing unknown), so no compressor data can be tied to it. Criterion 4: fuel is 'high-octane race fuel' with no name. Criterion 2 only partly documented: the engine is a used engine 'from a stock car' installed in 2005 (former owner) - cams and head never stated. X-axis is road speed, so the rpm of the peaks is not printed.",
+      "vehicle": {
+        "chassis": "JZA80 (US 1994 Toyota Supra Turbo; listing)",
+        "market": "US",
+        "grade": "Turbo, sport roof",
+        "gearbox": "Getrag V160 six-speed, RPS twin-disc carbon clutch, lightweight flywheel, LSD",
+        "year": "1994"
+      },
+      "engine": "2JZ-GTE replacement engine: former owner (BaT comment) 'In 2005 with 66,580 miles, I had a rod failure ... I replaced the engine with another from a stock car with ~28,000.'; compression 170-172 psi (2017, former owner). Cams/head not stated.",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not shown (WinPEP 7)",
+        "type": "inertia roller (Dynojet; load mode not shown; 'Run Type: RO')",
+        "where": "Portland Speed Industries, LLC, 6103 NW Casper Place, Hillsboro, Oregon (printed on sheet)"
+      },
+      "correction": {
+        "value": "STD (SAE J607 basis)",
+        "howKnown": "printed: 'CF: STD' and '... Humidity: 2%, STD: 1.06'"
+      },
+      "testConditions": {
+        "temperature": "121.86 \u00b0F (as printed - unusually high, probably the dyno's inlet-air sensor)",
+        "pressure": "29.55 inHg",
+        "humidity": "2 %",
+        "howKnown": "printed: 'Run Conditions: 121.86 \u00b0F, 29.55 in-Hg, Humidity: 2%, STD: 1.06'. My J607 check at those values gives about 1.07 vs the printed 1.06 (inference)."
+      },
+      "result": {
+        "peakWheelPower": "648.23 hp (at about 105-115 mph in the test gear; rpm not printed)",
+        "peakWheelTorque": "567.34 ft-lb (Dynojet torque with speed x-axis; peak around 88-95 mph)",
+        "howRead": "read from the photographed sheet: 'RunFile_031.drf Max Power = 648.23 Max Torque = 567.34', 'RunFile_031.drf - 4/11/2018 5:31:43 PM Run Type: RO', 'Max *boost = 25.03', 'Power at the wheels' not printed but listing says 'at the wheels'. Rough check from the photo: power/torque ratios at 90 mph and 110 mph imply about 60 and 58 rpm per mph (4 % apart, within photo-perspective error) - consistent with a fixed gear ratio."
+      },
+      "boost": {
+        "peak": "25.03 (psi; Dynojet '*boost' channel)",
+        "atPeakPower": "about 25 psi (boost trace roughly flat from about 88 mph to the end of the pull - read off the plot)",
+        "fullBoostRpm": "not printed (x-axis mph); boost trace reaches its plateau at about 88-90 mph",
+        "howKnown": "printed 'Max *boost = 25.03' and lower boost/AFR panel"
+      },
+      "fuel": "'high-octane race fuel' (brand/octane not stated)",
+      "mods": {
+        "turbo": "'Precision 67mm' (model not stated); 60 mm wastegate",
+        "turboSpecs": {
+          "compressorMaxFlow": "not determinable (turbo model unknown)",
+          "maxPressureRatio": "not determinable",
+          "peakEfficiency": "not determinable"
+        },
+        "intercooler": "GReddy front mount",
+        "exhaust": "RPS equal-length tubular manifold (modified for 60 mm gate), 4-inch downpipe, custom 4-inch midpipe, 4-inch Boost Logic muffler",
+        "intake": "4-inch intake and filter in the front bumper",
+        "injectors": "720 cc/min (make not stated); HKS rail, Paxton adjustable FPR, Aeromotive in-tank pumps",
+        "ecu": "Link G4 (replaced AEM V1 in 2018), tuned by Portland Speed Industries (PSI), FJO wideband",
+        "cams": "not stated",
+        "internals": "used engine from a stock car (former owner); no rebuild stated"
+      },
+      "sources": [
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-34/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: Modified 1994 Toyota Supra Turbo 6-Speed (bid to $50,000, 2019-09-18)",
+          "kind": "article",
+          "quote": "'The 3.0-liter 2JZ-GTE inline-six has been converted to a single-turbo setup with a Precision 67mm turbocharger, an RPS equal-length exhaust manifold, and a 60mm wastegate which is plumbed into a 4\u2033 downpipe, a custom 4\u2033 midpipe, and a 4\u2033 Boost Logic muffler. A 4\u2033 intake and filter are mounted in the front bumper, and a GReddy front-mounted intercooler and blow-off valve are also installed. An HKS fuel rail is paired with a Paxton adjustable fuel pressure regulator, 720 cc/min injectors, and in-tank Aeromotive fuel pumps. The engine is controlled by a Link G4 ECU with FJO wideband sensor. A 2018 dyno sheet showing 648 horsepower and 567 lb-ft of torque at the wheels on high-octane race fuel is shown above.'"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-34/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: seller and former-owner comments (2019-09-14)",
+          "kind": "thread",
+          "quote": "Seller: 'Last year I replaced the original AEM V1 ECU with a G4 Link and had it tuned by PSI in Portland.' Former owner: 'In 2005 with 66,580 miles, I had a rod failure due to a poor tune from the previous owner. I replaced the engine with another from a stock car with ~28,000. So the engine has ~40,000 less miles than the chassis.' '-Compression test 170-172 psi across all cylinders'"
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2019/08/1994_toyota_supra_15675563041fab0df24csupradyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynojet WinPEP 7 sheet, Portland Speed Industries (listing gallery)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'PORTLAND SPEED INDUSTRIES', 'DYNOJET WINPEP 7 Performance Evaluation Program', 'Portland Speed Industries, LLC - 6103 NW CASPER PLACE, HILLSBORO OREGON 97124', 'CF: STD', 'RunFile_031.drf Max Power = 648.23 Max Torque = 567.34', 'RunFile_031.drf Max *boost = 25.03', 'RunFile_031.drf - 4/11/2018 5:31:43 PM Run Type: RO Run Conditions: 121.86 \u00b0F, 29.55 in-Hg, Humidity: 2%, STD: 1.06', x-axis 'Speed (mph)' 45-130, y-axis 'Power (hp)' 0-700, lower panel 'Air/Fuel' 10-18"
+        }
+      ],
+      "confidence": "High for sheet values and printed weather; low for the build (turbo and fuel unidentified). Not usable as a validation case without the exact turbo and fuel."
+    },
+    {
+      "id": "rejected-jza80-us-1994-bw7588-proefi-mustang-screen-bat-2025",
+      "summary": "US 1994 Supra Turbo 6-speed with a single 'BorgWarner 75/88' turbo, dual TiAL 38 mm gates, ProEFI Pro128, ID injectors, 4-inch exhaust: Mustang PowerDyne screen labelled '674whp'.",
+      "usable": false,
+      "whyNotUsable": "Criterion 6: screen capture shows no correction and no weather; also no torque or rpm (x-axis MPH), trace labelled 'Eng Power', internals/cams not stated (only ARP head studs), boost and fuel not stated.",
+      "vehicle": {
+        "chassis": "JZA80 (US 1994 Supra Turbo)",
+        "market": "US",
+        "grade": "Turbo (targa)",
+        "gearbox": "V160 six-speed, OS Giken triple-disc clutch, TRD 3.27 diff",
+        "year": "1994"
+      },
+      "engine": "2JZ-GTE; internals not stated; 'ARP cylinder head studs'",
+      "dyno": {
+        "make": "Mustang",
+        "model": "not shown (PowerDyne Graph Viewer)",
+        "type": "load roller (not shown)",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not shown",
+        "howKnown": "no correction on the screen"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not on the screen"
+      },
+      "result": {
+        "peakWheelPower": "about 674 hp (run label '674whp'; curve peak about 670 at about 90 mph)",
+        "peakWheelTorque": "not stated",
+        "howRead": "read from screen: 'PowerDyne Graph Viewer', 'Eng Power T (HP)', 'MUSTANG DYNAMOMETER', run label 'MKIVWhite (Peacock, Rich...' / '674whp', x-axis 'Speed (MPH)' 50-123"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "not stated"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "BorgWarner 75/88 (listing wording)",
+        "turboSpecs": {
+          "compressorMaxFlow": "not stated",
+          "maxPressureRatio": "not stated",
+          "peakEfficiency": "not stated"
+        },
+        "intercooler": "not stated",
+        "exhaust": "fabricated 4-inch exhaust; dual TiAL 38 mm wastegates",
+        "intake": "4-inch K&N intake",
+        "injectors": "Injector Dynamics (size not stated)",
+        "ecu": "ProEFI Pro128",
+        "cams": "not stated",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-201/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: Modified 1994 Toyota Supra Turbo 6-Speed (bid to $70,000, 2025-09-11)",
+          "kind": "article",
+          "quote": "'The 3.0L 2JZ-GTE inline-six is equipped with a single BorgWarner 75/88 turbocharger and dual TiAL 38mm wastegates.' 'Dynomometer test results in the gallery below indicate that the car produced 674 horsepower.'"
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2025/08/1994_toyota_supra_IMG_1523-13980.png",
+          "accessed": "2026-09-30",
+          "title": "Mustang PowerDyne screen (listing gallery)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'PowerDyne Graph Viewer', 'Eng Power T (HP)', 'MUSTANG DYNAMOMETER', 'Speed (MPH)', 'Run #1 MKIVWhite (Peacock, Rich', '674whp'"
+        }
+      ],
+      "confidence": "Rejected; sheet lacks correction/weather/rpm."
+    },
+    {
+      "id": "rejected-jza80-us-1994-auto-bpu-stock-twins-dynodynamics-wichita-2008",
+      "summary": "US 1994 Supra Turbo automatic on stock twins with RMM downpipe, HKS Carbon-Ti exhaust, GReddy FMIC, A'PEXi intake, AVC-R and S-AFC II: Dyno Dynamics printout (wichitadyno.com), 'Max 374.2 HP', 'Max Torque 359.7 FtLb'.",
+      "usable": false,
+      "whyNotUsable": "Criterion 6: the printout shows no correction and no weather; it does not say wheel or flywheel; boost and fuel not stated.",
+      "vehicle": {
+        "chassis": "JZA80 (US 1994 Supra Turbo)",
+        "market": "US",
+        "grade": "Turbo",
+        "gearbox": "four-speed automatic, Torsen LSD",
+        "year": "1994"
+      },
+      "engine": "2JZ-GTE, stock twins (internals not stated)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not stated",
+        "type": "load roller (not shown)",
+        "where": "WWW.WICHITADYNO.COM (printed)"
+      },
+      "correction": {
+        "value": "not shown",
+        "howKnown": "not on printout"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not on printout"
+      },
+      "result": {
+        "peakWheelPower": "374.2 hp (wheel/flywheel not stated)",
+        "peakWheelTorque": "359.7 ft-lb",
+        "howRead": "read from image: 'DYNO DYNAMICS DYNAMOMETER', 'WWW.WICHITADYNO.COM', '94SUPRAA.007: INITIAL', '94SUPRAA.009: INITIAL', 'Max 374.2 HP', 'Max Torque 359.7 FtLb', x-axis 2600-7400 'iRPM'"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "not stated (A'PEXi AVC-R fitted)"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock sequential twins",
+        "turboSpecs": {
+          "compressorMaxFlow": "not stated",
+          "maxPressureRatio": "not stated",
+          "peakEfficiency": "not stated"
+        },
+        "intercooler": "GReddy front-mount kit",
+        "exhaust": "RMM downpipe, HKS Carbon-Ti exhaust",
+        "intake": "A'PEXi air intake",
+        "injectors": "not stated",
+        "ecu": "stock ECU with A'PEXi S-AFC II, GReddy boost cut controller, A'PEXi AVC-R",
+        "cams": "not stated",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-193/",
+          "accessed": "2026-09-30",
+          "title": "Bring a Trailer: 1994 Toyota Supra Turbo (bid to $71,500, 2025-07-17)",
+          "kind": "article",
+          "quote": "'The twin-turbocharged 3.0L 2JZ-GTE inline-six has been retrofitted with an RMM downpipe, a Greddy boost cut controller, an HKS blow-off valve, and an A\u2019PEXi air intake system.' 'Dynomometer test results in the gallery indicate that the engine produced 374 horsepower and 359 lb-ft of torque.'"
+        },
+        {
+          "url": "https://bringatrailer.com/wp-content/uploads/2025/06/1994_toyota_supra_2008.12.06.3-09821.jpeg",
+          "accessed": "2026-09-30",
+          "title": "Dyno Dynamics printout (listing gallery; file name dated 2008.12.06)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER', 'WWW.WICHITADYNO.COM', 'Max 374.2 HP', 'Max Torque 359.7 FtLb'"
+        }
+      ],
+      "confidence": "Rejected."
+    },
+    {
+      "id": "rejected-jza80-jdm-stock-twins-boostup-dynapack-tcf115-phoenixs-power",
+      "summary": "Phoenix's Power (Japan) tuning page lists several JDM JZA80 stock-twin boost-ups on its Dynapack (e.g. an automatic car after engine overhaul, F-Con V Pro 3.4, stock injectors, 1.20 -> 1.04 kg/cm2: 420.97 PS / 61.26 kgm; a late VVT-i car, 1.25 -> 1.05 kg/cm2: 415.57 PS / 62.35 kgm).",
+      "usable": false,
+      "whyNotUsable": "Criterion 5: the linked Dynapack screen prints 'tcf 1.150', i.e. the displayed PS are hub power multiplied by 1.15 (a flywheel-type estimate), not hub power. Also the same graph file is linked for two different entries and its printed maxima (417.19 PS / 62.10 kgm) match neither text figure; fuel is never stated. Several single-turbo entries on the page use aftermarket cams (HKS/JUN 264-272).",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "JDM (Japan)",
+        "grade": "not stated",
+        "gearbox": "AT (one car), 6MT (others)",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE; stock twins; internals not stated (one engine overhauled)",
+      "dyno": {
+        "make": "Dynapack",
+        "model": "'DYNAPACK 53 4WD with PSDAQ SMART CONTROL SOFTWARE V1.008'",
+        "type": "hub",
+        "where": "Phoenix's Power (Fukui store per page text: '\u798f\u4e95\u5e97\u30c0\u30a4\u30ca\u30d1\u30c3\u30af5\u901f\u30d8\u30d3\u30fc')"
+      },
+      "correction": {
+        "value": "DIN 70020 (1976) with tcf 1.150",
+        "howKnown": "printed on the Dynapack screen: 'DIN 70020 (1976)', 'tcf 1.150'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not on the screen"
+      },
+      "result": {
+        "peakWheelPower": "screen: 417.19 PS at 5,456 rpm x tcf 1.150 (= about 362.8 PS hub by my division - derived, not printed)",
+        "peakWheelTorque": "screen: 62.10 kgm at 4,341 rpm (x tcf)",
+        "howRead": "read from image furukawa/g1.gif: 'Engine Torque 62.10 Kgm 138.5 km/h 4341 rpm', 'Power 417.19 PS 174.0 km/h 5456 rpm', 'ratio 4.680:1', 'tcf 1.150', 'Date: 2019-12-01 12:54:06', 'Folder: JZA80'"
+      },
+      "boost": {
+        "peak": "1.20 kg/cm2 falling to 1.04 (AT car); 1.25 -> 1.05 (VVT-i car)",
+        "atPeakPower": "about 1.04-1.05 kg/cm2 (the 'after' values)",
+        "fullBoostRpm": "not stated",
+        "howKnown": "page text '\u30d6\u30fc\u30b9\u30c8\u5727 1.20kg \u2192 1.04kg 420.97PS 61.26kg'"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock sequential twins",
+        "turboSpecs": {
+          "compressorMaxFlow": "not stated",
+          "maxPressureRatio": "not stated",
+          "peakEfficiency": "not stated"
+        },
+        "intercooler": "not stated",
+        "exhaust": "SARD catalyser, APEX mid pipe, RSE 100 mm titanium muffler (AT car)",
+        "intake": "BLITZ air cleaner (AT car)",
+        "injectors": "stock (AT car: '\u30a4\u30f3\u30b8\u30a7\u30af\u30bf\u30fc\u306f\u7d14\u6b63')",
+        "ecu": "HKS F-Con V Pro 3.4 (tuned by Phoenix's Power)",
+        "cams": "not stated",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "http://www.phoenixs.co.jp/phoenixs/tuning/toyota/2jz/vol1/2j_01.htm",
+          "accessed": "2026-09-30",
+          "title": "Phoenix's Power: 2JZ-GTE tuning information vol.1 (JZA80/JZS161/147)",
+          "kind": "article",
+          "quote": "'\u5927\u962a\u5e9c\uff26\u69d8JZA80\u30b9\u30fc\u30d7\u30e9\u306f\u8d70\u884c\u3082\u5897\u3048\u3001\u30a8\u30f3\u30b8\u30f3\u3092\u30aa\u30fc\u30d0\u30fc\u30db\u30fc\u30eb\u3057\u306e \u30ea\u30bb\u30c3\u30c6\u30a3\u30f3\u30b0\u3092\u884c\u3044\u307e\u3057\u305f\u3002 \u30a4\u30f3\u30b8\u30a7\u30af\u30bf\u30fc\u306f\u7d14\u6b63\u306a\u306e\u3067\u30015700rpm\u4ee5\u964d\u306f\u3001100\u30d1\u30fc\u30bb\u30f3\u30c8\u5168\u5674\u5c04\u3067\u3059\u3002' ... '\u30d6\u30fc\u30b9\u30c8\u5727 1.20kg \u2192 1.04kg 420.97PS 61.26kg'; later entry '\u30d6\u30fc\u30b9\u30c8\u57271.25 \u2192 1.05Kg/cm2\u6642 415.57PS 62.35Kg'; both entries link 'furukawa/g1.gif'"
+        },
+        {
+          "url": "http://www.phoenixs.co.jp/phoenixs/tuning/toyota/2jz/vol1/furukawa/g1.gif",
+          "accessed": "2026-09-30",
+          "title": "Phoenix's Power Dynapack screen linked from both entries",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNAPACK\u2122 53 4WD with PSDAQ SMART CONTROL SOFTWARE V1.008 \u00a9 - Phoenix's Power SPL', 'DIN 70020 (1976)', 'ratio 4.680:1', 'tcf 1.150', 'Engine Torque 62.10 Kgm ... 4341 rpm', 'Power 417.19 PS ... 5456 rpm', 'Date: 2019-12-01 12:54:06'"
+        },
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/dynapack-2000-incorrect-torque-figure/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: Dynapack 2000 incorrect torque figure (meaning of TCF)",
+          "kind": "thread",
+          "quote": "(via WebFetch) the Dynapack can 'display flywheel torque which removes the gear multiplication out of the equation and then multiplies out by the TCF value to give a theoretical flywheel value'"
+        }
+      ],
+      "confidence": "Rejected: flywheel-type figures (tcf 1.15) and graph/text mismatch."
+    },
+    {
+      "id": "rejected-jza80-misc-gapfill2",
+      "summary": "Other candidates checked in this pass and rejected (one line each in sources).",
+      "usable": false,
+      "whyNotUsable": "see each source's quote (cams/built engines, flywheel figures, no sheet, wrong chassis, or undocumented)",
+      "vehicle": {
+        "chassis": "JZA80 unless noted",
+        "market": "various",
+        "grade": "various",
+        "gearbox": "various",
+        "year": "various"
+      },
+      "engine": "various",
+      "dyno": {
+        "make": "various",
+        "model": "various",
+        "type": "various",
+        "where": "various"
+      },
+      "correction": {
+        "value": "various",
+        "howKnown": "see sources"
+      },
+      "testConditions": {
+        "temperature": "n/a",
+        "pressure": "n/a",
+        "humidity": "n/a",
+        "howKnown": "n/a"
+      },
+      "result": {
+        "peakWheelPower": "n/a",
+        "peakWheelTorque": "n/a",
+        "howRead": "n/a"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "n/a",
+      "mods": {
+        "turbo": "not stated",
+        "turboSpecs": {
+          "compressorMaxFlow": "not stated",
+          "maxPressureRatio": "not stated",
+          "peakEfficiency": "not stated"
+        },
+        "intercooler": "not stated",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "ecu": "not stated",
+        "cams": "not stated",
+        "internals": "not stated"
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/251537-t04z-on-fsr-manifold/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 251537: T04Z on FSR Manifold (2024-25)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Whifbitz 264 Cams, FSR Manifold ...' 'Turbo - HKS T04Z with Open 0.82a/r Turbine' 'Dyno Used - Rototest' - aftermarket cams, Rototest, HKS turbo without maker map"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/247880-cams-6-speed-single/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 247880: Cam's 6 speed Single (2021)",
+          "kind": "thread",
+          "quote": "'Engine Spec - HKS 256/264 camshafts ...' 'Turbo - HKS T04R T4 divided single turbo, rebuilt as 'hybrid' with oversized billet compressor wheel' 'Dyno Used - Dynapack 4000 hub dyno / Power figure - 629whp at the hubs' - cams and hybrid turbo"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/247566-lees-6-spd-single-bep-s362-17bar/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 247566: Lee's 6 Spd Single, BEP S362 @ 1.7bar (2021)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Forged bottom end with Manley pistons, race spec non-VVTI head with GSC springs and supertech valves, 264 Cams' - built"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/246779-baileys-silver-bullet/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 246779: Baileys Silver Bullet (2020, SRD Dynojet)",
+          "kind": "thread",
+          "quote": "'SRD 264 Cams ... Turbo - Precision 6466 GEN2 DBB 1.00 A/R ... Dyno Used - SRD DynoJet / Power figure - 712bhp @ wheels' - cams"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/240663-bpu-tt-auto-with-mines-ecu/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 240663: BPU TT Auto with Mines ECU (2018)",
+          "kind": "thread",
+          "quote": "'Dyno Used - Surrey Rolling Road / Power figure - 416bhp at Fly' - flywheel figure (Dyno Dynamics shop)"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/236561-j-spec-v160-hks-t51-spl/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 236561: J-Spec V160 HKS T51 SPL (2017)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Stock bottom end, HKS 264 cams ... Power figure - 623bhp (fly)' - cams, flywheel"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/228489-bpu-tt6-dyno-run/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 228489: BPU TT6 Dyno run (2016-17)",
+          "kind": "thread",
+          "quote": "'Engine Spec - 264 Tomei Cams & Greddy intercooler' - cams"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/234082-eu-supra-tt-auto-hks-t04z/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 234082: EU Supra TT Auto HKS T04Z (2017)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Bone stock 2JZ-GTE EU spec.' 'Dyno Used - Devil Developments, Dyno Dynamics / Power figure - 588 fwhp' - flywheel-type figure, HKS turbo without maker map"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/229015-quicksilver-51/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 229015: quicksilver 51 (2016)",
+          "kind": "thread",
+          "quote": "'Surrey Rolling Road 16/04/2016 ... Engine Spec - Stock / Turbo - Stock J-spec ... Power figure - 370.4 ... Boost Pressure - 1.0 bar' - Dyno Dynamics shop, wheel/flywheel not stated, sheets on dead photobucket"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/222999-shanes-dyno-run/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 222999: Shane's Dyno run (2015)",
+          "kind": "thread",
+          "quote": "'Dyno used RGS Motorsport Dyno Dynamics / Max Bhp - 376.9 calculated at fly' - flywheel estimate"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/220274-uk-spec-auto-single/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 220274: UK Spec Auto Single (2015)",
+          "kind": "thread",
+          "quote": "'BC 264 Cams ... BoostLab BL366HF ... Dyno Used - Maha / Power figure - 556BHP At the Wheels' - cams, MAHA"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/218592-lucs-srd900-supra-borg-warner-91-79-s366-turbo-v1/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 218592: Luc's SRD900 Supra BW 91-79 (S366) v1",
+          "kind": "thread",
+          "quote": "'Engine Spec - Stock engine and head with HKS 264 camshafts' 'Dyno Used - SRR Dyno / Power figure - 626 rhhp' - cams"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/231455-hybrid-tt6-srd500s/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 231455: Hybrid TT6 - SRD500S (2016)",
+          "kind": "thread",
+          "quote": "'Engine Spec - 264 HKS cams ... Turbo - Turbo techniques large hybrid turbos (running TTC mode)' - cams, hybrid twins"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/217621-about-finished-my-single-turbo-setup-what-is-the-limit-on-stock-cams-and-lines/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 217621: single turbo on stock cams, S366 (2014)",
+          "kind": "thread",
+          "quote": "'S366 66mm turbo T4 .91 twin scroll ... AEM EMS V1 standalone ... It has stock fuel lines, and stock cams.' - pre-tune question only; no result posted; by 2016 the same member reports '10:1 compression' (topic 232521)"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/243530-borg-warner-turbo-who-is-running-these/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 243530: Borg Warner Turbo - who is running these (2019)",
+          "kind": "thread",
+          "quote": "'I'm running an s362 1:0ar, with a cast log manifold, turbosmart 45mm hypergate, 3\" exhaust system, stock jspec cams, unopened engine and at 1.4bar I make just shy of 600bhp.' - text only, 'bhp' (flywheel-style), dyno and fuel not stated, no sheet"
+        },
+        {
+          "url": "https://www.mkivsupra.net/topic/246876-krimis-eu-spec-vvti-supra-single-turbo-g35-1050-the-journey-from-twins-to-single/",
+          "accessed": "2026-09-30",
+          "title": "mkivsupra.net 246876: Krimi's EU Spec VVTi Supra G35-1050 (2020-23)",
+          "kind": "thread",
+          "quote": "'ACTUAL MOD LIST (02/10/2023) ... Kelford Stage 248/248 VVTi cams ... Garrett G35-1050 A/R 1.01' - aftermarket cams"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/supra-gtx3582-2jz",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Supra GTX3582 2JZ",
+          "kind": "article",
+          "quote": "'Rico's Supra half grouted built engine + 3582 turbocharger is nearing a power output of almost 400kw on a break in tune' - built engine"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/toyota-supra-4",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: 1100hp Toyota Supra",
+          "kind": "article",
+          "quote": "'The modifications include a GE+T full engine build, Kelford cams paired with a ported head, and a Turbosmart 7675 turbocharger.' - built"
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/1307-whp-street-toyota-supra-refined-distilled-to-drag/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT: 1,307 WHP Street Toyota Supra, Refined",
+          "kind": "article",
+          "quote": "(via WebFetch) 'now checking in with 950 horsepower to the wheels as measured on JMS Racing's Dynojet 424x LINX AWD dynamometer' for the FP4205R stage at 30 psi - internals, cams, fuel and correction at that stage not stated; later 'overbored ... 10.0-to-1 compression JE Pistons ... ported the cylinder head ... Titan 272-degree camshafts'"
+        },
+        {
+          "url": "https://www.garrettmotion.com/news/newsroom/article/george-k-dyno_tests-garrett-g-40-900-turbochargers-2jz-engine-makes-904-whp/",
+          "accessed": "2026-09-30",
+          "title": "Garrett newsroom: George K G40-900 2JZ (904 whp)",
+          "kind": "article",
+          "quote": "(via WebFetch) vehicle '2014 Nissan 370Z' - wrong chassis"
+        },
+        {
+          "url": "http://mkiv.supras.org.nz/members/justin.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV NZ site: member cars (Graeme, Justin, Lindsay)",
+          "kind": "article",
+          "quote": "Justin: 'Garrett T04Z turbo ... Kelford custom 264 cams'; Graeme (members/graeme.htm): '20 thous overbore. JE forged pistons ... Crower Beast Stage 3 cams'; Lindsay (members/lindsay.htm): 'Cylinder head ported-relieved-modified ... JUN 264 Hi Lift Racing Cams' - all cams/built"
+        },
+        {
+          "url": "http://www.2jzpower.com/dynos/josh-schadel-458-horsepower",
+          "accessed": "2026-09-30",
+          "title": "2JZPOWER user-submitted dyno database (e.g. 'Stock Twins Setup' 458rwhp, 'david 507' T88H)",
+          "kind": "article",
+          "quote": "'Horsepower 458rwhp Torque 483 Boost Level 22 ... Fuel 110 octane ... Dyno Brand Dynojet' - user-entered numbers only; graph images return S3 403 AccessDenied (site notice: 'We lost almost all car photos due to a server crash')"
+        },
+        {
+          "url": "https://www.suprastore.com/t67kitdysh.html",
+          "accessed": "2026-09-30",
+          "title": "SupraStore: T67 Kit Dyno Sheet",
+          "kind": "maker page",
+          "quote": "'This is a dyno sheet comparing a BPU (460hp) Supra on stock twin turbos versus the T67 single turbo conversion kit ... The crank HP rating of this is 825hp with upgraded camshafts.' - no image, no build, cams"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1993-toyota-supra-4/",
+          "accessed": "2026-09-30",
+          "title": "BaT: 1993 Supra Twin Turbo 6-Speed (parallel stock twins)",
+          "kind": "article",
+          "quote": "'a dynamometer run at Turbo Trix in Highland Park, New Jersey reportedly showed results of 345 hp at the rear wheels.' Seller: 'I do in fact still have the dyno sheet. The test was by a Dynojet.' - sheet never posted (the only document image is an oil-service invoice)"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1993-toyota-supra-180/",
+          "accessed": "2026-09-30",
+          "title": "BaT: One-Owner Modified 1993 Supra Turbo 6-Speed (Garrett G25-660)",
+          "kind": "article",
+          "quote": "'single Garrett G25-660 turbocharger ... AEM Infinity' ; seller: 'we did have this on the dyno back in 2019 and it was making about 420hp at the wheels' - no sheet"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1993-toyota-supra-192/",
+          "accessed": "2026-09-30",
+          "title": "BaT: Modified 1993 Supra Turbo 6-Speed (PHR PT6266 kit)",
+          "kind": "article",
+          "quote": "seller: 'New short block, stock internals, no dyno' - no dyno"
+        },
+        {
+          "url": "https://bringatrailer.com/listing/1994-toyota-supra-191/",
+          "accessed": "2026-09-30",
+          "title": "BaT: Modified 1994 Supra Turbo 6-Speed (PT6766)",
+          "kind": "article",
+          "quote": "'single Precision PT6766 turbocharger, a Virtual Works exhaust manifold, and GSC S1 camshafts' - cams"
+        },
+        {
+          "url": "https://minkara.carview.co.jp/userid/269804/car/163295/1190075/note.aspx",
+          "accessed": "2026-09-30",
+          "title": "Minkara: power check JZA80 (drift car, 2008/2010)",
+          "kind": "article",
+          "quote": "'\u8a08\u6e2c\u99ac\u529b\uff14\uff19\uff13\uff0e\uff12PS \u4fee\u6b63\u99ac\u529b\uff15\uff13\uff18\uff0e\uff13PS \uff15\uff17\uff10\uff16RPM \u30c8\u30eb\u30af\uff17\uff11\uff0e\uff16kgm \uff15\uff10\uff12\uff16RPM' - no parts list, dyno make not stated"
+        }
+      ],
+      "confidence": "Reasons taken from the sources' own text."
+    }
+  ],
+  "gates": [
+    "https://www.supraforums.com/ - not followed (known TollBit redirect); many search results pointed there (e.g. 'Borg Warner 7670 EFR Dynoed', 'PTE 6870 G2 Dyno Results', 'Post your Dyno Results with modifications').",
+    "https://carsandbids.com/cab-sitemap/xml_sitemap.xml - Cloudflare managed challenge 'Just a moment...' (HTTP 403). Not bypassed; Cars & Bids not used.",
+    "https://www.dragtimes.com/Toyota--Supra-Dyno-Sheets.html (and robots.txt) - Cloudflare managed challenge 'Just a moment...' (HTTP 403). Not bypassed.",
+    "https://www.garagewhifbitz.co.uk/ (robots.txt and /product/garage-whifbitz-supra-turbo-kit-precision-cea-turbo/) - Cloudflare managed challenge (HTTP 403). Not bypassed.",
+    "https://www.vehiclefield.com/blog/jza80-2/ (and robots.txt) - CloudFront 'Request blocked' (HTTP 403). Not bypassed.",
+    "https://www.s2ki.com/forums/s2000-under-hood-22/dyna-pack-dynos-what-everyone-should-know-649023/ - HTTP 403 to WebFetch. Not bypassed (used an HP Academy thread for the TCF meaning instead).",
+    "https://dsportmag.com/sitemap_index.xml - SiteGround 'One moment, please...' bot-check page (curl). Not bypassed or retried; one later WebFetch of a single article returned normally.",
+    "https://nzperformancecar.co.nz/robots.txt and https://nzperformancecar.co.nz/2015-9-30-700kw-plus-2jz-gte-in-three-easy-steps/ - SiteGround 'One moment, please...' page. Not bypassed; the 'Sixth Sense' article loaded normally on the first request.",
+    "https://collectingcars.com/ - robots.txt explicitly disallows 'anthropic-ai' and 'ClaudeBot' ('Disallow: /'); respected, site not crawled.",
+    "http://www.supraforums.com.au/ - robots.txt 'User-agent: * Disallow: /' (only search engines allowed); respected. (The robots.txt and one topic URL were requested in the same command; the topic returned HTTP 500 with no body - nothing read or used.)",
+    "https://www.spengineering.com/ - robots.txt ends 'User-agent: * Disallow: /'; domain is a parked 'This website is for sale!' page. Not used.",
+    "https://www.instagram.com/ links in BaT comments (Sound Performance dyno video etc.) and Google Photos albums (photos.app.goo.gl / goo.gl/photos) - not followed (login/consent flows).",
+    "https://www.facebook.com/zeesgarage/ and other Facebook pages - not followed (login wall).",
+    "Not gates, but unreachable: https://www.speedhunters.com/ (connection failure), https://www.boostlogic.net/ (connection reset), https://www.soundperformance.net/ (proxy CONNECT 502), https://www.tunedbyanton.com/ (Vercel 'DEPLOYMENT_NOT_FOUND'), 2jzpower S3 images (403 AccessDenied - images lost), https://www.drivenperformance.com/ (parked 'lander').",
+    "Not a gate: mkivsupra.net shows a cookie banner; nothing clicked. Its robots.txt disallows /search/ - not used this pass (used /sitemap.php, forum listing pages and topic pages, 1-1.5 s apart). Bring a Trailer robots.txt allows listing pages and /wp-json/ (crawl-delay 1 s; requests were 1.5 s apart)."
+  ],
+  "notFound": [
+    "A JZA80 build meeting all eight criteria. Five near-misses are listed (each fails one or two criteria); none is fully qualifying.",
+    "Boost figure for the Tuned by Apex G35-1050 car (not on sheet or page; the tuner's old site is gone; Instagram not accessible).",
+    "An explicit statement of stock internals/cams for the Zee's Garage S364 car (BaT 1994-toyota-supra-155), and which S364 generation it is.",
+    "The original Mustang printout (with correction and weather) for the Sound Performance PT6466 car (BaT 1997-toyota-supra-68); Mustang SAE/STD setting unknown.",
+    "Dyno printout, correction and rpm for the NZPC 'Sixth Sense' S362SX-E car (Flame Performance, Dynapack inferred).",
+    "Exact Precision model and race-fuel name for the Portland Speed Industries car (BaT 1994-toyota-supra-34).",
+    "Compressor max flow in lb/min for the Precision PT6466 from the maker or a seller (Full-Race lists only 'Rated at 900 BHP'); precisionturbo.com not re-tried (known Incapsula gate).",
+    "BorgWarner's own flow figures for S300SX-E (BorgWarner's PDF gives dimensions only); lb/min values used here come from Full-Race (seller).",
+    "Japanese Dynapack results with tcf 1.000, stated fuel and a named single turbo on a stock engine: not found (Phoenix's Power uses tcf 1.150; most JZA80 single-turbo entries there have aftermarket cams).",
+    "US/UK stock-twins boost-up with a printed-correction Dynojet/Dynapack sheet beyond the two already known: none found (BaT 1993-toyota-supra-4 has a Dynojet sheet per the seller but it was never posted).",
+    "mkivsupra.net: all 74 current Dyno Section topics and about 100 older dyno-titled topics (from the full sitemap) were checked; no further Dynojet/Dynapack sheet with printed correction on a stock long block."
+  ]
+}

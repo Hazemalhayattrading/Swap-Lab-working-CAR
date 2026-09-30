@@ -563,8 +563,15 @@ Each entry has the date, the decision, why, and the alternatives considered (CLA
 
 ### Inclusion rules for known builds
 
-- **Decision:** A build counts only if the model can represent its power: stock bore, stroke, head and cams; no other engine's ECU program or airbox; a named turbo with a published maximum flow. Its sheet must name the dyno and either print its correction or print uncorrected power with the day's weather, its figures must agree with each other, and it must report wheel (not estimated flywheel) power. Mustang and Dyno Dynamics sheets only where no Dynojet or Dynapack sheet exists; DTS not at all (no reading factor).
+- **Decision:** A build counts only if the model can represent its power: stock bore, stroke, head and cams; no other engine's ECU program or airbox; a named turbo with a published maximum flow. Its sheet must name the dyno and either print its correction, print uncorrected power with the day's weather, or come from a Dynojet that doesn't say, which is taken at its software's SAE default and marked assumed (four builds: the DSPORT S15s and MotoIQ's stock E46). Its figures must agree with each other, and it must report wheel (not estimated flywheel) power. Mustang and Dyno Dynamics sheets only where no Dynojet or Dynapack sheet exists; DTS not at all (no reading factor).
 - **Why:** Anything else would test the data, not the model. The research notes list every candidate and why it was left out.
+- **Correction, 2026-09-30:** the first version of this entry left out the Dynojet default, which the builds used from the start ("Normalising dyno sheets" below); the text now says what was done.
+
+### The Supra stays at two counted builds; the gate isn't loosened
+
+- **Decision:** The known-build test keeps asking for three counted builds per car, so it fails for the Supra, which has two, and the phase doesn't merge until the owner rules. A third search (docs/research-notes/part2b.md) found no JZA80 build that meets the rules above; the five nearest each fail one or two (internals not stated, no boost figure, no correction or weather, no sheet, an unnamed turbo and fuel). None of them was run through the model, so the choice can't lean on the result.
+- **Why:** The owner set three builds per car, and rule 2 says never quietly fill a gap. Taking a near-miss or lowering the count for one car is the owner's call, not mine.
+- **Alternatives:** Count the closest near-miss (Zee's Garage's S364 car on E85: Mainline, SAE J607 and weather printed, but its internals and cams are never stated and it has HKS cam gears); count the Supra at two as a logged exception until a sheet turns up; count the DSPORT GT3582R build again (its sheet contradicts itself, and it lands 10.4 % low); a sheet from the owner, for example a Saudi tuner's, which would also test the altitude model.
 
 ### Normalising dyno sheets
 

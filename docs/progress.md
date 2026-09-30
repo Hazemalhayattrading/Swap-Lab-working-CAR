@@ -585,7 +585,7 @@ The owner answered the pressure question at the start: an altitude selector with
 9. **60 fps on the reference laptop (integrated Intel Arc) isn't measured.** This environment renders in SwiftShader only; frames take hundreds of milliseconds there, which says nothing about real hardware.
 10. **The DSPORT GT3582R Supra is excluded** from the gate (its sheet contradicts itself; see decisions); it would be 10.4 % low.
 11. Carried over: the procedural floor, no floor reflections, no code licence chosen.
-12. **The Supra has two counted builds, one short of the three the gate needs**, so `npm test` and CI fail on that check until a third documented build is added. A search for one is running.
+12. **The Supra has two counted builds, one short of the three the gate needs**, so `npm test` and CI fail on that check and the phase isn't merged. A third search found no JZA80 build that meets the inclusion rules, only five near-misses (research notes). How to fill the slot is the owner's call (decisions, 2026-09-30).
 
 ## Next: Phase 3, parts, compatibility and cost
 
