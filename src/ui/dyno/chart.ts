@@ -1,13 +1,6 @@
 import type { PassedReport } from '../../sim/report';
-import {
-  niceStep,
-  num,
-  powerIn,
-  pressureIn,
-  torqueIn,
-  torqueLabel,
-  type DisplayUnits,
-} from './format';
+import { fitAxis, fitSharedAxes } from './axes';
+import { num, powerIn, pressureIn, torqueIn, torqueLabel, type DisplayUnits } from './format';
 
 /**
  * The dyno sheet's chart (BUILD_PROMPT 4: custom SVG, no chart library):
@@ -45,16 +38,9 @@ function path(points: [number, number][]): string {
     .join('');
 }
 
-/** Top of the axis for `max` split into `steps` round intervals. */
-function axis(max: number, steps: number): { top: number; step: number } {
-  const step = niceStep((max * 1.04) / steps);
-  return { top: step * steps, step };
-}
-
 const MAIN_HEIGHT = 250;
 const STRIP_HEIGHT = 74;
 const MARGIN = { left: 46, right: 50, top: 22, bottom: 36 };
-const INTERVALS = 5;
 
 export interface ChartHandle {
   svg: SVGSVGElement;
@@ -94,8 +80,12 @@ export function renderChart(
   const band = ch.band;
   const hi = (a: number[]) => a.map((v, i) => v * (1 + (band[i] ?? 0)));
   const lo = (a: number[]) => a.map((v, i) => v * (1 - (band[i] ?? 0)));
-  const tAxis = axis(Math.max(...hi(t), ...tr), INTERVALS);
-  const pAxis = axis(Math.max(...hi(p), ...pr), INTERVALS);
+  // Both axes fit the data (the band and the rating-conditions trace included)
+  // and share grid lines, so they share an interval count.
+  const { left: tAxis, right: pAxis } = fitSharedAxes(
+    Math.max(...hi(t), ...tr),
+    Math.max(...hi(p), ...pr),
+  );
   const yT = (v: number) => MARGIN.top + plotH * (1 - v / tAxis.top);
   const yP = (v: number) => MARGIN.top + plotH * (1 - v / pAxis.top);
 
@@ -121,13 +111,15 @@ export function renderChart(
   );
 
   const grid = el('g', { class: 'chart__grid' }, svg);
-  for (let i = 0; i <= INTERVALS; i++) {
-    const y = MARGIN.top + (plotH * i) / INTERVALS;
+  for (let i = 0; i <= tAxis.intervals; i++) {
+    const y = MARGIN.top + (plotH * i) / tAxis.intervals;
     el('line', { x1: MARGIN.left, x2: MARGIN.left + plotW, y1: y, y2: y }, grid);
     const tv = tAxis.top - tAxis.step * i;
     const pv = pAxis.top - pAxis.step * i;
-    text(grid, MARGIN.left - 6, y + 4, num(tv), { class: 'chart__tick chart__tick--left' });
-    text(grid, MARGIN.left + plotW + 6, y + 4, num(pv), {
+    text(grid, MARGIN.left - 6, y + 4, num(tv, tAxis.digits), {
+      class: 'chart__tick chart__tick--left',
+    });
+    text(grid, MARGIN.left + plotW + 6, y + 4, num(pv, pAxis.digits), {
       class: 'chart__tick chart__tick--right',
     });
   }
@@ -243,7 +235,7 @@ export function renderChart(
     b = ch.boost.map((v) => pressureIn(Math.max(0, v), units.pressure));
     const top = MAIN_HEIGHT + 8;
     const stripH = STRIP_HEIGHT - 26;
-    const bAxis = axis(Math.max(...b, 0.1), 2);
+    const bAxis = fitAxis(Math.max(...b, units.pressure === 'bar' ? 0.1 : 1), [2, 3]);
     const yBoost = (v: number) => top + stripH * (1 - v / bAxis.top);
     yB = yBoost;
     el(
@@ -252,18 +244,12 @@ export function renderChart(
       svg,
     );
     const strip = el('g', { class: 'chart__grid' }, svg);
-    for (let i = 0; i <= 2; i++) {
-      const y = top + (stripH * i) / 2;
+    for (let i = 0; i <= bAxis.intervals; i++) {
+      const y = top + (stripH * i) / bAxis.intervals;
       el('line', { x1: MARGIN.left, x2: MARGIN.left + plotW, y1: y, y2: y }, strip);
-      text(
-        strip,
-        MARGIN.left - 6,
-        y + 4,
-        num(bAxis.top - bAxis.step * i, units.pressure === 'bar' ? 1 : 0),
-        {
-          class: 'chart__tick chart__tick--left',
-        },
-      );
+      text(strip, MARGIN.left - 6, y + 4, num(bAxis.top - bAxis.step * i, bAxis.digits), {
+        class: 'chart__tick chart__tick--left',
+      });
     }
     if (report.curve.changeoverRpm !== undefined) {
       const cx = x(report.curve.changeoverRpm);

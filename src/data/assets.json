@@ -4,7 +4,7 @@
     {
       "id": "autoshop_01",
       "kind": "hdri",
-      "title": "Autoshop 01 (2k EXR)",
+      "title": "Autoshop 01 (2k EXR, night-graded and prefiltered)",
       "author": "Oliksiy Yakovlyev (Poly Haven)",
       "licence": "CC0-1.0",
       "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -20,10 +20,10 @@
         "title": "Autoshop 01 HDRI, Poly Haven",
         "note": "Downloaded from https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/2k/autoshop_01_2k.exr, the 2k EXR listed by https://api.polyhaven.com/files/autoshop_01. Bytes unchanged. MD5 a4f4d82741636c37c4a31860c2ad1f6a matches the API; SHA-256 93f15df7efeeb7e5913b07f15adcecc41b9adbd9f25ea2213e9d8e8adcf81c00. API info: author Oliksiy Yakovlyev, white balance 5050 K, categories indoor / artificial light / low contrast. Poly Haven's licence page (https://polyhaven.com/license) says all its assets are CC0."
       },
-      "files": ["public/env/autoshop_01_2k.exr"],
+      "files": ["public/env/autoshop_01_night.pmrem"],
       "status": "final",
       "credit": "Autoshop 01 by Oliksiy Yakovlyev, Poly Haven (CC0)",
-      "notes": "Used for image-based lighting and reflections only, never as a visible background. Chosen over garage, auto_service and workshop because it is a car workshop lit by fluorescent strips at 5050 K, close to our 5000 K strips; the others are daylight-lit or mixed. CC0 needs no credit, but /credits will name it anyway."
+      "notes": "Used for image-based lighting and reflections only, never as a visible background. Chosen over garage, auto_service and workshop because it is a car workshop lit by fluorescent strips at 5050 K, close to our 5000 K strips; the others are daylight-lit or mixed. CC0 needs no credit, but /credits will name it anyway. Shipped as a derived file since 2026-09-30: scripts/bake-environment.ts takes the EXR above (kept out of git in assets-raw/env/, SHA-256 checked), applies the night grade, box-filters it to 512 x 256 and prefilters it with three's own PMREMGenerator into a 384 x 512 cube-UV atlas (128 px cube), stored as RGB9E5 and gzipped. The bake checks itself against three's runtime prefilter on WebGPU and WebGL 2."
     },
     {
       "id": "font-barlow-condensed",

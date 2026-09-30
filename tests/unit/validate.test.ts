@@ -3,7 +3,7 @@ import { parseNpmSpec, validateData, type FileFacts } from '../../src/data/valid
 import manifest from '../../src/data/assets.json';
 
 const MB = 1024 * 1024;
-const HDRI = 'public/env/autoshop_01_2k.exr';
+const HDRI = 'public/env/autoshop_01_night.pmrem';
 const FONTS: Record<string, string> = {
   '@fontsource/barlow-condensed': '5.3.0',
   '@fontsource/ibm-plex-mono': '5.3.0',
@@ -11,7 +11,7 @@ const FONTS: Record<string, string> = {
 
 function facts(overrides: Partial<FileFacts> = {}): FileFacts {
   return {
-    sizeOf: (path) => (path === HDRI ? 5_343_571 : undefined),
+    sizeOf: (path) => (path === HDRI ? 485_110 : undefined),
     dependencyVersion: (name) => FONTS[name],
     dependencies: [...Object.keys(FONTS), 'three', 'zod'],
     publicFiles: [HDRI],

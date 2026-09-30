@@ -1,12 +1,46 @@
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { expect, test, type Page } from '@playwright/test';
 import { PNG } from 'pngjs';
 
 const SHOTS = 'test-results/screenshots';
 mkdirSync(SHOTS, { recursive: true });
 
-/** Opens the garage and collects page errors, console errors and failed requests. */
-async function openGarage(page: Page, query = ''): Promise<string[]> {
+interface Budget {
+  frame: {
+    drawCalls: Record<string, number>;
+    triangles: Record<string, number>;
+  };
+}
+const budget = JSON.parse(readFileSync('perf-budget.json', 'utf8')) as Budget;
+
+interface Hooks {
+  frames: number;
+  rendering: boolean;
+  quality: string;
+  lastFrame: { drawCalls: number; triangles: number };
+}
+const hooks = (page: Page) =>
+  page.evaluate(() => {
+    const s = (window as unknown as { __SWAPLAB__: Hooks }).__SWAPLAB__;
+    return {
+      frames: s.frames,
+      rendering: s.rendering,
+      quality: s.quality,
+      lastFrame: { ...s.lastFrame },
+    };
+  });
+
+/**
+ * Opens the garage and collects page errors, console errors and failed requests.
+ * CI renders in software (SwiftShader), so the hardware-acceleration notice is
+ * dismissed up front unless a test is about it.
+ */
+async function openGarage(page: Page, query = '', keepNotice = false): Promise<string[]> {
+  if (!keepNotice) {
+    await page.addInitScript(() => {
+      sessionStorage.setItem('swaplab.gpuNoticeDismissed', 'swiftshader');
+    });
+  }
   const problems: string[] = [];
   page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`));
   page.on('console', (m) => {
@@ -89,6 +123,52 @@ test('opens straight into the lit garage on the best available backend', async (
   expect(problems).toEqual([]);
 });
 
+test('software rendering shows how to turn on hardware acceleration', async ({ page }) => {
+  const problems = await openGarage(page, '', true);
+  const notice = page.locator('#gpu-notice');
+  await expect(notice).toBeVisible();
+  await expect(notice).toHaveAttribute('data-kind', 'swiftshader');
+  await expect(notice).toContainText('drawing in software');
+  await notice.getByText('How to turn on hardware acceleration').click();
+  await expect(page.locator('#gpu-notice-steps li')).not.toHaveCount(0);
+  await page.screenshot({ path: `${SHOTS}/garage-gpu-notice.png` });
+
+  await page.getByRole('button', { name: 'Switch to Low quality' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-quality', 'low');
+  await expect(page.locator('#gpu-notice-low')).toHaveText('Low quality on');
+  await page.getByRole('button', { name: 'Dismiss' }).click();
+  await expect(notice).toBeHidden();
+  // Dismissed for the session.
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-scene-state', 'ready', {
+    timeout: 240_000,
+  });
+  await expect(notice).toBeHidden();
+  expect(problems).toEqual([]);
+});
+
+test('draws on demand: idle when nothing moves, a frame when something does', async ({ page }) => {
+  const problems = await openGarage(page);
+  await expect.poll(async () => (await hooks(page)).rendering, { timeout: 120_000 }).toBe(false);
+  await expect(page.locator('#readout-fps')).toHaveText('idle');
+  const idle = (await hooks(page)).frames;
+  await page.waitForTimeout(1500);
+  expect((await hooks(page)).frames).toBe(idle);
+
+  // Within the frame budget for this quality.
+  const { lastFrame, quality } = await hooks(page);
+  expect(lastFrame.drawCalls).toBeGreaterThan(0);
+  expect(lastFrame.drawCalls).toBeLessThanOrEqual(budget.frame.drawCalls[quality] ?? 0);
+  expect(lastFrame.triangles).toBeLessThanOrEqual(budget.frame.triangles[quality] ?? 0);
+
+  await page.locator('#viewport').focus();
+  await page.keyboard.press('ArrowLeft');
+  await expect
+    .poll(async () => (await hooks(page)).frames, { timeout: 60_000 })
+    .toBeGreaterThan(idle);
+  expect(problems).toEqual([]);
+});
+
 test('falls back to WebGL 2 and renders the same garage', async ({ page }) => {
   const problems = await openGarage(page, '?renderer=webgl');
   await expect(page.locator('html')).toHaveAttribute('data-backend', 'webgl2');
@@ -106,20 +186,13 @@ test('quality presets switch, persist and keep rendering', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('data-quality', 'low');
   expect(await page.evaluate(() => localStorage.getItem('swaplab.quality'))).toBe('low');
 
-  const framesBefore = await page.evaluate(
-    () => (window as unknown as { __SWAPLAB__: { frames: number } }).__SWAPLAB__.frames,
-  );
+  // A quality change redraws the scene, even though nothing else moves.
+  const framesBefore = (await hooks(page)).frames;
+  await page.getByRole('radio', { name: 'High' }).check();
+  await page.getByRole('radio', { name: 'Low' }).check();
   await expect
-    .poll(
-      () =>
-        page.evaluate(
-          () => (window as unknown as { __SWAPLAB__: { frames: number } }).__SWAPLAB__.frames,
-        ),
-      {
-        timeout: 120_000,
-      },
-    )
-    .toBeGreaterThan(framesBefore + 1);
+    .poll(async () => (await hooks(page)).frames, { timeout: 120_000 })
+    .toBeGreaterThan(framesBefore);
   expectLitGarage(await viewportStats(page, 'garage-quality-low.png'));
 
   await page.reload();

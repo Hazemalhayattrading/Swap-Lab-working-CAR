@@ -24,7 +24,8 @@ export function clampToRoom(position: Vector3): Vector3 {
 export interface CameraRig {
   camera: PerspectiveCamera;
   controls: OrbitControls;
-  update(): void;
+  /** Steps the orbit damping; returns true while the camera is still moving. */
+  update(): boolean;
   resize(width: number, height: number): void;
   /** Handles a keydown on the focused view; returns true if the key moved the camera. */
   handleKey(key: string): boolean;
@@ -55,13 +56,16 @@ export function createCameraRig(element: HTMLElement): CameraRig {
 
   const offset = new Vector3();
   const spherical = new Spherical();
+  const before = new Vector3();
 
   return {
     camera,
     controls,
     update() {
-      controls.update();
+      before.copy(camera.position);
+      const moved = controls.update();
       clampToRoom(camera.position);
+      return moved || before.distanceToSquared(camera.position) > 1e-10;
     },
     handleKey(key) {
       offset.copy(camera.position).sub(controls.target);

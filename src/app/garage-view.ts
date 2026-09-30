@@ -74,9 +74,19 @@ export class GarageView {
     this.rig.resize(width, height);
   }
 
+  /** Advances the camera (orbit damping); true while it is still moving. */
+  update(): boolean {
+    return this.rig.update();
+  }
+
   render(): void {
-    this.rig.update();
     this.pipeline.render();
+  }
+
+  /** Calls `listener` whenever the user moves the camera (pointer, touch or wheel). */
+  onCameraInput(listener: () => void): void {
+    this.rig.controls.addEventListener('change', listener);
+    this.rig.controls.addEventListener('start', listener);
   }
 
   /** Camera position in metres, for diagnostics and tests. */
@@ -92,14 +102,16 @@ export class GarageView {
   private applyRenderSettings(): void {
     const { shadowMapSize } = QUALITY[this.quality];
     this.renderer.setPixelRatio(pixelRatioFor(this.quality, window.devicePixelRatio));
+    // Shadows are switched with the renderer flag alone. Turning a light's
+    // castShadow off makes three dispose that light's shadow node while render
+    // objects built with it are still cached, and the next frame that reuses one
+    // (Low back to High) reads a disposed shadow map. With the flag off, new
+    // builds simply skip shadows.
     this.renderer.shadowMap.enabled = shadowMapSize > 0;
-    for (const light of this.garage.shadowLights) {
-      light.castShadow = shadowMapSize > 0;
-      if (shadowMapSize > 0 && light.shadow.mapSize.x !== shadowMapSize) {
+    if (shadowMapSize > 0) {
+      // three resizes the shadow map to mapSize on its next render.
+      for (const light of this.garage.shadowLights) {
         light.shadow.mapSize.set(shadowMapSize, shadowMapSize);
-        // Drop the old map so it is reallocated at the new size.
-        light.shadow.map?.dispose();
-        light.shadow.map = null;
       }
     }
   }

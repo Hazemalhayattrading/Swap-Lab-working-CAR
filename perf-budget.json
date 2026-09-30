@@ -1,0 +1,26 @@
+{
+  "$comment": "Performance budget for the production build (scripts/check-budget.ts, run in CI after the build). Bytes a first visit downloads: gzip size for text, raw size for binaries. frame: per-frame GPU work on the default view, measured 2026-09-30 at 46 draw calls on Low and 79 on High and Ultra (453 and 717 triangles); draw calls get about 10 % headroom, triangles are rounded up to 1,000. The e2e test checks the default quality. Raise a number only with a reason in docs/decisions.md.",
+  "transferBytes": {
+    "html": 4096,
+    "appJs": 40960,
+    "threeJs": 389120,
+    "workerJs": 81920,
+    "css": 12288,
+    "fonts": 122880,
+    "environment": 524288,
+    "other": 0,
+    "initialDownload": 1153434
+  },
+  "frame": {
+    "drawCalls": {
+      "low": 50,
+      "high": 88,
+      "ultra": 88
+    },
+    "triangles": {
+      "low": 1000,
+      "high": 1000,
+      "ultra": 1000
+    }
+  }
+}
