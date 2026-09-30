@@ -78,9 +78,38 @@ describe('dyno report', () => {
     expect(soak.samples[0]?.time).toBe(0);
     expect(soak.samples[soak.samples.length - 1]?.time).toBe(180);
     expect(soak.pass).toBe(soak.failedAt === undefined);
-    expect(report.limits.find((l) => l.id === 'cooling')?.status).toBe(
-      soak.pass ? 'ok' : 'over-rating',
+  });
+
+  it('calls a heat soak on generic cooling sizing an estimate, not a pass or fail', () => {
+    // The owner, 2026-09-30: no car has its own radiator figures on file yet.
+    for (const [car, trim] of [
+      ['nissan-silvia-s15', 'jdm-spec-r-6mt'],
+      ['toyota-supra-jza80', 'eudm-turbo-6mt'],
+    ] as const) {
+      const sim = simulateTrim(catalogue, car, trim, DEFAULT_CONDITIONS, cache);
+      const report = toReport(sim, DEFAULT_CONDITIONS, catalogue);
+      if (!hasNumbers(report)) throw new Error(`${car} should pass its stock check`);
+      expect(report.heatSoak.basis).toBe('generic-sizing');
+      const cooling = report.limits.find((l) => l.id === 'cooling');
+      expect(cooling?.status).toBe('estimated');
+      expect(cooling?.detail).toContain('generic sizing');
+    }
+  });
+
+  it('carries the owner’s build-count exception for the Supra only', () => {
+    const supra = toReport(
+      simulateTrim(catalogue, 'toyota-supra-jza80', 'eudm-turbo-6mt', DEFAULT_CONDITIONS, cache),
+      DEFAULT_CONDITIONS,
+      catalogue,
     );
+    expect(supra.knownBuilds).toMatchObject({ counted: 2, required: 2 });
+    expect(supra.knownBuilds.exception?.badge).toBe(
+      'validated on stock turbos only; big-turbo builds unverified',
+    );
+    const s15Report = toReport(s15(), DEFAULT_CONDITIONS, catalogue);
+    expect(s15Report.knownBuilds.required).toBe(3);
+    expect(s15Report.knownBuilds.counted).toBeGreaterThanOrEqual(3);
+    expect(s15Report.knownBuilds.exception).toBeUndefined();
   });
 
   it('says which parts of a turbo curve are the model’s own', () => {

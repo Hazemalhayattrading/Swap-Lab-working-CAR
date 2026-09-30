@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { MIN_KNOWN_BUILDS_PER_CAR } from '../sim-data';
 import { UNITS } from '../unit-list';
 import { Power, Rpm, SlugSchema, Torque, YearMonthSchema } from './common';
 import { SourceSchema, measured, sourced } from './source';
@@ -121,6 +122,46 @@ const Result = z.strictObject({
   gear: sourced(z.number().int().min(1).max(8)).optional(),
 });
 
+/**
+ * How a build's score relates to the model's fitted constants (the owner,
+ * 2026-09-30). `fit`: one of the builds that chose the constants fitted on
+ * `fitted`, so its score is in-sample. `holdout`: added after that, and scored
+ * before any constant was refitted; `firstScore` keeps that out-of-sample
+ * result, and the calibration report shows it next to the current score.
+ */
+const Scoring = z.discriminatedUnion('sample', [
+  z.strictObject({ sample: z.literal('fit'), fitted: z.iso.date() }),
+  z.strictObject({
+    sample: z.literal('holdout'),
+    firstScore: z.strictObject({
+      /** (model - sheet) / sheet, on peak wheel power, as first scored. */
+      error: z.number().min(-1).max(1),
+      scored: z.iso.date(),
+      /** The commit the model was at when the build was first scored. */
+      commit: z.string().regex(/^[0-9a-f]{7,40}$/),
+    }),
+  }),
+]);
+
+/**
+ * The owner's exception to the three-build rule for one car, where no third
+ * build meets the inclusion rules yet: this car needs `minBuilds`, every other
+ * car still needs three. `badge` is what the car's stock-check sticker says
+ * about the gap. It comes out once the car has three counted builds (the
+ * calibration test fails while an exception is no longer needed).
+ */
+const BuildCountException = z.strictObject({
+  minBuilds: z
+    .number()
+    .int()
+    .min(1)
+    .max(MIN_KNOWN_BUILDS_PER_CAR - 1),
+  reason: z.string().min(20),
+  decided: z.iso.date(),
+  approvedBy: z.literal('owner'),
+  badge: z.string().min(1),
+});
+
 export const KnownBuildSchema = z.strictObject({
   id: SlugSchema,
   /** Plain title, e.g. "Spec-R on the stock T28 at 1.0 bar, front-mount cooler". */
@@ -139,9 +180,10 @@ export const KnownBuildSchema = z.strictObject({
    * Kept on file, and still shown with its result, but out of the 10 % gate:
    * the sheet fails one of the inclusion rules (docs/research/part2b), for
    * example figures that contradict each other. The reason says which, and
-   * when it was decided; the gate needs three builds per car without one.
+   * when it was decided. Only builds without one count toward a car's three.
    */
   excluded: z.strictObject({ reason: z.string().min(1), decided: z.iso.date() }).optional(),
+  scoring: Scoring,
 });
 export type KnownBuild = z.infer<typeof KnownBuildSchema>;
 
@@ -149,12 +191,22 @@ export const KnownBuildsFileSchema = z
   .strictObject({
     $comment: z.string().optional(),
     car: SlugSchema,
-    builds: z.array(KnownBuildSchema).min(3),
+    buildCountException: BuildCountException.optional(),
+    builds: z.array(KnownBuildSchema).min(1),
   })
   .superRefine((file, ctx) => {
     const ids = file.builds.map((b) => b.id);
     if (new Set(ids).size !== ids.length) {
       ctx.addIssue({ code: 'custom', path: ['builds'], message: 'Build ids must be unique.' });
+    }
+    const counted = file.builds.filter((b) => !b.excluded).length;
+    const needed = file.buildCountException?.minBuilds ?? MIN_KNOWN_BUILDS_PER_CAR;
+    if (counted < needed) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['builds'],
+        message: `${String(counted)} counted builds; the car needs ${String(needed)}.`,
+      });
     }
     file.builds.forEach((b, i) => {
       const m = b.modifications;

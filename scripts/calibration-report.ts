@@ -125,8 +125,19 @@ lines.push(
   `Documented real builds with a published sheet (src/data/builds/), run with their parts, boost, fuel and dyno-day air and turned into what their own dyno would print (reading against a Dynojet, and the sheet's correction standard). Pass mark: within ${String(KNOWN_BUILD_TOLERANCE * 100)} % of the sheet's peak wheel power. **${String(counted.filter((x) => x.r.pass).length)} of ${String(counted.length)} pass.**${counted.length < builds.length ? ` ${String(builds.length - counted.length)} more ${builds.length - counted.length === 1 ? 'is' : 'are'} listed but not counted (marked, with the reason).` : ''}`,
 );
 lines.push('');
-lines.push('| Car | Build | Dyno, correction | Sheet | Model | Off by |');
-lines.push('|---|---|---|---:|---:|---:|');
+lines.push(
+  'Every build that helped choose the constants fitted on 2026-09-30 is marked "fit set": its score is in-sample, so it shows the model can match these builds at once, not that it predicts builds it hasn\'t seen. A build added later is scored out-of-sample first, before any constant is refitted; the "First score" column keeps that result next to the current one.',
+);
+for (const e of catalogue.buildCountExceptions) {
+  const car = catalogue.cars.find((c) => c.id === e.carId);
+  lines.push('');
+  lines.push(
+    `**${car ? `${car.model} (${car.chassis})` : e.carId}: ${String(e.minBuilds)} counted builds instead of three**, by the owner's exception (${e.decided}); the sticker says "${e.badge}". ${e.reason}`,
+  );
+}
+lines.push('');
+lines.push('| Car | Build | Dyno, correction | Sheet | Model | Off by | First score |');
+lines.push('|---|---|---|---:|---:|---:|---|');
 for (const { b, r } of builds) {
   const car = catalogue.cars.find((c) => c.id === b.carId);
   const dyno = catalogue.dynos.find((d) => d.id === b.result.dyno)?.name ?? b.result.dyno;
@@ -143,6 +154,9 @@ for (const { b, r } of builds) {
       b.excluded
         ? `${pct(r.error)} (not counted: ${b.excluded.reason})`
         : `${pct(r.error)}${r.pass ? '' : ' **FAILS**'}`,
+      b.scoring.sample === 'fit'
+        ? 'fit set (in-sample)'
+        : `${pct(b.scoring.firstError)} out-of-sample (${b.scoring.scored}, ${b.scoring.commit.slice(0, 7)})`,
       '',
     ]
       .join(' | ')

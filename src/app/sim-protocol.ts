@@ -48,6 +48,20 @@ export interface KnownBuildRow {
   source: { title: string; url: string };
   /** Out of the 10 % gate: why (src/data/schema/build.ts). */
   excluded?: string;
+  /** `fit`: helped choose the fitted constants (in-sample); `holdout`: scored out-of-sample first. */
+  sample: 'fit' | 'holdout';
+  /** A holdout build's first, out-of-sample error, kept after any refit. */
+  firstError?: number;
+}
+
+/** A car with the owner's exception to the three-build rule. */
+export interface BuildCountExceptionRow {
+  car: string;
+  /** Counted builds this car needs instead of three. */
+  minBuilds: number;
+  badge: string;
+  reason: string;
+  decided: string;
 }
 
 export type WorkerRequest =
@@ -63,5 +77,11 @@ export type WorkerRequest =
 export type WorkerResponse =
   | { type: 'ready'; index: CatalogueIndex }
   | { type: 'result'; id: number; report: DynoReport; ms: number }
-  | { type: 'known-builds'; id: number; builds: KnownBuildRow[]; tolerance: number }
+  | {
+      type: 'known-builds';
+      id: number;
+      builds: KnownBuildRow[];
+      exceptions: BuildCountExceptionRow[];
+      tolerance: number;
+    }
   | { type: 'error'; id: number; message: string };

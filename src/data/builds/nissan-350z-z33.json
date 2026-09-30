@@ -4,6 +4,7 @@
   "builds": [
     {
       "id": "zcg-2003-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Stock 2003 350Z (VQ35DE, 287 hp)",
       "trim": "usdm-base-coupe-6mt-my2003-2004",
       "who": "Z Car Garage (San Jose)",
@@ -171,6 +172,7 @@
     },
     {
       "id": "zcg-2003-intake-spacer-catback",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Same 2003 350Z with a POP charger intake, plenum spacer and Bassani cat-back",
       "trim": "usdm-base-coupe-6mt-my2003-2004",
       "who": "Z Car Garage (San Jose)",
@@ -339,6 +341,7 @@
     },
     {
       "id": "zcg-2003-intake-spacer-catback-uprev",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Same 2003 350Z with the bolt-ons and an UpRev tune",
       "trim": "usdm-base-coupe-6mt-my2003-2004",
       "who": "Z Car Garage (San Jose)",
@@ -507,6 +510,7 @@
     },
     {
       "id": "zcg-2004-roadster-intake",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "2004 350Z Roadster 6MT with a POP charger intake",
       "trim": "usdm-enthusiast-roadster-6mt-my2004",
       "who": "Z Car Garage (San Jose)",
@@ -674,6 +678,7 @@
     },
     {
       "id": "zcg-2004-roadster-intake-uprev",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Same 2004 Roadster with an UpRev tune",
       "trim": "usdm-enthusiast-roadster-6mt-my2004",
       "who": "Z Car Garage (San Jose)",
@@ -841,6 +846,7 @@
     },
     {
       "id": "zcg-2008-nismo-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "2008 Nismo 350Z (VQ35HR) before its supercharger",
       "trim": "usdm-nismo-coupe-6mt-my2008",
       "who": "Z Car Garage (San Jose)",

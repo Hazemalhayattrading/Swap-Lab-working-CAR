@@ -8,7 +8,13 @@ import {
   defaultConditions,
   simulateTrim,
 } from '../sim/simulate';
-import type { CatalogueIndex, KnownBuildRow, WorkerRequest, WorkerResponse } from './sim-protocol';
+import type {
+  BuildCountExceptionRow,
+  CatalogueIndex,
+  KnownBuildRow,
+  WorkerRequest,
+  WorkerResponse,
+} from './sim-protocol';
 
 /**
  * The simulation's Web Worker (CLAUDE.md rule 8): the 3D view never waits on
@@ -79,9 +85,24 @@ function knownBuildRows(): KnownBuildRow[] {
       pass: r.pass,
       source: build.source,
       ...(build.excluded ? { excluded: build.excluded.reason } : {}),
+      sample: build.scoring.sample,
+      ...(build.scoring.sample === 'holdout' ? { firstError: build.scoring.firstError } : {}),
     };
   });
   return knownBuilds;
+}
+
+function exceptionRows(): BuildCountExceptionRow[] {
+  return catalogue.buildCountExceptions.map((e) => {
+    const car = catalogue.cars.find((c) => c.id === e.carId);
+    return {
+      car: car ? carLabel(car) : e.carId,
+      minBuilds: e.minBuilds,
+      badge: e.badge,
+      reason: e.reason,
+      decided: e.decided,
+    };
+  });
 }
 
 scope.onmessage = (event) => {
@@ -93,6 +114,7 @@ scope.onmessage = (event) => {
         type: 'known-builds',
         id: request.id,
         builds: knownBuildRows(),
+        exceptions: exceptionRows(),
         tolerance: KNOWN_BUILD_TOLERANCE,
       });
       return;

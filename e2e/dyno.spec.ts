@@ -48,10 +48,13 @@ test('shows the default car’s dyno sheet with a passed stock check', async ({ 
   await expect(page.locator('#dyno-altitude-note')).toContainText('94.2 kPa');
   await expect(page.locator('.readouts-block__at')).toContainText('45');
   await expect(page.locator('.readouts-block__at')).toContainText('Riyadh');
-  // The heat-soak test with its stamp.
+  // The heat-soak test: on generic cooling sizing the stamp says estimated, not passed or failed.
   await expect(page.locator('.soak')).toBeVisible();
-  await expect(page.locator('.soak-stamp')).toHaveText(/Passed|Failed/);
+  await expect(page.locator('.soak-stamp')).toHaveText(/Estimated\s*generic sizing/);
   await expect(page.locator('.soak-chart__line--coolant')).toHaveCount(1);
+  await expect(page.locator('.limit-tag--estimated')).toContainText('Cooling');
+  // Only the Supra carries a build-count exception on its sticker.
+  await expect(page.locator('.sticker__scope')).toHaveCount(0);
   // The sheet doesn't wait for the 3D view; the screenshot does, so it shows both.
   await expect(page.locator('html')).toHaveAttribute('data-scene-state', 'ready', {
     timeout: 240_000,
@@ -73,6 +76,10 @@ test('a cooler day, another trim and other units rerun the sheet', async ({ page
   await expect(page.locator('#dyno')).toHaveAttribute('data-trim', /^toyota-supra-jza80\//);
   await expect(page.locator('#dyno')).toHaveAttribute('data-state', 'ready');
   await expect(page.locator('.sheet__car')).toContainText('Toyota Supra');
+  await expect(page.locator('.sticker__scope')).toHaveText(
+    'Known builds: validated on stock turbos only; big-turbo builds unverified.',
+  );
+  await page.locator('.sticker').screenshot({ path: `${SHOTS}/dyno-supra-sticker.png` });
 
   await page.getByRole('radio', { name: 'PS', exact: true }).check();
   await expect(powerReadout(page)).toContainText('PS');
@@ -162,6 +169,9 @@ test('“How we calculate this” opens, lists every assumption and closes', asy
     await drawer.locator('.manual__table--builds tbody tr:not(.manual__car)').count(),
   ).toBeGreaterThanOrEqual(15);
   await expect(drawer.locator('.manual__miss')).toHaveCount(0);
+  await expect(drawer.locator('.manual__car', { hasText: 'Supra' })).toContainText(
+    'validated on stock turbos only; big-turbo builds unverified',
+  );
   await drawer.getByRole('heading', { name: 'Known builds' }).scrollIntoViewIfNeeded();
   await page.screenshot({ path: `${SHOTS}/dyno-manual-builds.png` });
   await page.screenshot({ path: `${SHOTS}/dyno-manual.png` });

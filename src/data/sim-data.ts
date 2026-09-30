@@ -528,6 +528,29 @@ export interface SimKnownBuild {
   source: { title: string; url: string };
   /** Out of the 10 % gate, with the reason (see src/data/schema/build.ts). */
   excluded?: { reason: string; decided: string };
+  scoring: SimBuildScoring;
+}
+
+/**
+ * Whether a build helped choose the model's fitted constants (`fit`: its score
+ * is in-sample) or was added later and first scored out-of-sample (`holdout`,
+ * with that first score kept). See src/data/schema/build.ts.
+ */
+export type SimBuildScoring =
+  | { sample: 'fit'; fitted: string }
+  | { sample: 'holdout'; firstError: number; scored: string; commit: string };
+
+/** Counted known builds every launch car needs (the owner: at least three per car). */
+export const MIN_KNOWN_BUILDS_PER_CAR = 3;
+
+/** The owner's exception to the three-builds-per-car rule, for one car. */
+export interface SimBuildCountException {
+  carId: string;
+  minBuilds: number;
+  reason: string;
+  decided: string;
+  /** What the car's stock-check sticker says about the gap. */
+  badge: string;
 }
 
 export interface SimCatalogue {
@@ -544,6 +567,7 @@ export interface SimCatalogue {
   dynos: SimDyno[];
   corrections: SimCorrection[];
   knownBuilds: SimKnownBuild[];
+  buildCountExceptions: SimBuildCountException[];
   constants: ModelConstants;
   assumptions: SimAssumption[];
 }

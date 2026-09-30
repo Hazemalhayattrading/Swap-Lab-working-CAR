@@ -120,14 +120,28 @@ const minutes = (s: number): string =>
 function coolingCheck(result: HeatSoakResult): LimitCheck {
   const c = (k: number) => `${String(Math.round(k - 273.15))} °C`;
   const peaks = `coolant peaks at ${c(result.peakCoolant)} (limit ${c(result.limits.coolant)}), oil at ${c(result.peakOil)} (limit ${c(result.limits.oil)})`;
+  const utilisation = Math.max(
+    (result.peakCoolant - result.ambient) / (result.limits.coolant - result.ambient),
+    (result.peakOil - result.ambient) / (result.limits.oil - result.ambient),
+  );
+  const outcome = result.pass
+    ? 'it holds'
+    : `the ${result.failedOn ?? 'coolant'} passes its limit at ${minutes(result.failedAt ?? 0)} into the session`;
+  if (result.basis === 'generic-sizing') {
+    // The owner, 2026-09-30: no hard verdict until the car's own radiator figures are on file.
+    return {
+      id: 'cooling',
+      name: 'Cooling (3-minute drift session)',
+      status: 'estimated',
+      utilisation,
+      detail: `Estimated with generic sizing: no radiator figures for this car are on file yet, so its cooling is sized by the rule every car gets. With that sizing ${outcome}; ${peaks}.`,
+    };
+  }
   return {
     id: 'cooling',
     name: 'Cooling (3-minute drift session)',
     status: result.pass ? 'ok' : 'over-rating',
-    utilisation: Math.max(
-      (result.peakCoolant - result.ambient) / (result.limits.coolant - result.ambient),
-      (result.peakOil - result.ambient) / (result.limits.oil - result.ambient),
-    ),
+    utilisation,
     detail: result.pass
       ? `The factory cooling holds: ${peaks}.`
       : `The ${result.failedOn ?? 'coolant'} passes its limit at ${minutes(result.failedAt ?? 0)} into the session; ${peaks}. Cooling parts (Phase 3) are where this is fixed.`,

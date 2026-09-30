@@ -19,7 +19,16 @@ import type { OperatingPoint } from './engine/model';
  * at low speed, at your ambient. That is where cooling mods earn their place.
  */
 
+/**
+ * Where a cooling system's figures come from. `generic-sizing`: the one sizing
+ * rule every car gets while no radiator data for it is on file, so its result
+ * is an estimate, not a pass or fail for that car. `car-data`: the car's own
+ * radiator and oil-cooler figures.
+ */
+export type CoolingBasis = 'generic-sizing' | 'car-data';
+
 export interface CoolingSystem {
+  basis: CoolingBasis;
   /** W/K from coolant to air at the design face velocity. */
   radiator: number;
   /** W/K from oil to coolant (block, oil-to-water cooler). */
@@ -52,6 +61,8 @@ export interface HeatSoakSample {
 }
 
 export interface HeatSoakResult {
+  /** The cooling system's basis: only `car-data` earns a hard passed or failed. */
+  basis: CoolingBasis;
   pass: boolean;
   samples: HeatSoakSample[];
   /** K, the highest of each over the session. */
@@ -87,7 +98,8 @@ export function fuelPower(point: OperatingPoint, lhv: number): number {
  * The factory cooling system, sized by the model's rule from the engine's own
  * rated full-load fuel power: the radiator holds the design coolant temperature
  * at the design ambient with that heat load at the design face velocity; oil
- * coolers and thermal masses scale from the engine.
+ * coolers and thermal masses scale from the engine. Generic sizing: the result
+ * is labelled an estimate until the car's own radiator figures are on file.
  */
 export function stockCoolingSystem(
   engine: SimEngine,
@@ -106,6 +118,7 @@ export function stockCoolingSystem(
   const coolant = engine.cooling?.coolantCapacity ?? k['coolant-default-volume'];
   const oil = engine.oilCapacity ?? k['oil-default-volume'];
   return {
+    basis: 'generic-sizing',
     radiator: (coolantHeat + (toAir ? 0 : oilHeat)) / designEtd,
     oilToCoolant: toAir ? 0 : oilHeat / oilDesignGap,
     oilCooler: toAir ? oilHeat / (designEtd + oilDesignGap) : 0,
@@ -184,6 +197,7 @@ export function heatSoak(
       samples.push({ time: t, coolant, oil, load: share });
   }
   return {
+    basis: system.basis,
     pass: failedAt === undefined,
     samples,
     peakCoolant,

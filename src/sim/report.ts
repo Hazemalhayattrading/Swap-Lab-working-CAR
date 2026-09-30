@@ -1,4 +1,10 @@
-import type { FuelAvailability, SimCatalogue, SimTransmission, SimWeight } from '../data/sim-data';
+import {
+  MIN_KNOWN_BUILDS_PER_CAR,
+  type FuelAvailability,
+  type SimCatalogue,
+  type SimTransmission,
+  type SimWeight,
+} from '../data/sim-data';
 import type { StockCheck } from './calibrate/check';
 import type { LimitCheck } from './limits';
 import { CUSTOM_LOCATION, pressureFor, type TrimSimulation, type UserConditions } from './simulate';
@@ -44,6 +50,15 @@ export interface DynoReport {
     printed: { power: string; torque: string };
   };
   calibration: StockCheck;
+  /**
+   * The car's known-build calibration: how many documented builds count
+   * toward it, how many it needs, and the owner's exception if it has one.
+   */
+  knownBuilds: {
+    counted: number;
+    required: number;
+    exception?: { badge: string; reason: string; decided: string };
+  };
   conditions: UserConditions;
   /** Where the sweep ran and on what, as the sheet's header states it. */
   environment: {
@@ -110,6 +125,8 @@ export interface DynoReport {
   limits?: LimitCheck[];
   /** The 3-minute drift session; withheld with the other numbers when the stock check fails. */
   heatSoak?: {
+    /** `generic-sizing`: an estimate, shown without a hard passed or failed (thermal.ts). */
+    basis: 'generic-sizing' | 'car-data';
     pass: boolean;
     samples: HeatSoakSample[];
     peakCoolant: number;
@@ -196,6 +213,16 @@ function environmentNotes(sim: TrimSimulation, pressure: number): string[] {
     );
   }
   return notes;
+}
+
+function knownBuildStatus(catalogue: SimCatalogue, carId: string): DynoReport['knownBuilds'] {
+  const counted = catalogue.knownBuilds.filter((b) => b.carId === carId && !b.excluded).length;
+  const e = catalogue.buildCountExceptions.find((x) => x.carId === carId);
+  return {
+    counted,
+    required: e?.minBuilds ?? MIN_KNOWN_BUILDS_PER_CAR,
+    ...(e ? { exception: { badge: e.badge, reason: e.reason, decided: e.decided } } : {}),
+  };
 }
 
 export function toReport(
@@ -303,6 +330,7 @@ export function toReport(
         },
         limits: run.checks,
         heatSoak: {
+          basis: sim.heatSoak.basis,
           pass: sim.heatSoak.pass,
           samples: sim.heatSoak.samples,
           peakCoolant: sim.heatSoak.peakCoolant,
@@ -354,6 +382,7 @@ export function toReport(
       printed: variant.rating.printed,
     },
     calibration: sim.calibration,
+    knownBuilds: knownBuildStatus(catalogue, car.id),
     conditions: input,
     environment: {
       locationName: preset?.name ?? 'Custom',

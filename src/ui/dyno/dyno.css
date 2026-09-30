@@ -325,6 +325,13 @@
 .sticker__tolerance {
   color: #5b584f;
 }
+/* A caveat printed on the label itself: the calibration covers less than the rest. */
+.sticker .sticker__scope {
+  justify-self: start;
+  padding: 0.1rem 0.4rem 0.15rem;
+  border: 1px solid var(--ink);
+  font-weight: 600;
+}
 .sticker__table {
   width: 100%;
   border-collapse: collapse;
@@ -685,6 +692,13 @@
 .limit-tag--over-rating .limit-tag__status {
   color: #ff6a55;
 }
+/* Estimated: modelled on generic figures, so taped on rather than stamped. */
+.limit-tag--estimated {
+  border-left-color: var(--tape);
+}
+.limit-tag--estimated .limit-tag__status {
+  color: var(--tape);
+}
 .limit-tag--no-data,
 .limit-tag--not-modelled {
   border-style: dashed;
@@ -818,6 +832,12 @@ p.conditions-note {
 .soak-stamp--fail {
   color: #ff5a43;
 }
+/* Generic sizing: a provisional mark, dashed and in tape colour, not a verdict. */
+.soak-stamp--estimated {
+  border-style: dashed;
+  border-width: 2px;
+  color: var(--tape);
+}
 .soak-stamp__word {
   font: 700 var(--step-2) / 0.95 var(--font-display);
   letter-spacing: 0.04em;
@@ -864,6 +884,11 @@ p.conditions-note {
 .soak-chart__fail {
   stroke: #ff5a43;
   stroke-width: 1;
+}
+.soak-chart__cross {
+  stroke: var(--tape);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
 }
 .soak__key {
   display: flex;

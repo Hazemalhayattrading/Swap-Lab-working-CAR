@@ -548,6 +548,15 @@ function convertBuild(
     },
     source: { title: b.sources[0]?.title ?? b.sources[0]?.url ?? '', url: b.sources[0]?.url ?? '' },
     ...(b.excluded ? { excluded: { reason: b.excluded.reason, decided: b.excluded.decided } } : {}),
+    scoring:
+      b.scoring.sample === 'fit'
+        ? { sample: 'fit', fitted: b.scoring.fitted }
+        : {
+            sample: 'holdout',
+            firstError: b.scoring.firstScore.error,
+            scored: b.scoring.firstScore.scored,
+            commit: b.scoring.firstScore.commit,
+          },
   };
 }
 
@@ -581,6 +590,20 @@ export function buildCatalogue(raw: RawData): SimCatalogue {
     knownBuilds: raw.builds.flatMap((file) =>
       file.builds.map((b) => convertBuild(file.car, b, dynos, atmosphere)),
     ),
+    buildCountExceptions: raw.builds.flatMap((file) => {
+      const e = file.buildCountException;
+      return e
+        ? [
+            {
+              carId: file.car,
+              minBuilds: e.minBuilds,
+              reason: e.reason,
+              decided: e.decided,
+              badge: e.badge,
+            },
+          ]
+        : [];
+    }),
     constants,
     assumptions,
   };

@@ -5,8 +5,10 @@ import { num, percentText, temperatureIn, temperatureText, type DisplayUnits } f
 
 /**
  * The heat-soak test card (BUILD_PROMPT 6.2): the 3-minute sustained drift
- * session, stamped passed or failed like an inspection tag, with the coolant
- * (coolant cyan) and oil (tape amber) traces against their limits.
+ * session, stamped like an inspection tag, with the coolant (coolant cyan) and
+ * oil (tape amber) traces against their limits. Only a car's own radiator
+ * figures earn a passed or failed stamp; on the generic sizing every car gets
+ * until then, the stamp says estimated (the owner, 2026-09-30).
  */
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -97,7 +99,7 @@ function traces(report: PassedReport, units: DisplayUnits): SVGSVGElement {
         x2: x(soak.failedAt),
         y1: PAD.top,
         y2: H - PAD.bottom,
-        class: 'soak-chart__fail',
+        class: soak.basis === 'car-data' ? 'soak-chart__fail' : 'soak-chart__cross',
       }),
     );
   }
@@ -108,11 +110,19 @@ function traces(report: PassedReport, units: DisplayUnits): SVGSVGElement {
   return root;
 }
 
-export function heatSoakBlock(report: PassedReport, units: DisplayUnits): HTMLElement {
-  const soak = report.heatSoak;
-  const t = units.temperature;
-  const [low, high] = soak.load;
-  const stamp = h(
+function stampFor(soak: PassedReport['heatSoak']): HTMLElement {
+  if (soak.basis === 'generic-sizing') {
+    return h(
+      'p',
+      {
+        class: 'soak-stamp soak-stamp--estimated',
+        attrs: { 'aria-label': 'Heat-soak test: estimated, generic sizing' },
+      },
+      h('span', { class: 'soak-stamp__word', text: 'Estimated' }),
+      h('span', { class: 'soak-stamp__when', text: 'generic sizing' }),
+    );
+  }
+  return h(
     'p',
     {
       class: `soak-stamp soak-stamp--${soak.pass ? 'pass' : 'fail'}`,
@@ -126,10 +136,31 @@ export function heatSoakBlock(report: PassedReport, units: DisplayUnits): HTMLEl
         })
       : h('span', { class: 'soak-stamp__when', text: `all ${clock(soak.duration)}` }),
   );
+}
+
+function verdictFor(soak: PassedReport['heatSoak'], units: DisplayUnits): string {
+  const t = units.temperature;
+  const temps = soak.pass
+    ? `coolant peaks at ${temperatureText(soak.peakCoolant, t)}, oil at ${temperatureText(soak.peakOil, t)}`
+    : `coolant reaches ${temperatureText(soak.peakCoolant, t)} against a ${temperatureText(soak.limits.coolant, t)} limit, oil ${temperatureText(soak.peakOil, t)} against ${temperatureText(soak.limits.oil, t)}`;
+  if (soak.basis === 'generic-sizing') {
+    const outcome = soak.pass
+      ? 'the cooling holds'
+      : `the ${soak.failedOn === 'oil' ? 'oil' : 'coolant'} passes its limit at ${clock(soak.failedAt ?? 0)}`;
+    return `With generic sizing ${outcome}: ${temps}. No radiator figures for this car are on file yet, so its cooling is sized by the rule every car gets, and this is an estimate, not a pass or fail.`;
+  }
+  return soak.pass
+    ? `The factory cooling holds: ${temps}.`
+    : `The factory cooling runs out: ${temps}. Cooling parts (Phase 3) are where this gets fixed.`;
+}
+
+export function heatSoakBlock(report: PassedReport, units: DisplayUnits): HTMLElement {
+  const soak = report.heatSoak;
+  const t = units.temperature;
+  const [low, high] = soak.load;
+  const stamp = stampFor(soak);
   const brief = `${clock(soak.duration)} at ${percentText(low, 0)} to ${percentText(high, 0)} load, ${num(soak.faceVelocity, 0)} m/s of air through the radiator, ${temperatureText(soak.ambient, t)} ambient.`;
-  const verdict = soak.pass
-    ? `The factory cooling holds: coolant peaks at ${temperatureText(soak.peakCoolant, t)}, oil at ${temperatureText(soak.peakOil, t)}.`
-    : `Coolant reaches ${temperatureText(soak.peakCoolant, t)} against a ${temperatureText(soak.limits.coolant, t)} limit, oil ${temperatureText(soak.peakOil, t)} against ${temperatureText(soak.limits.oil, t)}. Cooling parts (Phase 3) are where this gets fixed.`;
+  const verdict = verdictFor(soak, units);
   return h(
     'section',
     { class: 'soak', attrs: { 'aria-labelledby': 'soak-title' } },

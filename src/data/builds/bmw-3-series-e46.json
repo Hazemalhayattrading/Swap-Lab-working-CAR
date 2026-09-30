@@ -4,6 +4,7 @@
   "builds": [
     {
       "id": "aa-m3-bone-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Bone-stock M3, Active Autowerke's baseline",
       "trim": "usdm-m3-coupe-6mt",
       "who": "Active Autowerke",
@@ -185,6 +186,7 @@
     },
     {
       "id": "eas-m3-elbow-catback-stock-tune",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "M3 on the factory tune with an intake elbow and cat-back, 91 octane",
       "trim": "usdm-m3-coupe-6mt",
       "who": "Buildjournal, at European Auto Source (Anaheim)",
@@ -364,6 +366,7 @@
     },
     {
       "id": "eas-m3-headers-bspec-tune",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Same M3 with catless headers and the B-Spec tune, 91 octane",
       "trim": "usdm-m3-coupe-6mt",
       "who": "Buildjournal, at European Auto Source (Anaheim)",
@@ -544,6 +547,7 @@
     },
     {
       "id": "motoiq-m3-stock",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Stock 46,000-mile M3, MotoIQ project car baseline, 93 octane",
       "trim": "usdm-m3-coupe-6mt",
       "who": "MotoIQ, at Modified by KC (Kansas City)",

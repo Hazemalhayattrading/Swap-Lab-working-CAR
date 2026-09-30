@@ -4,6 +4,7 @@
   "builds": [
     {
       "id": "dsport-s15-stock-creep",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Stock S15 with boost creeping to 12 psi, 91 octane",
       "trim": "jdm-spec-r-6mt",
       "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
@@ -191,6 +192,7 @@
     },
     {
       "id": "dsport-s15-12psi-power-fc-turboback",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "S15 at 12 psi on the stock turbo, Power FC, downpipe and cat-back, 91 octane",
       "trim": "jdm-spec-r-6mt",
       "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
@@ -389,6 +391,7 @@
     },
     {
       "id": "dsport-s15-18psi-fmic",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "S15 at 18 psi on the stock turbo, front-mount cooler, intake and catless turbo-back, 91 octane",
       "trim": "jdm-spec-r-6mt",
       "who": "DSPORT magazine, at MD Automotive (Westminster, California)",
@@ -599,6 +602,7 @@
     },
     {
       "id": "apex-s15-17psi-98-mainline",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "S15 at 17 psi on the stock turbo, Power FC, front-mount cooler and full 3-inch exhaust, 98 RON",
       "trim": "jdm-spec-r-6mt",
       "who": "Tuned by Apex (Melbourne)",

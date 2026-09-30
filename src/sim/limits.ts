@@ -32,7 +32,12 @@ export type LimitId =
   | 'diff-axle'
   | 'cooling';
 
-export type LimitStatus = 'ok' | 'bottleneck' | 'over-rating' | 'no-data' | 'not-modelled';
+/**
+ * `estimated`: modelled, but on generic figures rather than the car's own (the
+ * heat soak while no radiator data is on file), so neither OK nor over.
+ */
+export type LimitStatus =
+  'ok' | 'bottleneck' | 'over-rating' | 'estimated' | 'no-data' | 'not-modelled';
 
 export interface LimitCheck {
   id: LimitId;

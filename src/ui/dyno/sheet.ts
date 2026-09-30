@@ -36,10 +36,18 @@ const STATUS: Record<LimitStatus, string> = {
   bottleneck: 'Limiting',
   'over-rating': 'Over rating',
   ok: 'OK',
+  estimated: 'Estimated',
   'no-data': 'No data',
   'not-modelled': 'Not modelled yet',
 };
-const STATUS_ORDER: LimitStatus[] = ['bottleneck', 'over-rating', 'ok', 'no-data', 'not-modelled'];
+const STATUS_ORDER: LimitStatus[] = [
+  'bottleneck',
+  'over-rating',
+  'ok',
+  'estimated',
+  'no-data',
+  'not-modelled',
+];
 
 function signedPercent(fraction: number): string {
   const text = percentText(Math.abs(fraction));
@@ -148,6 +156,12 @@ function sticker(report: DynoReport, units: DisplayUnits): HTMLElement {
       class: 'sticker__verdict',
       text: c.pass ? 'Stock check passed' : 'Stock check failed: numbers withheld',
     }),
+    report.knownBuilds.exception
+      ? h('p', {
+          class: 'sticker__scope',
+          text: `Known builds: ${report.knownBuilds.exception.badge}.`,
+        })
+      : null,
     h('p', {
       class: 'sticker__rating',
       text: `${standard}: ${reference}. Printed ${r.printed.power}, ${r.printed.torque}.`,

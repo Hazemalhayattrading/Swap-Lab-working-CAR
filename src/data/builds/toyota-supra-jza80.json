@@ -1,9 +1,17 @@
 {
-  "$comment": "Known real builds of the JZA80 Supra (BUILD_PROMPT 6.5), all on the factory longblock. Chosen before running the model (docs/research-notes/part2b.md). Excluded: builds with forged pistons of unstated bore, cams or ported heads; a 560 whp single-turbo car said to run the factory 440 cc injectors (they can't supply that power at factory pressure); a Dynapack sheet with no correction and no weather; Dastek, V-Tech, Dyno Developments and Dynocom sheets (no reading factor on file); E85 cars. Research: docs/research/part2b/known-builds-toyota-supra-jza80.json and known-builds-gapfill-supra-rx7.json.",
+  "$comment": "Known real builds of the JZA80 Supra (BUILD_PROMPT 6.5), all on the factory longblock. Chosen before running the model (docs/research-notes/part2b.md). Excluded: builds with forged pistons of unstated bore, cams or ported heads; a 560 whp single-turbo car said to run the factory 440 cc injectors (they can't supply that power at factory pressure); a Dynapack sheet with no correction and no weather; Dastek, V-Tech, Dyno Developments and Dynocom sheets (no reading factor on file); E85 cars. Two counted builds by the owner's exception (buildCountException, 2026-09-30); the GT3582R build is shown but not counted. Research: docs/research/part2b/known-builds-toyota-supra-jza80.json, known-builds-gapfill-supra-rx7.json and known-builds-gapfill-supra-2.json.",
   "car": "toyota-supra-jza80",
+  "buildCountException": {
+    "minBuilds": 2,
+    "reason": "No third JZA80 build meets the inclusion rules yet: three research passes found only near-misses (docs/research-notes/part2b.md). Both counted builds run the factory twins (stock boost, and 1 bar with a front-mount cooler), so big-turbo builds are unverified. The owner is looking for a Saudi tuner's sheet to fill the third slot.",
+    "decided": "2026-09-30",
+    "approvedBy": "owner",
+    "badge": "validated on stock turbos only; big-turbo builds unverified"
+  },
   "builds": [
     {
       "id": "gotboost-supra-stock-twins",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Stock Supra Twin Turbo on its factory twins, low boost (0.6-0.7 bar)",
       "trim": "eudm-turbo-6mt",
       "who": "Owner, at GotBoost Performance Tuning (Bridgend, Wales)",
@@ -255,6 +263,7 @@
     },
     {
       "id": "trinidad-supra-stock-twins-1bar",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Supra (automatic) on factory twins at 1 bar, front-mount cooler, decat exhaust",
       "trim": "jdm-rz-s-4at-1995",
       "who": "Owner, on a Dynojet in Trinidad",
@@ -428,6 +437,7 @@
     },
     {
       "id": "dsport-supra-gt3582r-22psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "1994 Supra on the factory longblock with a Garrett GT3582R at 22 psi, 110-octane race fuel",
       "trim": "usdm-turbo-6mt-1994",
       "who": "DSPORT magazine (car tuned by Titan Motorsports)",

@@ -1,9 +1,16 @@
 import type { DynoReport } from '../sim/report';
 import type { UserConditions } from '../sim/simulate';
-import type { CatalogueIndex, KnownBuildRow, WorkerRequest, WorkerResponse } from './sim-protocol';
+import type {
+  BuildCountExceptionRow,
+  CatalogueIndex,
+  KnownBuildRow,
+  WorkerRequest,
+  WorkerResponse,
+} from './sim-protocol';
 
 export interface KnownBuildTable {
   builds: KnownBuildRow[];
+  exceptions: BuildCountExceptionRow[];
   tolerance: number;
 }
 
@@ -45,7 +52,11 @@ export class SimClient {
       if (table) {
         this.tables.delete(message.id);
         if (message.type === 'known-builds')
-          table.resolve({ builds: message.builds, tolerance: message.tolerance });
+          table.resolve({
+            builds: message.builds,
+            exceptions: message.exceptions,
+            tolerance: message.tolerance,
+          });
         else if (message.type === 'error') table.reject(new Error(message.message));
         return;
       }

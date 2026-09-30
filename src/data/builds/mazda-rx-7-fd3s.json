@@ -4,6 +4,7 @@
   "builds": [
     {
       "id": "turblown-fd-efr7670-91",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Stock-port FD on a BorgWarner EFR 7670 single turbo, 14 psi falling to 9, 91 octane",
       "trim": "usdm-1994-base-5mt",
       "who": "Turblown Engineering",
@@ -273,6 +274,7 @@
     },
     {
       "id": "banzai-fd-twins-12p5psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "1995 FD on the factory twins at 12.5 psi, Power FC, upgraded stock-mount cooler",
       "trim": "usdm-1995-base-5mt",
       "who": "Banzai Racing, at Greer Performance (Fort Wayne, Indiana)",
@@ -504,6 +506,7 @@
     },
     {
       "id": "banzai-fd-twins-14p5psi",
+      "scoring": { "sample": "fit", "fitted": "2026-09-30" },
       "title": "Same FD at 14.5 psi, same day and dyno",
       "trim": "usdm-1995-base-5mt",
       "who": "Banzai Racing, at Greer Performance (Fort Wayne, Indiana)",

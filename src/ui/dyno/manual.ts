@@ -152,10 +152,11 @@ function signed(fraction: number): string {
 function knownBuildsTable(table: Promise<KnownBuildTable>, units: DisplayUnits): HTMLElement {
   const host = h('div', { class: 'manual__builds' }, h('p', { text: 'Running the known builds.' }));
   table.then(
-    ({ builds, tolerance }) => {
+    ({ builds, exceptions, tolerance }) => {
       const cars = [...new Set(builds.map((b) => b.car))];
       const counted = builds.filter((b) => !b.excluded);
       const left = builds.length - counted.length;
+      const holdouts = counted.filter((b) => b.sample === 'holdout').length;
       host.replaceChildren(
         h(
           'table',
@@ -178,7 +179,19 @@ function knownBuildsTable(table: Promise<KnownBuildTable>, units: DisplayUnits):
               h(
                 'tr',
                 { class: 'manual__car' },
-                h('th', { text: car, attrs: { colspan: '5', scope: 'rowgroup' } }),
+                h(
+                  'th',
+                  { attrs: { colspan: '5', scope: 'rowgroup' } },
+                  car,
+                  ...exceptions
+                    .filter((e) => e.car === car)
+                    .map((e) =>
+                      h('span', {
+                        class: 'manual__why',
+                        text: `Known builds: ${e.badge}. ${String(e.minBuilds)} counted builds instead of three, by the owner’s exception (${e.decided}): ${e.reason}`,
+                      }),
+                    ),
+                ),
               ),
               ...builds
                 .filter((b) => b.car === car)
@@ -208,7 +221,19 @@ function knownBuildsTable(table: Promise<KnownBuildTable>, units: DisplayUnits):
                     }),
                     h('td', { class: 'manual__value', text: powerText(b.measured, units.power) }),
                     h('td', { class: 'manual__value', text: powerText(b.predicted, units.power) }),
-                    h('td', { class: 'manual__value', text: signed(b.error) }),
+                    h(
+                      'td',
+                      { class: 'manual__value' },
+                      signed(b.error),
+                      ...(b.firstError !== undefined
+                        ? [
+                            h('span', {
+                              class: 'manual__why',
+                              text: `first, out-of-sample: ${signed(b.firstError)}`,
+                            }),
+                          ]
+                        : []),
+                    ),
                   ),
                 ),
             ),
@@ -216,6 +241,12 @@ function knownBuildsTable(table: Promise<KnownBuildTable>, units: DisplayUnits):
         ),
         h('p', {
           text: `${String(counted.filter((b) => b.pass).length)} of ${String(counted.length)} builds land within ${percentText(tolerance, 0)} of the sheet${left > 0 ? `; ${String(left)} more ${left === 1 ? 'is' : 'are'} shown but not counted` : ''}. Wheel power, as each build’s own dyno printed it.`,
+        }),
+        h('p', {
+          text:
+            holdouts > 0
+              ? `${String(counted.length - holdouts)} of these builds helped choose four of the model’s constants, so their scores are in-sample. The other ${String(holdouts)} were added later and scored before any refit; their first, out-of-sample score stays next to the current one.`
+              : 'These builds helped choose four of the model’s constants, so their scores are in-sample: they show the model can match them all at once, not that it predicts builds it hasn’t seen. A build added from now on is scored out-of-sample first, and keeps that score next to any later one.',
         }),
       );
     },
@@ -280,14 +311,15 @@ export function buildManual(
     ),
     section(
       'Known builds',
-      'Documented real cars with a published dyno sheet or build thread, at least three per car, run through the model with their parts, boost, fuel and dyno-day air. Dynos read the same car differently (a Mainline roller reads about 16 % below a Dynojet, a Mustang about 12 %), and sheets are corrected to different standards (SAE J1349, STD, DIN), so each prediction is turned into what that dyno would have printed before it is compared. Every build has to land within 10 % of the sheet’s peak wheel power, and the site’s build fails if one doesn’t.',
+      'Documented real cars with a published dyno sheet or build thread, at least three per car unless the owner has approved an exception (the table says where), run through the model with their parts, boost, fuel and dyno-day air. Dynos read the same car differently (a Mainline roller reads about 16 % below a Dynojet, a Mustang about 12 %), and sheets are corrected to different standards (SAE J1349, STD, DIN), so each prediction is turned into what that dyno would have printed before it is compared. Every build has to land within 10 % of the sheet’s peak wheel power, and the site’s build fails if one doesn’t.',
       'Builds whose power comes from parts the model can’t represent (camshafts, porting, bigger displacement, another engine’s ECU program) are left out; the research notes list them and why. A build whose own sheet contradicts itself stays in the table, marked, but doesn’t count.',
       knownBuildsTable(knownBuilds, units),
     ),
     section(
       'Heat soak',
       'Heat goes into the coolant and the oil as a share of the fuel burnt: about a fifth into the coolant for a piston engine, less but with far more into the oil for a rotary. The radiator gives it to the air in proportion to how much hotter the coolant is than the air, and less at low air speed; the oil gives its heat to the coolant, or on the RX-7 to its own oil-to-air cooler.',
-      'No maker publishes its radiator’s capacity, so the factory system is sized by one rule for every car: it holds 105 °C at full rated power at top-speed airflow on a 40 °C day. The heat-soak test then asks for a 3-minute drift session at 70-90 % of full load with 3 m/s of air through the radiator, at your ambient, and fails if the coolant passes 115 °C or the oil 150 °C. Stock systems aren’t sized for that; cooling parts are where it gets fixed.',
+      'No maker publishes its radiator’s capacity, so the factory system is sized by one rule for every car: it holds 105 °C at full rated power at top-speed airflow on a 40 °C day. The heat-soak test then asks for a 3-minute drift session at 70-90 % of full load with 3 m/s of air through the radiator, at your ambient, against limits of 115 °C coolant and 150 °C oil.',
+      'Because that sizing is the same for every car, the stamp says estimated (generic sizing) rather than passed or failed: a hard verdict needs the car’s own radiator figures, which come next from the core sizes that replacement-radiator makers publish. Cooling parts come in Phase 3.',
     ),
     section(
       'Limits',
