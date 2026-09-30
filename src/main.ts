@@ -8,7 +8,8 @@ import './ui/dyno/dyno.css';
 
 import { GarageView } from './app/garage-view';
 import { SimClient } from './app/sim-client';
-import { parseBackendRequest } from './render/backend';
+import { backendLabel, parseBackendRequest } from './render/backend';
+import { FpsWindow, parseFpsRequest } from './render/fps-window';
 import { FrameScheduler } from './render/frame-scheduler';
 import { readGpuIdentity } from './render/gpu-identity';
 import { createRenderer } from './render/renderer';
@@ -16,6 +17,7 @@ import { detectSoftwareRenderer } from './render/software-renderer';
 import { resolveQuality, type QualityLevel } from './render/quality';
 import { installWebGpuCompat } from './render/webgpu-compat';
 import { DynoPanel } from './ui/dyno/panel';
+import { FpsOverlay, gpuLabel } from './ui/fps-overlay';
 import { FrameMeter } from './ui/frame-meter';
 import { Hud, showStartupFault } from './ui/hud';
 
@@ -49,6 +51,8 @@ async function boot(): Promise<void> {
   const canvas = document.getElementById('viewport') as HTMLCanvasElement;
   const backendRequest = parseBackendRequest(location.search);
   let quality = resolveQuality(location.search, readStoredQuality());
+  // `?fps=1`: measure the frame rate on this machine (drawing every frame while on).
+  const measuring = parseFpsRequest(location.search);
 
   // Created once the renderer and scene are ready.
   let view: GarageView | undefined = undefined;
@@ -82,7 +86,9 @@ async function boot(): Promise<void> {
   hud.setBackend(backend, backendRequest === 'webgl');
   // Software rendering (SwiftShader, Basic Render Driver, llvmpipe) can't hold the
   // frame-rate targets: say so, and how to turn hardware acceleration on.
+  let gpuName: string | undefined;
   void readGpuIdentity(renderer, backend).then((identity) => {
+    gpuName = gpuLabel(identity);
     const software = detectSoftwareRenderer(identity);
     document.documentElement.dataset.gpu = software ? `software-${software.kind}` : 'hardware';
     if (software) {
@@ -128,8 +134,22 @@ async function boot(): Promise<void> {
   // Count draw calls over the whole frame (scene, shadow and post passes), not per pass.
   renderer.info.autoReset = false;
   const lastFrame = { drawCalls: 0, triangles: 0 };
+  // The frame-rate check keeps the last 5 s of frames; a hidden tab's pause isn't a frame.
+  const probe = measuring
+    ? {
+        frames: new FpsWindow(),
+        overlay: new FpsOverlay(canvas.parentElement ?? document.body),
+        shown: 0,
+      }
+    : undefined;
+  if (probe) {
+    document.addEventListener('visibilitychange', () => {
+      probe.frames.reset();
+    });
+  }
   const scheduler = new FrameScheduler(
     ({ time, continuing }) => {
+      const started = performance.now();
       if (!continuing) meter.reset();
       garage.setQuality(quality);
       const moving = garage.update();
@@ -143,7 +163,21 @@ async function boot(): Promise<void> {
       if (frames === 2 && document.documentElement.dataset.sceneState === 'loading') {
         hud.setState('ready');
       }
-      return moving;
+      if (probe) {
+        probe.frames.add(time, performance.now() - started);
+        if (time - probe.shown >= 250) {
+          probe.shown = time;
+          probe.overlay.update(probe.frames.stats(), {
+            backend: backendLabel(backend),
+            gpu: gpuName,
+            quality: `${quality.charAt(0).toUpperCase()}${quality.slice(1)}`,
+            drawCalls: lastFrame.drawCalls,
+            triangles: lastFrame.triangles,
+          });
+        }
+      }
+      // While measuring, every display refresh is a frame; otherwise only while something moves.
+      return moving || measuring;
     },
     () => {
       const stats = meter.flush();

@@ -169,6 +169,27 @@ test('draws on demand: idle when nothing moves, a frame when something does', as
   expect(problems).toEqual([]);
 });
 
+test('?fps=1 measures the frame rate, drawing every frame while it is on', async ({ page }) => {
+  const problems = await openGarage(page, '?fps=1&quality=low');
+  const probe = page.locator('#fps-probe');
+  await expect(probe).toBeVisible();
+  await expect(probe.getByRole('heading', { name: 'Frame-rate check' })).toBeVisible();
+  // Never idle while measuring: frames keep coming with nothing moving.
+  const start = (await hooks(page)).frames;
+  await expect
+    .poll(async () => (await hooks(page)).frames, { timeout: 60_000 })
+    .toBeGreaterThan(start + 3);
+  expect((await hooks(page)).rendering).toBe(true);
+  await expect(probe.locator('[data-stat="fps"]')).toHaveText(/^\d+\.\d fps$/, { timeout: 60_000 });
+  await expect(probe.locator('[data-stat="draws"]')).toHaveText(/^\d+$/);
+  await expect(probe).toContainText('60 fps target: ');
+  await expect(probe).toContainText('Low quality');
+  // SwiftShader can't hold 60 fps; the check says so rather than passing it.
+  await expect(probe).toHaveAttribute('data-state', 'missed');
+  await page.screenshot({ path: `${SHOTS}/garage-fps-check.png` });
+  expect(problems).toEqual([]);
+});
+
 test('falls back to WebGL 2 and renders the same garage', async ({ page }) => {
   const problems = await openGarage(page, '?renderer=webgl');
   await expect(page.locator('html')).toHaveAttribute('data-backend', 'webgl2');
