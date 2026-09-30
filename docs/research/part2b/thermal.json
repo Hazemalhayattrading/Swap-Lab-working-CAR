@@ -1,0 +1,1885 @@
+{
+  "title": "Swap Lab Phase 2b research: engine thermal model and 3-minute sustained drift-session heat-soak test",
+  "researched": "2026-09-30",
+  "agent": "research agent 'part2b thermal'",
+  "brief": "scratchpad research-brief.md (Phase 2, part 2b); CLAUDE.md rules 2 and 13",
+  "scope": "Energy balance at full load (SI piston, turbo vs NA, heat to oil), rotary (Wankel) heat rejection, radiator / oil-cooler / intercooler capacity, fans, thermal mass and fluid properties, coolant and oil capacities for SR20DET, 2JZ-GTE, 13B-REW, VQ35DE, VQ35HR, M54B30, S54B32, safe temperature limits, and drift-session reality.",
+  "method": "Primary documents were preferred: factory workshop/service manuals, owner's manuals, BMW technical training, Toyota New Car Features, Mazda (Toyo Kogyo) engineering books, NASA contractor reports, US patents, a glycol maker's product guide, a cooler maker's rating chart and Formula DRIFT's 2026 regulations. Scanned pages were rendered locally and read on the page image; text layers were used where present. Chart values are marked as read from charts. Computations (unit conversions, boiling points from Antoine constants) are marked 'derived' or confidence 'estimated' with the method given. No terms of use, licence or download agreements were accepted, no account was created and nothing was logged into; blocked or gated pages are listed under 'gates'.",
+  "confidenceKey": {
+    "verified": "two independent sources agree, or one source plus an independent cross-check",
+    "single-source": "one source (a maker's own document counts as one source even when it prints the value on two pages)",
+    "estimated": "computed or inferred by the agent from sourced inputs; method stated"
+  },
+  "accessedNote": "Every source entry was read on 2026-09-30 unless it says otherwise (only 'tm-repo-engine-masses' points to older repo data).",
+  "keyNumbers": [
+    "SI piston engine at maximum power: brake 25-28 %, coolant 17-26 %, exhaust 34-45 % of fuel energy (Heywood; eb-heywood-maxpower); oil about 2.5 % near full load (Porsche chart; eb-porsche-vs-bmep); oil about 12 % of coolant heat (Ford patent; eb-oil-share-piston).",
+    "Rotary (Mazda, full load 4000 rpm, lambda 0.95): brake 26, oil 7, water 12, exhaust 36, unburned 16, radiation 3 % (ro-mazda-heat-balance); oil about 58 % of water heat; coolant heat about 0.55-0.76 kW per kW output at WOT (ro-mazda-water-per-power).",
+    "Setrab oil coolers: 0.05-0.29 kW/K depending on size at 5-8 gpm and 60-80 mph (oc-setrab-ratings).",
+    "JZA80 factory radiators: 46-49 kW 'low-speed' and 83-92 kW 'high-speed' ratings (conditions unknown) (ra-jza80-toyota).",
+    "Radiator SD is independent of ambient 10-50 °C to within 2 % (ra-sd-temperature-independence); heat rejection rises 1.8-2.1x from 3 to 10 m/s air speed (ra-scirp-table1).",
+    "Coolant volumes: SR20DET 6.2-7.0 L, 2JZ-GTE 8.8-9.5 L, 13B-REW 8.8 L, VQ35DE 8.7 L, VQ35HR 9.0 L, M54 8.4 L, S54 6.7 or 10.7 L (conflict).",
+    "cp: 50 wt% glycol 3.66-3.72 kJ/kgK (80-100 °C), water 4.21, oil about 2.1, cast iron 0.46, aluminium 0.90.",
+    "Boiling (50 wt% glycol): 124.6-128.0 °C at Nissan's 78-98 kPa caps, 130.4-134.7 °C at Mazda's 113-142 kPa, 142 °C at 2 bar; about 8 °C lower with water only.",
+    "Oil: BMW S54 normal 80-120 °C, maximum 150 °C in performance driving (lim-oil-s54)."
+  ],
+  "energyBalance": [
+    {
+      "id": "eb-heywood-maxpower",
+      "item": "Energy balance of automotive engines at maximum power (Heywood Table 12.1)",
+      "value": {
+        "SI": {
+          "brakeWork": "25-28",
+          "coolant": "17-26",
+          "misc": "3-10",
+          "incompleteCombustion": "2-5",
+          "exhaustSensibleEnthalpy": "34-45"
+        },
+        "diesel": {
+          "brakeWork": "34-38",
+          "coolant": "16-35",
+          "misc": "2-6",
+          "incompleteCombustion": "1-2",
+          "exhaustSensibleEnthalpy": "22-35"
+        }
+      },
+      "unit": "% of fuel heating value",
+      "conditions": "automotive engines at maximum power; older data (sources Khovakh, Sitkei, Burke et al.)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "TABLE 12.1 Energy balance for automotive engines at maximum power | Pb Qcool Qmisc He,ic mhe,s (percentage of fuel heating value) | SI engine 25–28 17–26 3–10 2–5 34–45 | Diesel 34–38 16–35 2–6 1–2 22–35 | Sources: From Khovakh, Sitkei, and Burke et al.",
+          "location": "PDF page 4, slide 7 'Energy flow distribution for SI and Diesel'",
+          "howRead": "read on the slide image (the table is an image)"
+        }
+      ],
+      "derived": "Coolant-to-brake ratio at maximum power = 17/28 to 26/25 = 0.61 to 1.04 (my arithmetic). Oil is not separated in this table (it sits inside Qcool and Qmisc).",
+      "note": "The same slide adds, for brake efficiency: 'Update for modern engines: SI engine in the low 30's, Diesel in the low 40's'."
+    },
+    {
+      "id": "eb-modern-brake-eff",
+      "item": "Brake efficiency of modern engines (MIT update to Heywood's table)",
+      "value": "SI 'low 30s' %, diesel 'low 40s' %",
+      "unit": "% of fuel heating value",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "Update for modern engines: SI engine in the low 30's Diesel in the low 40's",
+          "location": "PDF page 4, slide 7",
+          "howRead": "slide text layer and image"
+        }
+      ]
+    },
+    {
+      "id": "eb-load-scaling",
+      "item": "How the heat-transfer share changes with load and speed",
+      "value": "Heat transfer / fuel energy is proportional to BMEP^-0.2 x N^-0.2; example curves (Heywood Fig. 12-25, one engine): about 41/37/33 % at 700 rpm falling to about 26/22/19 % at 3000 rpm for bmep 163/325/655 kPa (read from chart, +/-2 points)",
+      "unit": "% of fuel energy (in-cylinder heat transfer)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "Heat transfer scaling ... Nu correlation: heat transfer rate ∝ ρ^0.8 N^0.8; Time available (per cycle) ∝ 1/N; Fuel energy ∝ ρ; BMEP ∝ ρ; Fig. 12-25; Thus Heat Transfer/Fuel energy ∝ BMEP^-0.2 N^-0.2",
+          "location": "PDF page 10, slide 19",
+          "howRead": "slide image"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "The process is a 'surface' effect • Relative importance reduces with: – Larger engine displacement – Higher load",
+          "location": "PDF page 1, slide 2",
+          "howRead": "text layer"
+        }
+      ],
+      "note": "Use for turbo vs NA: raising BMEP by boost lowers the coolant fraction slowly (doubling BMEP gives 2^-0.2 = 0.87 x the fraction), while the absolute heat flow still rises. The curves are in-cylinder heat transfer, not radiator load."
+    },
+    {
+      "id": "eb-porsche-vs-bmep",
+      "item": "Energy distribution vs load for a 2.0 L water-cooled SI engine at 2000 rpm, with oil separated (Gruden, Kuper, Porsche)",
+      "value": {
+        "BMEP_9.2bar": {
+          "brake": 30,
+          "coolant": 14.5,
+          "oil": 2.5,
+          "exhaustThermal": 22,
+          "exhaustChemical": 21,
+          "exhaustKinetic": 8,
+          "radiationConvection": 2
+        },
+        "BMEP_6bar": {
+          "brake": 33,
+          "coolant": 21,
+          "oil": 2,
+          "exhaustThermal": 24,
+          "exhaustChemical": 7,
+          "exhaustKinetic": 9.5,
+          "radiationConvection": 3.5
+        },
+        "BMEP_1bar": {
+          "brake": 14,
+          "coolant": 33,
+          "oil": 6.5,
+          "exhaustThermal": 34,
+          "exhaustChemical": 4,
+          "exhaustKinetic": 2.5,
+          "radiationConvection": 6
+        }
+      },
+      "unit": "% of fuel energy (read from chart, about +/-2 points)",
+      "conditions": "2000 rpm only; the chart ends at about 9.2 bar, taken here as near full load at 2000 rpm (my inference)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "Energy distribution in SI engine | 2000 rpm, water cooled SI engine 2L displacement | [chart: Energy Distribution % vs BMEP (bar) 0-10, bands Pe, PCool., POil, PEx.Therm., PEx.Chem., PEx.Dyn., PRad.+Konv.] | 'Heat Balance of Modern Passenger Car SI Engines', Gruden, Kuper and Porsche, in Heat and Mass Transfer in Gasoline and Diesel Engines, ed. by Spalding and Afgan",
+          "location": "PDF page 4, slide 8 (left chart)",
+          "howRead": "values read by me off the chart image"
+        }
+      ],
+      "note": "Oil takes about 2-3 % of fuel energy near full load and about 6 % at very light load; the chemical energy in the exhaust jumps at full load (enrichment). Porsche data, year not given on the slide."
+    },
+    {
+      "id": "eb-roadload",
+      "item": "Energy distribution at road load (Heywood Fig. 12-4, 6-cylinder SI, SAE 770221)",
+      "value": {
+        "40kmh": {
+          "brake": 18,
+          "coolant": 54,
+          "exhaust": 21.5,
+          "radiationIncomplete": 6.5
+        },
+        "90kmh": {
+          "brake": 23,
+          "coolant": 38,
+          "exhaust": 30,
+          "radiationIncomplete": 9
+        }
+      },
+      "unit": "% of fuel energy (read from chart, +/-2 points)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ocw.mit.edu/courses/2-61-internal-combustion-engines-spring-2017/df96f507776900c0dde50a4b50f422ce_MIT2_61S17_lec18.pdf",
+          "accessed": "2026-09-30",
+          "title": "MIT OpenCourseWare 2.61 Internal Combustion Engines (Spring 2017), Lecture 18 'Engine Heat Transfer' (slides; reproduces figures and tables from Heywood, Internal Combustion Engine Fundamentals, McGraw-Hill 1988)",
+          "quote": "Fig. 12-4 SI engine energy distribution under road load condition, 6 cylinder engine; SAE Paper 770221, 1977 [chart bands: Brake power, Coolant load, Exhaust enthalpy, Radiation, incomplete combustion vs vehicle speed 30-90 km/h; 1100-2200 rev/min; bmep 128-245 kPa]",
+          "location": "PDF page 4, slide 8 (right chart)",
+          "howRead": "read off the chart image"
+        }
+      ],
+      "note": "Light load context only: coolant heat can be 1.5-3 x brake power at low load, but the absolute heat is small."
+    },
+    {
+      "id": "eb-oil-share-piston",
+      "item": "Share of engine heat carried by oil in a piston engine",
+      "value": "oil carries about 12 % of the heat extracted by the water cooling system",
+      "unit": "ratio to coolant heat",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/3974309",
+          "accessed": "2026-09-30",
+          "title": "US Patent 3,974,309 'Method of coating a rotary internal combustion engine', James C. Uy, assignee Ford Motor Company, filed 16 Dec 1974, granted 10 Aug 1976 (USPTO scan)",
+          "quote": "Typically the oil used in a piston engine will carry only 12% of the heat loss that is extracted by the water cooling system.",
+          "location": "column 1, lines 24-26",
+          "howRead": "read on the scanned page image"
+        }
+      ],
+      "note": "A Ford patent background statement, not a measurement report. Consistent in size with eb-porsche-vs-bmep near full load (oil 2.5 % vs coolant 14.5 % of fuel, i.e. about 17 %)."
+    },
+    {
+      "id": "eb-piston-heat-diesel",
+      "item": "Fuel energy entering the piston (diesel data)",
+      "value": "3-5 % (quiescent chambers), 6-8 % (swirl chambers); up to 60 % of it leaves via the ring pack to the coolant jacket if the piston is uncooled",
+      "unit": "% of fuel energy",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://dieselnet.com/tech/combustion_piston-cool.php",
+          "accessed": "2026-09-30",
+          "title": "DieselNet Technology Guide: 'Piston Cooling', Hannu Jääskeläinen, 2017.09 (public preview only)",
+          "quote": "About 3-5% of the fuel energy in quiescent combustion chambers and 6-8% in swirl-type chambers is transferred to the piston. ... If the piston is uncooled, up to 60% of this heat can pass through the piston ring region and into the cooling jacket.",
+          "location": "public preview section",
+          "howRead": "WebFetch of the preview; the rest of the article is behind DieselNet's subscription (see gates)"
+        }
+      ],
+      "note": "Diesel combustion chambers; for gasoline engines treat as an upper-range indication of heat available to piston-cooling oil jets. The preview says that with oil-cooled pistons 'a significant portion of this heat is carried away by the oil' but gives no number."
+    },
+    {
+      "id": "eb-turbo-cooling-circuits",
+      "item": "Turbocharged roster engines route turbo bearing-housing heat into coolant and oil",
+      "value": "qualitative: 2JZ-GTE turbos and oil cooler on the coolant circuit; 13B-REW turbos 'Water + engine oil' cooled",
+      "unit": null,
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf084.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 84 Cooling System",
+          "quote": "In order to optimally match the high performance of the 2JZ-GTE engine with its Two-Way Twin Turbo System, a cooling circuit has been provided for the turbochargers as well as for the engine oil cooler.",
+          "location": "p. 84",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf090.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 90 Turbocharger Housing",
+          "quote": "In addition, a coolant passage has been provided in the housing around the turbine wheel for improving the cooling efficiency of its shaft.",
+          "location": "p. 90",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Turbocharger | Cooling method | Water + engine oil",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "No number for the turbo's heat to coolant was found (see notFound). Each statement comes from one maker's document for its own engine."
+    },
+    {
+      "id": "eb-surface-losses",
+      "item": "Heat lost from the engine's outer surface and hoses before it reaches the radiator",
+      "value": "up to 10 % of the coolant heat load",
+      "unit": "% of coolant heat",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "The heat rejection shown is occurring within the engine envelope. Previous analyses have shown that natural cooling over the engine outer surface and the coolant hoses can reduce the heat load on the coolant cooler by up to 10%.",
+          "location": "PDF page 38 (report p. 35)",
+          "howRead": "text layer (OCR; obvious OCR slips such as 'Prev- ious' joined)"
+        }
+      ],
+      "note": "Aircraft rotary study; applies in kind to any engine but under a hot bonnet at low airspeed this loss will be smaller."
+    }
+  ],
+  "rotary": [
+    {
+      "id": "ro-mazda-heat-balance",
+      "item": "Mazda (Toyo Kogyo) rotary engine heat balance at full load, 4000 rpm, excess air ratio 0.95 (maximum output)",
+      "value": {
+        "brakeWork": 26,
+        "lubricatingOil": 7,
+        "coolingWater": 12,
+        "exhaustGas": 36,
+        "unburnedExhaustGas": 16,
+        "radiationConduction": 3
+      },
+      "unit": "% of heat generated",
+      "conditions": "full load, 4000 rpm, excess air ratio 0.95; early-1970s Mazda rotary (engine not named; carburetted naturally aspirated era, not a 13B-REW)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda): 'Rotary Engine', preface dated October 1971 (scan hosted by foxed.ca)",
+          "quote": "Fig. 9. 12 shows the distribution of heat generated while the excess air ratio is in the range of 0.83 through 1.18. At 0.95, the ratio which gives maximum output, letting heat generated equal 100%, the breakdown is : Effective heat ........ 26% Heat absorbed by lubrication oil ........ 7% Heat absorbed by cooling water ........ 12% Heat of exhaust gas ........ 36% Heat of unburned exhaust gas ........ 16% Heat loss through radiation and conduction ........ 3% ... Fig. 9. 12 Relation between excess air ratio and heat distribution (Full load : 4,000 rpm)",
+          "location": "book p. 98 (PDF page 106), section 9.3 Heat Balance",
+          "howRead": "page image"
+        }
+      ],
+      "derived": "Oil / water = 7/12 = 0.58. Oil + water = 19 % of fuel, i.e. 0.73 x brake work. Water alone = 0.46 x brake work.",
+      "note": "This is Mazda's own figure and the strongest rotary number found. It does not support 'more heat to coolant than a piston engine' (Heywood gives 17-26 % to coolant for SI engines at maximum power); what stands out is the large oil share and the unburned-fuel loss."
+    },
+    {
+      "id": "ro-mazda-vs-lambda",
+      "item": "Rotary heat distribution vs mixture at full load, 4000 rpm (Mazda Fig. 9.12)",
+      "value": {
+        "lambda_0.83": {
+          "brakeWork": 21.5,
+          "oil": 6.5,
+          "water": 8.5,
+          "exhaust": 28,
+          "unburned": 29,
+          "other": 6.5
+        },
+        "lambda_1.15": {
+          "brakeWork": 27.5,
+          "oil": 6.5,
+          "water": 18,
+          "exhaust": 42,
+          "unburned": 4.5,
+          "other": 1.5
+        }
+      },
+      "unit": "% of heat generated (read from chart, +/-2 points)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda): 'Rotary Engine', preface dated October 1971 (scan hosted by foxed.ca)",
+          "quote": "If the excess air ratio is raised, the temperature of combustion gas will rise, and as a result the heat loss of unburned gas will become less. At the same time, the effective heat, heat absorbed by cooling water, and heat of exhaust gas all tend to increase.",
+          "location": "book p. 99 (PDF page 107); chart on p. 98",
+          "howRead": "text on page image; chart values read by me"
+        }
+      ],
+      "note": "Rich full-load mixtures (turbo rotaries run rich) cut the coolant share further; the oil share stays about 6.5-7 %."
+    },
+    {
+      "id": "ro-mazda-water-per-power",
+      "item": "Heat to cooling water per unit output at wide-open throttle vs engine speed (two Mazda rotaries)",
+      "value": {
+        "max120PS": {
+          "3000rpm": 480,
+          "4000rpm": 415,
+          "5000rpm": 380,
+          "6000rpm": 400
+        },
+        "max40PS": {
+          "3400rpm": 437,
+          "4000rpm": 400,
+          "5000rpm": 350,
+          "6000rpm": 358
+        }
+      },
+      "unit": "kcal/PS/h (data points read from chart, +/-5)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda): 'Rotary Engine', preface dated October 1971 (scan hosted by foxed.ca)",
+          "quote": "Fig. 9. 13 Heat loss through cooling water under wide open throttle [y-axis: Amount of Heat Absorbed by Cooling Water (kcal/PS/h), 300-500; x-axis: Engine Speed 2-6 x 10^3; curves 'max 120PS Engine' and 'max 40PS Engine'] ... Shown in Fig. 9. 13 is an example of the relation between the amount of heat absorbed by cooling water and the engine speed.",
+          "location": "book p. 99 (PDF page 107)",
+          "howRead": "chart read on page image"
+        }
+      ],
+      "derived": "1 kcal/(PS h) = 1.163 W / 735.5 W = 0.00158 kW heat per kW output. So 350-480 kcal/PS/h = 0.55-0.76 kW of coolant heat per kW of output; about 0.60 at 5000 rpm for the 120 PS engine.",
+      "note": "At 4000 rpm this chart gives about 0.63-0.66 kW/kW while ro-mazda-heat-balance gives 12/26 = 0.46; they are probably different engines or test set-ups. Report both; neither is a 13B-REW."
+    },
+    {
+      "id": "ro-ford-oil-share",
+      "item": "Oil heat in a Wankel vs piston engine; sump temperature at full power (Ford patent)",
+      "value": "Wankel oil carries at least 50 % of the heat removed by the water system and about 7 % of total fuel energy; sump oil about 150 °C at full power",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/3974309",
+          "accessed": "2026-09-30",
+          "title": "US Patent 3,974,309 'Method of coating a rotary internal combustion engine', James C. Uy, assignee Ford Motor Company, filed 16 Dec 1974, granted 10 Aug 1976 (USPTO scan)",
+          "quote": "In contradistinction the oil lubricating system of a Wankel engine will carry away at least 50% of the heat removed from the engine by the water cooling system and will dissipate 7% of the total energy used by the engine. Important oil temperature variations are thus observed in service within a rotary engine. At full power, the oil in the sump can easily reach temperatures of about 150°C., not withstanding external ventilation. The oil inside the rotor certainly must reach even higher temperatures.",
+          "location": "column 1, lines 26-37",
+          "howRead": "page image"
+        }
+      ],
+      "note": "Agrees with Mazda's 7 % oil and oil/water 0.58. Patent background text, not a test report."
+    },
+    {
+      "id": "ro-mazda-rotor-oil-cooling",
+      "item": "Mazda rotors are oil-cooled; an oil cooler is needed; rotor temperatures",
+      "value": "rotor surface about 176-251 °C at full load 5000 rpm (Fig. 5.14 values); at WOT about 150-190 °C with rotor oil cooling vs about 195-215 °C without (Fig. 3.46, read from chart)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto: 'Rotary Engine', Toyo Kogyo Co., Ltd. / Sankaido, 1981 English edition (scan hosted by foxed.ca)",
+          "quote": "For automobile engines, in general, the rotor cooling system by means of lubricating oil is used. ... When the oil temperature becomes too high it will have insufficient cooling effects on the rotor as well as reducing its viscosity and film strength. To maintain sufficient lubrication and cooling effect, a heat exchanger (oil cooler) is generally used for cooling the oil.",
+          "location": "book p. 34 (PDF page 39), section 3.7.2 Cooling of Rotor",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1981.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto: 'Rotary Engine', Toyo Kogyo Co., Ltd. / Sankaido, 1981 English edition (scan hosted by foxed.ca)",
+          "quote": "Fig. 3. 46 Comparison of temperature of rotor housing [y-axis 'Rotor surface temperature (°C)' 140-220, x-axis engine speed 1-6 x 10^3 rpm, 'Wide open throttle operation', curves 'Without rotor cooling' and 'With rotor cooling']",
+          "location": "book p. 34 (PDF page 39)",
+          "howRead": "chart read on page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/REbyKenichiYamamoto-1971.pdf",
+          "accessed": "2026-09-30",
+          "title": "Kenichi Yamamoto (Toyo Kogyo, i.e. Mazda): 'Rotary Engine', preface dated October 1971 (scan hosted by foxed.ca)",
+          "quote": "Fig. 5. 14 Rotor surface temperature (Full load : 5,000 rpm) [isotherm values printed on the figure: 188°, 192°, 219°, 251°, 223°, 200° / 186°, 207°, 214°, 222°, 220°, 206° / 176°, 181°, 197°, 217°, 224°, 205°]",
+          "location": "book p. 68 (PDF page 76), section 5.2 Rotor Cooling",
+          "howRead": "page image"
+        }
+      ]
+    },
+    {
+      "id": "ro-cw-aircraft-rotary",
+      "item": "Coolant and oil heat rejection of a turbocharged stratified-charge rotary (Curtiss-Wright RC4-74, 895 kW)",
+      "value": {
+        "at895kW": {
+          "coolant_kJ_per_min": 16900,
+          "coolant_kW": 282,
+          "oil_kJ_per_min": 6100,
+          "oil_kW": 102
+        },
+        "at160kW": {
+          "coolant_kJ_per_min": 4900,
+          "oil_kJ_per_min": 1700
+        }
+      },
+      "unit": "kJ/min read from chart (+/-300), converted by me",
+      "conditions": "upper-bound estimate scaled from an RC1-350 test engine; 121.1 °C maximum coolant outlet, 129.4 °C maximum oil inlet; lower bound is 33 % less",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "Coolant and oil heat rejection rates for the 895 Kw engine (RC4-74) and the 1490 Kw engine (RC6-87) are given by Figures 3.0.11 and 3.0.12. These rates represent an upperbound estimate of coolant and oil heat rejection and are based on test data from a current RC1-350 stratified charge engine (naturally aspirated). ... The lower bound estimate of coolant and oil heat rejection would result in a 33% reduction of the rates given by Figures 3.0.11 and 3.0.12.",
+          "location": "PDF page 38 (report p. 35)",
+          "howRead": "OCR text layer ('RCl-350' read as RC1-350)"
+        },
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "RC4-74 ENGINE 895 KW (1200 BHP) COOLANT AND OIL HEAT REJECTION (WITH TURBO COMPOUNDING) ENGINE OPERATION WITH 121.1°C (250°F) MAXIMUM COOLANT OUTLET TEMPERATURE AND 129.4°C (265°F) MAXIMUM OIL INLET TEMPERATURE [lines 'COOLANT HEAT REJECTION' and 'OIL HEAT REJECTION', heat rejection kJ/min vs power kW]",
+          "location": "PDF page 48, Figure 3.0.11",
+          "howRead": "chart read on page image"
+        }
+      ],
+      "derived": "Oil / coolant = 0.36; coolant = 0.31 x shaft power, oil = 0.11 x shaft power (upper bound).",
+      "note": "Aircraft diesel-fuel stratified-charge rotary with turbocompounding: only a cross-check of the oil/coolant split, not a Mazda 13B."
+    },
+    {
+      "id": "ro-13brew-oil-cooler",
+      "item": "13B-REW (FD3S) oil cooling hardware",
+      "value": "air-cooled oil cooler with bypass valve; cooler holds 0.85 L; total oil 4.9 L (5.4 L on the R1 with its extra cooler)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Oil cooler | Type | Air-cooled, with bypass valve | Relief temperature °C {°F} | 60–65 {140–149} or below | Relief pressure dif. kPa {kgf/cm², psi} | 349 {3.56, 50} at 60°C {140°F} ... Engine oil | Capacity L {US qt, Imp qt} | Total (dry engine) | 4.9 {5.2, 4.3} *5.4 {5.7, 4.8} | Oil pan 4.2 {4.4, 3.7} | Oil cooler 0.85 {0.90, 0.75} ... * R1 model",
+          "location": "TD-3 (PDF page 3)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "Unlike the piston engines in the roster (water-cooled oil coolers), the 13B-REW sheds its oil heat straight to air."
+    }
+  ],
+  "radiators": [
+    {
+      "id": "ra-jza80-toyota",
+      "item": "Toyota JZA80 Supra factory radiators: core size, fin pitch, water volume, rated heat dissipation",
+      "value": {
+        "2JZ-GTE_copper_1993-05_to_1996-04": {
+          "core_mm": "737 x 400 x 41",
+          "finPitch_mm": "3.5 (MT) / 3.0 (AT)",
+          "dryWeight_kg": "7.65 (MT) / 8.5 (AT)",
+          "radiatorWater_L": "3.08 (MT) / 2.95 (AT)",
+          "heatDissipation_lowSpeed_kW": "46.1 (MT) / 49.4 (AT)",
+          "heatDissipation_highSpeed_kW": ">82.7 (MT) / 87.9 (AT)"
+        },
+        "2JZ-GTE_aluminium_1996-04_on": {
+          "core_mm": "737 x 399.2 x 27",
+          "finPitch_mm": "2.5",
+          "dryWeight_kg": "3.95 (MT) / 4.41 (AT)",
+          "heatDissipation_lowSpeed_kW": "48.8",
+          "heatDissipation_highSpeed_kW": "92.0"
+        },
+        "2JZ-GE_aluminium": {
+          "core_mm": "737 x 400 x 16 (MT) / 737 x 400 x 27 (AT)",
+          "finPitch_mm": "2.5 (MT) / 3.5 (AT)",
+          "radiatorWater_L": "1.5 (MT) / 2.5 (AT)",
+          "heatDissipation": "not given ('?')"
+        }
+      },
+      "unit": "kW (kcal/h in source)",
+      "conditions": "'Low-speed condition' and 'High-speed condition' are not defined on the page (air speed, coolant flow and ITD unknown)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ (mkiv.supras.org.nz): 'Japanese MKIV Specifications' page (enthusiast transcription of Toyota JDM data; fetched over plain HTTP because the site's HTTPS certificate is self-signed)",
+          "quote": "Radiator | Engine type 2JZ-GE / 2JZ-GTE | ... Core shape Aluminum NSR | Copper NTR | Aluminum NSR | Fin pitch (mm) 2.5 | 3.5 | 3.5 | 3.0 | 2.5 | Core Dimensions (mm) [W x H x thickness] 737x400x16 | 737x400x27 | 737x400x41 | 737x399.2x27 | Dry weight (kg) 2.73 | 4.21 | 7.65 | 8.5 | 3.95 | 4.41 | Cooling water capacity (L) 1.5 | 2.5 | 3.08 | 2.95 | ? | ? | ... Heat dissipation (kW {kcal / h}) Low-speed condition ? | 46.1 {39700} | 49.4 {42500} | 48.8 {42000} | High-speed condition ? | >82.7 {71200} | 87.9 {75600} | 92.0 {79100}",
+          "location": "'Radiator' table",
+          "howRead": "HTML table parsed with its colspans"
+        }
+      ],
+      "derived": "Against the page's 209 kW rated power: low-speed rating 0.22-0.24 x P, high-speed rating 0.40-0.44 x P.",
+      "note": "The best factory radiator ratings found, but only one enthusiast transcription and the test conditions are missing. Column mapping follows the table's colspans (copper core is the early 2JZ-GTE, aluminium the 1996-on 2JZ-GTE)."
+    },
+    {
+      "id": "ra-scirp-table1",
+      "item": "Measured heat dissipation of a louvered-fin car radiator vs air face velocity and coolant flow",
+      "value": {
+        "core_mm": "562 W x 380 H x 18 D, 79 tubes 400 x 16 mm, fin pitch 5.5 mm, fin wave distance P = 2.5 mm",
+        "Qn_kW": {
+          "Gw_50.5_Lmin": {
+            "3ms": 30.9,
+            "5ms": 41.08,
+            "6ms": 45.25,
+            "8ms": 50.67,
+            "10ms": 55.3
+          },
+          "Gw_82.3_Lmin": {
+            "3ms": 31.38,
+            "5ms": 44.24,
+            "6ms": 49.37,
+            "8ms": 57.3,
+            "10ms": 62.73
+          },
+          "Gw_99.1_Lmin": {
+            "3ms": 31.93,
+            "5ms": 45.63,
+            "6ms": 51.06,
+            "8ms": 59.57,
+            "10ms": 66.04
+          },
+          "Gw_132.3_Lmin": {
+            "3ms": 32.33,
+            "5ms": 46.81,
+            "6ms": 52.51,
+            "8ms": 61.24,
+            "10ms": 67.81
+          },
+          "Gw_165.7_Lmin": {
+            "3ms": 33.09,
+            "5ms": 48.06,
+            "6ms": 53.87,
+            "8ms": 62.49,
+            "10ms": 69.65
+          }
+        },
+        "airPressureDrop_Pa": {
+          "3ms": 67,
+          "5ms": 149,
+          "6ms": 195,
+          "8ms": 300,
+          "10ms": 428
+        },
+        "waterPressureDrop_kPa": {
+          "50.5": 12.26,
+          "82.3": 24.22,
+          "99.1": 32.72,
+          "132.3": 54.1,
+          "165.7": 83.22
+        }
+      },
+      "unit": "kW",
+      "conditions": "wind-tunnel test to JB2293-1978; the inlet temperature difference behind 'Qn' is NOT stated",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://html.scirp.org/file/_6-1520083_1.htm",
+          "accessed": "2026-09-30",
+          "title": "Toure Ismael, Sheng Bu Yun, Fayzimatov Ulugbek: 'Radiator Heat Dissipation Performance', Journal of Electronics Cooling and Thermal Control 6(2), 2016, pp. 88-96, doi:10.4236/jectc.2016.62008, Table 1 (P = 2.5 mm)",
+          "quote": "Va (m/s) 3.00 5.00 6.00 8.00 10.00 △Pw (kPa) | Qn (kw) | Gw (L/min) | 50.5 30.90 41.08 45.25 50.67 55.30 12.26 | 82.3 31.38 44.24 49.37 57.30 62.73 24.22 | 99.1 31.93 45.63 51.06 59.57 66.04 32.72 | 132.3 32.33 46.81 52.51 61.24 67.81 54.10 | 165.7 33.09 48.06 53.87 62.49 69.65 83.22 | △Pa (Pa) 67 149 195 300 428 -",
+          "location": "Table 1",
+          "howRead": "HTML table"
+        },
+        {
+          "url": "https://file.scirp.org/Html/6-1520083_67628.htm",
+          "accessed": "2026-09-30",
+          "title": "Same paper, full text",
+          "quote": "Baseline Geometry Description of the Automobile Radiator under Study Core thickness (mm) 18 Core height (mm) 380 Core width (mm) 562 Rows 181 Total tubes 79 Tube dimensions (mm) 400 × 16 Tube thickness (mm) 0.29 Tube pitch (mm) 1.6 Fin pitch (mm) 5.5 Fin thickness (mm) 0.07 ... Qn Heath transfers rate, (Kw) ... For the cooling performance experience, we use JB2293-1978 Wind Tunnel Test Method for Automobile and Tractor Radiators.",
+          "location": "geometry table and nomenclature",
+          "howRead": "HTML text"
+        }
+      ],
+      "note": "Good for the SHAPE of the curve: heat rejection rises 1.8-2.1 x from 3 to 10 m/s and only 7-26 % from 50 to 166 L/min. The absolute kW/K cannot be derived without the ITD; do not treat these as kW/K."
+    },
+    {
+      "id": "ra-sd-temperature-independence",
+      "item": "Specific dissipation (SD = heat rejected / (coolant in - air in)) is nearly independent of ambient and coolant temperature",
+      "value": "less than 2 % change for ambient 10-50 °C and coolant inlet 60-120 °C; 1 % flow change at 1.0 L/s gives about ±0.6 % SD",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2000-01-0579",
+          "accessed": "2026-09-30",
+          "title": "Lin, C., Saunders, J., Watkins, S.: 'The Effect of Changes in Ambient and Coolant Radiator Inlet Temperatures and Coolant Flowrate on Specific Dissipation', SAE 2000-01-0579 (abstract page)",
+          "quote": "Results indicate that the effect of ambient and coolant inlet temperature variation on SD is small (less than 2%) when ambient temperature varies between 10 and 50°C and coolant radiator inlet temperature between 60 and 120°C. The effect of coolant flowrate on SD is larger if there is a larger flowrate variation. Experimental results indicate that a 1 % variation at 1.0 L/s will cause about ±0.6% SD variation.",
+          "location": "abstract",
+          "howRead": "HTML meta description"
+        }
+      ],
+      "note": "Supports modelling radiator capacity as SD(air speed, coolant flow) x ITD across the 25-50 °C ambient presets. Full paper not read (SAE paywall)."
+    },
+    {
+      "id": "ra-yaw",
+      "item": "Effect of yaw on radiator cooling (cross-wind angles)",
+      "value": "'effects are small' (cross-wind yaw); no data at drift angles",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/wind-tunnel-tests-vehicle-cooling-system-performance-high-blockage-2000-01-0351",
+          "accessed": "2026-09-30",
+          "title": "Ng, E.Y., Johnson, P.W., Watkins, S., Grant, L. (RMIT): 'Wind-Tunnel Tests of Vehicle Cooling System Performance at High Blockage', SAE 2000-01-0351 (abstract page)",
+          "quote": "However a drawback is that the yaw angles generated on road by cross winds cannot be reproduced. It is noted that effects of yaw angle are not considered in most comparable cooling tests and prior work has shown that the effects are small.",
+          "location": "abstract",
+          "howRead": "HTML meta description"
+        }
+      ],
+      "note": "A search-result snippet (ResearchGate, not opened) claimed 'a 13% decrease in radiator cooling capability ... at a yaw angle of 20° compared to a zero yaw angle' at 14 m/s; unverified, so not used. Drift angles of 30-60° are outside all data found."
+    },
+    {
+      "id": "ra-installed-vs-bench",
+      "item": "Installed radiator performance differs from component wind-tunnel ratings",
+      "value": "qualitative",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/papers/a-simple-engine-cooling-system-simulation-model-1999-01-0237",
+          "accessed": "2026-09-30",
+          "title": "Ngy Srun Ap (Valeo Engine Cooling): 'A Simple Engine Cooling System Simulation Model', SAE 1999-01-0237 (abstract page)",
+          "quote": "A radiator on a component wind tunnel will not perform as in the engine compartment due to the many mitigating factors: the water pump, the fan power, and other vehicle components like the grill, air inlet cross sectional area, bumper position, ram air, pressure coefficient at the front end and at the air outlet of underhood.",
+          "location": "abstract",
+          "howRead": "HTML meta description"
+        }
+      ]
+    },
+    {
+      "id": "ra-fd-radiator",
+      "item": "RX-7 FD3S factory radiator type",
+      "value": "corrugated fin; core size not given in the workshop manual",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System (scan hosted by foxed.ca)",
+          "quote": "Radiator | Type | Corrugated fin | Cap valve opening pressure kPa {kgf/cm², psi} | 113–142 {1.15–1.45, 16.4–20.6}",
+          "location": "E-3 Outline, Specifications (PDF page 4)",
+          "howRead": "page image"
+        }
+      ]
+    }
+  ],
+  "oilCoolers": [
+    {
+      "id": "oc-setrab-ratings",
+      "item": "Setrab ProLine stacked-plate oil cooler ratings at stated conditions",
+      "conditions": {
+        "wetSump": "oil 5 gpm (18.9 L/min), 20/50 engine oil, ITD 130 °F (72.2 K), 60 mph (26.8 m/s) airflow",
+        "drySump": "oil 8 gpm (30.3 L/min), ITD 140 °F (77.8 K), 80 mph (35.8 m/s) airflow"
+      },
+      "value": [
+        {
+          "model": "119M22i (1-series, 19 rows)",
+          "A_in": 6.42,
+          "B_in": 5.75,
+          "hpRange": "100-150",
+          "btu_h": "13,000 / 17,500",
+          "kW": "3.81 / 5.13",
+          "kW_per_K": "0.053 / 0.066"
+        },
+        {
+          "model": "134M22i",
+          "A_in": 6.42,
+          "B_in": 10.39,
+          "hpRange": "170-230",
+          "btu_h": "21,000 / 27,000",
+          "kW": "6.15 / 7.91",
+          "kW_per_K": "0.085 / 0.102"
+        },
+        {
+          "model": "610M22i (6-series, 10 rows)",
+          "A_in": 11.14,
+          "B_in": 2.99,
+          "hpRange": "90-130",
+          "btu_h": "15,000 / 20,000",
+          "kW": "4.40 / 5.86",
+          "kW_per_K": "0.061 / 0.075"
+        },
+        {
+          "model": "619M22i",
+          "A_in": 11.14,
+          "B_in": 5.75,
+          "hpRange": "220-310",
+          "btu_h": "27,000 / 37,000",
+          "kW": "7.91 / 10.84",
+          "kW_per_K": "0.110 / 0.139"
+        },
+        {
+          "model": "625M22i",
+          "A_in": 11.14,
+          "B_in": 7.6,
+          "hpRange": "325-425",
+          "btu_h": "33,100 / 46,000",
+          "kW": "9.70 / 13.48",
+          "kW_per_K": "0.134 / 0.173"
+        },
+        {
+          "model": "634M22i",
+          "A_in": 11.14,
+          "B_in": 10.39,
+          "hpRange": "400-475",
+          "btu_h": "43,000 / 59,000",
+          "kW": "12.60 / 17.29",
+          "kW_per_K": "0.174 / 0.222"
+        },
+        {
+          "model": "650M22i",
+          "A_in": 11.14,
+          "B_in": 15.31,
+          "hpRange": "600+",
+          "btu_h": "56,000 / 78,000",
+          "kW": "16.41 / 22.86",
+          "kW_per_K": "0.227 / 0.294"
+        },
+        {
+          "model": "920M22i (9-series)",
+          "A_in": 14.09,
+          "B_in": 6.06,
+          "hpRange": "300-400",
+          "btu_h": "35,000 / 50,000 (920M22i)",
+          "kW": "10.26 / 14.65",
+          "kW_per_K": "0.142 / 0.188"
+        }
+      ],
+      "unit": "BTU/h as printed (wet / dry); kW and kW/K converted by me (1 BTU/h = 0.29307 W)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0257/2599/3014/files/Engine_Oil_Coolers.pdf?v=1751490669",
+          "accessed": "2026-09-30",
+          "title": "Setrab USA: 'Engine Oil Coolers' application chart (PDF linked from https://setrabusa.com/collections/proline-std-oil-coolers)",
+          "quote": "EOC hp and btu/hr range based on specific performance parameters that if varied may result in different performance results. Low EOC hp and btu/hr range based on typical wet sump high-performance application and typical variable parameters. Wet Sump Parameters: oil flow rate, 5gpm; 20/50 engine oil or similar; 130ºF ITD; 60mph airflow. High EOC hp and btu/hr range based on typical dry sump high-performance application and typical variable parameters. Dry Sump Parameters: oil flow rate, 8gpm; 20/50 engine oil or similar; 140ºF ITD; 80mph airflow. ... 6 Series ProLine STD Coolers ... 220-310 50-619-7612 619M22i 11.14 5.75 9.53 12.20 12.99 0.40 2.65 2.5 / 3.3 27,000 / 37,000 ...",
+          "location": "single-page chart",
+          "howRead": "read on the page image (image-only PDF)"
+        }
+      ],
+      "derived": "Setrab's own pairing of cooler to power implies an oil heat load of roughly 3-5 % of engine power for wet-sump performance engines (e.g. 619M22i: 7.9 kW for 220-310 hp = 164-231 kW).",
+      "note": "The dimension letters A and B are the chart's columns (A = width, B grows with row count); core depth is not printed. Ratings are the maker's, conditions are stated, method not."
+    },
+    {
+      "id": "oc-roster-oil-cooler-types",
+      "item": "Where each roster engine's oil heat goes",
+      "value": {
+        "2JZ-GTE": "water-cooled multi-plate full-flow cooler between filter and bracket (oil heat into coolant) + piston oil jets",
+        "SR20DET": "oil cooler on the coolant circuit + oil jet",
+        "VQ35DE": "oil cooler with water hoses (water-cooled)",
+        "13B-REW": "air-cooled cooler with bypass valve (see ro-13brew-oil-cooler)",
+        "S54B32": "oil cooler flow controlled by a 95 °C thermostat; piston spray nozzles; air or water type not stated",
+        "M54B30": "not found",
+        "VQ35HR": "not found"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf083.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 83",
+          "quote": "The 2JZ-GTE engine is equipped with a water-cooled, multi-plate, full-flow type oil cooler between the oil filter and oil filter bracket, to cool the engine oil. ... there is an oil jet provided for each cylinder.",
+          "location": "p. 83",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf082.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 82",
+          "quote": "However, a water-cooled oil cooler is equipped in the 2JZ-GTE engine to cool the engine oil, and oil jets are provided in the cylinder block to cool the pistons.",
+          "location": "p. 82",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (English, 1994), SR20DET, hosted by sr20tuning.net: LC section",
+          "quote": "ENGINE COOLING SYSTEM ... Cooling Circuit Throttle body Intake manifold collector Oil cooler Heater Reservoir tank ... ENGINE LUBRICATION SYSTEM Lubrication Circuit ... Oil filter Oil cooler ... Main gallery Oil jet",
+          "location": "LC section (cooling and lubrication circuit diagrams)",
+          "howRead": "OCR text layer of a ranged download (page images not viewed)"
+        },
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org item '350z 2004.5 Full Shop Manual' (full-text derivative)",
+          "quote": "14. Disconnect oil cooler water hoses, and remove oil cooler water pipe mounting bolt. Refer to LU-10, \"OIL COOLER\" .",
+          "location": "EM section (oil pan removal)",
+          "howRead": "archive.org OCR text"
+        },
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST041, module 'M Engines - S54B32' (file '2 M3 DriveLine')",
+          "quote": "4. Oil Cooler (flow controlled by 95mº C thermostat in oil filter housing) ... 6. Main Oil Gallery (crankshaft, connecting rods, spray nozzles) 7. Spray Nozzles for Pistons",
+          "location": "p. 9 (oil circuit legend)",
+          "howRead": "PDF text layer ('95mº C' as printed)"
+        }
+      ],
+      "note": "Modelling consequence: for the SR20DET, 2JZ-GTE and VQ35DE the oil heat mostly ends up in the radiator; only the 13B-REW (and an added air-oil cooler) removes oil heat directly to air."
+    },
+    {
+      "id": "oc-jza80-atf",
+      "item": "JZA80 automatic: ATF cooler in radiator tank",
+      "value": "0.1 L, 1.98 kW {1,700 kcal/h}",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ (mkiv.supras.org.nz): 'Japanese MKIV Specifications' page (enthusiast transcription of Toyota JDM data; fetched over plain HTTP because the site's HTTPS certificate is self-signed)",
+          "quote": "Oil cooler | Core shape | Double tube | 35 mm double-pipe | 35 mm double-pipe | Oil capacity (L) 0.1 | 0.1 | 0.1 | Heat dissipation (kW {kcal / h}) ? | 1.98 {1700} | 1.98 {1700}",
+          "location": "'Radiator' table, oil cooler rows (AT columns)",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "Transmission fluid, not engine oil; listed only so it is not mistaken for an engine oil cooler."
+    }
+  ],
+  "intercoolers": [
+    {
+      "id": "ic-fd-core",
+      "item": "RX-7 FD3S factory intercooler",
+      "value": "air cooled; core 294 x 114 x 65 mm (w x h x t)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Intercooler | Type | Air cooled | Core size {w × h × t} mm {in} | 294 × 114 × 65 {11.575 × 4.4882 × 2.5591}",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ]
+    },
+    {
+      "id": "ic-jza80-location",
+      "item": "JZA80 2JZ-GTE factory intercooler type and location",
+      "value": "air-cooled tube-type charge air cooler in the front part of the right front wheel housing",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf091.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 91 Charge Air Cooler [Intercooler]",
+          "quote": "This turbocharger system adopts an air-cooled, tube type charge air cooler [intercooler] located in the front part of the right front wheel housing. • Large-diameter air tubes and hoses are used to accommodate large airflow and reduce its pressure loss.",
+          "location": "p. 91",
+          "howRead": "page image"
+        }
+      ],
+      "note": "No core size or effectiveness given by Toyota. The repo's 2jz-gte.json cites an NZ club measurement of 270 x 125 x 220 mm that was not opened in this session."
+    },
+    {
+      "id": "ic-low-speed-behaviour",
+      "item": "Air-to-air intercoolers lose effectiveness at idle and low speed and heat-soak (maker statements)",
+      "value": "qualitative; typical inlet (compressor-out) temperatures 107-135 °C; upgraded cores cut outlet temperature 10-40 % vs stock",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.mishimoto.com/engineering/2022/01/a2w-a2a-intercooling-tech",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering: 'A Tale of Two Systems - Intercooling System Overview - Air-to-Water vs. Air-to-Air Intercoolers' (Nick, 31 Jan 2022, updated 7 Jul 2026)",
+          "quote": "anytime the vehicle is idling or moving at slow speeds, the intercooler's efficiency is significantly reduced ... the constant coolant cycle through the system, which wards off heat soak, even at idle or slow speeds",
+          "location": "article text",
+          "howRead": "WebFetch summary quoting the page (short quotes)"
+        },
+        {
+          "url": "https://www.mishimoto.com/engineering/2015/04/drop-intake-temperatures-drop-track-times-drop-mouths-the-ultimate-guide-for-intercooler-selection",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering: 'The Ultimate Guide For Intercooler Selection' (John, 22 Apr 2015, updated 30 Mar 2026)",
+          "quote": "We typically see inlet temperatures in the range of 225°F–275°F (107°C–135°C). ... On average, we are able to drop temperatures in our coolers by 10%–40% compared to stock intercoolers. ... At idle, these coolers can be prone to heat-soak when there is insufficient airflow.",
+          "location": "article text",
+          "howRead": "WebFetch summary quoting the page"
+        }
+      ],
+      "note": "A maker of aftermarket intercoolers; no effectiveness-vs-air-speed data given."
+    },
+    {
+      "id": "ic-heat-soak-dyno",
+      "item": "Heat-soak power loss over back-to-back dyno pulls (Honda Civic Type R FL5, 2.0 turbo)",
+      "value": "stock intercooler lost 21 hp after six consecutive runs; Mishimoto core lost 10 hp; up to 57 °F (32 K) lower intake temperature",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.mishimoto.com/engineering/2025/12/frigid-fl5-performance-intercooler-2023-honda-civic-type-r-fl5",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering: 'Frigid FL5 - Performance Intercooler for the 2023+ Honda Civic Type R' (Josh Wayman, 7 Dec 2025, updated 24 Mar 2026)",
+          "quote": "intake temperature reductions of up to 57 degrees Fahrenheit compared to stock ... 21 horsepower drop after six consecutive runs ... only lost 10 horsepower under the same conditions",
+          "location": "article text",
+          "howRead": "WebFetch summary quoting the page"
+        }
+      ],
+      "note": "Ambient, dyno fan speed and run spacing not stated; shows that heat soak costs measurable power over back-to-back pulls on a chassis dyno with limited airflow."
+    },
+    {
+      "id": "ic-cw-assumption",
+      "item": "Intercooler effectiveness assumed in an engineering study",
+      "value": "50 % effectiveness, 2 % pressure drop, 70 % compressor efficiency (assumptions)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "* BEFORE 2% INTERCOOLER PRESSURE DROP. ASSUMES INTERCOOLER EFFECTIVENESS OF 50% AND COMPRESSOR EFFICIENCY OF 70%.",
+          "location": "Tables 3.0.3-3.0.6 footnote (PDF pages 39-42)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "An aircraft-study assumption, not a measurement; recorded only because no measured effectiveness-vs-airflow data was found."
+    }
+  ],
+  "fans": [
+    {
+      "id": "fa-fd",
+      "item": "RX-7 FD3S electric radiator fans",
+      "value": "2 electric fans, 160 W each, 300 mm, 5 and 4 blades; three speeds drawing 13.6 / 9.5 / 8.8 A (high / medium / low)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Electric cooling fan | Type | Electrical | Capacity W | 160 × 2 | Number of blades | No1: 5, No2: 4 | Outer diameter mm {in} | 300 {11.8}",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System (scan hosted by foxed.ca)",
+          "quote": "Cooling fan | Motor current A | High: 13.6, Med: 9.5, Low: 8.8 | Number of blades | No.1: 5, No.2: 4 | Outer diameter of blades mm {in} | No.1, No.2: 300 {11.8}",
+          "location": "E-3 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "No airflow (m³/s or CFM) is given by Mazda."
+    },
+    {
+      "id": "fa-jza80",
+      "item": "JZA80 Supra fans",
+      "value": "2JZ-GE: 3-stage temperature-controlled fluid-coupling fan; 2JZ-GTE: electric fan 172 mm, 7 blades, 12 V, 3.5 A, 2500 rpm, 80 W (1 unit early, 2 later per the table)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://mkiv.com/specifications/ncf/ncf93/ncf045.jpg",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra (JZA80, US market) New Car Features, 1993 (page scans hosted by mkiv.com), p. 45 (2JZ-GE Cooling System)",
+          "quote": "4. Coupling Fan A 3-stage temperature-controlled fluid coupling is used.",
+          "location": "p. 45",
+          "howRead": "page image"
+        },
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ (mkiv.supras.org.nz): 'Japanese MKIV Specifications' page (enthusiast transcription of Toyota JDM data; fetched over plain HTTP because the site's HTTPS certificate is self-signed)",
+          "quote": "Electric fan | Fan Diameter (mm) 172 | Number of blades 7 | Voltage (V) 12 | Current (A) 3.5 | Rotational speed (rpm) 2500 | Rated input (W) 80W | Quantity 1 | 2",
+          "location": "'Radiator' table, electric fan rows (2JZ-GTE columns)",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "The main radiator fan drive of the 2JZ-GTE was not confirmed in this session; the small electric fan data are the club's transcription."
+    },
+    {
+      "id": "fa-vq35de-logic",
+      "item": "VQ35DE (350Z 2004) cooling fan switching",
+      "value": "off at 94 °C or less, low speed 95-99 °C, high speed 100 °C or more (engine idling, A/C off)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), EC section, DTC P1217 Engine Over Temperature (archive.org full text)",
+          "quote": "COOLING FAN | G Engine: After warming up, idle the engine | G Air conditioner switch: OFF | Engine coolant temperature is 94°C (201°F) or less | OFF | Engine coolant temperature is between 95°C (203°F) and 99°C (210°F) | LOW | Engine coolant temperature is 100°C (212°F) or more | HI",
+          "location": "EC section, CONSULT-II monitor table (EC-441/442)",
+          "howRead": "archive.org OCR text"
+        }
+      ]
+    },
+    {
+      "id": "fa-m54-logic",
+      "item": "BMW M54 electric fan control",
+      "value": "PWM fan: 1/3 speed at 10 % sensing ratio, full speed at 90-95 %; may run up to 10 min after shut-off",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST036%20X5%20Complete%20Vehicle/03_M54%20Engine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST036 (X5), module 'M54 Engine' (6/2000), p. 36 Electric Fan",
+          "quote": "The fan is activated based on the ECM calculation (sensing ratio) of: • Coolant outlet temperature • Calculated (by the ECM) catalyst temperature • Vehicle speed • Battery voltage • Air Conditioning pressure ... At 10% (sensing ratio) the fan runs at 1/3 speed. At a sensing ratio of between 90-95% the fan is running at maximum speed. ... After the engine is switched off, the fan may continue to operate at varying speeds (based on the ECM calculated catalyst temperature). This will cool the radiator down from a heat surge (up to 10 minutes).",
+          "location": "p. 36",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST045 (Z4), module 'E85 M54 Engine', p. 5 Cooling System",
+          "quote": "The E85 cooling system is similar to the E46 with the exception of the following changes: • Cooling module (viscous fan eliminated)",
+          "location": "p. 5",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "Fan airflow not given. The E46 also has an engine-driven viscous fan: BMW's E85 (Z4) M54 module lists 'viscous fan eliminated' as a change from the E46 (source 2)."
+    },
+    {
+      "id": "fa-standstill-velocity",
+      "item": "Air velocity through a radiator from the fan alone at standstill (measured)",
+      "value": "1.2 m/s (average downstream velocity, FSAE car at idle)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.iieta.org/download/file/fid/64083",
+          "accessed": "2026-09-30",
+          "title": "Padmaraman, S., Mathivanan, N.R., Ponangi, B.R.: 'Heat Dissipation Characteristics of a FSAE Racecar Radiator', International Journal of Heat and Technology, doi:10.18280/ijht.390531 (2021)",
+          "quote": "The average velocity of air downstream of the radiator was used an indication of the suction effect, and was found to be 1.2m/s on the racecar as measured using an anemometer. This air velocity due to the radiator fan, corresponds to the car is in standstill and idling position.",
+          "location": "Experimental set-up section",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "Small FSAE radiator (291 x 192 x 38 mm stock) and fan; a passenger-car figure was not found. The paper's tests ran at 35 °C ambient."
+    },
+    {
+      "id": "fa-spal-ratings",
+      "item": "SPAL axial fan ratings (as listed by Setrab for its fan packs)",
+      "value": {
+        "5.2in": "342 cfm",
+        "6.5in": "331 cfm",
+        "9.0in": "708 cfm",
+        "12.0in": "1242 cfm"
+      },
+      "unit": "cfm (1 cfm = 0.000472 m³/s); test condition not stated (probably free air)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0257/2599/3014/files/Engine_Oil_Coolers.pdf?v=1751490669",
+          "accessed": "2026-09-30",
+          "title": "Setrab USA: 'Engine Oil Coolers' application chart (PDF linked from https://setrabusa.com/collections/proline-std-oil-coolers)",
+          "quote": "ProLine STD FanPacks ... SPAL 5.2\", 342cfm, 12V p/n: FAN30103011 ... SPAL 6.5\", 331cfm, 12V p/n: FAN30103084 ... SPAL 9.0\", 708cfm, 12V p/n: FAN30100452 ... SPAL 12.0\", 1242cfm, 12V p/n: FAN30101522",
+          "location": "FanPack table",
+          "howRead": "page image"
+        }
+      ],
+      "note": "SPAL's own site could not be opened (expired TLS certificate, see gates). Free-air cfm overstates flow through a radiator core."
+    }
+  ],
+  "thermalMass": [
+    {
+      "id": "tm-metals-cp",
+      "item": "Specific heat of engine metals",
+      "value": {
+        "castIron": 0.46,
+        "aluminium": 0.91,
+        "aluminium_alt": 0.897
+      },
+      "unit": "kJ/(kg K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/specific-heat-metals-d_152.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Metals - Specific Heats'",
+          "quote": "Metal | Specific Heat - cp - (kJ/kgK) | Aluminum 0.91 | Carbon Steel 0.49 | Cast Iron 0.46 | Iron 0.45 | Wrought Iron 0.50",
+          "location": "table",
+          "howRead": "HTML table"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/specific-heat-capacity-d_391.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Specific Heat of Common Materials'",
+          "quote": "Substance | Specific Heat - cp -(J/kg C°) | Aluminum 897",
+          "location": "table",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "Room-temperature handbook values from a secondary reference; alloy and temperature dependence not stated."
+    },
+    {
+      "id": "tm-oil-cp",
+      "item": "Specific heat of lubricating oil",
+      "value": {
+        "lubricatingOil": 2.09,
+        "lightOil_60F": 1.8,
+        "lightOil_300F": 2.3
+      },
+      "unit": "kJ/(kg K)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/specific-heat-fluids-d_151.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Specific Heat of Common Liquids and Fluids'",
+          "quote": "Liquids and Fluids - Specific Heats | Product | Specific Heat - cp - (kJ/kgK) (Btu/(lb oF)) ... Light Oil, 60 oF 1.8 0.43 | Light Oil, 300 oF 2.3 0.54 | Lubricating oil 2.09",
+          "location": "table",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "No engine-oil maker's value found; oil cp rises with temperature (1.8 at 16 °C to 2.3 at 149 °C for 'light oil')."
+    },
+    {
+      "id": "tm-glycol-cp",
+      "item": "Specific heat of 50 wt% ethylene glycol / water and of water",
+      "value": {
+        "EG50_80C": 3.657,
+        "EG50_90C": 3.688,
+        "EG50_100C": 3.718,
+        "water_90C": 4.207
+      },
+      "unit": "kJ/(kg K) (converted from Btu/lb °F x 4.1868)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.meglobal.biz/wp-content/uploads/2024/03/MEG_Guide_Rev_2024_W2.pdf",
+          "accessed": "2026-09-30",
+          "title": "MEGlobal: 'Ethylene Glycol Product Guide' (rev. 3/10/2024), Figure 8 'Specific Heats of Aqueous Ethylene Glycol Solutions'",
+          "quote": "Specific Heats = A + BT + CT2 T = Temperature, °C EG, Wt% A B C 0 1.00380 -2.2459E-4 2.6257E-6 ... 50 0.81485 7.3219E-4 0.0 [axis: Specific Heat, Btu/lb/°F]",
+          "location": "p. 19 (PDF page 20)",
+          "howRead": "PDF text layer + page image for units"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/ethylene-glycol-d_146.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Ethylene Glycol Heat-Transfer Fluid Properties'",
+          "quote": "Ethylene Glycol Solution (% by weight) | Specific Heat - c p (Btu/lb oF) ... 50 | ... 0.86610 (70 °C) | 0.87343 (80 °C) | 0.88075 (90 °C) | 0.88807 (100 °C) ... 1 Btu/lbm oF = 4,186.8 J/(kg K)",
+          "location": "specific heat table, 50 % row",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "The two tables agree exactly, so Engineering ToolBox probably copied the Dow/MEGlobal data; count them as one primary source (MEGlobal) plus a copy. A 50/50 mix by volume is somewhat richer in glycol than 50 wt% (MEGlobal's Table 6 converts volume to weight %; not read here)."
+    },
+    {
+      "id": "tm-glycol-density",
+      "item": "Density of 50 wt% ethylene glycol / water",
+      "value": {
+        "60C": 1055,
+        "80C": 1042,
+        "100C": 1030
+      },
+      "unit": "kg/m³",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.engineeringtoolbox.com/ethylene-glycol-d_146.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Ethylene Glycol Heat-Transfer Fluid Properties'",
+          "quote": "Mass Fraction of Ethylene Glycol in Solution | Density - ρ - (kg/m3) | Temperature - t - (oC) -48 -35 -25 -14 -8 -4 0 20 40 60 80 100 ... 0.5 | 1103 1100 1096 1093 1092 1090 1079 1067 1055 1042 1030",
+          "location": "density table",
+          "howRead": "HTML table"
+        }
+      ]
+    },
+    {
+      "id": "tm-s54-block",
+      "item": "BMW S54 block material and mass",
+      "value": "cast-iron block, about 48 kg bare; aluminium one-piece cross-flow head",
+      "unit": "kg",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST041, module 'M Engines - S54B32'",
+          "quote": "Engine Block: The S54 engine block is cast iron in order to absorb the high forces produced by the crankshaft (combustion pressure and high engine rpm). ... The \"bare\" block weighs approximately 105 lbs. (48 kg). ... Cylinder Head: The S54 features an aluminum cross-flow cylinder head designed as a single component that houses the camshafts and valve train.",
+          "location": "pp. 5 and 12",
+          "howRead": "PDF text layer"
+        }
+      ]
+    },
+    {
+      "id": "tm-repo-engine-masses",
+      "item": "Engine materials and dressed/dry masses already sourced in the repo (NOT re-read in this session)",
+      "value": {
+        "SR20DET": "aluminium block and head; 166 kg (weak, single blog table)",
+        "2JZ-GTE": "cast-iron block, aluminium head; 230 kg (published range 226-270 kg)",
+        "13B-REW": "aluminium rotor housings; 155 kg estimated (+/-10)",
+        "VQ35DE": "aluminium block and heads; 313 lb = 142 kg (weak)",
+        "VQ35HR": "aluminium; 150 kg estimated (+/-20)",
+        "S54B32": "cast-iron block (48 kg bare), aluminium head; about 217 kg estimated",
+        "M54B30": "aluminium block with cast-iron liners; about 170 kg estimated"
+      },
+      "confidence": "see the repo files (mostly single-source or estimated)",
+      "sources": [
+        {
+          "url": "file:src/data/engines/*.json (fields blockMaterial, headMaterial, materials, dryWeight)",
+          "accessed": "2026-09-26 to 2026-09-29 (as recorded in those files)",
+          "title": "Swap Lab engine data files",
+          "quote": "see each field's own sources and quotes in the repo"
+        }
+      ],
+      "note": "Listed so the thermal model can take lumped masses from one place; none of these values were re-verified today. No per-engine block or head masses were found except the S54 block."
+    }
+  ],
+  "capacities": [
+    {
+      "id": "cap-sr20det",
+      "engine": "SR20DET (Nissan S14 manual; no S15 manual found)",
+      "coolant_L": "6.2 (with reservoir, MA-12 refill procedure) and 'Approx. 7.0' (with reservoir, MA service data table); reservoir 1.8",
+      "oil_L": "3.7 with filter, 3.5 without",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (English, 1994), SR20DET, hosted by sr20tuning.net: MA section",
+          "quote": "Coolant capacity (With reservoir tank) 6.2 ℓ (5-1/2 Imp qt) (Reservoir tank capacity for \"H\" level is 1.8 ℓ (1-5/8 Imp qt)",
+          "location": "MA-12 'Changing Engine Coolant'",
+          "howRead": "OCR text layer of the first 12 MB (OCR shows 'ℓ' as 't'/'C')"
+        },
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (English, 1994), SR20DET: MA 'Service Data and Specifications'",
+          "quote": "Coolant and oil capacity Unit ℓ (Imp qt) Coolant (with reservoir tank) Approx. 7.0 (6-1/8) Reservoir tank 1.8 (1-5/8) Engine oil With oil filter change Approx 3.7 (3-1/4) Without oil filter change Approx. 3.5 (3-1/8)",
+          "location": "MA service data table",
+          "howRead": "OCR text layer ('(&-118)' read as 6-1/8; 6-1/8 Imp qt = 6.96 L)"
+        }
+      ],
+      "note": "Two figures in the same manual: 6.2 L is probably the drain-and-refill amount and 7.0 L the full system; not stated. The S15 may differ."
+    },
+    {
+      "id": "cap-2jz-gte",
+      "engine": "2JZ-GTE (JZA80, JDM data)",
+      "coolant_L": "9.5 (copper radiator, 1993/05-1996/04, MT and AT); 8.9 MT / 8.8 AT (aluminium radiator, 1996/04 on); radiator itself 3.08 MT / 2.95 AT (copper)",
+      "oil_L": "5.0 (filter not stated)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "http://mkiv.supras.org.nz/specs.htm",
+          "accessed": "2026-09-30",
+          "title": "Toyota Supra MKIV club NZ (mkiv.supras.org.nz): 'Japanese MKIV Specifications' page (enthusiast transcription of Toyota JDM data; fetched over plain HTTP because the site's HTTPS certificate is self-signed)",
+          "quote": "Cooling water total capacity (L) [required amount of replacement] | 7.3 | 8.3 | 9.5 | 9.5 | 8.9 | 8.8 ... Oil Capicity (L) ... 5.0 [2JZ-GTE column] 5.2 [2JZ-GE column]",
+          "location": "'Radiator' and 'Engine' tables",
+          "howRead": "HTML tables"
+        }
+      ],
+      "note": "Enthusiast transcription of Toyota JDM data; the first two capacity columns are the 2JZ-GE (7.3 MT / 8.3 AT)."
+    },
+    {
+      "id": "cap-13b-rew",
+      "engine": "13B-REW (FD3S, US 1993 manual)",
+      "coolant_L": "8.8",
+      "oil_L": "4.9 total dry engine (5.4 on R1); pan 4.2; cooler 0.85; filter 0.19/0.17",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System (scan hosted by foxed.ca)",
+          "quote": "Coolant capacity L {US qt, Imp qt} | 8.8 {9.3, 7.7}",
+          "location": "E-3 (PDF page 4)",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Coolant | Capacity L {US qt, Imp qt} | 8.8 {9.3, 7.7}",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "Oil figures in ro-13brew-oil-cooler (TD-3). Same manual, two pages: single-source."
+    },
+    {
+      "id": "cap-vq35de",
+      "engine": "VQ35DE (350Z 2004 service manual)",
+      "coolant_L": "8.7 (with reservoir at MAX); reservoir 0.8",
+      "oil_L": "4.7 drain and refill with filter; 4.4 without; 5.4 dry engine",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org full text: Quick Reference Chart and CO/LU SDS",
+          "quote": "QUICK REFERENCE CHART 350Z | REFILL CAPACITIES | ... Engine coolant ( With reservoir tank ) | 8.7 | 9 - 1/4 qt | Engine | Drain and refill | With oil filter change | 4.7 | 5 qt | Without oil filter change | 4.4 | 4 - 5/8 qt | Dry engine (Overhaul) | 5.4 | 5 - 3/4 qt ... Engine coolant capacity (With reservoir tank at \"MAX\" level) | 8.7 (9-1/4, 7- 5/8) | Reservoir tank engine coolant capacity (At \"MAX\" level) | 0.8 (7/8, 3/4)",
+          "location": "Quick Reference Chart; CO SDS",
+          "howRead": "archive.org OCR text"
+        }
+      ]
+    },
+    {
+      "id": "cap-vq35hr",
+      "engine": "VQ35HR (350Z 2008 owner's manual, US)",
+      "coolant_L": "9.0 (cooling system with reservoir); reservoir 0.8",
+      "oil_L": "4.9 with filter change; 4.6 without",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/ZCoupe/2008/2008-ZCoupe-owner-manual.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2008 350Z Owner's Manual (US), 'Capacities and recommended fuel/lubricants', p. 9-2 (PDF p. 277)",
+          "quote": "Engine oil (Drain and refill)*2 With oil filter change 5-1/8 qt 4-3/8 qt 4.9 ... Without oil filter change 4-7/8 qt 4 qt 4.6 ... Cooling system With reservoir 9-1/2 qt 7-7/8 qt 9.0 ... Reservoir 7/8 qt 3/4 qt 0.8",
+          "location": "p. 9-2",
+          "howRead": "PDF text layer"
+        }
+      ]
+    },
+    {
+      "id": "cap-m54b30",
+      "engine": "M54B30 (E46 330i, US owner's manual 09/01)",
+      "coolant_L": "approx. 8.4 (cooling system including heater circuit)",
+      "oil_L": "approx. 6.5 (oil and filter change, 320i/325i/330i); 7.5 for xi models",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7304367/7304367.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW 3 Series Sedan Owner's Manual (320i/325i/330i/xi), Part No. 01 41 0 156 168, (c) 09/01 BMW AG, p. 143 Capacities (archive.org)",
+          "quote": "Cooling system including heater circuit quarts (liters) approx. 8.9 (approx. 8.4) ... Engine oil and filter change quarts (liters) 320i, 325i, 330i: approx. 6.9 (approx. 6.5) 325xi, 330xi: approx. 7.9 (approx. 7.5)",
+          "location": "p. 143",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "One cooling figure for all sedan engines in that manual."
+    },
+    {
+      "id": "cap-s54b32",
+      "engine": "S54B32 (E46 M3)",
+      "coolant_L": "approx. 6.7 (US 2001 owner's manual) vs 10.7 (BMW GB technical specification, 2001)",
+      "oil_L": "approx. 5.5 oil and filter change (US owner's manual) vs 'Engine oil ltr 7' (BMW GB, probably total fill)",
+      "confidence": "single-source (two BMW documents that disagree on coolant)",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719, (c) 12/00 BMW AG, p. 181 Capacities (archive.org)",
+          "quote": "Cooling system including heater circuit quarts (liters) approx. 7.1 (approx. 6.7) ... Engine oil and filter change quarts (liters) approx. 5.8 (approx. 5.5)",
+          "location": "p. 181",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+          "accessed": "2026-09-30",
+          "title": "BMW (GB) press kit 'The new BMW M3: An icon returns' (6 Apr 2001), attachment 'Technical Specifications' (RTF)",
+          "quote": "Cooling system incl. heating | ltr | 10.7 | Engine oil | ltr | 7",
+          "location": "Body section of the table",
+          "howRead": "RTF converted to text"
+        }
+      ],
+      "note": "Conflict not resolved: 6.7 L looks small next to the M54 sedan's 8.4 L; 10.7 L may count a different circuit or market spec. A third source is needed before relying on either."
+    }
+  ],
+  "limits": [
+    {
+      "id": "lim-thermostat-sr20det",
+      "item": "SR20DET thermostat",
+      "value": "opens 76.5 °C; valve lift more than 10 mm at 90 °C",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (English, 1994), SR20DET, hosted by sr20tuning.net, LC section",
+          "quote": "Check valve opening temperature and maximum valve lift. Valve opening temperature °C (°F) 76.5 (170) Maximum valve lift mm/°C (in/°F) More than 10/90 (0.39/194)",
+          "location": "LC 'Thermostat - Inspection' and LC-20 SDS",
+          "howRead": "OCR text layer"
+        },
+        {
+          "url": "https://nismodirect.com/nismo-low-temp-thermostat-sr20det-s15-nissan-silvia-21200-rs520/",
+          "accessed": "2026-09-30",
+          "title": "NISMO Direct (retailer) product page: 'Nismo Low-Temp Thermostat - SR20DET - S15 Nissan Silvia - 21200-RS520'",
+          "quote": "The Nismo Low Temp Thermostat's radiator valve opens at a lower temperature of 62°C as opposed to the standard 76.5°C.",
+          "location": "product description",
+          "howRead": "HTML text"
+        }
+      ],
+      "note": "The S15 listing quotes the same 76.5 °C standard, so the S14 figure is taken to hold for the S15."
+    },
+    {
+      "id": "lim-thermostat-vq35de",
+      "item": "VQ35DE thermostat",
+      "value": "opens 76-79 °C (SDS) / 76.5 °C standard (EC); maximum lift 8.6 mm at 90 °C; closes 71 °C",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org item '350z 2004.5 Full Shop Manual' (full-text derivative)",
+          "quote": "Thermostat | Standard | Valve opening temperature | 76 - 79°C (169 - 174°F) | Maximum valve lift | 8.6 mm / 90°C (0.339 in / 194°F) | Valve closing temperature | 71°C (160°F) ... Valve opening temperature: | 76.5°C (170°F) [standard] | Valve lift: | More than 8.6 mm/90°C",
+          "location": "CO section (thermostat inspection and SDS) and EC-449",
+          "howRead": "archive.org OCR text"
+        }
+      ]
+    },
+    {
+      "id": "lim-thermostat-13b",
+      "item": "13B-REW thermostat",
+      "value": "opens 80.5-83.5 °C; fully open 95 °C; lift 8-10 mm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System (scan hosted by foxed.ca)",
+          "quote": "Thermostat | Type | Wax, bottom-bypass | Opening temperature °C {°F} | 80.5–83.5 {177–182} | Full-open temperature °C {°F} | 95 {203} | Full-open lift mm {in} | 8–10 {0.31–0.39}",
+          "location": "E-3 (PDF page 4)",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Thermostat | Type | Wax, bottom bypass | Opening temperature | 80.5–83.5 {177–182} | Full-open temperature | 95 {203} | Full-open lift min. | 8–10 {0.31–0.39}",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ]
+    },
+    {
+      "id": "lim-thermostat-s54",
+      "item": "S54B32 thermostat and system pressure",
+      "value": "80 °C thermostat; '2 bar system' reservoir",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/2%20M3%20DriveLine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST041, module 'M Engines - S54B32' (file '2 M3 DriveLine')",
+          "quote": "1. Coolant Reservoir (2 bar system) 2. Thermostat Housing (80º C thermostat)",
+          "location": "p. 13 Coolant Circuit Flow",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "Whether '2 bar' is the cap's gauge opening pressure is not stated; boiling points below assume gauge."
+    },
+    {
+      "id": "lim-thermostat-m54",
+      "item": "M54B30 map-controlled (electrically heated) thermostat",
+      "value": "set points not found; behaviour: high coolant temperature at low load, lowered at full load / high rpm",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST045%20Z4%20Complete%20Vehicle/03%20E85%20M54%20Engine.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST045 (Z4), module 'E85 M54 Engine', p. 7",
+          "quote": "The effect of the MTK cooling concept is additionally supported in the M54 by control of the coolant temperature using the map thermostat. With low load, the map thermostat sets a high coolant temperature that has a favorable effect on fuel consumption. At full load and/or high engine speed, the coolant temperature is lowered to protect the components.",
+          "location": "p. 7 Map-controlled Thermostat",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST034%20E46%20Complete%20Vehicle/9%20Engines.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST034 (E46), module '9 Engines', p. 17",
+          "quote": "The heated thermostat allows the engine to be operated at higher controlled temperatures during low and part throttle conditions which reduces the fuel consumption of the engine. The thermostat heating which opens or closed the thermostat to control the engine temperature is controlled by the DME.",
+          "location": "p. 17 Map Cooling Thermostat (M52TU, carried to M54)",
+          "howRead": "PDF text layer"
+        }
+      ]
+    },
+    {
+      "id": "lim-cap-sr20det",
+      "item": "SR20DET radiator cap",
+      "value": "78-98 kPa (0.8-1.0 kg/cm²) relief; leakage test 157 kPa",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://sr20tuning.net/wp-content/uploads/2016/08/s14_zenki_sr20det_english_text.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan Service Manual, Model S14 Series (English, 1994), SR20DET, hosted by sr20tuning.net, LC section",
+          "quote": "Radiator cap relief pressure: 78- 98 kPa (0.78- 0.98 bar, 0.8- 1.0 kg/cm 2 , 11 - 14 psi) ... Cooling system leakage test Testing pressure ... 157 (1.57, 1.6, 23)",
+          "location": "LC 'Radiator cap' and LC-20 SDS",
+          "howRead": "OCR text layer"
+        },
+        {
+          "url": "https://nismodirect.com/nismo-racing-radiator-cap-sr20det-s15-nissan-silvia-21430-rs012/",
+          "accessed": "2026-09-30",
+          "title": "NISMO Direct (retailer) product page: 'Nismo Racing Radiator Cap - SR20DET - S15 Nissan Silvia - 21430-RS012'",
+          "quote": "This prevents the coolant from easily boiling and vaporizing, and raises the boiling point to approximately 6? higher than the standard radiator cap's 0.9kg/cm2 threshold, and improves cooling efficiency.",
+          "location": "product description ('?' is a lost character, probably ℃, as printed)",
+          "howRead": "HTML text"
+        }
+      ]
+    },
+    {
+      "id": "lim-cap-vq35de",
+      "item": "VQ35DE radiator cap",
+      "value": "78-98 kPa standard, 59 kPa limit (EC section prints 59-98 kPa); leakage test 157 kPa",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org item '350z 2004.5 Full Shop Manual' (full-text derivative)",
+          "quote": "Cap relief pressure | Standard | 78 - 98 (0.8 - 1.0, 11 - 14) | Limit | 59 (0.6, 9) | Leakage test pressure | 157 (1.6, 23) ... Radiator cap relief pressure: | 59 - 98 kPa (0.6 - 1.0 kg/cm2 , 9 - 14 psi)",
+          "location": "CO SDS and EC-448",
+          "howRead": "archive.org OCR text"
+        }
+      ]
+    },
+    {
+      "id": "lim-cap-13b",
+      "item": "13B-REW (FD3S) coolant cap",
+      "value": "1.15-1.45 kgf/cm²; printed as 113-142 kPa (E-3) and 115-145 kPa (TD-4)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(E)cooling_system.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section E Cooling System (scan hosted by foxed.ca)",
+          "quote": "Cap valve opening pressure kPa {kgf/cm², psi} | 113–142 {1.15–1.45, 16.4–20.6}",
+          "location": "E-3 (PDF page 4)",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Coolant filler cap | Relief pressure kPa {kgf/cm², psi} | 115–145 {1.15–1.45, 16.4–20.6}",
+          "location": "TD-4 (PDF page 4)",
+          "howRead": "page image"
+        }
+      ],
+      "note": "1.15-1.45 kgf/cm² = 112.8-142.2 kPa, so E-3's kPa is the correct conversion; the repo's part3a notes carry TD-4's 115-145."
+    },
+    {
+      "id": "lim-boiling-50-50",
+      "item": "Boiling point of 50 wt% ethylene glycol and of water at each roster cap pressure (sea-level ambient)",
+      "value": {
+        "atmospheric": {
+          "EG50": 107.1,
+          "water": 100.0
+        },
+        "59kPa_NissanLimit": {
+          "EG50": 121.0,
+          "water": 113.4
+        },
+        "78kPa": {
+          "EG50": 124.6,
+          "water": 116.8
+        },
+        "88kPa_0.9kgcm2": {
+          "EG50": 126.4,
+          "water": 118.5
+        },
+        "98kPa": {
+          "EG50": 128.0,
+          "water": 120.1
+        },
+        "113kPa_Mazda": {
+          "EG50": 130.4,
+          "water": 122.4
+        },
+        "142kPa_Mazda": {
+          "EG50": 134.7,
+          "water": 126.5
+        },
+        "200kPa_BMW2bar": {
+          "EG50": 142.2,
+          "water": 133.7
+        }
+      },
+      "unit": "°C, computed by me from MEGlobal's Antoine constants with P_abs = 101.325 kPa + cap gauge pressure",
+      "confidence": "estimated",
+      "method": "log10(P mmHg) = A - B/(T + C); 50 wt% EG: A 7.901886, B 1691.452, C 229.778; water (0 wt%): A 7.966820, B 1668.210, C 228.000 (MEGlobal Fig. 6). Check: at 1520 mmHg (1 atm gauge) the constants give 128.6 °C and MEGlobal's Fig. 3 curve reads about 128 °C at 50 wt%; at 1 atm 107.1 °C vs Engineering ToolBox 107.2 °C for 50 % by volume.",
+      "sources": [
+        {
+          "url": "https://www.meglobal.biz/wp-content/uploads/2024/03/MEG_Guide_Rev_2024_W2.pdf",
+          "accessed": "2026-09-30",
+          "title": "MEGlobal: 'Ethylene Glycol Product Guide' (rev. 3/10/2024), Figure 6 'Vapor Pressures of Aqueous Ethylene Glycol Solutions at Various Temperatures'",
+          "quote": "Ethylene Glycol Antoine Constants for Calculating Vapor Pressure 3-Constant Equation Log 10 (P) = A – B/(T + C) P = mm Hg T = °C EG, Wt% A B C 0 7.966820 1668.210 228.000 50 7.901886 1691.452 229.778",
+          "location": "p. 17 (PDF page 18)",
+          "howRead": "PDF text layer (printed with stray spaces, e.g. '7.9 01886')"
+        },
+        {
+          "url": "https://www.meglobal.biz/wp-content/uploads/2024/03/MEG_Guide_Rev_2024_W2.pdf",
+          "accessed": "2026-09-30",
+          "title": "MEGlobal: 'Ethylene Glycol Product Guide' (rev. 3/10/2024), Figure 3 'Boiling Points vs. Composition of Aqueous Ethylene Glycol Solutions at Various Pressures'",
+          "quote": "[curves for 200 mm Hg, 760 mm Hg and 1520 mm Hg*; x-axis Ethylene Glycol, % by Weight in Water] * 2 atmospheres absolute; 1 atmosphere gauge",
+          "location": "p. 14 (PDF page 15)",
+          "howRead": "chart read on page image: about 108 °C (760 mmHg) and about 128 °C (1520 mmHg) at 50 wt%"
+        },
+        {
+          "url": "https://www.engineeringtoolbox.com/ethylene-glycol-d_146.html",
+          "accessed": "2026-09-30",
+          "title": "Engineering ToolBox: 'Ethylene Glycol Heat-Transfer Fluid Properties'",
+          "quote": "Ethylene Glycol Solution (% by volume) 0 10 20 30 40 50 ... Boiling Point (oC) 100 101.1 102.2 104.4 104.4 107.2",
+          "location": "boiling point table",
+          "howRead": "HTML table"
+        }
+      ],
+      "note": "At altitude the ambient pressure is lower and every value drops; Riyadh's elevation and pressure were not researched here. Formula DRIFT requires water-only coolant (see driftSessions), so its cars boil about 8 °C lower than glycol at the same cap."
+    },
+    {
+      "id": "lim-coolant-gauges",
+      "item": "What makers call overheating (coolant)",
+      "value": "no numeric warning-lamp temperatures found; BMW: red-zone lamp = overheated, needle may reach the edge of red in normal hot use; Nissan: beyond normal range = stop; Nissan VQ35DE P1217 has no printed temperature threshold",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719, (c) 12/00 BMW AG (archive.org)",
+          "quote": "If the lamp comes on while operating the vehicle: the engine is overheated. Stop and switch the engine off immediately and allow it to cool down. ... Between the blue and red zones Normal operating range. It is not unusual for the needle to rise as far as the edge of the red zone in response to high outside temperatures or severe operating conditions.",
+          "location": "p. 74 Coolant temperature gauge",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://archive.org/download/manualzilla-id-7304367/7304367.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW 3 Series Sedan Owner's Manual (320i/325i/330i/xi), Part No. 01 41 0 156 168, (c) 09/01 BMW AG (archive.org)",
+          "quote": "If the lamp comes on during normal vehicle operation: the engine has overheated. Shut off the engine immediately and allow it to cool down. ... Between the blue and red zones Normal operating range. The needle may rise as far as the edge of the red sector in normal operation.",
+          "location": "p. 67 Temperature gauge",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://owners.nissanusa.com/content/techpub/ManualsAndGuides/ZCoupe/2008/2008-ZCoupe-owner-manual.pdf",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2008 350Z Owner's Manual (US), p. 2-5 Engine coolant temperature gauge",
+          "quote": "If the gauge is over the normal range, stop the vehicle as soon as safely possible. If the engine is overheated, continued operation of the vehicle may seriously damage the engine.",
+          "location": "p. 2-5 (PDF p. 69)",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://archive.org/download/350z-2004.5-full-shop-manual/350z%202004.5%20Full%20Shop%20Manual_djvu.txt",
+          "accessed": "2026-09-30",
+          "title": "Nissan 2004 350Z Service Manual (VQ35DE), archive.org item '350z 2004.5 Full Shop Manual' (full-text derivative)",
+          "quote": "P1217 | 1217 | Engine over temperature (Overheat) | G Cooling fan does not operate properly (Overheat). | G Cooling fan system does not operate properly (Overheat). | G Engine coolant was not added to the system using the proper filling method. | G Engine coolant is not within the specified range. ... When the engine coolant temperature reaches an abnormally high temperature condition, a malfunction is indicated.",
+          "location": "EC-442",
+          "howRead": "archive.org OCR text"
+        }
+      ],
+      "note": "Usable proxies: the VQ35DE fan goes to high speed at 100 °C (fa-vq35de-logic); boiling at the cap (lim-boiling-50-50) is the hard ceiling."
+    },
+    {
+      "id": "lim-oil-s54",
+      "item": "BMW S54 engine oil temperature: normal band and maximum for performance driving",
+      "value": "normal 80-120 °C; do not exceed 150 °C during performance-oriented driving",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://archive.org/download/manualzilla-id-7337212/7337212.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW M3 2001 Owner's Manual (US), Part No. 01 41 0 155 719, (c) 12/00 BMW AG (archive.org)",
+          "quote": "Engine oil temperature | The general operating temperature is between 175 °F (80 °C) and 250 °F (120 °C). During performance-oriented driving, do not exceed the maximum temperature of 300 °F (150 °C).",
+          "location": "p. 73",
+          "howRead": "page image (the text layer renders °F/°C as '7'/'6')"
+        },
+        {
+          "url": "https://archive.org/download/BMWTechnicalTrainingDocuments/ST041%20M3%20Complete%20Vehicle/1%20M3%20Complete%20Vehicle.pdf",
+          "accessed": "2026-09-30",
+          "title": "BMW of North America Technical Training ST041, module 'Complete Vehicle', p. 21 Instrument Cluster",
+          "quote": "Additional to the E46 M3 Cluster is the use of an engine oil temperature gauge which replaces the fuel economy gauge below the tachometer. The tachometer incorporates the cold engine warning LEDs ... Starting at 4000 RPM, orange LEDs are illuminated with a cold engine start up. The LEDs will go out, in 500 RPM increments, as the engine warms up. The MS S54 engine control system monitors the engine oil temperature",
+          "location": "p. 21",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "The only engine-maker oil limit found. The M3's oil cooler thermostat is 95 °C (oc-roster-oil-cooler-types)."
+    },
+    {
+      "id": "lim-oil-other",
+      "item": "Other oil-temperature statements",
+      "value": {
+        "rotarySumpAtFullPower": "about 150 °C (Ford patent)",
+        "aviationRotary": "oil-company survey: sump peaks of 300 °F (149 °C) permissible; design maximum oil-in 260/265 °F (127/129 °C) and coolant-out 250 °F (121 °C)",
+        "oilLifeRule": "'every 20 degrees in excess heat will half the life of the oil' (Setrab USA, unit not stated)",
+        "fdOilCoolerBypass": "13B-REW cooler bypass relief temperature 60-65 °C or below"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "Based on analytic studies of structural, combustion, and durability factors, it has been projected that engine operation with a maximum coolant out temperature of 250°F and a maximum oil in temperature of 260/265°F will prove feasible. ... Surveys of major oil companies indicated that sump temperature peaks of 300°F would be permissible.",
+          "location": "PDF page 18 (report p. 15), Engine Cooling",
+          "howRead": "OCR text layer"
+        },
+        {
+          "url": "https://nasaspeed.news/tech/engine/understanding-oil-coolers/",
+          "accessed": "2026-09-30",
+          "title": "NASA Speed News (National Auto Sport Association): 'Understanding Oil Coolers', Brett Becker, 3 Mar 2020",
+          "quote": "A rule of thumb is that every 20 degrees in excess heat will half the life of the oil.",
+          "location": "quote attributed to Zac Beals, Setrab USA",
+          "howRead": "WebFetch summary quoting the page"
+        },
+        {
+          "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/3974309",
+          "accessed": "2026-09-30",
+          "title": "US Patent 3,974,309 'Method of coating a rotary internal combustion engine', James C. Uy, assignee Ford Motor Company, filed 16 Dec 1974, granted 10 Aug 1976 (USPTO scan)",
+          "quote": "At full power, the oil in the sump can easily reach temperatures of about 150°C., not withstanding external ventilation.",
+          "location": "column 1",
+          "howRead": "page image"
+        },
+        {
+          "url": "https://www.foxed.ca/rx7manual/manuals/1993FSM/(TD)technical_data.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mazda 1993 RX-7 Workshop Manual (US), section TD Technical Data (scan hosted by foxed.ca)",
+          "quote": "Oil cooler | Relief temperature °C {°F} | 60–65 {140–149} or below",
+          "location": "TD-3",
+          "howRead": "page image"
+        }
+      ],
+      "note": "No statement from an oil maker's own site (Mobil, Castrol, Motul) was obtained; see notFound."
+    }
+  ],
+  "driftSessions": [
+    {
+      "id": "ds-fd-format",
+      "item": "Formula DRIFT competition format",
+      "value": "qualifying: two non-consecutive judged solo runs; tandem battle: two runs, each driver leads once",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Formula_D",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia: 'Formula D'",
+          "quote": "Formula DRIFT competitors are allowed two non-consecutive judged solo runs to post their highest possible score in order to compete. ... The highest qualifying driver leads on the first run, then on the second run the lower qualifying driver leads. ... huge power outputs commonly in excess of 850+ whp.",
+          "location": "article text",
+          "howRead": "WebFetch summary quoting the page"
+        }
+      ]
+    },
+    {
+      "id": "ds-fd-session-limits",
+      "item": "Formula DRIFT PRO practice/warm-up limits and timeouts",
+      "value": "practice max 12 laps per driver before qualifying; warm-up between Top 32 and Top 16 max 4 laps; one Competition Timeout ('5-minute rule'); up to 5 or 10 minutes repair allowance after contact",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.formulad.com/rulebook/2026%20Formula%20Drift%20Sporting%20Regulations%20V1.2.pdf",
+          "accessed": "2026-09-30",
+          "title": "Formula DRIFT: 2026 Sporting Regulations V1.2",
+          "quote": "PRO practice will be limited to a maximum of 12 laps per driver prior to the start of Qualifying or \"Seeding Bracket\". ... If scheduled, the warm up session between Top 32 and Top 16 for PRO/PROSPEC will be limited to a maximum of 4 laps per driver. ... initiating the Competition Timeout \"5-minute rule\"",
+          "location": "sections 2.5 and 4.9",
+          "howRead": "PDF text layer"
+        },
+        {
+          "url": "https://www.formulad.com/rulebook/2026%20Formula%20Drift%20Judging%20Regulations%20V1.3.pdf",
+          "accessed": "2026-09-30",
+          "title": "Formula DRIFT: 2026 Judging Regulations V1.3",
+          "quote": "Both drivers may request up to 5 minutes to repair their vehicle without using their designated Competition Timeout. ... Only the vehicle not at fault may request up to 10 minutes to repair their vehicle without using their designated Competition Timeout.",
+          "location": "tandem contact rules",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "A competition run is one pass of the course (start line to finish line); the rules give no run duration in seconds."
+    },
+    {
+      "id": "ds-fd-cooling-rules",
+      "item": "Formula DRIFT PRO cooling rules",
+      "value": "cooling modifications free; automatic water sprayers allowed; radiators may sit in the cabin/boot area ducted through at most two 10-inch floor holes; coolant must be water only (additives such as Water Wetter allowed)",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.formulad.com/rulebook/2026%20Formula%20Drift%20PRO%20Technical%20Regulations%20V1.1.pdf",
+          "accessed": "2026-09-30",
+          "title": "Formula DRIFT: 2026 PRO Technical Regulations V1.1, 4.3 Cooling System",
+          "quote": "Cooling system modifications are free but must be fully closed and free of leaks. Automatic water sprayers will be allowed during competition, but must not be leaking on the track, starting line, or grid area. ... Radiators located inside the driver's compartment must be separated from the driver and may be ducted through a maximum of two 10 inch round holes in the chassis floor. ... Cooling systems shall be filled with water only. Coolant Additives such as NEO \"Keep Cool\" and Redline \"Water Wetter\" are allowed.",
+          "location": "section 4.3",
+          "howRead": "PDF text layer"
+        }
+      ],
+      "note": "The rules permit water sprayers and cabin/boot radiators but do not say why; poor frontal airflow while sliding is a plausible reason (my inference, not sourced)."
+    },
+    {
+      "id": "ds-d1gp-format",
+      "item": "D1 Grand Prix format",
+      "value": "three solo (tanso) qualifying runs, best counts; tsuiso twin-run battles",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/D1_Grand_Prix",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia: 'D1 Grand Prix'",
+          "quote": "Each car gets an allocation of three individual tansou (solo run) qualifying runs: only the best one counts. ... the series introduced the one-to-one round battle called the tsuiso (twin run) round",
+          "location": "article text",
+          "howRead": "WebFetch summary quoting the page"
+        }
+      ]
+    },
+    {
+      "id": "ds-analog-high-load-low-airspeed",
+      "item": "Engineering analog: the worst cooling case is near-full fuel flow at low airspeed on a hot day",
+      "value": "qualitative",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19830009274/downloads/19830009274.pdf",
+          "accessed": "2026-09-30",
+          "title": "NASA CR-165399 'Study of Advanced Rotary Combustion Engines for Commuter Aircraft', M. Berkowitz, C. Jones, D. Myers, Curtiss-Wright Corporation, February 1983 (NASA NTRS)",
+          "quote": "During the take-off and climb phase of flight, the ability of the cooling system to reject heat and properly cool the engine is most critical. The engine is rejecting heat at close to its maximum rate (near full fuel flow) while the aircraft is at a relatively low air speed. Maximum coolant and oil temperatures will occur during this flight phase. ... Limiting oil and coolant temperatures will occur during hot day operation. The coolers will be sized to meet the hot day requirements.",
+          "location": "PDF page 18 (report p. 15)",
+          "howRead": "OCR text layer"
+        }
+      ],
+      "note": "Supports the shape of the 3-minute test (high load, low airspeed, hot ambient); the 3-minute length and 70-90 % load remain the build prompt's design choice, not sourced facts."
+    }
+  ],
+  "gates": [
+    {
+      "site": "DieselNet 'Piston Cooling' (dieselnet.com/tech/combustion_piston-cool.php)",
+      "gate": "subscription/login wall after the public preview",
+      "action": "stopped at the preview; no login"
+    },
+    {
+      "site": "SAE Mobilus (full papers 2000-01-0579, 2000-01-0351, 1999-01-0237)",
+      "gate": "purchase/subscription",
+      "action": "read public abstract pages only"
+    },
+    {
+      "site": "patents.justia.com",
+      "gate": "Cloudflare 'Just a moment...' bot challenge (HTTP 403)",
+      "action": "not worked around; used the USPTO PDF instead"
+    },
+    {
+      "site": "patents.google.com",
+      "gate": "HTTP 503 / 'Sorry...' block page",
+      "action": "not worked around; used the USPTO PDF instead"
+    },
+    {
+      "site": "allisport.com (alloy radiators page)",
+      "gate": "HTTP 202 empty challenge page",
+      "action": "not worked around; its '45 kW at 165 L/min, 70 mph' claim is known only from a search snippet and is not used"
+    },
+    {
+      "site": "preprints.org (rotary efficiency preprint)",
+      "gate": "HTTP 403",
+      "action": "not opened"
+    },
+    {
+      "site": "prestone.com FAQ",
+      "gate": "HTTP 403",
+      "action": "not opened; boiling points taken from MEGlobal instead"
+    },
+    {
+      "site": "spalusa.com",
+      "gate": "expired TLS certificate",
+      "action": "not opened (TLS verification kept on); SPAL ratings taken from Setrab's chart"
+    },
+    {
+      "site": "mkiv.supras.org.nz (HTTPS)",
+      "gate": "self-signed TLS certificate",
+      "action": "did not bypass; the same page was fetched over the site's plain-HTTP URL"
+    },
+    {
+      "site": "web.archive.org",
+      "gate": "connection reset from this environment",
+      "action": "not used"
+    },
+    {
+      "site": "freepatentsonline.com",
+      "gate": "TLS connect failure",
+      "action": "not used"
+    },
+    {
+      "site": "sr20tuning.net S14 manual (22.9 MB)",
+      "gate": "none (size rule of the brief, ~20 MB)",
+      "action": "downloaded only the first 12 MB with an HTTP range request and read the OCR text layer; page images were not viewed"
+    },
+    {
+      "site": "WebSearch",
+      "gate": "session web-search budget (200 calls, shared across the session) ran out part-way",
+      "action": "remaining work used known URLs, links on sites already found and archive.org's own catalogue search"
+    }
+  ],
+  "notFound": [
+    "Radiator specific dissipation in kW/K vs air face velocity with a stated ITD for a passenger-car radiator: the SCIRP table gives kW without the ITD, Toyota's JZA80 figures give kW without conditions. kW/K for the model must be estimated.",
+    "Intercooler effectiveness vs cooling-air velocity (any measured curve), and intercooler heat-soak data at low vehicle speed (only a chassis-dyno repeated-pull power loss).",
+    "Numeric split of turbo bearing-housing heat into coolant and oil; a measured turbo-vs-NA heat-rejection comparison (only Heywood's BMEP^-0.2 scaling).",
+    "A heat balance for the 13B-REW itself (1990s turbo): only Mazda's 1971 data for early rotaries and the Ford/Curtiss-Wright figures.",
+    "2JZ-GTE thermostat opening temperature and radiator cap pressure (no Toyota repair manual reached).",
+    "M54B30 map-thermostat set points; M54 and VQ35HR cap pressures; VQ35HR thermostat.",
+    "S15-specific SR20DET coolant capacity (the S15 manual was not found; S14 figures used).",
+    "Numeric coolant temperature at which BMW, Nissan, Toyota or Mazda warning lamps light.",
+    "An oil maker's own statement on sustained oil temperature limits (Mobil, Castrol, Motul, etc.).",
+    "Competition drift run duration in seconds, engine rpm/load distribution while drifting, radiator airspeed while sliding, and any sourced report (with numbers) of drift cars overheating at hot-climate events (Saudi Arabia, UAE, Australia).",
+    "Radiator performance at drift yaw angles (30-60 degrees); only 'small' cross-wind yaw effects, plus an unverified snippet (13 % loss at 20 degrees yaw, 14 m/s).",
+    "Fan airflow through an installed passenger-car radiator at standstill for any roster car (only fan power, size and switching logic); passenger-car standstill air speed.",
+    "Block and head masses other than the S54 block (48 kg)."
+  ]
+}

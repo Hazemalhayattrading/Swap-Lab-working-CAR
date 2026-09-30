@@ -1,0 +1,2918 @@
+{
+  "car": "mazda-rx-7-fd3s",
+  "researchedOn": "2026-09-30",
+  "readingGuide": [
+    "Order: usable builds first (factory twins, then single turbos on stock ports, then E85/ported), then rejected ones.",
+    "Banzai Racing (Pierceton, Indiana) posts the largest public set of FD sheets; all of its sheets are Mustang loaded chassis dynos (four different Mustangs: Banzai's own, Wait4Me Performance, Exotic Performance Plus, Greer Performance). Mustang PowerDyne labels: 'Eng Power T WC' = total power (static + dyno inertia) with Mustang's weather correction factor; the same label without 'WC' is uncorrected. Evidence on one car: Paul K's 14.5 psi run reads 306.532 hp on the uncorrected 'Eng Power T' channel and 309.7 hp 'with WCF' on the same run. Mustang's current manual says 'Engine' channels can include a drivetrain-efficiency and flywheel-inertia setting from the vehicle record; Banzai calls every figure RWHP, and two sheets (Paul K, Ryan L) also print a separate 'EST CRANK HP' channel 33-37 % higher, so these figures are treated as wheel power. That is an inference, not printed. Mustang loaded dynos usually read below Dynojet inertia dynos on the same car; no conversion has been applied anywhere in this file.",
+    "Boost on Banzai sheets: min/max/avg of the logged channel are printed; the headline boost in Banzai's text is its own figure and sometimes differs from the logged max.",
+    "Dyno Dynamics 'Standard ShootOut' (CF:SHOOT_*) is Dyno Dynamics' fixed shoot-out mode as printed; 'DynoJet Figures' on one sheet is the vendor's claim.",
+    "Gear inference: repo data gives the US R15M-D 5MT 4th = 1.000 and final drive 4.100 on 225/50R16, about 55.4 engine rpm per mph in 4th; used only where the sheet prints rpm and mph.",
+    "US 'octane' = AKI (R+M)/2: 91 AKI is about 95-96 RON, 93 AKI about 97-98 RON (rule of thumb, not from a source here).",
+    "Personal data: owners are named only as first name plus initial; the VIN printed on one sheet is not copied."
+  ],
+  "builds": [
+    {
+      "id": "fd3s-banzai-paulk-1995-twins-pfc-12p5psi-2013",
+      "summary": "1995 US FD on the factory twins with Power FC, 1300 cc secondaries, upgraded SMIC and A'PEXi exhaust: 290.7 hp (WCF) at 7,142 rpm at 12.5 psi, Mustang dyno, Greer Performance (Fort Wayne IN), 2013-09-27. Low-boost half of a same-day pair.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred: 1995 model year car at a US shop; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (clutch kit listed)",
+        "year": "1995"
+      },
+      "engine": "13B-REW on the factory sequential twins; porting not mentioned (treated as stock port, not confirmed)",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded Mustang dyno with a PAU load cell; model not printed)",
+        "mode": "PowerDyne 'HorsePower Curve Test Results'; vehicle weight 3000, HP at 50 MPH 9.90",
+        "where": "Greer Performance, 1820 South Harrison St., Fort Wayne, IN 46802 (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WCF (Mustang weather correction factor; standard not printed; Mustang's manual describes SAE J1349 Jun90 or a custom standard)",
+        "howKnown": "Printout says 'Maximum Power 290.7 ... with WCF 290.7'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the printout"
+      },
+      "gear": "not printed; 4th inferred (7,142 rpm at 121.8 mph = 58.6 rpm/mph; US 5MT 4th 1.000 x 4.100 final on 225/50R16 gives about 55.4)",
+      "result": {
+        "peakWheelPower": "290.7 hp at 7,142 rpm (with WCF)",
+        "peakWheelTorque": "240.9 lb-ft at 5,352 rpm (with WCF)",
+        "howRead": "text printed on the Mustang printout (image)"
+      },
+      "boost": {
+        "peak": "12.5 psi (Banzai's page: '290 RWHP @ 12.5')",
+        "atPeakPower": "not printed for this run",
+        "fullBoostRpm": "not printed",
+        "howKnown": "Banzai customer page text; no boost trace published for the low-boost run"
+      },
+      "fuel": "not stated (US pump fuel likely, grade unknown)",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12), wastegate ported by Banzai",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "'Upgraded SMIC' (stock-position intercooler; make not stated)",
+        "exhaust": "A'PEXi exhaust (model not stated); downpipe/midpipe not stated",
+        "intake": "not stated",
+        "injectors": "550 cc primary / 1300 cc secondary ('1300cc Secondary Injector Modification')",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC (dyno-tuned by Banzai); HKS Twin Power ignition amplifier",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated; no rebuild or porting mentioned (odometer 100,150 mi at the visit, 106,000 on the sheet)",
+        "gearbox": "5-speed manual (Exedy Stage 2 clutch kit listed)",
+        "other": "PR idler pulley kit, Magnecor 10 mm leads, vacuum line replacement"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Kenyon RX-7 customer page",
+          "kind": "shop page",
+          "quote": "Paul's '95 Mazda RX-7 ... Stage 1 (OD: 100,150): Paul brought his car to us for some re-work and the following modifications | Vacuum Line Replacement | Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Paul K's MB '95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, low boost run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer HorsePower Curve Test Results Date/Time Printed: 09/27/2013 10:56:32 AM'; 'Tested By Greer Performance 1820 South Harrison St. Ft.wayne IN 46802'; '1995 mazda rx7'; 'Miles 106000.0 Weight 3000.00 HPAt50MPH 9.90 Cycles 4 RPM Pickup 2 Cylinders/Displacement 2 / 1.3 t'; 'Time Tested 9/27/2013 10:54:58 AM'; 'Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7'; 'Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9'"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, high boost run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date/Time Printed: 09/27/2013 11:04:20 AM'; 'Time Tested 9/27/2013 11:02:40 AM'; 'Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7'; 'Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2'"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/paulK_dyno_09-27-13.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer Test Report graph of the 11:02:40 run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date Printed 2013/11/11'; 'Owner kenyan, Acquired 09/27 11:02:40'; 'Filter Mode FIR Filter Value 50'; Max: 'Eng Torque T (Ft-Lbs) 261.244', 'Eng Power T (HP) 306.532', 'AFR (Ratio) 11.534', '-15 to 45 (PSI) 15.280', 'EST CRANK HP (HP) 407.687'; Min: 190.122 / 168.577 / 10.254 / 10.452 / 224.207; Avg: 234.417 / 265.390 / 11.154 / 14.228 / 352.969; x-axis 3914-8010 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno make, shop, date, power/torque and rpm (printed), boost level (shop text). Unsure: correction standard behind 'WCF', fuel grade, intake and downpipe (not listed), engine condition (106,000 mi, not stated as rebuilt).",
+      "notes": "Pair with the 14.5 psi run on the same car, same day, same dyno (next entry): +2 psi gave +19 hp. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-paulk-1995-twins-pfc-14p5psi-2013",
+      "summary": "Same 1995 FD, same day, more boost: 309.7 hp (WCF) at 7,239 rpm and 262.2 lb-ft at 5,236 rpm at 14.5 psi (logged 15.3 max, 14.2 average), Mustang dyno, Greer Performance, 2013-09-27.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (clutch kit listed)",
+        "year": "1995"
+      },
+      "engine": "13B-REW on the factory sequential twins; porting not mentioned (treated as stock port, not confirmed)",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "PowerDyne 'HorsePower Curve Test Results'; weight 3000, HP at 50 MPH 9.90; graph: Filter FIR 50",
+        "where": "Greer Performance, Fort Wayne, IN (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WCF 309.7 hp; same run uncorrected ('Eng Power T') 306.532 hp, so WCF was about 1.010",
+        "howKnown": "Printout 'with WCF 309.7' plus the graph of the same 11:02:40 run showing 'Eng Power T (HP) 306.532'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the printout"
+      },
+      "gear": "not printed; 4th inferred (7,239 rpm at 123.2 mph = 58.8 rpm/mph)",
+      "result": {
+        "peakWheelPower": "309.7 hp at 7,239 rpm (with WCF); 306.532 hp uncorrected on the graph",
+        "peakWheelTorque": "262.2 lb-ft at 5,236 rpm (with WCF); 261.244 lb-ft uncorrected",
+        "howRead": "text on the Mustang printout and the channel table on the graph (images)"
+      },
+      "boost": {
+        "peak": "15.280 psi logged (Banzai headline 14.5 psi)",
+        "atPeakPower": "about 14-15 psi (logged average 14.228 psi over the pull, minimum 10.452; exact value at 7,239 rpm not readable)",
+        "fullBoostRpm": "not readable (graph starts at 3,914 rpm; secondary-turbo transition dip near 4,300-4,700 rpm)",
+        "howKnown": "'-15 to 45 (PSI)' channel min/max/avg printed on the graph"
+      },
+      "fuel": "not stated (US pump fuel likely, grade unknown)",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12), wastegate ported by Banzai",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "'Upgraded SMIC' (stock-position intercooler; make not stated)",
+        "exhaust": "A'PEXi exhaust (model not stated); downpipe/midpipe not stated",
+        "intake": "not stated",
+        "injectors": "550 cc primary / 1300 cc secondary ('1300cc Secondary Injector Modification')",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC (dyno-tuned by Banzai); HKS Twin Power ignition amplifier",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated; no rebuild or porting mentioned (odometer 100,150 mi at the visit, 106,000 on the sheet)",
+        "gearbox": "5-speed manual (Exedy Stage 2 clutch kit listed)",
+        "other": "PR idler pulley kit, Magnecor 10 mm leads, vacuum line replacement"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Kenyon RX-7 customer page",
+          "kind": "shop page",
+          "quote": "Paul's '95 Mazda RX-7 ... Stage 1 (OD: 100,150): Paul brought his car to us for some re-work and the following modifications | Vacuum Line Replacement | Wastegate Porting | 1300cc Secondary Injector Modification | PR Idler Pulley Kit w/ 40.5\" Belt | HKS Twin Power & Harness | Magnecor 10mm Plug Wires | Dyno Tuned to 310 RWHP @ 14.5 psi ... Dyno Results Sheets for Low & High Boost | 290 RWHP @ 12.5 | 310 RWHP @ 14.5"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Paul K's MB '95 (OH) Twin Turbo 310 RWHP @ 14.5 psi 550 / 1300 cc Injectors Upgraded SMIC Koyo Radiator APEXi Power FC Exedy Stage 2 Clutch Kit HKS Twin Power APEXi Exhaust"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0001.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, low boost run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer HorsePower Curve Test Results Date/Time Printed: 09/27/2013 10:56:32 AM'; 'Tested By Greer Performance 1820 South Harrison St. Ft.wayne IN 46802'; '1995 mazda rx7'; 'Miles 106000.0 Weight 3000.00 HPAt50MPH 9.90 Cycles 4 RPM Pickup 2 Cylinders/Displacement 2 / 1.3 t'; 'Time Tested 9/27/2013 10:54:58 AM'; 'Maximum Power 290.7 @ 7142 RPM / 121.8MPH with WCF 290.7'; 'Maximum Torque 240.9 @ 5352 RPM / 90.9MPH with WCF 240.9'"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/kenyon/dyno_results0002.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout, high boost run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date/Time Printed: 09/27/2013 11:04:20 AM'; 'Time Tested 9/27/2013 11:02:40 AM'; 'Maximum Power 309.7 @ 7239 RPM / 123.2MPH with WCF 309.7'; 'Maximum Torque 262.2 @ 5236 RPM / 89.0MPH with WCF 262.2'"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/paulK_dyno_09-27-13.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer Test Report graph of the 11:02:40 run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date Printed 2013/11/11'; 'Owner kenyan, Acquired 09/27 11:02:40'; 'Filter Mode FIR Filter Value 50'; Max: 'Eng Torque T (Ft-Lbs) 261.244', 'Eng Power T (HP) 306.532', 'AFR (Ratio) 11.534', '-15 to 45 (PSI) 15.280', 'EST CRANK HP (HP) 407.687'; Min: 190.122 / 168.577 / 10.254 / 10.452 / 224.207; Avg: 234.417 / 265.390 / 11.154 / 14.228 / 352.969; x-axis 3914-8010 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno make, shop, date, power/torque/rpm, logged boost and AFR (printed). Unsure: which standard 'WCF' is, fuel grade, intake/downpipe.",
+      "notes": "Logged AFR 10.25-11.53 (average 11.15). The graph also prints 'EST CRANK HP' 407.687 (an estimate, not a measurement). Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-jayb-1993-twins-dp-mp-catback-intake-pfc-12psi-2010",
+      "summary": "1993 US FD, factory twins and factory intercooler, classic bolt-ons (HKS downpipe, Pettit resonated midpipe, HKS Hi Power cat-back, K&N intake) with Power FC: 310 hp / 266 lb-ft (weather corrected) at 12 psi, Mustang dyno, Wait4Me Performance (Warsaw IN), 2010-02-23.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (rebuilt transmission, ACT clutch)",
+        "year": "1993"
+      },
+      "engine": "13B-REW on the factory sequential twins; original engine as far as stated (97,408 mi, no rebuild or porting listed)",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Wait4Me Performance, 1100 west winona, Warsaw, IN 46582 (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "310 hp, peak plateau about 6,400-6,800 rpm (read off the curve)",
+        "peakWheelTorque": "266 lb-ft at about 5,500 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "12 psi (Banzai text)",
+        "atPeakPower": "not logged",
+        "fullBoostRpm": "not logged",
+        "howKnown": "Banzai page text only; no boost channel on the sheet"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "factory stock-mount intercooler (no intercooler upgrade listed)",
+        "exhaust": "HKS downpipe, Pettit Racing resonated midpipe (O2 bung), HKS Hi Power cat-back",
+        "intake": "custom intake with K&N filters",
+        "injectors": "factory (cleaned and balanced); 1300 cc secondaries came later in 2012, after this dyno",
+        "fuelPump": "Walbro 255",
+        "ecu": "A'PEXi Power FC, wideband-tuned by Banzai",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated (original engine as far as stated)",
+        "gearbox": "5-speed manual, rebuilt; ACT XTSS clutch, ACT Streetlite flywheel",
+        "other": "Koyo radiator, Pettit air separation tank, aluminium pulley kit, Banzai differential brace"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2010_customers/balandis_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Balandis RX-7 FD3s staged modification page",
+          "kind": "shop page",
+          "quote": "Stage 1 (OD: 97408): Jay brought his VR FD3S to us at the end of 2009 for some reliability modifications and upgrades. | Transmission Rebuild | ACT XTSS Clutch Kit | ACT Streetlight Flywheel and Counterweight | Koyo Radiator & OEM Hoses | HKS Hi Power Exhaust | Pettit Racing Resonated Midpipe w/ O2 Sensor Bung | HKS Downpipe | Banzai Racing Differential Brace Bushings | AL Pulley Kit | Custom Intake System w/ K&N Filters | Pettit Racing AST | Walbro 255 Fuel Pump | Injectors Cleaning & Balancing | APEXi Power FC & Commander | NGK Plug Wires & Spark Plugs | New Battery | Wideband PFC Dyno Tuned to 310 RWHP @ 12psi ... Dyno Tuned to 310 RWHP at 12 psi 02/23/10 ... Stage 3 (OD: 99456): ... 1300cc Secondary Injector Modification"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Jay's VR '93 (IL) Twin Turbo 310 RWHP @ 12 psi Koyo N-Flow Radiator APEXi Power FC ACT XTSS Clutch & Streetlite FW HKS Hi-Power Exhaust & DP Pettit Resonated MP"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/jay_b_02-23-10.jpg",
+          "accessed": "2026-09-30",
+          "title": "Wait4Me Performance Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer Test Report'; 'www.Wait4Meperformance.com 1100 west winona, warsaw, In 46582'; 'Date Printed 2010/02/23'; 'Filter Mode FIR Filter Value 50'; Max 'Eng Torque T WC (Ft-Lb) 266', 'Eng Power T WC (HP) 310'; Min 72 / 76; Avg 211 / 212; x-axis 3034-7235 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno make, shop, date, peak power/torque (printed), full parts list at the time (shop page). Unsure: boost at peak power (only the 12 psi headline), correction standard, fuel grade, exact peak rpm (read off a curve).",
+      "notes": "The cleanest 'bolt-ons on the factory twins' parts list found. Torque curve jumps sharply near 3,900 rpm (tune/turbo control), then the usual transition shape. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-bradya-1995-twins-dp-mp-intake-pfc-13psi-2017",
+      "summary": "1995 US FD, factory twins, Pettit downpipe + SS resonated midpipe + A'PEXi Power Intake + Walbro 255 + Power FC: 323 hp / 262 lb-ft (weather corrected), boost 13.1 psi max / 11.7 average, Mustang dyno at Banzai Racing (Pierceton IN), 2017-06-19.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (inferred: clutch kit fitted in 2019; not stated for 2017)",
+        "year": "1995"
+      },
+      "engine": "13B-REW on the factory sequential twins; original engine as far as stated (141,696 mi; no rebuild or porting listed)",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Banzai Racing, 110 E. Catholic St, Pierceton, IN 46562"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "323 hp at about 7,300 rpm (rpm read off the curve)",
+        "peakWheelTorque": "262 lb-ft at about 5,500 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "13.1 psi (logged max)",
+        "atPeakPower": "roughly 11-12 psi (logged average 11.7, minimum 10.6; not readable at a given rpm)",
+        "fullBoostRpm": "not readable (graph starts at 3,065 rpm)",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12) (BNR Stage 3 twins were fitted later, in 2019)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated (no intercooler upgrade listed in 2017; Pettit Cool Charge III came in 2019)",
+        "exhaust": "Pettit Racing downpipe, SS resonated midpipe; cat-back not stated",
+        "intake": "A'PEXi Power Intake kit",
+        "injectors": "not stated in 2017 (1300 cc modification came in 2019)",
+        "fuelPump": "Walbro 255",
+        "ecu": "A'PEXi Power FC & Commander (dyno-tuned by Banzai)",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated (original engine as far as stated)",
+        "gearbox": "5-speed manual (inferred)",
+        "other": "PR idler pulley kit, vacuum line simplification, Banzai block-off plate kit, NGK plugs & wires"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2017_customers/adams_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Adams RX-7 customer page",
+          "kind": "shop page",
+          "quote": "Spring 2017 (OD #141696) : Brady brought his car in for some reliability modifications and upgrades: | Pettit Racing Downpipe | SS Resonated MP | PR Idler Pulley Kit w/ Belt C | Walbro 255 Fuel Pump | Vacuum Line Simplification | Banzai Racing FD Block-Off Plate Kit | APEXi Power FC & Commander | Banzai Racing '94-'95 FD Commander Holder | APEXi Power Intake Kit | NGK Platinum Spark Plugs & Wires | Dyno Tuned to 323 RWHP @ 13.1 psi ... Spring 2019 (OD #145,448) : Brady brought his car back for some turbos, fuel and oil coolers upgrades: ... BNR Stage 3 Turbos Upgrade"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Brady's SSM '95 (MI) Twin Turbo 351 RWHP @ 13.4 psi BNR Stage 3 Turbos ... (the 2019 state; gives the model year)"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2017_customers/adams/bradyA_dyno_06-19-17.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer Test Report'; 'Banzai Racing 110 E. Catholic St, Pierceton, In 46562'; 'Date Printed 2017/06/19'; 'Filter Mode FIR Filter Value 50'; 'Owner Adams'; Max 'Eng Torque T WC (Ft-Lb) 262', 'Eng Power T WC (HP) 323', '-15 to +45 (PSI) 13.1'; Min 224 / 139 / 10.6; Avg 247 / 256 / 11.7; x-axis 3065-7600 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno make, shop, date, peak power/torque, logged boost (printed); 2017 parts list (shop page). Unsure: cat-back and intercooler state in 2017, correction standard, fuel grade.",
+      "notes": "Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-rickp-1995-13k-miles-twins-pfs-smic-pfc-12psi-93oct-2009",
+      "summary": "1995 US FD with only 13,036 miles (original engine), factory twins, Peter Farrell stock-mount intercooler, Racing Beat exhaust, Walbro 255, Power FC, 93 octane: 294 hp / 259 lb-ft (weather corrected), boost 12.5 max / 11.0 average, Mustang dyno, Exotic Performance Plus (Columbia City IN), 2009-05-18. The pull ends at 6,500 rpm.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (ACT HD clutch kit)",
+        "year": "1995"
+      },
+      "engine": "13B-REW on the factory sequential twins; original low-mileage engine (11,690 mi in May 2008, 13,036 mi in May 2009); porting not mentioned",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 15",
+        "where": "Exotic Performance Plus, 2080 E. Governors dr., Columbia City, IN 46725 (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "294 hp at 6,500 rpm, the last point of the pull (power still rising slightly)",
+        "peakWheelTorque": "259 lb-ft at about 4,650 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed); rpm from the curve and x-axis end (image)"
+      },
+      "boost": {
+        "peak": "12.5 psi (logged max; Banzai: 'Wideband Tuning to 12 psi')",
+        "atPeakPower": "about 10-11 psi at 6,500 rpm (read off the boost curve on the right axis; logged average 11.0, minimum 9.1)",
+        "fullBoostRpm": "about 11-12 psi from the 3,000 rpm start; transition dip to about 9 psi near 4,300 rpm; about 12 psi near 4,650 rpm; brief 12.5 psi spike near 5,950 rpm",
+        "howKnown": "boost channel printed with its own right-hand axis (0-50 psi scale)"
+      },
+      "fuel": "93 octane (US AKI), as stated by Banzai",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Peter Farrell (PFS) stock-mount intercooler",
+        "exhaust": "Racing Beat exhaust (gallery 'RB Exhaust'; model not stated); downpipe/midpipe not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "Walbro 255 lph",
+        "ecu": "A'PEXi Power FC, wideband-tuned by Banzai",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "original engine (low mileage); porting not mentioned",
+        "gearbox": "5-speed manual; ACT HD clutch, resurfaced flywheel",
+        "other": "Koyo radiator, Banzai differential brace"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2009_customers/patterson_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Patterson RX-7 FD3s staged modification page",
+          "kind": "shop page",
+          "quote": "1995 Mazda RX-7 FD3s ... Stage 1 (OD: 11690): We first saw Rick's VR FD3S in May 2008 for some reliability work. | Banzai Racing Differential Brace | PFC Tuning | Stage 2 (OD: 13036): In May 2009 we performed the following reliability modifications and upgrades; | ACT HD Clutch Kit & SS Line | Flywheel Resurfacing | KOYO Radiator | Peter Farrel Stock Mount Intercooler | Walbro 255 lph Fuel Pump | Fuel Filter Replaced | OEM Hoses Replaced | Custom PFC Commander Holder | Wideband Tuning to 12 psi ... Dyno Chart after Tuning 294 RWHP @ 12 psi on 93 octane | May 18th, 2009"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Rick's VR '95 (OH) Twin Turbo 294 RWHP @ 12.5 psi PFS SMIC Koyo Radiator APEXi Power FC ACT HDSS Clutch RB Exhaust"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/rp_dyno_05-18-09.jpg",
+          "accessed": "2026-09-30",
+          "title": "Exotic Performance Plus Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer Test Report'; 'Exotic Performance Plus 2080 E. Governors dr., Columbia City, IN. 46725'; 'Date Printed 2009/05/18'; 'Filter Mode FIR Filter Value 15'; License 'SPOOLN2'; Max 'Eng Torque T WC (Ft-Lb) 259', 'Eng Power T WC (HP) 294', 'Boost (PSI) 12.5'; Min 224 / 141 / 9.1; Avg 242 / 219 / 11.0; x-axis 3000-6500 rpm, power still climbing at 6500"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno make, shop, date, power/torque, boost trace, fuel (93 octane, stated), mileage. Unsure: true peak (the pull stopped at 6,500 rpm, below the usual 7,000-7,500 rpm peak of the twins), downpipe/intake state, correction standard.",
+      "notes": "Closest thing to a stock-engine baseline found with a visible sheet: an almost-new original engine on the factory twins at 12 psi. Compare the model at 6,500 rpm, not at its own peak. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-tomo-1993-twins-pfc-walbro-13psi-2019",
+      "summary": "1993 US FD on the factory twins with Power FC, Walbro 255 and Koyo radiator (intake/exhaust not listed): 277 hp / 232 lb-ft (weather corrected), boost 13.1 max / 10.9 average, Mustang dyno at Banzai Racing, 2019-07-11.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "not stated (not labelled automatic in the gallery; manual assumed, not confirmed)",
+        "year": "1993"
+      },
+      "engine": "13B-REW on the factory sequential twins; 72,238 mi; no rebuild or porting listed",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Banzai Racing, 110 E. Catholic St, Pierceton, IN 46562"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "277 hp at about 6,900-7,000 rpm (read off the curve)",
+        "peakWheelTorque": "232 lb-ft at about 5,700 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "13.1 psi (logged max, on the primary turbo below the transition)",
+        "atPeakPower": "about 10 psi (logged average 10.9, minimum 6.9 at the transition; not readable exactly)",
+        "fullBoostRpm": "about 12-13 psi from the 3,065 rpm start on the primary turbo; transition dip near 4,400 rpm",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed; shape from the trace"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "Walbro 255 & installation kit",
+        "ecu": "A'PEXi Power FC (dyno-tuned by Banzai); ECU and EGR rework",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "Koyo R-Series radiator, PR idler pulley kit, AST elimination filler neck, vacuum line simplification"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2019_customers/opdycke_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Opdycke RX-7 customer page",
+          "kind": "shop page",
+          "quote": "June 2019 OD: 72,238 : Tom brought us his '93 FD in for some rework and reliability upgrades | Walbro 255 Fuel Pump & Installation Kit | FD Commander Holder | PR Idler Pulley Kit | AST Elimination Billet Aluminum Filler Neck Kit | Bando Poly-V Belt | Vacuum Line Simplification Rework | Electrical, Wiring, Gauges, ECU & EGR Rework | APEXi PFC Dyno Tuning to 277 rwhp @ 13.1 psi"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Tom's VR '93 (IN) Twin Turbo 277 RWHP @ 13.1 psi Koyo R-Series Radiator APEXi Power FC Idler Ppulley Kit Walbro 255 Fuel Pump"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2019_customers/opdycke/dyno_07-11-19.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Banzai Racing 110 E. Catholic St, Pierceton, In 46562'; 'Date Printed 2019/07/11'; 'Filter Mode FIR Filter Value 50'; 'Owner Opdycke'; Max 'Eng Torque T WC (Ft-Lb) 232', 'Eng Power T WC (HP) 277', '-15 to +45 (PSI) 13.1'; Min 180 / 124 / 6.9; Avg 212 / 226 / 10.9; x-axis 3065-7872 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque and logged boost (printed). Unsure: intake, exhaust and intercooler (not listed, could be stock), gearbox, fuel.",
+      "notes": "Lowest result in the twin-turbo gallery; with nothing listed for intake/exhaust it may be the nearest to a stock-breathing car on a Power FC, but that is not stated. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-artl-1993-rebuilt-twins-hks-dp-pfc-12psi-2017",
+      "summary": "1993 US FD with a Banzai 'Level 1' rebuilt engine, factory twins, HKS downpipe, Walbro 255, Power FC: 281 hp / 239 lb-ft (weather corrected), boost 14.9 max / 11.6 average (Banzai: 12 psi), Mustang dyno at Banzai Racing, 2017-07-06.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (Exedy stock clutch kit)",
+        "year": "1993"
+      },
+      "engine": "13B-REW, Banzai Racing 'Level 1' rebuild (porting not mentioned; the gallery marks ported engines as 'Streetported', this one is not), factory sequential twins",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Banzai Racing, Pierceton, IN"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "281 hp at about 6,800-6,900 rpm (read off the curve)",
+        "peakWheelTorque": "239 lb-ft at about 5,300 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "14.9 psi logged max (Banzai headline 12 psi)",
+        "atPeakPower": "about 11-12 psi (logged average 11.6; not readable exactly)",
+        "fullBoostRpm": "about 14 psi on the primary turbo from the 3,065 rpm start; transition dip to 6.7 psi near 4,300 rpm",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "HKS downpipe; midpipe/cat-back not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "Walbro 255 lph kit",
+        "ecu": "A'PEXi Power FC & OLED Commander; OEM engine harness, TPS and ISC replaced",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "Banzai 'Level 1' rebuild with OEM oil pump, OEM stationary gear bearings",
+        "gearbox": "5-speed manual; Exedy stock clutch kit, resurfaced flywheel",
+        "other": "Koyo R-Series radiator, Pettit air separation tank"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/lacey_install.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Lacey RX-7 engine installation page",
+          "kind": "shop page",
+          "quote": "Banzai Racing Level 1 Rebuilt Engine | OEM Oil Pump & Oil Pressure Regulator | OEM Stationary Gear Vearings | Banzai Racing FD Oil Pan Brace Kit | Exedy Stock Clutch Kit w/ ACT Monoloc Wedge Collar | Resurfaced Flywheel | SS Clutch Line | Koyo R Series Radiator | Pettit Air Separation Tank | HKS Downpipe | Walbro 255 lph Fuel Pump Kit ... Summer 2017 (OD 107,086): ... APEXi Power FC & OLED Commander | FD Commander Holder | OEM Engine Harness | TPS and ISC Replacement | Dyno tuned to 281 rwhp @ 12 psi"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "*Art's VR '93 (IN) Twin Turbo 281 RWHP @ 12 psi BR Rebuilt Engine Koyo R-Series Radiator APEXi Power FC EXEDY Stock Clutch HKS Downpipe Walbro 255 Fuel Pump ... *Denotes engine rebuilt by Banzai Racing"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/lacey/art_L_dyno_07-06-17.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Banzai Racing 110 E. Catholic St, Pierceton, In 46562'; 'Date Printed 2017/07/06'; 'Owner Lacey'; Max 'Eng Torque T WC (Ft-Lb) 239', 'Eng Power T WC (HP) 281', '-15 to +45 (PSI) 14.9'; Min 188 / 132 / 6.7; Avg 225 / 222 / 11.6; x-axis 3065-7100 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, logged boost. Unsure: porting (a rebuild, not stated as ported), cat-back/intake/intercooler, fuel; the 12 psi headline differs from the 14.9 psi logged peak.",
+      "notes": "Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-patrickr-1994-twins-pettit-ic-rb-exhaust-pfc-11psi-2016",
+      "summary": "1994 US FD, factory twins, Pettit Cool Charge III intercooler, Racing Beat exhaust, Denso fuel pump, Power FC: 315 hp / 260 lb-ft UNCORRECTED, boost 10.9 max / 9.9 average, Mustang dyno at Banzai Racing, 2016-12-28 (Indiana winter).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "not stated (not labelled automatic; manual assumed, not confirmed)",
+        "year": "1994"
+      },
+      "engine": "13B-REW on the factory sequential twins; 68,678 mi; no rebuild or porting listed",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Banzai Racing, Pierceton, IN"
+      },
+      "correction": {
+        "value": "uncorrected (channel label has no 'WC')",
+        "howKnown": "Channels 'Eng Torque T (Ft-Lbs)' / 'Eng Power T (HP)' on this sheet, whereas the same car's 2016-12-01 sheet reads 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed (late December in northern Indiana: cold air likely, which raises an uncorrected reading)",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet; season from the date"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "315 hp (uncorrected) at about 6,800 rpm (read off the curve)",
+        "peakWheelTorque": "260 lb-ft (uncorrected) at about 5,500 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "10.9 psi (logged max)",
+        "atPeakPower": "about 10 psi (logged average 9.9, minimum 8.0)",
+        "fullBoostRpm": "about 10 psi from the 3,065 rpm start; transition dip near 4,400 rpm",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Pettit Racing Cool Charge III intercooler kit",
+        "exhaust": "Racing Beat exhaust (model not stated); downpipe/midpipe not stated",
+        "intake": "GReddy intake elbow; filter not stated",
+        "injectors": "550/850 cc (the US factory sizes)",
+        "fuelPump": "Denso Supra TT fuel pump",
+        "ecu": "A'PEXi Power FC & Commander (dyno-tuned by Banzai)",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "Koyo radiator, PR idler pulley kit, AST elimination, Banzai BOP kit, differential brace, transmission crossmember"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/ramsey_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Ramsey RX-7 customer page",
+          "kind": "shop page",
+          "quote": "OD 68678: Winter 2016 Patrick shipped his car to us for some rework and upgrades | Pettit Racing Cool Charge III Intercooler Kit | GReddy Intake Elbow | Vacuum Line Simplification | AST Elimination | Banzai Racing FD BOP Kit | Denso Supra TT Fuel Pump | APEXi Power FC & Commander | ... PR Idler Pulley Kit | ... Dyno Tuned to 315 RWHP @ 10.9 psi"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Patrick's VR '94 (MI) Twin Turbo 315 RWHP @ 10.9 psi Pettit Cool Charge I/C 550 / 850 cc Injectors Koyo Radiator APEXi Power FC Racing Beat Exhaust Denso Fuel Pump Idler Pulley Kit"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/ramsey/patrickR_dyno_12-28-16.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet, after tuning (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Banzai Racing ... Pierceton, In 46562'; 'Date Printed 2016/12/28'; License 'RX7ZOOM', Owner 'Ramsey'; channels 'Eng Torque T (Ft-Lbs)', 'Eng Power T (HP)', '-15 to +45 (PSI)'; Max 260 / 315 / 10.9; Min 217 / 131 / 8.0; Avg 241 / 251 / 9.9; x-axis 3065-7500 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, logged boost. Unsure: this sheet is uncorrected on a winter day, so it probably reads higher than an SAE-corrected run; exhaust model, downpipe and gearbox not stated.",
+      "notes": "Same car's 'as arrived' run on 2016-12-01 (before the intercooler/fuel pump/Power FC) is listed separately as not usable. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-nickg-1993-rebuilt-twins-pettit-ic-hks-dp-pfc-10psi-2012",
+      "summary": "1993 US FD with a Banzai rebuilt engine (super seals), factory twins, Pettit intercooler, HKS downpipe + high-flow cat, Racing Beat dual-tip exhaust, custom intake, Power FC: 317 hp / 260 lb-ft (weather corrected) at a stated 10 psi, Mustang dyno, Wait4Me Performance, 2012-06-29.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (ACT clutch disc)",
+        "year": "1993"
+      },
+      "engine": "13B-REW, Banzai rebuild with 'Super Seals' (apex seals); porting not mentioned; factory sequential twins",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Wait4Me Performance, Warsaw, IN (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "317 hp at about 7,000 rpm (read off the curve)",
+        "peakWheelTorque": "260 lb-ft at about 5,500 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "10 psi (Banzai text)",
+        "atPeakPower": "not logged",
+        "fullBoostRpm": "not logged",
+        "howKnown": "Banzai text only; no boost channel on the sheet"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory Hitachi sequential twins (HT-12)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Pettit intercooler (model not stated)",
+        "exhaust": "HKS downpipe & high-flow cat, Racing Beat dual-tip exhaust",
+        "intake": "custom aluminium intake",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "Banzai rebuild with super seals; porting not mentioned",
+        "gearbox": "5-speed manual; ACT HDSS clutch disc",
+        "other": "aluminium radiator, PR idler pulley kit, Magnecor 10 mm leads"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2012_customers/gilbride_installation.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Gilbride RX-7 engine installation page",
+          "kind": "shop page",
+          "quote": "Banzai Racing Rebuilt Engine w/ Super Seals | Banzai Racing FD Oil Pan Brace Kit | Custom AL Intake | Mishimoto Radiator Hose Kit | ACT SS Clutch Disc | Magnecor 10mm Plug Wires | NGK Platinum Spark Plugs | FD Commander Holder | PR Idler Pulley Kit ... Dyno Tuned June 2012 to 317 RWHP @ 10 psi 06/29/12"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_TT_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Twin Turbo FD Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Nick G's VR '93 (IL) Twin Turbo 317 RWHP @ 10psi Pettit I/C AL Radiator APEXi Power FC ACT HDSS Clutch Disc RB Dual Tip Exhaust HKS DP & Hi-Flow cat"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/gilbride_dyno_06-29-12.JPG",
+          "accessed": "2026-09-30",
+          "title": "Wait4Me Performance Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer Test Report'; 'www.Wait4Meperformance.com 1100 west winona, warsaw, In 46582'; 'Date Printed 2012/06/29'; 'Filter Mode FIR Filter Value 50'; Owner 'G, Nick'; Max 'Eng Torque T WC (Ft-Lb) 260', 'Eng Power T WC (HP) 317'; Min 19 / 28; Avg 229 / 242; x-axis 3145-7793 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, peak power/torque, parts list. Doubtful: 317 hp at only 10 psi is high next to the other twin-turbo cars (e.g. 310 hp at 12 psi, 323 hp at 13.1 psi); the 10 psi is not logged and may be a target setting, not the boost actually reached.",
+      "notes": "Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-turblown-efr7670-stockport-91oct-dynojet-std-2015",
+      "summary": "1994 FD, fresh stock-port rebuild, Turblown EFR 7670 IWG single turbo, 3-inch downpipe with stock cat and PFS cat-back, PFS medium stock-mount intercooler, Adaptronic, 91 octane: 294.18 hp / 287.82 lb-ft, Dynojet, STD correction, 2015-11-20; 14 psi at peak torque falling to 9 psi at peak power.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated (a 1994 FD at a US tuner; US-market likely, not confirmed)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1994 (from the run-file folder name '1994 7670 FD')"
+      },
+      "engine": "13B-REW, 'Fresh stockport engine rebuild'; factory twins replaced by a single turbo",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed",
+        "type": "roller (Dynojet; model not printed, most 224/248 units are inertia-only)",
+        "mode": "WinPEP run file '..._011.drf'; Gear Ratio field 56.22; smoothing value cut off",
+        "where": "not printed (run saved under folder 'C:\\DynoRun\\Turblown\\1994 7670 FD'; Turblown Engineering, USA, posted it)"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "Sheet header 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not visible",
+        "pressure": "not visible",
+        "humidity": "not visible",
+        "howKnown": "not on the visible part of the screen photo"
+      },
+      "gear": "not printed; the WinPEP 'Gear Ratio 56.22' matches 4th gear (about 55.4 rpm per mph on a US 4.100 final with 225/50R16) if that field is rpm per mph (my assumption)",
+      "result": {
+        "peakWheelPower": "294.18 hp (max); cursor shows 293.95 hp at 6,381 rpm",
+        "peakWheelTorque": "287.82 lb-ft (max), near 3,500 rpm on the curve",
+        "howRead": "'_011.drf Max Power = 294.18 Max Torque = 287.82' and cursor values printed on the screen (image)"
+      },
+      "boost": {
+        "peak": "14 psi (at peak torque)",
+        "atPeakPower": "9 psi",
+        "fullBoostRpm": "about 3,500 rpm (peak torque; not stated as full-boost rpm)",
+        "howKnown": "annotation on the sheet: '14psi at peak torque trailing down to 9psi at peak rwhp'. The lower-pane trace (11.17 at the 6,381 rpm cursor) is unlabelled and falls steadily from 1,500 rpm, which looks like air-fuel ratio, not boost; not used."
+      },
+      "fuel": "91 octane pump gas (US AKI, about 95-96 RON)",
+      "mods": {
+        "turbo": "BorgWarner EFR 7670 IWG (Turblown kit; kit uses the T4 0.92 A/R IWG housing per Turblown; A/R not on the sheet), Turblown cast IWG manifold, OE BorgWarner medium wastegate canister",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 7670, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "57 mm inducer (Turblown); exducer not quoted",
+          "turbine": "70 mm turbine wheel (Turblown), T4 0.92 A/R IWG",
+          "maxCompressorFlow": "64 lb/min (Turblown: '64LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for a peak power of 300 to 400rwhp' on a 2-rotor",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12: Turblown BorgWarner EFR IWG Rx7 Single Turbo Kit",
+              "kind": "article",
+              "quote": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel . This is the smallest EFR that will work on a 2 rotor and to make a comparison to other brands it would be considered a 5761. This is the ideal size for a peak power of 300 to 400rwhp for a street driven or autoX car."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "PFS medium intercooler kit (stock-mount position per the forum post)",
+        "exhaust": "3-inch downpipe, stock catalytic converter, PFS cat-back",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Adaptronic (model not stated), controlling the OE BorgWarner boost solenoid/canister",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "fresh rebuild, stock port",
+        "gearbox": "not stated",
+        "other": "OEM coils and spark plugs"
+      },
+      "sources": [
+        {
+          "url": "http://www.ausrotary.com/viewtopic.php?t=246747",
+          "accessed": "2026-09-30",
+          "title": "AusRotary forum: EFR 7670 IWG Dyno Results (thread by Turblown1)",
+          "kind": "thread",
+          "quote": "Turblown1 » Sat Nov 21, 2015 9:25 am: I have attached a dyno sheet of a pump gas, fresh stock port, stock coil/plug, medium stock mount intercooler, stock cat 7670 iwg dyno from today. ... Attachments EFR 7670 IWG pump gas dyno.jpg"
+        },
+        {
+          "url": "http://www.ausrotary.com/download/file.php?id=50246",
+          "accessed": "2026-09-30",
+          "title": "AusRotary attachment 'EFR 7670 IWG pump gas dyno.jpg' (guest-viewable)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH'; 'CF: STD'; Date '11/20/2015 12:56:55'; Location 'C:\\DynoRun\\Turblown\\1994 7670 FD\\..._011'; 'Gear Ratio 56.22'; '_011.drf Max Power = 294.18 Max Torque = 287.82'; cursor 'X = 6.381', 293.95, 241.93, 11.17; annotation 'Turblown EFR 7670 IWG Turbo System / 3\" downpipe, stock catalytic converter, PFS catback / Fresh stockport engine rebuild , 91 Octane Pump Gas / OEM coils, and spark plugs / PFS medium intercooler kit / Adaptronic controlled OE BW medium cansiter / 14psi at peak torque trailing down to 9psi at peak rwhp.'"
+        }
+      ],
+      "confidence": "Sure: Dynojet, STD, peak power/torque, fuel, stock port, exhaust and intercooler (all printed). Unsure: shop and weather, gear (inferred), injectors/fuel pump/intake, the turbine A/R (from the kit description).",
+      "notes": "Best single-turbo pump-fuel stock-port case: known turbo, known boost at peak power, known exhaust including the stock cat. STD (60 F / 29.92 inHg reference) typically reads about 4 % above SAE J1349 (rule of thumb, not from a source here). Boost falls to 9 psi at the top, so the model must follow the boost curve, not a flat target."
+    },
+    {
+      "id": "fd3s-turblown-efr8374-stockport-91oct-14p5psi-dynojet-sae",
+      "summary": "Stock-port FD3S with a Turblown EFR 8374 IWG kit, Adaptronic FD plug-in ECU, IGN-1A coils, 3-inch straight-through exhaust, 91 octane at 14.5 psi: 402 rwhp / 330 rwtq, Dynojet, SAE correction (date and shop not legible).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "13B-REW, 'StockPort'; single turbo",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not legible (footer text too small)",
+        "type": "roller (Dynojet; model not legible)",
+        "mode": "WinPEP graph, smoothing 5",
+        "where": "not legible (small subtitle under 'Dynojet Research')"
+      },
+      "correction": {
+        "value": "SAE",
+        "howKnown": "Sheet header 'CF: SAE Smoothing: 5'"
+      },
+      "testConditions": {
+        "temperature": "not legible",
+        "pressure": "not legible",
+        "humidity": "not legible",
+        "howKnown": "image is 480x270 px; footer unreadable"
+      },
+      "gear": "not legible",
+      "result": {
+        "peakWheelPower": "402 rwhp (rpm not legible; the peak sits near the top of the plotted rev range)",
+        "peakWheelTorque": "330 rwtq (rpm not legible)",
+        "howRead": "annotation on the sheet '402rwhp/330rwtq'; axis labels too small to read"
+      },
+      "boost": {
+        "peak": "14.5 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "annotation 'Pump Gas 91 @ 14.5PSI'"
+      },
+      "fuel": "91 octane pump gas (US AKI)",
+      "mods": {
+        "turbo": "BorgWarner EFR 8374 IWG, Turblown kit (T4 0.92 A/R IWG per Turblown's kit description; not on the sheet)",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 8374, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "62 mm inducer (2015 post) / '62/83' inducer/exducer (2014 post)",
+          "turbine": "CONFLICT: '74mm turbine wheel' (2015 post) vs '65mm turbine wheel in a ( .92 housing)' (2014 post); possibly inducer vs exducer, not explained",
+          "maxCompressorFlow": "79 lb/min (Turblown: '79LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for the 450 to 500rwhp' (2015 blog) / '450 to 550rwhp' (TurboSource shop article)",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12",
+              "kind": "article",
+              "quote": "EFR 8374 T4 .92 has a 79LB max flow , 62mm compressor inducer , and 74mm turbine wheel . In common turbo sizing this would be referred to as a 6265."
+            },
+            {
+              "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+              "kind": "article",
+              "quote": "both use billet compressor wheels of roughly the same size and similar design; 62/82mm on the PTE, and 62/83 on the BW ... The PTE uses a 62mm turbine wheel( .84 housing) and a BW uses a 65mm turbine wheel in a ( .92 housing)."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "3-inch straight-through exhaust",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Adaptronic FD PNP (plug-in)",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "stock port",
+        "gearbox": "not stated",
+        "other": "IGN-1A coils in direct fire"
+      },
+      "sources": [
+        {
+          "url": "https://turbosource.com/blogs/news/turblown-cast-efr-iwg-borgwarner-rx7-turbo-systems",
+          "accessed": "2026-09-30",
+          "title": "TurboSource (Turblown): Turblown Cast EFR IWG Borgwarner Rx7 Turbo Systems",
+          "kind": "article",
+          "quote": "EFR 8374 T4 .92 has a 79LB max flow , 62mm compressor inducer , and 74mm turbine wheel ... It is the ideal size for the 450 to 550rwhp. [image Adaptronic_Remote_Tune_Pump_gas_large.jpg]"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2729/7002/files/Adaptronic_Remote_Tune_Pump_gas_large.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet image in that article",
+          "kind": "dyno sheet image",
+          "quote": "read from image (480x270): 'Dynojet RESEARCH'; 'CF: SAE Smoothing: 5'; annotation 'StockPort FD3S, Pump Gas 91 @ 14.5PSI / Turblown EFR 8374 IWG Kit / Adaptronic FD PNP / IGN-1A coils in Direct Fire / 3\" straight through exhaust / 402rwhp/330rwtq'"
+        }
+      ],
+      "confidence": "Sure: Dynojet, SAE, the annotated numbers and parts. Unsure: shop, date, gear, rpm of the peaks, intercooler, injectors, whether the 14.5 psi is peak or held boost. The numbers come from the vendor's annotation on its own sheet.",
+      "notes": "Useful pair with the EFR 7670 91-octane car above: bigger turbo, more boost, same fuel grade, both stock port, both Dynojet (SAE here, STD there)."
+    },
+    {
+      "id": "fd3s-banzai-davidy-1993-stockport-reman-greddy-t88-13p5psi-2014",
+      "summary": "1993 US FD with a Mazda remanufactured stock-port 13B-REW and a GReddy T88 single turbo, GReddy FMIC and 4-inch exhaust, Power FC: 331.6 hp (WCF) at 6,895 rpm and 274.5 lb-ft at 6,290 rpm, 'last run @ 13.5 psi', Mustang dyno, Greer Performance (Fort Wayne IN), 2014-05-01.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "North American-market (the sheet prints a 17-character VIN starting JM1FD, the North American format; VIN not copied here)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (ACT street-strip clutch disc)",
+        "year": "1993 per Banzai; the dyno record says 1992"
+      },
+      "engine": "13B-REW, Mazda remanufactured engine, stock port ('Stock Port Mazda Reman Engine'); single turbo",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "PowerDyne 'HorsePower Curve Test Results'; weight 3000, HP at 50 MPH 3.00",
+        "where": "Greer Performance, 1820 South Harrison St., Fort Wayne, IN 46802 (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WCF (Mustang weather correction factor; standard not printed)",
+        "howKnown": "Printout 'Maximum Power 331.6 ... with WCF 331.6'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the printout"
+      },
+      "gear": "not printed; 4th inferred (6,895 rpm at 123.3 mph = 55.9 rpm/mph)",
+      "result": {
+        "peakWheelPower": "331.6 hp at 6,895 rpm (with WCF)",
+        "peakWheelTorque": "274.5 lb-ft at 6,290 rpm (with WCF)",
+        "howRead": "text printed on the Mustang printout (image)"
+      },
+      "boost": {
+        "peak": "13.5 psi on the last run (printout comment); Banzai's page says 14 psi",
+        "atPeakPower": "not logged",
+        "fullBoostRpm": "not logged (torque peak at 6,290 rpm points to a late-spooling turbo)",
+        "howKnown": "printout comment 'last run @ 13.5 psi'; Banzai text '332.5 RWHP @ 14 psi'"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "GReddy T88 (variant/trim, turbine A/R and manifold not stated)",
+        "turboSpecs": {
+          "maker": "GReddy (Trust)",
+          "model": "T88, variant not stated",
+          "specs": "not found: GReddy sold several T88 variants (compressor and turbine trims differ); without the variant no flow data can be attached"
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "GReddy front-mount intercooler",
+        "exhaust": "GReddy 4-inch exhaust",
+        "intake": "not stated",
+        "injectors": "850 cc primary / 1680 cc secondary",
+        "fuelPump": "Denso Supra TT fuel pump",
+        "ecu": "A'PEXi Power FC; HKS Twin Power ignition amplifier; JDM engine harness",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "Mazda remanufactured engine, stock port",
+        "gearbox": "5-speed manual (ACT street-strip clutch disc)",
+        "other": "Koyo N-Flo radiator, PR 'big turbo' idler pulley kit, oil metering pump elimination"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/yan_installation.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Yan RX-7 engine installation page",
+          "kind": "shop page",
+          "quote": "Mazda Remanufactured 13B-REW Engine | Banzai Racing FD Oil Pan Brace Kit Hardware | Banzai Racing FD Block Off Plates | Banzai Racing FD Oil Metering Pump Elimination Kit | ACT Street Strip Clutch Disc | Koyo N-Flo Radiator | Denso Supra TT Fuel Pump | ... PR Big Turbo Idler Pulley Kit w/ Belt | ... JDM Engine Harness | ... Spring 2014 (OD 115,244) : David brought his car back for post Break-In dyno tuning; | NGK Platinum Spark Plugs | Dyno tuned to 332.5 RWHP @ 14 psi | Dyno Results & Sheet 5/1/14"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_ST_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: FD (single turbo) Dyno Gallery",
+          "kind": "shop page",
+          "quote": "David's BB '93(IL) Single Turbo 332 RWHP @ 14 psi Stock Port Mazda Reman Engine GReddy T88 Turbo GReddy FMIC 850 / 1680 cc Injectors Koyo N-Flo Radiator APEXi Power FC GReddy 4\" Exhaust HKS Twin Power"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2013_customers/yan/davidY_dyno_results_05-01-14.jpg",
+          "accessed": "2026-09-30",
+          "title": "Greer Performance Mustang printout (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Mustang Dynamometer HorsePower Curve Test Results Date/Time Printed: 05/01/2014 03:19:12 PM'; 'Tested By Greer Performance 1820 South Harrison St. Ft.wayne IN 46802'; '1992 mazda rx7'; 'Miles 115272.0 Weight 3000.00 HPAt50MPH 3.00'; 'Time Tested 5/1/2014 3:14:07 PM'; 'Maximum Power 331.6 @ 6895 RPM / 123.3MPH with WCF 331.6'; 'Maximum Torque 274.5 @ 6290 RPM / 114.4MPH with WCF 274.5'; 'Comments last run @ 13.5 psi.'"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: stock port (stated twice), dyno, shop, date, power/torque/rpm, boost on the last run. Unsure: T88 variant (so no turbo map), fuel, correction standard; small mismatch between the page (332.5 @ 14 psi) and the printout (331.6, last run 13.5 psi).",
+      "notes": "Big turbo at low boost on a stock-port engine: a good test of the model's turbine/compressor matching if the T88 variant can be found. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-jeffh-1993-gt35r-vmount-pfc-15p6psi-93oct-2009",
+      "summary": "1993 US FD with a Garrett GT35R single turbo, V-mount intercooler, PFS exhaust, 750/1680 cc injectors, Power FC, 93 octane: 399 hp / 321 lb-ft (weather corrected), boost 15.6 max / 13.3 average, Mustang dyno, Exotic Performance Plus (Columbia City IN), 2009-07-23.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (ACT HDSS clutch)",
+        "year": "1993"
+      },
+      "engine": "13B-REW, newly installed engine ('post engine break-in'); the gallery's asterisk (which marks Banzai-rebuilt engines) sits next to the 399 figure; porting not stated",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 15",
+        "where": "Exotic Performance Plus, Columbia City, IN (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel label 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "399 hp at about 7,000 rpm (read off the curve)",
+        "peakWheelTorque": "321 lb-ft at about 4,900 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "15.6 psi (logged max)",
+        "atPeakPower": "about 14 psi near 7,000 rpm (read off the boost curve on the right axis)",
+        "fullBoostRpm": "about 15.5 psi reached near 3,900 rpm",
+        "howKnown": "'Boost (PSI)' channel on its own right-hand axis (5-20 psi); min 5.8, avg 13.3"
+      },
+      "fuel": "93 octane (US AKI), as stated by Banzai",
+      "mods": {
+        "turbo": "Garrett GT35R (GT3582R); turbine housing A/R, manifold and wastegate not stated",
+        "turboSpecs": {
+          "maker": "Garrett (Garrett Motion)",
+          "model": "GT3582R (sold as GT35R), ball bearing",
+          "compressor": "inducer 61 mm, exducer 82 mm, trim 56, compressor housing A/R 0.70",
+          "turbine": "inducer 68 mm, exducer 62 mm, trim 84; turbine housings listed 0.63 / 0.82 / 1.06 A/R (T3 or T4 inlet, V-band outlet) and 0.61 / 0.83 / 1.01 (V-band inlet)",
+          "ratedPower": "Horsepower: 400 - 675; Displacement: 2.0L - 4.5L (Garrett)",
+          "compressorMap": "read from Garrett's published map: choke about 69-70 lb/min (about 0.53 kg/s) at the 130,000 rpm speed line; peak efficiency island 79 % (about 25-35 lb/min, PR about 1.6-2.1); surge line tops out near PR 4.0; 'MAX RPM 130000'",
+          "housingOnTheseCars": "not stated for any Banzai GT35R car (turbine A/R, manifold and wastegate all unknown)",
+          "caveat": "Garrett's current map (uploaded 2022). The Banzai cars were tuned 2009-2015; not confirmed that those units match this map exactly.",
+          "sources": [
+            {
+              "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582R Turbocharger (performance catalog page)",
+              "kind": "shop page",
+              "quote": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 | Turbine | Inducer 68mm | Exducer 62mm | Trim 84 ... Turbine Kits: 740902-0012 0.63 T3 ... 740902-0016 1.06 T4 ... 740902-0031 1.01 V-Band"
+            },
+            {
+              "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/GT3582-Comp-Map-Kg-Sec-scaled.jpg",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582 compressor map (image)",
+              "kind": "article",
+              "quote": "read from image: corrected air flow axis 0-80 lb/min (0-0.60 kg/s); efficiency islands 79 % (centre) down to 60 %; speed lines 50000-130000; right edge of the map about 69-70 lb/min near PR 2.8 on the 130000 line; surge line peak near PR 4.0 at about 48 lb/min"
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "V-mount intercooler (VMIC)",
+        "exhaust": "PFS exhaust (details not stated)",
+        "intake": "not stated",
+        "injectors": "750 cc primary / 1680 cc secondary",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC; HKS Twin Power",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "rebuilt engine; porting not stated",
+        "gearbox": "5-speed manual (ACT HDSS clutch)",
+        "other": "AWR radiator"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2009_customers/hedberg_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Hedberg RX-7 FD3s staged modification page",
+          "kind": "shop page",
+          "quote": "Stage 1 (OD: 104163): We first saw Jeff's VR FD3S in July 2009 for a post engine break-in tuning session and inspection. | Dyno tuned to 399 RWHP at 15.6 psi on 93 octane gas | Dyno Chart 07/23/09"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_ST_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: FD (single turbo) Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Jeff H's VR '93 (IA) Single Turbo *399 RWHP @ 15.6 psi Garret GT35R 750 / 1680 cc Injectors VMIC AWR Radiator APEXi Power FC ACT HDSS Clutch PFS Exhaust HKS TwinPower"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/jh_dyno_07-23-09.jpg",
+          "accessed": "2026-09-30",
+          "title": "Exotic Performance Plus Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Exotic Performance Plus 2080 E. Governors dr., Columbia City, IN. 46725'; 'Date Printed 2009/07/23'; 'Filter Mode FIR Filter Value 15'; Owner 'Hedberg'; Max 'Eng Torque T WC (Ft-Lb) 321', 'Eng Power T WC (HP) 399', 'Boost (PSI) 15.6'; Min 194 / 111 / 5.8; Avg 292 / 291 / 13.3; x-axis 3000-7500 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, boost trace, fuel (stated). Unsure: porting of the new engine (not stated), turbine A/R and manifold, correction standard.",
+      "notes": "Highest GT35R result in the Banzai set; the spread across the four GT35R cars (343-399 hp at 13.8-15.9 psi) shows how much the unlisted parts (porting, manifold, exhaust, intercooler) matter. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-jamesh-1993-gt35r-pfc-15psi-2010",
+      "summary": "1993 US FD with a Garrett GT35R single turbo on a Banzai-rebuilt engine, 550/1680 cc injectors, Power FC: 343 hp / 289 lb-ft (weather corrected), boost 15.1 max / 13.3 average, Mustang dyno, Wait4Me Performance, 2010-05-13.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1993"
+      },
+      "engine": "13B-REW rebuilt by Banzai in April 2005 for another customer, later fitted to this car; porting not stated (the gallery says 'BR Rebuilt Engine', not 'Streetported')",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Wait4Me Performance, Warsaw, IN (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "343 hp at about 6,800 rpm (read off the curve)",
+        "peakWheelTorque": "289 lb-ft at about 5,600 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "15.1 psi (logged max)",
+        "atPeakPower": "about 15 psi (the boost trace keeps rising to its maximum near the power peak; logged average 13.3)",
+        "fullBoostRpm": "not readable (boost climbs steadily across the pull)",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed; shape from the trace"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Garrett GT35R (GT3582R); turbine housing A/R, manifold and wastegate not stated",
+        "turboSpecs": {
+          "maker": "Garrett (Garrett Motion)",
+          "model": "GT3582R (sold as GT35R), ball bearing",
+          "compressor": "inducer 61 mm, exducer 82 mm, trim 56, compressor housing A/R 0.70",
+          "turbine": "inducer 68 mm, exducer 62 mm, trim 84; turbine housings listed 0.63 / 0.82 / 1.06 A/R (T3 or T4 inlet, V-band outlet) and 0.61 / 0.83 / 1.01 (V-band inlet)",
+          "ratedPower": "Horsepower: 400 - 675; Displacement: 2.0L - 4.5L (Garrett)",
+          "compressorMap": "read from Garrett's published map: choke about 69-70 lb/min (about 0.53 kg/s) at the 130,000 rpm speed line; peak efficiency island 79 % (about 25-35 lb/min, PR about 1.6-2.1); surge line tops out near PR 4.0; 'MAX RPM 130000'",
+          "housingOnTheseCars": "not stated for any Banzai GT35R car (turbine A/R, manifold and wastegate all unknown)",
+          "caveat": "Garrett's current map (uploaded 2022). The Banzai cars were tuned 2009-2015; not confirmed that those units match this map exactly.",
+          "sources": [
+            {
+              "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582R Turbocharger (performance catalog page)",
+              "kind": "shop page",
+              "quote": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 | Turbine | Inducer 68mm | Exducer 62mm | Trim 84 ... Turbine Kits: 740902-0012 0.63 T3 ... 740902-0016 1.06 T4 ... 740902-0031 1.01 V-Band"
+            },
+            {
+              "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/GT3582-Comp-Map-Kg-Sec-scaled.jpg",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582 compressor map (image)",
+              "kind": "article",
+              "quote": "read from image: corrected air flow axis 0-80 lb/min (0-0.60 kg/s); efficiency islands 79 % (centre) down to 60 %; speed lines 50000-130000; right edge of the map about 69-70 lb/min near PR 2.8 on the 130000 line; surge line peak near PR 4.0 at about 48 lb/min"
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "550 cc primary / 1680 cc secondary",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC; HKS Twin Power & harness",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "Banzai rebuild (2005); porting not stated",
+        "gearbox": "not stated",
+        "other": "Koyo radiator"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2009_customers/hewson_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Hewson RX-7 FD3s staged modification page",
+          "kind": "shop page",
+          "quote": "Stage 1 (OD: 62452): We first saw James's BB FD3S in June 2009 for a tune up and some troubleshooting. James had installed an engine we had previously rebuilt for another cutomer back in April 2005. | Stage 2: We next saw James's car in May 2010 for the following: | HKS Twinpower & Harness Ignition Amplification | PFC Dyno Tuning to 343 RWHP @ 15 psi | 05/13/10"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_ST_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: FD (single turbo) Dyno Gallery",
+          "kind": "shop page",
+          "quote": "*James's BB '93 (MI) Single Turbo 343 RWHP @ 15 psi BR Rebuilt Engine GT 35R Turbo 550 / 1680 cc Injectors Koyo Radiator APEXi Power FC HKS Twinpower"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/james_H_dyno_05-13-10.jpg",
+          "accessed": "2026-09-30",
+          "title": "Wait4Me Performance Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'www.Wait4Meperformance.com ... warsaw, In 46582'; 'Date Printed 2010/05/13'; Owner 'hewson'; Max 'Eng Torque T WC (Ft-Lb) 289', 'Eng Power T WC (HP) 343', '-15 to +45 (PSI) 15.1'; Min 183 / 106 / 6.9; Avg 262 / 258 / 13.3; x-axis 3050-6969 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, logged boost. Unsure: intercooler, exhaust, manifold, turbine A/R, porting, fuel.",
+      "notes": "Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-danr-1993-gt35r-pettit-ic-pfc-13p8psi-2015",
+      "summary": "1993 US FD with a Garrett GT35R single turbo, Pettit Cool Charge intercooler, 725/2000 cc injectors, Power FC, Profec B: 380 hp / 291 lb-ft UNCORRECTED, boost 13.8 max / 12.0 average, Mustang dyno at Banzai Racing, 2015-04-15.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (Exedy twin-disc clutch)",
+        "year": "1993"
+      },
+      "engine": "13B-REW, 55,990 mi; porting and rebuild history not stated",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Banzai Racing, Pierceton, IN"
+      },
+      "correction": {
+        "value": "uncorrected (channel label has no 'WC')",
+        "howKnown": "Channels 'Eng Torque T (Ft-Lbs)' / 'Eng Power T (HP)'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "380 hp (uncorrected) at about 7,200 rpm (read off the curve)",
+        "peakWheelTorque": "291 lb-ft (uncorrected) at about 6,400 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "13.8 psi (logged max)",
+        "atPeakPower": "about 13-14 psi (logged average 12.0, minimum 9.0; trace nearly flat)",
+        "fullBoostRpm": "not readable",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Garrett GT35R (GT3582R); turbine housing A/R, manifold and wastegate not stated; GReddy Profec B boost controller",
+        "turboSpecs": {
+          "maker": "Garrett (Garrett Motion)",
+          "model": "GT3582R (sold as GT35R), ball bearing",
+          "compressor": "inducer 61 mm, exducer 82 mm, trim 56, compressor housing A/R 0.70",
+          "turbine": "inducer 68 mm, exducer 62 mm, trim 84; turbine housings listed 0.63 / 0.82 / 1.06 A/R (T3 or T4 inlet, V-band outlet) and 0.61 / 0.83 / 1.01 (V-band inlet)",
+          "ratedPower": "Horsepower: 400 - 675; Displacement: 2.0L - 4.5L (Garrett)",
+          "compressorMap": "read from Garrett's published map: choke about 69-70 lb/min (about 0.53 kg/s) at the 130,000 rpm speed line; peak efficiency island 79 % (about 25-35 lb/min, PR about 1.6-2.1); surge line tops out near PR 4.0; 'MAX RPM 130000'",
+          "housingOnTheseCars": "not stated for any Banzai GT35R car (turbine A/R, manifold and wastegate all unknown)",
+          "caveat": "Garrett's current map (uploaded 2022). The Banzai cars were tuned 2009-2015; not confirmed that those units match this map exactly.",
+          "sources": [
+            {
+              "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582R Turbocharger (performance catalog page)",
+              "kind": "shop page",
+              "quote": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 | Turbine | Inducer 68mm | Exducer 62mm | Trim 84 ... Turbine Kits: 740902-0012 0.63 T3 ... 740902-0016 1.06 T4 ... 740902-0031 1.01 V-Band"
+            },
+            {
+              "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/GT3582-Comp-Map-Kg-Sec-scaled.jpg",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582 compressor map (image)",
+              "kind": "article",
+              "quote": "read from image: corrected air flow axis 0-80 lb/min (0-0.60 kg/s); efficiency islands 79 % (centre) down to 60 %; speed lines 50000-130000; right edge of the map about 69-70 lb/min near PR 2.8 on the 130000 line; surge line peak near PR 4.0 at about 48 lb/min"
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Pettit Racing Cool Charge intercooler",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "725 cc primary / 2000 cc secondary",
+        "fuelPump": "'Censer' fuel pump (as written in the gallery; make unclear)",
+        "ecu": "A'PEXi Power FC",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "5-speed manual; Exedy twin-disc clutch",
+        "other": "Koyo radiator, dual oil coolers, PR idler pulley kit"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2015_customers/rusiniak_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Rusiniak RX-7 customer page",
+          "kind": "shop page",
+          "quote": "Stage 1 (OD: 55990): Dan had his car transported to us for a boost issue and tuning. We resolved his problem and then performed the following reliability modifications and upgrades; | EXEDY Twin Disc Clutch Kit | ... PR Idler Pulley Kit w/ 43.5\" Belt | ... Dyno Tuning to 380 RWHP @ 13.8 psi"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_ST_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: FD (single turbo) Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Dan's SSM '93 (NY) Single Turbo 380 RWHP @ 13.8 psi 725 / 2000 cc Injectors GT35R Turbo Pettit Cool Charge I/C Koyo Radiator APEXi Power FC EXEDY Twin Disc Clutch Dual Oil Coolers Censer Fuel Pump GReddy Profec B Boost Controller"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2015_customers/rusiniak/dyno_04-15-15.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Banzai Racing www.Banzai-Racing.com, Pierceton, In 46562'; 'Date Printed 2015/04/15'; License 'Silver s', Owner 'Rusinia'; Max 'Eng Torque T (Ft-Lbs) 291', 'Eng Power T (HP) 380', '-15 to +45 (PSI) 13.8'; Min 197 / 115 / 9.0; Avg 259 / 280 / 12.0; x-axis 3065-7900 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, logged boost. Unsure: uncorrected figure, porting, exhaust, manifold/turbine A/R, fuel.",
+      "notes": "380 hp at under 14 psi is strong for a GT35R; unlisted porting or exhaust work would explain it, but none is stated. Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-banzai-aronh-1993-gt35r-m2-smic-pfc-15p9psi-2010",
+      "summary": "1993 US FD with a Garrett GT35R single turbo, M2 large stock-mount intercooler, 550/1600 cc injectors, Power FC: 365 hp / 287 lb-ft (weather corrected), boost 15.9 max / 12.8 average, Mustang dyno, Wait4Me Performance, 2010-05-26. The pull ends at 6,958 rpm with power still rising.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred; not stated)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1993"
+      },
+      "engine": "13B-REW, 95,619 mi; porting and rebuild history not stated",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded; model not printed)",
+        "mode": "Mustang Dynamometer Test Report; Filter Mode FIR, Filter Value 50",
+        "where": "Wait4Me Performance, Warsaw, IN (tuned by Banzai Racing)"
+      },
+      "correction": {
+        "value": "WC (Mustang weather correction; standard not printed)",
+        "howKnown": "Channel labels 'Eng Torque T WC' / 'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "365 hp at 6,958 rpm, the last point of the pull (still rising)",
+        "peakWheelTorque": "287 lb-ft at about 5,700 rpm (read off the curve)",
+        "howRead": "Max column of the channel table (printed) and the curves (image)"
+      },
+      "boost": {
+        "peak": "15.9 psi (logged max, a spike near 5,700 rpm)",
+        "atPeakPower": "not readable exactly (logged average 12.8)",
+        "fullBoostRpm": "boost trace rises steeply from about 3,500 to 3,900 rpm",
+        "howKnown": "'-15 to +45 (PSI)' channel min/max/avg printed; shape from the trace"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Garrett GT35R (GT3582R); turbine housing A/R, manifold and wastegate not stated",
+        "turboSpecs": {
+          "maker": "Garrett (Garrett Motion)",
+          "model": "GT3582R (sold as GT35R), ball bearing",
+          "compressor": "inducer 61 mm, exducer 82 mm, trim 56, compressor housing A/R 0.70",
+          "turbine": "inducer 68 mm, exducer 62 mm, trim 84; turbine housings listed 0.63 / 0.82 / 1.06 A/R (T3 or T4 inlet, V-band outlet) and 0.61 / 0.83 / 1.01 (V-band inlet)",
+          "ratedPower": "Horsepower: 400 - 675; Displacement: 2.0L - 4.5L (Garrett)",
+          "compressorMap": "read from Garrett's published map: choke about 69-70 lb/min (about 0.53 kg/s) at the 130,000 rpm speed line; peak efficiency island 79 % (about 25-35 lb/min, PR about 1.6-2.1); surge line tops out near PR 4.0; 'MAX RPM 130000'",
+          "housingOnTheseCars": "not stated for any Banzai GT35R car (turbine A/R, manifold and wastegate all unknown)",
+          "caveat": "Garrett's current map (uploaded 2022). The Banzai cars were tuned 2009-2015; not confirmed that those units match this map exactly.",
+          "sources": [
+            {
+              "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582R Turbocharger (performance catalog page)",
+              "kind": "shop page",
+              "quote": "GT3582R Turbocharger | Horsepower: 400 - 675 | Displacement: 2.0L - 4.5L ... Compressor | Inducer 61mm | Exducer 82mm | Trim 56 | A/R 0.70 | Turbine | Inducer 68mm | Exducer 62mm | Trim 84 ... Turbine Kits: 740902-0012 0.63 T3 ... 740902-0016 1.06 T4 ... 740902-0031 1.01 V-Band"
+            },
+            {
+              "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/GT3582-Comp-Map-Kg-Sec-scaled.jpg",
+              "accessed": "2026-09-30",
+              "title": "Garrett: GT3582 compressor map (image)",
+              "kind": "article",
+              "quote": "read from image: corrected air flow axis 0-80 lb/min (0-0.60 kg/s); efficiency islands 79 % (centre) down to 60 %; speed lines 50000-130000; right edge of the map about 69-70 lb/min near PR 2.8 on the 130000 line; surge line peak near PR 4.0 at about 48 lb/min"
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "M2 large stock-mount intercooler",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "550 cc primary / 1600 cc secondary",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "Koyo radiator"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2010_customers/hanson_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Hanson RX-7 FD3s staged modification page",
+          "kind": "shop page",
+          "quote": "1993 VR Mazda FD3S | Stage 1 (OD: 95619): Aron brought his car to us in the spring on 2010 for some troubleshooting and tuning. ... | Dyno Tuning to 365 RWHP @ 15.9 psi | ... Dyno Tuned to 365 RWHP at 15.9 psi | 05/26/10"
+        },
+        {
+          "url": "https://www.banzai-racing.com/FD_ST_dyno_gallery.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: FD (single turbo) Dyno Gallery",
+          "kind": "shop page",
+          "quote": "Aron's VR '93 (IN) Single Turbo 365 RWHP @ 15.9 psi 550 / 1600 cc Injectors GT35R Turbo M2 Large SMIC Koyo Radiator APEXi Power FC"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/aronH_dyno_05-26-10.jpg",
+          "accessed": "2026-09-30",
+          "title": "Wait4Me Performance Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'www.Wait4Meperformance.com'; 'Date Printed 2010/05/26'; License 'RX7', Owner 'Banzai'; Max 'Eng Torque T WC (Ft-Lb) 287', 'Eng Power T WC (HP) 365', '-15 to +45 (PSI) 15.9'; Min 143 / 83 / 4.7; Avg 243 / 235 / 12.8; x-axis 3037-6958 rpm"
+        },
+        {
+          "url": "https://www.mustangdyne.com/wp-content/uploads/2020/09/Power-Dyne-PC-Users-Manual-v2017-05-22-01.pdf",
+          "accessed": "2026-09-30",
+          "title": "Mustang Dynamometer: Power Dyne PC Dynamometer Operator Manual, v2017-05-22 (public PDF on mustangdyne.com)",
+          "kind": "article",
+          "quote": "Printed p.15 (PDF p.18): 'Use SAE Corrections: If you wish to have all data corrected per SAE J1349 (Jun90) (or your own custom standards), check this option.' Printed p.26 (PDF p.29): 'WCF Weather Correction Factor - a multiplier used to correct measured torque, force and power values based on the ambient weather conditions.' Printed p.27 (PDF p.30): 'T Wheel Pwr Total engine power - always valid. Does not include engine flywheel inertia or drivetrain efficiency effects, does include wheel/tire inertia and tire:roll interface losses.' Printed p.29-30 (PDF p.32-33): 'T Engine Pwr Total engine power. This includes all dynamometer factors, plus engine flywheel values and drivetrain efficiency.' ... 'T Engine Pwr WCF Total engine power, with Weather Correction Factor applied.' Printed p.26 (PDF p.29): 'PAU Force Linear force delivered to and measured by the PAU torque sensing load cell.'"
+        }
+      ],
+      "confidence": "Sure: dyno, shop, date, power/torque, logged boost. Unsure: exhaust, manifold, turbine A/R, porting, fuel; the true peak (pull stopped at 6,958 rpm).",
+      "notes": "Mustang label meanings (WC = weather corrected, no WC = uncorrected), the wheel-vs-engine channel question and the Mustang-vs-Dynojet caveat: see readingGuide."
+    },
+    {
+      "id": "fd3s-turblown-efr8374-stockport-e85-dynodynamics-2014",
+      "summary": "Turblown's 1993 FD test car: stock-port 13B-REW, EFR 8374 T4 0.92 IWG, V-mount, 3.5-inch exhaust, Adaptronic E440D, 4 x ID2000, E85: 486.8 hp / 402 lb-ft on a Dyno Dynamics (DBPerformance), boost about 26.5-27 psi from 3,200 rpm, about 25 psi at peak power; fuel pump ran out at the top.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated (a 1993 car at a US tuner)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1993 (later sheet of the same car: 'Descript. : 1993 Mazda RX7')"
+      },
+      "engine": "13B-REW, stock port, unopened block per the thread ('no studs no dowels'); single turbo",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller (Dyno Dynamics; model not printed)",
+        "mode": "not printed",
+        "where": "DBPerformance (dbptuning.com); location not printed"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not shown on the cropped sheet"
+      },
+      "testConditions": {
+        "temperature": "not shown",
+        "pressure": "not shown",
+        "humidity": "not shown",
+        "howKnown": "not on the cropped sheet"
+      },
+      "gear": "not shown",
+      "result": {
+        "peakWheelPower": "486.8 hp at about 6,700 rpm (rpm read off the curve)",
+        "peakWheelTorque": "402 lb-ft at about 5,000 rpm (read off the curve)",
+        "howRead": "'Max 486.8 HP', 'Max HP 486', 'Max TQ 402' printed on the sheet (image)"
+      },
+      "boost": {
+        "peak": "about 27 psi (read off the PSI_g axis)",
+        "atPeakPower": "about 25 psi near 6,700 rpm (read off the PSI_g axis)",
+        "fullBoostRpm": "about 26.5 psi by about 3,200 rpm",
+        "howKnown": "read from the enlarged 'IWGresponse' image: right axis PSI_g, 5 psi per major gridline; low-resolution image, +/- about 1 psi"
+      },
+      "fuel": "E85 (ethanol content not measured/stated)",
+      "mods": {
+        "turbo": "BorgWarner EFR 8374, T4 0.92 A/R internal wastegate, Turblown IWG manifold, medium BorgWarner actuator",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 8374, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "62 mm inducer (2015 post) / '62/83' inducer/exducer (2014 post)",
+          "turbine": "CONFLICT: '74mm turbine wheel' (2015 post) vs '65mm turbine wheel in a ( .92 housing)' (2014 post); possibly inducer vs exducer, not explained",
+          "maxCompressorFlow": "79 lb/min (Turblown: '79LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for the 450 to 500rwhp' (2015 blog) / '450 to 550rwhp' (TurboSource shop article)",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12",
+              "kind": "article",
+              "quote": "EFR 8374 T4 .92 has a 79LB max flow , 62mm compressor inducer , and 74mm turbine wheel . In common turbo sizing this would be referred to as a 6265."
+            },
+            {
+              "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+              "kind": "article",
+              "quote": "both use billet compressor wheels of roughly the same size and similar design; 62/82mm on the PTE, and 62/83 on the BW ... The PTE uses a 62mm turbine wheel( .84 housing) and a BW uses a 65mm turbine wheel in a ( .92 housing)."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "V-mount",
+        "exhaust": "3.5-inch full exhaust",
+        "intake": "4-inch ambient air intake",
+        "injectors": "4 x Injector Dynamics ID2000",
+        "fuelPump": "not stated (post: 'Ran out of fuel pump on the top end')",
+        "ecu": "Adaptronic E440D Universal",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "stock port; stock (unopened) block per the thread",
+        "gearbox": "not stated",
+        "other": "IGN-1A coils, Xcessive Manufacturing lower intake manifold"
+      },
+      "sources": [
+        {
+          "url": "http://www.ausrotary.com/viewtopic.php?t=240007",
+          "accessed": "2026-09-30",
+          "title": "AusRotary forum: BorgWarner EFR 8374 IWG 'High Boost' Dyno Results (thread by Turblown1)",
+          "kind": "thread",
+          "quote": "Turblown1 » Sat Apr 05, 2014 7:02 am: Boost Response and Power Output from our 8374 BorgWarner EFR( T4 .92 IWG) FD3S Turbo System. Adaptronic E440D Universal, stock port engine, E85, IGN-1A coils, Vmount, 4\" ambient air intake, 3.5\" full exhaust, Xcessive Manufacturing LIM, Injector Dynamics ID2000s x 4. Ran out of fuel pump on the top end. ... mad2fan: so that's on a unopened 13b .. no studs no dowels nothing 480 odd hp at the wheels ? ... Turblown1 » Tue Aug 05, 2014: Correct. Its more than 480hp, we did another dyno and made 515rwhp and 425rwtq, but still had fuel starvation issues."
+        },
+        {
+          "url": "http://www.ausrotary.com/download/file.php?id=46031",
+          "accessed": "2026-09-30",
+          "title": "AusRotary attachment IWGpower.jpg (guest-viewable)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER'; 'DBPerformance dbptuning.com'; 'Max HP 486'; 'Max TQ 402'; 'Max 486.8 HP'; x-axis 2600-7400 rpm; power peaks about 6,600-6,800 rpm then drops"
+        },
+        {
+          "url": "http://www.ausrotary.com/download/file.php?id=46030",
+          "accessed": "2026-09-30",
+          "title": "AusRotary attachment IWGresponse.jpg (guest-viewable)",
+          "kind": "dyno sheet image",
+          "quote": "read from image (enlarged 3x): same header, right axis 'PSI_g' 5.0-45.0; dotted boost trace about 26.5 psi at 3,200 rpm, about 27 psi to 5,200 rpm, about 25.5 at 6,400, about 25 at 6,800, about 24 at 7,200"
+        },
+        {
+          "url": "http://www.ausrotary.com/download/file.php?id=47822",
+          "accessed": "2026-09-30",
+          "title": "AusRotary attachment of the later (Sept 2014) run of the same car",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DBPerformance dbptuning.com'; 'Descript. : 1993 Mazda RX7'; 'Date : 09-04-2014'; annotation '28psi by 3400RPMS / At limit of Medium Boost Control Actuator / 450rwtq @ 30PSI' (power figure not shown)"
+        },
+        {
+          "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), 2015-10-12",
+          "kind": "article",
+          "quote": "Here you can see our original test mule make 28 psi by 3400rpms above/left. At 3200rpms it is making 300RWTQ , and 400RWTQ by 3850RPMS on an 8374 IWG( stock port engine, E85 with 3.5\" exhaust)."
+        }
+      ],
+      "confidence": "Sure: Dyno Dynamics, 486.8 hp / 402 lb-ft (printed), stock port, E85, main parts (vendor's post). Unsure: correction mode, boost (read off a small image), which pump was fitted; top end is fuel-limited, so the model should overpredict above about 6,800 rpm.",
+      "notes": "Vendor's own car. A later run made '515rwhp and 425rwtq' (text only, no sheet seen) and a 30 psi run made about 450 rwtq before the engine failed at 31 psi on track."
+    },
+    {
+      "id": "fd3s-cartmill-1993-medstreetport-ptr6262-12psi-dynodynamics-2014",
+      "summary": "1993 FD, medium street port, Precision 6262 on a Turblown twin-scroll manifold, 3-inch downpipe, dual Tial MVS wastegates, V-mount, pump gas: 340.2 hp at about 7,150 rpm, 12 psi reached just past 4,600 rpm, Dyno Dynamics (Carma Performance), about 2013-2014.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated ('Trans type Unspecified' in the dyno record)",
+        "year": "1993"
+      },
+      "engine": "13B-REW, MEDIUM STREET PORT; single turbo",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller (Dyno Dynamics; model not printed)",
+        "mode": "load mode 'Ramp', tacho cycles 2 (read from the software screen photo)",
+        "where": "Carma Performance (software title bar); location not printed"
+      },
+      "correction": {
+        "value": "not stated (an 'Atmos Correction' box is on screen but its value is not legible)",
+        "howKnown": "screen photo"
+      },
+      "testConditions": {
+        "temperature": "not legible",
+        "pressure": "not legible",
+        "humidity": "not legible",
+        "howKnown": "screen photo too blurred"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "340.2 hp at about 7,150 rpm (rpm read off the curve)",
+        "peakWheelTorque": "about 268 lb-ft at about 6,200 rpm (read off the curve, not printed)",
+        "howRead": "'Max 340.2 HP' printed on the graph window (image)"
+      },
+      "boost": {
+        "peak": "12 psi",
+        "atPeakPower": "about 12 psi (trace flat from about 4,700 rpm to 7,000 rpm)",
+        "fullBoostRpm": "'a tick past 4600rpms' (text); trace reaches about 12 psi near 4,700 rpm",
+        "howKnown": "blog text plus the 'Manifold Gauge Pressure (PSI)' trace on the response screen photo"
+      },
+      "fuel": "pump gas, grade not stated",
+      "mods": {
+        "turbo": "Precision 6262 (0.84 A/R turbine housing), Turblown standard FD3S twin-scroll manifold, dual rerouted Tial MVS wastegates",
+        "turboSpecs": {
+          "maker": "Precision Turbo & Engine, figures as quoted by Turblown (Precision's site returned HTTP 403)",
+          "model": "Precision 6262 (generation not stated), journal bearing",
+          "compressor": "62/82 mm (inducer/exducer), billet wheel",
+          "turbine": "62 mm turbine wheel, 0.84 A/R housing (T4 divided flange implied by the Turblown twin-scroll manifold; not stated)",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2014-03-24",
+              "kind": "article",
+              "quote": "62/82mm on the PTE ... the PTE system uses a journal bearing system, and the EFR is ball bearing ... The PTE uses a 62mm turbine wheel( .84 housing)"
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "V-mount",
+        "exhaust": "3-inch downpipe; rest not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "medium street port",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+          "kind": "article",
+          "quote": "Recently Turblown Engineering 's new FD3S EFR IWG turbo system was put to to the test. The owner, Jacob Cartmill, previously had a Precision 6262 turbo system, including Turblown's standard FD3S twinscroll turbo manifold , and a 3\" downpipe with dual rerouted Tial MVS wastegates. This system put down a conservative 340rwhp @ 12psi on a medium streetport with a Vmount on pump gas. The turbo didn't make full boost til a tick past 4600rpms on a dyno dynamics dyno. ... Now fast forward to EFR. The only changes to the car were the installation of the EFR IWG 8374 , and shorter turbo manifold . ... The same boost pressure of 12psi, same dyno brand, same tuner, etc were used. Note there was no difference in peak HP ... The BW hits full boost roughly 1500rpms faster! ... The PTE system made roughly 140 ft lbs of torque at 3000rpms, while the BW system made roughly 240ft lbs!"
+        },
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2014/03/6262-dyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "6262 12 psi dyno graph (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: Dyno Dynamics graph window; 'Max 340.2 HP'; axes 'Power (HP)', 'Torque (NS) (FtLb)', 'Engine Speed [Ign] (rpm)' 2000-8000; power peaks about 7,150 rpm; torque about 268 near 6,200"
+        },
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2014/03/6262-response.jpg",
+          "accessed": "2026-09-30",
+          "title": "6262 response at 12 psi (photo of the dyno screen)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: window 'Dyno Dynamics' / 'Carma Performance'; ID 206211; Make Mazda; Customer Jacob Cartmill; Model RX7; Year 1993; Trans type Unspecified; 'Manifold Gauge Pressure (PSI)' trace reaching about 12 psi near 4,700 rpm, flat to about 7,000 rpm; 'Fuel Type Gasoline', 'Load Mode Ramp', 'Tacho Cycles 2'; that screen shows 'Max 305.6 HP' (a different run)"
+        }
+      ],
+      "confidence": "Sure: Dyno Dynamics, 340.2 hp, 12 psi, parts from the vendor text. Unsure: correction, date, fuel grade; porting makes it a weak stock-port check.",
+      "notes": "Paired with the EFR 8374 run on the same car (next entry): same boost, same dyno brand and tuner, same peak power, very different spool. Good for testing turbo transient behaviour rather than peak power."
+    },
+    {
+      "id": "fd3s-cartmill-1993-medstreetport-efr8374-12psi-dynodynamics-2014",
+      "summary": "Same 1993 medium-street-port FD after a swap to an EFR 8374 IWG on a shorter manifold, same 12 psi, pump gas: 338.0 hp at about 6,700 rpm, about 12.3 psi from about 3,100 rpm, Dyno Dynamics, early 2014.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1993 ('93 RX7' on the sheet)"
+      },
+      "engine": "13B-REW, MEDIUM STREET PORT; single turbo",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller (Dyno Dynamics; model not printed)",
+        "mode": "not printed",
+        "where": "not printed (sheet header line 'SUJA 1'; the tuner is the same as the 6262 run per the blog)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not on the sheet"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "338.0 hp at about 6,700 rpm (rpm read off the curve)",
+        "peakWheelTorque": "about 288 lb-ft at about 6,000 rpm (read off the curve)",
+        "howRead": "'Max 338.0 HP' printed (image)"
+      },
+      "boost": {
+        "peak": "about 12.6 psi (read off the PSI axis)",
+        "atPeakPower": "about 12.5 psi",
+        "fullBoostRpm": "about 12.3 psi by about 3,100 rpm",
+        "howKnown": "boost graph on the PSI axis (image, enlarged)"
+      },
+      "fuel": "pump gas, grade not stated",
+      "mods": {
+        "turbo": "BorgWarner EFR 8374 IWG (T4 0.92 A/R), Turblown short IWG manifold",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 8374, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "62 mm inducer (2015 post) / '62/83' inducer/exducer (2014 post)",
+          "turbine": "CONFLICT: '74mm turbine wheel' (2015 post) vs '65mm turbine wheel in a ( .92 housing)' (2014 post); possibly inducer vs exducer, not explained",
+          "maxCompressorFlow": "79 lb/min (Turblown: '79LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for the 450 to 500rwhp' (2015 blog) / '450 to 550rwhp' (TurboSource shop article)",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12",
+              "kind": "article",
+              "quote": "EFR 8374 T4 .92 has a 79LB max flow , 62mm compressor inducer , and 74mm turbine wheel . In common turbo sizing this would be referred to as a 6265."
+            },
+            {
+              "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+              "kind": "article",
+              "quote": "both use billet compressor wheels of roughly the same size and similar design; 62/82mm on the PTE, and 62/83 on the BW ... The PTE uses a 62mm turbine wheel( .84 housing) and a BW uses a 65mm turbine wheel in a ( .92 housing)."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "V-mount",
+        "exhaust": "not stated beyond the Turblown kit",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "medium street port",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+          "kind": "article",
+          "quote": "Recently Turblown Engineering 's new FD3S EFR IWG turbo system was put to to the test. The owner, Jacob Cartmill, previously had a Precision 6262 turbo system, including Turblown's standard FD3S twinscroll turbo manifold , and a 3\" downpipe with dual rerouted Tial MVS wastegates. This system put down a conservative 340rwhp @ 12psi on a medium streetport with a Vmount on pump gas. The turbo didn't make full boost til a tick past 4600rpms on a dyno dynamics dyno. ... Now fast forward to EFR. The only changes to the car were the installation of the EFR IWG 8374 , and shorter turbo manifold . ... The same boost pressure of 12psi, same dyno brand, same tuner, etc were used. Note there was no difference in peak HP ... The BW hits full boost roughly 1500rpms faster! ... The PTE system made roughly 140 ft lbs of torque at 3000rpms, while the BW system made roughly 240ft lbs!"
+        },
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2014/03/efr-iwg-dyno-12-psi.jpg",
+          "accessed": "2026-09-30",
+          "title": "EFR IWG 12 psi dyno sheets (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER'; 'SUJA 1'; 'Customer : Jacob Cartmill'; 'I.D. : 206211'; 'Descript.: 93 RX7'; 'Date : 02-27-2008'; 'File : 206211.014'; 'Max 338.0 HP'; right-hand graph PSI axis: boost about 12.3 psi from about 3,100 rpm, 12.3-12.6 psi to about 7,000 rpm"
+        }
+      ],
+      "confidence": "Sure: Dyno Dynamics, 338.0 hp, about 12 psi, parts from the vendor text. Unsure: date (the sheet prints 02-27-2008, but the EFR kit did not exist before late 2013, so the dyno PC clock is probably wrong), correction, fuel grade.",
+      "notes": "Blog: the 6262 made about 140 lb-ft at 3,000 rpm and the EFR about 240 lb-ft (text only)."
+    },
+    {
+      "id": "fd3s-beyondredline-streetport-efr8374-20psi-e85-dynojet-sae",
+      "summary": "Street-ported FD3S 13B-REW with a Turblown EFR 8374 IWG kit, 3-inch exhaust, E85 flex-fuel tune on an Adaptronic FD PNP at 20 psi: 482.06 hp / 362.47 lb-ft, Dynojet, SAE, Beyond Redline Performance (date not printed).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "13B-REW, STREET PORTED; single turbo",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed",
+        "type": "roller (Dynojet; model not printed)",
+        "mode": "WinPEP RunFile_051.drf, smoothing 3",
+        "where": "Beyond Redline Performance, 1220 Winford Ave, phone 920-498-1223 (city not printed; 920 is a Wisconsin area code)"
+      },
+      "correction": {
+        "value": "SAE",
+        "howKnown": "Sheet header 'CF: SAE Smoothing: 3'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the visible sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "482.06 hp (rpm axis cut off)",
+        "peakWheelTorque": "362.47 lb-ft (rpm axis cut off)",
+        "howRead": "'RunFile_051.drf Max Power = 482.06 Max Torque = 362.47' printed (image)"
+      },
+      "boost": {
+        "peak": "20 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "annotation 'Turblown 8374 IWG Turbo System @ 20 PSI'"
+      },
+      "fuel": "E85 flex-fuel tune (ethanol content not stated)",
+      "mods": {
+        "turbo": "BorgWarner EFR 8374 IWG, Turblown kit (T4 0.92 per Turblown)",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 8374, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "62 mm inducer (2015 post) / '62/83' inducer/exducer (2014 post)",
+          "turbine": "CONFLICT: '74mm turbine wheel' (2015 post) vs '65mm turbine wheel in a ( .92 housing)' (2014 post); possibly inducer vs exducer, not explained",
+          "maxCompressorFlow": "79 lb/min (Turblown: '79LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for the 450 to 500rwhp' (2015 blog) / '450 to 550rwhp' (TurboSource shop article)",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12",
+              "kind": "article",
+              "quote": "EFR 8374 T4 .92 has a 79LB max flow , 62mm compressor inducer , and 74mm turbine wheel . In common turbo sizing this would be referred to as a 6265."
+            },
+            {
+              "url": "https://blog.turbosource.com/2014/03/24/borgwarner-efr-turbochargers-are-living-up-to-the-hype/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2014-03-24: BorgWarner EFR turbochargers are living up to the hype",
+              "kind": "article",
+              "quote": "both use billet compressor wheels of roughly the same size and similar design; 62/82mm on the PTE, and 62/83 on the BW ... The PTE uses a 62mm turbine wheel( .84 housing) and a BW uses a 65mm turbine wheel in a ( .92 housing)."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "3-inch exhaust option",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Adaptronic FD PNP (flex fuel)",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "street ported",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), 2015-10-12",
+          "kind": "article",
+          "quote": "It can make 550+rwhp at 25+ psi on E85/Race Gas. ... See dyno charts of 482rwhp @ 20psi , and 510rwhp @ 25psi."
+        },
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2015/10/8374-e85-20-psi.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynojet sheet in that post (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH'; 'Beyond Redline Performance - 1220 Winford Ave - 920-498-1223'; 'CF: SAE Smoothing: 3'; 'RunFile_051.drf Max Power = 482.06 Max Torque = 362.47'; annotation 'Turblown 8374 IWG Turbo System @ 20 PSI / 3\" exhaust option / Street-ported FD3S REW / E85 Flex Fuel Tune with Adaptronic FD PNP by Luke @ BeyondRedlinePerf'"
+        }
+      ],
+      "confidence": "Sure: Dynojet, SAE, peak numbers, boost, fuel, porting (printed). Unsure: date, gear, intercooler, injectors, rpm of the peaks.",
+      "notes": "Street port: a check of the model's porting option, not of the stock engine."
+    },
+    {
+      "id": "rejected-rx7-chassis-unconfirmed-efr7670-1p1bar-pump-dynodynamics-shootout-2015",
+      "summary": "RX7 (Turblown EFR 7670 IWG kit) on pump fuel at 1.1 bar: 398.3 hp on a Dyno Dynamics in 'Standard ShootOut' mode, 4th gear, 17 C / 102.5 kPa / 37 % RH, 2015-04-18 (shop line 'Alan Jeffery'). Porting not stated. Chassis not confirmed.",
+      "usable": false,
+      "whyNotUsable": "Criterion 1 not confirmed: the sheet says only 'RX7' and Turblown sells this EFR IWG kit for both the FC3S and the FD3S. Everything else is well documented (printed weather, gear, shootout mode); if the vendor or owner confirms it is an FD3S, it becomes usable (porting still unknown).",
+      "vehicle": {
+        "chassis": "not confirmed ('RX7' on the sheet; the blog post covers FD3S and FC3S kits)",
+        "market": "not stated (the I.D. 'X856YOD' looks like a UK registration; inference)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "13B-REW; porting not stated; single turbo",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller (Dyno Dynamics; model not printed)",
+        "mode": "'Dyno Dynamics Standard ShootOut graph', CF:SHOOT_ZR, RR:010",
+        "where": "'Alan Jeffery' (shop/tuner line on the sheet); location not printed"
+      },
+      "correction": {
+        "value": "Dyno Dynamics ShootOut mode (CF:SHOOT_ZR)",
+        "howKnown": "Footer '* Dyno Dynamics Standard ShootOut graph ***' and 'CF:SHOOT_ZR'; the vendor's note 'Shootout-mode( DynoJet Figures)' is their claim, not verified"
+      },
+      "testConditions": {
+        "temperature": "17 C ambient (AT:17), 18 C intake (IT:18)",
+        "pressure": "102.5 kPa (BP:102.5)",
+        "humidity": "37 % (RH:37)",
+        "howKnown": "printed in the sheet footer"
+      },
+      "gear": "4th ('Gear: 4' printed)",
+      "result": {
+        "peakWheelPower": "398.3 hp; flat top from about 5,800 to 6,900 rpm (read off the curve)",
+        "peakWheelTorque": "not printed (no torque curve on this view)",
+        "howRead": "'Max 398.3 HP' printed (image)"
+      },
+      "boost": {
+        "peak": "about 1.2 bar (about 17 psi) at 3,300-4,300 rpm (read off the Bar_g axis)",
+        "atPeakPower": "about 1.0-1.05 bar (about 15 psi) over the power plateau (read off the axis)",
+        "fullBoostRpm": "about 3,300 rpm",
+        "howKnown": "boost trace on the right-hand 'Bar_g' axis; vendor annotation '1.1 Bar On Pump Gas'; blog text '16 psi'"
+      },
+      "fuel": "pump fuel, grade not stated",
+      "mods": {
+        "turbo": "BorgWarner EFR 7670 IWG (Turblown kit, T4 0.92 per Turblown)",
+        "turboSpecs": {
+          "maker": "BorgWarner (EFR series), figures as quoted by Turblown Engineering / TurboSource (distributor), not by BorgWarner",
+          "model": "EFR 7670, T4 0.92 A/R internal-wastegate (IWG) turbine housing in Turblown's FD kit",
+          "compressor": "57 mm inducer (Turblown); exducer not quoted",
+          "turbine": "70 mm turbine wheel (Turblown), T4 0.92 A/R IWG",
+          "maxCompressorFlow": "64 lb/min (Turblown: '64LB max flow')",
+          "compressorMap": "not found (BorgWarner's performance site could not be reached)",
+          "ratedPower": "Turblown: 'ideal size for a peak power of 300 to 400rwhp' on a 2-rotor",
+          "sources": [
+            {
+              "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+              "accessed": "2026-09-30",
+              "title": "TurboSource blog (Turblown), 2015-10-12: Turblown BorgWarner EFR IWG Rx7 Single Turbo Kit",
+              "kind": "article",
+              "quote": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel . This is the smallest EFR that will work on a 2 rotor and to make a comparison to other brands it would be considered a 5761. This is the ideal size for a peak power of 300 to 400rwhp for a street driven or autoX car."
+            }
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "3-inch exhaust (blog: 'A typical setup for pump gas with a 3\" exhaust at 16 psi')",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://blog.turbosource.com/2015/10/12/turblown-borgwarner-efr-iwg-rx7-single-turbo-kit/",
+          "accessed": "2026-09-30",
+          "title": "TurboSource blog (Turblown), 2015-10-12",
+          "kind": "article",
+          "quote": "EFR 7670 T4 .92 ; 64LB max flow , 57mm inducer, and 70mm turbine wheel ... A typical setup for pump gas with a 3\" exhaust at 16 psi is shown to the right( 400rwhp)"
+        },
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2015/10/efr-iwg-7670-dyno-pump-gas.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet photo in that post",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER'; 'Alan Jeffery'; 'Customer : Julian'; 'I.D. : X856YOD'; 'Descript.: RX7'; 'Date : 18-04-2015'; 'Max 398.3 HP'; annotation '1.1 Bar On Pump Gas 7670 EFR IWG' and 'Shootout-mode( DynoJet Figures).'; footer '* Dyno Dynamics Standard ShootOut graph *** BP:102.5 RH:37 AT:17 IT:18 RR:010 TN:3.531 20150418 124136 CK:350 CF:SHOOT_ZR TyrePres: std Gear: 4'; right axis 'Bar_g' -0.5 to 3.5"
+        }
+      ],
+      "confidence": "Sure: Dyno Dynamics shootout mode, 398.3 hp, gear, weather (printed). Unsure: chassis (FC3S or FD3S), porting, intercooler, ECU, fuel grade, torque.",
+      "notes": "The only sheet found with printed weather and gear. Worth one question to Turblown/TurboSource about which car it is."
+    },
+    {
+      "id": "rejected-fd3s-banzai-patrickr-1994-as-arrived-2016",
+      "summary": "Same 1994 FD as 'patrickr' on arrival at Banzai (2016-12-01): 282 hp / 255 lb-ft (weather corrected), boost 12.9 max / 10.2 average, AFR up to 15.7 above about 6,600 rpm.",
+      "usable": false,
+      "whyNotUsable": "ECU and boost control on arrival not stated (the Power FC was fitted afterwards), and the logged AFR goes lean (15.3-15.7) at the top, so the run does not represent a known, healthy setup.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1994"
+      },
+      "engine": "13B-REW, factory twins",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded)",
+        "mode": "FIR 50",
+        "where": "Banzai Racing, Pierceton, IN"
+      },
+      "correction": {
+        "value": "WC",
+        "howKnown": "'Eng Power T WC'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "282 hp at about 6,800 rpm",
+        "peakWheelTorque": "255 lb-ft (spike at the transition near 5,000 rpm)",
+        "howRead": "channel table (image)"
+      },
+      "boost": {
+        "peak": "12.9 psi (spike at the transition)",
+        "atPeakPower": "about 8.5-9 psi (trace falls toward the top)",
+        "fullBoostRpm": "not readable",
+        "howKnown": "channel table and trace"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory twins",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "Racing Beat exhaust (per gallery, not confirmed for the arrival state)",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/ramsey/ramsey_dyno_12-01-160001.jpg",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing Mustang sheet 2016-12-01 (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date Printed 2016/12/01'; Max 'Eng Torque T WC (Ft-Lb) 255', 'Eng Power T WC (HP) 282', 'AFR (Ratio) 15.7', '-15 to +45 (PSI) 12.9'; Min 203 / 125 / 10.8 / 8.6; Avg 222 / 222 / 12.8 / 10.2"
+        },
+        {
+          "url": "https://www.banzai-racing.com/2016_customers/ramsey/ramsey_dyno_12-01-160002.jpg",
+          "accessed": "2026-09-30",
+          "title": "AFR/boost page of the same run (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: AFR trace about 12.2-12.5 through the mid range, dipping to about 10.8 near 6,300 rpm, then rising to about 15.3-15.5 above about 6,600 rpm"
+        }
+      ],
+      "confidence": "Numbers are clear; the car's state is not.",
+      "notes": "Kept as context: the same car went to 315 hp (uncorrected) after the intercooler, fuel pump and Power FC."
+    },
+    {
+      "id": "rejected-fd3s-banzai-ryanl-1993-gt35r-wmi-2013",
+      "summary": "1993 FD, Garrett GT35R, custom FMIC, A'PEXi N1 exhaust, AEM water/methanol injection: Banzai lists 405 RWHP @ 17 psi, but the posted sheet reads 389.306 hp (uncorrected) with 19.363 psi max.",
+      "usable": false,
+      "whyNotUsable": "Water/methanol injection (the model does not simulate it) and the published sheet contradicts the headline (389.3 hp at up to 19.4 psi vs '405 RWHP @ 17 psi').",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US-market car (inferred)",
+        "grade": "not stated",
+        "gearbox": "5-speed manual (ACT clutch, Cusco LSD)",
+        "year": "1993"
+      },
+      "engine": "13B-REW; porting not stated",
+      "dyno": {
+        "make": "Mustang Dynamometer",
+        "model": "not printed",
+        "type": "eddy-current roller (loaded)",
+        "mode": "FIR 50; x-axis in mph",
+        "where": "shop header blank"
+      },
+      "correction": {
+        "value": "uncorrected ('Eng Power T', no WC)",
+        "howKnown": "channel label"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the sheet"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "389.306 hp (sheet) vs 405 (Banzai text)",
+        "peakWheelTorque": "304.452 lb-ft",
+        "howRead": "channel table (image)"
+      },
+      "boost": {
+        "peak": "19.363 psi logged (average 16.017)",
+        "atPeakPower": "not readable",
+        "fullBoostRpm": "not readable",
+        "howKnown": "channel table"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Garrett GT35R",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "custom FMIC",
+        "exhaust": "A'PEXi N1",
+        "intake": "not stated",
+        "injectors": "850/1680 cc",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "AEM water/methanol injection; EST CRANK HP channel 533.946"
+      },
+      "sources": [
+        {
+          "url": "https://www.banzai-racing.com/2010_customers/lutter_smp.htm",
+          "accessed": "2026-09-30",
+          "title": "Banzai Racing: Lutter RX-7 page",
+          "kind": "shop page",
+          "quote": "AEM Water / Methanol Injection System Pump Replacement | Water / Methanol Injection System Re-Installation ... APEXi PFC Dyno Tuning to 405 RWHP @ 17 psi ... Dyno Sheet 9/17/13 405 RWHP @ 17 psi"
+        },
+        {
+          "url": "https://www.banzai-racing.com/dyno_charts/ryanL_dyno_09-17-13.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mustang sheet (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Date Printed 2013/11/11'; owner 'lutter', acquired 09/17 16:23:08; Max 'Eng Torque T (Ft-Lbs) 304.452', 'Eng Power T (HP) 389.306', 'AFR (Ratio) 7.022', '-15 to 45 (PSI) 19.363', 'EST CRANK HP (HP) 533.946'; Avg boost 16.017"
+        }
+      ],
+      "confidence": "Sheet numbers are clear; which run the headline refers to is not.",
+      "notes": ""
+    },
+    {
+      "id": "rejected-fd3s-peakperformance-ported-efr8374-25psi-waterinj-2015",
+      "summary": "'Ported FD3S', Turblown EFR 8374 IWG at 25 psi, 3.5-inch exhaust, pump gas with water injection: 510.0 hp, Dyno Dynamics ShootOut mode (Peak Performance Ltd), 2015-02-10, 33 C ambient.",
+      "usable": false,
+      "whyNotUsable": "Porting type not stated ('Ported') and water injection on pump fuel; neither can be set up reliably in the model.",
+      "vehicle": {
+        "chassis": "FD3S ('rx7 3rd Gen')",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "13B-REW, ported (type not stated)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller",
+        "mode": "'Dyno Dynamics Standard ShootOut graph', CF:SHOOT_4",
+        "where": "Peak Performance Ltd (location not printed)"
+      },
+      "correction": {
+        "value": "Dyno Dynamics ShootOut mode (CF:SHOOT_4)",
+        "howKnown": "sheet footer"
+      },
+      "testConditions": {
+        "temperature": "33 C ambient (AT:33), 56 C intake (IT:56)",
+        "pressure": "101.3 kPa (BP:101.3)",
+        "humidity": "43 % (RH:43)",
+        "howKnown": "sheet footer"
+      },
+      "gear": "not printed",
+      "result": {
+        "peakWheelPower": "510.0 hp",
+        "peakWheelTorque": "not printed",
+        "howRead": "'Max 510.0 HP' (image)"
+      },
+      "boost": {
+        "peak": "25 psi",
+        "atPeakPower": "about 25 psi (trace flat)",
+        "fullBoostRpm": "3,200 rpm ('Full boost by 3200rpms')",
+        "howKnown": "annotation and trace"
+      },
+      "fuel": "pump gas with water injection (grade not stated)",
+      "mods": {
+        "turbo": "BorgWarner EFR 8374 IWG (Turblown)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "3.5-inch exhaust",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://blog.turbosource.com/wp-content/uploads/2015/10/efr-8374-iwg-pump-gas-25-psi.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno Dynamics sheet photo (image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER'; 'Peak Performance Ltd'; 'Customer : Mayank'; 'Descript.: rx7 3rd Gen'; 'Date : 10-02-2015'; 'Max 510.0 HP'; annotation 'Turblown 8374 IWG @ 25psi / 3.5\" exhaust, Ported FD3S / Full boost by 3200rpms / Pump Gas with Water Inj'; footer 'Dyno Dynamics Standard ShootOut graph *** BP:101.3 RH:43 AT:33 IT:56 RR:010 TN:4.512 20150210 235342 CK:743 CF:SHOOT_4'"
+        }
+      ],
+      "confidence": "Numbers clear; engine and fuel system not defined enough.",
+      "notes": ""
+    },
+    {
+      "id": "rejected-fd3s-pacperformance-garrett-gtx35-mainline-hub-2022",
+      "summary": "Pac Performance (Australia) FD3S single-turbo kit test car: 504.0 hp on a Mainline hub dyno; turbo either a Garrett GTX3582R Gen II or GTX3584RS Gen II.",
+      "usable": false,
+      "whyNotUsable": "Which turbo, the boost, the fuel and the porting are all unstated, and the dyno screen shows 'No Tacho Signal!' (no rpm), so the run cannot be set up or compared.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated (Australian shop)",
+        "grade": "not stated",
+        "gearbox": "'factory 5-speed manual or 4-speed automatic' (kit spec, not the test car)",
+        "year": "not stated"
+      },
+      "engine": "13B-REW; porting not stated",
+      "dyno": {
+        "make": "Mainline",
+        "model": "DynoLog (hub)",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "Pac Performance, Australia"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "504.0 hp (rpm not recorded)",
+        "peakWheelTorque": "'0.0 dFtLb' displayed (no tacho)",
+        "howRead": "photo of the dyno screen and article text"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": ""
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Garrett GTX3582R Gen II or GTX3584RS Gen II (not stated which)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "Turbosmart ProGate WG50, steam-pipe manifold, 3-inch dump pipe"
+      },
+      "sources": [
+        {
+          "url": "https://www.garrettmotion.com/news/newsroom/article/pac-performances-fd3s-mazda-rx7-single-garrett-turbo-kit-delivers-500-wheel-horsepower/",
+          "accessed": "2026-09-30",
+          "title": "Garrett news (2022-04-13): Pac Performance's FD3S Mazda RX7 Single Garrett Turbo Kit Delivers 500+ Wheel Horsepower",
+          "kind": "article",
+          "quote": "The jewel of the FD3S single turbo kit is either a Garrett GTX3582R Gen II turbo good for up to 900 horsepower or a Garrett GTX3584RS Gen II turbo for 1,000 horsepower ... On the Mainline hub dyno, Pac Performance's test car produced a comfortable 504-horsepower to its rear wheels"
+        },
+        {
+          "url": "https://www.garrettmotion.com/wp-content/uploads/2022/04/2022-01-04-Pac-Performance-4-1024x576.jpg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the dyno screen in that article",
+          "kind": "dyno sheet image",
+          "quote": "read from image: '504.0 HP / 0.0 dFtLb', 'No Tacho Signal!', 'MAINLINE DynoLog Dynamometers'"
+        },
+        {
+          "url": "https://www.pacperformance.com.au/fd-rx7-single-turbo-upgrade-kit",
+          "accessed": "2026-09-30",
+          "title": "Pac Performance: FD RX7 single turbo upgrade kit",
+          "kind": "shop page",
+          "quote": "(summarised by the fetch tool) turbo options G35-900 / G35-1050 / G40-900 / G40-1150 / G42-1200; 'Power potential...will be comfortably in the 300 to 500rwhp range with all the required supporting upgrades, depending on fuel type and boost levels'"
+        }
+      ],
+      "confidence": "Only the 504 hp figure and the dyno type are clear.",
+      "notes": "The current kit page lists Garrett G-series turbos, not the GTX units named in the 2022 article."
+    },
+    {
+      "id": "rejected-fd3s-turbomag-rotaryperformance-streetport-t78-28psi",
+      "summary": "Turbo Magazine feature (article 'By the Numbers', about 2001): 1993 FD, Rotary Performance custom street port, 3 mm apex seals, GReddy T78 at up to 28 psi, Haltech E6K: 561 hp / 421 lb-ft 'off the bottle' and 645 hp with nitrous on the Rotary Performance Dynojet.",
+      "usable": false,
+      "whyNotUsable": "Fuel not stated (race fuel likely at 28 psi, not confirmed), boost at the dyno run not stated (28 psi is the max setting), heavy porting, no sheet; far outside the car's normal range.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US (1993 car)",
+        "grade": "not stated",
+        "gearbox": "factory Mazda gearbox ('all via the stock Mazda driveline'), with a Kaaz LSD, rx7.com axles and a Bonez clutch",
+        "year": "1993"
+      },
+      "engine": "13B-REW, custom street port, 3 mm apex seals",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated",
+        "type": "roller",
+        "mode": "not stated",
+        "where": "Rotary Performance"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "561 hp without nitrous (645 hp with)",
+        "peakWheelTorque": "421 lb-ft without nitrous (470 with)",
+        "howRead": "magazine text"
+      },
+      "boost": {
+        "peak": "28 psi maximum setting",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "magazine text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "GReddy T78 (GReddy turbo upgrade package)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "large GReddy air-to-air",
+        "exhaust": "GReddy Power Extreme, 94 mm tip",
+        "intake": "not stated",
+        "injectors": "550 cc main, 1600 cc secondary",
+        "fuelPump": "not stated",
+        "ecu": "Haltech E6K",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "Nitrous Express wet system; Jacobs ignition"
+      },
+      "sources": [
+        {
+          "url": "http://www.fd3s.net/magazine_articles/Turbo_article_1.html",
+          "accessed": "2026-09-30",
+          "title": "Turbo Magazine: 'By the Numbers' (rx7.com's drag car), transcription on fd3s.net",
+          "kind": "article",
+          "quote": "Rotary Performance has set max boost to 28 psi and called on a big air-to-air GReddy intercooler ... The RP crew custom street ported the rotors to its own secret specs ... special 3-mm apex seals ... On the Rotary Performance Dynojet, the RX-7 spun the rollers to the tune of 561 hp and 421 lbs-ft of torque off the bottle. With the Nitrous Express system activated, the 13B generated 645 pavement-pounding horsepower and 470 lbs-ft of torque."
+        }
+      ],
+      "confidence": "Quoted numbers are clear; the run conditions are not.",
+      "notes": ""
+    },
+    {
+      "id": "rejected-fd3s-importtuner-2007-apexi-boltons",
+      "summary": "Import Tuner (April 2007, Jasper Chan) back-to-back rolling-road test on an FD: A'PEXi Power Intake +3 bhp, A'PEXi dual N1 exhaust +6 bhp, A'PEXi Power FC at 14 psi +52 bhp (as retold by StrikeEngine).",
+      "usable": false,
+      "whyNotUsable": "Only gains are given: no baseline or final power, no dyno make, no correction, and not clear whether figures are wheel or engine power; the original article was not found.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "13B-REW, factory twins",
+      "dyno": {
+        "make": "not stated ('rolling road')",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "",
+        "pressure": "",
+        "humidity": "",
+        "howKnown": ""
+      },
+      "gear": "",
+      "result": {
+        "peakWheelPower": "not given (gains only)",
+        "peakWheelTorque": "not given (gains only)",
+        "howRead": "secondary retelling"
+      },
+      "boost": {
+        "peak": "14 psi with the Power FC",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "StrikeEngine text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "factory twins",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "A'PEXi dual N1 cat-back",
+        "intake": "A'PEXi Power Intake (two filters)",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://strikeengine.com/rx7-tuning-power-test14/",
+          "accessed": "2026-09-30",
+          "title": "StrikeEngine: Mazda RX7 Tuning Part Power Test Comparison (FD)",
+          "kind": "article",
+          "quote": "StrikeEngine Article - Mazda RX-7 performance part power test based on information from Import Tuner magazine. April 2007, written by Jasper Chan. Back to back power runs on a rolling road ... Stage 1 - A'PEXi Power Intake System ... Peak Power Gain: +3bhp Peak Torque Gain: +4lbs/ft ... Stage 2 - A'PEXi Dual N1 Performance Exhaust System ... Peak Power Gain: 6bhp Peak Torque Gain: 7lbs/ft ... Stage 3 - A'PEXi Power FC ... in the case the boost was increased to 14psi. Peak Power Gain: 52bhp Peak Torque Gain: 25lbs/ft"
+        }
+      ],
+      "confidence": "Secondary source; gains only.",
+      "notes": "The gain sizes (small for intake/exhaust alone, large once boost is raised with a Power FC) agree with the Banzai data."
+    },
+    {
+      "id": "rejected-fd3s-stock-baselines-on-blocked-forums",
+      "summary": "Two stock-FD Dynojet baselines exist on forums we cannot open: 'a stock 1993 RX-7 ... dynoed 219whp on a Dynojet ... with a 3\" mandrel downpipe and APEXi intake it was 253whp' (rx8club.com), and a 1993 RX7 Touring 'Max POWER = 222.4', 'Max TORQUE 202.8' on a Dynojet printout (rx7club.com thread 'Dyno chart for stock FD?').",
+      "usable": false,
+      "whyNotUsable": "Not read: both pages returned HTTP 403 to our tools (Cloudflare 'error code: 1005' for rx7club), so the text, the correction standard, conditions and the car's state could not be checked. The wording above comes from web-search result summaries, not from the pages.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "US (per the summaries; unverified)",
+        "grade": "Touring (second one, per the summary)",
+        "gearbox": "not known",
+        "year": "1993 (per the summaries)"
+      },
+      "engine": "13B-REW, stock (first one: 'stock rebuilt motor and turbos at 76,000 miles')",
+      "dyno": {
+        "make": "Dynojet (per the summaries)",
+        "model": "not known",
+        "type": "roller",
+        "mode": "",
+        "where": "not known"
+      },
+      "correction": {
+        "value": "not known",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "",
+        "pressure": "",
+        "humidity": "",
+        "howKnown": ""
+      },
+      "gear": "",
+      "result": {
+        "peakWheelPower": "219 whp (car 1); 222.4 (car 2)",
+        "peakWheelTorque": "202.8 (car 2)",
+        "howRead": "web-search result summaries only (unverified)"
+      },
+      "boost": {
+        "peak": "stock",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not known",
+      "mods": {
+        "turbo": "factory twins",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "not stated",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.rx8club.com/series-i-aftermarket-performance-modifications-23/rx7-vs-rx8-63008/",
+          "accessed": "2026-09-30",
+          "title": "RX8Club.com thread 'RX7 vs RX8'",
+          "kind": "thread",
+          "quote": "not read: HTTP 403. Web-search summary attributed this text to the thread: 'A stock 1993 Mazda RX-7 with 118,000 miles on the chassis and a stock rebuilt motor and turbos at 76,000 miles dynoed 219whp on a Dynojet. Redynoed with a 3\" mandrel downpipe and APEXi intake it was 253whp.'"
+        },
+        {
+          "url": "https://www.rx7club.com/3rd-generation-specific-1993-2002-16/dyno-chart-stock-fd-278810/",
+          "accessed": "2026-09-30",
+          "title": "RX7Club.com thread 'Dyno chart for stock FD?'",
+          "kind": "thread",
+          "quote": "not read: HTTP 403 (Cloudflare error code 1005). Web-search summary: '1993 RX7 Touring ... DYNOJET Performance Evaluation ... Max POWER= 222.4 ... Max Torque of 202.8'"
+        }
+      ],
+      "confidence": "Unverified.",
+      "notes": "If the owner can open rx7club.com in a normal browser, these two threads are the best leads for a stock baseline. Stock boost for reference (magazine, not a dyno): Sport Compact Car, March 2003 buyer's guide p.102: 'verify 10 psi of boost up to 4,500 rpm and then a drop to around 8 psi by redline' (http://www.fd3s.net/magazine_articles/SCC_article_4.html, scan page 4)."
+    },
+    {
+      "id": "rejected-fd3s-turblown-large-streetport-efr7670-pump-8psi",
+      "summary": "Turblown large-street-port engine with a cast EFR 7670 IWG kit, 3-inch exhaust, pump gas, Adaptronic PNP, FMIC: 'Max 310.1 HP' at about 7-8 psi (screen photo).",
+      "usable": false,
+      "whyNotUsable": "Dyno make not identifiable from the screen photo; large street port; peak boost only about 8 psi read off the screen.",
+      "vehicle": {
+        "chassis": "not stated (image sits in the vendor's FD/FC article; the kit is sold for both)",
+        "market": "not stated",
+        "grade": "",
+        "gearbox": "",
+        "year": ""
+      },
+      "engine": "13B, large street port",
+      "dyno": {
+        "make": "not identifiable",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "",
+        "pressure": "",
+        "humidity": "",
+        "howKnown": ""
+      },
+      "gear": "",
+      "result": {
+        "peakWheelPower": "310.1 hp",
+        "peakWheelTorque": "not read",
+        "howRead": "screen photo"
+      },
+      "boost": {
+        "peak": "about 7.5-8 psi (Manifold Gauge Press axis)",
+        "atPeakPower": "about 6.6 psi at the cursor",
+        "fullBoostRpm": "",
+        "howKnown": "screen photo"
+      },
+      "fuel": "pump gas",
+      "mods": {
+        "turbo": "BorgWarner EFR 7670 IWG (Turblown cast kit)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "FMIC",
+        "exhaust": "3-inch full exhaust",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "Adaptronic PNP",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2729/7002/files/Ported_EFR_7670_Turbo_Kit_on_Pump_Gas_large.jpg",
+          "accessed": "2026-09-30",
+          "title": "Screen photo in the TurboSource shop article",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Max 310.1 HP'; 'Turblown Large Street Ported Engine / Turblown Cast EFR 7670 IWG Turbo System / 3\" full exhaust, pump gas, Adaptronic PNP, Stock Ignition, FMIC'; axis 'Manifold Gauge Press. (PSI)' -8.3 to 8.6; cursor 6.58"
+        }
+      ],
+      "confidence": "Numbers readable, dyno unknown.",
+      "notes": ""
+    },
+    {
+      "id": "rejected-forcefed-efr9180-halfbridge-meth-18psi",
+      "summary": "Turblown cast EFR 9180 IWG kit, half-bridge port, 3.5-inch exhaust, pump gas with methanol injection at 18 psi: 582.69 hp / 421.68 lb-ft, Dynojet, STD, ForceFed Racing (Abbotsford BC, Canada).",
+      "usable": false,
+      "whyNotUsable": "Chassis not stated on the sheet ('Turblown 13B Rotary'), half-bridge port and methanol injection.",
+      "vehicle": {
+        "chassis": "not stated",
+        "market": "",
+        "grade": "",
+        "gearbox": "",
+        "year": ""
+      },
+      "engine": "13B, half bridge port",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed",
+        "type": "roller",
+        "mode": "smoothing 5",
+        "where": "Force-Fed Racing, Abbotsford, BC, Canada"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "",
+        "pressure": "",
+        "humidity": "",
+        "howKnown": ""
+      },
+      "gear": "",
+      "result": {
+        "peakWheelPower": "582.69 hp",
+        "peakWheelTorque": "421.68 lb-ft",
+        "howRead": "sheet image"
+      },
+      "boost": {
+        "peak": "18 psi",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "annotation"
+      },
+      "fuel": "pump gas with methanol injection",
+      "mods": {
+        "turbo": "BorgWarner EFR 9180 IWG (Turblown cast kit)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "3.5-inch",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "not stated",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "TurboSmart actuator"
+      },
+      "sources": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2729/7002/files/9180_18_psi_large.JPG",
+          "accessed": "2026-09-30",
+          "title": "Dynojet sheet in the TurboSource shop article",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Turblown 13B Rotary Cast EFR IWG Turbo System'; 'DYNOJET RESEARCH Force-Fed Racing ... Abbotsford, BC Canada'; 'CF: STD Smoothing: 5'; 'RunFile_021.drf Max Power = 582.69'; 'Max Torque = 421.68'; annotation 'Turblown Cast EFR IWG 9180 Turbo System @ 18 psi on pump gas with meth injection Half Bridge, 3.5\" exhaust, TurboSmart Actuator Installed and Tuned by ForceFed Racing'"
+        }
+      ],
+      "confidence": "Numbers clear; chassis unknown.",
+      "notes": ""
+    },
+    {
+      "id": "rejected-fd3s-superstreet-2001-re-amemiya-trust-td78",
+      "summary": "Super Street, March 2001 feature on RE Amemiya's FD3S (Trust TD-78, Titan exhaust, RE Amemiya Redom ECU): '440 wild horses'.",
+      "usable": false,
+      "whyNotUsable": "No chassis-dyno result: the 440 hp is a quoted figure with no dyno, and boost and fuel are not given.",
+      "vehicle": {
+        "chassis": "FD3S",
+        "market": "JDM (Tokyo shop car)",
+        "grade": "",
+        "gearbox": "",
+        "year": ""
+      },
+      "engine": "13B-REW",
+      "dyno": {
+        "make": "none",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "",
+        "pressure": "",
+        "humidity": "",
+        "howKnown": ""
+      },
+      "gear": "",
+      "result": {
+        "peakWheelPower": "not a wheel figure ('440 wild horses')",
+        "peakWheelTorque": "",
+        "howRead": "magazine caption"
+      },
+      "boost": {
+        "peak": "",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "",
+      "mods": {
+        "turbo": "Trust TD-78",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "Titan 80",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "RE Amemiya Redom mini E-type",
+        "cams": "n/a (rotary engine, no camshafts)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "http://www.fd3s.net/magazine_articles/SuperStreet_article_1.html",
+          "accessed": "2026-09-30",
+          "title": "Super Street: Blue Bullet (March 2001), scans on fd3s.net",
+          "kind": "article",
+          "quote": "read from scan p.71: 'A Trust TD-78 turbocharger is part of the reason behind 440 wild horses.' Fast Facts: 'UNDER THE HOOD 13B-REW rotary engine, Trust turbocharger TD-78, C-Type wastegate, intercooler, and pipes, Titan 80 exhaust, and Profec B boost controller; Nismo fuel pump; RE Amemiya Redom mini E-type computer ...'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    }
+  ],
+  "gates": [
+    "None met. No page I used asked for a login, account, terms acceptance, age check, cookie acceptance or download agreement. AusRotary attachments and the Banzai Racing images opened for a guest.",
+    "Not rule-13 gates, but blocked (no gate page was shown, the connection was refused): rx7club.com (HTTP 403, Cloudflare 'error code: 1005', i.e. the site bans our network), rx8club.com and nopistons.com (HTTP 403), racingbeat.com (HTTP 403), precisionturbo.net (HTTP 403), pettitracing.com and rotaryperformance.com (HTTP 429 to curl; the Rotary Performance downpipe page, read through WebFetch, has no dyno data), web.archive.org (connection reset by the network proxy; its availability API returned 429), performance.borgwarner.com (CONNECT rejected by the network proxy), turbodriven.com (expired TLS certificate; not bypassed)."
+  ],
+  "notFound": [
+    "A publicly viewable chassis-dyno SHEET of a completely stock FD. The only stock figures seen (219 whp and 222.4 hp, both Dynojet) sit on rx8club/rx7club, which refused our connection; see the rejected entry. Nearest usable substitutes: the 13,036-mile original-engine car on a Power FC at 12 psi (Rick P) and the Power FC-only car at about 10-13 psi (Tom O).",
+    "rx7club.com: could not check whether third-gen dyno-thread images are viewable without login, because every request was refused (Cloudflare 1005). This includes the threads '1993 Stock port and stock twins dyno', 'My 8374, stock port REW dyno results', 'Dyno Comparison For Each Part Added', 'completely stock...rwhp?', 'BorgWarner EFR 8374 IWG Dyno Results' and '13B-REW stock dynosheet compared to stock dynosheets of other turbo engines'.",
+    "A factory-twins car on a Dynojet with a visible sheet (all such sheets found were Mustang dynos from Banzai Racing).",
+    "BorgWarner's own EFR 7670 / 8374 data and compressor maps (site unreachable); Turblown's distributor figures are used and flagged, including a 74 mm vs 65 mm conflict for the EFR 8374 turbine wheel.",
+    "Precision 6262 maker data (site returned 403).",
+    "The GReddy T88 variant on the stock-port T88 car (David Y), so no map could be attached.",
+    "Turbine housing A/R, manifold and exhaust details for the Banzai GT35R cars.",
+    "Correction mode on the DBPerformance and Carma Performance Dyno Dynamics sheets.",
+    "Sport Compact Car 'Project RX-7' dyno installments: only Parts 2, 3 and 11 are online at fd3s.net and none has a dyno sheet (Part 11 mentions 'our 300-plus hp RX-7' without a dyno result).",
+    "MotoIQ 'Project [Rotary] FD RX-7' (BorgWarner S362) and 'Project FD RX7 Restomod' (bridge/semi-PP, EFR): no dyno installment published among the parts listed (Restomod up to Part 35).",
+    "Magazine dyno tests of stock or lightly modified FDs from Super Street, Modified, Motor Trend, Hot4s or Zoom that are readable online; the web-search budget for the session ran out before more could be tried.",
+    "Japanese tuner data (RE Amemiya, Knight Sports, FEED) with a chassis-dyno sheet and wheel figures; not found."
+  ]
+}

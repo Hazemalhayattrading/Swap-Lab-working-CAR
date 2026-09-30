@@ -1,0 +1,1844 @@
+{
+  "title": "Swap Lab Phase 2b research: altitude and air-pressure presets (Riyadh, Jeddah) and fuels for the fuel model (Saudi pump grades, race fuel and E85 availability, fuel properties, octane/knock/boost, charge cooling)",
+  "researched": "2026-09-30",
+  "agent": "research agent 'part2b altitude-and-fuels'",
+  "brief": "scratchpad research-brief.md (Phase 2, part 2b); CLAUDE.md rules 2 and 13",
+  "method": "Primary documents were preferred: the Saudi eAIP (SANS/GACA), the WMO 1991-2020 climate normals archived at NOAA NCEI, raw WMO CLIMAT messages (via OGIMET), the Deutscher Wetterdienst climate tables, the U.S. Standard Atmosphere 1976 (scanned pages read on the image), NWS, US DOE AFDC, ORNL, NIST, fuel makers' own data sheets and dealer databases, Aramco, SAE abstract pages. Public data feeds that a page loads for every visitor (VP's store locator, Sunoco's dealer table, VP's product feed) were read directly; nothing needed a login. Numbers computed by me (unit conversions, ISA pressures, relative humidity from vapour pressure, corrected annual means, per-litre prices) are marked 'derived' and 'estimated' with the method. IMPORTANT LIMIT: the session's WebSearch budget (200 calls, shared with the other agents) ran out after my first 12 searches, so everything after that came from direct URLs and links found inside fetched pages. Topics that need broad discovery (race fuel at Saudi circuits, E85/ethanol law, Bahrain) are therefore thinner, and are listed under 'notFound'. No terms of use, licence or download agreement was accepted, no account was created, nothing was logged into, no survey or cookie banner was clicked; gated or blocked pages are listed under 'gates'.",
+  "confidenceKey": {
+    "verified": "two independent sources agree, or one primary source plus an independent cross-check",
+    "single-source": "one source (a maker's own data sheet counts as one source)",
+    "estimated": "computed or inferred by me from sourced inputs; method stated"
+  },
+  "accessedNote": "Every source entry was read on 2026-09-30.",
+  "keyNumbers": [
+    "Riyadh King Khalid Intl (OERK) aerodrome elevation 2053 ft = 625.8 m, reference temperature 42.3 C (Saudi eAIP, AIRAC AMDT 08/26 effective 06 AUG 2026). OurAirports 2,049 ft, SkyVector 2052 ft. Jeddah King Abdulaziz Intl (OEJN) 50 ft = 15.2 m, reference temperature 37.9 C (same AIP); OurAirports 48 ft, SkyVector 49 ft.",
+    "Riyadh city about 612 m (GeoNames SRTM3 612 m, ASTER 616 m; Wikipedia 612 m); Britannica 'approximately 1,950 feet (600 meters)'. The in-city WMO station Riyadh Old (40438) is at 620 m. Jeddah city about 7-12 m (GeoNames SRTM3 7 m; Wikipedia 12 m).",
+    "ISA (USSA 1976 eq. 33a, 0-11 km): p = 101325 Pa x [288.15 / (288.15 - 0.0065 H)]^(g0' M0 / (R* L)); with the Standard's constants this is p = 101.325 kPa x (1 - 2.25577e-5 x H)^5.25588 (H geopotential metres). ISA gives 940.3 hPa at OERK's 625.8 m and 1011.4 hPa at OEJN's 15.2 m.",
+    "Measured mean station pressure, WMO 1991-2020 normals: Riyadh KKIA (40437, barometer 614 m) July 933.9 hPa; Riyadh Old (40438, 620 m) July 932.6 hPa; Jeddah KAIA (41024, 17 m) July 1001.6 hPa. CLIMAT July 2022-2025 at KKIA: 933.1-934.6 hPa; Jeddah 1000.4-1001.4 hPa.",
+    "Annual mean station pressure: the published WMO annual values (KKIA 937.2, Jeddah 1001.5 hPa) are pulled down by broken Nov/Dec values in all three Saudi files; corrected (my estimate) KKIA 942.4 hPa, Jeddah 1007.1 hPa; the last 12 CLIMAT months (Aug 2024-Jul 2025) average 942.4 and 1006.5 hPa.",
+    "Riyadh July relative humidity: DWD 15 % daily mean (1961-1990) and 8 % at 15:00 local (1973-1993); derived from the WMO 1991-2020 vapour pressure (6.41 hPa at 36.3 C) about 11 %.",
+    "Aramco retail prices for September 2026: Gasoline 91 SAR 2.18/L, Gasoline 95 SAR 2.33/L, Gasoline 98 SAR 4.64/L; Aramco calls PG98 'an additional option for high-performance and sports vehicles'.",
+    "Race fuel in Saudi Arabia: yes, VP Racing through its listed Saudi distributor Scan Tool Line (Jeddah) and about 60 listed dealers (29 list fuel); STL's shop lists VP MS109 at 480.00 SR and C85 at 444.00 SR per 5-gallon pail, VAT excluded, 'pickup from branch only' (about 25.4 and 23.5 SR/L). Sunoco and ETS list no Saudi or Bahraini outlet. UAE: Emarat Race 102 at Dubai Autodrome's on-site station, AED 9/L; VP distributor Top Speed Performance Parts; Sunoco dealer LBN Motorsport, Abu Dhabi (incl. E85-R). Bahrain: nothing found.",
+    "E85 at pumps: not found in Saudi Arabia, UAE or Bahrain. E85-type race fuels are sold in pails: VP C85 and X85L in Jeddah; Sunoco E85-R listed at an Abu Dhabi dealer.",
+    "Fuel properties: gasoline HoV 350-400 kJ/kg vs ethanol 924 kJ/kg at 25 C (ORNL); per kg of stoichiometric mixture 22 vs 92 kJ/kg (ORNL). E85 per ASTM D5798-21: 51-83 vol% ethanol (AFDC). E85-type race fuels: stoich AFR 9.2-9.8, SG 0.78-0.79, RON 104-108, MON 86.5-95.2, oxygen 30-32 wt% (Sunoco E85-R, VP X85/C85). E85 LHV 83,950-95,450 Btu/gal = 23.4-26.6 MJ/L (AFDC); Sunoco E85-R 12,500 Btu/lb = 29.1 MJ/kg.",
+    "Octane rules from Russ (Ford, SAE 960497): octane requirement 1 ON per 1 deg spark advance, 1 ON per 7 K intake air temperature, 3-4 ON per 10 kPa intake pressure, 5 ON per unit compression ratio. ORNL measured knock-limited spark advance rising 1.11 deg per RON (r2 = 0.99) in a DI engine at 925 kPa NMEP, 1500 rpm.",
+    "Charge cooling: a PFI engine at WOT showed 'no significant charge cooling due to fuel evaporation' (Kar, Cheng, Ishii, SAE 2009-01-1907). DI gives extra cooling beyond PFI of about 70 % of the thermodynamic maximum: 14 C for gasoline to 49 C for E85 (Kasseris & Heywood, SAE 2012-01-1275), worth 5 octane numbers for DI gasoline and 18 for DI E85 (SAE 2012-01-1284)."
+  ],
+  "altitude": [
+    {
+      "id": "alt-oerk-aip",
+      "item": "King Khalid International Airport, Riyadh (OERK): aerodrome elevation and reference temperature",
+      "value": {
+        "elevation_ft": 2053,
+        "elevation_m": 625.8,
+        "referenceTemperature_C": 42.3,
+        "geoidUndulation_ft": -25
+      },
+      "unit": "ft (m derived x 0.3048)",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://aimss.sans.com.sa/assets/FileManagerFiles/AIRAC%20AIP%20AMDT%2008_26_2026_08_06/eAIP/AD%202%20OERK%20RIYADH%20-%20KING%20KHALED%20INTERNATIONAL-en-GB.html",
+          "accessed": "2026-09-30",
+          "title": "AIP Saudi Arabia, AD 2 OERK RIYADH / KING KHALED INTERNATIONAL (eAIP, AIRAC AIP AMDT 08/26), Saudi Air Navigation Services / General Authority of Civil Aviation",
+          "quote": "OERK AD 2.2 AERODROME GEOGRAPHICAL AND ADMINISTRATIVE DATA | 1 ARP coordinates and site at AD N245746 E0464229 1683 M / 159° GEO from THR RWY 15L | 2 Direction and distance from (city) 35 KM North | 3 Elevation/Reference temperature 2053 FT / 42.3° C | 4 Geoid undulation at AD ELEV PSN -25 FT",
+          "location": "AD 2.2 items 1-4",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://aimss.sans.com.sa/assets/FileManagerFiles/History-en-SA.html",
+          "accessed": "2026-09-30",
+          "title": "Published eAIPs - Kingdom of Saudi Arabia - AIM - SANS (list of effective issues)",
+          "quote": "Currently Effective Issue Effective date Publication date Short Description 06 AUG 2026 25 JUN 2026 AIRAC AIP AMDT 08/26",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://aimss.sans.com.sa/assets/FileManagerFiles/AIP%20AMDT%2008_25_2025_06_26/eAIP/AD%202%20OERK%20RIYADH%20-%20KING%20KHALED%20INTERNATIONAL-en-GB.html",
+          "accessed": "2026-09-30",
+          "title": "AIP Saudi Arabia, AD 2 OERK (eAIP, AIP AMDT 08/25, 26 JUN 2025) - earlier issue, same publisher",
+          "quote": "3 Elevation/Reference temperature 2053 FT / 42.3° C",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://ourairports.com/airports/OERK/",
+          "accessed": "2026-09-30",
+          "title": "OurAirports: King Khaled International Airport (OERK)",
+          "quote": "2,049 ft / 625 m MSL",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://skyvector.com/airport/OERK/Riyadh-King-Khaled-International-Airport",
+          "accessed": "2026-09-30",
+          "title": "SkyVector: OERK - Riyadh King Khaled International Airport",
+          "quote": "Elevation is 2052.0 feet MSL",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        }
+      ],
+      "note": "Use the AIP value (2053 ft). The databases differ by 1-4 ft. A SkyVector user comment quoted by the fetch tool mentions '2048 ft' citing an older AIP; not used. The AIP reference temperature (42.3 C) is the aerodrome reference temperature; the site default of 45 C is above it."
+    },
+    {
+      "id": "alt-oejn-aip",
+      "item": "King Abdulaziz International Airport, Jeddah (OEJN): aerodrome elevation and reference temperature",
+      "value": {
+        "elevation_ft": 50,
+        "elevation_m": 15.2,
+        "referenceTemperature_C": 37.9,
+        "geoidUndulation_ft": 15
+      },
+      "unit": "ft (m derived x 0.3048)",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://aimss.sans.com.sa/assets/FileManagerFiles/AIRAC%20AIP%20AMDT%2008_26_2026_08_06/eAIP/AD%202%20OEJN%20JEDDAH%20-%20KING%20ABDULAZIZ%20INTERNATIONAL-en-GB.html",
+          "accessed": "2026-09-30",
+          "title": "AIP Saudi Arabia, AD 2 OEJN JEDDAH / KING ABDULAZIZ INTERNATIONAL (eAIP, AIRAC AIP AMDT 08/26), SANS / GACA",
+          "quote": "OEJN AD 2.2 AERODROME GEOGRAPHICAL AND ADMINISTRATIVE DATA | 1 ARP coordinates and site at AD N214052 E0390922 920 M / 063° from TWR | 2 Direction and distance from (city) 13 NM (24 KM) North of Jeddah Islamic Harbour | 3 Elevation/Reference temperature 50 FT / 37.9° C | 4 Geoid undulation at AD ELEV PSN 15 FT",
+          "location": "AD 2.2 items 1-4",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://aimss.sans.com.sa/assets/FileManagerFiles/AIP%20AMDT%2008_25_2025_06_26/eAIP/AD%202%20OEJN%20JEDDAH%20-%20KING%20ABDULAZIZ%20INTERNATIONAL-en-GB.html",
+          "accessed": "2026-09-30",
+          "title": "AIP Saudi Arabia, AD 2 OEJN (eAIP, AIP AMDT 08/25, 26 JUN 2025) - earlier issue",
+          "quote": "3 Elevation/Reference temperature 50 FT / 37.9° C",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://ourairports.com/airports/OEJN/",
+          "accessed": "2026-09-30",
+          "title": "OurAirports: King Abdulaziz International Airport (OEJN)",
+          "quote": "48 ft / 15 m MSL",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://skyvector.com/airport/OEJN/King-Abdulaziz-International-Airport",
+          "accessed": "2026-09-30",
+          "title": "SkyVector: OEJN - King Abdulaziz International Airport",
+          "quote": "Elevation is 49.0 feet MSL.",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        }
+      ]
+    },
+    {
+      "id": "alt-riyadh-city",
+      "item": "Riyadh city elevation",
+      "value": {
+        "representative_m": 612,
+        "range_seen_m": "600-635"
+      },
+      "unit": "m above sea level",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.geonames.org/108410/riyadh.html",
+          "accessed": "2026-09-30",
+          "title": "GeoNames: Riyadh (geonameId 108410)",
+          "quote": "ca. 612 m ... SRTM3 612 m · ASTER 616 m (coordinates 24.68773, 46.72185)",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://www.britannica.com/place/Riyadh",
+          "accessed": "2026-09-30",
+          "title": "Encyclopaedia Britannica: Riyadh",
+          "quote": "The city of Riyadh is located approximately 1,950 feet (600 meters) above sea level in eastern Najd (\"Highland\")",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Riyadh",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia: Riyadh (infobox; the elevation cites the freemaptools.com 'Elevation Finder')",
+          "quote": "612 m (2,008 ft) ... The city sits at an average elevation of 600 meters (2,000 ft) above sea level",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it); wikitext checked with curl: '| elevation_m = 612'"
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhOld_40438.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh Old (WMO 40438; the old airport inside the city)",
+          "quote": "Station_Name,Riyadh Old ... 40438,24|42|40|N,46|44|18|E,620",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt",
+          "accessed": "2026-09-30",
+          "title": "NOAA NCEI GHCN-Daily station list (ghcnd-stations.txt)",
+          "quote": "SA000040438  24.7000   46.7330  620.0    RIYADH OBS. (O.A.P.            GSN     40438",
+          "howRead": "downloaded with curl and read from the page/file text (first 11 MB)"
+        },
+        {
+          "url": "https://www.dwd.de/DWD/klima/beratung/ak/ak_404380_kt.pdf",
+          "accessed": "2026-09-30",
+          "title": "Deutscher Wetterdienst, 'Klimatafel von Riad (ar-Riyadh) / Saudi-Arabien'",
+          "quote": "Koordinaten: geographische Breite: 24° 43' N, geographische Länge: 46° 44' E ... Stationshöhe: 635 m über NHN",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "Riyadh spreads over a sloping plateau, so there is no single city elevation. 612 m (SRTM at the GeoNames city point) is a good preset; the in-city weather station is at 620 m (WMO/GHCN; DWD gives 635 m for the same station). Wikidata's '612±1 metre' is imported from English Wikipedia, so it is not independent."
+    },
+    {
+      "id": "alt-jeddah-city",
+      "item": "Jeddah city elevation",
+      "value": {
+        "representative_m": 10,
+        "range_seen_m": "7-17"
+      },
+      "unit": "m above sea level",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.geonames.org/105343/jeddah.html",
+          "accessed": "2026-09-30",
+          "title": "GeoNames: Jeddah (geonameId 105343)",
+          "quote": "ca. 7 m ... SRTM3 7 m · ASTER 10 m (coordinates 21.49012, 39.18624)",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jeddah",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia: Jeddah (infobox)",
+          "quote": "Elevation: 12 m (39 ft)",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/Jeddah_KAIA_41024.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Jeddah KAIA (WMO 41024)",
+          "quote": "Station_Name,Jeddah KAIA ... 41024,21|42|37|N,39|11|12|E,17",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.dwd.de/DWD/klima/beratung/ak/ak_410240_kt.pdf",
+          "accessed": "2026-09-30",
+          "title": "Deutscher Wetterdienst, 'Klimatafel von Jeddah (Dschidda), Int. Flugh. / Saudi-Arabien'",
+          "quote": "Koordinaten: geographische Breite: 21° 42' N, geographische Länge: 39° 11' E ... Stationshöhe: 15 m über NHN",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "Coastal city: city centre 7-12 m, airport 15 m, airport weather station 17 m. For the simulation this is sea level within 2 hPa."
+    },
+    {
+      "id": "alt-weather-stations",
+      "item": "Barometer (station) heights of the WMO stations used for the pressure normals",
+      "value": {
+        "40437 Riyadh New (KKIA)": 614,
+        "40438 Riyadh Old": 620,
+        "41024 Jeddah KAIA": 17
+      },
+      "unit": "m",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhNew_40437.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh New (WMO 40437)",
+          "quote": "Station_Name,Riyadh New ... WMO_Number,Latitude,Longitude,Station_Height ... 40437,24|55|31|N,46|43|19|E,614",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhOld_40438.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh Old (WMO 40438)",
+          "quote": "40438,24|42|40|N,46|44|18|E,620",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/Jeddah_KAIA_41024.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Jeddah KAIA (WMO 41024)",
+          "quote": "41024,21|42|37|N,39|11|12|E,17",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "The KKIA barometer (614 m) sits about 12 m below the aerodrome elevation (625.8 m, the highest point of the landing area). Use 614 m when comparing with the station-pressure normals."
+    },
+    {
+      "id": "alt-isa-formula",
+      "item": "International Standard Atmosphere pressure vs altitude (troposphere, 0-11 km)",
+      "value": {
+        "equation_33a": "P = Pb * [ T_M,b / ( T_M,b + L_M,b * (H - Hb) ) ]^( g0' * M0 / ( R* * L_M,b ) )",
+        "constants": {
+          "P0_Pa": 101325.0,
+          "T0_K": 288.15,
+          "L_M0_K_per_km": -6.5,
+          "g0prime": 9.80665,
+          "Rstar_J_per_kmol_K": 8314.32,
+          "M0_kg_per_kmol": 28.9644
+        },
+        "compactForm": "p = 101.325 kPa * (1 - 2.25577e-5 * H)^5.25588  (H in geopotential metres)",
+        "inverseForm_NWS": "h_alt(ft) = (1 - (P_sta/1013.25)^0.190284) * 145366.45"
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335), NASA Technical Reports Server 19770009539",
+          "quote": "Two forms result from this integration, one for the case when L_M,b for a particular layer is not equal to zero, and the other when the value L_M,b is zero. The first of these two expressions is P = P_b · [T_M,b / (T_M,b + L_M,b · (H − H_b))]^[g0'·M0 / (R*·L_M,b)] (33a) ... In these equations g0', M0, and R* are each defined single-valued constants, while L_M,b and H_b are each defined multi-valued constants in accordance with the value of b as indicated in table 4. ... The reference-level value for P_b for b = 0 is the defined sea-level value, P_0 = 101325.0 N/m² (1013.250 mb).",
+          "location": "printed page 12 (PDF page 28), eqs. (33a) and (33b)",
+          "howRead": "scanned page rendered locally and read on the page image (the PDF has no usable text layer)"
+        },
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335), NASA Technical Reports Server 19770009539",
+          "quote": "TABLE 4.—The defined reference levels and gradients of the linearly segmented temperature-height profile from the surface to 86 geometric kilometers | Subscript b 0 | Geopotential height H_b (km') 0 | Molecular-scale temperature gradient L_M,b (K/km') −6.5 | Linear ... TABLE 2.—Adopted constants ... R* 8.31432 × 10³ N·m/(kmol·K) ... g0' 9.80665 m²/(s²·m') ... P0 1.013250 × 10⁵ N/m² (or Pa) ... T0 288.15 K",
+          "location": "printed pages 2-3 (PDF pages 18-19), Tables 2 and 4",
+          "howRead": "scanned page rendered locally and read on the page image (the PDF has no usable text layer)"
+        },
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+          "accessed": "2026-09-30",
+          "title": "U.S. Standard Atmosphere, 1976 (NOAA / NASA / USAF, NASA-TM-X-74335), NASA Technical Reports Server 19770009539",
+          "quote": "The standard sea-level temperature T0 is 288.15 K. This value is based upon two international agreements.",
+          "location": "printed page 4 (PDF page 20)",
+          "howRead": "scanned page rendered locally and read on the page image (the PDF has no usable text layer)"
+        },
+        {
+          "url": "https://www.weather.gov/media/epz/wxcalc/pressureAltitude.pdf",
+          "accessed": "2026-09-30",
+          "title": "NOAA National Weather Service (El Paso WFO) weather calculator notes: 'Pressure Altitude'",
+          "quote": "From the user, a station pressure (P_sta) is given. To calculate the pressure altitude, the station pressure must be in units of millibars (mb). ... Then, the pressure altitude (h_alt) can be calculated using the equation below: h_alt = (1 − (P_sta/1013.25)^0.190284) × 145366.45. The answer will be in units of feet.",
+          "howRead": "downloaded with curl and read from the page/file text (equation typeset; reassembled from the PDF text layer)"
+        }
+      ],
+      "derived": "L/T0 = 0.0065/288.15 = 2.25577e-5 per m; exponent g0'M0/(R*L) = 9.80665 x 28.9644 / (8314.32 x 0.0065) = 5.25588. M0 = 28.9644 kg/kmol is the sum of F_i x M_i over the Standard's Table 3 (my arithmetic). Geopotential vs geometric height at 626 m differs by 0.06 m (r0 = 6356.766 km), so geometric metres can be used. The NWS constants (145366.45 ft = 44,308 m, exponent 0.190284) are slightly different from T0/L = 44,331 m and 1/5.25588 = 0.190263; at OERK they give 940.27 vs 940.30 hPa (0.03 hPa apart). ISA results: 614 m -> 941.6 hPa; 620 m -> 941.0 hPa; 625.8 m -> 940.3 hPa; 612 m -> 941.9 hPa; 15.2 m -> 1011.4 hPa; 17 m -> 1011.2 hPa.",
+      "note": "ICAO Doc 7488 and ISO 2533 are sold documents and were not opened (see gates); the 1976 U.S. Standard Atmosphere's equation and constants were read on the scanned pages."
+    }
+  ],
+  "stationPressure": [
+    {
+      "id": "sp-kkia-normals",
+      "item": "Riyadh King Khalid Intl (WMO 40437, 'Riyadh New', barometer 614 m): 1991-2020 monthly means",
+      "value": {
+        "meanStationLevelPressure_hPa": {
+          "Jan": 948.4,
+          "Feb": 946.9,
+          "Mar": 944.7,
+          "Apr": 942.6,
+          "May": 940.3,
+          "Jun": 936.4,
+          "Jul": 933.9,
+          "Aug": 935.2,
+          "Sep": 939.7,
+          "Oct": 944.6,
+          "Nov_asPublished": 915.8,
+          "Dec_asPublished": 917.4,
+          "Annual_asPublished": 937.2
+        },
+        "meanSeaLevelPressure_hPa": {
+          "Jul": 998.7,
+          "Annual": 1010.1
+        },
+        "meanVapourPressure_hPa": {
+          "Jul": 6.41,
+          "Annual": 7.56
+        },
+        "dailyMeanTemperature_C": {
+          "Jul": 36.3,
+          "Annual": 26.2
+        },
+        "meanDailyMaximum_C": {
+          "Jul": 43.9
+        },
+        "highestDailyMaximum_C": {
+          "Jul": 48.4,
+          "date": "07/2020"
+        }
+      },
+      "confidence": "verified",
+      "julyStationPressure_hPa": 933.9,
+      "annualStationPressure_hPa": {
+        "published": 937.2,
+        "correctedEstimate": 942.4
+      },
+      "sources": [
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhNew_40437.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh New (WMO 40437)",
+          "quote": "10,Mean_Station-Level_Pressure,hPa ... WMO_Number,Parameter_Code,Calculation_Name,Calculation_Code,January,February,March,April,May,June,July,August,September,October,November,December,Annual | 40437,10,Mean,1,948.4,946.9,944.7,942.6,940.3,936.4,933.9,935.2,939.7,944.6,915.8,917.4,937.2 | 40437,,NOY,98,30,30,30,30,30,30,30,30,30,30,30,30,",
+          "location": "parameter 10",
+          "howRead": "downloaded with curl and read from the page/file text. Byte-identical to the version 2.2 file at https://www.ncei.noaa.gov/data/oceans/archive/arc0216/0253808/2.2/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/ (checked with cmp)."
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhNew_40437.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh New (WMO 40437)",
+          "quote": "6,Mean Sea Level Pressure,hPa ... 40437,6,Mean,1,1019.4,1017.1,1013.7,1010.2,1006.4,1001.6,998.7,1000.1,1005.6,1012.1,1016.7,1019.7,1010.1 | 7,Mean_Vapor_Pressure,hPa ... 40437,7,Mean,1,7.34,6.80,7.56,9.04,8.02,5.94,6.41,7.34,7.14,7.60,9.24,8.33,7.56 | 40437,5,Mean,1,14.0,16.7,21.0,26.4,32.2,35.2,36.3,36.0,32.8,27.5,20.4,15.4,26.2 | 40437,3,Mean,1,20.7,23.7,28.0,33.6,39.5,42.8,43.9,43.8,40.9,35.5,27.4,22.3,33.5 | 40437,22,Max,2,33.0,34.5,38.0,42.0,46.0,47.5,48.4,48.2,46.8,42.5,37.0,31.2,48.4",
+          "location": "parameters 3 (daily max), 5 (daily mean), 6 (MSLP), 7 (vapour pressure), 22 (highest daily max)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07025 40437 111 19338 29985 30372014 404370291 5045 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07024 40437 111 19331 29976 30377011 404380301 5052 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2023&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2023 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07023 40437 111 19346 29992 30376008 404470288 5044 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2022&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2022 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07022 40437 111 19331 29977 30369011 404260302 5096 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        }
+      ],
+      "dataQualityIssue": "The November and December station-pressure means (915.8, 917.4 hPa) are about 31 hPa too low: the same file's MSLP for those months (1016.7, 1019.7 hPa) implies about 947 hPa, and the CLIMAT messages for Nov and Dec 2024 report 947.4 and 949.4 hPa. The error equals one missing year counted as zero (915.8 x 30/29 = 947.4; 917.4 x 30/29 = 949.0). The same pattern is in the Riyadh Old and Jeddah files. The published annual mean (937.2) inherits the error.",
+      "derived": "Corrected annual mean = mean of Jan-Oct as published plus Nov 947.4 and Dec 949.0 = 942.4 hPa (my estimate). July check: reducing 933.9 hPa at 614 m and 36.3 C to sea level gives about 999 hPa vs the file's 998.7 hPa, so July is consistent. Pressure altitude of 933.9 hPa (NWS formula) = 2238 ft = 682 m, i.e. Riyadh in July behaves like ISA at about 680 m. Dry-air density at 933.9 hPa: 1.023 kg/m3 at 45 C (83.5 % of 1.225), 1.051 kg/m3 at the July mean 36.3 C."
+    },
+    {
+      "id": "sp-kkia-climat",
+      "item": "KKIA (40437) monthly mean station pressure from CLIMAT messages, Aug 2024 - Jul 2025, and July 2022-2025",
+      "value": {
+        "monthly_hPa": {
+          "2024-08": 934.9,
+          "2024-09": 938.8,
+          "2024-10": 943.7,
+          "2024-11": 947.4,
+          "2024-12": 949.4,
+          "2025-01": 950.3,
+          "2025-02": 947.0,
+          "2025-03": 945.8,
+          "2025-04": 942.1,
+          "2025-05": 939.2,
+          "2025-06": 936.3,
+          "2025-07": 933.8
+        },
+        "twelveMonthMean_hPa": 942.4,
+        "july_hPa": {
+          "2022": 933.1,
+          "2023": 934.6,
+          "2024": 933.1,
+          "2025": 933.8
+        },
+        "julyMeanVapourPressure_hPa": {
+          "2022": 9.6,
+          "2023": 4.4,
+          "2024": 5.2,
+          "2025": 4.5
+        }
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=8&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 08/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 08024 40437 111 19349 29995 30376010 404380303 5072 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=9&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 09/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 09024 40437 111 19388 20044 30343013 404050269 5069 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=10&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 10/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 10024 40437 111 19437 20109 30285036 403460224 5080 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=11&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 11/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 11024 40437 111 19474 20162 30229034 402900167 5088 60005/01 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=12&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 12/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 12024 40437 111 19494 20200 30164032 402270103 5059 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=1&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 01/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 01025 40437 111 19503 20216 30134017 401880081 5066 60015/03 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=2&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 02/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 02025 40437 111 19470 20176 30156031 402110105 5071 60017/04 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=3&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 03/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 03025 40437 111 19458 20150 30212037 402710153 5081 60036/04 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=4&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 04/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 04025 40437 111 19421 20089 30300030 403640229 5056 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=5&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 05/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 05025 40437 111 19392 20049 30342024 404090266 5044 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=6&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 06/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 06025 40437 111 19363 20013 30360016 404290279 5038 60000/00 7//////=",
+          "location": "CLIMAT REPORT column, station 40437",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        }
+      ],
+      "note": "In some months OGIMET's station label for 40437 is wrong ('Dawadmi City', Alt=625 m); the message is the one sent under index 40437 and its pressures match KKIA, not Dawadmi (about 1000 m). July 2025 row of the OGIMET table: 'King Khaled Inter... | 933.8 | 998.5 | - | 37.2 | 1.4 | - | 43.7 | - | 29.1 | - | 4.5'."
+    },
+    {
+      "id": "sp-riyadh-old-normals",
+      "item": "Riyadh Old airport (WMO 40438, 620 m, inside the city): 1991-2020 monthly means",
+      "value": {
+        "meanStationLevelPressure_hPa": {
+          "Jul": 932.6,
+          "Annual_asPublished": 934.4,
+          "Annual_correctedEstimate": 942.3
+        },
+        "meanSeaLevelPressure_hPa": {
+          "Jul": 998.0
+        },
+        "meanVapourPressure_hPa": {
+          "Jul": 6.52
+        },
+        "dailyMeanTemperature_C": {
+          "Jul": 36.8
+        },
+        "meanDailyMaximum_C": {
+          "Jul": 43.4
+        }
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhOld_40438.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh Old (WMO 40438)",
+          "quote": "40438,10,Mean,1,948.1,946.7,944.7,942.7,940.2,936.3,932.6,935.3,939.8,944.8,900.2,901.3,934.4 | 40438,,NOY,98,21,21,21,22,21,21,21,20,20,20,20,20, | 40438,6,Mean,1,1019.9,1017.5,1014.4,1010.7,1006.8,1002.0,998.0,1000.7,1006.2,1012.7,1017.3,1018.5,1010.4 | 40438,7,Mean,1,7.87,7.22,7.66,9.05,8.01,6.08,6.52,7.71,7.19,7.65,9.05,8.50,7.71 | 40438,5,Mean,1,14.6,17.5,21.5,27.2,33.0,36.0,36.8,36.9,33.7,28.5,21.4,16.4,26.9",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "Only 20-22 years in the record. Same Nov/Dec defect (900.2 x 20/19 = 947.6; 901.3 x 20/19 = 948.7). This station no longer appears in the 2022-2025 CLIMAT pages."
+    },
+    {
+      "id": "sp-jeddah-normals",
+      "item": "Jeddah King Abdulaziz Intl (WMO 41024, 17 m): 1991-2020 monthly means and CLIMAT cross-check",
+      "value": {
+        "meanStationLevelPressure_hPa": {
+          "Jan": 1011.5,
+          "Feb": 1011.5,
+          "Mar": 1009.3,
+          "Apr": 1007.0,
+          "May": 1005.2,
+          "Jun": 1002.5,
+          "Jul": 1001.6,
+          "Aug": 1001.9,
+          "Sep": 1004.1,
+          "Oct": 1007.8,
+          "Nov_asPublished": 977.5,
+          "Dec_asPublished": 978.4,
+          "Annual_asPublished": 1001.5
+        },
+        "annualCorrectedEstimate_hPa": 1007.1,
+        "meanSeaLevelPressure_hPa": {
+          "Jul": 1003.4,
+          "Annual": 1008.9
+        },
+        "meanVapourPressure_hPa": {
+          "Jul": 25.18
+        },
+        "dailyMeanTemperature_C": {
+          "Jul": 33.2
+        },
+        "climat_hPa": {
+          "2024-08": 1002.1,
+          "2024-09": 1002.9,
+          "2024-10": 1006.2,
+          "2024-11": 1009.7,
+          "2024-12": 1012.1,
+          "2025-01": 1011.8,
+          "2025-02": 1010.8,
+          "2025-03": 1008.3,
+          "2025-04": 1006.0,
+          "2025-05": 1004.3,
+          "2025-06": 1002.1,
+          "2025-07": 1001.4,
+          "twelveMonthMean": 1006.5,
+          "Jul2022": 1000.4,
+          "Jul2023": 1000.9,
+          "Jul2024": 1000.6
+        }
+      },
+      "confidence": "verified",
+      "julyStationPressure_hPa": 1001.6,
+      "sources": [
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/Jeddah_KAIA_41024.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Jeddah KAIA (WMO 41024)",
+          "quote": "41024,10,Mean,1,1011.5,1011.5,1009.3,1007.0,1005.2,1002.5,1001.6,1001.9,1004.1,1007.8,977.5,978.4,1001.5 | 41024,6,Mean,1,1014.3,1013.3,1011.1,1008.8,1007.0,1004.2,1003.4,1003.7,1005.8,1009.6,1011.8,1014.0,1008.9 | 41024,7,Mean,1,16.92,17.43,18.63,20.66,23.04,24.85,25.18,28.66,30.01,26.95,22.53,19.03,22.82 | 41024,5,Mean,1,23.4,24.0,25.5,28.3,30.7,31.8,33.2,33.2,31.9,30.2,27.6,25.2,28.7",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2025&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2025 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07025 41024 111 10014 20038 30360017 404200304 5195 60000/00 7340///=",
+          "location": "CLIMAT REPORT column, station 41024",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=12&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 12/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 12024 41024 111 10121 20147 30263002 403130224 5160 60002/01 7253///=",
+          "location": "CLIMAT REPORT column, station 41024",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=11&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 11/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 11024 41024 111 10097 20122 30291015 403370257 5215 60005/02 7254///=",
+          "location": "CLIMAT REPORT column, station 41024",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        },
+        {
+          "url": "https://www.ogimet.com/cgi-bin/gclimat?lang=en&mode=1&state=Saud&ind=40437&ord=REV&verb=no&year=2024&mes=7&months=12",
+          "accessed": "2026-09-30",
+          "title": "OGIMET 'Climat report' country page, Saudi Arabia, 07/2024 (decoded WMO CLIMAT messages; columns 'PRESSURE (HPa): P0 | Sea')",
+          "quote": "CLIMAT 07024 41024 111 10006 20029 30361020 404150315 5215 60000/00 7336///=",
+          "location": "CLIMAT REPORT column, station 41024",
+          "howRead": "downloaded with curl and read from the page/file text; group 1PPPP = mean station-level pressure (tenths of hPa, thousands digit dropped), group 2PPPP = mean sea-level pressure, group 5eee = mean vapour pressure (tenths of hPa); the page's own table shows the same numbers under 'P0' and 'Sea'"
+        }
+      ],
+      "dataQualityIssue": "Same Nov/Dec defect as Riyadh (977.5 x 30/29 = 1011.2; 978.4 x 30/29 = 1012.1; CLIMAT Nov/Dec 2024: 1009.7 and 1012.1 hPa).",
+      "derived": "Corrected annual mean 1007.1 hPa (my estimate). CLIMAT 12-month mean Aug 2024-Jul 2025 = 1006.5 hPa. July RH estimated from 25.18 hPa vapour pressure at 33.2 C: about 50 %."
+    },
+    {
+      "id": "sp-riyadh-july-rh",
+      "item": "Riyadh July mean relative humidity",
+      "value": {
+        "DWD_dailyMean_1961_1990_pct": 15,
+        "DWD_1500LT_1973_1993_pct": 8,
+        "DWD_0600LT_1973_1993_pct": 16,
+        "derivedFromWMO1991_2020_pct": 10.6,
+        "derivedFromCLIMAT_July2025_pct": 7.1,
+        "Wikipedia_pct": 10
+      },
+      "unit": "%",
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://www.dwd.de/DWD/klima/beratung/ak/ak_404380_kt.pdf",
+          "accessed": "2026-09-30",
+          "title": "Deutscher Wetterdienst, 'Klimatafel von Riad (ar-Riyadh) / Saudi-Arabien' (station 40438, 635 m)",
+          "quote": "JAHR JAN FEB MRZ APR MAI JUN JUL AUG SEP OKT NOV DEZ ... RELATIVE LUFTFEUCHTE Mittl. Tagesmittel [%] 29 50 40 35 33 22 14 15 14 18 24 37 46 1990 1961 | Mittel zur Ortszeit 06 Uhr [%] 36 60 52 47 43 29 19 16 18 21 31 46 60 1993 1973 | Mittel zur Ortszeit 15 Uhr [%] 19 32 27 24 19 13 8 8 8 9 13 22 33 1993 1973",
+          "howRead": "downloaded with curl and read from the page/file text (PDF text layer, values in reading order); columns are JAHR (year) then JAN-DEZ; the two trailing years are the period (1961-1990 for the daily mean, 1973-1993 for the 06:00 and 15:00 local means)"
+        },
+        {
+          "url": "https://www.nodc.noaa.gov/archive/arc0216/0253808/6.6/data/0-data/Region-2-WMO-Normals-9120/SaudiArabia/CSV/RiyadhNew_40437.csv",
+          "accessed": "2026-09-30",
+          "title": "World Meteorological Organization Climate Normals for 1991-2020, Single Station Data Sheet (NCEI Accession 0253808, version 6.6; submitted by the Kingdom of Saudi Arabia), Riyadh New (WMO 40437)",
+          "quote": "40437,7,Mean,1,7.34,6.80,7.56,9.04,8.02,5.94,6.41,7.34,7.14,7.60,9.24,8.33,7.56 | 40437,5,Mean,1,14.0,16.7,21.0,26.4,32.2,35.2,36.3,36.0,32.8,27.5,20.4,15.4,26.2",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Riyadh",
+          "accessed": "2026-09-30",
+          "title": "Wikipedia: Riyadh, climate table (Weather box)",
+          "quote": "Average relative humidity (%): 47, 36, 32, 28, 17, 11, 10, 12, 14, 20, 36, 45 ... Source 1: NOAA, Source 2: Time and Date (dewpoints, 1985-2015)",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it); the NOAA reference in the wikitext is the WMO normals CSV, which has no humidity, so the % values appear to come from Time and Date dewpoints (not primary)"
+        }
+      ],
+      "derived": "RH = e / es(T) with the Magnus-type formula es = 6.112 exp(17.62 t / (243.12 + t)) hPa (standard meteorological approximation; its WMO-No. 8 wording was not re-checked in this session). WMO 1991-2020 July: e = 6.41 hPa, T = 36.3 C -> es = 60.3 hPa -> RH about 10.6 %. CLIMAT July 2025: e = 4.5 hPa, T = 37.2 C -> about 7 %. Using monthly means of e and T only approximates the mean of RH.",
+      "note": "No Saudi NCM publication of relative humidity was opened (no search budget). Best preset: 10-15 % for a July day-mean; about 8 % in mid-afternoon."
+    }
+  ],
+  "pumpFuels": [
+    {
+      "id": "pf-aramco-prices-sep2026",
+      "item": "Saudi pump gasoline grades and official prices, September 2026",
+      "value": {
+        "PG91_SAR_per_L": 2.18,
+        "PG95_SAR_per_L": 2.33,
+        "PG98_SAR_per_L": 4.64,
+        "diesel_SAR_per_L": 1.79
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+          "accessed": "2026-09-30",
+          "title": "Aramco: Retail fuels (gasoline and diesel range, current Saudi Arabia prices)",
+          "quote": "Prices for the month of September 2026 (﷼ /liter) | 2.18 Gasoline 91 | 2.33 Gasoline 95 | 4.64 Gasoline 98 | ... Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia. | PG91 and PG95 gasoline is suitable for all vehicles, while PG98 gasoline is an additional option for high-performance and sports vehicles. | All of our gasoline fuels are unleaded.",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it) (curl was blocked by the site's CDN with HTTP 403; the fetch tool limits quotes to short segments, so these are several short verbatim segments)"
+        }
+      ],
+      "note": "The diesel price (1.79) came from the fetch tool's summary, not a verbatim segment. The same page says 'our fuels are color coded for easy visual identification at the pump' and 'As of the end of 2025, our Saudi network of 185 stations includes both Aramco and TotalEnergies-branded locations' (that is Aramco's own retail network, not all Saudi stations). This is newer than the repo's F&L Asia citation: PG98 is now on sale and priced at about twice PG95."
+    },
+    {
+      "id": "pf-pg98-rollout",
+      "item": "Where PG98 is sold",
+      "value": "Initial rollout from early 2026: Riyadh, Jeddah, the Dammam metropolitan area and key highways linking them",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+          "accessed": "2026-09-30",
+          "title": "F&L Asia: 'Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves' (9 January 2026)",
+          "quote": "Saudi Aramco will introduce a 98-octane petrol grade in Saudi Arabia from early 2026 ... The initial rollout will cover Riyadh, Jeddah and the Dammam metropolitan area, as well as key highways linking these cities. ... Saudi Arabia currently sells 91 RON and 95 RON petrol, using the Research Octane Number (RON) standard ... Saudi Aramco said pricing for Gasoline 98 will be published on its official retail fuel pricing platform",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it)"
+        }
+      ],
+      "note": "Aramco's retail page does not list PG98 stations or cities (its station map did not load as text). No Aramco press release was found without search. PG91 and PG95: Aramco says they suit all vehicles; that they are at every station was not verified (Wikipedia says 'Two types of fuel are available at all petrol stations in Saudi Arabia', with 2019 prices, unsourced there)."
+    },
+    {
+      "id": "pf-gso-2196",
+      "item": "GCC gasoline specification",
+      "value": "GSO 2196:2026 'Gulf Guide for Specifications of Unleaded Gasoline Fuel', 91, 95 and 98 RON, approved 14 April 2026; 17 pages, sold",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.gso.org.sa/store/standards/GSO:1063773/GSO%202196:2026?lang=en",
+          "accessed": "2026-09-30",
+          "title": "GSO 2196:2026 - Standards Store - GCC Standardization Organization",
+          "quote": "Gulf Guide for Specifications of Unleaded Gasoline Fuel | Specification and requirements for Unleaded Gasoline (91 RON, 95 RON, and 98 RON) | Approved on 14 April 2026",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it); price 145.0 shown, full text must be bought (not bought; see gates)"
+        }
+      ],
+      "note": "MON limits, density, oxygen/ethanol limits of the GCC grades are inside the paid standard and were not seen."
+    }
+  ],
+  "raceFuelAvailability": [
+    {
+      "id": "rf-ksa-vp-distributor",
+      "item": "Saudi Arabia: VP Racing Fuels distributor and dealers",
+      "value": {
+        "distributor": "Scan Tool Line (STL), corporate office Prince Sultan Rd, Al Mohammadiyyah, Jeddah; retail shop Al Marwah District, Jeddah",
+        "listedSaudiOutlets": 62,
+        "outletsListingFuel": 29,
+        "cities": [
+          "Riyadh",
+          "Jeddah",
+          "Dammam",
+          "Al Khobar",
+          "Makkah",
+          "Madinah",
+          "Taif",
+          "Al Majma'ah",
+          "Buraydah",
+          "Yanbu",
+          "Al Hofuf/Al Mubarraz",
+          "Tarut"
+        ]
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://sl-front.proguscommerce.com/api/locations?shopId=2154&shop=vpracingfuels.myshopify.com",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels store-locator data feed (Progus Store Locator) behind https://vpracingfuels.com/pages/international-locator (group 'International')",
+          "quote": "{\"name\": \"SCAN TOOL LINE CORPORATE OFFICE\", \"country\": \"Saudi Arabia\", \"city\": \"Jeddah\", \"address\": \"Prince Sultan Rd, Al Mohammadiyyah\", tags (ids resolved): Distributor, Bronze Level, groups: International, \"info\": \"PRODUCTS SOLD:\\nContainers\\nFuel\\nFuel Additives\\nCoolant Fluid\\nCoolant Additive\\nHobby Fuel\\nTrack Prep\", \"website\": \"www.stltools.com/en\"}",
+          "location": "location id 1591467",
+          "howRead": "downloaded with curl and read from the page/file text; tag ids resolved with the same widget's tag list (7520 = 'Distributor')"
+        },
+        {
+          "url": "https://sl-front.proguscommerce.com/api/locations?shopId=2154&shop=vpracingfuels.myshopify.com",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels store-locator data feed (Progus Store Locator) behind https://vpracingfuels.com/pages/international-locator (group 'International')",
+          "quote": "{\"name\": \"Bin Jumah Motor Sport\", \"city\": \"Riyadh\", \"address\": \"Eastern Ring Rd Ext, Al-Manakh\", tags (ids resolved): Dealer, \"info\": \"Authorized by Scan Tool Line\\nProducts Sold:\\nFuels\\nFuel Additives\\nCoolant Fluid\\nCoolant Additive\"} | {\"name\": \"4500 Performance\", \"city\": \"Riyadh\", \"info\": \"Authorized by Scan Tool Line\\nProducts Sold:\\nFuels\\nFuel Additives\\nCoolant Fluid\\nCoolant Additive\\nContainers\"} | {\"name\": \"Torque Car Shop & Dyno\", \"city\": \"Jeddah\", \"info\": \"Authorized by Scan Tool Line\\nProducts Sold:\\nFuel\\nFuel Additives\"}",
+          "location": "location ids 1654996, 1649599, 1654994",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/pages/international-locator",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels: Store Locator - International (page that embeds the locator above)",
+          "quote": "<div id=\"progus-store-locator\"></div> ... (document,\"iframe\",\"https://sl-widget.proguscommerce.com/main\",\"\",\"\",\"International\")",
+          "howRead": "downloaded with curl and read from the page/file text (shows the page loads the locator with group 'International')"
+        }
+      ],
+      "note": "Counts are mine: 62 of the feed's 25,235 locations are in Saudi Arabia (country 'Saudi Arabia'/'SAudi Arabia'); 29 of them list 'Fuel' or 'Fuels' (not just additives). The feed does not say which fuels each dealer stocks, pack sizes or prices."
+    },
+    {
+      "id": "rf-ksa-stl-prices",
+      "item": "Saudi Arabia: VP race fuels and prices at Scan Tool Line's online shop (Jeddah)",
+      "value": {
+        "VP_MS109_5gal_SR_exVAT": 480.0,
+        "VP_C85_5gal_SR_exVAT": 444.0,
+        "VP_C16_5gal_SR_exVAT": 490.0,
+        "VP_C10_SR_exVAT_packNotStated": 492.0,
+        "VP_X85L_SR_exVAT_packNotStated": 358.0,
+        "otherListed": [
+          "Q16 5 gallon",
+          "M1 methanol 5 gallon",
+          "X98 ethanol 5 gallon",
+          "Speed Sauce methanol 1 US gallon"
+        ],
+        "collection": "pickup from branch only"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/2222-race-fuel-ms109-5gallon-3291",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'RACE FUEL MS109 - 5GALLON'",
+          "quote": "RACE FUEL MS109 - 5GALLON | استلام من الفرع فقط | ... An unleaded, highly oxygenated fuel ... Recommended for applications with up to 25 lbs of boost and naturally aspirated engines with compression ratios up to 13:1. | 480.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text; page metadata itemprop price 480.0, priceCurrency SAR; the Arabic line means 'pickup from the branch only' (my translation)"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/6452-ethanol-c85-5-gallon-3282",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'ETHANOL C85 5 GALLON'",
+          "quote": "ETHANOL C85 5 GALLON | استلام من الفرع فقط | If you’re committed to using E85 type fuels, VP C85 is by far your best choice. ... | 444.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/1162-race-fuel-c16-5gallon-3285",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'RACE FUEL C16 - 5GALLON'",
+          "quote": "RACE FUEL C16 - 5GALLON | ... Use it in turbocharged engines, supercharged engines, and nitrous applications with CRs up to 17:1. | 490.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/2512-x85l-blended-with-85-ethanol-and-15-3664",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'X85L Blended with 85% ethanol and 15%'",
+          "quote": "X85L Blended with 85% ethanol and 15% | ... Blended with 85% ethanol and 15% top quality hydrocarbons every time, unlike pump E85 which is very inconsistent. X85L is leaded to provide additional detonation protection. | 358.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/1102-vp-racing-c10-3585",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'VP RACING C10'",
+          "quote": "VP RACING C10 | ... We design VP C10 as the best non-oxygenated unleaded racing fuel on the market. ... | 492.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/category/vp-racing-racing-fuels-41",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL) online shop, category 'VP Racing - Racing Fuels'",
+          "quote": "ETHANOL C85 5 GALLON | VP RACING C10 | RACE FUEL MS109 - 5GALLON | SPEED SAUCE US GALLON - METHANOL | RACE FUEL C16 - 5GALLON | RACE FUEL Q16 - 5GALLON | MATHANOL M1 - 5GALLON | ETHANOL X 98 5 GALLON | X85L Blended with 85% ethanol and 15%",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "derived": "Per litre ex VAT (5 US gal = 18.927 L): MS109 25.36 SR/L, C85 23.46 SR/L, C16 25.89 SR/L. For comparison PG98 is 4.64 SAR/L at the pump (Aramco, Sep 2026). VAT would be extra (rate not checked in this session).",
+      "note": "Online listing; stock was not checked. Pails only (no drum price seen), collection at the branch."
+    },
+    {
+      "id": "rf-ksa-sunoco-ets",
+      "item": "Saudi Arabia and Bahrain: Sunoco Race Fuels and ETS dealer lists",
+      "value": "Sunoco's dealer table: no outlet in Saudi Arabia or Bahrain (one in the UAE). ETS: US dealers only.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://api.hubapi.com/cms/v3/hubdb/tables/412218735/rows?portalId=49737302&limit=2000",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels dealer table (HubDB table 412218735) loaded by https://www.sunocoracefuels.com/fuel-finder",
+          "quote": "1760 rows; country counts: US 1713, PR 20, GB 2, CW 2, NO 1, IE 1, BG 1, DK 1, IT 1, AE 1, KE 1, NL 1, ES 1, FR 1, SE 1, PT 1, EC 1, KY 1, CO 1, CR 1, GT 1, PA 1, TT 1 (4 rows without a country are distributor stubs)",
+          "howRead": "downloaded with curl and read from the page/file text; the 'quote' here is my tally of the 'country' field over all rows (the API URL is the one the site's own fuel-finder script builds)"
+        },
+        {
+          "url": "https://www.etsracingfuels.com/pages/dealers-and-distributors",
+          "accessed": "2026-09-30",
+          "title": "ETS Racing Fuels: Dealers and distributors",
+          "quote": "ETS continues to add dealerships across the US. Here is our current list",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it); no Gulf country appears on the page"
+        }
+      ]
+    },
+    {
+      "id": "rf-uae-dubai-autodrome",
+      "item": "UAE: race fuel at Dubai Autodrome's on-site station",
+      "value": {
+        "fuel": "Emarat Race 102 (102 octane)",
+        "price_AED_per_L": 9
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://dubaiautodrome.ae/race102/",
+          "accessed": "2026-09-30",
+          "title": "Race 102 - Dubai Autodrome",
+          "quote": "Unleash Power with Emarat Race 102! | Looking for that little bit extra? We are happy to introduce Emarat Race102! | In partnership with Emarat, we’re bringing our clients the convenience of high-performance racing fuel right from our on-site petrol station. | For those seeking a boost in performance and acceleration, Emarat’s 102 Octane Racing Fuel is the ultimate choice. | Price: | AED 9/L | Book Your Fuel | *Please ensure that octane 102 fuel is suitable for your vehicle. Dubai Autodrome is not responsible for any damage caused by the use of the fuel.",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "The page does not say RON or (R+M)/2, leaded or unleaded, or give a spec sheet. The Autodrome's home page lists Emarat as 'Official Fuel Partner'."
+    },
+    {
+      "id": "rf-uae-vp-sunoco",
+      "item": "UAE: VP distributor and Sunoco dealer",
+      "value": {
+        "VP_distributor": "Top Speed Performance Parts (Dubai - Ras Al Khor; Sharjah - Industrial Area 5; Abu Dhabi - Mussafah M34 and Industrial Area)",
+        "VP_listedUAEOutlets": 24,
+        "Sunoco_dealer": "LBN Motorsport, Plot 23, opposite the Village Mall, Abu Dhabi (supplied via 'Anglo')"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://sl-front.proguscommerce.com/api/locations?shopId=2154&shop=vpracingfuels.myshopify.com",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels store-locator data feed (Progus Store Locator) behind https://vpracingfuels.com/pages/international-locator (group 'International')",
+          "quote": "{\"name\": \"TOP SPEED PERFORMANCE PARTS\", \"country\": \"United Arab Emirates\", \"city\": \"Dubai\", \"address\": \"opposite Automech - 18B St - Ras Al Khor Industrial Area - Ras Al Khor Industrial Area 2\", tags (ids resolved): Distributor, Emerald Level, \"info\": \"PRODUCTS SOLD:\\nContainers\\nFuel\\nFuel Additives\\nLubricants\", \"website\": \"www.instagram.com/topspeed.dubai/\"}",
+          "location": "location ids 1591468-1591471",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://api.hubapi.com/cms/v3/hubdb/tables/412218735/rows?portalId=49737302&limit=2000",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels dealer table (HubDB 412218735) behind sunocoracefuels.com/fuel-finder",
+          "quote": "{\"country\": \"AE\", \"address\": \"Plot 23, Opposite the Village Mall\", \"city\": \"Abu Dhabi\", \"fuel_types_sizes_raw\": \"260 GT, 260 GT Plus, 260 GTX, E85-R, EX02, FR, Green E15, Maximal, MaxNOS, MO2X, Optima, SR18, Supreme,\", \"type\": \"Dealer\", \"distributor\": \"Anglo\", \"name\": \"Lbn Motorsport\"}",
+          "location": "row id 221997843332 (updated 2026-09-16)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "The feeds also list VP distributors in Kuwait (UGR Car Parts, Shuwaikh) and Qatar (V2 Parts, Doha)."
+    },
+    {
+      "id": "rf-bahrain",
+      "item": "Bahrain: race fuel",
+      "value": "Not found",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://sl-front.proguscommerce.com/api/locations?shopId=2154&shop=vpracingfuels.myshopify.com",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels store-locator data feed (Progus Store Locator) behind https://vpracingfuels.com/pages/international-locator (group 'International')",
+          "quote": "No location with a Bahrain address or coordinates (lat 25.8-26.4 N, lon 50.3-50.8 E) in the 25,235-row feed",
+          "howRead": "downloaded with curl and read from the page/file text; my check"
+        },
+        {
+          "url": "https://www.bahraingp.com/",
+          "accessed": "2026-09-30",
+          "title": "Bahrain International Circuit home page",
+          "quote": "No occurrence of 'fuel' or 'octane' in the page",
+          "howRead": "downloaded with curl and read from the page/file text; my check"
+        }
+      ],
+      "note": "Bapco Energies' site sits behind a bot-check page (see gates). Nothing found does not mean nothing exists: this needs a search pass."
+    }
+  ],
+  "e85Availability": [
+    {
+      "id": "e85-pumps-ksa",
+      "item": "E85 or other ethanol blends at Saudi pumps",
+      "value": "Not found. Aramco's retail range is PG91, PG95, PG98 and diesel only.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+          "accessed": "2026-09-30",
+          "title": "Aramco: Retail fuels",
+          "quote": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia.",
+          "howRead": "read with the WebFetch tool (page converted to text by the tool; quote as returned by it); the fetch tool reported no mention of E85, ethanol or oxygenates on the page"
+        }
+      ]
+    },
+    {
+      "id": "e85-distributors-ksa",
+      "item": "E85-type fuel sold in Saudi Arabia by a distributor",
+      "value": {
+        "VP_C85_5gal_SR_exVAT": 444.0,
+        "VP_X85L_SR_exVAT": 358.0,
+        "VP_X98_ethanol": "listed",
+        "seller": "Scan Tool Line, Jeddah (pickup from branch only)"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/6452-ethanol-c85-5-gallon-3282",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'ETHANOL C85 5 GALLON'",
+          "quote": "ETHANOL C85 5 GALLON | ... 444.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.stltools.com/en/shop/vp-racing-racing-fuels-41/2512-x85l-blended-with-85-ethanol-and-15-3664",
+          "accessed": "2026-09-30",
+          "title": "Scan Tool Line (STL), Jeddah - online shop, category 'VP Racing - Racing Fuels', product page 'X85L'",
+          "quote": "X85L is leaded to provide additional detonation protection. | 358.00 | SR | VAT Excluded",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "VP C85 contains MTBE per VP ('Do not use with fuel injectors that are not compatible with MTBE') and X85L is leaded, so neither is a clean E85 match; X85 (unleaded) is not listed by STL. Observation only (not a legal finding): the distributor openly lists ethanol race fuels (C85, X98, X85L), so ethanol race fuel is being imported and sold; the legal status of fuel ethanol under Saudi alcohol rules was not found."
+    },
+    {
+      "id": "e85-uae-bahrain",
+      "item": "E85 in the UAE and Bahrain",
+      "value": "No pump E85 found. UAE: Sunoco lists E85-R at LBN Motorsport, Abu Dhabi (dealer). Bahrain: nothing found.",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://api.hubapi.com/cms/v3/hubdb/tables/412218735/rows?portalId=49737302&limit=2000",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels dealer table (HubDB 412218735)",
+          "quote": "\"city\": \"Abu Dhabi\" ... \"fuel_types_sizes_raw\": \"260 GT, 260 GT Plus, 260 GTX, E85-R, EX02, FR, Green E15, Maximal, MaxNOS, MO2X, Optima, SR18, Supreme,\" ... \"name\": \"Lbn Motorsport\"",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "ENOC and ADNOC fuel pages returned 403/404 and Bapco's site is bot-gated, so UAE/Bahrain pump grades were not verified this session."
+    }
+  ],
+  "fuelProperties": [
+    {
+      "id": "fp-afdc-energy",
+      "item": "Lower heating value per volume: gasoline, E100, E85; E85 ethanol range; pump octane",
+      "value": {
+        "gasoline_E10_to_E0_LHV_Btu_per_gal": "112,114-116,090",
+        "gasoline_LHV_MJ_per_L": "31.25-32.36",
+        "E100_LHV_Btu_per_gal": 76330,
+        "E100_LHV_MJ_per_L": 21.27,
+        "E85_LHV_Btu_per_gal": "83,950-95,450",
+        "E85_LHV_MJ_per_L": "23.40-26.60",
+        "E85_ethanol_vol_pct": "51-83",
+        "gasoline_pumpOctane_AKI": "84-93",
+        "ethanol_pumpOctane_AKI": 110
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://afdc.energy.gov/files/u/publication/fuel_comparison_chart.pdf",
+          "accessed": "2026-09-30",
+          "title": "Alternative Fuels Data Center (US DOE), 'Fuel Properties Comparison', March 2024, DOE/GO-102024-6212",
+          "quote": "Energy Content (lower heating value) 112,114– 116,090 Btu/gal (c) [Gasoline/E10] ... 76,330 Btu/gal for E100 (c) ... Pump Octane Number 84–93 (f) [Gasoline/E10] ... 110 (i) [Ethanol/E100] ... (a) 1 gallon of E85 contains 73%– 83% of the energy in 1 GGE. ... [5] E85 is a high-level gasoline-ethanol blend containing 51% to 83% ethanol, depending on geography and season. Ethanol content is lower in the winter months in cold climates to ensure a vehicle starts. Based on composition, E85's lower heating value varies from 83,950 to 95,450 Btu/gal.",
+          "location": "pages 1-3",
+          "howRead": "downloaded with curl and read from the page/file text (PDF text layer)"
+        }
+      ],
+      "derived": "1 Btu = 1055.056 J, 1 US gal = 3.785412 L. Source (c) for the LHVs is Argonne's GREET 2023 fuel specifications."
+    },
+    {
+      "id": "fp-astm-d5798",
+      "item": "E85 specification (ASTM D5798-21) as tabulated by the US DOE",
+      "value": {
+        "ethanol_vol_pct": "51-83",
+        "methanol_vol_pct_max": 0.5,
+        "water_mass_pct_max": 1.0,
+        "sulfur_mg_per_kg_max": 80,
+        "vapourPressure_psi_class1_to_4": "5.5-9.0 / 7.0-9.5 / 8.5-12.0 / 9.5-15.0"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://afdc.energy.gov/fuels/ethanol-e85-specs",
+          "accessed": "2026-09-30",
+          "title": "AFDC: E85 Flex Fuel Specification",
+          "quote": "ASTM International developed a specification for gasoline-ethanol blends containing 51% to 83% ethanol ... D5798-21 Standard Specification for Ethanol Fuel Blends for Flexible-Fuel Automotive Spark-Ignition Engines | Vapor Pressure, psi | D4953 or D5191 | 5.5-9.0 | 7.0-9.5 | 8.5-12.0 | 9.5-15.0 | Ethanol Content, vol% | D5501 | 51-83 | Methanol, vol% | D5501 | 0.5, maximum | Sulfur, mg/kg | D5453 or D7039 | 80, maximum | ... Water, mass% | E203, E1064, or D7923 | 1.0, maximum",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2013-01-0888/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2013-01-0888: The Impact of Low Octane Hydrocarbon Blending Streams on the Knock Limit of “E85” (Szybist, West, ORNL) (SAE Mobilus abstract page)",
+          "quote": "The ASTM D5798 specification for high level ethanol blends, commonly called “E85,” underwent a major revision in 2011. The minimum ethanol content was revised downward from 68 vol% to 51 vol%, which combined with the use of low octane blending streams such as natural gasoline introduces the possibility of a lower octane “E85” fuel.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "note": "The ASTM standard itself is sold and was not opened."
+    },
+    {
+      "id": "fp-hov",
+      "item": "Latent heat of vaporisation: gasoline, ethanol, blends; per kg of stoichiometric mixture",
+      "value": {
+        "gasoline_kJ_per_kg_25C": "350-400",
+        "ethanol_kJ_per_kg_25C": 924,
+        "ethanol_NIST_kJ_per_mol": 42.3,
+        "ethanol_NIST_derived_kJ_per_kg": 918,
+        "perKgStoichMixture_hydrocarbon_kJ_per_kg": 22,
+        "perKgStoichMixture_ethanol_kJ_per_kg": 92,
+        "blendFit_E0_to_E50": "HoV = 349.6 + 6.49 x (ethanol vol%) kJ/kg",
+        "E85_estimate_kJ_per_kg": "about 840 (estimated)"
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "However, at 25°C, the heat of vaporization of gasoline boiling-range hydrocarbons is 350 to 400 kJ/kg, while that of ethanol is 924 kJ/kg. The heat of vaporization difference is even greater when based on a mass stoichiometric mixture basis, in which the value for hydrocarbon is 22 kJ/kg while that for ethanol is 92 kJ/kg.",
+          "location": "page 3",
+          "howRead": "downloaded with curl and read from the page/file text (PDF text layer)"
+        },
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "Figure 1. Heat of vaporization as a function of ethanol content ... DHA Intercept=349.6 Slope=6.49 (fit to blends from 0 to 50 vol% ethanol; y-axis 'Heat of Vaporization, kJ/kg')",
+          "location": "page 4, Figure 1",
+          "howRead": "page rendered locally and read on the figure image"
+        },
+        {
+          "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C64175&Units=SI&Mask=4",
+          "accessed": "2026-09-30",
+          "title": "NIST Chemistry WebBook, SRD 69: Ethanol, phase change data",
+          "quote": "ΔvapH° | 42.3 ± 0.4 | kJ/mol | AVG | N/A | Average of 12 out of 13 values ... Molecular weight: 46.0684",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2015-01-0763/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2015-01-0763: Heat of Vaporization Measurements for Ethanol Blends Up To 50 Volume Percent in Several Hydrocarbon Blendstocks and Implications for Knock in SI Engines (Chupka et al., NREL) (SAE Mobilus abstract page)",
+          "quote": "A striking feature of the HOV results was the insensitivity of HOV to the hydrocarbon blendstock for temperatures up to 150°C - all four hydrocarbon blendstocks had essentially the same HOV in kJ/kg and exhibited the same HOV response to blending with ethanol.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "derived": "NIST: 42.3 kJ/mol / 46.0684 g/mol = 918 kJ/kg. E85 estimate: mass-weighted 924 (ethanol) and 375 (gasoline) with ethanol mass fraction 0.857 for E85 (densities 0.789 and 0.745 kg/L): about 846 kJ/kg; for real E85 with 51-83 vol% ethanol, about 660-835 kJ/kg. Not measured; the ORNL linear fit is only for E0-E50.",
+      "doubt": "Kar et al. (SAE 2008-01-0317, Clausius-Clapeyron from vapour pressure) found blend HoV is not linear above E20 ('the value then decreases a little and appears to flatten out between E30 and E60. After E60, it begins to increase again'); ORNL's direct DSC/TGA and DHA methods found a linear rise to E50."
+    },
+    {
+      "id": "fp-en228",
+      "item": "European pump gasoline (EN 228) density, oxygen and ethanol limits (proxy for pump gasoline properties)",
+      "value": {
+        "density_15C_kg_per_m3": "720-775",
+        "oxygen_mass_pct_max": 2.7,
+        "ethanol_vol_pct_max_E5": 5.0,
+        "RON_min_SuperPlus": 98.0,
+        "MON_min_SuperPlus": 88.0
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://via-energy.de/wp-content/uploads/2019/11/VE-Produktspezifikation-OK-98.pdf",
+          "accessed": "2026-09-30",
+          "title": "VIA Energy: Produktspezifikation Ottokraftstoff 98 - Super Plus schwefelfrei gemäß DIN EN 228 (Juli 2019)",
+          "quote": "Dichte bei 15°C 720 kg/m³ min. DIN EN ISO 3675 775 kg/m³ max. DIN EN ISO 12185 ... ROZ korrigiert (1) 98,0 min. DIN EN ISO 5164 MOZ korrigiert (1) 88,0 min. DIN EN ISO 5163 ... Ethanol 5,0 max. DIN EN ISO 22854 ... Sauerstoff der vorstehenden Verbindungen 2,7 % (m/m) max.",
+          "howRead": "downloaded with curl and read from the page/file text (PDF text layer)"
+        }
+      ],
+      "note": "The Saudi GSO 2196 limits were not seen (paid). Use EN 228's density range as the pump-gasoline range."
+    },
+    {
+      "id": "fp-sunoco-sheets",
+      "item": "Sunoco race fuels: maker's typical properties",
+      "value": {
+        "260 GT (100 AKI, E9.8)": {
+          "RON": 105,
+          "MON": 95,
+          "AKI": 100,
+          "SG": 0.734,
+          "stoichAFR": 14.1,
+          "O2_wt_pct": 3.7,
+          "ethanol_vol_pct": 9.8,
+          "LHV_Btu_per_lb": 17900,
+          "LHV_MJ_per_kg": 41.64,
+          "LHV_Btu_per_gal": 109200,
+          "leaded": false
+        },
+        "260 GT Plus (104 AKI)": {
+          "RON": 110,
+          "MON": 98,
+          "AKI": 104,
+          "SG": 0.761,
+          "stoichAFR": 13.7,
+          "O2_wt_pct": 4.7,
+          "ethanol_vol_pct": 13,
+          "LHV_Btu_per_lb": 17400,
+          "LHV_MJ_per_kg": 40.47,
+          "leaded": false
+        },
+        "260 GTX (98 AKI, no oxygenates)": {
+          "RON": 103,
+          "MON": 93,
+          "AKI": 98,
+          "SG": 0.762,
+          "stoichAFR": 14.6,
+          "O2_wt_pct": 0,
+          "LHV_Btu_per_lb": 18240,
+          "LHV_MJ_per_kg": 42.43,
+          "leaded": false
+        },
+        "SS 100 (100 AKI)": {
+          "RON": 104,
+          "MON": 96,
+          "AKI": 100,
+          "SG": 0.715,
+          "stoichAFR": 14.2,
+          "O2_wt_pct": 3.5,
+          "ethanol_vol_pct": 9.5,
+          "leaded": false
+        },
+        "Optima (95 AKI, ethanol-free)": {
+          "RON": 98,
+          "MON": 92,
+          "AKI": 95,
+          "SG": 0.72,
+          "stoichAFR": 14.9,
+          "O2_wt_pct": 0,
+          "LHV_Btu_per_lb": 18600,
+          "LHV_MJ_per_kg": 43.26,
+          "leaded": false
+        },
+        "E85-R (E85 race)": {
+          "RON": 104,
+          "MON": 94,
+          "AKI": 99,
+          "SG": 0.79,
+          "stoichAFR": 9.8,
+          "O2_wt_pct": 30,
+          "ethanol_vol_pct": 85,
+          "LHV_Btu_per_lb": 12500,
+          "LHV_MJ_per_kg": 29.07,
+          "LHV_Btu_per_gal": 82200,
+          "LHV_MJ_per_L": 22.91,
+          "leaded": false
+        }
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/260-gt",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page '260 GT', Technical Details table",
+          "quote": "Color | Undyed | Octane (R+M)/2 | 100 | Research Octane | 105 | Motor Octane | 95 | Specific Gravity | 0.734 | Weight (lbs/gallon) | 6.1 | ... Stoichiometric Air/Fuel Ratio | 14.1 | Oxygen (Weight%) | 3.7 | Ethanol (Volume%) | 9.8 | HC Ratio | 2.02 | OC Ratio | 0.034 | Lower Heating Value (Btu/Pound) | 17,900 | Lower Heating Value (Btu/Gallon) | 109,200 | Leaded | No (Unleaded)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/260gt-plus",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page '260 GT Plus', Technical Details table",
+          "quote": "Octane (R+M)/2 | 104 | Research Octane | 110 | Motor Octane | 98 | Specific Gravity | 0.761 | ... Stoichiometric Air/Fuel Ratio | 13.7 | Oxygen (Weight%) | 4.7 | Ethanol (Volume%) | 13 | ... Lower Heating Value (Btu/Pound) | 17,400 | Lower Heating Value (Btu/Gallon) | 110,300 | Leaded | No (Unleaded)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/260-gtx",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page '260 GTX', Technical Details table",
+          "quote": "Octane (R+M)/2 | 98 | Research Octane | 103 | Motor Octane | 93 | Specific Gravity | 0.762 | ... Stoichiometric Air/Fuel Ratio | 14.6 | Oxygen (Weight%) | 0 | Ethanol (Volume%) | 0 | HC Ratio | 1.76 | Lower Heating Value (Btu/Pound) | 18,240 | Lower Heating Value (Btu/Gallon) | 115,800 | Leaded | No (Unleaded)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/ss-100",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page 'SS 100', Technical Details table",
+          "quote": "Octane (R+M)/2 | 100 | Research Octane | 104 | Motor Octane | 96 | Specific Gravity | 0.715 | ... Stoichiometric Air/Fuel Ratio | 14.2 | Oxygen (Weight%) | 3.5 | Ethanol (Volume%) | 9.5 | Leaded | No (Unleaded)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/optima",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page 'Optima', Technical Details table",
+          "quote": "Octane (R+M)/2 | 95 | Research Octane | 98 | Motor Octane | 92 | Specific Gravity | 0.72 | ... Stoichiometric Air/Fuel Ratio | 14.9 | Oxygen (Weight%) | 0 | Ethanol (Volume%) | 0 | Methanol | 0 | Lower Heating Value (Btu/Pound) | 18,600 | Lower Heating Value (Btu/Gallon) | 112,150 | Leaded | No (Unleaded)",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://www.sunocoracefuels.com/fuels/e85-r",
+          "accessed": "2026-09-30",
+          "title": "Sunoco Race Fuels product page 'E85-R', Technical Details table",
+          "quote": "Color | Pale Green | Octane (R+M)/2 | 99 | Research Octane | 104 | Motor Octane | 94 | Specific Gravity | 0.79 | Weight (lbs/gallon) | 6.6 | ... Stoichiometric Air/Fuel Ratio | 9.8 | Oxygen (Weight%) | 30 | Ethanol (Volume%) | 85 | Aromatics | 6 | HC Ratio | 2.7 | OC Ratio | 0.39 | Lower Heating Value (Btu/Pound) | 12,500 | Lower Heating Value (Btu/Gallon) | 82,200 | Leaded | No (Unleaded) ... Sunoco E85-R is an unleaded racing fuel containing 85 volume % ethanol",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "derived": "MJ/kg = Btu/lb x 0.002326. The ethanol-free sheets (Optima 14.9, 260 GTX 14.6) bracket the stoichiometric AFR of E0 gasoline; E10-type sheets give 14.1-14.2.",
+      "note": "Sunoco is not sold in Saudi Arabia per its own dealer list (one UAE dealer)."
+    },
+    {
+      "id": "fp-vp-sheets",
+      "item": "VP Racing race fuels: maker's typical properties (fuels VP's Saudi distributor lists, plus unleaded examples)",
+      "value": {
+        "MS109 (unleaded)": {
+          "RON": 109,
+          "MON": 99,
+          "AKI": 104,
+          "SG": 0.725,
+          "stoichAFR": 13.34,
+          "O2_wt_pct": 9.32,
+          "leaded": false,
+          "makerBoostGuidance": "up to 25 lb boost; NA CR up to 13:1"
+        },
+        "MS100 (unleaded, IMSA spec)": {
+          "RON": 106,
+          "MON": 94.5,
+          "AKI": 100.3,
+          "SG": 0.765,
+          "stoichAFR": 13.82,
+          "O2_wt_pct": 3.61,
+          "leaded": false
+        },
+        "MS103 (unleaded)": {
+          "RON": 107.5,
+          "MON": 98.5,
+          "AKI": 103,
+          "SG": 0.7422,
+          "stoichAFR": 14.19,
+          "O2_wt_pct": 2.59,
+          "leaded": false
+        },
+        "HP101 (unleaded)": {
+          "RON": 106,
+          "MON": 96.6,
+          "AKI": 101.3,
+          "SG": 0.7165,
+          "stoichAFR": 14.25,
+          "O2_wt_pct": 3.77,
+          "leaded": false
+        },
+        "C20 (unleaded, non-oxygenated)": {
+          "RON": 105,
+          "MON": 90,
+          "AKI": 97.5,
+          "SG": 0.8175,
+          "stoichAFR": 13.91,
+          "O2_wt_pct": 0,
+          "leaded": false,
+          "makerBoostGuidance": "30 lb boost; CR up to 12:1"
+        },
+        "C85 (E85-type, contains MTBE)": {
+          "RON": 106,
+          "MON": 86.5,
+          "AKI": 96.3,
+          "SG": 0.794,
+          "stoichAFR": 9.2,
+          "O2_wt_pct": 31.97,
+          "leaded": false
+        },
+        "X85 (85 % ethanol)": {
+          "RON": 108,
+          "MON": 95.2,
+          "AKI": 101.6,
+          "SG": 0.78,
+          "stoichAFR": 9.81,
+          "O2_wt_pct": 30.03,
+          "leaded": false
+        },
+        "X98 (ethanol)": {
+          "RON": 103,
+          "MON": ">120 (as printed)",
+          "AKI": ">111.5",
+          "SG": 0.794,
+          "stoichAFR": 8.98,
+          "O2_wt_pct": 34.73,
+          "leaded": false
+        }
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing Motorsports MS 109 Race Fuel'",
+          "quote": "VP MS 109 is an unleaded, highly oxygenated fuel ... We recommend it for applications with up to 25 lbs. of boost and naturally aspirated engines with compression ratios up to 13:1. ... Specification Sheet: Motorsport 109 (Typical Values) Color = Colorless Specific Gravity = 0.7250 MON = 99 RON = 109 (R+M)/2 = 104 Oxygen Content = 9.32% ... Leaded: No ... Stoichiometric A/F Ratio = 13.34",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing Motorsports MS 100 Race Fuel'",
+          "quote": "It's a spec fuel for IMSA sports car racing in North America. Specification Sheet: Motorsport 100 (Typical Values) Color = Orange Specific Gravity = 0.7650 MON = 94.5 RON = 106 (R+M)/2 = 100.3 Oxygen Content = 3.61% ... Leaded: No ... Stoichiometric A/F Ratio = 13.82",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing Motorsports MS 103 Race Fuel'",
+          "quote": "Specification Sheet: Motorsport 103 (Typical Values) Color = Red Specific Gravity = 0.7422 MON = 98.5 RON = 107.5 (R+M)/2 = 103 Oxygen Content = 2.59% ... Leaded: No ... Stoichiometric A/F Ratio = 14.19",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing HP 101 High-Octane Unleaded'",
+          "quote": "Specification Sheet: HP101 (Typical Values) Color = Orange Specific Gravity = 0.7165 MON = 96.6 RON = 106 (R+M)/2 = 101.3 Oxygen Content = 3.77% ... Leaded: No ... Stoichiometric A/F Ratio = 14.25",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing C20 Race Fuel'",
+          "quote": "Unleaded and non-oxygenated, C20 ... It can handle 30 lbs of boost and compression ratios up to 12:1 ... Specific Gravity = 0.8175 MON = 90 RON = 105 (R+M)/2 = 97.5 Oxygen Content = 0% ... Leaded: No ... Stoichiometric A/F Ratio = 13.91",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing C85 Race Fuel'",
+          "quote": "Note: Do not use with fuel injectors that are not compatible with MTBE. ... Specification Sheet: C85 (Typical Values) Color = Yellow Specific Gravity = 0.7940 MON = 86.5 RON = 106 (R+M)/2 = 96.3 Oxygen Content = 31.97% ... Leaded: No ... Stoichiometric A/F Ratio = 9.20",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing X85 Fuel'",
+          "quote": "We blend VP X85 fuel with 85% ethanol and 15% top quality hydrocarbons. ... Specification Sheet: X85 (Typical Values) Color = Colorless Specific Gravity = 0.7800 MON = 95.2 RON = 108 (R+M)/2 = 101.6 Oxygen Content = 30.03% ... Leaded: No ... Stoichiometric A/F Ratio = 9.81",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>), 'VP Racing X98 Fuel'",
+          "quote": "Specification Sheet: X98 (Typical Values) Color = Colorless Specific Gravity = 0.7940 MON = >120 RON = 103 (R+M)/2 = >111.5 Oxygen Content = 34.73% ... Leaded: No ... Stoichiometric A/F Ratio = 8.98",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "VP gives no heating values. 'VP Import' (named in the brief) is listed by VP as 'Import REG' with tags 'Leaded, Oxygenated', so it is not an unleaded example. The X98 sheet's MON > RON looks like a publishing error; do not use its octane numbers."
+    },
+    {
+      "id": "fp-e85-octane-other",
+      "item": "E85 octane from research papers (for comparison with the maker sheets)",
+      "value": {
+        "E85_RON_Ford_test": 108,
+        "ethanol_RON_ORNL": 109,
+        "highEthanolBlends_RON_plateau": "about 103-105 above E30-E40"
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2014-01-1228/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2014-01-1228: Effects of Fuel Octane Rating and Ethanol Content on Knock, Fuel Economy, and CO2 for a Turbocharged DI Engine (Leone, Olin, Anderson, Jung, Ford) (SAE Mobilus abstract page)",
+          "quote": "The fuels included midlevel ethanol “splash blend” and “octane-matched blend” fuels, E10-98RON (U.S. premium), and E85-108RON.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "Given the high RON of ethanol (109), it is commonly blended into a sub-octane blendstock for oxygenate blending (BOB) having a RON of approximately 84 to 88 ... The increase in RON depends on the starting RON of the BOB, but it increases to around 100 to 105 at E50.",
+          "location": "page 3",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2015-01-0763/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2015-01-0763: Heat of Vaporization Measurements for Ethanol Blends Up To 50 Volume Percent ... (Chupka et al.) (SAE Mobilus abstract page)",
+          "quote": "RON increases upon blending ethanol but with diminishing returns above about 30 vol%. Above 30% to 40% ethanol the curves flatten and converge at a RON of about 103 to 105, even for the much lower RON NG blendstock. Octane sensitivity (S = RON - MON) also increases upon ethanol blending.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "note": "Wikipedia's octane table gives E85 as RON 102-105, MON 85-87, AKI 94-96 citing the RFA manual 'Changes in Gasoline IV'; the archived manual returned HTTP 403, so that is not used as evidence."
+    }
+  ],
+  "knockAndBoost": [
+    {
+      "id": "kb-russ-rules",
+      "item": "Octane requirement per unit change of engine conditions (review of borderline knock)",
+      "value": {
+        "sparkAdvance": "1 ON per 1 deg",
+        "intakeAirTemperature": "1 ON per 7 K",
+        "intakePressure": "3-4 ON per 10 kPa",
+        "compressionRatio": "5 ON per unit CR",
+        "exhaustBackPressure": "1 ON per 30 kPa",
+        "coolantTemperature": "1 ON per 10 K",
+        "airFuelRatio": "peak at about 5 % rich of stoichiometric, about 2 ON per AFR unit around the peak"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/960497/",
+          "accessed": "2026-09-30",
+          "title": "SAE 960497: A Review of the Effect of Engine Operating Conditions on Borderline Knock (Stephen Russ, Ford Motor Co., 1 Feb 1996) (SAE Mobilus abstract page)",
+          "quote": "The effects of engine operating conditions on the octane requirement and the resulting knock-limited output were studied on a single cylinder engine using production cylinder heads. ... The results of this study compared closely with results found in the literature even though the engine and/or operating conditions were quite different in many cases. Guidelines on the effect of various parameters on the octane requirement of an engine can be summarized as follows: Spark Advance: 1 ON/1° SA Intake Air Temperature: 1 ON/7 K Air/Fuel Ratio: peaks at 5% rich of stoichiometric, decreases by around 2 ON / air/fule ratio around peak Intake Pressure: 3-4 ON/10 kPa Compression Ratio: 5 ON/CR Exhaust Back Pressure: 1 ON/30 kPa Coolant Temperature: 1 ON/10 K (Similar effect of head and block temperature., Larger effect at low speed.)",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "derived": "Applied as a rule of thumb (my arithmetic, not from the paper): PG91 -> PG98 (+7 RON) is worth about 7 deg of spark or about 18-23 kPa more intake pressure at the same spark; +10 RON (e.g. 95 -> E85-type fuel at about 105 RON) about 25-33 kPa. The paper's engine was a 1990s naturally aspirated single-cylinder, so extrapolating to 1-2 bar of boost is an assumption.",
+      "note": "Author name, affiliation and date from the same SAE Mobilus page (read with WebFetch)."
+    },
+    {
+      "id": "kb-ornl-klsa",
+      "item": "Knock-limited spark advance vs RON (measured)",
+      "value": {
+        "slope_deg_per_RON": 1.11,
+        "intercept": -85.76,
+        "r2": 0.99,
+        "RON_range": "about 88-99",
+        "conditions": "single-cylinder GM Ecotec 2.0 L LNF-based wall-guided DI, 925 kPa NMEP, 1500 rpm, 35 C intake"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "Knock-limited spark advance was measured in spark timing sweep experiments at a nominal load of 925 kPa net mean effective pressure, 1500 rpm, and an intake air temperature of 35°C (measured at the intake port). ... A plot of KLSA versus RON is shown in Figure 2, which shows that for heats of vaporization ranging from 353 to 527 kJ/kg, RON is an excellent predictor of KLSA under these engine operating conditions. | Figure 2 (read on the image): 'Intercept = -85.76, Slope = 1.11, r² = 0.99'; y-axis 'Knock Limited Spark Advance (°BTDC)', x-axis 'Research Octane Number'",
+          "location": "pages 3-4, Figure 2",
+          "howRead": "text layer plus figure read on the rendered page image"
+        }
+      ],
+      "note": "Agrees with Russ's '1 ON/1 deg SA'."
+    },
+    {
+      "id": "kb-cr-equivalence",
+      "item": "RON vs compression ratio at equal knock in a turbocharged DI engine (Ford 3.5 L EcoBoost)",
+      "value": {
+        "E10_91RON_at_10to1": "baseline",
+        "E20_96RON_and_E10_98RON": "11.9:1 with similar knock",
+        "E30_101RON": "13:1 with better knock",
+        "E85_108RON": "dramatically better than E30-101"
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2014-01-1228/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2014-01-1228: Effects of Fuel Octane Rating and Ethanol Content on Knock, Fuel Economy, and CO2 for a Turbocharged DI Engine (Leone et al., Ford) (SAE Mobilus abstract page)",
+          "quote": "The match blend E20-91RON and E30-91RON showed no knock benefit compared to the baseline E10-91RON fuel. However, the splash blend E20-96RON and E10-98RON enabled 11.9:1 CR with similar knock performance to E10-91RON at 10:1 CR. The splash blend E30-101RON enabled 13:1 CR with better knock performance than E10-91RON at 10:1 CR. As expected, E85-108RON exhibited dramatically better knock performance than E30-101RON.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2013-01-1321/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2013-01-1321: Fuel Economy and CO2 Emissions of Ethanol-Gasoline Blends in a Turbocharged DI Engine (Jung, Leone, Shelby, Anderson, Ford) (SAE Mobilus abstract page)",
+          "quote": "In this engine, E20 (96 RON) fuel at 11.9:1 CR gave very similar knock performance to E10 (91 RON) fuel at 10:1 CR. Similarly, E30 (101 RON) fuel at 11.9:1 CR resulted in knock-limited performance equivalent to E20 at 10:1 CR, indicating that E30 could have been run at even higher CR with acceptable knock behavior.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "derived": "About 5-7 RON per 1.9 CR units, i.e. roughly 3 RON per CR unit in this boosted DI engine (my arithmetic; Russ gives 5 ON/CR for his NA engine). The match blends show the benefit follows RON, not ethanol content as such."
+    },
+    {
+      "id": "kb-k-factor",
+      "item": "Octane index in boosted engines: OI = RON - K x S (S = RON - MON); K is negative when boosted",
+      "value": "K < 0 in modern boosted DI engines and falls further as intake pressure rises; for equal RON a lower-MON (more sensitive) fuel knocks less; gains in knock-limited load flatten above about RON 100 when S >= 10",
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1634/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1634: Fuel Effects on Knock in a Highly Boosted Direct Injection Spark Ignition Engine (Amer, Babiker, Chang, Kalghatgi et al., Saudi Aramco) (SAE Mobilus abstract page)",
+          "quote": "Extensive tests have been carried out in a single-cylinder Direct Injection Spark Ignition (DISI) engine using up to fifteen different fuels at inlet pressure of up to 3.4 bar abs. ... Fuel anti-knock quality does not correlate with MON and is best described by the Octane Index, OI = RON-KS ... The RON of the fuels considered was in the range between 95 and 105 and the sensitivity between 8 and 13. K is negative at all the conditions tested, i.e., for a given RON, a higher sensitivity fuel has better anti-knock quality. K decreases with increasing intake pressure ... Knock becomes more likely with increasing intake pressure and increasing compression ratio with all else being equal. Higher anti-knock quality of the fuel enables higher load to be reached. However the gain in load with increasing OI decreases as OI increases - there are fast diminishing returns on increasing RON above 100 as long as the sensitivity is 10 or greater. ... compared to the pump gasoline (96.4 RON), a higher OI fuel can be run at a higher intake pressure",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2008-01-2414/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2008-01-2414: The Relevance of Fuel RON and MON to Knock Onset in Modern SI Engines (Mittal, Heywood, MIT) (SAE Mobilus abstract page)",
+          "quote": "These experimental results show that K is negative for the engine operating conditions tested. Thus, fuels with higher sensitivities (RON-MON), but the same RON, were found to have better anti-knock performance. The results also show that the knock limited spark advance and maximum pressure of the engine increase linearly with increasing fuel sensitivity. ... The results show that K has a strong dependence on the intake air temperature, engine speed, and intake air pressure.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2001-01-3584/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2001-01-3584: Fuel Anti-Knock Quality - Part I. Engine Studies (Kalghatgi, Shell) (SAE Mobilus abstract page)",
+          "quote": "The anti-knock quality of a fuel in a given engine operating condition is defined by its octane index OI = RON - KS where K is a constant for that condition and S is the sensitivity, (RON-MON) ... K is often assumed to be 0.5 so that OI=(RON+MON)/2. However, it is found that K depends on engine operating conditions and in some cases, K is negative ... The value of K decreases as the engine becomes more prone to knock i.e. as its octane requirement increases.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2005-01-0239/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2005-01-0239: Auto-Ignition Quality of Practical Fuels and Implications for Fuel Requirements of Future SI and HCCI Engines (Kalghatgi) (SAE Mobilus abstract page)",
+          "quote": "Moreover such initiatives - direct injection, higher compression ratios, downsizing and turbocharging - will reduce the unburnt gas temperature for a given pressure and push the value of K downwards. ... In 37 different Japanese and European cars (34 models) equipped with knock sensors that have been tested K has been found to be negative in most cases.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2014-01-2718/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2014-01-2718: Octane Appetite: The Relevance of a Lower Limit to the MON Specification in a Downsized, Highly Boosted DISI Engine (Remmert et al., Shell) (SAE Mobilus abstract page)",
+          "quote": "The K-value was found to be negative at all engine conditions; fuels of higher sensitivity were found to yield improved engine performance.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1277/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1277: Effect of Heat of Vaporization, Chemical Octane, and Sensitivity on Knock Limit for Ethanol - Gasoline Blends (Stein, Polovina, Roth, Foster) (SAE Mobilus abstract page)",
+          "quote": "K, the weighting factor for MON in the Octane Index, decreased with increasing combustion phasing retard and with increasing evaporative charge cooling, and increased with increasing inlet temperature and increasing compression ratio.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "note": "No paper here gives K as a number per bar in its abstract; the full texts are paywalled (gates). For the 1990s-2000s engines in the roster (PFI, low boost) K near 0 to slightly negative is a reasonable assumption, flagged as estimated."
+    },
+    {
+      "id": "kb-e85-boost",
+      "item": "How much more load/boost/timing ethanol allows",
+      "value": {
+        "DI_evaporativeOctane_gasoline_ON": 5,
+        "DI_evaporativeOctane_E85_ON": 18,
+        "E30_vs_87AKI_stoichTorque": "doubled (to 20 bar IMEPg with 15 % EGR, 18.5 bar without) at 11.85:1",
+        "gasoline_peakPower_vs_E85_highCR": "about 33 % lower (DI, high CR, valve-timing de-rating)",
+        "PFI_E0_to_E100_WOT": "+20 % NIMEP and +8 points efficiency at 1500 rpm; +10 % and +4 points at 2000 rpm"
+      },
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1284/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1284: Charge Cooling Effects on Knock Limits in SI DI Engines Using Gasoline/Ethanol Blends: Part 2-Effective Octane Numbers (Kasseris, Heywood, MIT) (SAE Mobilus abstract page)",
+          "quote": "The ON EFF results show diminishing returns in ethanol chemical benefit above about E40 (40% ethanol by volume). ... The results show that the antiknock thermal benefit increases monotonically with ethanol content from 5 octane numbers for DI gasoline to 18 octane numbers for E85.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2014-01-1231/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2014-01-1231: Intermediate Alcohol-Gasoline Blends, Fuels for Enabling Increased Engine Efficiency and Powertrain Possibilities (Splitter, Szybist, ORNL) (SAE Mobilus abstract page)",
+          "quote": "Specifically, the unique properties of ethanol enabled a doubling of the stoichiometric torque capability with the 11.85:1 compression ratio using E30 as compared to 87 AKI, up to 20 bar IMEP g at λ=1 (with 15% EGR, 18.5 bar with 0% EGR).",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2010-01-0619/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2010-01-0619: Investigation of Knock Limited Compression Ratio of Ethanol Gasoline Blends (Szybist, Foster, Moore, Confer) (SAE Mobilus abstract page)",
+          "quote": "It was found that at substantially similar engine conditions, increasing the ethanol content of the fuel results in higher engine efficiency and higher engine power. These results can be partially attributed to a charge cooling effect and a higher heating value of a stoichiometric mixture for ethanol blends (per unit mass of air). ... By using early and late intake valve closing strategies, good efficiency is maintained with gasoline, but peak power is about 33% lower than with E85.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2009-01-1907/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2009-01-1907: Effects of Ethanol Content on Gasohol PFI Engine Wide-Open-Throttle Operation (Kar, Cheng, Ishii, MIT) (SAE Mobilus abstract page)",
+          "quote": "The fuel knock resistance improved significantly with the gasohol so that ignition could be timed at a value much closer or at MBT timing. Changing from 0% to 100% ethanol in the fuel, this combustion phasing improvement led to a 20% increase in NIMEP and 8 percentage points in fuel conversion efficiency at 1500 rpm. At 2000 rpm, where knocking was less severe, the improvement was about half (10% increase in NIMEP and 4 percentage points in fuel conversion efficiency).",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2009-01-1490/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2009-01-1490: Optimal Use of E85 in a Turbocharged Direct Injection Engine (Stein, House, Leone, Ford) (SAE Mobilus abstract page)",
+          "quote": "Direct injection of E85 ... is extremely effective in suppressing knock, due to ethanol's high inherent octane and its high heat of vaporization, which results in substantial cooling of the charge. As a result, the compression ratio (CR) can be increased and higher boost levels can be used.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2013-01-0888/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2013-01-0888: The Impact of Low Octane Hydrocarbon Blending Streams on the Knock Limit of “E85” (Szybist, West) (SAE Mobilus abstract page)",
+          "quote": "Results show that nearly all ethanol-containing fuels are more resistant to engine knock than UTG-96 (the only exception being the ethanol blend with 49% n-heptane).",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://vpracingfuels.com/collections/race-fuels/products.json?limit=250",
+          "accessed": "2026-09-30",
+          "title": "VP Racing Fuels online store product feed, collection 'race-fuels' (Shopify products.json; the same text is the product page body on vpracingfuels.com/products/<handle>)",
+          "quote": "[MS109] We recommend it for applications with up to 25 lbs. of boost and naturally aspirated engines with compression ratios up to 13:1. | [C20] It can handle 30 lbs of boost and compression ratios up to 12:1",
+          "howRead": "downloaded with curl and read from the page/file text (maker guidance, not a measurement)"
+        }
+      ],
+      "derived": "For the model: E85-type fuel vs PG98 is about +6-10 RON chemically (maker sheets RON 104-108 vs 98) -> about 6-10 deg more spark or about 15-33 kPa more boost by Russ's rules (estimated). In a PFI engine the extra evaporative octane of DI (13 ON between gasoline and E85) should mostly not be credited (see chargeCooling)."
+    }
+  ],
+  "chargeCooling": [
+    {
+      "id": "cc-pfi",
+      "item": "Share of the fuel's heat of vaporisation that cools the charge in a port-injected engine",
+      "value": {
+        "measuredStatement": "no significant charge cooling at WOT (PFI)",
+        "derivedUpperBound_fractionOfTheoreticalMax": 0.3,
+        "suggestedModelValue": "0.0-0.3 (estimated; low end for WOT)"
+      },
+      "confidence": "estimated",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2009-01-1907/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2009-01-1907: Effects of Ethanol Content on Gasohol PFI Engine Wide-Open-Throttle Operation (Kar, Cheng, Ishii, MIT) (SAE Mobilus abstract page)",
+          "quote": "The NOx emission and knock characteristics of a PFI engine operating on ethanol/gasoline mixtures were assessed at 1500 and 2000 rpm with λ =1 under Wide-Open-Throttle condition. There was no significant charge cooling due to fuel evaporation. ... Because there was no significant change in the end gas temperature in these experiments, the gasohol knock resistance was attributed solely to the ignition chemistry of the ethanol.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2008-01-0317/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2008-01-0317: Measurement of Vapor Pressures and Enthalpies of Vaporization of Gasoline and Ethanol Blends and Their Effects on Mixture Preparation in an SI Engine (Kar, Last, Haywood, Raine) (SAE Mobilus abstract page)",
+          "quote": "The ethanol-gasoline blends were tested in a port injected SI engine. The evaporation characteristic of the fuel was assessed by measuring the cycle-resolved temperature in the cylinder. The results have shown that low ethanol blends (0-30%) tend to evaporate readily, but the evaporative cooling is limited by the relatively low fuel flow rate (at fixed stoichiometry) and enthalpy of vaporization. High ethanol blends (>50%) with reduced vapor pressure cannot evaporate readily, but if they do vaporize, then they absorb large amounts of energy per unit mass. The implication of these competing effects is that maximum cooling is achieved using a blend with about 50% ethanol.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1284/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1284: Charge Cooling Effects on Knock Limits in SI DI Engines Using Gasoline/Ethanol Blends: Part 2 (Kasseris, Heywood) (SAE Mobilus abstract page)",
+          "quote": "Unlike the charge cooling benefit which is realized mostly in SI DI engines, the chemical benefit of ethanol blends exists in Port Fuel Injected (PFI) engines as well.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "derived": "Upper bound (my inference): Kasseris & Heywood measured DI's extra cooling over PFI at about 70 % of the thermodynamic maximum (next entry); since DI cannot exceed 100 %, PFI's in-cylinder share is at most about 30 % of the maximum in that engine, and Kar et al. saw no significant cooling at WOT. No paper found here states a PFI fraction as a number.",
+      "note": "The five roster engines are all port-injected, so this entry matters most."
+    },
+    {
+      "id": "cc-di",
+      "item": "Measured charge cooling in DI relative to PFI, and theoretical maximum",
+      "value": {
+        "DI_extraCooling_gasoline_C": 14,
+        "DI_extraCooling_E85_C": 49,
+        "fractionOfThermodynamicMax": 0.7,
+        "theoreticalMax_perKgStoichMixture_kJ_per_kg": {
+          "hydrocarbon": 22,
+          "ethanol": 92
+        }
+      },
+      "confidence": "verified",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1275/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1275: Charge Cooling Effects on Knock Limits in SI DI Engines Using Gasoline/Ethanol Blends: Part 1-Quantifying Charge Cooling (Kasseris, Heywood, MIT) (SAE Mobilus abstract page)",
+          "quote": "Using a turbocharged SI engine with both Port Fuel Injection (PFI) and Direct Injection (DI), knock onset limits were measured for different intake air temperatures for both types of injection and five gasoline/ethanol blends. ... The experiment measures how much the intake air needed to be heated in DI mode to cancel out charge cooling and make the engine knock at the same conditions as PFI. ... The temperature difference measured using this methodology corresponds to how much more charge cooling due to fuel evaporation took place in DI. The measured charge cooling increases with fuel ethanol content from 14 degrees C for gasoline to 49 degrees C for E85 (85% ethanol, 15% gasoline by volume). The amount of charge cooling as a fraction of the thermodynamic maximum was around 70% for all fuel blends. The starting intake air temperature for E50 and E85 was significantly higher compared to lower ethanol blends due to hardware limitations. It is anticipated that the high intake air temperatures contributed significantly to the high charge cooling numbers realized for high ethanol blends",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "Fuel knock resistance for direct injection engines is enhanced by the fact that the fuel-air charge is cooled in the cylinder as the fuel evaporates, reducing the end-gas temperature. ... based on a mass stoichiometric mixture basis, in which the value for hydrocarbon is 22 kJ/kg while that for ethanol is 92 kJ/kg.",
+          "location": "page 3",
+          "howRead": "downloaded with curl and read from the page/file text"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2009-01-0324/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2009-01-0324: Impact of Fuel Properties on the Performances and Knock Behaviour of a Downsized Turbocharged DI SI Engine - Focus on Octane Numbers and Latent Heat of Vaporization (Milpied et al.) (SAE Mobilus abstract page)",
+          "quote": "This study confirms and weights the striking role of high RON values and the positive influence of the “cooling effect” linked to high LHV values. However, no clear impact of the MON was noticed. ... In the case of a 20%v ethanol blend, the “cooling effect” brings from 30 to 60%, depending on engine speed, of the total knock resistance increase, compared to gasoline base fuel.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2012-01-1277/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2012-01-1277: Effect of Heat of Vaporization, Chemical Octane, and Sensitivity on Knock Limit for Ethanol - Gasoline Blends (Stein et al.) (SAE Mobilus abstract page)",
+          "quote": "the knock resistance of a matrix of ethanol-gasoline blends was determined in a state-of-the-art single cylinder engine equipped with three separate fuel systems: upstream, pre-vaporized fuel injection (UFI); port fuel injection (PFI); and DI. ... Comparison of UFI and DI results allowed the chemical octane effect on knock to be separated from the evaporative charge cooling effect. These effects were found to be of comparable importance for ethanol blends.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        }
+      ],
+      "derived": "Theoretical maximum temperature drop if all evaporation heat came from the air: about 22 K (gasoline) and 92 K (ethanol) with cp about 1.0 kJ/kg K (my arithmetic from ORNL's per-mixture values); Kasseris' 14 C = 70 % implies a 20 C maximum for gasoline, consistent."
+    },
+    {
+      "id": "cc-hov-vs-sensitivity",
+      "item": "How heat of vaporisation shows up in octane numbers",
+      "value": "At fixed RON and sensitivity, extra HoV gave no extra knock benefit (ORNL/NREL); HoV effects appear as higher octane sensitivity. The RON test itself sees charge cooling for high-ethanol blends (carburetted CFR engine).",
+      "confidence": "single-source",
+      "sources": [
+        {
+          "url": "https://saemobilus.sae.org/content/2016-01-0836/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2016-01-0836: Exploring the Relationship Between Octane Sensitivity and Heat-of-Vaporization (Sluder, Szybist, McCormick, Ratcliff) (SAE Mobilus abstract page)",
+          "quote": "Studies that fix the octane sensitivity find that HoV does not produce additional anti-knock benefit. ... Experiments with these fuels in a 1.6-liter GTDI engine showed that the fuels exhibited very similar combustion phasing under knock-limited spark advance (KLSA) conditions. ... KLSA was found to be well correlated with RON. These results reinforce the concept that HoV anti-knock effects can be viewed as a contributor to octane sensitivity. From this viewpoint, HoV effects manifest themselves as increases in octane sensitivity.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://saemobilus.sae.org/content/2013-01-0886/",
+          "accessed": "2026-09-30",
+          "title": "SAE 2013-01-0886: The Effect of Charge Cooling on the RON of Ethanol/Gasoline Blends (Foong, Morganti, Brear, da Silva) (SAE Mobilus abstract page)",
+          "quote": "While gasoline is fully vaporized prior to entry into the engine in a standard RON test, significant charge cooling is observed for blends with high ethanol content, with the presence of a near-saturated and potentially two-phase air-fuel mixture during induction. Thus, the relative significance of the charge cooling and the autoignition chemistry cannot be determined from the standard RON test.",
+          "howRead": "downloaded with curl; abstract taken from the page's public description metadata (no login); full paper is paywalled and was not read"
+        },
+        {
+          "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+          "accessed": "2026-09-30",
+          "title": "ORNL/TM-2016/42, 'Summary of High-Octane, Mid-Level Ethanol Blends Study', Oak Ridge National Laboratory, July 2016",
+          "quote": "The results demonstrate that under relatively moderate load conditions in current-technology engines, heat of vaporization is not a factor in engine knock resistance. However, under more extreme conditions enabled by boosted engines using large amounts of spark timing retard to control knock, heat of vaporization may play a role.",
+          "location": "page 4",
+          "howRead": "downloaded with curl and read from the page/file text"
+        }
+      ],
+      "note": "Model implication (estimated): for PFI engines, use the fuel's RON (and MON via K) and do not add a separate HoV credit, or add only a small one; for E85's measured RON the carburetted RON test already includes some charge cooling."
+    }
+  ],
+  "gates": [
+    {
+      "site": "SAE Mobilus (full texts of 960497, 2012-01-1275, 2012-01-1284, 2012-01-1634, 2009-01-1907 and the other SAE papers cited)",
+      "gate": "purchase/subscription",
+      "action": "read the public abstract pages only; no login"
+    },
+    {
+      "site": "GSO Standards Store, GSO 2196:2026 (Gulf gasoline specification)",
+      "gate": "purchase required (price 145.0 shown; preview only)",
+      "action": "not bought; only the store page was read"
+    },
+    {
+      "site": "ICAO Doc 7488 (Manual of the ICAO Standard Atmosphere) and ISO 2533",
+      "gate": "sold documents",
+      "action": "not opened; used the U.S. Standard Atmosphere 1976 (public domain, NASA NTRS) instead"
+    },
+    {
+      "site": "ASTM D5798 (E85 specification)",
+      "gate": "sold standard",
+      "action": "not opened; used the US DOE AFDC table of D5798-21"
+    },
+    {
+      "site": "bapcoenergies.com (Bahrain fuel retailer)",
+      "gate": "Radware bot-check redirect (validate.perfdrive.com)",
+      "action": "not worked around"
+    },
+    {
+      "site": "ogimet.com",
+      "gate": "cookie notice: 'This site uses third part cookies. If you navigate in these pages we assume you accept its use.' (content is not blocked)",
+      "action": "nothing clicked; pages read with curl without storing cookies. If the owner treats implied-consent notices as acceptance, drop the OGIMET cross-checks (the WMO normals stand on their own)."
+    },
+    {
+      "site": "aimss.sans.com.sa (Saudi eAIP) history page",
+      "gate": "survey prompt ('Please take a moment to fill out the survey ... Participating in the survey will ensure your account accessibility for our services'); the AIP files themselves are public direct links",
+      "action": "survey not filled; read only the linked AIP pages"
+    },
+    {
+      "site": "sunocoracefuels.com, vpracingfuels.com",
+      "gate": "cookie consent banners (Cookiebot etc.); content not blocked",
+      "action": "nothing clicked; read with curl"
+    },
+    {
+      "site": "eur-lex.europa.eu (RED II Annex III, energy content of fuels)",
+      "gate": "HTTP 202 empty page to curl; empty to WebFetch (automated-access block)",
+      "action": "not worked around; LHV per kg for petrol/ethanol from RED II not obtained"
+    },
+    {
+      "site": "aramco.com",
+      "gate": "HTTP 403 (Akamai) to curl",
+      "action": "read with WebFetch only, which worked without any prompt"
+    },
+    {
+      "site": "enoc.com fuel prices (403), adnocdistribution.ae fuel prices (404)",
+      "gate": "blocked / not found",
+      "action": "not worked around; UAE pump grades not verified"
+    },
+    {
+      "site": "webarchive.loc.gov (RFA 'Changes in Gasoline IV')",
+      "gate": "HTTP 403",
+      "action": "not used"
+    },
+    {
+      "site": "web.archive.org / archive.org",
+      "gate": "HTTP 429 rate limit and connection resets",
+      "action": "not worked around; the moved AFDC E85 handbook (afdc.energy.gov/uploads/publication/ethanol_handbook.pdf returns 404) was not read"
+    }
+  ],
+  "notFound": [
+    "SEARCH BUDGET: the session's WebSearch limit (200, shared) ran out after 12 of my searches. The items below that need discovery should get a search pass once the owner raises CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
+    "Saudi National Center for Meteorology (NCM) publications of station pressure or relative humidity for Riyadh/Jeddah (not looked up; WMO normals submitted by Saudi Arabia, CLIMAT and DWD used instead).",
+    "A published Riyadh July relative humidity for 1991-2020 (only DWD 1961-1990 and my derivation from vapour pressure).",
+    "MON (and any measured RON) of Saudi PG91, PG95, PG98 as sold; density, oxygenate and ethanol limits of the GCC standard (paid).",
+    "An Aramco press release on PG98 and a list of PG98 stations (F&L Asia gives the three regions plus highways).",
+    "Race fuel at Reem International Circuit, Jeddah Corniche Circuit or through the Saudi Automobile and Motorcycle Federation (reemcircuit.com unreachable; samf.gov.sa and saudimotorsport.com home pages have no fuel mention). Aramco-branded race fuel for the public: not found.",
+    "Elf/TotalEnergies race fuels (www.elf-racingfuels.com does not resolve), Motul and Panta (Panta redirects to MOL Group Italy) in Saudi Arabia, UAE or Bahrain: not checked successfully.",
+    "Any race fuel or E85 source in Bahrain (none in the VP or Sunoco lists).",
+    "E85 or any ethanol blend at pumps in Saudi Arabia, UAE or Bahrain; any Saudi rule on fuel ethanol under alcohol laws.",
+    "Emarat Race 102 specification (RON vs AKI, lead, oxygen).",
+    "A measured latent heat of vaporisation for E85 (only a mass-weighted estimate), and a DOE/GREET LHV for E85 per kg (only Sunoco's sheet, 12,500 Btu/lb).",
+    "Stoichiometric AFR of pump gasoline from a primary specification or textbook (only race-fuel maker sheets: 14.6-14.9 for E0, 14.1-14.2 for E10-type).",
+    "A measured PFI charge-cooling fraction as a number (only 'no significant charge cooling' at WOT and a derived upper bound of about 30 %).",
+    "Knock-limited spark advance per bar of boost in a modern turbo engine (only Russ's 3-4 ON per 10 kPa from a 1990s NA engine, and K-trend statements); the full SAE papers would have the curves."
+  ]
+}

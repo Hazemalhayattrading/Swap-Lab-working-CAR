@@ -1,0 +1,2492 @@
+{
+  "car": "toyota-supra-jza80",
+  "researchedOn": "2026-09-30",
+  "builds": [
+    {
+      "id": "jza80-stock-uk-mainline-gotboost-2011",
+      "summary": "Stock 2JZ-GTE twin-turbo manual (UK registration L504OEO) on a Mainline DynoLog roller at GotBoost, Wales, 27 Mar 2011: 233.7 and 240.3 hp at the wheels in 4th and 233.2 hp in 5th (SAE J607), with manifold pressure only about 0.6-0.68 bar.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80 (sheet: 'TOYOTA SUPRA TT')",
+        "market": "not stated (UK registration L504OEO; could be a UK-market car or an import)",
+        "grade": "Twin Turbo",
+        "gearbox": "manual (runs made in 4th and 5th, so not the 4-speed automatic); model not stated",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE twin turbo, owner: 'stock 2JZ GTE'",
+      "dyno": {
+        "make": "Mainline",
+        "model": "DynoLog chassis dyno (sheet title 'Mainline DynoLog Chassis Dyno Report'; footer 'DynoLog # 221061-V4.030')",
+        "type": "not stated",
+        "mode": "controlled ramp: x-axis note '@ 10KPH/Sec UP, 18 Sec' (4th) and '17.5 Sec' (5th); plots 'Derived Torque(FtLb) and Power(HP) [Cor'd]'",
+        "where": "GotBoost Performance Tuning, 8C Brackla Ind Est, Bridgend, Wales, CF31 2AL"
+      },
+      "correction": {
+        "value": "SAE J607 (the same basis as Dynojet 'STD')",
+        "howKnown": "printed: 'Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%)' on the 4th-gear sheet and 'Correction: 3.39 SAE J607 (25°C, 1008mBar, 27%)' on the 5th-gear sheet. 3.78 / 3.39 look like the % correction applied (my reading; not labelled)."
+      },
+      "testConditions": {
+        "temperature": "29 °C (4th-gear runs); 25 °C (5th-gear run)",
+        "pressure": "1009 mbar (4th; last digit hard to read) / 1008 mbar (5th)",
+        "humidity": "18 % (4th) / 27 % (5th)",
+        "howKnown": "printed in the correction line; the sheets also print 'Air Density: 95.0%' (4th) and '96.0%' (5th)"
+      },
+      "gear": "4th (tests 541 and 542) and 5th (test 540)",
+      "result": {
+        "peakWheelPower": "4th gear: 233.7 HP @ 140 km/h (test 541) and 240.3 HP @ 148 km/h (test 542); 5th gear: 233.2 HP @ 172 km/h (test 540). By the sheet's own km/h-to-rpm scale, 140 km/h in 4th = 5,340 rpm and 148 km/h is about 5,650 rpm; 172 km/h in 5th is about 4,870 rpm.",
+        "peakWheelTorque": "sheet 'dTorque' is derived torque (wheel power expressed at derived engine rpm): 257.2 ft-lb @ 112 km/h (541), 259.5 ft-lb @ 110 km/h (542), 272.5 ft-lb @ 152 km/h (540; last digit blurry, could be 272.8)",
+        "howRead": "read from the two sheet images (enlarged crops of the header and 'Max' lines)"
+      },
+      "boost": {
+        "peak": "about 0.67-0.69 bar (sheet 'Manifold Pressure (Bar)' trace)",
+        "atPeakPower": "about 0.60-0.62 bar (4th gear, 140-148 km/h)",
+        "fullBoostRpm": "about 0.6 bar from the start of the pull on the first turbo; a dip to about 0.48-0.50 bar at the turbo changeover near 95-98 km/h in 4th (about 3,700 rpm); peak just after 110 km/h (about 4,200 rpm)",
+        "howKnown": "read from the manifold-pressure trace on the sheets. Owner: 'Also thought that boost would be around 0.8 on stock turbos'. Replies: '0.8 bar is normal on a stock setup'; 'You're a little bit down on boost you should be seeing 0.1bar - 0.2bar more.'"
+      },
+      "fuel": "not stated (UK pump fuel; grade not given)",
+      "mods": {
+        "turbo": "stock sequential twins",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock (nothing else listed)",
+        "exhaust": "stock (nothing else listed)",
+        "intake": "stock (nothing else listed)",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "manual, model not stated",
+        "other": "Owner only says 'stock 2JZ GTE'. The sheet's parts fields (Heads, Camshaft, Exhaust, Manifolds, Induction, Fuel) are blank."
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/183316-dyno-results-something-need-attention/",
+          "accessed": "2026-09-30",
+          "title": "dyno results... something need attention? (mkivsupra.net, posted 28 Mar 2011; old URL http://www.mkivsupra.net/vbb/showthread.php?242764-dyno-results...-something-need-attention)",
+          "kind": "thread",
+          "quote": "Owner 'downimpact': 'Dyno results from Sunday all figures taken at the wheels, stock 2JZ GTE, seems a suprising drop off between 1st and 2nd turbo. Also thought that boost would be around 0.8 on stock turbos. Is a spring failing on the blow off valve? Any thoughts? first graph run in 4th, second graph in 5th'. Reply 'hodge': 'You will get a 0.2 bar dip in pressure as turbo 2 comes online as Aman sais. 0.8 bar is normal on a stock setup.' Reply 'TTRickeh': 'You're a little bit down on boost you should be seeing 0.1bar - 0.2bar more.'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2011/03/959.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mainline DynoLog sheet, 4th gear",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'GotBoost Performance Tuning ... Mainline DynoLog Chassis Dyno Report'; 'Test ID: Baseline Test'; 'Test Date: 27-Mar-2011 12:42'; 'Test #: 541'; 'Rego No: L504OEO'; 'Vehicle: TOYOTA SUPRA TT'; 'Air Density: 95.0%'; 'Gear: 4'; 'Correction: 3.78 SAE J607 (29°C, 1009mBar, 18%)'; 'Compare Run: Baseline Test / 542, 27-Mar-2011, 12:45'; 'Max: dTorque= 257.2FtLb @ 112KPH Power= 233.7HP @ 140KPH'; 'Max: dTorque= 259.5FtLb @ 110KPH Power= 240.3HP @ 148KPH'; x-axis pairs km/h / rpm '60 2290, 80 3050, 100 3820, 120 4580, 140 5340, 160 6110'; 'Manifold Pressure (Bar)' trace between about 0.48 and 0.68"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2011/03/960.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mainline DynoLog sheet, 5th gear",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Test Date: 27-Mar-2011 12:39'; 'Test #: 540'; 'Air Density: 96.0%'; 'Gear: 5'; 'Correction: 3.39 SAE J607 (25°C, 1008mBar, 27%)'; 'Max: dTorque= 272.5FtLb @ 152KPH Power= 233.2HP @ 172KPH'; x-axis '... 160 4530, 180 5100, 200 5670 ...'; manifold pressure trace about 0.56-0.69 bar"
+        },
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/3-0l-2jz-892-whp-on-93-octane-pump-gas/",
+          "accessed": "2026-09-30",
+          "title": "HP Academy forum: 3.0L 2JZ 892 WHP on 93 Octane Pump Gas? (context: dyno-to-dyno differences)",
+          "kind": "thread",
+          "quote": "HP Academy reply: 'The one you've posted is off a Dynojet which is almost an industry-standard in the US but still reads very optimistic compared to the likes of a Mustang, Mainline or Dyno Dynamics. As an example I use a factor of about 1.18 to convert our Mainline values to something you'd see on a Dynojet'"
+        }
+      ],
+      "confidence": "Sheet values are certain (read directly). 'Stock' is the owner's word only. Boost is 0.1-0.2 bar below what other owners call normal (possible leak), so a model should be run at the measured 0.6-0.68 bar, not at a nominal stock boost. Market spec (UK/Euro vs JDM) is not stated and matters. Mainline rollers usually read well below a Dynojet (one tuner uses x1.18 Mainline->Dynojet).",
+      "notes": "Three pulls on one day (two in 4th, one in 5th) show the run-to-run spread: 233.7 vs 240.3 hp in the same gear. The sheet torque is derived from wheel power, not crank torque."
+    },
+    {
+      "id": "jza80-vvti-tt6-intake-catback-dastek-2017",
+      "summary": "VVT-i Supra TT 6-speed (V161) with only a Blitz SUS intake and a Blitz NSR exhaust (both cats kept), stock turbos and ECU, owner-stated 0.9 bar on Shell V-Power: 281.4 bhp at the wheels on a Dastek roller at Clive Atthowe (UK), 8 Apr 2017, correction factor 99.9 %.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80 (sheet: 'TOYOTA SUPRA 3.0 TT', reg T293GBT)",
+        "market": "not stated; engine is the 2JZ-GTE VVT-i ('VVTI TT'), the Japanese-market version, so most likely a JDM import (inferred, not stated)",
+        "grade": "Twin Turbo, VVT-i",
+        "gearbox": "V161 6-speed manual (stated)",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE VVT-i twin turbo; internals stock (owner lists only intake and exhaust)",
+      "dyno": {
+        "make": "Dastek",
+        "model": "not stated (sheet header 'DASTEK DYNAMOMETERS ... DYNAMOMETER REPORT')",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Clive Atthowe (UK); sheet watermark 'CAT Automotive'"
+      },
+      "correction": {
+        "value": "correction factor 99.9 % (standard not named)",
+        "howKnown": "sheet: 'Correction Factor 99.9 %'"
+      },
+      "testConditions": {
+        "temperature": "22.1 °C",
+        "pressure": "1019 mbar",
+        "humidity": "not printed",
+        "howKnown": "sheet: 'Environment Temperature 22.1 °C', 'Barometric Pressure 1019 mBar'"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "281.4 bhp @ 6,472 rpm (Run No 3); 276.6 bhp @ 6,429 rpm (Run No 2)",
+        "peakWheelTorque": "no wheel torque given. The sheet's 'Maximum Torque 276.3 lbft @ 5,702 rpm' (Run 3) / '274.4 lbft @ 5,668 rpm' (Run 2) sits next to the dyno's engine-power estimate (319.6 / 316.0 bhp) and is not labelled wheel or engine.",
+        "howRead": "read from sheet image"
+      },
+      "boost": {
+        "peak": "0.9 bar (owner's text)",
+        "atPeakPower": "not logged on the sheet",
+        "fullBoostRpm": "not shown",
+        "howKnown": "owner: 'Boost Pressure - 0.9bar'"
+      },
+      "fuel": "Shell V-Power (UK premium unleaded; RON not given in the source)",
+      "mods": {
+        "turbo": "'Standard TT' (stock sequential twins)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock (not listed)",
+        "exhaust": "Blitz NSR, 'both cats in place'",
+        "intake": "Blitz SUS intake",
+        "injectors": "stock (owner, asked about the fuel system and pump: 'As far as I'm aware, yes.')",
+        "fuelPump": "stock (same)",
+        "ecu": "'Standard'",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "V161",
+        "other": "The sheet's AFR plot shows about 8-9:1 at full load (very rich); the owner asked what causes it."
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/235177-standard-vvti-tt6/",
+          "accessed": "2026-09-30",
+          "title": "Standard VVTi TT6 (mkivsupra.net Dyno Section, posted 10 Apr 2017)",
+          "kind": "thread",
+          "quote": "'Engine Type - VVTI TT / Engine Spec - Blitz SUS intake and that's it / Turbo - Standard TT / Fuel Used - Shell V-Power / Exhaust - Blitz NSR both cats in place / Transmission - V161 / ECU - Standard / Dyno Used - Clive Atthowe - Dastek Dyno / Power figure - 319.6bhp / Torque figure - 276.3lbft / Boost Pressure - 0.9bar'; 'any ideas what would be causing it to run this rich?'; reply asking 'are you running completely stock fuel system and stock pump?' - owner: 'As far as I'm aware, yes.'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2017/04/254.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dastek dynamometer report",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'T293GBT 08/04/2017 - TOYOTA SUPRA 3.0 TT RUN NO 2: Maximum Power - Wheels 276.6 bhp @ 6,429 rpm / Maximum Power - Engine 316.0 bhp @ 6,605 rpm / Maximum Torque 274.4 lbft @ 5,668 rpm / Correction Factor 99.9 % / Environment Temperature 22.1 °C / Barometric Pressure 1019 mBar'; 'RUN NO 3: Maximum Power - Wheels 281.4 bhp @ 6,472 rpm / Maximum Power - Engine 319.6 bhp @ 6,734 rpm / Maximum Torque 276.3 lbft @ 5,702 rpm / Correction Factor 99.9 % / 22.1 °C / 1019 mBar'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2017/04/255.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dastek AFR plot",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'AFR (AFR (Petrol))' falls from about 19 at 2,000 rpm to about 10 at 4,000 rpm and sits at 8-9 from about 4,700 to 7,300 rpm (runs 2 and 3)"
+        }
+      ],
+      "confidence": "Wheel figures certain (printed). Boost is owner-stated, not logged. The very rich mixture (8-9:1) is abnormal and may cost some power. Correction standard not named, but the factor is about 1.0. Market/spec inferred from 'VVTI'.",
+      "notes": "Breathing mods only, so this is close to a stock-boost baseline for a VVT-i car. The 319.6 bhp 'engine' figure is the dyno's estimate, not a measurement."
+    },
+    {
+      "id": "jza80-bpu-auto-stock-twins-vtech-dynodaze-2016",
+      "summary": "Stock-engine automatic TT on stock twins, 'BPU' with shimmed wastegate actuators (about 1.2 bar), OEM ECU, Tesco 99: 354 bhp at the wheels (DIN 70020) on a V-Tech roller dyno at Dynodaze (UK), 10 Apr 2016.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80 (Supra TT)",
+        "market": "not stated",
+        "grade": "Twin Turbo automatic",
+        "gearbox": "automatic ('Auto with shimmed actuators by David P'); model not stated",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE twin turbo, 'Engine Spec - Stock', 'Turbo - Stock'",
+      "dyno": {
+        "make": "V-Tech",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "Dynodaze (UK); sheet watermark 'www.Dynodaze.com', footer 'Measured on V-Tech dyno (www.vtechdyno.eu)'"
+      },
+      "correction": {
+        "value": "DIN 70020",
+        "howKnown": "sheet: 'Norm DIN 70020'; 'Power on Wheels'"
+      },
+      "testConditions": {
+        "temperature": "12.5 °C (Test 1), 13.0 °C (Test 2)",
+        "pressure": "1005.2 hPa",
+        "humidity": "not printed",
+        "howKnown": "sheet table"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "354 BHP @ 5,747 rpm (Test 2); 349 BHP @ 5,703 rpm (Test 1); 'Power on: Wheels'",
+        "peakWheelTorque": "341 ft-lb @ 5,017 rpm (Test 1) / 5,025 rpm (Test 2); owner calls it 'at the wheels', the sheet does not say how torque is referred",
+        "howRead": "read from sheet image"
+      },
+      "boost": {
+        "peak": "about 1.25 bar near 5,000 rpm (Test 1); about 1.15 bar (Test 2)",
+        "atPeakPower": "about 1.1-1.15 bar at 5,700 rpm",
+        "fullBoostRpm": "about 5,000 rpm; second-turbo changeover dip around 3,900-4,300 rpm",
+        "howKnown": "read from the sheet's boost trace. The axis label is cut off and begins 'Absolute', but the scale runs -1 to 2 and reads below zero at low rpm, so it behaves like gauge boost in bar. Owner: 'Boost Pressure - 1.2bar'."
+      },
+      "fuel": "Tesco 99 (UK 99 RON, as named by the owner)",
+      "mods": {
+        "turbo": "stock sequential twins; boost raised by shimming the wastegate actuators",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "'Mongoose with modified outlet'",
+        "intake": "not stated",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "'OEM', 'Mapped By - N/A'",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "automatic",
+        "other": "Owner labels the car 'BPU' but lists only the exhaust and the actuator shims. Sheet AFR 12.2-12.9 above 5,000 rpm (Bank #1/#2)."
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/228661-bpu-auto-at-dynodaze-10042016/",
+          "accessed": "2026-09-30",
+          "title": "BPU auto at DynoDaze 10/04/2016 (mkivsupra.net Dyno Section)",
+          "kind": "thread",
+          "quote": "'Engine Type - BPU / Engine Spec - Stock / Turbo - Stock / Fuel Used - Tesco 99 / Exhaust - Mongoose with modified outlet / Transmission - Auto with shimmed actuators by David P / ECU - OEM / Mapped By - N/A / Dyno Used - DynoDaze / Power figure - 354 at the wheels / Torque figure - 341 at the wheels / Boost Pressure - 1.2bar'. Later: 'that's as good as it's going to get from the stock twins'."
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_04/714569978_dynograph.jpg.5b236956aead359548bd9ec604856763.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynodaze power sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Test1 / Test2; Max power [BHP] 349 (5703 RPM) / 354 (5747 RPM); Max torque [ft-lb] 341 (5017 RPM) / 341 (5025 RPM); Max Speed [mph] 135 / 135; Shift [mph] 38,6 / 38,6; Temperature [C] 12,5 / 13,0; Pressure [HPa] 1005,2 / 1005,2; Power on Wheels / Wheels; Norm DIN 70020 / DIN 70020; Date/Time 2016-04-10 11:40:03 / 2016-04-10 11:41:46'; footer 'Measured on V-Tech dyno (www.vtechdyno.eu)'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_04/Boost.jpg.65952906028d8b551699099c5a5ae09a.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynodaze boost trace",
+          "kind": "dyno sheet image",
+          "quote": "read from image: traces rise from about -0.4 at 1,600 rpm to about 0.55-0.75 near 4,200-4,300 rpm, peak about 1.25 (red) near 5,000 rpm, then about 1.1-1.15 to 7,000 rpm"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_04/AFR.jpg.1da4a614f2c2a698b7f19cb8f0f4860d.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynodaze AFR trace",
+          "kind": "dyno sheet image",
+          "quote": "read from image: AFR Bank #1 about 12.7-12.9 and Bank #2 about 12.2-12.7 from 5,000 to 7,000 rpm"
+        }
+      ],
+      "confidence": "Sheet numbers certain. Parts beyond the exhaust are not itemised ('BPU' commonly means intake, downpipe/decat, exhaust and more boost, but that is an assumption). Gear not stated. Automatic, so expect larger drivetrain loss than a manual.",
+      "notes": "Useful as an automatic stock-twins data point with a measured boost trace."
+    },
+    {
+      "id": "jza80-vvti-stock-twins-ttc-link-dynodevelopments-2018",
+      "summary": "Unopened JDM VVT-i 2JZ-GTE on stock J-spec twins run in TTC (both turbos full time, not sequential), Link standalone, ID1050x, 3-in exhaust, 4-in FMIC, R154 5-speed swap, Tesco 99, 1.2 bar peak tapering to about 1.05: 370.4 whp @ 5,297 rpm on a Dyno Developments roller at Hidden Performance (UK), 23 Mar 2018.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "engine is JDM ('JDM TT 2JZGTE VVTI'); car market not stated",
+        "grade": "Twin Turbo VVT-i",
+        "gearbox": "R154 5-speed manual (stated) - not a factory JZA80 gearbox, a swap",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE VVT-i, 'Stock, unopened'",
+      "dyno": {
+        "make": "Dyno Developments (logo on the sheet; owner writes 'DD @ Hidden Performance')",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "run line shows 'Lock 6FF' (meaning not stated)",
+        "where": "Hidden Performance (UK)"
+      },
+      "correction": {
+        "value": "not named; the sheet prints a factor of 1.002",
+        "howKnown": "sheet: '370.4 WHP @ 5297 Rpm (434.6 Uncorrected FHP) 450.5 WTQ @ 4968 Rpm (449.9 Uncorrected FTQ) 1.002%'; run line '20180323019 | Lock 6FF | 17 | 53 | 99.962 | 1.002' (column headings not visible)"
+      },
+      "testConditions": {
+        "temperature": "17 (probably °C; unlabelled column)",
+        "pressure": "99.962 (probably kPa; unlabelled)",
+        "humidity": "53 (probably %; unlabelled)",
+        "howKnown": "unlabelled columns on the sheet's run line; units are my inference"
+      },
+      "gear": "4th (owner: 'Power run performed in 4th gear')",
+      "result": {
+        "peakWheelPower": "370.4 WHP @ 5,297 rpm",
+        "peakWheelTorque": "sheet '450.5 WTQ @ 4968 Rpm' - nearly equal to its '449.9 Uncorrected FTQ' flywheel torque, so it is not a true wheel torque; treat as unreliable",
+        "howRead": "read from sheet image (enlarged)"
+      },
+      "boost": {
+        "peak": "about 1.2 bar at about 4,300 rpm",
+        "atPeakPower": "about 1.05-1.1 bar",
+        "fullBoostRpm": "about 4,100 rpm",
+        "howKnown": "sheet boost trace; owner: 'Peaks at 1.2 Bar, tapers between 1-1.1Bar after.'"
+      },
+      "fuel": "Tesco 99 (UK 99 RON, as named); 'AFR target of 11.5 whilst boosting'",
+      "mods": {
+        "turbo": "stock J-spec twins 'running in TTC' (non-sequential)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "'Whifbitz 4'' Intercooler Kit'",
+        "exhaust": "'Custom 3'' downpipe back exhaust'",
+        "intake": "'HKS Air Filter'",
+        "injectors": "'Injector Dynamics 1050x Injectors + Top Feed Fuel Rail'",
+        "fuelPump": "'Walbro 255 @ 13.5v'",
+        "ecu": "'Link Extreme Wire In ECU' (VVT-i, e-throttle and traction control tuned)",
+        "cams": "stock",
+        "internals": "stock, unopened",
+        "gearbox": "R154 5-speed (swap)",
+        "other": "AN6 fuel lines, pulsation dampener bypassed, AEM adjustable FPR, Superspark coils (wasted spark), oil cooler, 3-port boost solenoid. Owner: 'Map is fairly conservative with timing'."
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/239864-vvti-bpu/",
+          "accessed": "2026-09-30",
+          "title": "VVTI BPU (mkivsupra.net Dyno Section, posted 25 Mar 2018)",
+          "kind": "thread",
+          "quote": "'Engine Type JDM TT 2JZGTE VVTI Supra Engine / Engine Spec Stock, unopened / Turbo(s) Stock Jspec's running in TTC / Modifications Walbro 255 @ 13.5v, AN6 Fuel Lines. Fuel pulsation dampener bypassed, AEM Universal Adjustable Fuel Pressure Regulator, Injector Dynamics 1050x Injectors + Top Feed Fuel Rail, Custom 3'' downpipe back exhaust, Superspark Ignition Coils (Wasted Spark setup), Whifbitz 4'' Intercooler Kit, HKS Air Filter, Oil cooler, 3 Port boost solenoid / Fuel Used Tesco 99. AFR target of 11.5 whilst boosting. / Transmission R154 / Power run performed in 4th gear / ECU Link Extreme Wire In ECU / Dyno Used DD @ Hidden Performance / Power figure Recorded 370 rwhp, dyno estimated 435hp at flywheel. / Boost Pressure Peaks at 1.2 Bar, tapers between 1-1.1Bar after. / Map is fairly conservative with timing'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2018_03/279505621_2JZVVTI.jpg.0dbbd0971b4c5a3d79d4adf230fb99f7.jpg",
+          "accessed": "2026-09-30",
+          "title": "Hidden Performance dyno sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'HIDDEN PERFORMANCE'; 'DYNO DEVELOPMENTS' logo; '435.24 [HP]', '450.55 [Ft.lbs]'; run line '20180323019 Lock 6FF 17 53 99.962 1.002'; '370.4 WHP @ 5297 Rpm (434.6 Uncorrected FHP) 450.5 WTQ @ 4968 Rpm (449.9 Uncorrected FTQ) 1.002%'; boost trace peaks about 1.2 bar near 4,300 rpm, about 1.05-1.1 bar from 5,500 to 6,600 rpm"
+        }
+      ],
+      "confidence": "Numbers read from the sheet. TTC mode and the R154 swap mean both the turbo system behaviour and the gearbox differ from factory. Correction standard unknown (factor about 1.0).",
+      "notes": "Good 'stock twins, pump fuel, standalone ECU' point, but model the twins as parallel (TTC), not sequential."
+    },
+    {
+      "id": "jza80-pt6266-stock-longblock-stock-ecu-dynojet-2013",
+      "summary": "Supra TT (most likely the owner's 1993.5 6-speed hardtop), unopened stock longblock, Precision 6266 DBB (0.84 A/R divided) on a PowerHouse Racing kit, stock ECU with Apexi VPC/AFC Neo and stock fuel system, 18-19 psi on a 100/110-octane mix: 560.22 whp (546.39 whp on the 'safe' final pull) on a Dynojet, CF STD, Driven Performance, Monroe NC, 28 Mar 2013.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated ('1993.5' is a US model-year label; ECU listed as 'Stock OBDII ECU')",
+        "grade": "Twin Turbo hardtop (now single turbo)",
+        "gearbox": "6-speed manual - inferred: the post does not say; the owner's signature lists two Supras, both '6sp'",
+        "year": "1993.5 - inferred from the owner's signature ('1993.5 Supra TT 6sp Hardtop') and the Photobucket album name 'Supra HT Dyno'; the post itself does not say"
+      },
+      "engine": "2JZ-GTE, 'Stock/original unopened longblock'",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated (WinPEP 7 software on screen)",
+        "type": "not stated",
+        "mode": "run type 'RO'; x-axis road speed (mph); 'Gear Ratio N/A'; 'Smoothing: 5'",
+        "where": "Driven Performance, 5715 Stockbridge Dr., Monroe NC 28110 (printed on the screen)"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "screen: 'CF: STD Smoothing: 5'"
+      },
+      "testConditions": {
+        "temperature": "not shown",
+        "pressure": "not shown",
+        "humidity": "not shown",
+        "howKnown": "not visible on the photographed screen"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "560.22 hp (RunFile_003, first pull, ~18.5-19 psi) and 546.39 hp (RunFile_004, 'final safe pull', ~18-18.7 psi); rpm not recorded (plotted against mph). Owner also: 'I went from 509WHP to 526WHP to 560WHP with .5 -.7psi increase between pulls.'",
+        "peakWheelTorque": "screen prints 'Max Torque = 483.32' (003) and '487.06' (004), but with 'Gear Ratio N/A' and no rpm trace this is not a reliable engine-speed torque",
+        "howRead": "read from the two screen photos (enlarged)"
+      },
+      "boost": {
+        "peak": "19 psi (1.34 kg/cm2) on the 560 pull; 18.7 psi (1.32 kg/cm2) on the 546 pull",
+        "atPeakPower": "'settled in at 18.5psi' (560 pull) / 'settled in at 18psi' (546 pull)",
+        "fullBoostRpm": "not stated",
+        "howKnown": "owner's text"
+      },
+      "fuel": "'Mix of 100 and 110': about 5 gallons of VP 110 on top of about 5 gallons of pump 100 octane (US); a race-fuel blend, not pump 93",
+      "mods": {
+        "turbo": "Precision 6266 DBB (dual ball bearing), 0.84 A/R divided turbine housing",
+        "turboSpecs": {
+          "maker": "Precision Turbo & Engine",
+          "model": "PT6266 dual ball bearing ('6266 DBB' per owner); whether this 2013 unit had the CEA wheel is not stated",
+          "ratedPower": "not found (maker site blocked by a bot challenge)",
+          "compressor": "vendor SupraStore: '62mm inducer compressor wheel'; CEA wheel 'machined from a 2618-aluminum forging'; '\"Ported S\" compressor cover 4.0\" inlet/2.5\" outlet'",
+          "turbine": "vendor SupraStore: '67mm, 76 trim turbine wheel' (MotoIQ describes the sister 6766's CEA turbine as '66mm ... 76 trim' - sources disagree on 66 vs 67 mm)",
+          "turbineHousingOptions": "vendor: 'T4 Divided .84, 1.0, 1.15, or 1.32 A/R with 3 5/8\" V-Band discharge'; this car: 0.84 A/R divided",
+          "compressorMap": "not found",
+          "sources": [
+            {
+              "url": "https://www.suprastore.com/800hpkitcom.html",
+              "accessed": "2026-09-30",
+              "title": "SupraStore Stage 2 Supra 2JZGTE Turbo Kit (vendor page, not the maker)",
+              "kind": "shop page",
+              "quote": "'Turbo Specs - Precision Turbo 6266 and 6766 are nearly identical except compressor wheel size. Exclusive CEA (Competition Engineered Aerodynamics) compressor wheel machined from a 2618-aluminum forging ... 62mm inducer compressor wheel ... 67mm, 76 trim turbine wheel ... T4 Divided .84, 1.0, 1.15, or 1.32 A/R with 3 5/8\" V-Band discharge ... Available with either a Hydrodynamic 360 thrust bearing system, or an Air-cooled, dual ceramic ball-bearing center housing rotating assembly (CHRA)'"
+            }
+          ],
+          "confidence": "Vendor data only; maker page (precisionturbo.com) could not be read. No compressor map."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not clearly stated: the list says 'GReddy 3-row' without saying intercooler or radiator",
+        "exhaust": "4-in downpipe/midpipe; Apexi N1 catback ('necks down to 3\" at the flange and then to 3.15\"')",
+        "intake": "not stated (engine-bay photo shows a cone filter)",
+        "injectors": "stock (owner tested 'how far I could safely push the stock fuel system')",
+        "fuelPump": "stock (same)",
+        "ecu": "'Stock OBDII ECU; VPC/AFC NEO'",
+        "cams": "stock cams; 'UR Cams gears at +1, -3.5 (previous BPU settings)'",
+        "internals": "'Stock/original unopened longblock'",
+        "gearbox": "6-speed manual",
+        "other": "'PowerHouse Racing turbo kit - open manifold, single gate'; 'Turbosmart 50mm WG'"
+      },
+      "sources": [
+        {
+          "url": "https://www.3sgto.org/threads/11681-Supra-single-6266-stock-ECU-amp-Fuel-dyno",
+          "accessed": "2026-09-30",
+          "title": "Supra single 6266 stock ECU & Fuel dyno (3sgto.org, posted by 'HellBringer', 30 Mar 2013)",
+          "kind": "thread",
+          "quote": "Parts list: '6266 DBB .84 divided housing / PowerHouse Racing turbo kit - open manifold, single gate / 4\" dp/mp; Apexi N1 catback (necks down to 3\" at the flange and then to 3.15\") / Turbosmart 50mm WG / GReddy 3-row / UR Cams gears at +1, -3.5 (previous BPU settings) / Stock OBDII ECU; VPC/AFC NEO / Stock/original unopened longblock'. Fuel: 'Mix of 100 and 110' ('5 gallons of VP 110 on top of approx. 5 gallons of the pump 100 octane'). 'Boost peaked at 1.34 kg/cm2 or 19psi, but settled in at 18.5psi' (560WHP); final pull 'Boost peaked at 1.32 kg/cm2 or 18.7psi, but settled in at 18psi' (546WHP). Owner's signature on the page: '1993.5 Supra TT 6sp Hardtop -- old school 74MM setup: 10.4 @ 138MPH 1/2 mile' and '1994 Supra TT 6sp -- 11.8 @ 118MPH basic BPU' (signatures can change after the post; which car carried the 6266 is not stated in the post)."
+        },
+        {
+          "url": "https://www.3sgto.org/archive/index.php/t-11681.html",
+          "accessed": "2026-09-30",
+          "title": "Same thread, archive view",
+          "kind": "thread",
+          "quote": "'I went from 509WHP to 526WHP to 560WHP with .5 -.7psi increase between pulls.'"
+        },
+        {
+          "url": "https://i282.photobucket.com/albums/kk252/AHPowelson/Supra%20HT%20Dyno/560WHP_zpscbe8e006.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynojet screen photo, 560 pull",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH / DRIVEN Performance'; 'CF: STD Smoothing: 5'; 'RunFile_003.drf Max Power = 560.22 Max Torque = 483.32'; date '3/28/2013 7:12:51'; type 'RO'; location 'C:\\DynoRuns\\AbrahmSUPRA\\RunFile_003'; 'Gear Ratio N/A'; cursor 548.48 / 470.06 at X = 105.7 mph; footer '5715 Stockbridge Dr. Monroe NC 28110'"
+        },
+        {
+          "url": "https://i282.photobucket.com/albums/kk252/AHPowelson/Supra%20HT%20Dyno/546WHP_zps0a80d132.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynojet screen photo, 546 pull",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'RunFile_004.drf Max Power = 546.39 Max Torque = 487.06'; '3/28/2013 7:27:13'; 'CF: STD Smoothing: 5'; cursor 538.12 / 467.22 at X = 105.7 mph"
+        },
+        {
+          "url": "https://i282.photobucket.com/albums/kk252/AHPowelson/Supra%20HT%20Dyno/DSCN4265_zps0f1d3877.jpg",
+          "accessed": "2026-09-30",
+          "title": "Engine bay photo",
+          "kind": "dyno sheet image",
+          "quote": "read from image: single turbo on the exhaust side with cone filter, adjustable cam gears, aluminium radiator, stock intake manifold"
+        }
+      ],
+      "confidence": "Dynojet figures certain (read from the screen). STD correction reads roughly 4 % above SAE J1349. The fuel is a 100/110 race blend, so knock limits differ from pump 93. Year and 6-speed gearbox are inferred from the owner's signature, not stated in the post. No weather data. The owner's supraforums thread is TollBit-gated; this is his own cross-post on a 3000GT forum.",
+      "notes": "Very clean medium build for testing the single-turbo model: stock longblock, stock cams (gears only), stock injectors, known boost."
+    },
+    {
+      "id": "jza80-gt3582r-stock-longblock-aem-dynojet-dsport",
+      "summary": "1994 Supra 6-speed (owner Joshua Barnes), factory longblock, Garrett GT3582R on a GReddy manifold, AEM EMS tuned by Titan Motorsports at 22 psi: 560 hp / 470 lb-ft at the wheels on a Dynojet (DSPORT feature, web date 18 Oct 2015).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated",
+        "grade": "Turbo",
+        "gearbox": "'factory 6-speed Getrag transmission'",
+        "year": "1994"
+      },
+      "engine": "2JZ-GTE, 'Leaving the longblock in factory form'",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated (car tuned by Titan Motorsports)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the article; no sheet image in the web version"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the article"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "560 hp (rpm not stated); headline '560 WHP'",
+        "peakWheelTorque": "470 lb-ft (rpm not stated)",
+        "howRead": "article text: 'Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque.'"
+      },
+      "boost": {
+        "peak": "22 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "'With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi'"
+      },
+      "fuel": "not stated in the article",
+      "mods": {
+        "turbo": "Garrett GT3582R ball-bearing (turbine housing A/R not stated)",
+        "turboSpecs": {
+          "maker": "Garrett (Garrett Motion)",
+          "model": "GT3582R (ball bearing, water-cooled CHRA)",
+          "ratedPower": "Horsepower: 400 - 675; Displacement: 2.0L - 4.5L (maker page)",
+          "compressor": "inducer 61 mm, exducer 82 mm, trim 56, housing A/R 0.70",
+          "turbine": "inducer 68 mm, exducer 62 mm, trim 84",
+          "turbineHousingOptions": "GT30 turbine kits: 0.63 / 0.82 / 1.06 A/R with T3 or T4 inlet and V-band outlet; V-band in/out 0.61 / 0.83 / 1.01; wastegated 0.63 (T25) and 0.82 (T3)",
+          "compressorMap": {
+            "peakEfficiency": "79 % (centre island)",
+            "maxFlow": "about 69-70 lb/min corrected (about 0.53 kg/s) where the 130,000 rpm speed line ends, near pressure ratio 2.8",
+            "topPressureRatio": "about 4.0 (tip of the surge line, near 48 lb/min)",
+            "maxSpeed": "130,000 rpm ('MAX RPM 130000')",
+            "howRead": "read by eye from the maker's published map image; +/- about 1 lb/min and 0.05 PR"
+          },
+          "turbineHousingOnThisCar": "not stated in the build source",
+          "sources": [
+            {
+              "url": "https://www.garrettmotion.com/racing-and-performance/performance-catalog/turbo/gt3582r/",
+              "accessed": "2026-09-30",
+              "title": "Garrett GT3582R product page",
+              "kind": "shop page",
+              "quote": "'GT3582R Turbocharger / Horsepower: 400 - 675 / Displacement: 2.0L - 4.5L'; reference data table: Compressor Inducer 61mm, Exducer 82mm, Trim 56, A/R 0.70; Turbine Inducer 68mm, Exducer 62mm, Trim 84; turbine kits 740902-0012 0.63 T3, -0011 0.82 T3, -0010 1.06 T3, -0018 0.63 T4, -0017 0.82 T4, -0016 1.06 T4, -0033 0.61 V-Band, -0032 0.83 V-Band, -0031 1.01 V-Band; 'BALL BEARING CONFIGURATION WITH WATER COOLED CHRA'"
+            },
+            {
+              "url": "https://www.garrettmotion.com/wp-content/uploads/2022/06/GT3582-Comp-Map-Kg-Sec-scaled.jpg",
+              "accessed": "2026-09-30",
+              "title": "Garrett GT3582 compressor map (lb/min and kg/s)",
+              "kind": "dyno sheet image",
+              "quote": "read from image: efficiency islands up to 79%; speed lines 50000-130000 rpm; 'MAX RPM 130000' line ends at about 69-70 lb/min (0.53 kg/s) at PR about 2.8; surge line peaks at PR about 4.0"
+            }
+          ],
+          "confidence": "Maker data, current web page. I assume the GT3582R wheel set has not changed since the build (not verified)."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "'HKS GT-R front-mount intercooler'",
+        "exhaust": "'custom downpipe and GReddy titanium exhaust system'",
+        "intake": "Titan Motorsports air intake system",
+        "injectors": "'six-pack of Titan 720 cc/min fuel injectors'",
+        "fuelPump": "'Titan triple-pump fuel delivery system' (three 255-lph Walbro pumps)",
+        "ecu": "'plug-and-play AEM Engine Management System (EMS)', tuned by Titan Motorsports",
+        "cams": "not mentioned (longblock left in factory form)",
+        "internals": "factory longblock",
+        "gearbox": "factory 6-speed Getrag; 'Tilton triple-disc carbon-carbon clutch and lightened flywheel'",
+        "other": "'GReddy stainless-steel exhaust manifold' with Swain Tech coating"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/560whp-track-carving-single-turbo-toyota-supra/",
+          "accessed": "2026-09-30",
+          "title": "560 WHP Track Carving Single Turbo Toyota Supra (DSPORT, Richard Fong, web date 18 Oct 2015)",
+          "kind": "article",
+          "quote": "'For Joshua Barnes, the horsepower bug bit early, taking him and his 1994 Toyota Supra through an evolution of changes.' 'Leaving the longblock in factory form, it was time to find a turbocharger better suited' ... 'a Garrett GT3582R ball-bearing turbocharger.' 'With an EMS-controlled AEM boost-control solenoid regulating boost pressure to 22 psi, Titan got to work tuning the Supra for maximum response.' 'Strapped to the rollers of a Dynojet dynamometer, the Supra generated an ultra-responsive power curve with 560 peak horsepower and 470 lb-ft of torque.' 'A Tilton triple-disc carbon-carbon clutch and lightened flywheel replaced the factory clutch to transfer the power from the crankshaft to the factory 6-speed Getrag transmission.'"
+        }
+      ],
+      "confidence": "Numbers from magazine text only (no sheet). Fuel, correction, rpm and turbine A/R unknown. The print issue date is not given (web date 2015; the build itself is probably older).",
+      "notes": "Pairs well with the 6266 build: similar power at a higher boost with a smaller-flow turbo."
+    },
+    {
+      "id": "jza80-motoiq-pt6766-built-e80-dynojet424x-2015",
+      "summary": "MotoIQ Project MKIV Supra ('95, Getrag V160 6-speed): built 3.0 L (JE 8.5:1 pistons, K1 rods, FRP-ported head, Titan 272 cams, Hypertune manifold), Precision 6766 CEA DBB with 1.15 A/R divided housing: 817 whp / 702 lb-ft at 29 psi on 80 % ethanol, Modified by KC's Dynojet 424x (article 30 Jan 2015).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "JZA80 ('a stock '95 Supra' before mods)",
+        "market": "not stated (US-based car; former Turbo Magazine project car)",
+        "grade": "Turbo",
+        "gearbox": "'Our V160 6-speed Getrag transmission'; RPS BC2 carbon twin-disc clutch, 19-lb flywheel",
+        "year": "1995"
+      },
+      "engine": "2JZ-GTE rebuilt at stock 3.0 L ('this 2JZ 3-liter'; 'built 3.0-liter using JE Pistons, K1 rods'); bore not stated",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "424x ('Modified By KC's Dynojet 424x')",
+        "type": "inertia roller (the author calls it 'an inertial dynojet')",
+        "mode": "not stated",
+        "where": "Modified by KC (MKC), Kansas City area"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the text; the graph images are blocked to automated fetches"
+      },
+      "testConditions": {
+        "temperature": "not stated (winter in Kansas; author mentions 70F one day and 38F the next)",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "article text only"
+      },
+      "gear": "not stated for the peak run; the author compares runs 'in fourth gear'",
+      "result": {
+        "peakWheelPower": "817 whp at 29 psi, 80 % ethanol (rpm not stated). Also: '26 PSI is good for over 750 WHP and 575 LB-FT'.",
+        "peakWheelTorque": "702 lb-ft at 29 psi",
+        "howRead": "article text: 'With 80% ethanol in the tank, the car saw a whopping 817 WHP and 702 LB-FT of torque at 29 PSI.'"
+      },
+      "boost": {
+        "peak": "29-30 psi in the midrange",
+        "atPeakPower": "'dropping off to 25-26 PSI up top at around 7000 RPM'; ECU log 'up top dropped to only 270 kPa, or roughly 24 PSI, where it's still sustaining around 750whp'",
+        "fullBoostRpm": "not stated as a number (new setup spools '600 RPM' sooner than the old one)",
+        "howKnown": "article text. Other runs on the same day (graph only, no peak numbers in text): 'Blue: 17 PSI (wastegate spring), pump 93 / Red: 22 PSI, 54% ethanol / Green: 25 PSI, 64% ethanol / Purple: 29 PSI, 80% ethanol'"
+      },
+      "fuel": "80 % ethanol measured ('a measured 80% ethanol') for the 817 run; 'pump 93' at 17 psi, E54 at 22 psi, E64 at 25 psi",
+      "mods": {
+        "turbo": "Precision 6766 CEA dual ball bearing, 1.15 A/R twin-scroll (divided) housing",
+        "turboSpecs": {
+          "maker": "Precision Turbo & Engine",
+          "model": "PT6766 CEA, dual ball bearing",
+          "ratedPower": "935 hp (as quoted by MotoIQ: 'it's rated to 935hp'; 'rated at 935 BHP')",
+          "compressor": "67-mm billet CEA wheel 'machined from a 2618 forging'; ported 'H' anti-surge cover allowing a 4-in intake tube",
+          "turbine": "'Precision's Competition Engineered Aerodynamics (CEA) 66mm turbine is a 76 trim wheel'",
+          "turbineHousingOptions": "on this car: 'divided 1.15 A/R housing', 'V-band discharge is 3 5/8-in'",
+          "compressorMap": "not found (maker site blocked)",
+          "sources": [
+            {
+              "url": "https://motoiq.com/project-toyota-supra-mkiv-part-4-turbo-components/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ Project Toyota Supra MKIV Part 4: Turbo components (14 Mar 2013), page 1",
+              "kind": "article",
+              "quote": "'Our Precision 6766 dual ball bearing turbocharger. The ported \"H\" anti-surge allows us to use a 4-in intake tube. The 67-mm compressor wheel is machined from a 2618 forging and features PT's exclusive CEA (Competition Engineered Aerodynamics) technology. ... For a 67-mm medium frame turbo, it's crazy to think it's rated to 935hp.'"
+            },
+            {
+              "url": "https://motoiq.com/project-toyota-supra-mkiv-part-4-turbo-components/2/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ Part 4, page 2",
+              "kind": "article",
+              "quote": "'Precision's Competition Engineered Aerodynamics (CEA) 66mm turbine is a 76 trim wheel.' ... 'I was confident to go with a divided 1.15 A/R housing. I felt this would give an engine response similar to an open .96 A/R. ... The V-band discharge is 3 5/8-in.'"
+            },
+            {
+              "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/8/",
+              "accessed": "2026-09-30",
+              "title": "MotoIQ Part 10, page 8",
+              "kind": "article",
+              "quote": "'It's got a 67-mm billet compressor wheel with a 66-mm turbine wheel, and a divided 1.15 exhaust housing. It's also rated at 935 BHP.'"
+            }
+          ],
+          "confidence": "Secondary (magazine quoting the maker). Maker page not readable."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "4.0-in ETS; 3.0-in piping",
+        "exhaust": "PHR S45 manifold with 1.5-in primaries; twin PTE 44-mm (table) or 46-mm (Parts 4 and 9) wastegates, open; 3.5-in exhaust",
+        "intake": "Hypertune 'big port' intake manifold, port-matched; Hypertune 90-mm throttle body",
+        "injectors": "Fuel Injector Clinic 2150cc",
+        "fuelPump": "twin Walbro F90000262 E85 pumps (table); Part 9 says 'twin set of Walbro 485 pumps'",
+        "ecu": "AEM Infinity EMS (flex-fuel), tuned by Chad Charlton at MKC",
+        "cams": "Titan Motorsports 272 (AEM cam gears)",
+        "internals": "JE asymmetrical 8.5:1 pistons, K1 rods, Fluidampr damper; head: 1-mm oversized Ferrea valves, FRP headwork",
+        "gearbox": "Getrag V160 6-speed",
+        "other": "Dyno tyres 305/35-18"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Project MKIV Supra Part 10: Dyno testing - We Hit 800 WHP! (Pablo Mazlumian, 30 Jan 2015), page 1",
+          "kind": "article",
+          "quote": "caption: 'Project Supra on Modified By KC's Dynojet 424x, ready to spin some madness.' 'We started this pursuit with a built engine featured in Parts 1-3 ...'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/4/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 10, page 4 (old vs new parts table)",
+          "kind": "article",
+          "quote": "NEW column: 'AEM Infinity EMS / Fuel Injector Clinic 2150cc / twin Walbro F90000262 E85 compatible pumps (400 LPH) / PTE 6766, 1.15 AR twinscroll, DBB / PHR S45, 1.5-in primaries / PTE twin 44-mm (1.73-in x 2), open / 3.5-in (unchanged) / Hypertune \"big port\" manifold, port-matched / Hypertune 90-mm / 1-mm oversized Ferrea, FRP headwork / Titan Motorsports 272 / JE Asymmetrical 8.5:1 / K1 / Fluidampr / 4.0-in ETS / 3.0-in / RPS carbon/carbon twin disc, 19-lb flywheel / 93 octane, mostly E70/E85 / 305/35-18'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/6/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 10, page 6",
+          "kind": "article",
+          "quote": "'even though this is on an inertial dynojet' ... 'Looks like he's got the wastegate duty cycle at around 44-50% to hit around 300 kPa, or about 29 PSI.'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/7/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 10, page 7",
+          "kind": "article",
+          "quote": "'grabbed some of the shop's E98 pure ethanol blend to bring us up to what turned out to be a measured 80% ethanol' ... 'With 80% ethanol in the tank, the car saw a whopping 817 WHP and 702 LB-FT of torque at 29 PSI. ... What you're seeing is a peak 29-30 PSI in the midrange, dropping off to 25-26 PSI up top at around 7000 RPM.' ... 'The boost up top dropped to only 270 kPa, or roughly 24 PSI, where it's still sustaining around 750whp. This confirms the tremendous flow of this 2JZ 3-liter.'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/8/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 10, page 8",
+          "kind": "article",
+          "quote": "'Here is a comparison of Project Supra's runs with the PTE 6766 CEA Ball Bearing turbo at different boost levels, starting with 17 PSI (wastegate), 22 PSI, 25 PSI, 29 PSI. ... Blue: 17 PSI (wastegate spring), pump 93 / Red: 22 PSI, 54% ethanol / Green: 25 PSI, 64% ethanol / Purple: 29 PSI, 80% ethanol'. 'Still, 26 PSI is good for over 750 WHP and 575 LB-FT of torque.'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-9-the-2jzs-running-plus-more-fuel-new-suspension-tires-dyno-runs-and-more/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Project MKIV Supra Part 9 (1 Dec 2014), pages 1 and 7",
+          "kind": "article",
+          "quote": "p1: 'The 2JZ-GTE engine was built by Four Rings Performance using JE Pistons and K1 rods, and installed at Modified by MKC.' p7: 'Our V160 6-speed Getrag transmission also turns gears smoothly'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-15-preliminary-testing-of-the-precision-cea-6870-gen2-turbo/3/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Project MKIV Supra Part 15 (7 Aug 2016), page 3 - same car with a Precision CEA 6870 Gen2",
+          "kind": "article",
+          "quote": "'While we were only able to hold 23 PSI on the dyno due to the lack of load ... we still hit an impressive 730 WHP.' '... run off of the wastegate spring, which on the tarmac is steady 17 PSI but on the dyno is 15 PSI, which is still good for 548 WHP.' 'the 6766 (which had a 1.15 AR housing) needed 1-2 more PSI to make similar power, both at the 550 and at the 730 WHP level.' p1: '68-mm Gen 2 compressor wheel. The back end is 70-mm turbine wheel.' '1.00 AR divided housing'. Test in 'summer heat and humidity'; car 'flex-fuel tuned ... for the same E85 fuel'."
+        }
+      ],
+      "confidence": "Numbers from the article text (MotoIQ's graph images return 403 to automated fetches, so correction and rpm are unread). Heavily modified (272 cams, ported head, big intake manifold, built bottom end); the author says 3.0 L, but piston bore is not stated. Lower priority than the stock-cam builds; good for testing the high-boost/E85 end.",
+      "notes": "Part 15 adds same-car runs with a PTE CEA 6870 Gen2 (1.00 A/R divided) at MKC Performance: 730 whp at 23 psi and 548 whp at 15 psi on E85, summer conditions (the Part 15 text does not name the dyno; the same shop's dyno is the Dynojet 424x in Part 10)."
+    },
+    {
+      "id": "jza80-motoiq-pt71gts-stock-block-hks272-meth-pre2012",
+      "summary": "Same MotoIQ car before its 2012 rebuild: stock block with HKS 272 cams and 1-mm oversize valves, Precision 71-GTS (0.81 open, journal bearing), 93 octane plus methanol injection: 609 whp at 19 psi (3.5-in open-gate exhaust), about 657 whp at ~25 psi, 764 whp at 29 psi.",
+      "usable": false,
+      "whyNotUsable": "Dyno not named for these runs (only 'my final tune on MKC's dyno' for the ~25 psi run; the 2007 exhaust test for Modified Magazine names no dyno). Methanol injection adds an unknown cooling/octane effect, and the car has 272-degree cams. Context only.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated",
+        "grade": "Turbo",
+        "gearbox": "Getrag V160 6-speed",
+        "year": "1995"
+      },
+      "engine": "2JZ-GTE stock block (stock 8.5:1 pistons, stock rods), 1-mm oversized Ferrea valves with minimum headwork, HKS 272 cams",
+      "dyno": {
+        "make": "not stated for these runs",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": "MKC (for the ~25 psi tune)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in text"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "609 whp at 19 psi (after exhaust change; 527 whp before); 764 whp at 29 psi (699 before); about 657 whp at ~25 psi (final tune)",
+        "peakWheelTorque": "not stated",
+        "howRead": "article text"
+      },
+      "boost": {
+        "peak": "19 / 25 / 29 psi (per run)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article text"
+      },
+      "fuel": "93 octane with AEM methanol injection",
+      "mods": {
+        "turbo": "Precision 71-GTS, .81 A/R open, journal bearing",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "3.5-in Spearco; 3.0-in piping",
+        "exhaust": "HKS-style (SP) manifold, 1.25-in primaries; HKS GT 60-mm wastegate, open; 3.5-in exhaust",
+        "intake": "modified stock 'bubbled' intake manifold; stock 65-mm throttle body",
+        "injectors": "HKS 1000cc",
+        "fuelPump": "twin Walbro 255 LPH",
+        "ecu": "AEM Series 1 EMS",
+        "cams": "HKS 272",
+        "internals": "stock pistons and rods",
+        "gearbox": "Getrag V160",
+        "other": "275/35-18 tyres on the 764 run, 305/35-18 on the ~25 psi run"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-9-the-2jzs-running-plus-more-fuel-new-suspension-tires-dyno-runs-and-more/6/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 9, page 6",
+          "kind": "article",
+          "quote": "'In 2007 I'd performed a test for Modified Magazine, which compared the power difference between a 3.0-in exhaust system with \"closed\", recirculated wastegate versus this actual 3.5-in exhaust using the same wastegate, but \"open\" and venting to atmosphere. ... As a result, at 19 PSI the power went up from 527whp to 609whp on pump 93 and methanol injection, with a peak 103whp gain up top. At 29 PSI the power rose from 699whp to 764whp'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-9-the-2jzs-running-plus-more-fuel-new-suspension-tires-dyno-runs-and-more/11/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 9, page 11",
+          "kind": "article",
+          "quote": "'This graph shows where we were on pump 93 octane and methanol injection with the PT71-GTS on a stock block ... The 760-plus whp run represents the highest the Supra has ever pulled on that tune, which was at 29 PSI on 275/35-18 tires. The lesser one shows my final tune on MKC's dyno at around 25 PSI' ... 'the one in the 657whp run was significantly taller'"
+        },
+        {
+          "url": "https://motoiq.com/project-mkiv-supra-part-10-dyno-testing-we-hit-800-whp/4/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ Part 10, page 4 (OLD column)",
+          "kind": "article",
+          "quote": "'AEM Series 1 EMS / HKS 1000cc / twin Walbro 255 LPH / PTE 71-GTS, .81 AR open, journal bearing / HKS-style (SP), 1.25-in primaries / HKS GT 60-mm (2.36-in), open / 3.5-in / modified stock \"bubbled\" intake / stock 65-mm / 1-mm oversized Ferrea, minimum headwork / HKS 272 / stock 8.5:1 / stock / Stock / 3.5-in Spearco / 3.0-in / ... / 93 octane with AEM meth injection'"
+        }
+      ],
+      "confidence": "Numbers are the author's text; dyno make and correction unknown for these runs.",
+      "notes": "If the 2007 Modified Magazine exhaust test article can be found, this could become usable."
+    },
+    {
+      "id": "jza80-stock-us-1993-6mt-roadandtrack-zupra-2024",
+      "summary": "Stock 1993 left-hand-drive Supra Turbo 6-speed, 113,000 miles (The Zupra Channel, Miami area): 275 hp and 257 lb-ft at the wheels (Road & Track, 13 Feb 2024).",
+      "usable": false,
+      "whyNotUsable": "No dyno sheet and the dyno make is not stated in the text. A large 'Dynojet' banner hangs on the wall behind the car in the article's video still, so it is probably a Dynojet, but that is not proof. Correction, boost, weather and gear not stated. Could be upgraded by watching the video around 4:00 and reading the dyno screen.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated as such (1993 left-hand drive, 320 hp rating quoted, so presumably US-spec)",
+        "grade": "Turbo",
+        "gearbox": "six-speed manual",
+        "year": "1993"
+      },
+      "engine": "2JZ-GTE twin turbo, stock ('This car managed to escape that fate for the first 113,000 miles')",
+      "dyno": {
+        "make": "not stated (Dynojet banner visible in video still)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "275 hp",
+        "peakWheelTorque": "257 lb-ft",
+        "howRead": "article text: 'the car put down a healthy 275 hp and 257 lb-ft at the wheels'"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "6-speed manual",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://autos.yahoo.com/stock-mkiv-toyota-supra-runs-220400525.html",
+          "accessed": "2026-09-30",
+          "title": "This Stock MKIV Toyota Supra Runs the Dyno Like It's 1993 (Road & Track, Lucas Bell, 13 Feb 2024; syndicated copy)",
+          "kind": "article",
+          "quote": "'This particular car is a 1993 model in left-hand drive, complete with oh-so desirable six-speed manual gearbox. ... When this car was new, Toyota officially rated the engine at 320 hp and 315 lb-ft of torque. ... This car managed to escape that fate for the first 113,000 miles' ... 'Dyno testing of the car starts at around the 4:00 minute mark of the video. ... the car put down a healthy 275 hp and 257 lb-ft at the wheels.'"
+        },
+        {
+          "url": "https://media.zenfs.com/en/road_track_223/f619589f3de98685726b8d084cb77335",
+          "accessed": "2026-09-30",
+          "title": "Video still used in the article",
+          "kind": "dyno sheet image",
+          "quote": "read from image: white Supra on a chassis dyno in a workshop; wall banner reads 'Dynojet'; 'The Zupra Channel' watermark"
+        }
+      ],
+      "confidence": "The 275 whp figure is certain as reported; everything else about the test is unknown.",
+      "notes": "Best available US stock-car figure, useful only as a sanity check (US stock cars on Dynojets are often quoted at 270-300 whp, which I could not verify from an accessible sheet)."
+    },
+    {
+      "id": "jza80-bpu-tt6-skuzzle-dynodynamics-2019",
+      "summary": "BPU TT6 on stock twins (details not given): 351.2 HP / 333.5 ft-lb at the wheels on a Dyno Dynamics (Dynotech) at Skuzzle Motorsport, 6 Aug 2019.",
+      "usable": false,
+      "whyNotUsable": "No parts list, boost, fuel or correction for this car; the owner only says 'bpu tt6'.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated",
+        "grade": "TT6",
+        "gearbox": "6-speed manual",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE twin turbo (BPU)",
+      "dyno": {
+        "make": "Dyno Dynamics ('DYNOTECH by DYNODYNAMICS' on sheet)",
+        "model": "",
+        "type": "not stated",
+        "mode": "run description 'HF Ramp Up', IN@RR '120@120'",
+        "where": "Skuzzle Motorsport (UK)"
+      },
+      "correction": {
+        "value": "not printed",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "Max 351.2 HP",
+        "peakWheelTorque": "333.5 FtLb (axis 'Torque (ATW) (FtLb)')",
+        "howRead": "read from sheet image"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "'bpu tt6' only"
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/243645-bpu-11-bar/",
+          "accessed": "2026-09-30",
+          "title": "BPU 1.1 bar (mkivsupra.net) - reply by 'squiffy', 15 Aug 2019",
+          "kind": "thread",
+          "quote": "'I had my bpu tt6 dyno'd last week and got 351 at the wheels.'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2019/08/153.jpg",
+          "accessed": "2026-09-30",
+          "title": "Skuzzle Motorsport sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Skuzzle Motorsport'; 'DYNOTECH by DYNODYNAMICS'; 'Max 351.2 HP / 333.5 FtLb'; 'Torque (ATW) (FtLb)'; ID 'B4MKV', date '06-08-19'"
+        }
+      ],
+      "confidence": "Numbers certain; build details absent.",
+      "notes": ""
+    },
+    {
+      "id": "jza80-bpu-plus-motoscope-2010",
+      "summary": "Manual BPU+ TT at about 1.2 bar, no fuel management: 345.4 bhp at the wheels (381-384 bhp 'engine') at Motoscope (UK), Nov 2010, correction factor 102.3 %.",
+      "usable": false,
+      "whyNotUsable": "Dyno make not visible (the top of the printout is cut off; the layout matches the Dastek report above, but that is only an inference) and the BPU+ parts are not itemised.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated",
+        "grade": "TT",
+        "gearbox": "manual",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE twin turbo, BPU+",
+      "dyno": {
+        "make": "not stated",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": "Motoscope (UK), 'Jap North East event'"
+      },
+      "correction": {
+        "value": "Correction Factor 102.3 % (standard not named)",
+        "howKnown": "sheet"
+      },
+      "testConditions": {
+        "temperature": "18.0 / 18.3 °C",
+        "pressure": "987 mbar",
+        "humidity": "not printed",
+        "howKnown": "sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "345.4 bhp @ 5,954 rpm (Run 2); 343.8 bhp @ 6,190 rpm (Run 1)",
+        "peakWheelTorque": "363.1 lbft @ 4,673 rpm / 364.8 @ 4,610 (not labelled wheel or engine)",
+        "howRead": "read from sheet image"
+      },
+      "boost": {
+        "peak": "about 1.2 bar (owner: 'BPU+ at 1.2bar')",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "owner text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "stock, 'no fuel management......yet'",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "'manual BPU TT'"
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/176394-been-on-the-rollers-dyno/",
+          "accessed": "2026-09-30",
+          "title": "Been On The Rollers (Dyno) (mkivsupra.net, 14 Nov 2010)",
+          "kind": "thread",
+          "quote": "'It's a manual BPU TT (with no fuel management......yet) 384bhp at the fly 345bhp at the wheels 363 lbft'; 'BPU+ at 1.2bar should get to around these figures'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2010/11/378.jpg",
+          "accessed": "2026-09-30",
+          "title": "Motoscope printout",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'RUN NO 1 Maximum Power - Wheels 343.8 bhp @ 6,190 rpm / Maximum Power - Engine 381.3 bhp @ 6,190 rpm / Maximum Torque 364.8 lbft @ 4,610 rpm / Correction Factor 102.3 % / Environment Temperature 18.0 °C / Barometric Pressure 987 mBar'; 'RUN NO 2 ... Wheels 345.4 bhp @ 5,954 rpm / Engine 384.3 bhp @ 6,281 rpm / Maximum Torque 363.1 lbft @ 4,673 rpm / 102.3 % / 18.3 °C / 987 mBar'"
+        }
+      ],
+      "confidence": "Numbers certain; dyno make and parts unknown.",
+      "notes": ""
+    },
+    {
+      "id": "jza80-jspec-bpu-dynojet-cyprus-2015",
+      "summary": "J-spec BPU 6-speed on stock twins (HKS exhaust, HKS intercooler, K&N filter, new boost controller): 422.12 hp at the wheels, uncorrected, on a Dynojet at C.C. Racing (Cyprus), 2 Feb 2015.",
+      "usable": false,
+      "whyNotUsable": "Boost during the run is uncertain (owner: normally 1.2 bar, but a boost controller fitted days earlier made it overboost), the mixture was lean (about 14.5:1 near the top of the run on the sheet), and the fuel is not stated. Replies called the figure 'very ambitious'.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "JDM ('j spec')",
+        "grade": "TT",
+        "gearbox": "6-speed",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE, stock ('no mods no nothing..just exhaust and intercooler')",
+      "dyno": {
+        "make": "Dynojet (WinPEP 7)",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "plotted vs km/h",
+        "where": "C.C. Racing Ltd, Cyprus (printed '+357 25 873955')"
+      },
+      "correction": {
+        "value": "uncorrected",
+        "howKnown": "sheet: 'CF: UNCORRECTED', run conditions '... UNCORRECTED: 1.00'"
+      },
+      "testConditions": {
+        "temperature": "19.97 / 20.33 °C",
+        "pressure": "1021.85 / 1021.77 mbar",
+        "humidity": "31 % / 30 %",
+        "howKnown": "sheet run-conditions lines"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "422.12 hp (RunFile_002); 416.67 hp (RunFile_004)",
+        "peakWheelTorque": "49.36 / 50.88 kg-m as printed",
+        "howRead": "read from sheet image"
+      },
+      "boost": {
+        "peak": "unknown on the day (owner: 'i always had 1.2 bar from the exhaust only'; with the new controller 'the car starts to overboost')",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "owner text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock J-spec twins",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "HKS",
+        "exhaust": "HKS",
+        "intake": "K&N air filter",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "stock",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "boost controller just fitted"
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/220580-j-spec-bpu-6-speed/",
+          "accessed": "2026-09-30",
+          "title": "J-spec BPU 6-speed (mkivsupra.net, 4 Feb 2015)",
+          "kind": "thread",
+          "quote": "'my bpu j spec making 425 whp @1.2 bar but running lean.. mods hks exhaust hks intercooler k&n air filter'; 'i always had 1.2 bar from the exhaust only..i decided to install a boost controller a few days ago and the car starts to overboost and apparently running lean'; reply: 'Running lean is not the word 14 afr at wot at full boost'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2015_02/20150202_182822.jpg.9dd490c5d760546bb91cfd9490e09963.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dynojet WinPEP 7 printout",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH C.C. Racing LTD - +357 25 873955'; 'CF: UNCORRECTED Smoothing: 5'; 'RunFile_002.drf - 2/2/2015 5:24:59 PM ... Max Power = 422.12 Max Torque = 49.36 ... Run Conditions: 19.97 °C, 1021.85 mBars, Humidity: 31%, UNCORRECTED: 1.00'; 'RunFile_004.drf - 2/2/2015 5:28:47 PM ... Max Power = 416.67 Max Torque = 50.88 ... 20.33 °C, 1021.77 mBars, Humidity: 30%'"
+        }
+      ],
+      "confidence": "Sheet numbers certain; operating state (boost, mixture) doubtful.",
+      "notes": "The only accessible Dynojet sheet of a stock-twins BPU car I found."
+    },
+    {
+      "id": "jza80-pt6870-stock-engine-jamsport-2016",
+      "summary": "JDM TT6, stock 3.0 with stock cams, Precision 6870 Gen2 0.84 A/R, AEM Infinity, 1.2 bar on Shell V-Power, 5th gear: 579 bhp at the wheels ('Maximum 666 (579) Bhp') at JamSport UK, 7 Feb 2016.",
+      "usable": false,
+      "whyNotUsable": "Dyno make not stated anywhere (not on the sheet; the shop's website is now a placeholder). The owner had a boost leak, and the best run stops at 5,267 rpm.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "JDM ('JDM TT6')",
+        "grade": "TT",
+        "gearbox": "V160",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE, 'Stock 3.0 with stock cams'",
+      "dyno": {
+        "make": "not stated",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": "JamSport UK Ltd"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "fifth (owner)",
+      "result": {
+        "peakWheelPower": "579 bhp @ 5,267 rpm (run ended there); earlier run 564 bhp @ 5,647 rpm",
+        "peakWheelTorque": "not given as wheel torque (690 lbft owner figure is flywheel-derived)",
+        "howRead": "sheet header 'Maximum 666 (579) Bhp @ 5267 RPM'; red 'Power' trace = wheels, green 'Fly Power' = flywheel estimate"
+      },
+      "boost": {
+        "peak": "1.2 bar (owner)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "owner text; boost leak reported"
+      },
+      "fuel": "Shell V-Power",
+      "mods": {
+        "turbo": "Precision 6870 Gen2, .84 A/R",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "Apexi N1; 4-in downpipe and midpipe",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "AEM Infinity",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "V160",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/227220-stock-engine-precision-6870-gen2-dyno-results/",
+          "accessed": "2026-09-30",
+          "title": "Stock engine Precision 6870 Gen2 dyno results (mkivsupra.net, 7 Feb 2016)",
+          "kind": "thread",
+          "quote": "'Engine Type - JDM TT6 / Engine Spec - Stock 3.0 with stock cams / Turbo - Precision 6870 Gen2 .84 AR / Fuel Used - Shell V-Power / Exhaust - Apexi N1. 4\" downpipe and midpipe. / Transmission - V160 / ECU - AEM Infinity / Dyno Used - JamSport UK / Power figure - 666hp (Devil!) / Torque figure - 690 ft lb / Boost Pressure - 1.2 bar / Gear - Fifth'; 'Unfortunately, I got a boost leak and had to call it a day.'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_02/supra-690-torque.png.143d2c6dfb4256fa7357938037a6e048.png",
+          "accessed": "2026-09-30",
+          "title": "JamSport sheet (666/579)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'JamSport UK Ltd ... Maximum 666 (579) Bhp @ 5267 RPM 12:41:51 07/02/2016'; legend 'Power, Fly Power, Torque, Power 2'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2016_02/supra-6870-649bhp.PNG.6b227ca3113d506baa0f8fb1c319b804.PNG",
+          "accessed": "2026-09-30",
+          "title": "JamSport sheet (649/564)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Maximum 649 (564) Bhp @ 5647 RPM 12:35:20 07/02/2016'"
+        }
+      ],
+      "confidence": "Numbers certain; dyno make unknown, run compromised by a boost leak.",
+      "notes": "Would be a valuable stock-engine big-turbo point if the dyno make could be confirmed."
+    },
+    {
+      "id": "jza80-pt6765-srd-head-cams-devil-2015",
+      "summary": "Stock bottom end with SRD Stage 2 head and 269 cams, Precision 'T6765' 0.68 A/R, Syvecs S6, 1.6 bar on V-Power Nitro+: owner quotes 524 hp at the wheels (sheet shows 617.7 HP flywheel-mode) on a Dyno Dynamics at Devil Developments, 8 Oct 2015.",
+      "usable": false,
+      "whyNotUsable": "The wheel figure is only in the owner's text; the sheet prints the flywheel-mode figure. Ported head and 269 cams.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not stated",
+        "grade": "",
+        "gearbox": "V161",
+        "year": "not stated"
+      },
+      "engine": "2JZ-GTE stock bottom end, SRD Stage 2 head, SRD Stage 2 cams (269, 9.6 mm lift)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "",
+        "type": "not stated",
+        "mode": "'Dyno Dynamics Standard ShootOut graph', CF 'SHOOT_6F'",
+        "where": "Devil Developments (UK)"
+      },
+      "correction": {
+        "value": "Dyno Dynamics shootout (CF SHOOT_6F)",
+        "howKnown": "sheet footer"
+      },
+      "testConditions": {
+        "temperature": "AT 23 / IT 25 (sheet)",
+        "pressure": "BP 99.8",
+        "humidity": "RH 66",
+        "howKnown": "sheet footer"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "524 hp (owner text only)",
+        "peakWheelTorque": "",
+        "howRead": "owner: 'Power Figure - 617.7hp at the Flywheel, 524hp at the wheels'; sheet 'Max 617.7 HP'"
+      },
+      "boost": {
+        "peak": "1.6 bar",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": "owner text"
+      },
+      "fuel": "Shell V-Power Nitro+",
+      "mods": {
+        "turbo": "Precision T6765 .68ar (as written)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Chris Wilson SMIC",
+        "exhaust": "3-in HKS Silent Hi-Power, 3-in midpipe and downpipe",
+        "intake": "",
+        "injectors": "Sard 800cc",
+        "fuelPump": "single Walbro 485",
+        "ecu": "Syvecs S6",
+        "cams": "SRD Stage 2, 269",
+        "internals": "stock bottom end",
+        "gearbox": "V161",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/225752-andrews-srd600s-single-turbo-6-speed-v161-build/",
+          "accessed": "2026-09-30",
+          "title": "Andrew's SRD600s single turbo 6-speed V161 build (mkivsupra.net, 21 Nov 2015)",
+          "kind": "thread",
+          "quote": "'Engine Spec - SRD Stage 2 head, SRD Stage 2 cams 269 profile 9.6mm lift, Stock bottom end ... Turbo - Precision T6765 .68ar ... Fuel Used - Shell V-Power Nitro+ ... Dyno Used - Devil Developments (Dyno Dynamics) / Power Figure - 617.7hp at the Flywheel, 524hp at the wheels / Torque Figure - 510 ft/lb / Boost Pressure - 1.6 Bar'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2015_11/image.jpg.b150b296f9452431ffdc7ba344cf9e78.jpg",
+          "accessed": "2026-09-30",
+          "title": "Devil Developments sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER Devil Developments ltd ... Date : 08-10-2015 ... Max 617.7 HP'; footer 'Dyno Dynamics Standard ShootOut graph ... BP:99.8 RH:66 AT:23 IT:25 RR:015 TN:3.780 ... CF:SHOOT_6F'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-stock-jspec-tt-power-engineering-flywheel-2011",
+      "summary": "Stock J-spec TT on a Dyno Dynamics shootout run at Power Engineering (UK), 16 Apr 2011: 'Max 323.0 HP', 334 lb-ft, gear 4.",
+      "usable": false,
+      "whyNotUsable": "Figures are flywheel estimates: the sheet's y-axes read 'Flywheel Power (HP)' and 'Flywheel Torque' (CF 'SHOOT_6F'). Useful only for its boost trace.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/184689-stock-tt-dyno-graph/",
+          "accessed": "2026-09-30",
+          "title": "Stock TT Dyno graph (mkivsupra.net, 19 Apr 2011)",
+          "kind": "thread",
+          "quote": "'couldnt find any stock J-spec Supras to compare my graph to' ... 'only thing i was concered about was the drop in manifold pressure as the #2 turbo came on'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2011/04/843.jpg",
+          "accessed": "2026-09-30",
+          "title": "Power Engineering sheet (power/torque)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Max 323.0 HP', '334 lbs/ft peak torque'; axes 'Flywheel Power (HP)' and 'Flywheel Torque'; 'Dyno Dynamics Standard Shootout Graph' BP 1013.2, RH 60, AT 25, IT 15, CF SHOOT_6F, Gear 4, date 16-04-11"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2011/04/844.jpg",
+          "accessed": "2026-09-30",
+          "title": "Power Engineering sheet (boost)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Manifold Gauge Pressure (bar)' about 0.6 bar from 2,600 to 3,400 rpm on the first turbo, dip to about 0.35 bar at 3,600 rpm, about 0.72-0.78 bar from 4,200 to 6,700 rpm"
+        }
+      ],
+      "confidence": "",
+      "notes": "The boost shape (0.62 bar primary, dip at 3,600 rpm, 0.75 bar sequential) is a good reference for the stock sequential transition of a J-spec car."
+    },
+    {
+      "id": "jza80-stock-jspec-auto-rk-engineering-2016",
+      "summary": "Completely stock J-spec auto TT (A340, restrictor ring fitted) at RK Engineering, Cornwall, 19 May 2016: '306.0 BHP / 5440 1/min', '309.3 lbft / 5083 1/min', about 0.74 bar.",
+      "usable": false,
+      "whyNotUsable": "Printout does not say wheel or flywheel (UK rolling roads usually print flywheel estimates); owner names the dyno 'Sun Ram 12' but the sheet shows no make.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/229578-stock-auto-tt-supra-dyno-j-spec/",
+          "accessed": "2026-09-30",
+          "title": "Stock auto TT supra dyno j spec (mkivsupra.net, 19 May 2016)",
+          "kind": "thread",
+          "quote": "'Put my car on the dyno today at rk engineering in cornwall completely stock made 306bhp and 309 lbft dyno in 3rd'. Not verbatim (fetch summary of the same post; site was down for a re-check): engine 2JZ-GTE non-VVTi, auto A340, Shell V-Power, dyno 'Sun Ram 12', boost 0.74 bar; later posts mention a restrictor ring."
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2016/05/458.jpg",
+          "accessed": "2026-09-30",
+          "title": "RK Engineering printout",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'R K Engineering (SW) Ltd ... DATE: 19/5/2016 ... 306.0 BHP / 5440 1/min (102 mph) 309.3 lbft / 5083 1/min'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-stock-jdm-tt6-surrey-flywheel-2019",
+      "summary": "JDM TT6 with only an HKS back box and K&N panel filter, stock boost, at Surrey Rolling Road, 3 Aug 2019: 'Max 345.6 HP'.",
+      "usable": false,
+      "whyNotUsable": "Dyno Dynamics shootout figure with CF 'SHOOT_6F', the same setting that other UK sheets label 'Flywheel Power' - a flywheel estimate, not wheel power.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/243540-stock-tt6-pre-vvti/",
+          "accessed": "2026-09-30",
+          "title": "STOCK TT6 pre VVTI (mkivsupra.net, 3 Aug 2019)",
+          "kind": "thread",
+          "quote": "'STOCK TT6 / HKS Silent Hi Power / K&N Panel Filter'; 'Yes mate, still on stock boost'; 'just an HKS backbox mate on a jdm car'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2019_08/22C813F5-1DE6-4FC3-9E17-C0A19C39891D.jpg.bf0b3c7fe2f27188acd46b96833d8e06.jpg",
+          "accessed": "2026-09-30",
+          "title": "Surrey Rolling Road sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER Surrey Rolling Road Ltd ... Toyota Supra TT ... 03-08-2019 ... Max 345.6 HP'; footer 'BP:100.0 RH:85 AT:25 IT:26 ... CF:SHOOT_6F'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-pt6266cea-hks-cams-devil-flywheel-2015",
+      "summary": "Stock bottom end, HKS 256/264 cams, Precision PT6266 CEA (Gen 1 journal, billet) 1.0 divided, Syvecs S6, 1.7 bar on V-Power Nitro, V160, at Devil Developments, 11 Mar 2015: 'Max 708.2 HP'.",
+      "usable": false,
+      "whyNotUsable": "Dyno Dynamics shootout figure (CF 'SHOOT_6F'), a flywheel-type figure; a reply asking 'What is the power at the wheels?' was never answered. Also has aftermarket cams.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/221102-jamess-6266-cea-srd-turbo-kit-dyno/",
+          "accessed": "2026-09-30",
+          "title": "James's 6266 CEA - SRD Turbo Kit Dyno (mkivsupra.net, 12 Mar 2015)",
+          "kind": "thread",
+          "quote": "'Engine Type - Stock bottom end, 2JZ-GTE. Engine Spec - HKS 256/264 (In/Out) Cams / Turbo - Precision PT6266 CEA with 1.0 divided housing ... Dyno Used - Devil developments (dyno dynamics) / Power figure - 708hp on Vpower / Torque figure - 640ft/lb on Vpower / Boost Pressure - 1.7 bar'; later 'Gen 1 Journal mate, but billet!'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2015_03/image.jpg.c104aeb6c67c87a5b1334072f7425929.jpg",
+          "accessed": "2026-09-30",
+          "title": "Devil Developments sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Max 708.2 HP'; 'Dyno Dynamics Standard ShootOut graph'; 'BP:99.0 RH:69 AT:18 IT:18 RR:015 TN:3.780 ... CF:SHOOT_6F'; date 11-03-2015"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-pt6266gen2-vvti-devil-flywheel-2014",
+      "summary": "Stock VVT-i engine, Precision Gen2 PT6266 CEA 1.0 divided, Syvecs, V161: 582 bhp on V-Power at 1.7 bar and 673.5 bhp on 50 % ethanol at 1.9 bar (Devil Developments, 21 Jul 2014).",
+      "usable": false,
+      "whyNotUsable": "Dyno Dynamics shootout CF 'SHOOT_6F' (flywheel-type) figures only.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/218554-jamieps-white-goose-dyno-results/",
+          "accessed": "2026-09-30",
+          "title": "JamieP's White Goose Dyno Results (mkivsupra.net, 15 Aug 2014)",
+          "kind": "thread",
+          "quote": "'Engine Type - Single Turbo VVTI ... Engine Spec - Stock / Turbo - Precision GEN2 PT6266 CEA with 1.0 divided housing ... Dyno Used - Devil developments (dyno dynamics) / Power figure - 582bhp on Vpower & 673bhp with 50% ethanol / Boost Pressure - 1.7 bar pump fuel & 1.9bar with 50% ethanol'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2014_08/image.jpg.06678bae2776f1329eb0dadeb42a2ecd.jpg",
+          "accessed": "2026-09-30",
+          "title": "Devil Developments sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Max 673.5 HP'; 'Dyno Dynamics Standard ShootOut graph'; 'BP:100.1 RH:47 AT:24 IT:33 ... 20140721 ... CF:SHOOT_6F'"
+        }
+      ],
+      "confidence": "",
+      "notes": "Would be a good pump-vs-E50 pair if the wheel figures were available."
+    },
+    {
+      "id": "jza80-bpu-tuning-developments-flywheel-2019",
+      "summary": "Garage Whifbitz BPU kit with GFB boost controller at about 1.1 bar: 'Max 431.3 HP' (also 'Max 361.3 HP') at Tuning Developments (UK).",
+      "usable": false,
+      "whyNotUsable": "Sheet axes read 'Flywheel Power (HP)' and 'Flywheel Torque' (CF 'SHOOT_6F'); the two printed maxima are not labelled, so which one (if any) is wheel power is unclear.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/243645-bpu-11-bar/",
+          "accessed": "2026-09-30",
+          "title": "BPU 1.1 bar (mkivsupra.net, 15 Aug 2019)",
+          "kind": "thread",
+          "quote": "'my supra has the full Garage Whifbitz bpu kit and i had a GFB boost controller fitted, set up and dyno'd. She made a healthy 431.3bhp.'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/uploads/monthly_2019_08/306867327_IMG_20190812_1611302.jpg.75049e565da3c9b24d8d3900709efbca.jpg",
+          "accessed": "2026-09-30",
+          "title": "Tuning Developments sheet",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Tuning Developments Ltd ... Max 361.3 HP / Max 431.3 HP'; axes 'Flywheel Power (HP)', 'Flywheel Torque [R] (FtLb)'; table BP 1017.6, RH 55, AT 18, IT 20, CF SHOOT_6F, Gear 4; printed date 04-10-03 (dyno clock apparently not set)"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-gt35-stock-block-emanage-anydyn-2015",
+      "summary": "RZ '95 V160, stock unopened block, 'Gt35 .69 AR', stock ECU with GReddy e-Manage Blue, stock 440 cc injectors, 0.9 bar, 98 RON: sheet prints 315 kW at the wheels ('Rad-Leistung').",
+      "usable": false,
+      "whyNotUsable": "Numbers look implausible for stock 440 cc injectors at 0.9 bar, the lambda reading ('Lambda bei P-Max 2.79') is nonsense, boost was not logged ('Ladedruck 0.00 Bar'), and the roller make is unclear (sheet shows 'anyDyn EngineAnalyser' software at CCT-Motorsport GmbH).",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/223046-silece-95-rz-6spd-gt35-single-turbo/",
+          "accessed": "2026-09-30",
+          "title": "Silece 95 RZ 6spd GT35 single turbo (mkivsupra.net, 30 Jun 2015)",
+          "kind": "thread",
+          "quote": "'Car: Toyota Supra RZ 95 V160 / Engine: Stock unopened Block with Gt35 .69 AR / Fuel: Super+ 98Roz / Stock 440ccm / AEM 320lph / Ecu: Stock with Greddy emanage Blue ... We pushed in the 5th Gear with 0.9bar Boost'"
+        },
+        {
+          "url": "https://www.mkivsupra.net/imports/2015/06/795.jpg",
+          "accessed": "2026-09-30",
+          "title": "CCT-Motorsport printout",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DIN-Leistung (P-Norm) 339 KW (461 PS) ... Rad-Leistung (P-Rad) 315 KW (429 PS) ... Verlust-Leistung (P-Schlepp) 24 KW ... Lambda bei P-Max 2.79 ... Drehmoment 521 NM ... Luftdruck 1013 mBar, Lufttemperatur 20 °C, Korr.-Faktor nach DIN 1.000, Ladedruck 0.00 Bar'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-t88-vvti-djautos-2021",
+      "summary": "VVT-i car with GReddy T88-34D, HKS F-Con V Pro, 1.5 bar on Tesco 99: owner quotes 488.4 whp (sheet prints 573.84 HP flywheel-type) at DJ-Autos, Aberdeen.",
+      "usable": false,
+      "whyNotUsable": "Engine internals and cams unknown ('Relatively stock as far as I know ... modified in Japan pre-import'), the wheel figure is only in the owner's text, and the dyno make is second-hand ('Dyno Developments type ... basically just a Dyno Dynamics').",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/247153-greddy-t88-34d-vvti-6-speed/",
+          "accessed": "2026-09-30",
+          "title": "GReddy T88-34D VVTi 6 speed (mkivsupra.net, 18 Feb 2021)",
+          "kind": "thread",
+          "quote": "'Power figure - 573.84bhp fly (corrected from 488.4WHP @5600rpm). Torque figure - 544.32 lbf.ft ... (corrected from 463.3lbf.ft WTQ @5498rpm) / Boost Pressure - 1.5bar'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-bpu-ttc-mrturbo-za-2015",
+      "summary": "TT6 BPU (Kakimoto catback, double decat, stock ECU) in TTC mode at 1 bar, 95 pump fuel, 29 °C / 77 % RH: '216wkw/290whp', 431 Nm, 4th gear (South Africa).",
+      "usable": false,
+      "whyNotUsable": "Dyno make not identifiable (screen shows only 'www.mrturbo.co.za'), run in TTC mode because of an IACV issue, and it did not reach its usual 1.2 bar.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/222203-my-bpu-tt6-dyno-run-round-4-on-page-4/",
+          "accessed": "2026-09-30",
+          "title": "My BPU TT6 dyno run (mkivsupra.net, 9 May 2015)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Stock / Turbo - Stock / Fuel Used - 95 Pump fuel / Exhaust - Kakimoto catback & double decat / Transmission - V160 / ECU - Stock / Power figure - 216wkw/290whp / Torque figure - 431nm ... / Boost Pressure - 1 bar / Run was in 4th gear ( Car usually makes 1.2 bar in 4th ...) ... Ambient was about 29deg with 77% humidity.. Car is in TTC as issues with IACV'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-ta45-mustang-2015",
+      "summary": "J-spec stock engine with a Garrett 'TA45' single, stock ECU with HKS AIC/EVC, three extra 550 cc injectors, 0.9 bar, Lukoil 98: 320 whp on a 'VERY conservative Mustang Dyno'.",
+      "usable": false,
+      "whyNotUsable": "Turbo not identified ('garret ta45 with t04s turbine and small compressor wheel (not sure which)') and no sheet posted.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/223163-320-whp-single-6-speed-on-09-bar/",
+          "accessed": "2026-09-30",
+          "title": "320 WHP single 6 speed on 0.9 bar (mkivsupra.net, 7 Jul 2015)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Stock J-spec with 3 additional 550cc injectors in the intake / Turbo - garret ta45 with t04s turbine and small compressor wheel (not sure which) / Fuel Used - Lukoil 98 ... Dyno Used - Mustang Dyno. / Power figure - 320 WHP ... Boost Pressure - 0.9 Bar'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "sc300-2jzgte-us-twins-clublexus",
+      "summary": "Lexus SC300 with a 2JZ-GTE and stock US twins at 17-18 psi (about 395-401 whp, Dynojet) - found in search results only.",
+      "usable": false,
+      "whyNotUsable": "Different chassis (Lexus SC300), not a JZA80 Supra. Not read further.",
+      "vehicle": {
+        "chassis": "JZZ31 (Lexus SC300) - not this chassis",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.clublexus.com/forums/performance-and-maintenance/597736-sc300-2jz-gte-stock-us-twins-dyno-at-17-18-psi.html",
+          "accessed": "2026-09-30",
+          "title": "SC300 2JZ-GTE Stock US Twins DYNO at 17-18 psi (ClubLexus)",
+          "kind": "thread",
+          "quote": "search-result snippet only (not verified): about 401 RWHP at 17 psi and 394.91 RWHP at 18 psi on stock US twins"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-na-t-gbc37-garrett-2026",
+      "summary": "Garrett newsroom: RHD NA Supra converted by Sleeper Tuning to a single Garrett GBC37-900 T4, BC 272 cams, T56 swap: 824.6 hp / 635.2 lb-ft.",
+      "usable": false,
+      "whyNotUsable": "Engine is a turbo-converted 2JZ-GE (NA engine family variant), with aftermarket cams, a built head and a T56 swap; wheel/crank not stated in the text.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.garrettmotion.com/news/newsroom/article/garrett-gbc37-900-supra-824hp-build/",
+          "accessed": "2026-09-30",
+          "title": "From Naturally Aspirated to 824 Horsepower with Garrett GBC37-900 (Garrett, 16 Apr 2026)",
+          "kind": "article",
+          "quote": "'This Toyota Supra started life as a naturally aspirated right hand drive 2JZ GE car' ... 'Brian Crower 272 camshafts' ... 'Grannas Racing T56 swap' ... 'Final results came in at 824.6 horsepower and 635.2 lb-ft of torque'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-stroker-pt8385-dsport-1308whp",
+      "summary": "DSPORT '1308 WHP Toyota Supra' - Precision 8385 at 45 psi.",
+      "usable": false,
+      "whyNotUsable": "Stroked 3.2 L engine (not stock displacement).",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/1308whp-toyota-supra/",
+          "accessed": "2026-09-30",
+          "title": "1308 WHP Toyota Supra (DSPORT)",
+          "kind": "article",
+          "quote": "not verbatim (fetch summary of the article): stroked 3.2 L (86.5 mm bore, 90 mm stroke); Precision 8385; 45 psi; 1,308 hp and 883 lb-ft at the wheels"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-forged-overbore-pt6466-2017",
+      "summary": "UK-spec V160 car, fully forged 2JZ with CP Carillo 86.5 mm pistons and BC 264 cams, Precision 6466 on a 6boost manifold: 745.1 bhp, 2.2 bar max.",
+      "usable": false,
+      "whyNotUsable": "Overbored (86.5 mm pistons), aftermarket cams, dyno 'unknown', figure not stated as wheel.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/235486-uk-spec-v160-precision6boost/",
+          "accessed": "2026-09-30",
+          "title": "UK Spec V160 Precision/6boost (mkivsupra.net, 24 Apr 2017)",
+          "kind": "thread",
+          "quote": "'Engine Spec - Fully Forged 2JZ GTE, CP Carillo 86.5mm pistons, Eagle Conrods, BC 264 Cams ... Dyno Used - unknown / Power figure - 745.1 bhp ... Boost Pressure - 2.2Bar max'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-hpacademy-892whp-93-secondhand",
+      "summary": "HP Academy forum: a 3.0 L 2JZ said to make 892 whp on 93 octane with a 7675 turbo (Dynojet graph re-posted from another forum).",
+      "usable": false,
+      "whyNotUsable": "Second-hand graph, 10:1 compression, GSC S2 cams and ported head; forum experts doubted the pump-fuel claim.",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.hpacademy.com/forum/general-tuning-discussion/show/3-0l-2jz-892-whp-on-93-octane-pump-gas/",
+          "accessed": "2026-09-30",
+          "title": "3.0L 2JZ 892 WHP on 93 Octane Pump Gas? (HP Academy)",
+          "kind": "thread",
+          "quote": "'The engine was 3L, 10:1, with a big 7675 turbo, GSC S2 cams (about 240°@1mm), ported head.' Reply: 'I have a hard time believing those 892whp on pump gas in comparison to 965whp on E85.'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "jza80-uk-auto-hub-347whp-text",
+      "summary": "UK-spec automatic with FMIC, decat, boost controller and FCD at 1.25 bar: '347 WHP on a hub dyno' (forum reply).",
+      "usable": false,
+      "whyNotUsable": "Text only, no sheet, dyno make not named ('a hub dyno').",
+      "vehicle": {
+        "chassis": "JZA80",
+        "market": "not recorded (build rejected)",
+        "grade": "not recorded (build rejected)",
+        "gearbox": "not recorded (build rejected)",
+        "year": "not recorded (build rejected)"
+      },
+      "engine": "not recorded (build rejected)",
+      "dyno": {
+        "make": "not recorded (build rejected)",
+        "model": "",
+        "type": "not stated",
+        "mode": "",
+        "where": ""
+      },
+      "correction": {
+        "value": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "testConditions": {
+        "temperature": "not recorded (build rejected)",
+        "pressure": "not recorded (build rejected)",
+        "humidity": "not recorded (build rejected)",
+        "howKnown": ""
+      },
+      "gear": "not recorded (build rejected)",
+      "result": {
+        "peakWheelPower": "not recorded (build rejected)",
+        "peakWheelTorque": "not recorded (build rejected)",
+        "howRead": ""
+      },
+      "boost": {
+        "peak": "not recorded (build rejected)",
+        "atPeakPower": "",
+        "fullBoostRpm": "",
+        "howKnown": ""
+      },
+      "fuel": "not recorded (build rejected)",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.mkivsupra.net/topic/240682-uk-bpu-dyno/",
+          "accessed": "2026-09-30",
+          "title": "UK BPU Dyno (mkivsupra.net, June 2018) - reply by 'mattdavies'",
+          "kind": "thread",
+          "quote": "'My UK auto was 347 WHP on a hub dyno at 1.25 bar, with fmic, de cat, bc, fcd'"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    }
+  ],
+  "gates": [
+    "https://www.supraforums.com/ (every thread tried, including /forum/archive/ pages, e.g. /threads/1998-supra-2jz-gte-stock-dyno-graph-and-conditions.680231/, /threads/downpipe-exhaust-dyno.514624, /threads/dyno-results-stock-turbo-stock-boost.191906/, /forum/archive/index.php/t-509507.html): the server answers with a 307 redirect to tollbit.supraforums.com, a TollBit pay-per-access licensing gate for AI agents. Not followed, and no user-agent spoofing to get around it. This is where most US stock-twins / BPU / 93-octane Dynojet sheets live (search titles seen: 'Bone stock, 6 speed manual and auto Twin Turbo Dyno' 993945, '6266 Results - stock ECU & fuel system' 691729, 'GReddy T88H Turbo Kit Stock Long Block and Fuel 93octane(US)' 677576, '2JZ-GTE VVT-i baseline dyno - 341 whp!' 606800, 'Two stock 2jz-gte JDM engines with single turbo, 93 octane' 935705, 'Stock twins plus E85?' 596770, '700rwhp on e85 with flex fuel @ Granite state dyno NH' 694329).",
+    "https://www.3si.org/threads/6266-supra-stock-fuel-11-0-130mph.560034/ : same TollBit redirect (tollbit.3si.org). Not followed.",
+    "https://www.motortrend.com/ (hosts the old Super Street, Sport Compact Car, Turbo and Import Tuner articles): WebFetch refuses the domain and curl receives a JavaScript 'Client Challenge' bot wall. Not bypassed. MotorTrend+ magazine-issue archives are paywalled and were not attempted.",
+    "https://www.precisionturbo.com/ (PT6266 / PT6766 / PT6870 product pages): Incapsula bot challenge; pages return no content. Not bypassed, so Precision specs come from secondary sources.",
+    "https://photos.motoiq.com/ (MotoIQ dyno-graph images): CloudFront answers 403 'Bad bot'. Not bypassed; MotoIQ numbers are from the article text only.",
+    "https://www.supramania.com/threads/sm-member-horsepower-list.66742/ : dyno-sheet images need a login. Not used (list is mostly MKIII cars anyway).",
+    "https://www.garrettmotion.com/news/newsroom/article/garrett-gbc37-900-supra-824hp-build/ : embedded build video says 'Please accept marketing cookies to view this content'. Not accepted (build rejected anyway).",
+    "Not a gate in practice: mkivsupra.net shows an 'Accept Cookies / Reject Cookies' banner, but threads and images load without choosing; nothing was clicked."
+  ],
+  "notFound": [
+    "A US-market stock Supra Turbo on a Dynojet with a readable sheet. The only US stock figure found (Road & Track / The Zupra Channel, 275 whp) has no sheet and no named dyno.",
+    "A US 'stock twins + boost controller + downpipe/exhaust' build at 15-19 psi on 93 octane with a readable Dynojet sheet; the candidates found are all on supraforums.com (TollBit-gated). The closest accessible stock-twins data are UK/Cyprus cars (Dastek, V-Tech, Dyno Developments, Dyno Dynamics, uncorrected Dynojet).",
+    "Maker data (rating, wheel sizes, compressor maps) for the Precision PT6266, PT6766 CEA, PT6870 Gen2 and PT71-GTS: precisionturbo.com blocked; used SupraStore (vendor) and MotoIQ (magazine) instead.",
+    "Correction standard, rpm of peak power and the 17/22/25 psi peak numbers for the MotoIQ car (only on graph images that return 403). Part 15 implies the 6766 made about 550 whp near 17 psi, but that is an inference.",
+    "Fuel, correction and turbine housing A/R for the DSPORT GT3582R car.",
+    "The dyno make at JamSport UK (the shop's website is now a placeholder page).",
+    "Magazine project-car dyno tests (Super Street, Sport Compact Car, Turbo): MotorTrend bot wall; web.archive.org was unreachable through the network proxy (connection reset), so archived copies could not be checked.",
+    "The Zupra Channel video itself (dyno screen at about 4:00): not in the channel's first page of videos; not pursued.",
+    "Any SAE J1349-corrected Dynojet sheet for this car (the Dynojet sheets found are STD or uncorrected).",
+    "Note: the session's shared web-search budget (200 searches) ran out during this task; later leads were followed only by direct URLs."
+  ]
+}

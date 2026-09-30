@@ -1,0 +1,2883 @@
+{
+  "car": "nissan-350z-z33",
+  "researchedOn": "2026-09-30",
+  "builds": [
+    {
+      "id": "z33-zcg-2003-stock-dynojet-std-2018",
+      "summary": "2003 350Z (287 hp VQ35DE, manual) baseline before any engine mods at Z Car Garage: 245.00 whp / 237.42 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US (California car; market not stated)",
+        "grade": "not stated",
+        "gearbox": "6MT (inferred: owner took the UpRev ARC launch/flat-foot-shift option, which ZCG says is for manual cars)",
+        "year": "2003"
+      },
+      "engine": "VQ35DE (2003, 287 hp version; pull ends at the stock ~6,600 rpm limit)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "ZCG sheets do not print weather"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "245.00 hp (STD) at about 6,100-6,300 rpm (flat top; rpm read from the curve)",
+        "peakWheelTorque": "237.42 lb-ft (STD) at about 4,800 rpm (read from the curve)",
+        "howRead": "Max values printed in the sheet legend; rpm of peaks read off the plotted curves (approx.)"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated (California pump gas, grade not stated)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "none on the engine at this run (text: '2003 model waiting to be modified'; the mods listed were fitted after this baseline). Hotchkis sway bars fitted in the same visit (no power effect)."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Rick's 350z', 13 Jul 2018",
+          "kind": "shop page",
+          "quote": "\"He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo:  JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. He also opted for the ARC license, allowing Rick to have adjustable launch control, flat-foot shifting and left foot braking, if needed.\" ... \"On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline\" ... \"With UPREV tuning, further gains of 9hp/13tq were achieved\" ... \"From a baseline of 245hp/237tq to 267hp/252tq at the wheels\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Baseline-to-Mods' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: header 'DYNOJET RESEARCH' / 'Z Car Garage - 140 Archer St San Jose, CA 95112 - 408-452-0350', top right 'CF: STD  Smoothing: 5'; legend 'RunFile_001.drf Max Power = 245.00  Max Torque = 237.42' (blue, baseline) and 'RunFile_001.drf Max Power = 256.78  Max Torque = 239.87' (red, mods). X axis 1.5-7.0 x1000 rpm."
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Start-to-Finish.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Start-to-Finish' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'Z Car Garage - 140 Archer St San Jose', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 245.00  Max Torque = 237.42' and 'RunFile_008.drf Max Power = 267.22  Max Torque = 252.19'. Baseline power peak is flat 240-245 hp from ~5,900 to ~6,300 rpm; pulls end ~6,600 rpm."
+        },
+        {
+          "url": "https://www.zcarblog.com/2023/10/26/performance/tuning-joshs-nissan-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'TUNING: Josh's Nissan 350Z', 26 Oct 2023 (used only for ZCG's statement that the ARC add-on is for manual cars)",
+          "kind": "shop page",
+          "quote": "\"Z Car Garage offers this ARC (Advanced Racing Controls) license add-on service to the existing UPREV Flash, allowing adjustable launch control, burnout mode, and flat-foot shifting for $150. This is for cars with manual transmission, VDC/cruise control.\""
+        }
+      ],
+      "confidence": "High for the numbers (clear Dynojet print with CF STD). Medium that the car was fully stock: the post implies it (baseline before the first mods) but never says 'stock'. Gearbox inferred, not stated.",
+      "notes": "STD correction (SAE J607-style, 60 F / 29.92 inHg dry) reads roughly 4 % higher than SAE J1349 for the same run; convert before comparing with SAE-corrected sheets. Same car also appears as builds z33-zcg-2003-popcharger-spacer-bassani-2018 and z33-zcg-2003-boltons-uprev-2018 (same dyno, same season)."
+    },
+    {
+      "id": "z33-zcg-2003-popcharger-spacer-bassani-2018",
+      "summary": "Same 2003 350Z with JWT POP charger intake, Motordyne 5/16\" plenum spacer and Bassani cat-back, stock ECU: 256.78 whp / 239.87 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US (California car; market not stated)",
+        "grade": "not stated",
+        "gearbox": "6MT (inferred, see baseline entry)",
+        "year": "2003"
+      },
+      "engine": "VQ35DE (2003, 287 hp version)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "256.78 hp (STD) at about 6,100-6,300 rpm (read)",
+        "peakWheelTorque": "239.87 lb-ft (STD) at about 4,800 rpm (read)",
+        "howRead": "legend of 'Rick-B-Z33-Baseline-to-Mods' (red run) and 'Mods-to-Uprev-Final' (blue run); text: 'the mods alone produced gains of 11hp/2tq'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "Bassani cat-back (stock headers/manifolds, stock cats and stock Y-pipe: not stated otherwise)",
+        "intake": "JWT POP charger (cone filter replacing the airbox)",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "Motordyne 5/16\" plenum spacer (between upper and lower intake plenum). Stock ECU at this run (UpRev came next)."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Rick's 350z', 13 Jul 2018",
+          "kind": "shop page",
+          "quote": "\"He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo:  JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. He also opted for the ARC license, allowing Rick to have adjustable launch control, flat-foot shifting and left foot braking, if needed.\" ... \"On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline\" ... \"With UPREV tuning, further gains of 9hp/13tq were achieved\" ... \"From a baseline of 245hp/237tq to 267hp/252tq at the wheels\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Baseline-to-Mods.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Baseline-to-Mods' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: header 'DYNOJET RESEARCH' / 'Z Car Garage - 140 Archer St San Jose, CA 95112 - 408-452-0350', top right 'CF: STD  Smoothing: 5'; legend 'RunFile_001.drf Max Power = 245.00  Max Torque = 237.42' (blue, baseline) and 'RunFile_001.drf Max Power = 256.78  Max Torque = 239.87' (red, mods). X axis 1.5-7.0 x1000 rpm."
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Mods-to-Uprev-Final' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 256.78  Max Torque = 239.87' (blue, mods) and 'RunFile_008.drf Max Power = 267.22  Max Torque = 252.19' (red, mods + UpRev)."
+        }
+      ],
+      "confidence": "High for the numbers. Parts list is short and clear; exact Bassani part number not given.",
+      "notes": "Good light bolt-on case: +11.8 hp over the same car's baseline. Note both runs in the first sheet are named RunFile_001 (two sessions)."
+    },
+    {
+      "id": "z33-zcg-2003-boltons-uprev-2018",
+      "summary": "Same 2003 350Z, POP charger + 5/16\" spacer + Bassani cat-back + UpRev reflash: 267.22 whp / 252.19 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US (California car; market not stated)",
+        "grade": "not stated",
+        "gearbox": "6MT (inferred)",
+        "year": "2003"
+      },
+      "engine": "VQ35DE (2003, 287 hp version)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "267.22 hp (STD) at about 6,150 rpm (read)",
+        "peakWheelTorque": "252.19 lb-ft (STD) at about 4,650 rpm (read)",
+        "howRead": "legend of 'Rick-B-Z33-Start-to-Finish' / 'Mods-to-Uprev-Final' (RunFile_008); text: 'From a baseline of 245hp/237tq to 267hp/252tq at the wheels'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "Bassani cat-back",
+        "intake": "JWT POP charger",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock ECU reflashed with UpRev (tuned on the dyno by ZCG; plus UpRev ARC add-on)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "Motordyne 5/16\" plenum spacer. Rev limit after tune not stated (pull still ends ~6,600 rpm)."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2018/07/13/performance/rick-b-z33.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Rick's 350z', 13 Jul 2018",
+          "kind": "shop page",
+          "quote": "\"He's pined for a 350z and finally got a 2003 model waiting to be modified. ... We set him up with the tried/true combo:  JWT pop charger, Motordyne 5/16 plenum spacer, Bassani cat-back exhaust and UPREV flash. He also opted for the ARC license, allowing Rick to have adjustable launch control, flat-foot shifting and left foot braking, if needed.\" ... \"On the dyno the mods alone produced gains of 11hp/2tq to the wheels over baseline\" ... \"With UPREV tuning, further gains of 9hp/13tq were achieved\" ... \"From a baseline of 245hp/237tq to 267hp/252tq at the wheels\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Mods-to-Uprev-Final.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Mods-to-Uprev-Final' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 256.78  Max Torque = 239.87' (blue, mods) and 'RunFile_008.drf Max Power = 267.22  Max Torque = 252.19' (red, mods + UpRev)."
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2018/07/Rick-B-Z33-Start-to-Finish.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Rick-B-Z33-Start-to-Finish' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'Z Car Garage - 140 Archer St San Jose', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 245.00  Max Torque = 237.42' and 'RunFile_008.drf Max Power = 267.22  Max Torque = 252.19'. Baseline power peak is flat 240-245 hp from ~5,900 to ~6,300 rpm; pulls end ~6,600 rpm."
+        }
+      ],
+      "confidence": "High for the numbers. Tune content (timing/AFR changes) not published, which limits how exactly a model can reproduce it.",
+      "notes": "The ECU tune adds about 10 hp / 12 lb-ft on top of the bolt-ons; a physics model without a tune input should land between the bolt-on and tuned figures."
+    },
+    {
+      "id": "z33-zcg-2004-roadster-popcharger-2021",
+      "summary": "2004 350Z Roadster 6MT (287 hp VQ35DE) with only a JWT POP charger intake, stock ECU: 245.53 whp / 242.18 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33 (Roadster)",
+        "market": "US",
+        "grade": "Roadster (trim not stated)",
+        "gearbox": "6MT (stated)",
+        "year": "2004"
+      },
+      "engine": "VQ35DE (2004, 287 hp version)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "245.53 hp (STD) at about 5,900-6,100 rpm (read)",
+        "peakWheelTorque": "242.18 lb-ft (STD) at about 4,800 rpm (read)",
+        "howRead": "legend of the dyno sheet (RunFile_001, the pre-tune run); text gives the tuned total and the gain (+9/+8), consistent with 245.5 -> 254.3"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "JWT POP charger intake",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "Hotchkis sway bars (no power effect). 47k miles; fresh plugs and belts in the same visit. No other engine mods listed."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Datsun Destiny: Christine's 2004 Nissan 350Z Roadster', 17 Nov 2021",
+          "kind": "shop page",
+          "quote": "\"Christine K visited our shop earlier this year for routine maintenance on her 2004 Nissan 350Z 6MT Roadster\" ... \"With only has 47k on the odometer\" ... \"Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear\" ... \"Icing on the cake was a dyno tune. Rob UPREV tuned picking up power everywhere in the rev range for a total of 254hp/250tq to the wheels, gains of+9hp/8tq.\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Russell-K-Z33V-Baseline-to-Final-UPREV' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 245.53  Max Torque = 242.18' (blue, before tune) and 'RunFile_010.drf Max Power = 254.27  Max Torque = 250.45' (red, UpRev). Power peaks near 5,850-6,100 rpm, torque near 4,650-4,800 rpm; pulls end ~6,600 rpm."
+        }
+      ],
+      "confidence": "High for the numbers. Medium that the POP charger was the only engine mod (the post lists 'a few popular performance upgrades including' the intake and sway bars; no exhaust mod mentioned).",
+      "notes": "Near-stock DE reference on the same dyno as the 2003 (2018) and 2004 Touring (2012) cars."
+    },
+    {
+      "id": "z33-zcg-2004-roadster-popcharger-uprev-2021",
+      "summary": "Same 2004 Roadster, POP charger + UpRev reflash: 254.27 whp / 250.45 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33 (Roadster)",
+        "market": "US",
+        "grade": "Roadster",
+        "gearbox": "6MT (stated)",
+        "year": "2004"
+      },
+      "engine": "VQ35DE (2004, 287 hp version)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "254.27 hp (STD) at about 5,850 rpm (read)",
+        "peakWheelTorque": "250.45 lb-ft (STD) at about 4,650 rpm (read)",
+        "howRead": "sheet legend RunFile_010; text: 'a total of 254hp/250tq to the wheels, gains of+9hp/8tq'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "JWT POP charger intake",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "UpRev reflash (ZCG dyno tune)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/11/17/maintenance/datsun-destiny-christines-2004-nissan-350z-roadster.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Datsun Destiny: Christine's 2004 Nissan 350Z Roadster', 17 Nov 2021",
+          "kind": "shop page",
+          "quote": "\"Christine K visited our shop earlier this year for routine maintenance on her 2004 Nissan 350Z 6MT Roadster\" ... \"With only has 47k on the odometer\" ... \"Making the Z fun to drive are a few popular performance upgrades including the JWT POP charger intake and Hotchkis sway bars front and rear\" ... \"Icing on the cake was a dyno tune. Rob UPREV tuned picking up power everywhere in the rev range for a total of 254hp/250tq to the wheels, gains of+9hp/8tq.\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/11/Russell-K-Z33V-Baseline-to-Final-UPREV.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Russell-K-Z33V-Baseline-to-Final-UPREV' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 245.53  Max Torque = 242.18' (blue, before tune) and 'RunFile_010.drf Max Power = 254.27  Max Torque = 250.45' (red, UpRev). Power peaks near 5,850-6,100 rpm, torque near 4,650-4,800 rpm; pulls end ~6,600 rpm."
+        }
+      ],
+      "confidence": "High for the numbers; tune content not published.",
+      "notes": ""
+    },
+    {
+      "id": "z33-zcg-2004-touring-stock-2012",
+      "summary": "Stock 2004 350Z Touring 6MT (287 hp VQ35DE) at Z Car Garage in 2012: 233 whp / 230 lb-ft (text only; the sheet image is gone).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "Touring",
+        "gearbox": "6MT (CD001, stated)",
+        "year": "2004"
+      },
+      "engine": "VQ35DE (2004, 287 hp version)",
+      "dyno": {
+        "make": "Dynojet (inferred, not printed for this run)",
+        "model": "not stated",
+        "type": "inertia roller (inferred)",
+        "mode": "not stated",
+        "where": "Z Car Garage, San Jose, CA, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "the 2012 sheet ('Craig-K-Vortech-Base-and-final.jpg') returns 404 now; ZCG printed SAE in 2008-2009 and STD on every sheet seen from 2018-2024, so 2012 is unknown"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "text only"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "233 hp (rpm not stated)",
+        "peakWheelTorque": "230 lb-ft (rpm not stated)",
+        "howRead": "text quote from the tuner: 'On the dyno the stock Z made 233hp/230tq a the wheels.'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "stock ('the stock Z'); Nismo wheels only"
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2012/12/23/performance/worth-waiting-for-craigs-vortech-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Worth Waiting For: Craig's Vortech 350z', 23 Dec 2012",
+          "kind": "shop page",
+          "quote": "\"Craig's Z33 is a 2004 model with the CD001 transmission. This old unit was notorious for grinding shifts so we upgraded it to a new CD009 transmission\" ... \"On the dyno the stock Z made 233hp/230tq a the wheels. After the Vortech install and UPREV tuning courtesy of Rob, Craig's Z made 415hp/344tq at the wheels. Peak gains of 182hp/114tq\""
+        },
+        {
+          "url": "https://www.zcarblog.com/2022/04/06/maintenance/where-are-they-now-craigs-2004-nissan-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'Where Are They Now: Craig's 2004 Nissan 350Z', 6 Apr 2022",
+          "kind": "shop page",
+          "quote": "\"Craig's 350Z was supercharged almost 12 years ago using a Vortech Tuner Kit with supporting fuel and cooling upgrades.\" ... \"(L) 2022, the Z made 420hp/349tq at the wheels (R) ~2012, the Z made 415hp/344tq at the wheels\" ... owner: \"every time I drive my Le Mans Sunset 2004 Touring model\""
+        },
+        {
+          "url": "https://www.zcarblog.com/2010/04/20/events/zcg-dyno-day-report-from-bill-n.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'ZCG Dyno day report from Bill N.', 20 Apr 2010 (evidence that ZCG's in-house dyno is a Dynojet)",
+          "kind": "shop page",
+          "quote": "\"The ZCG technicians ... spent much of the day jockeying cars in and out of the dyno bay\" ... post tags: \"Tags: Dynojet, nissan, San Jose, Z, ZCG, ZONC\""
+        },
+        {
+          "url": "https://www.zcarblog.com/2009/02/12/performance/more-350z-hr-dyno-results.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'More 350z HR Dyno Results', 12 Feb 2009 (evidence ZCG printed SAE-corrected graphs in 2008-2009)",
+          "kind": "shop page",
+          "quote": "\"The cars were dyno'd on different days but all the results are SAE corrected to get them on as even a playing field as possible.\""
+        }
+      ],
+      "confidence": "Medium: the tuner's text states the figure and that the car was stock, but the sheet is no longer online, so the correction (SAE vs STD) and the dyno model are not confirmed. Dynojet is inferred from ZCG's other sheets and the 2010 dyno-day post tag.",
+      "notes": "If this was STD like ZCG's later sheets it is ~12 hp below the 2003 car's 245 STD (2018); if SAE it matches it within ~2 %. Treat the correction as unknown."
+    },
+    {
+      "id": "z33-zcg-2008-hr-stock-2015",
+      "summary": "Stock 2008 350Z (306 hp VQ35HR) baseline at Z Car Garage: 271 whp / 245 lb-ft (text; sheets now 404). Same car: Bassani cat-back +7, JWT dual POP chargers +4, UpRev -> 290 whp / 253 lb-ft.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2008"
+      },
+      "engine": "VQ35HR (306 hp)",
+      "dyno": {
+        "make": "Dynojet (inferred, not printed for this run)",
+        "model": "not stated",
+        "type": "inertia roller (inferred)",
+        "mode": "not stated",
+        "where": "Z Car Garage, San Jose, CA, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "sheets ('Mark-H-Baseline-and-Exhaust', 'Mark-H-Exhaust-to-Intake', 'Mark-H-Start-to-Finish') return 404"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "text only"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "271 hp (rpm not stated)",
+        "peakWheelTorque": "245 lb-ft (rpm not stated)",
+        "howRead": "text quote: 'Marc's 350z baselined at 271hp/245tq to the wheels'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "stock at the baseline run (the exhaust and intakes were fitted after it). Later stages: Bassani cat-back (271 -> ~278), JWT dual POP charger intakes (~282), UpRev (290 hp / 253 lb-ft, revving to 7,500 rpm)."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2015/01/03/performance/marcs-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Marc's 350z', 3 Jan 2015",
+          "kind": "shop page",
+          "quote": "\"he dropped off his ultra-clean, low mileage 2008 350z for power and suspension goodies\" ... \"We love the HR engine found in the latest Z33s ... We started with a with Bassani cat-back exhaust followed by JWT dual POP charger intakes\" ... \"On the dyno, Marc's 350z baselined at 271hp/245tq to the wheels.  The Bassani exhaust netted a peak gain of 7hp\" ... \"The JWT intakes added an additional 4hp\" ... \"More power everywhere, all the way up to 7500rpm for peak gains of 19hp/8tq for a total of 290hp/253tq to the wheels\""
+        },
+        {
+          "url": "https://www.zcarblog.com/2010/04/20/events/zcg-dyno-day-report-from-bill-n.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'ZCG Dyno day report from Bill N.', 20 Apr 2010 (evidence that ZCG's in-house dyno is a Dynojet)",
+          "kind": "shop page",
+          "quote": "\"The ZCG technicians ... spent much of the day jockeying cars in and out of the dyno bay\" ... post tags: \"Tags: Dynojet, nissan, San Jose, Z, ZCG, ZONC\""
+        }
+      ],
+      "confidence": "Medium: tuner text only, sheet gone, correction unknown, gearbox unknown. The stock state is implied (baseline before the listed mods), not stated in the word 'stock'.",
+      "notes": "Useful HR reference; compare with the 2008 Nismo baseline 295.07 STD (2021) and the 2008 base-model baseline 286.07 STD (2020) on the same dyno."
+    },
+    {
+      "id": "z33-zcg-2008-nismo-hr-baseline-2021",
+      "summary": "2008 Nismo 350Z (VQ35HR) before its supercharger, no engine mods mentioned: 295.07 whp / 259.95 lb-ft, Dynojet, CF STD.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "Nismo 350Z (#1188)",
+        "gearbox": "not stated",
+        "year": "2008"
+      },
+      "engine": "VQ35HR (306 hp)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "295.07 hp (STD) at about 6,800-6,900 rpm (read)",
+        "peakWheelTorque": "259.95 lb-ft (STD) at about 4,800 rpm (read)",
+        "howRead": "sheet legend RunFile_001; text 'gains of 102hp/39tq' is consistent with 295 -> 397"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "none mentioned before the supercharger (original owner, 52k miles). Stock Nismo exhaust assumed, not stated."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Brad's Stillen-Supercharged Nismo 350Z', 29 Oct 2021",
+          "kind": "shop page",
+          "quote": "\"Brad L is the original owner of this 2008 Nismo 350z #1188. He generally uses this Z for fun road trips and wanted a little more power so he visited Z Car Garage for a  Stillen supercharger kit.\" ... \"With 52k miles on the odometer we installed a CARB-legal Stillen supercharger in Satin. All of our standard-issue supporting upgrades were installed including Aeromotive fuel pump, GT-R plugs and a 34-row Concept Z Performance thermostatically-cooled oil cooler\" ... \"We moved away from the Stillen-supplied CAN tune and Rob dyno-tuned via UPREV, making 397hp/298tq at the wheels. Solid gains of 102hp/39tq\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Bradley-L-Z33-Baseline-to-Stillen-Supercharger' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 295.07  Max Torque = 259.95' (blue, baseline) and 'RunFile_008.drf Max Power = 397.57  Max Torque = 298.47' (red, supercharged). Baseline power peaks ~6,800-6,900 rpm, supercharged ~7,400 rpm (fuel/rev cut right after). No boost channel on this sheet."
+        }
+      ],
+      "confidence": "High for the numbers. Medium that the car was stock at this run (the post does not list prior mods but does not say 'stock').",
+      "notes": "295 STD is ~284 SAE-equivalent (divide by ~1.04). Higher than the 2015 HR baseline of 271 (correction unknown) and the 2020 HR baseline of 286.07 STD on the same dyno."
+    },
+    {
+      "id": "z33-zcg-2008-nismo-hr-stillen-sc-2021",
+      "summary": "2008 Nismo 350Z (VQ35HR) with CARB-legal Stillen supercharger kit, Aeromotive pump, UpRev tune, no cams: 397.57 whp / 298.47 lb-ft, Dynojet, CF STD; boost not stated.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "Nismo 350Z (#1188)",
+        "gearbox": "not stated",
+        "year": "2008"
+      },
+      "engine": "VQ35HR (306 hp), stock internals and cams (none changed per the post)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "397.57 hp (STD) at about 7,400 rpm (read)",
+        "peakWheelTorque": "298.47 lb-ft (STD) at about 6,000-6,300 rpm (read; torque plateau ~290-298 from 5,000 to 7,000 rpm)",
+        "howRead": "sheet legend RunFile_008; text: 'making 397hp/298tq at the wheels'"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal: boost rises with rpm)",
+        "howKnown": "no boost channel on this sheet and none in the text. Only proxy: another 2008 HR on the same dyno with the same CARB-legal Stillen kit (plus Tomei cams) read 9.11 max on ZCG's boost channel; do not treat as this car's boost."
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Stillen CARB-legal supercharger kit for 2007-2008 VQ35HR, satin (Vortech-built centrifugal)",
+        "superchargerSpecs": {
+          "model": "Stillen (Vortech-built) centrifugal supercharger kit for 2007-2008 VQ35HR dual-throttle-body engines, CARB-exempt, satin finish",
+          "headUnit": "not published in the sources found (Stillen kits are built with Vortech; exact V-3 trim not stated)",
+          "pulleyAndStepUp": "not found",
+          "maxBoost": "not published by Stillen/Vortech pages found; a 2008 HR with this kit plus Tomei cams logged 9.11 max on the Dynojet boost channel (see z33-zcg-2008-hr-stillen-sc-tomei-cams-9psi-2020)",
+          "intercooler": "air-to-water, core inside a redesigned intake manifold, front heat exchanger (Stillen blog / Vortech page)",
+          "claimedPower": "Stillen: '450 horsepower at the crank (or 360-375whp)'; 'around 360whp, in most cases'",
+          "compressorMap": "not found",
+          "sources": [
+            "https://blog.stillen.com/2007-2008-350z-supercharger-for-dual-throttle-body-vq35hr/",
+            "https://vortechsuperchargers.com/products/stillen-2007-nissan-vq35-350z-dual-throttle-body-supercharger-systems"
+          ]
+        },
+        "intercooler": "Stillen kit air-to-water intercooler (in the kit's intake manifold)",
+        "exhaust": "stock (not stated otherwise)",
+        "intake": "stock",
+        "injectors": "not stated (Stillen kit contents not listed in the post)",
+        "fuelPump": "Aeromotive fuel pump (model not stated)",
+        "ecu": "UpRev reflash by ZCG (replacing the Stillen-supplied CAN tune)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "GT-R spark plugs; Concept Z Performance 34-row thermostatic oil cooler"
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2021/10/29/performance/brads-stillen-supercharged-nismo-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Brad's Stillen-Supercharged Nismo 350Z', 29 Oct 2021",
+          "kind": "shop page",
+          "quote": "\"Brad L is the original owner of this 2008 Nismo 350z #1188. He generally uses this Z for fun road trips and wanted a little more power so he visited Z Car Garage for a  Stillen supercharger kit.\" ... \"With 52k miles on the odometer we installed a CARB-legal Stillen supercharger in Satin. All of our standard-issue supporting upgrades were installed including Aeromotive fuel pump, GT-R plugs and a 34-row Concept Z Performance thermostatically-cooled oil cooler\" ... \"We moved away from the Stillen-supplied CAN tune and Rob dyno-tuned via UPREV, making 397hp/298tq at the wheels. Solid gains of 102hp/39tq\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2021/07/Bradley-L-Z33-Baseline-to-Stillen-Supercharger.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Bradley-L-Z33-Baseline-to-Stillen-Supercharger' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_001.drf Max Power = 295.07  Max Torque = 259.95' (blue, baseline) and 'RunFile_008.drf Max Power = 397.57  Max Torque = 298.47' (red, supercharged). Baseline power peaks ~6,800-6,900 rpm, supercharged ~7,400 rpm (fuel/rev cut right after). No boost channel on this sheet."
+        },
+        {
+          "url": "https://blog.stillen.com/2007-2008-350z-supercharger-for-dual-throttle-body-vq35hr/",
+          "accessed": "2026-09-30",
+          "title": "STILLEN Garage blog: 'STILLEN VQ35HR Supercharger Available for 2007-2008 Nissan 350Z & G35 w/ Dual Throttle Body Engines'",
+          "kind": "article",
+          "quote": "\"With this supercharger system, power for the 350Z and G35 is boosted to 450 horsepower at the crank (or 360-375whp), and this system won't give you a hard time when you need to smog, because these kits are CARB Exempt.\" ... \"Air to water intercooler: By redesigning the intake manifold we were able to incorporate the intercooler inside the manifold\" ... \"Power output is typically around 450 horsepower to the crank (stock is 300hp to the crank), which ends up working out to around 360whp, in most cases.\""
+        },
+        {
+          "url": "https://vortechsuperchargers.com/products/stillen-2007-nissan-vq35-350z-dual-throttle-body-supercharger-systems",
+          "accessed": "2026-09-30",
+          "title": "Vortech Superchargers product page 'Stillen 2007 Nissan 350Z Twin TB S/C Systems' (read via WebFetch extraction, not verbatim)",
+          "kind": "shop page",
+          "quote": "WebFetch extraction (not verbatim): system 'bumps the power output to over 450 horsepower'; 'Air-to-water charge cooler' integrated into the intake manifold with a front-mounted heat exchanger; boost, head unit, pulley and fuel parts not listed; sold through Stillen, not Vortech."
+        }
+      ],
+      "confidence": "High for the whp/torque and parts list; the boost is unknown, which is the main gap for a physics check.",
+      "notes": "Best supercharger build found without cams. Stillen's own claim (360-375 whp) is below this tuned figure. If the model needs boost, it must come from the kit's pulley/impeller data, which was not found."
+    },
+    {
+      "id": "z33-zcg-2008-hr-stillen-sc-tomei-cams-9psi-2020",
+      "summary": "2008 base 350Z (VQ35HR, 6MT) with CARB-legal Stillen supercharger + Tomei cams/springs + UpRev: 427.36 whp / 311.52 lb-ft at 9.11 psi max (logged), Dynojet, CF STD. Baseline same sheet: 286.07 / 252.02.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "base model (owner's words)",
+        "gearbox": "6MT (new OEM CD009 fitted in the same build)",
+        "year": "2008"
+      },
+      "engine": "VQ35HR (306 hp) with Tomei camshafts and valve springs",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "printed on the sheet: 'CF: STD'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on sheet"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "427.36 hp (STD) at about 7,250-7,300 rpm (read)",
+        "peakWheelTorque": "311.52 lb-ft (STD) at about 6,900-7,100 rpm (read; ~300-311 from 4,400 rpm up)",
+        "howRead": "sheet legend RunFile_013; text '427hp/311tq at the wheels'"
+      },
+      "boost": {
+        "peak": "9.11 (sheet channel '*BOOST', unit not printed; 0-10 scale, psi implied)",
+        "atPeakPower": "about 8.8-9.0 near 7,250 rpm (read from trace)",
+        "fullBoostRpm": "n/a (centrifugal: rises roughly linearly, max ~7,000 rpm, drops slightly after)",
+        "howKnown": "logged boost channel printed on the Dynojet sheet"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Stillen CARB-legal supercharger kit for 2007-2008 VQ35HR, satin",
+        "superchargerSpecs": {
+          "model": "Stillen (Vortech-built) centrifugal supercharger kit for 2007-2008 VQ35HR dual-throttle-body engines, CARB-exempt, satin finish",
+          "headUnit": "not published in the sources found (Stillen kits are built with Vortech; exact V-3 trim not stated)",
+          "pulleyAndStepUp": "not found",
+          "maxBoost": "not published by Stillen/Vortech pages found; a 2008 HR with this kit plus Tomei cams logged 9.11 max on the Dynojet boost channel (see z33-zcg-2008-hr-stillen-sc-tomei-cams-9psi-2020)",
+          "intercooler": "air-to-water, core inside a redesigned intake manifold, front heat exchanger (Stillen blog / Vortech page)",
+          "claimedPower": "Stillen: '450 horsepower at the crank (or 360-375whp)'; 'around 360whp, in most cases'",
+          "compressorMap": "not found",
+          "sources": [
+            "https://blog.stillen.com/2007-2008-350z-supercharger-for-dual-throttle-body-vq35hr/",
+            "https://vortechsuperchargers.com/products/stillen-2007-nissan-vq35-350z-dual-throttle-body-supercharger-systems"
+          ]
+        },
+        "intercooler": "Stillen kit air-to-water intercooler",
+        "exhaust": "not stated",
+        "intake": "stock",
+        "injectors": "not stated",
+        "fuelPump": "not stated",
+        "ecu": "UpRev reflash by ZCG",
+        "cams": "Tomei camshafts with Tomei valve springs (grind not stated)",
+        "internals": "stock",
+        "gearbox": "new OEM CD009 6-speed; Z Speed Performance South Bend stage 2 clutch, CMAK external slave",
+        "other": "GT-R plugs; Concept Z 25-row Setrab oil cooler; carbon hood/fenders. Baseline run 286.07/252.02 was taken before this build (mods at baseline not listed; owner bought it 'completely stock' 3 years earlier)."
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2020/05/27/performance/joshs-supercharged-nissan-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog (Z Car Garage), 'Josh's Supercharged Nissan 350z', 27 May 2020",
+          "kind": "shop page",
+          "quote": "\"Josh visited us last year to discuss supercharging his 2008 350z. He acquired it completely stock 3 years ago and slowly began the modification process.\" ... \"Josh signed on for a Stillen supercharger kit (satin, CARB legal) and we installed it with our typical supporting mods like GTR plugs, and Concept Performance Z 25-row oil cooler  (Setrab, T-stat controlled).\" ... \"Josh also requested installation of parts he had purchased previously like Tomei cams/valve springs for the HR engine.\" ... \"we installed a brand new OEM CD009 transmission\" ... \"On the dyno the Z made 286hp/252tq baseline. Rob UPREV tuned with the Stillen supercharger making 427hp/311tq at the wheels\" ... owner: \"I brought in my base model 350z to Rob to get it Supercharged, cammed, and a transmission swap.\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2020/05/Joshua-A-Z33-Baseline-to-Final.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Joshua-A-Z33-Baseline-to-Final' (embedded in the post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5'; 'RunFile_002.drf Max Power = 286.07  Max Torque = 252.02' (blue, baseline) and 'RunFile_013.drf Max Power = 427.36  Max Torque = 311.52' (red); lower panel '*BOOST' axis 0-10: 'RunFile_002.drf Max *BOOST = 0.10', 'RunFile_013.drf Max *BOOST = 9.11'. Boost trace (read): ~5 at 4,900 rpm, ~6.8 at 5,500, ~7.4 at 6,000, ~8.3 at 6,500-6,750, ~9.1 at 6,900-7,100, falling to ~7.6 by 7,400 rpm."
+        },
+        {
+          "url": "https://blog.stillen.com/2007-2008-350z-supercharger-for-dual-throttle-body-vq35hr/",
+          "accessed": "2026-09-30",
+          "title": "STILLEN Garage blog: 'STILLEN VQ35HR Supercharger Available for 2007-2008 Nissan 350Z & G35 w/ Dual Throttle Body Engines'",
+          "kind": "article",
+          "quote": "\"With this supercharger system, power for the 350Z and G35 is boosted to 450 horsepower at the crank (or 360-375whp), and this system won't give you a hard time when you need to smog, because these kits are CARB Exempt.\" ... \"Air to water intercooler: By redesigning the intake manifold we were able to incorporate the intercooler inside the manifold\" ... \"Power output is typically around 450 horsepower to the crank (stock is 300hp to the crank), which ends up working out to around 360whp, in most cases.\""
+        }
+      ],
+      "confidence": "High for numbers and boost trace. Aftermarket cams (Tomei) change breathing, so this is a less clean check than the no-cam Nismo car (z33-zcg-2008-nismo-hr-stillen-sc-2021). Boost channel units assumed psi (not printed).",
+      "notes": "Only supercharged Z33 found with a boost trace on the sheet. Cams: record but prefer builds without. The 286.07 STD baseline is a second HR reference (state at baseline not listed)."
+    },
+    {
+      "id": "z33-motoiq-stock-superflow-stp-2013",
+      "summary": "MotoIQ Project 350Z (early 287 hp VQ35DE, manual) stock baseline on a conservative SuperFlow: about 200-205 whp, STP corrected (two baseline runs, read from sheets).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "not stated (US-based MotoIQ project car)",
+        "grade": "not stated",
+        "gearbox": "manual (stock clutch replaced with an ACT clutch; 6MT implied)",
+        "year": "not stated (early MAF VQ35DE with the stock 6,600 rpm limiter in a manual car, so a US MY2003-2005 non-Rev-Up 287 hp car; inferred, consistent with the trim table in src/data/cars/nissan-350z-z33.json where MY2005 35th Anniversary and MY2006 6MT cars have the Rev-Up)"
+      },
+      "engine": "VQ35DE early 287 hp version (stock 6,600 rpm limiter per the ECU article); stock internals at these stages",
+      "dyno": {
+        "make": "SuperFlow",
+        "model": "not printed (sheets are 'SuperFlow WinDyn(TM) V2.7' prints)",
+        "type": "roller (SuperFlow chassis dyno; absorber type not stated)",
+        "mode": "WinDyn V2.7, 'STP Corrected Wheel Power vs. RPM'",
+        "where": "Technosquare (shop; city not stated in the pages read), used as MotoIQ's project dyno"
+      },
+      "correction": {
+        "value": "STP (as printed: 'STP Corrected Wheel Power vs. RPM'; axis labels 'STPPwr, STPTrq')",
+        "howKnown": "printed on the SuperFlow sheets; which SAE/other standard WinDyn's 'STP' follows is not printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not on the published crops of the sheets"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "~204.5 hp (run MotoIQ350Z2) and ~200.0 hp (run MotoIQ350Z5), both near 6,450-6,500 rpm (STP)",
+        "peakWheelTorque": "~192-193 lb-ft (Z2) near 4,750 rpm; ~185 lb-ft (Z5) near 4,900 rpm",
+        "howRead": "read off the SuperFlow sheet images (no printed max values). Cross-checks: cam stage 239.5 minus 'almost 35 whp' gives ~204.5-205 for Z2; exhaust stage ~218-219 minus the stated 17.3 gives ~201-202 for Z5."
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "stock engine; chassis had ACT clutch, Nismo LSD, KW Clubsport suspension, Whiteline bars, StopTech brakes, Motegi wheels / Nitto NT01 from earlier project parts (no power effect)"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-350z-boosting-power-with-dc-sports-and-berk-technology/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, Mike Kojima, 'Project 350Z - Boosting Power With DC Sports and Berk Technology', page 1 (text via WebFetch, verbatim request)",
+          "kind": "article",
+          "quote": "\"Since the car is mostly a budget track day beater, we decided against forced induction options for now\" ... \"For our first step we decided to free up the exhaust side of things with headers and an exhaust from DC Sports and free flow cats from Berk Technology.\" ... \"We feel that the DC Sports headers are some of the best off the shelf reasonably priced short tube headers for the Z on the market.\" ... \"The DC Sport headers feature all 304 stainless steel construction.\""
+        },
+        {
+          "url": "https://motoiq.com/project-350z-boosting-power-with-dc-sports-and-berk-technology/5/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Boosting Power With DC Sports and Berk Technology', page 5",
+          "kind": "article",
+          "quote": "\"Back on the conservative Technosquare dyno for the moment of truth.\" ... \"The dyno results were pretty impressive. Note that our dyno is more conservative than typical. Usually a stock 350Z will have about 20 more hp on other dynos. It is important to look at the differences in power compared to the raw numbers. With our exhaust mods Project Z gained 17.3 hp and 18.1lb ft of torque.\""
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-ngv8TsQ/0/L/350z%20header%20and%20exhaust-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ dyno sheet 'Project 350Z header and exhaust' (page 5)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: title 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z14' (black, after) and 'MotoIQ350Z5' (red, before); footer '12/20/13' and 'SuperFlow WinDyn(TM) V2.7'. Read peaks: Z5 ~200.0 hp at ~6,450 rpm and ~185 lb-ft near 4,900 rpm; Z14 ~219.3 hp at ~6,450 rpm and ~202 lb-ft near 4,400-4,900 rpm. Pulls 2,050-6,800 rpm. Grid 5 hp; reading error about +/-1 hp."
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-vd9JB7H/0/L/power%20with%20C2%20cams%2C%20DC%20header%2C%20DC%20exhaust%2C%20Motordyne%20spacer-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ dyno sheet 'power with C2 cams, DC header, DC exhaust, Motordyne spacer' (cam article page 7)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z47' (black, cams + bolt-ons) and 'MotoIQ350Z2' (red, stock baseline), footer '02/11/14', 'SuperFlow WinDyn(TM) V2.7'. Read peaks: Z2 ~204.5 hp at ~6,500 rpm, torque ~192-193 lb-ft near 4,750 rpm; Z47 ~240 hp at ~6,650 rpm (text 239.5)."
+        },
+        {
+          "url": "https://motoiq.com/project-350z-testing-jim-wolf-technology-c2-camshafts/7/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z- Testing Jim Wolf Technology C2 Camshafts', page 7",
+          "kind": "article",
+          "quote": "\"With the JWT C2 cams in place, our Z produced 239.5 whp @6600 rpm and 210.5 lb/ft of torque @5100 rpm. This is an impressive 13.3 hp and 5 lb ft of torque gain.\" ... \"The cams lost power below 4400 rpm, as much as 6 wheel hp.\" ... \"Our power gains from the beginning. We have gained almost 35 whp and 15 lb/ft of torque just from simple bolt ons.\" ... photo caption (WebFetch): Project 350Z secured to Superflow dyno for testing"
+        },
+        {
+          "url": "https://motoiq.com/project-350z-ecu-tuning-with-church-automotive-and-uprev/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - ECU Tuning With Church Automotive and UpRev', page 1",
+          "kind": "article",
+          "quote": "\"The Nissan VQ35DE in early 350Z's runs off of a Mass Airflow Meter or MAF.\" ... \"Shawn also increased out rev limit from 6600 rpm to 7100 as we had been annoyingly banging off the rev limiter ever since the JWT cams greatly improved out high RPM breathing.\" ... \"The dyno at Church Automotive Testing is a Dynapack hub dyno.\" ... \"Without a frictional loss due to tires and alignment, Dynapak dynos typically read higher than wheel dynos like the common Dynojet and our super conservative Superflow.\""
+        },
+        {
+          "url": "https://motoiq.com/project-nissan-350z-part-one-installing-an-act-clutch-and-a-nismo-lsd/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project Nissan 350Z Part One: Installing an ACT Clutch and a Nismo LSD' (WebFetch extraction)",
+          "kind": "article",
+          "quote": "WebFetch extraction: the car had 'a stock open differential' and a 'stock factory clutch' that failed after 'clutch kicks to initiate drifts' (so the car is a manual); owner is a stunt driver who tracks and drifts it. Model year not stated."
+        }
+      ],
+      "confidence": "Medium-high: clear SuperFlow sheets, STP printed, but no max values printed (read from graphs, +/-1 hp) and the two stock runs differ by ~4.5 hp. Model year not stated. The dyno is openly described as reading 10-20 hp low.",
+      "notes": "Access note: motoiq.com pages served a JS 'One moment, please...' page to curl but were readable via WebFetch; photos.motoiq.com answered 'Bad bot' without a Referer, so the sheet images were downloaded with the article page as Referer (as a browser sends). SuperFlow reads low: MotoIQ says a stock 350Z 'will have about 20 more hp on other dynos' and 'typically reads 10-20 hp less'. The same car read 288-304 whp on a Dynapack hub dyno against ~240 on this SuperFlow (tuned stage, cams). Treat this ladder as good for deltas and as a low-reading roller dyno."
+    },
+    {
+      "id": "z33-motoiq-headers-hfc-dualexhaust-superflow-2013",
+      "summary": "MotoIQ Project 350Z with DC Sports short-tube headers, Berk high-flow cats, DC Sports Y-pipe (X crossover) and true-dual 60 mm cat-back: ~219 whp STP (read), +17.3 hp stated, SuperFlow.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "not stated (US-based MotoIQ project car)",
+        "grade": "not stated",
+        "gearbox": "manual (stock clutch replaced with an ACT clutch; 6MT implied)",
+        "year": "not stated (early MAF VQ35DE with the stock 6,600 rpm limiter in a manual car, so a US MY2003-2005 non-Rev-Up 287 hp car; inferred, consistent with the trim table in src/data/cars/nissan-350z-z33.json where MY2005 35th Anniversary and MY2006 6MT cars have the Rev-Up)"
+      },
+      "engine": "VQ35DE early 287 hp version (stock 6,600 rpm limiter per the ECU article); stock internals at these stages",
+      "dyno": {
+        "make": "SuperFlow",
+        "model": "not printed (sheets are 'SuperFlow WinDyn(TM) V2.7' prints)",
+        "type": "roller (SuperFlow chassis dyno; absorber type not stated)",
+        "mode": "WinDyn V2.7, 'STP Corrected Wheel Power vs. RPM'",
+        "where": "Technosquare (shop; city not stated in the pages read), used as MotoIQ's project dyno"
+      },
+      "correction": {
+        "value": "STP (as printed: 'STP Corrected Wheel Power vs. RPM'; axis labels 'STPPwr, STPTrq')",
+        "howKnown": "printed on the SuperFlow sheets; which SAE/other standard WinDyn's 'STP' follows is not printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "~219.3 hp at ~6,450 rpm (run MotoIQ350Z14, read); text: '+17.3 hp' over the baseline",
+        "peakWheelTorque": "~202 lb-ft near 4,400-4,900 rpm (read); text: '+18.1lb ft'",
+        "howRead": "read off the 12/20/13 SuperFlow sheet; the next article implies 217.9 whp for this state (226.2 - 8.3) on 01/30/14"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "DC Sports 304 stainless short-tube headers; Berk Technology high-flow racing cats; DC Sports Y-pipe with siamesed X crossover; DC Sports true-dual 60 mm cat-back with straight-through mufflers",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "intake, manifold, ECU stock"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-350z-boosting-power-with-dc-sports-and-berk-technology/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, Mike Kojima, 'Project 350Z - Boosting Power With DC Sports and Berk Technology', page 1 (text via WebFetch, verbatim request)",
+          "kind": "article",
+          "quote": "\"Since the car is mostly a budget track day beater, we decided against forced induction options for now\" ... \"For our first step we decided to free up the exhaust side of things with headers and an exhaust from DC Sports and free flow cats from Berk Technology.\" ... \"We feel that the DC Sports headers are some of the best off the shelf reasonably priced short tube headers for the Z on the market.\" ... \"The DC Sport headers feature all 304 stainless steel construction.\""
+        },
+        {
+          "url": "https://motoiq.com/project-350z-boosting-power-with-dc-sports-and-berk-technology/2/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Boosting Power With DC Sports and Berk Technology', page 2",
+          "kind": "article",
+          "quote": "\"DC Sports exhaust filled the bill nicely. It is a true dual systems beautifully fabricated from polished 304 stainless.\" ... \"The twin tubes are 60mm\" ... \"The all important Y pipe features a siamesed X pipe or crossover.\" ... \"We replaced the stock cats with Berk Technology high flow racing cats.\""
+        },
+        {
+          "url": "https://motoiq.com/project-350z-boosting-power-with-dc-sports-and-berk-technology/5/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Boosting Power With DC Sports and Berk Technology', page 5",
+          "kind": "article",
+          "quote": "\"Back on the conservative Technosquare dyno for the moment of truth.\" ... \"The dyno results were pretty impressive. Note that our dyno is more conservative than typical. Usually a stock 350Z will have about 20 more hp on other dynos. It is important to look at the differences in power compared to the raw numbers. With our exhaust mods Project Z gained 17.3 hp and 18.1lb ft of torque.\""
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-ngv8TsQ/0/L/350z%20header%20and%20exhaust-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ dyno sheet 'Project 350Z header and exhaust' (page 5)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: title 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z14' (black, after) and 'MotoIQ350Z5' (red, before); footer '12/20/13' and 'SuperFlow WinDyn(TM) V2.7'. Read peaks: Z5 ~200.0 hp at ~6,450 rpm and ~185 lb-ft near 4,900 rpm; Z14 ~219.3 hp at ~6,450 rpm and ~202 lb-ft near 4,400-4,900 rpm. Pulls 2,050-6,800 rpm. Grid 5 hp; reading error about +/-1 hp."
+        },
+        {
+          "url": "https://motoiq.com/project-350z-finding-more-power-with-motordyne-engineering/5/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Finding More Power with MotorDyne Engineering', page 5",
+          "kind": "article",
+          "quote": "\"Wow the MotorDyne Engineering intake plenum spacer gave us 226.2 whp @ 6450 rpm and 205.3 lb ft of torque @ 4350 rpm from our very conservative Superflow chassis dyno.\" ... \"This was 8.3 whp and 4.8 lb ft of torque more than what we got previously.\""
+        }
+      ],
+      "confidence": "Medium-high: parts list is exact; peak read from the graph. Peak-to-peak read (219.3 - 200.0 = 19.3) does not match the stated +17.3, so the stated gain is probably taken against a different baseline pull or at a different point.",
+      "notes": "Access note: motoiq.com pages served a JS 'One moment, please...' page to curl but were readable via WebFetch; photos.motoiq.com answered 'Bad bot' without a Referer, so the sheet images were downloaded with the article page as Referer (as a browser sends). SuperFlow reads low: MotoIQ says a stock 350Z 'will have about 20 more hp on other dynos' and 'typically reads 10-20 hp less'. The same car read 288-304 whp on a Dynapack hub dyno against ~240 on this SuperFlow (tuned stage, cams). Treat this ladder as good for deltas and as a low-reading roller dyno."
+    },
+    {
+      "id": "z33-motoiq-exhaust-plus-motordyne-spacer-superflow-2014",
+      "summary": "Same car plus MotorDyne 5/16\" Iso-Thermal plenum spacer: 226.2 whp @ 6,450 rpm / 205.3 lb-ft @ 4,350 rpm, SuperFlow, STP.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "not stated (US-based MotoIQ project car)",
+        "grade": "not stated",
+        "gearbox": "manual (stock clutch replaced with an ACT clutch; 6MT implied)",
+        "year": "not stated (early MAF VQ35DE with the stock 6,600 rpm limiter in a manual car, so a US MY2003-2005 non-Rev-Up 287 hp car; inferred, consistent with the trim table in src/data/cars/nissan-350z-z33.json where MY2005 35th Anniversary and MY2006 6MT cars have the Rev-Up)"
+      },
+      "engine": "VQ35DE early 287 hp version (stock 6,600 rpm limiter per the ECU article); stock internals at these stages",
+      "dyno": {
+        "make": "SuperFlow",
+        "model": "not printed (sheets are 'SuperFlow WinDyn(TM) V2.7' prints)",
+        "type": "roller (SuperFlow chassis dyno; absorber type not stated)",
+        "mode": "WinDyn V2.7, 'STP Corrected Wheel Power vs. RPM'",
+        "where": "Technosquare (shop; city not stated in the pages read), used as MotoIQ's project dyno"
+      },
+      "correction": {
+        "value": "STP (as printed: 'STP Corrected Wheel Power vs. RPM'; axis labels 'STPPwr, STPTrq')",
+        "howKnown": "printed on the SuperFlow sheets; which SAE/other standard WinDyn's 'STP' follows is not printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "226.2 hp @ 6,450 rpm (STP)",
+        "peakWheelTorque": "205.3 lb-ft @ 4,350 rpm (STP)",
+        "howRead": "text quote (page 5), matches the red run MotoIQ350Z36 on the 01/30/14 sheet"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "DC Sports short-tube headers, Berk high-flow cats, DC Sports Y-pipe (X crossover), DC Sports true-dual 60 mm cat-back",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "MotorDyne Engineering 5/16\" Iso-Thermal plenum spacer (aramid gaskets, coolant shut-off valve for the throttle body/plenum loop fitted and closed). Intake and ECU stock."
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-350z-finding-more-power-with-motordyne-engineering/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Finding More Power with MotorDyne Engineering', page 1",
+          "kind": "article",
+          "quote": "\"The 350Z's VQ35DE engine has a very thin intake manifold plenum\" ... \"they assured us that we should get no less than 6 whp from the spacer\" ... \"so we ordered their 5/16″ thick Iso-Thermal plenum spacer kit.\" ... \"We tested a plenum spacer from a competing company and found that it actually lost power over the stock manifold.\""
+        },
+        {
+          "url": "https://motoiq.com/project-350z-finding-more-power-with-motordyne-engineering/5/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - Finding More Power with MotorDyne Engineering', page 5",
+          "kind": "article",
+          "quote": "\"Wow the MotorDyne Engineering intake plenum spacer gave us 226.2 whp @ 6450 rpm and 205.3 lb ft of torque @ 4350 rpm from our very conservative Superflow chassis dyno.\" ... \"This was 8.3 whp and 4.8 lb ft of torque more than what we got previously.\""
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-xsrZL3Q/0/L/motordyne%20spacer%20dyno%202-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ dyno sheet 'motordyne spacer dyno 2' (page 5)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z32' (black, before spacer) and 'MotoIQ350Z36' (red, with spacer), footer '01/30/14', 'SuperFlow WinDyn(TM) V2.7'. Red peak ~226 hp at ~6,450 rpm (text: 226.2); black ~218 hp (text implies 217.9)."
+        }
+      ],
+      "confidence": "High for the numbers (stated with rpm); low-reading dyno.",
+      "notes": "Access note: motoiq.com pages served a JS 'One moment, please...' page to curl but were readable via WebFetch; photos.motoiq.com answered 'Bad bot' without a Referer, so the sheet images were downloaded with the article page as Referer (as a browser sends). SuperFlow reads low: MotoIQ says a stock 350Z 'will have about 20 more hp on other dynos' and 'typically reads 10-20 hp less'. The same car read 288-304 whp on a Dynapack hub dyno against ~240 on this SuperFlow (tuned stage, cams). Treat this ladder as good for deltas and as a low-reading roller dyno. The coolant to the lower plenum/throttle body was shut off with the supplied valve, which slightly lowers intake temperature."
+    },
+    {
+      "id": "z33-motoiq-plus-jwt-c2-cams-superflow-2014",
+      "summary": "Same car plus JWT C2 camshafts (261 deg, 0.456\") and JWT springs, stock ECU: 239.5 whp @ 6,600 rpm / 210.5 lb-ft @ 5,100 rpm, SuperFlow, STP.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "not stated (US-based MotoIQ project car)",
+        "grade": "not stated",
+        "gearbox": "manual (stock clutch replaced with an ACT clutch; 6MT implied)",
+        "year": "not stated (early MAF VQ35DE with the stock 6,600 rpm limiter in a manual car, so a US MY2003-2005 non-Rev-Up 287 hp car; inferred, consistent with the trim table in src/data/cars/nissan-350z-z33.json where MY2005 35th Anniversary and MY2006 6MT cars have the Rev-Up)"
+      },
+      "engine": "VQ35DE early 287 hp version (stock 6,600 rpm limiter per the ECU article); stock bottom end; JWT C2 cams and JWT valve springs",
+      "dyno": {
+        "make": "SuperFlow",
+        "model": "not printed (sheets are 'SuperFlow WinDyn(TM) V2.7' prints)",
+        "type": "roller (SuperFlow chassis dyno; absorber type not stated)",
+        "mode": "WinDyn V2.7, 'STP Corrected Wheel Power vs. RPM'",
+        "where": "Technosquare (shop; city not stated in the pages read), used as MotoIQ's project dyno"
+      },
+      "correction": {
+        "value": "STP (as printed: 'STP Corrected Wheel Power vs. RPM'; axis labels 'STPPwr, STPTrq')",
+        "howKnown": "printed on the SuperFlow sheets; which SAE/other standard WinDyn's 'STP' follows is not printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "not printed"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "239.5 hp @ 6,600 rpm (STP; at the stock rev limiter)",
+        "peakWheelTorque": "210.5 lb-ft @ 5,100 rpm (STP)",
+        "howRead": "text quote (page 7); cumulative sheet 02/11/14 run MotoIQ350Z47 vs stock run Z2"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "DC Sports headers, Berk HFCs, DC Sports Y-pipe and true-dual cat-back",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "JWT C2 (261 deg duration, 0.456 in lift, per the article) with JWT valve springs",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "MotorDyne 5/16\" spacer; stock intake; stock ECU (limiter still 6,600 rpm, the car was 'banging off the rev limiter')"
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-350z-testing-jim-wolf-technology-c2-camshafts/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z- Testing Jim Wolf Technology C2 Camshafts', page 1 (WebFetch extraction)",
+          "kind": "article",
+          "quote": "\"The JWT C2 cams have 261 degrees of duration and 0.456″ of lift\"; the cams require JWT valve springs; before the cams the car had \"a manifold spacer, headers, high flow cats and exhaust\" (WebFetch quote extraction)"
+        },
+        {
+          "url": "https://motoiq.com/project-350z-testing-jim-wolf-technology-c2-camshafts/7/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z- Testing Jim Wolf Technology C2 Camshafts', page 7",
+          "kind": "article",
+          "quote": "\"With the JWT C2 cams in place, our Z produced 239.5 whp @6600 rpm and 210.5 lb/ft of torque @5100 rpm. This is an impressive 13.3 hp and 5 lb ft of torque gain.\" ... \"The cams lost power below 4400 rpm, as much as 6 wheel hp.\" ... \"Our power gains from the beginning. We have gained almost 35 whp and 15 lb/ft of torque just from simple bolt ons.\" ... photo caption (WebFetch): Project 350Z secured to Superflow dyno for testing"
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-vd9JB7H/0/L/power%20with%20C2%20cams%2C%20DC%20header%2C%20DC%20exhaust%2C%20Motordyne%20spacer-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ dyno sheet 'power with C2 cams, DC header, DC exhaust, Motordyne spacer' (cam article page 7)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z47' (black, cams + bolt-ons) and 'MotoIQ350Z2' (red, stock baseline), footer '02/11/14', 'SuperFlow WinDyn(TM) V2.7'. Read peaks: Z2 ~204.5 hp at ~6,500 rpm, torque ~192-193 lb-ft near 4,750 rpm; Z47 ~240 hp at ~6,650 rpm (text 239.5)."
+        },
+        {
+          "url": "https://motoiq.com/project-350z-ecu-tuning-with-church-automotive-and-uprev/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - ECU Tuning With Church Automotive and UpRev', page 1",
+          "kind": "article",
+          "quote": "\"The Nissan VQ35DE in early 350Z's runs off of a Mass Airflow Meter or MAF.\" ... \"Shawn also increased out rev limit from 6600 rpm to 7100 as we had been annoyingly banging off the rev limiter ever since the JWT cams greatly improved out high RPM breathing.\" ... \"The dyno at Church Automotive Testing is a Dynapack hub dyno.\" ... \"Without a frictional loss due to tires and alignment, Dynapak dynos typically read higher than wheel dynos like the common Dynojet and our super conservative Superflow.\""
+        }
+      ],
+      "confidence": "High for the numbers; aftermarket cams (record, lower priority). Power peak sits on the rev limiter, so the true peak is capped.",
+      "notes": "Access note: motoiq.com pages served a JS 'One moment, please...' page to curl but were readable via WebFetch; photos.motoiq.com answered 'Bad bot' without a Referer, so the sheet images were downloaded with the article page as Referer (as a browser sends). SuperFlow reads low: MotoIQ says a stock 350Z 'will have about 20 more hp on other dynos' and 'typically reads 10-20 hp less'. The same car read 288-304 whp on a Dynapack hub dyno against ~240 on this SuperFlow (tuned stage, cams). Treat this ladder as good for deltas and as a low-reading roller dyno. Later stages (AEM intake, MotorDyne MREV2 manifold, UpRev tune with 7,100 rpm limit) are listed as a rejected entry."
+    },
+    {
+      "id": "z33-mishimoto-stock-dynojet-2015",
+      "summary": "Mishimoto's stock 350Z (VQ35DE, 2003-2006 intake fitment; pull ends 6,450 rpm) on its Dynojet: ~229.6 whp / ~215.7 lb-ft (read from a re-plotted 3-run average); with Mishimoto intake ~234.7 / ~224.8.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33 (coupe)",
+        "market": "not stated (Mishimoto R&D test car, USA)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated (intake fits 2003-2006)"
+      },
+      "engine": "VQ35DE (version not stated; the pull ends ~6,450 rpm, which fits a 287 hp 6,600 rpm engine better than a 7,000 rpm Rev-Up)",
+      "dyno": {
+        "make": "Dynojet (visible on the dyno in Mishimoto's test photo)",
+        "model": "not printed; Mishimoto's 2016 equipment page names its Dynojet as a 424X (AWD platform, Linx)",
+        "type": "inertia roller",
+        "mode": "average of three consistent runs, re-plotted",
+        "where": "Mishimoto R&D, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "the published chart is a re-plot without the dyno header"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not published"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "~229.6 hp at ~6,150 rpm (stock, read)",
+        "peakWheelTorque": "~215.7 lb-ft near 4,600-4,900 rpm (stock, read)",
+        "howRead": "read off the re-plotted chart (50 hp grid, +/-1 hp); text confirms the intake's peak gain '6 whp and 9 wtq'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "stock for the baseline; second configuration = Mishimoto Performance Air Intake prototype (cone filter in a box, stock MAF housing retained)"
+      },
+      "sources": [
+        {
+          "url": "https://www.mishimoto.com/engineering/2015/08/pure-vq-sound-mishimotos-350z-performance-intake-rd-part-3-dyno-testing-and-results",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering blog, 'Pure VQ Sound! Mishimoto's 350Z Performance Intake R&D, Part 3: Dyno Testing and Results' (Aug 2015)",
+          "kind": "article",
+          "quote": "\"With our initial design completed, it is time to strap our Z to the dyno and make a few pulls.\" ... \"Keep in mind that we made numerous pulls with each setup (both stock and Mishimoto) until a consistent power curve was produced. Once we had three consistent runs, they were averaged to produce the comparison in power output shown below.\" ... \"Our maximum gains were achieved in the midrange, equating to 10 whp and 13 wtq. At the peak of the rpm band, our gains were 6 whp and 9 wtq.\" ... product box: \"Performance Air Intake, fits Nissan 350Z 2003-2006\""
+        },
+        {
+          "url": "https://www.mishimoto.com/media/magefan_blog/2015/08/Dyno-Plot.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto chart 'Nissan 350Z Stock vs. Mishimoto Intake' (re-plotted average of 3 runs)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: title 'Nissan 350Z Stock vs. Mishimoto Intake'; box 'Max gains: 10 hp and 13 Ft/lbs / Peak Gains: 6 hp and 9 Ft/lbs'. Read: Stock HP peak ~229.6 hp at ~6,150 rpm; Stock torque peak ~215.7 lb-ft near 4,600-4,900 rpm; Mishimoto HP ~234.7 hp at ~6,150-6,200 rpm; Mishimoto torque ~224.8 lb-ft near 4,600 rpm. X axis 3,000-6,450 rpm. Spreadsheet-style re-plot, no dyno header or correction printed."
+        },
+        {
+          "url": "https://www.mishimoto.com/media/magefan_blog/2015/08/Dyno-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto photo captioned 'Setting vehicle up for Nissan 350Z intake testing' (Part 3)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: black Z33 coupe strapped on a roller dyno whose base carries the 'Dynojet' logo (wheels on rollers, not a hub dyno)."
+        },
+        {
+          "url": "https://www.mishimoto.com/engineering/2016/07/equipment-profile-mishimoto-is-dyno-mite",
+          "accessed": "2026-09-30",
+          "title": "Mishimoto Engineering blog, 'Mishimoto is Dyno-mite - Our Dynojet and Dynapack Dynos' (Jul 2016)",
+          "kind": "article",
+          "quote": "\"Mishimoto's R&D facility houses not one, but two dyno systems: A Dynojet(TM) 424X and a 4-pod Dynapack(TM) system.\" ... \"The Dynojet 424X is a platform-style, inertia dyno that utilizes two rollers\""
+        }
+      ],
+      "confidence": "Medium: dyno make is visible in the photo and the method (3-run average) is stated, but correction, year, engine version and gearbox are not stated and the chart is a re-plot.",
+      "notes": "Useful independent stock-DE reference on a Dynojet. The 2016 equipment page post-dates the test by a year, so the 424X model is likely but not proven for 2015."
+    },
+    {
+      "id": "z33-couture-2003-jdm-filter-spacer-exhaust-dd-shootout-2008",
+      "summary": "2003 JDM Fairlady Z (VQ35DE) with Apexi filter, Pure plenum spacer and ZEES exhaust, stock ECU: 248.78 whp (302.1 hp calculated flywheel), Dyno Dynamics shootout mode, Couture Auto Ireland.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33 (Fairlady Z, JDM import)",
+        "market": "JDM car in Ireland",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2003"
+      },
+      "engine": "VQ35DE (JDM 2003, 280 PS rating)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "roller (Dyno Dynamics; the make's usual eddy-current absorber is not printed on the sheet)",
+        "mode": "'Dyno Dynamics Standard Shootout Graph', CF 'SHOOT 6', tyre pressure 'std'",
+        "where": "Couture Auto, Ireland"
+      },
+      "correction": {
+        "value": "Dyno Dynamics shootout correction ('CF SHOOT 6', as printed)",
+        "howKnown": "printed in the sheet's info box"
+      },
+      "testConditions": {
+        "temperature": "AT 14 (ambient, deg C assumed), IT 37 (intake, deg C assumed)",
+        "pressure": "BP 994.5 (hPa assumed)",
+        "humidity": "RH 83 % (digit read as 8; 6 possible)",
+        "howKnown": "printed in the sheet's info box (box belongs to run 10 at 11:08:50, the 'before' run)"
+      },
+      "gear": "4th (printed 'Gear 4')",
+      "result": {
+        "peakWheelPower": "248.78 wheel HP (peak ~6,200 rpm, read)",
+        "peakWheelTorque": "wheel torque not printed; flywheel torque 287.74 lb-ft (calculated)",
+        "howRead": "overlaid text on the sheet: 'BEFORE ... 248.78 wheel HP'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "'E5 Petrol' (Irish pump unleaded; RON not stated, 95 RON is the standard grade there but not verified)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "ZEES exhaust (type/extent not stated)",
+        "intake": "Apexi filter",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "Pure plenum spacer (thickness not stated). Haltech not yet fitted at this run."
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', post by member andlid, 7 Aug 2009 (comment id 375894, page 1)",
+          "kind": "thread",
+          "quote": "\"Model: 2003 VQ35DE (JDM) Mods: Apexi filter,Pure Plenum Spacer, ZEES Exhaust, Haltech Platinum ECU Dyno: dyno dynamics / couture auto Ireland BHP: WHP: 267.11 / FHP: 323.4 Torque: 304.59 lb/ft (E5 Petrol)\""
+        },
+        {
+          "url": "http://lh6.ggpht.com/_wgRAPVXc31s/SnxRy11qo0I/AAAAAAAABgs/TWEGbI7cMyc/s576/350Z%20Haltech%20Tuned%2050.JPG",
+          "accessed": "2026-09-30",
+          "title": "Couture Auto (Ireland) Dyno Dynamics sheet posted in the thread (original 1256x1024 read via the '/s0/' size of the same Google-hosted image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: header 'Couture Auto', 'DYNO DYNAMICS', 'ID 03D79351', box 'Dyno Dynamics Standard Shootout Graph.' with 'BP 994.5 / RH 83 / AT 14 / IT 37 / RR 125 / TN 3.466 / 20081006 110850 / CK 632 / CF SHOOT 6 / Tyre Pres. std / Gear 4'; left axis 'Flywheel Power (HP)'; overlaid text 'BEFORE 302.1 flywheel HP / 287.74 lb/ft flywheel torque / 248.78 wheel HP' and 'AFTER Haltech + Map 323.4 flywheel HP / 304.59 lb/ft flywheel torque / 267.11 wheel HP'; run table '03D7935 06-10-08 16:49:32 run 23 100@125' and '03D7935 06-10-08 11:08:50 run 10 100@125'. Flywheel power peaks ~6,200 rpm (before) and ~6,050-6,100 rpm (after)."
+        }
+      ],
+      "confidence": "Medium: real sheet with mode, gear and weather printed; wheel figure is an annotation added on the print (by shop or owner) and the plotted curve is calculated flywheel power. Gearbox unknown.",
+      "notes": "Dyno Dynamics in shootout mode typically reads lower than a Dynojet. Plot is flywheel (coast-down based); use only the annotated wheel figure."
+    },
+    {
+      "id": "z33-couture-2003-jdm-haltech-dd-shootout-2008",
+      "summary": "Same 2003 JDM car after Haltech Platinum standalone ECU + map: 267.11 whp (323.4 hp calculated flywheel), Dyno Dynamics shootout, same day.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33 (Fairlady Z, JDM import)",
+        "market": "JDM car in Ireland",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2003"
+      },
+      "engine": "VQ35DE (JDM 2003)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "roller (Dyno Dynamics; the make's usual eddy-current absorber is not printed on the sheet)",
+        "mode": "'Dyno Dynamics Standard Shootout Graph', CF 'SHOOT 6', tyre pressure 'std'",
+        "where": "Couture Auto, Ireland"
+      },
+      "correction": {
+        "value": "Dyno Dynamics shootout correction ('CF SHOOT 6', as printed)",
+        "howKnown": "printed in the sheet's info box"
+      },
+      "testConditions": {
+        "temperature": "not printed for this run (same day, 16:49 vs 11:08)",
+        "pressure": "not printed for this run",
+        "humidity": "not printed for this run",
+        "howKnown": "info box shows the 11:08 run only"
+      },
+      "gear": "4th (same set-up)",
+      "result": {
+        "peakWheelPower": "267.11 wheel HP (peak ~6,050-6,100 rpm, read)",
+        "peakWheelTorque": "not printed at the wheels; flywheel 304.59 lb-ft (calculated)",
+        "howRead": "overlaid text 'AFTER Haltech + Map ... 267.11 wheel HP'; post: 'WHP: 267.11'"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "'E5 Petrol'",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "ZEES exhaust",
+        "intake": "Apexi filter",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "Haltech Platinum standalone ECU with custom map",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "Pure plenum spacer"
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', post by member andlid, 7 Aug 2009 (comment id 375894, page 1)",
+          "kind": "thread",
+          "quote": "\"Model: 2003 VQ35DE (JDM) Mods: Apexi filter,Pure Plenum Spacer, ZEES Exhaust, Haltech Platinum ECU Dyno: dyno dynamics / couture auto Ireland BHP: WHP: 267.11 / FHP: 323.4 Torque: 304.59 lb/ft (E5 Petrol)\""
+        },
+        {
+          "url": "http://lh6.ggpht.com/_wgRAPVXc31s/SnxRy11qo0I/AAAAAAAABgs/TWEGbI7cMyc/s576/350Z%20Haltech%20Tuned%2050.JPG",
+          "accessed": "2026-09-30",
+          "title": "Couture Auto (Ireland) Dyno Dynamics sheet posted in the thread (original 1256x1024 read via the '/s0/' size of the same Google-hosted image)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: header 'Couture Auto', 'DYNO DYNAMICS', 'ID 03D79351', box 'Dyno Dynamics Standard Shootout Graph.' with 'BP 994.5 / RH 83 / AT 14 / IT 37 / RR 125 / TN 3.466 / 20081006 110850 / CK 632 / CF SHOOT 6 / Tyre Pres. std / Gear 4'; left axis 'Flywheel Power (HP)'; overlaid text 'BEFORE 302.1 flywheel HP / 287.74 lb/ft flywheel torque / 248.78 wheel HP' and 'AFTER Haltech + Map 323.4 flywheel HP / 304.59 lb/ft flywheel torque / 267.11 wheel HP'; run table '03D7935 06-10-08 16:49:32 run 23 100@125' and '03D7935 06-10-08 11:08:50 run 10 100@125'. Flywheel power peaks ~6,200 rpm (before) and ~6,050-6,100 rpm (after)."
+        }
+      ],
+      "confidence": "Medium (as the before run). A standalone map is hard to model (timing/AFR unknown).",
+      "notes": ""
+    },
+    {
+      "id": "z33-uk-2007-hr-stock-dastek-2011",
+      "summary": "Stock UK 2007 350Z '313HR' (VQ35HR 313 PS) on a Dastek at Wallace Performance: 261.6 WHP @ 7,000 rpm, 261 lb-ft, 21 C, Tesco 99 RON (owner's text; graph never posted).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "UK",
+        "grade": "not stated ('313HR')",
+        "gearbox": "not stated",
+        "year": "2007"
+      },
+      "engine": "VQ35HR (313 PS European rating)",
+      "dyno": {
+        "make": "Dastek",
+        "model": "not stated",
+        "type": "roller (Dastek chassis dyno; absorber not stated)",
+        "mode": "not stated",
+        "where": "Wallace Performance, UK"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "text only"
+      },
+      "testConditions": {
+        "temperature": "'a scorching 21'c' (owner)",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "owner's post"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "261.6 WHP @ 7,000 rpm (295.9 hp calculated flywheel)",
+        "peakWheelTorque": "261 lb-ft (not stated whether wheel or flywheel; rpm not stated)",
+        "howRead": "owner's text"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "Tesco 99 RON (stated)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "none ('Stock')"
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/page/2/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', page 2, post by member imhereithink85, 29 May 2011 (comment id 721873)",
+          "kind": "thread",
+          "quote": "\"2007 313HR Wallace Performance Dastek Stock 261.6 WHP/ 295.9 FHP @ 7000rpm making 261 lbft Quite happy with that, stock car running on Tesco 99ron. Wallace were saying the dyno is pretty concervative so dont be too dissapointed with results, and it was a scorching 21'c which didn't help matters. Will post up the graphs when i get round to uploading them\""
+        }
+      ],
+      "confidence": "Low-medium: owner's text only, no sheet, correction unknown; but dyno make, fuel, temperature and stock state are all stated.",
+      "notes": "Only stock European-spec HR found. The shop told the owner the dyno is conservative."
+    },
+    {
+      "id": "z33-uk-2006-revup-popcharger-ypipe-dd-2010",
+      "summary": "UK 2006 350Z Rev-Up (VQ35DE 300 PS) with POP charger intake and ESR Y-pipe: 240 bhp at the wheels / 212 lb-ft, Dyno Dynamics at Surrey Rolling Road (owner's text; sheet images on a dead host).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "UK",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2006"
+      },
+      "engine": "VQ35DE Rev-Up (300 PS)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not stated",
+        "type": "roller",
+        "mode": "not stated",
+        "where": "Surrey Rolling Road, UK"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "text only"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "text only"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "240 bhp at the wheels (291 bhp calculated flywheel); rpm not stated",
+        "peakWheelTorque": "212 lb-ft at the wheels (260 lb-ft flywheel); rpm not stated",
+        "howRead": "owner's text"
+      },
+      "boost": {
+        "peak": "n/a (naturally aspirated)",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "NA engine"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "ESR Y-pipe (rest stock)",
+        "intake": "POP charger (cone filter)",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', page 1, post by member Ekona, 27 Mar 2010 (comment id 508028)",
+          "kind": "thread",
+          "quote": "\"Model: 2006 Revup Mods: Popcharger & ESR Y-pipe Dyno: Dyno Dynamics @ Surrey Rolling Road BHP: 291bhp at the flywheel - 240bhp at the wheels Torque: 260ft/lb at the flywheel - 212lb/ft at the wheels\" (sheet images http://www.ekonanet.co.uk/dan/350Z/dyno1.jpg to dyno3.jpg: host no longer resolves)"
+        }
+      ],
+      "confidence": "Low-medium: owner's text only; the only Rev-Up light build found. Correction, gear and weather unknown.",
+      "notes": ""
+    },
+    {
+      "id": "z33-turbomag-turbonetics-60-1-8psi-2005",
+      "summary": "Turbonetics single-turbo kit (T3/T4 60-1, stock exhaust manifolds, factory exhaust) on a stock-engine VQ35DE 350Z: 365.6 whp / 355.3 lb-ft at 8 psi (Turbo Magazine 'Dyno Cell').",
+      "usable": false,
+      "whyNotUsable": "Dyno make not stated in the text and not legible on the only copy of the sheet (a 222x167 thumbnail from SP Engineering that looks like a Dynojet WinPEP print); correction unknown; source is a third-party copy because the original motortrend.com page is not accessible to our tools. Would be a strong medium build if the dyno make were confirmed.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated (Turbonetics development car)",
+        "gearbox": "not stated",
+        "year": "not stated (VQ35DE; kit fits 2003-2006)"
+      },
+      "engine": "VQ35DE, stock engine (\"as-delivered\" kit), version not stated",
+      "dyno": {
+        "make": "not stated ('Dyno Cell'; sheet from SP Engineering, make not legible)",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "SP Engineering (name and a 626-area phone number on the sheet header)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "365.6 whp (rpm not stated; pull ended ~6,300 rpm)",
+        "peakWheelTorque": "355.3 lb-ft (over 300 lb-ft from 3,600 to ~6,300 rpm)",
+        "howRead": "magazine text"
+      },
+      "boost": {
+        "peak": "8 psi",
+        "atPeakPower": "8 psi (stated as the kit's boost)",
+        "fullBoostRpm": "not stated (250 whp at 4,000 rpm and >300 lb-ft from 3,600 rpm suggest full boost by ~3,600 rpm; inference)",
+        "howKnown": "magazine text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Turbonetics T3/T4 60-1 hybrid, ceramic ball bearing (Treadstone lists the kit turbo as '60-1/Stage V .77 A/R')",
+        "turboSpecs": {
+          "model": "Turbonetics 60-1 compressor, Stage V turbine, 0.77 A/R turbine housing, ceramic ball-bearing CHRA",
+          "wastegate": "Turbonetics Evolution",
+          "bov": "Turbonetics Raptor",
+          "claimedPower": "365-385 rwhp / 355-375 lb-ft at 8 psi (Treadstone)",
+          "compressorMap": "not found",
+          "sources": [
+            "https://www.treadstoneperformance.com/blog/nissan-350z-turbo-kit-and-infiniti-g35-turbo-kit/363",
+            "https://www.speedyauto.cc/howto/sportcar/engine/201603/240063.html"
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Treadstone front-mount (per Treadstone kit list)",
+        "exhaust": "factory exhaust manifolds (crossover pipe to the turbo) and factory exhaust system",
+        "intake": "stock",
+        "injectors": "440cc Denso drop-in (Treadstone kit list; not stated in the magazine test)",
+        "fuelPump": "stock",
+        "ecu": "'enhanced ECU' (reflash; AFR 11:1)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.speedyauto.cc/howto/sportcar/engine/201603/240063.html",
+          "accessed": "2026-09-30",
+          "title": "Third-party copy of Turbo Magazine, 'Turbonetics 350Z Turbo Kit - Tech Review' (image names '0504tur_...' suggest the April 2005 issue; the original motortrend.com page is not accessible to our tools)",
+          "kind": "article",
+          "quote": "\"The Turbonetics 350Z single-turbo kit rocks; giving the sultry 350Z a new lease on life by way of 8 pounds of boost. The spool-up characteristics of the ceramic ball-bearing center section are excellent, and the 60-1 compressor wheel deals out the boost in an authoritative manner.\" ... \"The centerpiece of the kit is the T3/T4 60-1 hybrid turbo.\" ... \"The system utilizes the factory exhaust manifolds\" ... \"Turbonetics reports that the factory exhaust system made more power than an aftermarket setup\" ... \"In our Dyno Cell testing the 350Z pumped out a generous 365.6 whp at 8 psi, the most we have seen from an \"as-delivered\" boost package for the Z. On the torque side we witnessed 355.3 lb-ft at peak. ... it eclipsed 300 lb-ft at 3600 rpm and stayed there until the pull ceased at around 6300 rpm. ... the VQ35DE belted out 250 hp to the wheels at a low 4000 rpm ... the enhanced ECU providing a rock solid 11:1 air/fuel ratio throughout the run.\""
+        },
+        {
+          "url": "https://www.speedyauto.cc/howto/UploadFiles_1022/201603/2016030716524563.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet thumbnail in the same copy (alt text '0504_thp_350z_06_z')",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 222x167 thumbnail; 'SP Engineering' logo, header 'SP Engineering (626) 3xx-xxxx', two runs with names starting 'DYNORUN' (WinPEP-style); max values and correction not legible."
+        },
+        {
+          "url": "https://www.treadstoneperformance.com/blog/nissan-350z-turbo-kit-and-infiniti-g35-turbo-kit/363",
+          "accessed": "2026-09-30",
+          "title": "Treadstone Performance blog, 'Nissan 350Z Turbo Kit and Infiniti G35 Turbo Kit' (successor distributor of the Turbonetics kit)",
+          "kind": "shop page",
+          "quote": "\"Treadstone Performance Engineering Inc is now the exclusive distributor of the recently upgraded Turbonetics 350z and G35 turbo kits! The same exact kit Turbonetics used to sell\" ... \"- Turbonetics 60-1/Stage V .77 A/R Turbocharger - Turbonetics Evolution Wastegate - Turbonetics Raptor Blow Off Valve - Treadstone Front Mount Intercooler - 440cc Denso Drop in/Plug in Injectors - Power Output: 365-385 RWHP 355-375 ft/lb Tq - Boost pressure: 8 PSI\""
+        }
+      ],
+      "confidence": "Numbers and boost are clearly stated by the magazine; dyno make and correction are the gaps.",
+      "notes": ""
+    },
+    {
+      "id": "z33-dsport-gtm-tt-stock-engine-dynapack-380",
+      "summary": "2006 350Z (VQ35DE Rev-Up) with GTM twin Garrett GT2860RS kit on the stock engine, 600cc injectors, UpRev: '380 horsepower, as measured on a Dynapack Chassis Dyno' (first stage of the DSPORT feature car).",
+      "usable": false,
+      "whyNotUsable": "Boost not stated for this stage, no sheet published, and it is a hub dyno. Meets the chassis/dyno-make criteria but a physics check needs the boost.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2006"
+      },
+      "engine": "VQ35DE Rev-Up (spec box of the later build), stock internals at this stage",
+      "dyno": {
+        "make": "Dynapack",
+        "model": "not stated",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "Church Automotive (tuner; location not stated in the article)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "380 hp at the hubs (rpm not stated)",
+        "peakWheelTorque": "not stated",
+        "howRead": "magazine text"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "not in text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "GTM Motorsports twin-turbo kit, two Garrett GT2860RS on GTM cast manifolds",
+        "turboSpecs": {
+          "model": "Garrett GT2860RS x2 (DSPORT text); later spec box lists .64 A/R turbine housings (WebFetch extraction)",
+          "compressorMap": "not fetched",
+          "sources": [
+            "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/2/",
+            "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/4/"
+          ]
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "GTM front-mount (named in the later spec box)",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "600cc/min",
+        "fuelPump": "255-lph in-tank; CJ Motorsports fuel return system",
+        "ecu": "factory ECU reflashed with UpRev Osiris (Church Automotive)",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": "stock throttle body"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Magazine, 'Twin-Turbocharged Nissan 350Z' (Richard Fong), page 1",
+          "kind": "article",
+          "quote": "\"he finally purchased this 2006 Nissan 350Z.\""
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Magazine, 'Twin-Turbocharged Nissan 350Z', page 2",
+          "kind": "article",
+          "quote": "\"The GTM Motorsports twin-turbo kit centers on a pair of Garrett GT2860RS turbochargers. These turbos rely on GTM cast manifolds ... hard piping feeds the intake charge through a stock throttle body ... a CJ Motorsports fuel return system, 600cc/min injectors and a 255-lph in tank fuel pump fortified the fuel delivery system. To regulate the larger injectors, Spielman chose to reflash the factory ECU using UpRev's Osiris software. In the hands of Church Automotive, the Z was tuned to make 380 horsepower, as measured on a Dynapack Chassis Dyno. While this setup was adequate and enjoyable, the factory internals simply could not handle the cylinder pressure. In less than a year, the stock engine let go\" ... \"He started with a set of Cosworth forged aluminum pistons in a 95.75mm offering.\" ... \"With a tank full of 91-octane, the tables were optimized. The Z spun the rollers of our in-house Dynojet 424xLC2 dynamometer to the tune of 480.75 wheel horsepower and 435.25 lb-ft of torque.\""
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/4/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Magazine, 'Twin-Turbocharged Nissan 350Z', page 4 spec box (read via WebFetch extraction; curl got a bot-verification page)",
+          "kind": "article",
+          "quote": "WebFetch extraction (not verbatim): 'VQ35DE RevUp'; '480.75 whp @ 6,140 RPM' and '435.25 lb-ft @ 5,000 RPM' on 91-octane at 17 psi; twin Garrett GT2860RS with .64 A/R turbine housings; Haltech Platinum Pro and UpRev Osiris; ID1000 injectors, Cosworth rails, Aeromotive 340-lph pump; GTM front-mount intercooler; GTM 3-inch downpipes; Fast Intentions Intimidator exhaust; OS Giken twin-plate clutch and 1.5-way LSD."
+        }
+      ],
+      "confidence": "Text is clear; boost missing.",
+      "notes": "The stock engine failed within a year at this power; the rebuilt version is listed separately as rejected (overbore)."
+    },
+    {
+      "id": "z33-zcg-2004-vortech-tuner-jwt-cams-2012-2022",
+      "summary": "2004 350Z Touring 6MT with polished Vortech Tuner Kit, JWT cams, Stillen headers, ART pipes, Bassani exhaust, FMIC, UpRev: 415 whp / 344 lb-ft (2012, text) and 420.13 whp / 349.56 lb-ft (2022 Dynojet sheet, CF STD). Stock baseline of the same car: 233 whp.",
+      "usable": false,
+      "whyNotUsable": "Boost and pulley not stated anywhere, head unit not stated, and the build combines cams + headers + supercharger; not a clean check. Kept for the Vortech maker specs and as a shop-consistency reference (415 in 2012 vs 420 in 2022).",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "Touring",
+        "gearbox": "6MT (CD001 replaced by a new CD009)",
+        "year": "2004"
+      },
+      "engine": "VQ35DE 287 hp version with JWT camshafts",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD (2022 sheet); 2012 not stated",
+        "howKnown": "'CF: STD' printed on the 2022 sheet"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "420.13 hp (STD) at ~6,500 rpm (2022 sheet); 415 hp (2012 text)",
+        "peakWheelTorque": "349.56 lb-ft (STD) (2022); 344 lb-ft (2012 text)",
+        "howRead": "2022 sheet legend; 2012 and 2022 post text"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal)",
+        "howKnown": "not in text or on sheet"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "Vortech Tuner Kit (polished), head unit and pulley not stated",
+        "superchargerSpecs": {
+          "model": "Vortech Tuner Kit for 2003-2006 350Z (head unit on this car not stated by the shop)",
+          "completeKitHeadUnit": "V-2 or V-3 SCi-Trim (Vortech kit pages); manual P/N 2F339-040 'V3 SC-TRIM ASY, CCW, 350Z' (2003-2004), 2F339-050 (Rev-Up)",
+          "completeKitBoost": "7.5-8.5 psi at redline (287 hp engine, claimed 412 hp); 8-9 psi at redline (Rev-Up, claimed 440 hp), 91 octane",
+          "pulleys": "complete V-3 kit: 3.33\" 6-groove S/C pulley with 32-tooth driven jackshaft pulley (2003-2004); 3.12\" S/C pulley with 34-tooth pulley (Rev-Up). Optional 20 mm cog pulleys 28-34 T and 6-rib 2A036-312/-287/-262 listed.",
+          "stepUpRatio": "V-3 internal gear 3.61:1 (V-3 Si page); overall crank-to-impeller ratio not published",
+          "impeller": "V-3 Si-Trim inducer 3.1\" (Si page); SCi-Trim impeller data not found on the current site",
+          "maxImpellerRpm": "52,000 (V-3 Si)",
+          "efficiency": "V-3 Si 78 % peak; SCi-Trim '75% adiabatic efficiency [SAE J1723 standard]'",
+          "compressorMap": "not found",
+          "sources": [
+            "https://vortechsuperchargers.com/products/2003-2006-nissan-350z-supercharging-system",
+            "https://vortechsuperchargers.com/products/2005-2006-nissan-350z-rev-up-supercharging-systems",
+            "https://vortechsuperchargers.com/products/v-3-si-trim-supercharger",
+            "https://cdn.shopify.com/s/files/1/0780/8575/files/4NZ020-010v6.3_NISSAN_350Z_G35_INST._MANUAL.pdf?333"
+          ]
+        },
+        "intercooler": "front-mount (FMIC; make not stated)",
+        "exhaust": "Stillen headers, ART pipes, Bassani exhaust",
+        "intake": "ZCG cold-air intake, GTM MAF",
+        "injectors": "Bosch (size not stated)",
+        "fuelPump": "Aeromotive 340",
+        "ecu": "UpRev (ZCG)",
+        "cams": "JWT (grind not stated)",
+        "internals": "stock",
+        "gearbox": "new CD009 6-speed, JWT HD clutch/flywheel",
+        "other": "GTM oil cooler"
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2012/12/23/performance/worth-waiting-for-craigs-vortech-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'Worth Waiting For: Craig's Vortech 350z', 23 Dec 2012 (parts list)",
+          "kind": "shop page",
+          "quote": "\"Craig got the “works” including a polished Vortech Tuner Kit,  Stillen headers, JWT cams, GTM MAF and oil cooler, Aeromotive 340 fuel pump, Bosch injectors and exhaust upgrades.\" ... \"On the exhaust side we started with Stillen headers, ART pipes and finished with a Bassani exhaust system\" ... \"Here is a closeup of ZCG Cold-Air Intake and FMIC\" ... \"Craig's Z made 415hp/344tq at the wheels\""
+        },
+        {
+          "url": "https://www.zcarblog.com/2022/04/06/maintenance/where-are-they-now-craigs-2004-nissan-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'Where Are They Now: Craig's 2004 Nissan 350Z', 6 Apr 2022",
+          "kind": "shop page",
+          "quote": "\"Craig's 350Z was supercharged almost 12 years ago using a Vortech Tuner Kit with supporting fuel and cooling upgrades.\" ... \"(L) 2022, the Z made 420hp/349tq at the wheels (R) ~2012, the Z made 415hp/344tq at the wheels\" ... owner: \"every time I drive my Le Mans Sunset 2004 Touring model\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2022/03/Craig-K-Z33-Vortech.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Craig-K-Z33-Vortech' (2022, embedded in the 'Where Are They Now' post)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5', 'RunFile_006.drf Max Power = 420.13  Max Torque = 349.56'; power peak ~6,500-6,550 rpm, torque plateau ~345-349 lb-ft 5,500-6,000 rpm; no boost channel."
+        },
+        {
+          "url": "https://vortechsuperchargers.com/products/2003-2006-nissan-350z-supercharging-system",
+          "accessed": "2026-09-30",
+          "title": "Vortech Superchargers, '2003-2006 Nissan 350Z Supercharger Systems' product page",
+          "kind": "shop page",
+          "quote": "\"The complete system will boost your stock 350Z to 412HP (440 HP on the Rev-Up) with 7.5-8.5 PSI from the V-2 or V-3 SCi-Trim supercharger at the factory redline.\" ... \"Industry leading 75% adiabatic efficiency [SAE J1723 standard]\" ... \"20mm S/C Pulleys: 34 Tooth, 32 Tooth, 30 Tooth, 28 Tooth / 20mm Jackshaft Pulleys: 34 Tooth, 32 Tooth / 6-Rib pulleys: 2A036-312, 2A036-287, 2A036-262\" ... \"Vortechs 350Z Supercharger Systems are available as either a complete, fully calibrated bolt-on system, or as Tuner Kits for custom installations up to 500+ HP.\""
+        },
+        {
+          "url": "https://vortechsuperchargers.com/products/2005-2006-nissan-350z-rev-up-supercharging-systems",
+          "accessed": "2026-09-30",
+          "title": "Vortech Superchargers, '2005-2006 Nissan 350Z Rev-Up Supercharger Systems' product page",
+          "kind": "shop page",
+          "quote": "\"Complete systems include all necessary components to boost your 2005-2006 Rev-Up Nissan 350Z to 440HP and 352 lb-ft torque with 8-9 PSI at the factory redline. This includes a timing control box and mechanical fuel management unit for a safe, reliable combination for 91-octane fuel.\" ... \"CARB Executive Order # D-213-27\""
+        },
+        {
+          "url": "https://vortechsuperchargers.com/products/v-3-si-trim-supercharger",
+          "accessed": "2026-09-30",
+          "title": "Vortech Superchargers, 'V-3 Si-Trim Supercharger Head Unit for up to 775 HP Applications'",
+          "kind": "shop page",
+          "quote": "\"Internal Step-Up Ratio: 3.61:1 / Max Speed: 52,000 RPM / Max Boost: 22 PSI / Max Flow: 1,150 CFM / Max Power: 775 HP / Peak Efficiency: 78%\" ... \"Discharge OD: 2.75\" / Inlet OD: 3.5\" / Discharge ID: 2.38\" / Inducer Diameter: 3.1\"\""
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0780/8575/files/4NZ020-010v6.3_NISSAN_350Z_G35_INST._MANUAL.pdf?333",
+          "accessed": "2026-09-30",
+          "title": "Vortech installation manual P/N 4NZ020-010 v6.3 (03MAY19), Nissan 350Z/G35 (linked from the Vortech product pages)",
+          "kind": "article",
+          "quote": "parts list vi (2003-2004 Standard Engine Nissan 350Z, V-3): \"2F339-040 V3 SC-TRIM ASY, CCW, 350Z\", \"2A036-333 S/C PULLEY 3.33\" 6-GROOVE\", \"4GR032-032 PULLEY, 32-TOOTH JKSHFT, DRIVEN\"; parts list x (2005-2006 300HP (Rev-Up) 350Z/G35, V-3): \"2F339-050 V3 SC-TRIM ASY, CCW, 350Z REV-UP\", \"S/C PULLEY 3.12\" 6-GROOVE\", \"PULLEY, 34-TOOTH\"; fuel: FMU 8:1 or 7:1 and a Walbro inline pump; \"Use only premium grade fuel 91 octane or higher (R+M/2).\""
+        }
+      ],
+      "confidence": "Numbers high; build definition incomplete (boost/pulley).",
+      "notes": ""
+    },
+    {
+      "id": "z33-dsport-gtm-tt-built-17psi-480whp",
+      "summary": "Same 2006 350Z rebuilt: Cosworth 95.75 mm forged pistons, Carrillo rods, Cosworth intake manifold, twin GT2860RS at 17 psi, ID1000, Haltech: 480.75 whp @ 6,140 rpm / 435.25 lb-ft @ 5,000 rpm on DSPORT's Dynojet 424xLC2, 91 octane.",
+      "usable": false,
+      "whyNotUsable": "Bored engine (95.75 mm pistons vs 95.5 mm stock, so not stock displacement) plus a non-stock intake manifold and standalone ECU: excluded by rule 1.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2006"
+      },
+      "engine": "VQ35DE Rev-Up, rebuilt with 95.75 mm Cosworth pistons (overbore)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "424xLC2 (DSPORT in-house)",
+        "type": "inertia roller",
+        "mode": "not stated",
+        "where": "DSPORT Magazine in-house dyno"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "480.75 whp @ 6,140 rpm",
+        "peakWheelTorque": "435.25 lb-ft @ 5,000 rpm",
+        "howRead": "magazine text and spec box"
+      },
+      "boost": {
+        "peak": "17 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "spec box (WebFetch extraction)"
+      },
+      "fuel": "91 octane (US AKI)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Magazine, 'Twin-Turbocharged Nissan 350Z', page 2",
+          "kind": "article",
+          "quote": "\"The GTM Motorsports twin-turbo kit centers on a pair of Garrett GT2860RS turbochargers. These turbos rely on GTM cast manifolds ... hard piping feeds the intake charge through a stock throttle body ... a CJ Motorsports fuel return system, 600cc/min injectors and a 255-lph in tank fuel pump fortified the fuel delivery system. To regulate the larger injectors, Spielman chose to reflash the factory ECU using UpRev's Osiris software. In the hands of Church Automotive, the Z was tuned to make 380 horsepower, as measured on a Dynapack Chassis Dyno. While this setup was adequate and enjoyable, the factory internals simply could not handle the cylinder pressure. In less than a year, the stock engine let go\" ... \"He started with a set of Cosworth forged aluminum pistons in a 95.75mm offering.\" ... \"With a tank full of 91-octane, the tables were optimized. The Z spun the rollers of our in-house Dynojet 424xLC2 dynamometer to the tune of 480.75 wheel horsepower and 435.25 lb-ft of torque.\""
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/features/twin-turbocharged-nissan-350z/4/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Magazine, 'Twin-Turbocharged Nissan 350Z', page 4 spec box (read via WebFetch extraction; curl got a bot-verification page)",
+          "kind": "article",
+          "quote": "WebFetch extraction (not verbatim): 'VQ35DE RevUp'; '480.75 whp @ 6,140 RPM' and '435.25 lb-ft @ 5,000 RPM' on 91-octane at 17 psi; twin Garrett GT2860RS with .64 A/R turbine housings; Haltech Platinum Pro and UpRev Osiris; ID1000 injectors, Cosworth rails, Aeromotive 340-lph pump; GTM front-mount intercooler; GTM 3-inch downpipes; Fast Intentions Intimidator exhaust; OS Giken twin-plate clutch and 1.5-way LSD."
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-motoiq-final-intake-mrev2-cams-uprev-2014",
+      "summary": "MotoIQ Project 350Z final NA stage (JWT C2 cams + springs, headers/cats/exhaust, MotorDyne MREV2 manifold, AEM intake, UpRev tune, 7,100 rpm limit): 288 -> 304 whp on a Dynapack hub dyno; about 240 whp on the SuperFlow (peak 'the same').",
+      "usable": false,
+      "whyNotUsable": "Cams plus a replacement intake manifold plus a tune: too far from stock for a clean check. Kept because it shows the same car reading ~304 whp on a Dynapack hub dyno against ~240 whp on the SuperFlow roller (dyno-to-dyno spread of ~25 %).",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "not stated (US-based MotoIQ project car)",
+        "grade": "not stated",
+        "gearbox": "manual (stock clutch replaced with an ACT clutch; 6MT implied)",
+        "year": "not stated (early MAF VQ35DE with the stock 6,600 rpm limiter in a manual car, so a US MY2003-2005 non-Rev-Up 287 hp car; inferred, consistent with the trim table in src/data/cars/nissan-350z-z33.json where MY2005 35th Anniversary and MY2006 6MT cars have the Rev-Up)"
+      },
+      "engine": "VQ35DE early 287 hp version with JWT C2 cams and valve springs",
+      "dyno": {
+        "make": "Dynapack (tuning) and SuperFlow (re-dyno)",
+        "model": "not stated",
+        "type": "hub (Dynapack) / roller (SuperFlow)",
+        "mode": "SuperFlow WinDyn V2.7 STP",
+        "where": "Church Automotive Testing (Dynapack); Technosquare (SuperFlow)"
+      },
+      "correction": {
+        "value": "STP (as printed: 'STP Corrected Wheel Power vs. RPM'; axis labels 'STPPwr, STPTrq')",
+        "howKnown": "printed on the SuperFlow sheets; which SAE/other standard WinDyn's 'STP' follows is not printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "304 whp (Dynapack, after tune; 288 before); SuperFlow ~240 hp read (sheet 04/19/14, run MotoIQ350Z98)",
+        "peakWheelTorque": "277 lb-ft (Dynapack; 263 before)",
+        "howRead": "article text; SuperFlow value read from the 'power to date final' sheet"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/project-350z-ecu-tuning-with-church-automotive-and-uprev/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - ECU Tuning With Church Automotive and UpRev', page 1",
+          "kind": "article",
+          "quote": "\"The Nissan VQ35DE in early 350Z's runs off of a Mass Airflow Meter or MAF.\" ... \"Shawn also increased out rev limit from 6600 rpm to 7100 as we had been annoyingly banging off the rev limiter ever since the JWT cams greatly improved out high RPM breathing.\" ... \"The dyno at Church Automotive Testing is a Dynapack hub dyno.\" ... \"Without a frictional loss due to tires and alignment, Dynapak dynos typically read higher than wheel dynos like the common Dynojet and our super conservative Superflow.\""
+        },
+        {
+          "url": "https://motoiq.com/project-350z-ecu-tuning-with-church-automotive-and-uprev/2/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'Project 350Z - ECU Tuning With Church Automotive and UpRev', page 2",
+          "kind": "article",
+          "quote": "\"On Church's dyno our car gained an impressive amount of power and torque going from 288whp to 304 whp, a gain of 16 hp. Torque increased from 263 lb/ft to 277 lb/ft a gain of 14 lb/ft.\" ... \"For the sake of project car consistency, we redynoed the car on our notoriously stingy Superflow chassis dyno. Our dyno typically reads 10-20 hp less than other dynos in our area.\" ... \"The peak power is the same but the area under the curve is greatly increased\""
+        },
+        {
+          "url": "https://photos.motoiq.com/MotoIQ/Project-Cars/Project-350Z/i-sLd3pvh/0/L/power%20to%20date%20final-L.jpg",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ sheet 'power to date final' (ECU article page 3)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'STP Corrected Wheel Power vs. RPM', runs 'MotoIQ350Z2' (stock) and 'MotoIQ350Z98' (final), footer '04/19/14', 'SuperFlow WinDyn(TM) V2.7'; Z98 peak ~240 hp near 6,700 rpm."
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-zcg-2008-nismo-vortech-491whp-2024",
+      "summary": "2008 Nismo 350Z (VQ35HR, manual) with a Vortech supercharger on ZCG's Dynojet: 491.46 whp / 356.06 lb-ft, CF STD (health-check pull).",
+      "usable": false,
+      "whyNotUsable": "Supercharger model, pulley, boost, fuel system and any internal/cam changes are not documented in the post; cannot define the build.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "Nismo 350Z (#1508)",
+        "gearbox": "manual (owner 'wanted a manual car')",
+        "year": "2008"
+      },
+      "engine": "VQ35HR (internals not stated)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "'CF: STD' printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "491.46 hp (STD) at ~7,450 rpm (read)",
+        "peakWheelTorque": "356.06 lb-ft (STD) near 6,800 rpm (read)",
+        "howRead": "sheet legend"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal supercharger)",
+        "howKnown": "not in the source"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2024/03/25/performance/kevins-2008-nismo-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'Kevin's 2008 Nismo 350Z', 25 Mar 2024",
+          "kind": "shop page",
+          "quote": "\"We put the Z on our dyno for a health check, making a stout 491hp/356tq to the wheels\" (section heading 'Vortech Power'); \"The Tomei titanum exhaust was replaced at Kevin's request with a custom built Soho system.\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2024/03/Kevin-E-Z33-1024x772.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'Kevin-E-Z33'",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5', 'RunFile_003.drf Max Power = 491.46  Max Torque = 356.06'."
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-zcg-hr-boltons-sae-2008",
+      "summary": "Z Car Garage 2008 VQ35HR bolt-on test (Bassani cat-back with X-pipe, Stillen high-flow cats, Injen dual-filter intake): graphs 'SAE corrected'; 'over 300hp to the rear tires' uncorrected.",
+      "usable": false,
+      "whyNotUsable": "The dyno graphs (hr1-hr4 images) now return 404 and web.archive.org is unreachable from here; the text gives no SAE figure.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated (VQ35HR, 2007-2008)"
+      },
+      "engine": "VQ35HR",
+      "dyno": {
+        "make": "Dynojet (inferred, not printed for this run)",
+        "model": "not stated",
+        "type": "inertia roller (inferred)",
+        "mode": "not stated",
+        "where": "Z Car Garage, San Jose, CA, USA"
+      },
+      "correction": {
+        "value": "SAE (graphs; uncorrected figure quoted in text)",
+        "howKnown": "text"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "not recoverable ('over 300hp' uncorrected, per text)",
+        "peakWheelTorque": "not recoverable",
+        "howRead": "text only"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2008/11/26/performance/350z-vq35hr-upgrades-and-dyno-figures.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, '350Z VQ35HR Upgrades and Dyno Figures by ZCG', 26 Nov 2008",
+          "kind": "shop page",
+          "quote": "\"In uncorrected form this car put down over 300hp to the rear tires, WITH ONLY A FEW BOLT ONS!!  All of the dyno graphs listed here are SAE corrected to even things out.\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-sportz-plenum-shootout-stock-287",
+      "summary": "Sport Z Magazine 'Plenum Mod Shoot Out' on a 'fully stock 287HP 350Z' (re-plotted by Motordyne): stock ~253 hp / ~254 lb-ft peak, plenum mods up to ~265 hp.",
+      "usable": false,
+      "whyNotUsable": "Dyno make and correction not stated; Motordyne itself notes 'even if the absolute values aren't correct, the deltas are'. The stock values are also implausibly high for a roller dyno.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated (287 hp)"
+      },
+      "engine": "VQ35DE 287 hp",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "~253 hp at ~6,200 rpm (stock, read; unclear if wheel)",
+        "peakWheelTorque": "~254 lb-ft (read)",
+        "howRead": "read from Motordyne's re-plot"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://motordyneengineering.com/dynos-2/",
+          "accessed": "2026-09-30",
+          "title": "MOTORDYNE Engineering, 'Dynos' page (Plenum Spacer Shootout chart 'fullcomparisonpng.png')",
+          "kind": "shop page",
+          "quote": "read from image: 'Sport Z Magazines \"Plenum Mod Shoot Out\" / All runs performed on ScHel's fully stock 287HP 350Z / Same Car. Same Day. Same Dyno. Same Coolant Temp. ECU reset upon installation of each differential mod'"
+        },
+        {
+          "url": "https://motordyneengineering.com/plenum-spacer/",
+          "accessed": "2026-09-30",
+          "title": "MOTORDYNE Engineering, 'Plenum Spacer' page",
+          "kind": "shop page",
+          "quote": "\"So even if the absolute values aren't correct, the deltas are.\" ... \"*Values courtesy of Sport Z Magazine*\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-uk-2003-weston-dd-shootout-flywheel-2009",
+      "summary": "UK forum: 2003 VQ35DE with filter, spacer, modified lower plenum, ESR Y-pipe, HFCs, Japspeed K1 exhaust, Nismo R-tune ECU on a Dyno Dynamics (Weston Performance, shootout mode): 'Max 303.5 HP'.",
+      "usable": false,
+      "whyNotUsable": "Only a calculated/flywheel-style maximum is shown (axis 'S_HP', value far above plausible wheel power); no wheel figure given.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "UK",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2003"
+      },
+      "engine": "VQ35DE",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "roller",
+        "mode": "'Dyno Dynamics Standard ShootOut graph', CF:SHOOT_6",
+        "where": "Weston Performance, UK"
+      },
+      "correction": {
+        "value": "Dyno Dynamics shootout (CF:SHOOT_6)",
+        "howKnown": "printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "not given (sheet max 303.5 'HP', flywheel-type figure)",
+        "peakWheelTorque": "not given",
+        "howRead": "sheet image"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "http://i18.photobucket.com/albums/b121/IanS16/iandyno1-1.jpg",
+          "accessed": "2026-09-30",
+          "title": "Sheet posted by member IanS16, 27 Jun 2009, in https://www.350z-uk.com/topic/23450-dyno-results-info-thread/",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER', 'Weston Performance', 'Descript.: 350z vq35de', 'Date: 27-06-2009', 'Max 303.5 HP', '* Dyno Dynamics Standard ShootOut graph ***', 'BP:100.0 RH:79 AT:20 IT:23 RR:013 TN:4.748', 'CF:SHOOT_6 TyrePres: std Gear: 4' (photobucket watermark over the plot)"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-onpoint-vq35hr-37-stroker",
+      "summary": "OnPoint Dyno's 350Z (MotoIQ): junkyard VQ35HR with a 370Z crank (3.7 L), JWT 96 mm pistons and cams, Jenvey ITBs: 418 whp.",
+      "usable": false,
+      "whyNotUsable": "Stroked and bored engine (3.7 L): excluded by rule 1.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "VQ35HR stroked to 3.7 L",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "OnPoint Dyno"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "418 whp (53.5 mm ITBs)",
+        "peakWheelTorque": "not recorded",
+        "howRead": "article text (WebFetch extraction)"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://motoiq.com/onpoint-dynos-350z/",
+          "accessed": "2026-09-30",
+          "title": "MotoIQ, 'OnPoint Dyno's 350Z'",
+          "kind": "article",
+          "quote": "\"The engine is a VQ35HR that came from a junkyard. The stock crankshaft was replaced with a 370Z crank which upped the displacement to 3.7 litres.\" (WebFetch extraction)"
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-nonstoptuning-pulley-g35-not-z33",
+      "summary": "NonStopTuning underdrive pulley test on a stock G35 (VQ35DE) on the Carboy Racing Dynojet, Houston: max gain 5 whp.",
+      "usable": false,
+      "whyNotUsable": "Infiniti G35 chassis, not a 350Z (only Z33 chassis builds count).",
+      "vehicle": {
+        "chassis": "V35 (Infiniti G35), not Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "VQ35DE",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated",
+        "type": "inertia roller",
+        "mode": "not stated",
+        "where": "Carboy Racing, Houston, Texas"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "not recorded",
+        "peakWheelTorque": "not recorded",
+        "howRead": "n/a"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.nonstoptuning.co/blog/nonstoptuning-infiniti-g35-nissan-350z-pulley-kit-dyno-testing",
+          "accessed": "2026-09-30",
+          "title": "NonStopTuning blog, 'NonStopTuning Infiniti G35 (Nissan 350Z) Pulley Kit Dyno Testing'",
+          "kind": "shop page",
+          "quote": "\"Jessica's G35 came to us as a completely stock car\" ... \"All before and after dynos were performed on the Carboy Racing Dynojet in Houston, Texas.\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-zcg-vortech-built-engine-track-2020",
+      "summary": "ZCG track 350Z: 2012 Vortech install, factory engine failed 2017; rebuilt engine with forged pistons/rods, HR top end parts, JWT C8 cams, Vortech Si wheel, EV14 1000cc: 455-480 whp on 91 octane.",
+      "usable": false,
+      "whyNotUsable": "Rebuilt engine with forged internals and JWT cams; boost not stated.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "VQ35 rebuilt (forged internals, HR top-end parts, JWT C8 cams)",
+      "dyno": {
+        "make": "Dynojet (inferred, not printed for this run)",
+        "model": "not stated",
+        "type": "inertia roller (inferred)",
+        "mode": "not stated",
+        "where": "Z Car Garage, San Jose, CA, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "455 whp (newest 91-octane tune on the plot; text also says '480hp/390tq at the wheels on a conservative track tune'); previous tune 368 whp",
+        "peakWheelTorque": "365 lb-ft (plot) / 390 (text)",
+        "howRead": "post text"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal supercharger)",
+        "howKnown": "not in the source"
+      },
+      "fuel": "91 octane (stated)",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2020/07/13/performance/for-the-track-dans-supercharged-nissan-350z.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'For The Track: Dan's Supercharged Nissan 350z', 13 Jul 2020",
+          "kind": "shop page",
+          "quote": "\"At the heart of the new build was a Rebello VQ with HR top end and internals including forged pistons and rods ... JWT C8 cams and JWT HD valve springs\" ... \"The Z is now making 480hp/390tq at the wheels on a conservative track tune to keep heat low. The dyno plots show the previous 91 octane tune (368hp/333tq) and newest 91 octane tune (455hp/365tq)\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-zcg-2003-uprev-mods-unlisted-2020",
+      "summary": "ZCG 2003 350Z UpRev tune: 240.77 -> 256.77 whp, 241.54 -> 257.97 lb-ft, Dynojet CF STD.",
+      "usable": false,
+      "whyNotUsable": "The car's mods are not listed, so the build cannot be defined (the baseline may or may not be stock).",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "US",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2003"
+      },
+      "engine": "VQ35DE 287 hp version",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not printed (sheet header reads 'DYNOJET RESEARCH', WinPEP-style RunFile_xxx.drf legend)",
+        "type": "inertia roller",
+        "mode": "WinPEP print, Smoothing: 5",
+        "where": "Z Car Garage, 140 Archer St, San Jose, CA 95112, USA"
+      },
+      "correction": {
+        "value": "STD",
+        "howKnown": "'CF: STD' printed"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "240.77 hp before / 256.77 hp after (STD)",
+        "peakWheelTorque": "241.54 / 257.97 lb-ft (STD)",
+        "howRead": "sheet legend"
+      },
+      "boost": {
+        "peak": "n/a",
+        "atPeakPower": "n/a",
+        "fullBoostRpm": "n/a",
+        "howKnown": "n/a"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.zcarblog.com/2020/06/10/performance/tuning-350z-and-370z-on-the-dyno.html",
+          "accessed": "2026-09-30",
+          "title": "Z Car Blog, 'TUNING: UPREV and EcuTek Dyno Tuning For Your Z/G', 10 Jun 2020",
+          "kind": "shop page",
+          "quote": "\"James visited ZCG for an UPREV tune on his 2003 350z.\" ... \"The Z responded really well to the dyno tuning session, making 256hp/257tq at the wheels.\""
+        },
+        {
+          "url": "http://www.zcarblog.com/wp-content/uploads/2020/06/James-B-Z33-Baseline-to-Final-UPREV.jpg",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 'James-B-Z33-Baseline-to-Final-UPREV'",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNOJET RESEARCH', 'CF: STD  Smoothing: 5', 'RunFile_001.drf Max Power = 240.77  Max Torque = 241.54', 'RunFile_007.drf Max Power = 256.77  Max Torque = 257.97'."
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-uk-2003-aps-tt-built-dynapack-2011",
+      "summary": "UK forum: '2003 body 2006 engine' with 8.8:1 Wiseco pistons (block honed), Eagle rods, SSV manifold and APS twin turbo ('baby APS .8 bar'): 451 bhp at the hubs on a Dynapack (TDP.ie).",
+      "usable": false,
+      "whyNotUsable": "Engine swapped (2006 engine in a 2003 body) and rebuilt with non-stock pistons and a different intake manifold; hub dyno.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "Ireland/UK",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "2003 (engine from a 2006)"
+      },
+      "engine": "VQ35DE (2006) rebuilt, 8.8:1 CR",
+      "dyno": {
+        "make": "Dynapack",
+        "model": "not stated",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "TDP.ie, Ireland"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "451 bhp (hub)",
+        "peakWheelTorque": "507.9 (unit/location not stated)",
+        "howRead": "forum text"
+      },
+      "boost": {
+        "peak": "0.8 bar (stated as the kit type 'baby APS .8 bar')",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "forum text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/page/3/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', page 3, post of 25 Aug 2011",
+          "kind": "thread",
+          "quote": "\"Model: 2003 body 2006 engine Mods: AEM pulleys, SSV intake manifold, clutch and flywheel Engine:8.8:1 compression Wiseco Pistons and Rings (block honed to suit) Eagle H-beam con-rods and pins ... APS TT (baby APS .8 bar) Dyno: Dynapack/www.tdp.ie BHP: 451 / 496 Torque: 507.9\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    },
+    {
+      "id": "z33-uk-2004-vortech-v2-hub-2014",
+      "summary": "UK forum: '54 UK GT DE with Vortech V2, Vortech FMIC, Kinetix SSV manifold, 600cc injectors, Walbro 255, true-dual exhaust, decats: 401.1 bhp at the hubs (Abbey Motorsport hub dyno).",
+      "usable": false,
+      "whyNotUsable": "Boost and pulley not stated, non-stock intake manifold, hub dyno, sheet images on photobucket not viewable.",
+      "vehicle": {
+        "chassis": "Z33",
+        "market": "UK",
+        "grade": "GT",
+        "gearbox": "not stated",
+        "year": "2004"
+      },
+      "engine": "VQ35DE (UK 280 PS)",
+      "dyno": {
+        "make": "not stated (hub dyno; Abbey Motorsport's is a Dynapack per other posts in the thread)",
+        "model": "not stated",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "Abbey Motorsport, UK"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not printed/stated"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": ""
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "401.1 bhp at the hubs",
+        "peakWheelTorque": "336 lb-ft",
+        "howRead": "forum text"
+      },
+      "boost": {
+        "peak": "not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "n/a (centrifugal supercharger)",
+        "howKnown": "not in the source"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "none",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "none",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock",
+        "internals": "stock",
+        "gearbox": "stock",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.350z-uk.com/topic/23450-dyno-results-info-thread/page/5/",
+          "accessed": "2026-09-30",
+          "title": "350Z & 370Z UK forum, 'Dyno results info thread', page 5, post of 2 Apr 2014",
+          "kind": "thread",
+          "quote": "\"Model: '54 UK GT DE Engine Mods: Vortech V2 Centrifugal Supercharger, Polished, Vortech Front mount Intercooler Maxflow racing bypass valve Kinetix SSV Inlet Manifold Walbro 255 Fuel Pump AEM 'Basic' Return Fuel System Deatschwerks Injectors 600cc Invidia G200 true dual exhaust Japspeed Decats ... Dyno: Abbey Motorsport Hub Dyno Power: 401.1 BHP @ Hubs (Approx 442 BHP @Flywheel) Torque: 336 lbft Torque\""
+        }
+      ],
+      "confidence": "",
+      "notes": ""
+    }
+  ],
+  "gates": [
+    "RULE-13 GATE: https://www.350z-tech.com/threads/03-stock-z-dyno.53684/ answered '307 Temporary Redirect' to https://tollbit.350z-tech.com/threads/03-stock-z-dyno.53684/ (TollBit = paid access for AI agents, i.e. a paywall). Not followed. Treated every 350z-tech.com thread as gated (e.g. '03 stock z dyno', 'Dyno # on dynojet, stock car vs stock w ground kit', 'APS PLENUM DYNO RESULTS', 'Greddy Twin turbo kit with TS Greddy Flash dyno', 'Vortech Super Charger Dyno').",
+    "Access blocks, not terms gates (listed for completeness, none bypassed): my350z.com and g35driver.com return Cloudflare 'error code: 1005' (network banned) to curl and 403 to WebFetch; forums.nicoclub.com shows a Cloudflare 'Attention Required' captcha; www.nissanforums.com serves a proof-of-work bot challenge with a headless check; www.zdriver.com and www.rx8club.com return 403; www.vwvortex.com, www.zcar.com, www.digitalcorvettes.com and www.srtforums.com return 202 JS challenge pages; www.procharger.com shows Cloudflare 'Just a moment...' (WebFetch 403); www.knfilters.com 403; www.lextreme.com and www.trinituner.com 403; h-dev.co.uk returns an empty JS shell; speedforceracing.net has an expired TLS certificate (TLS checks not bypassed; WebFetch 503); aamcompetition.com (N-7936 350Z UpRev article) now serves an unrelated gambling page.",
+    "Not attempted: motortrend.com (hosts the Super Street / Modified / Sport Compact Car / Import Tuner / Turbo archives). The search tool reports it is not accessible to Anthropic's user agent, i.e. the site blocks our crawler, so it was not fetched by other means.",
+    "Disclosure: motoiq.com pages show a JS 'One moment, please...' page to curl, and dsportmag.com page 4 and tag pages showed 'Please wait while your request is being verified...', so those pages were read with WebFetch instead (it received the normal page). photos.motoiq.com answered 'Bad bot' to a bare curl, and its dyno-sheet images were then downloaded with the article page as Referer (what a browser sends). No login, terms or payment was involved. Flagging it so the owner can decide whether that is acceptable.",
+    "web.archive.org: connections reset from this network (and WebFetch cannot fetch it), so archived copies of dead images could not be used."
+  ],
+  "notFound": [
+    "A stock 2005-2006 Rev-Up (300 hp) 350Z on a Dynojet with a visible sheet. Only a UK Dyno Dynamics text entry for a lightly modded Rev-Up was found.",
+    "A stock US VQ35HR on a Dynojet with a visible sheet that explicitly says 'stock'. Found: a 2015 HR baseline in text only (271 whp; sheet 404), a 2008 Nismo baseline 295.07 STD and a 2008 base-model baseline 286.07 STD (stock state not stated), and a stock UK HR on a Dastek (text only).",
+    "Any twin-turbo kit build (APS, GReddy, Stillen, JWT, GTM) on a stock engine with a visible sheet, a named dyno and a stated boost. The forum threads that likely hold them (my350z, g35driver, 350z-tech) are blocked or gated; DSPORT's GTM car gives 380 hp (Dynapack) without boost; the ZCG APS car ('400hp/400tq') has no sheet or boost.",
+    "The dyno make for Turbo Magazine's Turbonetics test (365.6 whp at 8 psi); only a 222x167 sheet thumbnail survives on a third-party copy.",
+    "Boost, pulley and head-unit data for the Stillen 2007-2008 VQ35HR supercharger kit (not on the Stillen blog or the Vortech listing page).",
+    "Vortech V-3 SCi-Trim head-unit spec page (the unit in the complete 350Z kits); only the V-3 Si-Trim page exists now. No Vortech compressor map found.",
+    "ProCharger 350Z kit specs (P-1SC / D-1SC, pulley, boost): procharger.com blocked. Novi/Paxton 1000 350Z build: not found.",
+    "GReddy 350Z twin-turbo maker specs and a dyno build: not found in open sources (GReddy tech-support page not checked after the web-search budget ran out).",
+    "The CARB executive orders D-213-22 and D-213-27 (Vortech 350Z kits): arb.ca.gov returned a script page instead of the PDF.",
+    "MotoIQ Project 350Z model year (not stated in any article read).",
+    "Older Z Car Garage dyno images (2008-2015 posts, e.g. the 2012 stock/Vortech sheet and the 2015 HR sheets) now return 404.",
+    "Magazine stock-car dyno tests (Super Street, Modified, SCC, Car and Driver, Road & Track, Motor Trend): not reachable (motortrend.com blocked for our tools) and the web-search budget for this session ran out (200/200) partway through, so later leads came only from links on pages already open."
+  ]
+}

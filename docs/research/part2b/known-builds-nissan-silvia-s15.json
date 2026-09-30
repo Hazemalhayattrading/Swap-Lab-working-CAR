@@ -1,0 +1,1918 @@
+{
+  "car": "nissan-silvia-s15",
+  "researchedOn": "2026-09-30",
+  "builds": [
+    {
+      "id": "s15-dsport-stock-dynojet248c-2007",
+      "summary": "DSPORT's 2001 JDM Silvia S15, completely stock (boost crept from the 9 psi stock level to about 12 psi), baseline on a Dynojet 248C: 206.47 whp / 191.78 lb-ft.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series (fully stock for this run)",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "248C",
+        "type": "inertia roller (the 248C is Dynojet's inertia model; the article itself does not say)",
+        "mode": "not stated",
+        "where": "MD Automotive, Westminster, California, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "The article gives no correction and no Dynojet sheet is published online. (The #57 image file named 'BaselineDyno' is the DTS 'stock final' run, not this Dynojet run.)"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the article"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "206.47 whp (rpm not stated) [= 154.0 kW, converted here]",
+        "peakWheelTorque": "191.78 lb-ft (rpm not stated) [= 260.0 Nm, converted here]",
+        "howRead": "article text (DSPORT #57 page 2)"
+      },
+      "boost": {
+        "peak": "about 12 psi (0.83 bar): DSPORT says boost crept 'from 9psi up to 12psi' on this baseline",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article text (#57 page 3); nominal stock boost given as '9psi (0.65bar)' on page 2"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock side-mount",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "stock (448 cc/min per DSPORT)",
+        "fuelPump": "stock",
+        "ecu": "stock",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "none (baseline before the Round One parts)"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer. The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque.' ... '200.0 WHP 189.4 LB-FT TQ' ... 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first. Baseline power was measured at 200whp. After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' '211.8 WHP 205.2 LB-FT TQ' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.' '232.6 WHP 215.7 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 3, The Bottom Line)",
+          "kind": "article",
+          "quote": "'We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi. This 3psi difference made the baseline horsepower figures a little higher than they probably should have been.' Table: 'BASELINE 200.0 / TEST 1 PFC, PUMP, INJECTORS 211.1 / TEST 2 TANABE EXHAUST 216.2 / TEST 3 TANABE DOWNPIPE 232.6'."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        }
+      ],
+      "confidence": "Sure of: dyno make/model, shop, the two peak numbers and that the car was stock. Not sure of: correction standard (not stated), gear, rpm of the peaks, weather, and the exact boost curve (only 'crept from 9 to 12 psi' is stated). Gearbox is inferred as manual.",
+      "notes": "Best stock baseline found, but model it at about 12 psi (creep), not 9 psi. DSPORT itself says the creep made this baseline 'a little higher than [it] probably should have been'. Same car as the next six DSPORT entries."
+    },
+    {
+      "id": "s15-dsport-pfc-9psi-dts-2007",
+      "summary": "Same DSPORT S15 with Power FC (speed density), 850 cc injectors and N1 pump, tuned at the stock 9 psi, otherwise stock: 200.0 whp @ 6,884 rpm, uncorrected, on XS Engineering's DTS AWD dyno.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series",
+      "dyno": {
+        "make": "DTS (Dynamic Test Systems; sheet logo reads 'DYNAMIC DYNAMOMETERS', dyno console in the photo reads 'DYNAMIC TEST SYSTEMS')",
+        "model": "AWD (article: 'their DTS AWD dynamometer')",
+        "type": "roller (absorber type and test mode not printed)",
+        "mode": "not stated",
+        "where": "XS Engineering, Garden Grove, California, USA"
+      },
+      "correction": {
+        "value": "none (uncorrected)",
+        "howKnown": "sheet prints 'CORRECTION FACTOR APPLIED: NONE'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "sheet shows only the run date 'Jun 27, 2007 02:37'"
+      },
+      "gear": "4th ('Gear 4' printed; S15 6MT 4th = 1.213 per the project's gearbox data)",
+      "result": {
+        "peakWheelPower": "200.0 hp @ 6,884 rpm, uncorrected [= 149.1 kW]",
+        "peakWheelTorque": "189.4 lb-ft (article box; rpm and correction not stated) [= 256.8 Nm]",
+        "howRead": "power read off the DTS sheet ('Max Power 200.0 hp @ 6884 RPM', 'POWER AT: WHEEL/S'); torque from the article text"
+      },
+      "boost": {
+        "peak": "9 psi (0.65 bar)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article: 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first. Baseline power was measured at 200whp.'"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock side-mount",
+        "exhaust": "stock",
+        "intake": "stock",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer. The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque.' ... '200.0 WHP 189.4 LB-FT TQ' ... 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first. Baseline power was measured at 200whp. After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' '211.8 WHP 205.2 LB-FT TQ' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.' '232.6 WHP 215.7 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/057-006-TestTune-SilviaS15-BaselineDyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57 dyno chart (file named 'BaselineDyno', but it is the XS Engineering DTS 'stock final' run, not the Dynojet baseline)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: WHEEL/S' / 'CORRECTION FACTOR APPLIED: NONE' / XS Engineering and 'DYNAMIC DYNAMOMETERS' logos / 'Max Power 200.0 hp @ 6884 RPM' / legend 'A008022L Dsport S15  stock final  Gear 4 Jun 27, 2007 02:37'."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/057-005-TestTune-SilviaS15-Dyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57 photo of the S15 on the dyno",
+          "kind": "article",
+          "quote": "read from image: the car sits on roller dyno drums; the console behind it reads 'DYNAMIC TEST SYSTEMS'."
+        }
+      ],
+      "confidence": "Sure of: 200.0 hp @ 6,884 rpm, uncorrected, 4th gear, DTS at XS Engineering. Fairly sure (from the text and the sheet label 'stock final') that the Power FC, injectors and pump were already fitted and tuned at 9 psi. Not printed: weather.",
+      "notes": "Useful as a stock-hardware point at a known 9 psi, roughly 6 whp below the stock Dynojet baseline that had crept to 12 psi. DSPORT's table labels the next step 'TEST 1 PFC, PUMP, INJECTORS 211.1' but the sheet reads 211.8 hp @ 5,712 rpm ('0.8kg final', uncorrected, boost raised to 12 psi only)."
+    },
+    {
+      "id": "s15-dsport-12psi-turboback-dts-2007",
+      "summary": "DSPORT S15 on the stock GT28R at 12 psi (0.85 bar) with Power FC, 850 cc, N1 pump and Tanabe 80 mm downpipe + cat-back (stock cat kept): 232.6 whp uncorrected = 237.1 whp SAE J1349, both @ 6,888 rpm, DTS.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series",
+      "dyno": {
+        "make": "DTS (Dynamic Test Systems; sheet logo reads 'DYNAMIC DYNAMOMETERS', dyno console in the photo reads 'DYNAMIC TEST SYSTEMS')",
+        "model": "AWD (article: 'their DTS AWD dynamometer')",
+        "type": "roller (absorber type and test mode not printed)",
+        "mode": "not stated",
+        "where": "XS Engineering, Garden Grove, California, USA"
+      },
+      "correction": {
+        "value": "Same run printed twice: uncorrected 232.6 hp and SAE J1349 237.1 hp (factor about 1.019)",
+        "howKnown": "#57 sheet: 'CORRECTION FACTOR APPLIED: NONE' with 'Max Power 232.6 hp @ 6888 RPM' (run A008043L 'down pipe 0.85kg'); #58 sheet: 'CORRECTION FACTOR APPLIED: SAE J1349' with the same run A008043L at 'Max Power 237.1 hp @ 6888 RPM'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "run date 'Jun 27, 2007 06:12' printed"
+      },
+      "gear": "4th ('Gear 4' printed)",
+      "result": {
+        "peakWheelPower": "232.6 hp @ 6,888 rpm uncorrected; 237.1 hp @ 6,888 rpm SAE J1349 (same run) [173.4 / 176.8 kW]",
+        "peakWheelTorque": "215.7 lb-ft (article box; rpm and correction not stated) [= 292.4 Nm]",
+        "howRead": "read off the two DTS sheets; torque from the article text"
+      },
+      "boost": {
+        "peak": "12 psi (0.85 bar)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article: 'After increasing the boost to 12psi (0.85bar)'; sheet run label 'down pipe 0.85kg'"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock side-mount",
+        "exhaust": "Tanabe Medalion Concept G Blue (S14 version, p/n T90011), 304 stainless, 80 mm: downpipe + cat-back (no pre-silencer). Stock catalytic converter and stock turbine-outlet / O2 housing still fitted.",
+        "intake": "stock airbox and intake pipe (the now unused MAF housing stayed in until #58)",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer. The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque.' ... '200.0 WHP 189.4 LB-FT TQ' ... 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first. Baseline power was measured at 200whp. After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' '211.8 WHP 205.2 LB-FT TQ' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.' '232.6 WHP 215.7 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/057-011-TestTune-SilviaS15-DynoTest3.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57 DTS chart, Test 3",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: WHEEL/S' / 'CORRECTION FACTOR APPLIED: NONE'; 'Max Power 216.2 hp @ 6461 RPM' (tanabe final) and 'Max Power 232.6 hp @ 6888 RPM' (legend 'A008043L Dsport S15  down pipe 0.85kg  Gear 4 Jun 27, 2007 06:12')."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/058-004-TnT-SilviaS15_Dyno1.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58 DTS chart, Test 1 (intercooler)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: WHEEL/S' / 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 237.1 hp @ 6888 RPM' (legend 'A008043L Dsport S15  down pipe 0.85kg  Gear 4 Jun 27, 2007 06:12', i.e. the same run printed as 232.6 hp uncorrected in #57) and 'Max Power 261.7 hp @ 6689 RPM' (legend 'A008136L DSport S15  fmic final  Gear 4 Jul 14, 2007 02:55')."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/057-011-TestTune-SilviaS15-DynoTest2.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57 DTS chart, Test 2",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'CORRECTION FACTOR APPLIED: NONE'; 'Max Power 216.2 hp @ 6461 RPM' (legend 'A008033L Dsport S15  tanabe final  Gear 4 Jun 27, 2007 05:00')."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/057-010-TestTune-SilviaS15-DynoTest1.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #57 DTS chart, Test 1",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'CORRECTION FACTOR APPLIED: NONE'; 'Max Power 200.0 hp @ 6884 RPM' (stock final) and 'Max Power 211.8 hp @ 5712 RPM' (legend 'A008029L Dsport S15  0.8kg final  Gear 4 Jun 27, 2007 03:19')."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 3, The Bottom Line)",
+          "kind": "article",
+          "quote": "'We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi. This 3psi difference made the baseline horsepower figures a little higher than they probably should have been.' Table: 'BASELINE 200.0 / TEST 1 PFC, PUMP, INJECTORS 211.1 / TEST 2 TANABE EXHAUST 216.2 / TEST 3 TANABE DOWNPIPE 232.6'."
+        }
+      ],
+      "confidence": "Sure of: power figures, correction for each print, gear, parts and boost setting. Not stated: weather, torque rpm.",
+      "notes": "Intermediate steps on the same day, uncorrected: 12 psi with stock exhaust 211.8 hp @ 5,712 rpm; + cat-back 216.2 hp @ 6,461 rpm; + downpipe 232.6 hp @ 6,888 rpm. Use the SAE J1349 print (237.1) if the model reports SAE-corrected power."
+    },
+    {
+      "id": "s15-dsport-12psi-turboback-dynojet248c-2007",
+      "summary": "Same state as the previous entry (stock GT28R, 12 psi, Power FC, turbo-back with cat), re-run on the Dynojet 248C: 230.34 whp / 230.35 lb-ft.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "248C",
+        "type": "inertia roller (the 248C is Dynojet's inertia model; the article itself does not say)",
+        "mode": "not stated",
+        "where": "MD Automotive, Westminster, California, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "article text only; no Dynojet sheet published"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the article"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "230.34 whp (rpm not stated) [= 171.8 kW]",
+        "peakWheelTorque": "230.35 lb-ft (rpm not stated) [= 312.3 Nm]",
+        "howRead": "article text (#57 page 3)"
+      },
+      "boost": {
+        "peak": "12 psi (0.85 bar), the tune set at XS Engineering",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "inferred: these are the 'final pulls' after the #57 session tuned at 12 psi; the Dynojet boost itself is not reported"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "stock side-mount",
+        "exhaust": "Tanabe Medalion Concept G Blue (S14 version, p/n T90011), 304 stainless, 80 mm: downpipe + cat-back (no pre-silencer). Stock catalytic converter and stock turbine-outlet / O2 housing still fitted.",
+        "intake": "stock airbox and intake pipe (the now unused MAF housing stayed in until #58)",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 3, The Bottom Line)",
+          "kind": "article",
+          "quote": "'We took the Silvia back to MD Automotive to make final pulls on the Dynojet. Once strapped onto the Dynojet, the Silvia made 230.34 horsepower and 230.35 lb-ft of torque. Although horsepower figures were expected to be higher, closer examination of the baseline boost curve showed boost-creep that actually took the stock boost levels from 9psi up to 12psi. This 3psi difference made the baseline horsepower figures a little higher than they probably should have been.' Table: 'BASELINE 200.0 / TEST 1 PFC, PUMP, INJECTORS 211.1 / TEST 2 TANABE EXHAUST 216.2 / TEST 3 TANABE DOWNPIPE 232.6'."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures at XS Engineering will be measured on their DTS AWD dynamometer. The S15 was baselined at MD Automotive, in Westminster, CA. Strapped to the Dynojet 248C, the S15 generated 206.47 wheel horsepower and 191.78 lb-ft torque.' ... '200.0 WHP 189.4 LB-FT TQ' ... 'Koji tuned the S15 at stock boost levels 9psi (0.65bar) first. Baseline power was measured at 200whp. After increasing the boost to 12psi (0.85bar), gains were realized across the entire RPM range, with peak horsepower registering in at 211.8whp.' '211.8 WHP 205.2 LB-FT TQ' ... cat-back: 'This exhaust features 80mm piping' ... '216.2 WHP 210.7 LB-FT TQ' ... downpipe: 'Also constructed from 80mm piping ... Peak horsepower was reported at 232.6, which brings the total gains to 32.6 on the DTS Dynamometer.' '232.6 WHP 215.7 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        }
+      ],
+      "confidence": "Sure of the numbers and dyno. Not sure of correction, gear, rpm, weather, or that boost was exactly 12 psi on this dyno.",
+      "notes": "Pairs with the stock Dynojet baseline (206.47 whp) for a same-dyno delta of +23.9 whp."
+    },
+    {
+      "id": "s15-dsport-18psi-fmic-dts-2007",
+      "summary": "DSPORT S15 on the stock GT28R at 18 psi (1.25 bar) with Blitz LM FMIC, A'PEXi Super Suction, full 80 mm turbo-back without cat, Power FC, 850 cc: 268.9 whp @ 6,768 rpm, SAE J1349, DTS.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series",
+      "dyno": {
+        "make": "DTS (Dynamic Test Systems; sheet logo reads 'DYNAMIC DYNAMOMETERS', dyno console in the photo reads 'DYNAMIC TEST SYSTEMS')",
+        "model": "AWD (article: 'their DTS AWD dynamometer')",
+        "type": "roller (absorber type and test mode not printed)",
+        "mode": "not stated",
+        "where": "XS Engineering, Garden Grove, California, USA"
+      },
+      "correction": {
+        "value": "SAE J1349",
+        "howKnown": "sheet prints 'CORRECTION FACTOR APPLIED: SAE J1349' and 'POWER AT: WHEEL/S'"
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "run date 'Jul 14, 2007 05:18' printed"
+      },
+      "gear": "4th ('Gear 4' printed)",
+      "result": {
+        "peakWheelPower": "268.9 hp @ 6,768 rpm, SAE J1349 [= 200.5 kW]",
+        "peakWheelTorque": "261.5 lb-ft (article; rpm not stated) [= 354.5 Nm]",
+        "howRead": "power read off the DTS sheet ('Max Power 268.9 hp @ 6768 RPM', run 'cat delete final'); torque from the article"
+      },
+      "boost": {
+        "peak": "18 psi (1.25 bar)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article: 'the boost was safely increased to 18psi (1.25bar)' and 'with the boost set to 18psi'"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Blitz LM front-mount (p/n 12333) with Blitz hot pipe and Super Sound Dual-Drive blow-off valve (p/n 70023)",
+        "exhaust": "Tanabe Medalion Concept G Blue 80 mm turbo-back: downpipe + cat-delete pipe + cat-back (no catalytic converter). Stock turbine-outlet / O2 housing still fitted (DSPORT planned to test a Tomei O2-housing later).",
+        "intake": "A'PEXi Super Suction kit (p/n 538-N021), MAF sensor removed (speed density)",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP (page 1)",
+          "kind": "article",
+          "quote": "'The Blitz LM intercooler kit for the S15 (p/n:12333) comes complete with aluminum piping' ... 'Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar).' ... 'we also fitted a Blitz hot pipe with Super Sound Dual-Drive Blow-Off valve (p/n 70023) which eliminates the factory bypass valve' ... 'removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit.' ... 'The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures would again be measured on both the DTS AWD dynamometer at XS Engineering in Garden Grove, California as well as the Dynojet dynamometer at MD Automotive in Westminster, California.' ... Test 1 intercooler: '261.7 WHP 248.7 LB-FT TQ' ... Test 2: 'A'PEXi Super Suction intake kit (p/n 538-N021) installed, we were back on the dyno with the boost set to 18psi.' '268.3 WHP 250.1 LB-FT TQ' ... Test 3: 'the free-breathing GT28R helped to generate 268.9 peak horsepower and 261.5 lb-ft of torque.' '268.9 WHP 261.5 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/058-006-TnT-SilviaS15_Dyno3.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58 DTS chart, Test 3 (cat delete)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: WHEEL/S' / 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 268.3 hp @ 6774 RPM' (FMIC, Intake final) and 'Max Power 268.9 hp @ 6768 RPM' (legend 'A008150L DSport S15  cat delete final  Gear 4 Jul 14, 2007 05:18')."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/058-005-TnT-SilviaS15_Dyno2.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58 DTS chart, Test 2 (intake)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 261.7 hp @ 6689 RPM' (fmic final) and 'Max Power 268.3 hp @ 6774 RPM' (legend 'A008141L DSport S15  FMIC, Intake final  Gear 4 Jul 14, 2007 03:46')."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/058-004-TnT-SilviaS15_Dyno1.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #58 DTS chart, Test 1 (intercooler)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: WHEEL/S' / 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 237.1 hp @ 6888 RPM' (legend 'A008043L Dsport S15  down pipe 0.85kg  Gear 4 Jun 27, 2007 06:12', i.e. the same run printed as 232.6 hp uncorrected in #57) and 'Max Power 261.7 hp @ 6689 RPM' (legend 'A008136L DSport S15  fmic final  Gear 4 Jul 14, 2007 02:55')."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        }
+      ],
+      "confidence": "Sure of: power, correction, gear, boost setting and parts. Not printed: weather, boost curve. DSPORT: 'maximum performance from the GT28R turbocharger and stock engine' at this stage.",
+      "notes": "Same-day steps (SAE J1349): FMIC 261.7 hp @ 6,689 rpm; + intake 268.3 hp @ 6,774 rpm; + cat delete 268.9 hp @ 6,768 rpm. Watch out: the article's '+29.1 hp' for the intercooler compares the uncorrected 232.6 with the SAE 261.7; on one standard the gain was 24.6 hp (237.1 to 261.7). Good 'stock turbo at max boost' test point."
+    },
+    {
+      "id": "s15-dsport-18psi-fmic-dynojet248c-2007",
+      "summary": "Same state as the previous entry (stock GT28R, 18 psi, FMIC, no cat) on the Dynojet 248C: 262.17 whp, 271.56 lb-ft @ 4,150 rpm.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "248C",
+        "type": "inertia roller (the 248C is Dynojet's inertia model; the article itself does not say)",
+        "mode": "not stated",
+        "where": "MD Automotive, Westminster, California, USA"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "article text only; no Dynojet sheet published"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the article"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "262.17 whp (rpm not stated) [= 195.5 kW]",
+        "peakWheelTorque": "271.56 lb-ft @ 4,150 rpm [= 368.2 Nm]",
+        "howRead": "article text (#58 page 3)"
+      },
+      "boost": {
+        "peak": "18 psi (1.25 bar), the tune set at XS Engineering",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated; the article says 'the maximum torque kicks in at just past 4,000 RPM'",
+        "howKnown": "inferred from the #58 tuning session; boost on this dyno not reported"
+      },
+      "fuel": "California 91-octane pump gasoline (US AKI, (R+M)/2). Article: 'the factory ECU is actually tuned for a higher-octane fuel than America's \"premium\" 91-octane gasoline' and 'Japan's premium unleaded instead of California's 91-octane unleaded'.",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Blitz LM front-mount (p/n 12333) with Blitz hot pipe and Super Sound Dual-Drive blow-off valve (p/n 70023)",
+        "exhaust": "Tanabe Medalion Concept G Blue 80 mm turbo-back: downpipe + cat-delete pipe + cat-back (no catalytic converter). Stock turbine-outlet / O2 housing still fitted (DSPORT planned to test a Tomei O2-housing later).",
+        "intake": "A'PEXi Super Suction kit (p/n 538-N021), MAF sensor removed (speed density)",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "stock (240 deg, 9.2 mm lift per DSPORT #60)",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/3/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15 (page 3)",
+          "kind": "article",
+          "quote": "'Back on MD Automotive's Dynojet dynamometer, peak horsepower checked in at 262.17 horsepower at the wheels. That is an increase of 13.8% over the previous peak horsepower figure of 230.34.' ... 'generating 271.56 lb-ft of peak torque at 4,150 RPM.' ... 'Our first and second rounds of upgrades have helped our S15 to realize maximum performance from the GT28R turbocharger and stock engine.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'Dyno figures would again be measured on both the DTS AWD dynamometer at XS Engineering in Garden Grove, California as well as the Dynojet dynamometer at MD Automotive in Westminster, California.' ... Test 1 intercooler: '261.7 WHP 248.7 LB-FT TQ' ... Test 2: 'A'PEXi Super Suction intake kit (p/n 538-N021) installed, we were back on the dyno with the boost set to 18psi.' '268.3 WHP 250.1 LB-FT TQ' ... Test 3: 'the free-breathing GT28R helped to generate 268.9 peak horsepower and 261.5 lb-ft of torque.' '268.9 WHP 261.5 LB-FT TQ'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP (page 1)",
+          "kind": "article",
+          "quote": "'The Blitz LM intercooler kit for the S15 (p/n:12333) comes complete with aluminum piping' ... 'Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar).' ... 'we also fitted a Blitz hot pipe with Super Sound Dual-Drive Blow-Off valve (p/n 70023) which eliminates the factory bypass valve' ... 'removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit.' ... 'The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system.'"
+        }
+      ],
+      "confidence": "Sure of the numbers and dyno. Not sure of correction, gear, power rpm, weather.",
+      "notes": "Same-dyno delta from stock: 206.47 -> 262.17 whp (+55.7). The Dynojet read 6.7 hp below the DTS SAE figure for this state and 2.3 hp below the DTS uncorrected figure for the 12 psi state, so the two dynos agree within about 3 %."
+    },
+    {
+      "id": "s15-dsport-cams-manifold-95oct-dts-2007",
+      "summary": "DSPORT S15, stock GT28R at 1.2 kg/cm2 (about 17 psi), adding Tomei Poncam Type-R cams, Peak Performance equal-length manifold and a 95.5-octane 91/100 blend: 284.9 whp @ 6,686 rpm, SAE J1349, DTS.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car (DSPORT's project car in California; 'America never received the Silvia S15')",
+        "grade": "not stated; factory 'Garrett GT28R ball- bearing turbocharger' and the '250PS' rating point to the Spec-R turbo car",
+        "gearbox": "not stated; manual inferred (the article quotes the 250 PS rating, which is the 6MT rating, and mentions protection 'in the case of a miss shift')",
+        "year": "2001"
+      },
+      "engine": "SR20DET, 1,998 cc, stock bottom end and head throughout the series; aftermarket cams (see mods)",
+      "dyno": {
+        "make": "DTS (Dynamic Test Systems; sheet logo reads 'DYNAMIC DYNAMOMETERS', dyno console in the photo reads 'DYNAMIC TEST SYSTEMS')",
+        "model": "AWD (article: 'their DTS AWD dynamometer')",
+        "type": "roller (absorber type and test mode not printed)",
+        "mode": "not stated",
+        "where": "XS Engineering, Garden Grove, California, USA"
+      },
+      "correction": {
+        "value": "SAE J1349",
+        "howKnown": "sheet prints 'CORRECTION FACTOR APPLIED: SAE J1349'. The #60 sheets print 'POWER AT: ENGINE', but they re-plot the 14 Jul 'cat delete final' run at the same 268.9 hp that #58 printed under 'POWER AT: WHEEL/S', so the label does not change the numbers; DSPORT reports them as WHP."
+      },
+      "testConditions": {
+        "temperature": "not printed",
+        "pressure": "not printed",
+        "humidity": "not printed",
+        "howKnown": "run date 'Sep 27, 2007 05:53' printed"
+      },
+      "gear": "4th ('Gear 4' printed)",
+      "result": {
+        "peakWheelPower": "284.9 hp @ 6,686 rpm, SAE J1349 [= 212.4 kW]",
+        "peakWheelTorque": "276.6 lb-ft per the article's result box; the article text says 268.9 lb-ft (conflict; rpm not stated) [375.0 / 364.6 Nm]",
+        "howRead": "power read off the DTS sheet ('Max Power 284.9 hp @ 6686 RPM', run '100 mix'); torque from the article"
+      },
+      "boost": {
+        "peak": "1.2 kg/cm2 (about 17.1 psi, 1.18 bar)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article: 'at 1.2kg/cm2 of boost pressure', 'Boost was maintained at 1.2kg/cm2', 'Boost remained at 1.2kg/cm2'"
+      },
+      "fuel": "50/50 blend: about 5 gal California 91 (AKI) + 5 gal Rockett Brand 100-octane unleaded race fuel; DSPORT: 'the effective octane of the fuel mixture is 95.5-octane'",
+      "mods": {
+        "turbo": "stock (factory GT28R / T28 ball-bearing)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Blitz LM front-mount (p/n 12333) with Blitz hot pipe and Super Sound Dual-Drive blow-off valve (p/n 70023)",
+        "exhaust": "Peak Performance equal-length stainless (T304) tubular exhaust manifold, turbo in the factory position; Tanabe 80 mm downpipe + cat-delete + cat-back; stock turbine-outlet / O2 housing",
+        "intake": "A'PEXi Super Suction kit (p/n 538-N021), MAF sensor removed (speed density)",
+        "injectors": "Power Enterprise 850 cc/min (p/n SH850-C), replacing the factory 448 cc/min injectors",
+        "fuelPump": "A'PEXi N1 racing fuel pump for the Skyline R33 (p/n 404-A010), 'capable of flowing over 280lph'",
+        "ecu": "A'PEXi Power FC D-Jetro (p/n 414AN024), converts MAF to speed density; A'PEXi Boost Up kit (p/n 415-A013, 3.0 bar MAP sensor, boost controlled by the Power FC); IAT harness 415-XA03 + Mazda IAT sensor N3A118845; tuned by Koji Arai (XS Engineering)",
+        "cams": "Tomei Poncam Type-R, 256 deg duration, 11.5 mm lift (stock 240 deg, 9.2 mm), no valvetrain upgrade",
+        "internals": "stock",
+        "gearbox": "stock (type not stated; manual inferred)",
+        "other": "Peak Performance rocker-arm stoppers"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #60, Test & Tune Part 3: Nissan Silvia S15, Camshafts, Manifold, and 100 Octane Fuel (page 1)",
+          "kind": "article",
+          "quote": "'Tomei Poncam Type-R camshafts for the SR20DET engine. These camshafts feature 256-degrees of duration and 11.5mm of lift ... The stock camshaft profile is only 240-degrees of duration and 9.2mm of lift.' ... 'Peak Performance's equal-length stainless-steel exhaust manifold is a direct replacement for the factory cast log-type manifold' ... 'We had approximately 5 gallons of 91- octane in the tank when the 5-gallon pail of 100-octane was added. Therefore, the effective octane of the fuel mixture is 95.5-octane.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-part-3-nissan-silvia-s15-camshafts-manifold-and-100-octane-fuel/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #60, Test & Tune Part 3 (page 2, The Dyno)",
+          "kind": "article",
+          "quote": "'With the S15 strapped down to XS Engineering's DTS Dynamometer' ... 'Our stock turbo is maxed out of airflow at this power level.' '273.8 WHP 261.5 LB-FT TQ' ... 'at 1.2kg/cm2 of boost pressure' ... manifold: '275.7 WHP 276.1 LB-FT TQ' ... 'Boost was maintained at 1.2kg/cm2.' ... fuel: '284.9 WHP 276.6 LB-FT TQ' ... 'This brings our grand total to 284.9 peak horsepower and 268.9 lb-ft of peak torque for this round of tuning.' ... 'Boost remained at 1.2kg/cm2.'"
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/060-008-Tech-S15TnT-FuelDyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #60 DTS chart, 100-octane blend",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: ENGINE' / 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 284.9 hp @ 6686 RPM' (legend 'A008521L Dsport S15  100 mix  Gear 4 Sep 27, 2007 05:53') and 'Max Power 275.7 hp @ 6805 RPM' (exmani final)."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/060-007-Tech-S15TnT-ManifoldDyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #60 DTS chart, exhaust manifold",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: ENGINE' / 'SAE J1349'; 'Max Power 275.7 hp @ 6805 RPM' (legend 'A008514L Dsport S15  exmani final  Gear 4 Sep 27, 2007 05:11') and 'Max Power 273.8 hp @ 6278 RPM' (Tomei Poncam Final)."
+        },
+        {
+          "url": "https://dsportmag.com/wp-content/uploads/060-006-Tech-S15TnT-CamDyno.jpg",
+          "accessed": "2026-09-30",
+          "title": "DSPORT #60 DTS chart, cams",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'POWER AT: ENGINE' / 'CORRECTION FACTOR APPLIED: SAE J1349'; 'Max Power 268.9 hp @ 6768 RPM' (legend 'A008150L DSport S15  cat delete final  Gear 4 Jul 14, 2007 05:18', the same run printed under 'POWER AT: WHEEL/S' in #58) and 'Max Power 273.8 hp @ 6278 RPM' (legend 'A008414L dsport s15  Tomei Poncam Final]  Gear 4 Sep 18, 2007 00:14')."
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-more-airflow-more-boost-and-36-3-whp/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #58, Test & Tune: 2001 Nissan Silvia S15, More Airflow, More Boost, and + 36.3 WHP (page 1)",
+          "kind": "article",
+          "quote": "'The Blitz LM intercooler kit for the S15 (p/n:12333) comes complete with aluminum piping' ... 'Once the intercooler was in place, the boost was safely increased to 18psi (1.25bar).' ... 'we also fitted a Blitz hot pipe with Super Sound Dual-Drive Blow-Off valve (p/n 70023) which eliminates the factory bypass valve' ... 'removing the now defunct MAF sensor from the intake pipe. In its place, we selected an A'PEXi Super Suction kit.' ... 'The final component for this Test-and-Tune session is the cat-delete pipe included with the Tanabe Medalion Concept G Blue exhaust system.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-tech/test-tune-2001-nissan-silvia-s15-uncorking-the-silvias-sr20det-engine/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #57, Test & Tune: 2001 Nissan Silvia S15, Uncorking the Silvia's SR20DET Engine (page 1)",
+          "kind": "article",
+          "quote": "'This SR20DET features Nissan's variable cam timing, known as VVT, and comes from the factory with a Garrett GT28R ball- bearing turbocharger. Nissan rated this mill to produce 250PS' ... 'We chose the Power FC D-Jetro version (p/n 414AN024), which converts the engine management from the factory mass air flow system to speed density.' ... 'A'PEXi Boost Up kit (p/n 415-A013). The Boost Up kit includes a 3.0bar MAP sensor' ... 'A'PEXi's N1 racing fuel pump for the Skyline R33 (p/n 404-A010). The N1 pump is capable of flowing over 280lph' ... 'Power Enterprise 850cc/min fuel injectors (p/n SH850-C) replaced the factory 448cc/min injectors' ... 'the Concept G Blue series come as turbo-back systems, complete with downpipe, race-only cat- delete pipe and cat-back exhaust ... we chose the Concept G Blue system for the S14 (p/n T90011).' ... 'Peak Performance stainless-steel rocker- arm stoppers ... provide a degree of insurance in the case of a miss shift.'"
+        }
+      ],
+      "confidence": "Sure of: power, correction, gear, boost, parts. Not sure: torque (two different figures in the article), weather. Has aftermarket cams, so less preferred.",
+      "notes": "Steps (SAE J1349, 91 octane unless noted): cams 273.8 hp @ 6,278 rpm (Sep 18, 2007); + manifold 275.7 hp @ 6,805 rpm (Sep 27); + 95.5-octane blend with more timing 284.9 hp @ 6,686 rpm. DSPORT: 'Our stock turbo is maxed out of airflow at this power level.' A Part 4 (Tomei ARMS B8446 turbo) was announced but is not online."
+    },
+    {
+      "id": "s15-uk-stockt28-tomei-mani-dd-shootout-2007",
+      "summary": "UK S15 on the stock S15 ball-bearing T28 with Tomei Expreme manifold, Power FC D-Jetro, Nismo 740 cc, FMIC, 3 in. downpipe, decat and GP Sports EXAS: Dyno Dynamics shootout 273.3 hp at the wheels, boost spiking 1.4 bar and about 1.2 bar at peak power.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15 (inferred: the thread is in the forum's 'S15 (Spec-S / Spec-R / 200SX) > S15 Technical' section and the owner lists a 'Stock S15 BB turbo'; the printout says 'Nissan 200SX')",
+        "market": "UK-registered (plate V523SVY); original market not stated",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "SR20DET, stock displacement (not stated otherwise); GReddy 1.8 mm metal head gasket (lower compression, value not stated)",
+      "dyno": {
+        "make": "Dyno Dynamics",
+        "model": "not printed",
+        "type": "eddy-current roller (Dyno Dynamics' product type; not printed on the sheet)",
+        "mode": "'Dyno Dynamics Standard ShootOut graph', 'CF:SHOOT_4F', 'RR:015', 'TyrePres: std'",
+        "where": "Alan Jeffery (printed on the sheet), UK; the owner says the car was mapped by 'Alan Jefferys'"
+      },
+      "correction": {
+        "value": "Dyno Dynamics shootout correction ('CF:SHOOT_4F'); the underlying standard is not named on the sheet",
+        "howKnown": "printed on both sheets; a forum member adds 'on a dyno dynamics dyno ... they use a correction factor'"
+      },
+      "testConditions": {
+        "temperature": "AT 15 and IT 15 (air and inlet temperature; °C assumed, units not printed)",
+        "pressure": "BP 102.5 (kPa assumed, units not printed)",
+        "humidity": "RH 37 (%)",
+        "howKnown": "printed: 'BP:102.5 RH:37 AT:15 IT:15 RR:015 TN:3.531' and '20070404 144401 CK:400 CF:SHOOT_4F TyrePres: std Gear: 4'"
+      },
+      "gear": "4th ('Gear: 4' printed)",
+      "result": {
+        "peakWheelPower": "273.3 hp (rpm of this figure not printed; the same run's power curve peaks at about 6,200 rpm) [= 203.8 kW]",
+        "peakWheelTorque": "not printed as a wheel figure. Sheet 1's torque curve, axis 'fFtLb', peaks at about 290 ft-lb near 5,000-5,100 rpm (read off the plot; probably flywheel-referred like the 322.8 figure)",
+        "howRead": "sheet 2 header 'Max 273.3 HP' plus the owner's text 'Wheel horse power is 273bhp (On the top of the second graph!)'. Sheet 1 of the same run file (V523SVY.031) shows 'Max 322.8 HP' on an axis labelled 'S_HP'; with the owner's statement this is taken as the dyno's flywheel-referred figure (273.3 / 322.8 = 0.847)."
+      },
+      "boost": {
+        "peak": "about 1.35-1.4 bar at about 4,200-4,400 rpm (read off the 'Bar_g' trace); owner: 'It goes up to 1.4 bar then comes down to 1.2'",
+        "atPeakPower": "about 1.15-1.2 bar near 6,200 rpm (read off); about 1.1 bar at 7,400 rpm",
+        "fullBoostRpm": "peak at about 4,200-4,400 rpm (read off)",
+        "howKnown": "sheet 2 boost trace and the owner's text; bleed-valve boost control"
+      },
+      "fuel": "not stated (UK pump fuel; grade not given)",
+      "mods": {
+        "turbo": "stock S15 ball-bearing T28 ('Stock S15 BB turbo (50K)')",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "'DW Front mount' (Driftworks FMIC; size not stated)",
+        "exhaust": "Tomei Expreme exhaust manifold; '3inch downpipe and matchin elbow'; 'Decat'; 'GP sports exas straight though exhaust'",
+        "intake": "'Airinx filter'",
+        "injectors": "Nismo 740 cc",
+        "fuelPump": "Walbro 255",
+        "ecu": "A'PEXi Power FC D-Jetro (speed density), mapped by Alan Jeffery",
+        "cams": "not listed (presumably stock)",
+        "internals": "GReddy 1.8 mm metal head gasket; otherwise not stated",
+        "gearbox": "not stated",
+        "other": "rocker arm stoppers; viscous fan removed; TurboSmart bleed valve for boost ('Until i can get the Power FC boost controller to work')"
+      },
+      "sources": [
+        {
+          "url": "https://www.silviaoc.com/discuss/threads/my-dyno-results.1864/",
+          "accessed": "2026-09-30",
+          "title": "Silvia Owners Club (UK) forum: 'My dyno results!' (channie, 22 May 2007), in section S15 (Spec-S / Spec-R / 200SX) > S15 Technical > Mechanical & Bodywork",
+          "kind": "thread",
+          "quote": "'Engine mods... Tomei Expreme manifold / Power Fc Dejtro / Nismo 740cc injectors / Stock S15 BB turbo (50K) / DW Front mount / Walbro 255 / Airinx filter / Greddy 1.8mm metal head gasket / Rocker arm stoppers / 3inch downpipe and matchin elbow / GP sports exas straight though exhaust / Decat / Viscous removal / TurboSmart Bleed value' ... 'Its on a bleed valve and thats all! It goes up to 1.4 bar then comes down to 1.2 / Wheel horse power is 273bhp (On the top of the second graph!)' ... 'I think that is the turbos limit though... turned the boost too a stable 1.2bar now!'"
+        },
+        {
+          "url": "https://www.silviaoc.com/discuss/proxy.php?image=http%3A%2F%2Fi54.photobucket.com%2Falbums%2Fg103%2FChannie_boy%2FSilvia%2520MK2%2Fdyno1.jpg&hash=114df3b7ab0af3c8bbb268f2af235bc0",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 1 (served by the forum's public image proxy; original on Photobucket, watermarked)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER' / 'Alan Jeffery' / 'Customer : Andy' / 'I.D. : V523SVY' / 'Descript.: Nissan 200SX' / 'Date : 04-04-2007' / 'File : V523SVY.031' / 'Max 322.8 HP' / axes 'S_HP' and 'fFtLb' / '* Dyno Dynamics Standard ShootOut graph ***' / 'BP:102.5 RH:37 AT:15 IT:15 RR:015 TN:3.531' / '20070404 144401 CK:400 CF:SHOOT_4F TyrePres: std Gear: 4'. Power peaks at about 6,200 rpm; torque (dotted) peaks at about 290 near 5,000-5,100 rpm."
+        },
+        {
+          "url": "https://www.silviaoc.com/discuss/proxy.php?image=http%3A%2F%2Fi54.photobucket.com%2Falbums%2Fg103%2FChannie_boy%2FSilvia%2520MK2%2Fdyno2.jpg&hash=d488e32f387f84b1016607329770e2e0",
+          "accessed": "2026-09-30",
+          "title": "Dyno sheet 2 (lambda and boost), same run",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'DYNO DYNAMICS DYNAMOMETER' / 'Alan Jeffery' / 'V523SVY.001: 200sx' (red, earlier unmapped run) / 'V523SVY.031: Nissan 200SX' (blue) / 'Max 273.3 HP' / axes 'LMBDA' and 'Bar_g' / same footer 'CF:SHOOT_4F ... Gear: 4'. Blue boost trace peaks at about 1.35-1.4 bar near 4,200-4,400 rpm, about 1.2 bar near 6,200 rpm, about 1.1 bar at 7,400 rpm; lambda about 0.76-0.80."
+        }
+      ],
+      "confidence": "Sure of: Dyno Dynamics shootout mode, 4th gear, weather line, 273.3 hp wheel peak (sheet + owner). Fairly sure it is an S15 (forum section + 'Stock S15 BB turbo'), but the post never says 'my S15' and the sheet says '200SX'. Not known: fuel, peak rpm of the wheel figure, exact boost curve (read off a watermarked scan).",
+      "notes": "Close in spec to spoonman's S15 below (stock T28 BB, Tomei manifold, 740 cc, FMIC, about 1.2 bar). Shootout mode on Dyno Dynamics usually reads lower than other roller dynos."
+    },
+    {
+      "id": "s15-jdm-stockt28-18psi-98ron-dynapack-2013",
+      "summary": "1999 JDM Silvia Spec-R (Australia/NZ) on the stock T28 BB at 18 psi on 98 octane with Power FC, Nismo 740 cc, Z32 AFM, Tomei equal-length manifold, FMIC, 3 in. front pipe (cat bypass): owner reports 222 rwkW / 410 Nm, apparently on a Dynapack (hub).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car ('1999 JDM Spec R'), owner in Australia or New Zealand (98 octane, 'OZy boys')",
+        "grade": "Spec-R",
+        "gearbox": "stock 6-speed manual ('Stock 6spd box')",
+        "year": "1999"
+      },
+      "engine": "SR20DET, stock displacement; stock cams and throttle body",
+      "dyno": {
+        "make": "Dynapack (inferred: after another member called it a 'Romantic dyno...', the owner replied 'dynapacks do it for you mate?')",
+        "model": "not stated",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "sheet images no longer load"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "sheet images no longer load"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "222 kW 'rw' (hub, if the Dynapack reading is right; rpm not stated) [= 297.7 hp]",
+        "peakWheelTorque": "410 Nm (rpm not stated)",
+        "howRead": "owner's text: '222rw kW / 410Nm / 98oct / 18psi (1.2bar)'; later 'At the wheel power figures: 220kw is 300hp, and 410nm is 302 ftlb'"
+      },
+      "boost": {
+        "peak": "18 psi (1.2 bar)",
+        "atPeakPower": "about 15 psi (owner: 'trails off again from 18 down to 15 from 5700')",
+        "fullBoostRpm": "about 3,500 rpm 'in 3rd and higher' (owner)",
+        "howKnown": "owner's text describing the dyno graph"
+      },
+      "fuel": "98 octane pump fuel (RON, Australia/NZ)",
+      "mods": {
+        "turbo": "stock T28 BB with HKS adjustable actuator",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "600x280x75 mm FMIC, custom piping (50 mm hot side, 63 mm cold side)",
+        "exhaust": "Tomei equal-length exhaust manifold; GReddy dump pipe; 3 in. custom front pipe with cat bypass and flexi; HKS Hi Power cat-back",
+        "intake": "Z32 AFM + HKS suction kit; A'PEXi intake filter",
+        "injectors": "Nismo 740 cc; Tomei fuel-pressure regulator",
+        "fuelPump": "Walbro 255",
+        "ecu": "A'PEXi Power FC; GFB Atomic II electronic boost controller (interior list)",
+        "cams": "stock",
+        "internals": "stock (not stated otherwise)",
+        "gearbox": "stock 6-speed; Exedy Hyper Single clutch, Exedy chromoly flywheel; stock helical LSD",
+        "other": "BOV factory, modified to recirculate; NGK iridium heat range 7; Tomei rocker arm stoppers; 50 mm alloy radiator"
+      },
+      "sources": [
+        {
+          "url": "https://www.silviaoc.com/discuss/threads/spoonmans-s15.9275/",
+          "accessed": "2026-09-30",
+          "title": "Silvia Owners Club forum: 'Spoonmans S15' (members' builds; first post updated after a 23 Sep 2013 remap)",
+          "kind": "thread",
+          "quote": "'1999 JDM Spec R / 222rw kW / 410Nm / 98oct / 18psi (1.2bar) / Engine Bay: Apexi Power FC ECU / Stock Cams & Throttle Body / Nismo 740cc Injectors / Tomei FPR / Stock T28BB with HKS Adjustable Actuator / Z32 AFM + HKS Suction Kit / ... / Tomei Exhaust Manifold - Equal length / ... / Walbro 255 fuel pump / ... / 600x280x75 FMIC with custom piping. 50mm hot 63mm cold / Apexi intake filter / Greddy Dump pipe / 3\" custom front pipe inc cat bypass & flexi / HKS Hi Power catback exhaust ... Stock 6spd box'. 23 Sep 2013: 'Finally got around to remapping today ... 220kw on the stock turbo is possible'. Reply to 'Romantic dyno...': 'dynapacks do it for you mate?' ... 'At the wheel power figures: 220kw is 300hp, and 410nm is 302 ftlb' ... 'its about 250kw at the crank' ... 'in 3rd and higher 3500 to reach 18psi on the graph ... with the stock cams trails off again from 18 down to 15 from 5700'. 11 Sep 2014 (second-hand, not used): 'it ran 240kw at the wheels stock turbo, stock cam, 98oct 18psi'."
+        }
+      ],
+      "confidence": "Low to medium. Parts, boost and fuel are clear from the owner. The dyno make is only implied (Dynapack), the sheet images are dead (the forum proxy returns a placeholder), and correction/weather are unknown. Use only as a cross-check, remembering a hub dyno has no tyre loss.",
+      "notes": "The later '240kw' after new coil packs is hearsay from the next owner; not used."
+    },
+    {
+      "id": "s15-apex-stockt28-17psi-98ron-mainline-2026",
+      "summary": "Melbourne S15 on the stock turbo at about 17 psi, ULP98, Power FC, Nismo injectors, FMIC + cold-air intake, full 3 in. exhaust, stock head/cams/manifold: 192.9 kW @ 5,842 rpm in 5th on a Mainline, SAE J607 corrected.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15 (sheet: 'NISSAN SILVIA S15')",
+        "market": "not stated (Victorian registration ZSK287; the 'Silvia' name suggests a JDM import)",
+        "grade": "not stated",
+        "gearbox": "not stated (turbo S15 manuals, JDM Spec-R and Australian 200SX, are the 6MT per the project's car data; the run was in 5th)",
+        "year": "not stated"
+      },
+      "engine": "SR20DET, sheet 'Capacity: 2.000 Lt', 'Heads: STOCK', 'Camshaft: STOCK', odometer 148,610",
+      "dyno": {
+        "make": "Mainline",
+        "model": "DynoLog (shop page: 'Bay 02 · Mainline AWD')",
+        "type": "roller (the sheet plots road speed and 'Motive Force'); Mainline chassis dynos are eddy-current, not printed. The shop page's 'Hubs' wording is a site-wide template and does not match the sheet.",
+        "mode": "ramp test '@ 19KPH/Sec UP 7.6 Sec'",
+        "where": "Tuned by Apex, Epping, Melbourne, Victoria (sheet header 'Ultimate Auto Group Pty Ltd')"
+      },
+      "correction": {
+        "value": "SAE J607; sheet prints 'Correction: 1.80% SAE J607' and the power axis is marked '[Cor'd]'",
+        "howKnown": "sheet header. The shop page says 'SAE J1349' but that line is identical on every result page (template)."
+      },
+      "testConditions": {
+        "temperature": "17.7 °C",
+        "pressure": "1010 (mbar/hPa; small print)",
+        "humidity": "46 %",
+        "howKnown": "sheet: 'Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%)' (small print) and 'Air Density: 98.8%'; test date '22-Sep-2026 15:57'"
+      },
+      "gear": "5th ('Gear: 5' printed; in the S15 6MT 5th is 1.000 direct) with 'RPM/KPH: 34' printed",
+      "result": {
+        "peakWheelPower": "192.9 kW @ 5,842 rpm, SAE J607 [= 258.7 hp]",
+        "peakWheelTorque": "363.8 Nm @ 4,605 rpm (DynoLog 'dTorque', derived from wheel force and rpm/speed)",
+        "howRead": "read off the sheet: 'Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM Motive Force= 4.7KN @ 4,605RPM'"
+      },
+      "boost": {
+        "peak": "about 17-17.5 psi near 4,600-5,000 rpm (MAP1 PSIG trace, read off; tuner: '193KW @17psi')",
+        "atPeakPower": "about 16 psi at 5,842 rpm (read off)",
+        "fullBoostRpm": "about 17 psi from roughly 4,000-4,100 rpm (115-120 km/h) (read off)",
+        "howKnown": "MAP1 (PSIG) plot on the sheet, small scale, about ±1 psi"
+      },
+      "fuel": "ULP98 (98 RON); shop page 'Fuel 98 RON'",
+      "mods": {
+        "turbo": "stock, not named (sheet 'Manifolds: STOCK'; the tuner suggests a 'Hi flowed turbo' as the next step; the shop's parts list has no 'Turbocharger', which it lists for turbo-upgraded cars)",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "FMIC (make not stated)",
+        "exhaust": "full 3 in. ('FULL 3\"'), make not stated; stock manifold",
+        "intake": "cold-air intake ('FMIC + CAI')",
+        "injectors": "Nismo (size not stated)",
+        "fuelPump": "'Fuel System Upgrade' (not specified)",
+        "ecu": "A'PEXi Power FC; manual boost controller",
+        "cams": "stock",
+        "internals": "stock head; bottom end not stated",
+        "gearbox": "not stated",
+        "other": "none stated"
+      },
+      "sources": [
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-powerc1",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex (Melbourne): Nissan Silvia S15, Stage 2, Apexi Power FC",
+          "kind": "shop page",
+          "quote": "'Stage 2 Apexi Power FC / Nissan Silvia S15 / Tuned · 26 Sept 26 / Bay 02 · Mainline AWD' ... 'Engine SR20 / Fuel 98 RON / ECU Apexi Power FC / Drivetrain 2WD' ... '193KW @17psi, Power fc, nismo injectors, full exhaust, FMIC, manual boost controller. Great power level for the current setup, 3 port boost controllers can help get to the 200-220kw mark. Hi flowed turbo allowing up to 260kw.' ... 'Hubs · SAE J1349 · Median of 3 pulls' (template) ... 'Tuned 193 kW' ... '364 Nm'. Structured data: upgradedParts ['Intake','Exhaust','Intercooler','Fuel System Upgrade']."
+        },
+        {
+          "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/09/m0b7kajddb96u15z2ihgt7k5/fallback.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mainline DynoLog sheet for this car (the page's 'Download' link points to thuan-s15-320.webp in the same folder)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Ultimate Auto Group Pty Ltd' / 'Tuned By Apex' / 'Mainline DynoLog Dyno Report' / 'Test ID: Baseline Test' / 'Customer: THUAN' / 'Test Date: 22-Sep-2026 15:57' / 'Test #: 447.19 Operator: Tee' / 'Rego: ZSK287' / 'Vehicle: NISSAN SILVIA S15' / 'Capacity: 2.000 Lt' / 'Air Density: 98.8%' / 'Correction: 1.80% SAE J607 (17.7°C, 1010 mBar, 46%)' / 'Heads: STOCK' / 'Camshaft: STOCK' / 'Exhaust: FULL 3\"' / 'Manifolds: STOCK' / 'Induction: FMIC + CAI' / 'Odometer: 148,610' / 'Fuel: ULP98' / 'RPM/KPH: 34' / 'Gear: 5' / 'Power(KW) [Cor'd]' / 'Speed (KPH) / Engine Speed [Derived] @ 19KPH/Sec UP 7.6 Sec' / 'Max: dTorque= 363.8NM @ 4,605RPM Power= 192.9KW @ 5,842RPM Motive Force= 4.7KN @ 4,605RPM' / MAP1 (PSIG) trace about 17 psi from about 120 km/h."
+        }
+      ],
+      "confidence": "High for the sheet values (power, rpm, correction, weather, gear). Medium for the parts: turbo is stock by the sheet's 'Manifolds: STOCK' and the tuner's wording but is never named; injector size and fuel pump unknown; market and gearbox not stated. Boost read off a small plot.",
+      "notes": "Probably the cleanest 'light build on the stock turbo' test with a full sheet. The run ends just below 6,000 rpm. The site's 'Stock' column is empty for this car."
+    },
+    {
+      "id": "s15-anton-22psi-haltech-mainline-2022",
+      "summary": "Melbourne S15 with FMIC, downpipe and full exhaust with cat, Haltech, 98 RON, 22 psi: 225.3 kW at 152 km/h (about 6,360 rpm) in 4th on a Mainline chassis dyno, SAE J607; turbo not named (probably the stock T28).",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15 (sheet: 'Vehicle: s15'; shop page 'Series S15')",
+        "market": "not stated (Victorian registration 1WE9TG)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "SR20 per the shop page (stock displacement assumed; sheet capacity field blank '0.000 Lt')",
+      "dyno": {
+        "make": "Mainline",
+        "model": "DynoLog chassis dyno ('Mainline DynoLog Chassis Dyno Report')",
+        "type": "roller (chassis dyno report with road speed and motive force; eddy-current absorber not printed)",
+        "mode": "ramp test '@ 11KPH/Sec UP, 13.6 Sec'",
+        "where": "Skylight Automotive, 2/50 Barretta Rd, Ravenhall, Victoria (sheet header); operator Anton (Tuned by Anton, now Tuned by Apex)"
+      },
+      "correction": {
+        "value": "SAE J607, printed '3.23 SAE J607' (read as a 3.23 % correction by analogy with the 2026 sheet's '1.80% SAE J607'); torque axis marked '[Cor'd]'",
+        "howKnown": "sheet header"
+      },
+      "testConditions": {
+        "temperature": "20 °C",
+        "pressure": "1002.2 (printed with 'KPa', but the value fits hPa/mbar)",
+        "humidity": "62 %",
+        "howKnown": "sheet: 'Correction: 3.23 SAE J607 (20°C, 1002.2 KPa, 62%)', 'Air Density: 97.0%', 'Test Date: 5-Dec-2022 18:13'"
+      },
+      "gear": "4th ('Gear: 4' printed; S15 6MT 4th = 1.213) with 'RPM/KPH: 42' printed",
+      "result": {
+        "peakWheelPower": "225.3 kW at 152 km/h (≈6,360 rpm from the printed RPM/KPH and axis labels) [= 302.1 hp]",
+        "peakWheelTorque": "383 Nm at 118 km/h (≈4,940 rpm), DynoLog derived torque",
+        "howRead": "read off the sheet: 'Max: dTorque= 383NM @ 118KPH Power= 225.3KW @ 152KPH Motive Force= 1359.9Lb @ 118KPH'"
+      },
+      "boost": {
+        "peak": "22 psi (tuner text)",
+        "atPeakPower": "not printed",
+        "fullBoostRpm": "not printed",
+        "howKnown": "shop page: 'producing 225kw @ 22psi'; no boost trace on the sheet"
+      },
+      "fuel": "98 RON (shop page); sheet says 'petrol'",
+      "mods": {
+        "turbo": "not named. The shop's structured parts list for this car is 'Intake','Exhaust','Down Pipe','Intercooler','Fuel System Upgrade' with no 'Turbocharger', which the same site lists for its turbo-upgraded S14/S15s, and the note says only 'bolt ons' — so probably the stock T28, but not confirmed.",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "FMIC (make not stated)",
+        "exhaust": "downpipe + full exhaust with cat ('fullexh wit cat'); makes not stated",
+        "intake": "'Intake' (not specified)",
+        "injectors": "not stated",
+        "fuelPump": "'Fuel System Upgrade' (not specified)",
+        "ecu": "Haltech (model not stated)",
+        "cams": "not stated (blank on sheet)",
+        "internals": "not stated",
+        "gearbox": "not stated",
+        "other": "none stated"
+      },
+      "sources": [
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-s15-2",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex (Melbourne): Nissan Silvia S15 2, Stage 2, Haltech (formerly tunedbyanton.com)",
+          "kind": "shop page",
+          "quote": "'Stage 2 Haltech / Nissan Silvia S15 / Tuned · 09 Dec 22 / Bay 02 · Mainline AWD' ... 'Fuel 98 RON / ECU Haltech / Drivetrain 2WD' ... 'Nissan S15 with bolt ons; FMIC, downpipe & exhaust producing 225kw @ 22psi. Good improvement over standard. Engine management via Haltech' ... 'Stock 130kW → Tuned 225kW' ... 'Stock 218Nm → Tuned 383Nm'. Structured data: upgradedParts ['Intake','Exhaust','Down Pipe','Intercooler','Fuel System Upgrade']."
+        },
+        {
+          "url": "https://storage.tuned-by-apex.garageapex-internal.com/media/2026/05/kxs9a2nw425vyd2eb1suj4lg/fallback.jpg",
+          "accessed": "2026-09-30",
+          "title": "Mainline DynoLog sheet for this car (the page's graph link points to s15graph-320.webp in the same folder)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Skylight Automotive' / 'Tuned By Anton' / 'Mainline DynoLog Chassis Dyno Report' / '2/50 Barretta Rd Ravenhall' / 'Customer: Van' / 'Test Date: 5-Dec-2022 18:13' / 'Test #: 21184.31 Operator: Anton' / 'Rego: 1WE9TG' / 'Vehicle: s15' / 'Air Density: 97.0%' / 'Correction: 3.23 SAE J607 (20°C, 1002.2 KPa, 62%)' / 'Exhaust: fullexh wit cat' / 'Induction: fmic' / 'Fuel: petrol' / 'RPM/KPH: 42' / 'Gear: 4' / 'Compare Run: Baseline Test / 10819.2, 30-Jul-2020, 18:05' / 'Derived Torque(NM) [Cor'd]' / '@ 11KPH/Sec UP, 13.6 Sec' / 'Max: dTorque= 383NM @ 118KPH Power= 225.3KW @ 152KPH' / red compare run 'dTorque= 218NM @ 110KPH Power= 130.6KW @ 152KPH'."
+        }
+      ],
+      "confidence": "High for the sheet numbers, correction and weather. Low for the turbo (inferred stock). Injectors, pump, exhaust sizes unknown.",
+      "notes": "If the turbo is stock, this is an aggressive 22 psi point well past the ~17-18 psi used elsewhere. The red compare run (30-Jul-2020, 130.6 kW, 218 Nm) is an unidentified 'Baseline Test' that the shop shows as 'Stock' on several S14/S15 pages; its car is not known, so it is not used as a stock baseline."
+    },
+    {
+      "id": "s15-riseup-stockt28-hks-step1-dynapack-2023",
+      "summary": "Sapporo drift S15 on the stock turbo with HKS SS-CAM STEP1, DW 550 cc, R35 AFM, SARD 295 L/h pump and Power FC; Dynapack hub dyno, DIN 70020: screen shows 340.22 PS with TCF 1.150, i.e. about 295.8 PS (291.8 hp) at the hubs, boost 1.26 falling to 0.95 kg/cm2.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15 Silvia",
+        "market": "JDM (car from Rumoi, Hokkaido)",
+        "grade": "not stated (turbo car)",
+        "gearbox": "not stated; Dynapack entry '5th (4.372000:1)'",
+        "year": "not stated"
+      },
+      "engine": "SR20DET, 'ノーマルエンジン' (stock engine), about 160,000 km; aftermarket cams (see mods)",
+      "dyno": {
+        "make": "Dynapack",
+        "model": "'DYNAPACK 42 with PSDAQ SMART CONTROL SOFTWARE' (screen title; unit 00867-42-0210)",
+        "type": "hub",
+        "mode": "not stated (sweep test)",
+        "where": "Garage Rise Up, Sapporo, Hokkaido, Japan"
+      },
+      "correction": {
+        "value": "DIN 70020 (1976) printed; the displayed figures also include 'TCF = 1.150' (Dynapack's transmission correction factor, which scales hub readings up to an engine estimate)",
+        "howKnown": "read off photos of the Dynapack screen; the meaning of TCF is from how Dynapack's software works, not explained on the page"
+      },
+      "testConditions": {
+        "temperature": "not visible",
+        "pressure": "barometric 99.9 kPa (manifold-pressure screen)",
+        "humidity": "not visible",
+        "howKnown": "Dynapack manifold-pressure screen: 'Barometric 99.9 + Gauge 125.0 = 224.9 KPa Absolute'; screen date 2023-04-26"
+      },
+      "gear": "'5th (4.372000:1)' printed (overall ratio entered in the Dynapack; suggests a shorter-than-stock final drive, not stated)",
+      "result": {
+        "peakWheelPower": "As displayed: 340.22 PS @ 5,837 rpm (TCF 1.150 applied). Hub power = 340.22 / 1.150 = 295.8 PS = 291.8 hp = 217.6 kW (computed here). At about 1.1 kg/cm2 the screen shows 322.26 PS @ 5,889 rpm (= 280.2 PS at the hubs).",
+        "peakWheelTorque": "As displayed: 46.45 kgm @ 4,836 rpm (TCF applied) → 40.4 kgm = 396 Nm engine-rpm torque at hub level (÷ 1.150, computed here)",
+        "howRead": "read off two photos of the Dynapack screen; the blog text rounds to '340.2PS', '46.4kgm'"
+      },
+      "boost": {
+        "peak": "about 1.25-1.26 kg/cm2 (text '1.26K'; screen cursor '125.0' kPa gauge at 3,868 rpm)",
+        "atPeakPower": "about 1.0-1.1 kg/cm2 near 5,800 rpm (read off the manifold-pressure curve); text says it falls to 0.95K by the top",
+        "fullBoostRpm": "about 3,900 rpm (read off)",
+        "howKnown": "blog text 'ブースト1.26K→0.95Kでパワーチェック！' and the Dynapack manifold-pressure screen"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock ('純正タービンでのブーストアップ', 'ノーマルタービン')",
+        "turboSpecs": {
+          "model": "OEM Garrett T28 ball-bearing, Nissan 14411-91F00 (JDM S15 manual); DSPORT calls it a 'Garrett GT28R ball-bearing turbocharger'",
+          "compressor": "inducer 46 mm, exducer 60 mm (about 60 trim)",
+          "turbine": "inducer 52.9 mm, exducer 46.3 mm, 62 trim",
+          "turbineHousingAR": "not found",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "source": "Not re-checked today. Taken from the project's own data (src/data/engines/sr20det.json, researched 2026-09-26), which cites ATP Turbo https://www.atpturbo.com/mm5/merchant.mvc?Screen=PROD&Store_Code=tp&Product_Code=GRT-TBO-C15&Category_Code=TBO ('Compressor Wheel Inducer: 46 mm, Exducer: 60 mm ... Turbine Wheel Inducer: 52.9 mm, Exducer: 46.3 mm, Trim: 62')."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "not stated",
+        "exhaust": "not stated (drift-spec car)",
+        "intake": "Trust R35 AFM pipe with R35 GT-R air-flow meter",
+        "injectors": "DW 550 cc",
+        "fuelPump": "SARD 295 L/h with relay / direct battery feed",
+        "ecu": "A'PEXi Power FC (was stock ECU), set up for 0.9 / 1.1 / 1.3 kg/cm2 boost maps; OGS BC Messenger boost controller",
+        "cams": "HKS SS-CAM STEP1 (bolt-in, unmodified head, stock valve springs; duration not stated on the page)",
+        "internals": "stock",
+        "gearbox": "not stated",
+        "other": "Trust Racing #8 spark plugs"
+      },
+      "sources": [
+        {
+          "url": "https://www.do-blog.jp/riseup/article/5315/",
+          "accessed": "2026-09-30",
+          "title": "Garage Rise Up (Sapporo) blog, 8 May 2023: シルビア S15 ノーマルタービン パワーFC セッティング 340馬力！",
+          "kind": "shop page",
+          "quote": "'ノーマルエンジン+ポンカム、ノーマルタービン仕様のブーストアップです。' (stock engine + bolt-in cams, stock turbine boost-up) ... 'ブースト0.9k、ブースト1.1k、ブースト1.3kの3パターンで設定しました。' ... '走行距離が16万kmでしたので点火時期をあまり攻めずに' ... 'ブースト1.26K→0.95Kでパワーチェック！ノーマルタービンにもかかわらずパワー340.2PS！トルク46.4kgm！' ... 'インジェクター開弁率91.5％、エアフロ電圧4.37V' ... 'ブースト1.1Kでも322PS出ています'"
+        },
+        {
+          "url": "https://www.do-blog.jp/riseup/article/5309/",
+          "accessed": "2026-09-30",
+          "title": "Garage Rise Up blog, 25 Apr 2023: シルビア S15 HKS カムシャフト＆パワーFC 取り付け！",
+          "kind": "shop page",
+          "quote": "'純正タービンでのブーストアップのご依頼です。' ... 'HKS SS-CAM STEP1に交換です。シリンダーヘッド無加工で純正バルブスプリングで使用出来ます。' ... 'インジェクターはDW550ccに交換しました。' ... 'パワーFCをご購入頂きました。' ... 'トラスト R35エアフロセンサーパイプを使用してR35エアフロを取り付けしました。' ... 'サード製295Lフューエルポンプに交換' ... 'プラグはトラストレーシング8＃' ... 'ダイナパックに設置しましたのでセッティング開始です。'"
+        },
+        {
+          "url": "https://www.do-blog.jp/riseup/photo/20230428-0971.jpg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the Dynapack screen (single run)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: '00867-42-0210 DYNAPACK 42 with PSDAQ SMART CONTROL SOFTWARE' / 'Engine Torque 46.45 Kgm 125.1 km/h 4836 rpm' / 'Power 340.22 PS 151.0 km/h 5837 rpm' / '5th (4.372000:1) TCF = 1.150' / 'DIN 70020 (1976)'."
+        },
+        {
+          "url": "https://www.do-blog.jp/riseup/photo/20230428-1542.jpg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the Dynapack screen (three runs compared)",
+          "kind": "dyno sheet image",
+          "quote": "read from image: red run 46.45 kgm @ 4836 rpm / 340.22 PS @ 5837 rpm; green run '42.68 Kgm 128.9 km/h 4984 rpm' / '322.26 PS 152.3 km/h 5889 rpm'; 'delta 3.77' / 'delta 17.96'; '5th (4.372000:1) TCF = 1.150'; 'DIN 70020 (1976)'."
+        },
+        {
+          "url": "https://www.do-blog.jp/riseup/photo/20230507-5041.jpg",
+          "accessed": "2026-09-30",
+          "title": "Photo of the Dynapack manifold-pressure screen",
+          "kind": "dyno sheet image",
+          "quote": "read from image: 'Manifold Pressure' / 'Barometric 99.9 + Gauge 125.0 = 224.9 KPa Absolute' at '3868 rpm' / '99.9 + 107.6 = 207.5 KPa' at '4627 rpm'; the highest curve peaks about 125 kPa gauge near 3,900 rpm and falls to roughly 95-100 kPa gauge by 7,000-7,500 rpm."
+        }
+      ],
+      "confidence": "Medium. Sure of: Dynapack, DIN 70020, TCF 1.150, displayed numbers, stock turbo, cams, injectors, AFM, pump. Not known: exhaust, intercooler, fuel (Japanese premium likely but not stated), weather beyond baro. The hub figure is my division by the printed TCF.",
+      "notes": "Hub dyno, so compare against the model's power before tyre-on-roller losses. Has bolt-in cams. The shop's '340馬力' headline is the TCF-scaled engine estimate, not wheel power."
+    },
+    {
+      "id": "s15-precision5858-18psi-93oct-dynojet-2020",
+      "summary": "US 2000 Silvia Spec-R, stock bottom end, Precision 5858 (.82 A/R) top-mount, Brian Crower Stage 2 cams, ID1050x, 93 octane, 18 psi: 446 whp @ 7,700 rpm / 332 lb-ft @ 5,800 rpm on a Dynojet; gearbox swapped to a 350Z CD009.",
+      "usable": true,
+      "whyNotUsable": null,
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM car in the USA (bought in South Florida)",
+        "grade": "Spec-R",
+        "gearbox": "350Z CD009 6-speed (Mazworx SRVQ bellhousing adapter), stock CD009 gearing — NOT the S15 gearbox",
+        "year": "2000"
+      },
+      "engine": "SR20DET 1,998 cc, stock bottom end, head refinished to stock specs, 8.5:1, aftermarket cams and valvetrain",
+      "dyno": {
+        "make": "Dynojet",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "spec sheet gives only 'Dyno Type: Dynojet'"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the article"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "446 whp @ 7,700 rpm [= 332.6 kW]",
+        "peakWheelTorque": "332 lb-ft @ 5,800 rpm [= 450.1 Nm]",
+        "howRead": "article text and spec sheet"
+      },
+      "boost": {
+        "peak": "18 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "spec sheet 'Peak Boost: 18 psi'"
+      },
+      "fuel": "93 octane pump gasoline (US AKI)",
+      "mods": {
+        "turbo": "Precision 5858 top-mount (generation not stated), .82 A/R turbine housing, Precision 46 mm external wastegate",
+        "turboSpecs": {
+          "model": "Precision 5858",
+          "compressor": "58 mm (DSPORT spec sheet: 'Compressor Wheel Specs: 58mm')",
+          "turbine": "58 mm ('Turbine Wheel Specs: 58mm')",
+          "turbineHousingAR": ".82 ('Turbine Housing: .82A/R')",
+          "maxCompressorFlow": "not found",
+          "compressorMap": "not found",
+          "ratedHorsepower": "not found",
+          "source": "DSPORT spec sheet only. The maker's site (precisionturbo.net, redirects to precisionturbo.com) is behind an Incapsula bot wall for both curl and WebFetch, so the maker's figures could not be read."
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Blitz (model not stated)",
+        "exhaust": "Mazworx stainless T3 top-mount manifold; Mazworx downpipe; HKS Hi-Power exhaust",
+        "intake": "AEM intake; Deep Motors intake manifold and 76 mm throttle body; Z32 MAF (article)",
+        "injectors": "Injector Dynamics ID1050x",
+        "fuelPump": "Walbro 470 lph 'Hellcat' in-tank; Aeromotive A1000 regulator",
+        "ecu": "'Engine Management System: RSEnthalpy', tuner 'Martin' (ECU hardware not named); GReddy Profec B boost controller",
+        "cams": "Brian Crower Stage 2 264/264",
+        "internals": "stock bottom end; Brian Crower valves, springs, titanium retainers; Tomei 1.2 mm head gasket; ARP head studs",
+        "gearbox": "350Z CD009 (stock gearing), ACT 6-puck sprung clutch, ACT XACT Prolite flywheel, stock Spec-R differential, custom Mazworx driveshaft",
+        "other": "350Z ignition coils, NGK BRK7E plugs, Koyo radiator, HKS SQV blow-off"
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/446-whp-nissan-silvia-s15/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #220: 446 WHP Nissan Silvia S15 (page 1)",
+          "kind": "article",
+          "quote": "'Keeping the stock bottom end, Tim refreshed the head and switched to stage 2 cams. The stock turbocharger was switched to a Precision Turbo 5858 top-mount turbocharger. The additional air is matched with fuel using a Walbro 470lph Hellcat in-tank fuel pump, feeding ID1050x injectors with 93-octane gas. With this combination along with the supporting upgrades, Tim's Nissan Silvia put down 446whp at 7,700 RPM and 332 lb-ft of torque at 5,800 RPM. The power increase was supported with a 350Z CD009 transmission using an SRVQ housing adapter kit from Mazworx.' ... 'The first trip to the dyno turned into a disappointment when the Silvia put down 350whp. Tim switched to a Z32 MAF, 350Z coil packs, and fixed the fuel hang up.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/features/446-whp-nissan-silvia-s15/2/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT Issue #220: 446 WHP Nissan Silvia S15 (page 2, spec sheet)",
+          "kind": "article",
+          "quote": "'2000 Nissan Silvia Spec-R / Chassis Code: S15 / ... / Peak Boost: 18 psi / Fuel: 93 Octane / ... / Peak Horsepower (@ RPM): 446whp @ 7,700 RPM / Peak Torque (@ RPM): 332 lb-ft @ 5,800 RPM / Dyno Type: Dynojet / ... / Block Modifications: Stock Bottom End / ... / Compression Ratio: 8.5:1 / Camshafts: Brian Crower Stage 2 264/264 / ... / Exhaust Manifold: Mazworx SS T3 Top Mount / Exhaust System / Downpipe: HKS Hi-Power Exhaust, Mazworx Downpipe / Wastegate: Precision 46mm / ... / Intercooler: Blitz / Fuel Injectors: ID1050x (Injector Dynamics) / ... / Turbocharger: Precision 5858 Turbo / Turbine Wheel Specs: 58mm / Compressor Wheel Specs: 58mm / Turbine Housing: .82A/R / ... / Transmission: 350Z CD009 (SRVQ Bell Housing Adapter Kit from Mazworx)'"
+        }
+      ],
+      "confidence": "Medium-low. Sure of: the numbers, boost, fuel, parts (magazine spec sheet). Not known: Dynojet model, correction, gear, weather. Has aftermarket cams and a swapped gearbox, so it only fits as a stretch test of a big single turbo.",
+      "notes": "Only 'bigger single turbo on pump fuel' S15 build found with a named dyno. Treat the drivetrain as CD009, not the S15 6MT."
+    },
+    {
+      "id": "s15-advance-yp-td06h20g-dynapack-100oct",
+      "summary": "Advance (Yokohama) S15 with a YP Turbine (TD06H-20G frame) at 1.5 kg/cm2, HKS 256 cams, F-CON V Pro, 100 octane: DSPORT says it 'put down 409.12hp' on a Dynapack (spec sheet 414.8 PS @ 6,900 rpm).",
+      "usable": false,
+      "whyNotUsable": "Unclear whether the Dynapack figure is hub power or a TCF-scaled engine estimate (Japanese Dynapack printouts often apply a TCF, e.g. 1.150 at Rise Up above; 414.8 PS at the hubs would be a lot for a TD06H-20G). Also aftermarket cams. Would become usable if the printout showed TCF = 1.0.",
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM (Japan)",
+        "grade": "not stated",
+        "gearbox": "factory six-speed (article); final drive 4.111:1",
+        "year": "2000"
+      },
+      "engine": "SR20DET 1,998 cc, stock bottom end, HKS 256/256 cams, Tomei 1.2 mm head gasket",
+      "dyno": {
+        "make": "Dynapack",
+        "model": "not stated",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "not stated (Japan)"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "409.12 hp @ 6,900 rpm (= 414.8 PS per spec sheet)",
+        "peakWheelTorque": "348.63 lb-ft @ 5,500 rpm (48.2 kgm)",
+        "howRead": "article text and spec sheet"
+      },
+      "boost": {
+        "peak": "1.5 kg/cm2",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "spec sheet"
+      },
+      "fuel": "100-octane (Japan)",
+      "mods": {
+        "turbo": "YP Turbine (Yashio Factory x GP Sports), TD06H-20G frame, 10 cm2 turbine housing, HKS actuator, HKS EVC6-IR",
+        "turboSpecs": {
+          "compressor": "68 mm major, 52.6 mm inducer",
+          "turbine": "65 mm major, 55.1 mm exducer",
+          "housing": "10 cm2",
+          "source": "DSPORT spec sheet; maker data not collected (build not usable)"
+        },
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "HPI Hi-Spec front-mount",
+        "exhaust": "HPI custom 4-into-1 manifold, GP Sports EXAS F1",
+        "intake": "APEXi cone filter, GReddy intake manifold, N15 throttle body",
+        "injectors": "SARD 850 cc/min",
+        "fuelPump": "NISMO",
+        "ecu": "HKS F-CON V Pro",
+        "cams": "HKS 256 deg IN/EX",
+        "internals": "",
+        "gearbox": "factory 6-speed, NISMO Coppermix clutch, NISMO GT LSD",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/s15-built-for-fast-laps-and-daily-commutes/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT: S15 Built for Fast Laps and Daily Commutes (Advance, Yokohama)",
+          "kind": "article",
+          "quote": "'Tested on a Dynapack dynamometer, the S15 put down 409.12hp at 6,900 RPM and 348.63lb- of torque at 5,500 RPM.' Spec sheet: 'Peak Boost: 1,5 kg/cm2 / Fuel: 100-octane / ... / Peak Horsepower (@ RPM): 414.8 PS @ 6,900 RPM / Peak Torque (@ RPM): 48.2kgm @# 5,500 RPM / Dyno Type: Dynapack Dynamometer / Camshafts: HKS 256-degree (IN), 256-degree (EX) / ... / Turbocharger: YP Turbocharger / Frame: TD06H-20G / Compressor Wheel Specs: 68mm Major, 52.6mm Inducer / Turbine Wheel Speds: 65mm Major, 55.1mm Exducer / Turbine Housing: 10cm2 / ... / Final Drive: 4.111:1'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-phoenix-trust-t518z-2015",
+      "summary": "Phoenix Power (Japan) S15, owned since new, Trust T518Z kit at 1.03 falling to 0.85 kg/cm2 with stock AFM and injectors: graph shows 271.1 PS measured (計測馬力) and 309.5 PS 'corrected' (修正馬力 = measured + loss).",
+      "usable": false,
+      "whyNotUsable": "Dyno make not identified: the graph is a software window titled 'DYNO SIMULATOR' (header 'S15 150806 T.DYN') and the pages read do not name the chassis dyno. Fuel and weather correction not stated. The page's headline 309.5 PS is an engine-equivalent figure.",
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM (Fukui)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "SR20DET, stock engine, over 160,000 km",
+      "dyno": {
+        "make": "not stated (software title 'DYNO SIMULATOR')",
+        "model": "not stated",
+        "type": "roller (the site mentions tyres slipping on the dyno for another S15)",
+        "mode": "not stated",
+        "where": "Phoenix Power, Gifu/Fukui, Japan"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "271.1 PS measured (計測馬力), about 6,500-6,800 rpm (read off) [= 267.4 hp]; 309.5 PS '修正馬力' (measured + 損失馬力 loss)",
+        "peakWheelTorque": "40.9 kgm '修正トルク' (loss-corrected, not a wheel figure)",
+        "howRead": "read off the graph image"
+      },
+      "boost": {
+        "peak": "1.03 kg/cm2 falling to 0.85",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "page text 'ブースト圧 1.03 → 0.85kg/cm2'"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "Trust T518Z turbo kit (fitted because the stock turbo water line failed)",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "Trust",
+        "exhaust": "Trust stainless manifold; Blitz front pipe; A'PEXi catalyzer and muffler",
+        "intake": "A'PEXi Power Intake; stock AFM",
+        "injectors": "stock",
+        "fuelPump": "not stated",
+        "ecu": "A'PEXi Power FC; Blitz SBC-DC",
+        "cams": "not stated",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "http://www.phoenixs.co.jp/phoenixs/tuning/nissan/sr20/vol1/sr20_01.htm",
+          "accessed": "2026-09-30",
+          "title": "Phoenix Power: シルビア・180SX チューニング情報 (SR20 tuning results page)",
+          "kind": "shop page",
+          "quote": "'福井県Ｎ様Ｓ１５は新車からズーッと乗っておられ ２０年程ブーストアップのままのっておられましたが タービンへ行く純正の水ラインパイプが壊れてしまったので それを使わなくて済むＴＲＵＳＴのＴ５１８Ｚタービンキットを装着しました。 エアフロやインジェクターｅｔｃは純正のままで低いブーストのままセッティングいたしました。' SPEC: 'ＡＰＥＸ パワーインテーク、パワーＦＣ、キャタライザー、マフラー / ＴＲＵＳＴ Ｔ‐５１８ＺタービンＫＩＴ、インタークーラー、ステンＥＸマニ / ＢＬＩＴＺ ＳＢＣ‐ＤＣ、フロントパイプ' 'ブースト圧 1.03 → 0.85kg/cm2 309.5ｐｓ 40.9kgm'"
+        },
+        {
+          "url": "http://www.phoenixs.co.jp/phoenixs/tuning/nissan/sr20/vol1/nakamura/g1.gif",
+          "accessed": "2026-09-30",
+          "title": "Phoenix Power power-check graph for this car",
+          "kind": "dyno sheet image",
+          "quote": "read from image: window title 'DYNO SIMULATOR' / 'S15 150806 T.DYN' / 'MAX-> 271.1PS 309.5PS 40.9kgm' / legend '計測馬力 PS' (measured), '損失馬力 PS' (loss), '修正馬力 PS' (corrected = measured + loss), '修正トルク kgm', '空燃比'."
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": "The same page lists more S15s (HKS GT-RS at 1.20→1.12 kg/cm2 '397.9ps', at 1.60→1.32 '390.4ps', GT-RS with 256 cams at 1.48→1.39 '447.8ps'), but their graph images return 404 and the figures are the loss-corrected type. If the parent can identify Phoenix's dyno, the 271.1 PS measured figure here could be reconsidered."
+    },
+    {
+      "id": "s15-dsport-365hp-jdm-hks-gtrs",
+      "summary": "DSPORT 'Show To Go | 365WHP JDM Silvia S15': HKS GT-RS, HKS 264 cams, 20 psi, 100 octane, reflashed ECU.",
+      "usable": false,
+      "whyNotUsable": "The article text says '365 horsepower and 305 lb-ft of torque at the flywheel' (despite the WHP headline) and names no dyno.",
+      "vehicle": {
+        "chassis": "S15",
+        "market": "JDM (Japan)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "1999"
+      },
+      "engine": "SR20DET 1,998 cc, factory shortblock, unported head, HKS 1.2 mm head gasket, HKS 264 cams",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "none: '365 horsepower ... at the flywheel' (spec sheet '365.3 Horsepower')",
+        "peakWheelTorque": "305.2 lb-ft (flywheel)",
+        "howRead": "article text"
+      },
+      "boost": {
+        "peak": "20 psi",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "spec sheet"
+      },
+      "fuel": "100-octane unleaded (Japan)",
+      "mods": {
+        "turbo": "HKS GT-RS (GT28RS frame; compressor 71.1 mm major / 51.2 mm minor; turbine 53.8 / 47.0 mm; GT25 0.64 A/R) per DSPORT",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "GReddy Spec-R FMIC",
+        "exhaust": "Tomei Expreme manifold, Tomei O2 housing, GP Sports EXAS",
+        "intake": "HKS Racing Suction, N15 70 mm throttle body",
+        "injectors": "HKS 740 cc/min",
+        "fuelPump": "HKS 260 lph",
+        "ecu": "reflashed factory ECU, Blitz Dual-SBC",
+        "cams": "HKS 264 deg IN/EX",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/features/show-to-go-365whp-jdm-silvia-s15-commute-racer/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT: Show To Go | 365WHP JDM Silvia S15 Commute Racer",
+          "kind": "article",
+          "quote": "'A Blitz Dual-SBC electronic boost control holds the boost pressure at 20 psi, while a re-flashed ECU manages the higher- flow injectors ... this combination currently generates 365 horsepower and 305 lb-ft of torque at the flywheel.'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-okracing-stockt28-poncam-312ps",
+      "summary": "OK Racing (Shizuoka) street S15 on the stock turbo with Tomei Poncam, SARD 650 cc, R35 AFM, Altrack S4 manifold and Power FC: '312ps' at 1.2 kg/cm2 (WebOption / Motor-Fan).",
+      "usable": false,
+      "whyNotUsable": "Dyno not named; '実測312馬力' is almost certainly an engine-equivalent figure (a stock T28 cannot make 312 PS at the wheels); the car was built from an NA automatic S15 with a turbo engine and 6MT fitted.",
+      "vehicle": {
+        "chassis": "S15 (converted from an NA/AT car)",
+        "market": "JDM",
+        "grade": "NA/AT base converted",
+        "gearbox": "Nissan 6MT fitted",
+        "year": "not stated"
+      },
+      "engine": "SR20DET (fitted into an NA car), Tomei Poncam",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "none (312 PS, basis not stated)",
+        "peakWheelTorque": "not stated",
+        "howRead": "article text"
+      },
+      "boost": {
+        "peak": "1.2 kg/cm2",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "article"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "stock",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "Altrack Type S4 equal-length manifold",
+        "intake": "R35 GT-R AFM",
+        "injectors": "SARD 650 cc",
+        "fuelPump": "",
+        "ecu": "Power FC",
+        "cams": "Tomei Poncam",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://motor-fan.jp/article/186368/",
+          "accessed": "2026-09-30",
+          "title": "WebOption (Motor-Fan), 7 May 2025: 「これぞS15シルビア最強ブーストアップ仕様！」",
+          "kind": "article",
+          "quote": "'ベースには程度の良いNA＆AT車をチョイス。そこにターボエンジンと純正6速MTを組み合せて公認を取得している。' ... '東名パワードのポンカム、インジェクター容量のアップ(サード650cc)などは行っているものの、タービン自体はノーマルを使用。パワーFCによるセッティングによって、最大ブースト圧1.2キロ時に312psを発揮する仕様だ。'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-apex-other-results",
+      "summary": "Other Tuned by Apex / Tuned by Anton S15 pages: 262 kW 2.3 L (GTX2867); 246 kW E85 / 224 kW 98 RON 'SR20de+t' with T518Z; 314 kW E85 'Stage 3'; 204 kW 'Tune + RG240'; '200SX 2871R' 229 kW.",
+      "usable": false,
+      "whyNotUsable": "262 kW car is a 2.3 L stroker; the 246/224 kW car is an SR20DE (NA engine) turbo conversion, not an SR20DET; the 314 kW and 204 kW pages give only part categories (turbo, headers, 'Engine Components' unnamed) and no sheet; the '200SX 2871R' page is an S14 ('Series S14').",
+      "vehicle": {
+        "chassis": "S15 (except the 2871R car, S14)",
+        "market": "Australia (Melbourne)",
+        "grade": "not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "various",
+      "dyno": {
+        "make": "Mainline",
+        "model": "AWD (per pages)",
+        "type": "roller per the sheets seen; pages say 'Hubs' (template)",
+        "mode": "not stated",
+        "where": "Tuned by Apex, Epping, Melbourne"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "see summary",
+        "peakWheelTorque": "see pages",
+        "howRead": "shop page text / structured data"
+      },
+      "boost": {
+        "peak": "not stated except '20lbs' (T518Z E85 car)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "page text"
+      },
+      "fuel": "98 RON / E85",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "The 'Stock 130 kW / 218 Nm' and 'Stock 138 kW / 224 Nm' figures repeat across different cars, so they are reference runs, not measured stock values for each car."
+      },
+      "sources": [
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/9910",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Nissan Silvia S15, Stage 3 (9910)",
+          "kind": "shop page",
+          "quote": "'S15 2.3lt producing 260kw during breakin. 272 BC cams, GTX2867 .64 turbocharger'"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-s15-3",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Nissan Silvia S15 3",
+          "kind": "shop page",
+          "quote": "'SR20de+t with a T518z turbocharger, fuel system and basic bolt ons producing +240kw @ 20lbs on e85. Engine management is a Link G4X'; structured data 'e85Kw:246 ... ron98Kw:224'"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-s15",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Nissan Silvia S15, Stage 3 Haltech",
+          "kind": "shop page",
+          "quote": "'Fuel E85' ... 'Stock 138kW → Tuned 314kW' ... modifications list 'Intake, Exhaust, Down Pipe, Intercooler, Fuel System Upgrade, Ignition Upgrade, Engine Components, Transmission Components, Turbocharger, Headers' (no makes)"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-sr20-tune-rg240",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Nissan Silvia SR20 - Tune + RG240",
+          "kind": "shop page",
+          "quote": "'Series S15' ... 'We recalibrated the vehicle to meet ADR37/01 emissions requirements solely through tuning' ... 'Tuned 204kW'"
+        },
+        {
+          "url": "https://tunedbyapex.com.au/dyno-results/nissan-silvia-200sx-2871r",
+          "accessed": "2026-09-30",
+          "title": "Tuned by Apex: Nissan Silvia 200SX 2871R",
+          "kind": "shop page",
+          "quote": "'Series S14' ... 'The simple Nissan 200SX combo GT2871R, Apexi Power FC, injectors, intercooler & exhaust producing 229kW @ 19psi.'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-dsport-swaps-and-strokers",
+      "summary": "DSPORT S15 features that fail the engine rule: D1-spec S15 (HKS 2.2 L stroker, GT2835 Pro, 450 hp at 1.4 kg/cm2); Nob Taniguchi's 481 whp S15 (2,139 cc, Dynojet, 22 psi); Ryan Litteral's 998 whp S15 (RB26); 460 whp 2JZ S15; RS-R VQ S15.",
+      "usable": false,
+      "whyNotUsable": "Stroker kits or engine swaps.",
+      "vehicle": {
+        "chassis": "S15",
+        "market": "various",
+        "grade": "various",
+        "gearbox": "various",
+        "year": "various"
+      },
+      "engine": "not stock-displacement SR20DET",
+      "dyno": {
+        "make": "various (Nob Taniguchi: 'Dyno Type: Dynojet')",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "see summary",
+        "peakWheelTorque": "not used",
+        "howRead": "article text"
+      },
+      "boost": {
+        "peak": "not used",
+        "atPeakPower": "not used",
+        "fullBoostRpm": "not used",
+        "howKnown": "n/a"
+      },
+      "fuel": "not used",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "HKS claim quoted in the Taniguchi article ('HKS tested the Step 1 camshafts with the GT2835R at 22 psi on a otherwise-stock SR20DET engine and generated over 470 horsepower') is a vendor claim without a dyno result, so not used."
+      },
+      "sources": [
+        {
+          "url": "https://dsportmag.com/the-cars/formula-for-a-winning-d1-spec-s15/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT: Formula for a winning D1-spec S15",
+          "kind": "article",
+          "quote": "'Kazama turned to the 2.2-liter stroker kit (capacity upgrade kit) from HKS' ... 'At 1.4 kg/cm2 (20 psi), Kazama's SR20DET produces 450 horsepower.'"
+        },
+        {
+          "url": "https://dsportmag.com/the-cars/features/nob-taniguchis-481-whp-nissan-s15/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT: Nob Taniguchi's 481 WHP Nissan S15",
+          "kind": "article",
+          "quote": "spec sheet page 2: 'Peak Boost: 22 psi / Fuel: 100-octane unleaded / Displacement (cc): 2,139cc / Peak Horsepower (@ RPM): 481 whp @ 6,000 RPM / Dyno Type: Dynojet'"
+        },
+        {
+          "url": "https://dsportmag.com/tag/s15/",
+          "accessed": "2026-09-30",
+          "title": "DSPORT tag page 'S15'",
+          "kind": "article",
+          "quote": "lists 'Ryan Litteral's 998 WHP Nissan S15' (RB26), '460 WHP 2JZ Swapped Nissan S15', 'RS-R's Turbocharged VQ Swapped Nissan S15'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-riseup-2021-gt2540-converted",
+      "summary": "Garage Rise Up 2021: Spec-S with a turbo engine swapped in, GT2540 turbo, tired engine: '327.2PS, 47.1kg' on their Dynapack.",
+      "usable": false,
+      "whyNotUsable": "NA Spec-S converted to turbo (engine origin unknown), parts list incomplete, figure is the TCF-scaled type.",
+      "vehicle": {
+        "chassis": "S15 (Spec-S base)",
+        "market": "JDM",
+        "grade": "Spec-S converted",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "turbo SR20 swapped into a Spec-S, condition unknown",
+      "dyno": {
+        "make": "Dynapack (shop's dyno)",
+        "model": "not stated in this post",
+        "type": "hub",
+        "mode": "not stated",
+        "where": "Garage Rise Up, Sapporo"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "none usable ('パワー327.2PS')",
+        "peakWheelTorque": "'47.1kg'",
+        "howRead": "blog text"
+      },
+      "boost": {
+        "peak": "'ブースト控えめ' (kept low), value not stated",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "blog text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "GT2540",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "R35 AFM",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "Power FC",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": ""
+      },
+      "sources": [
+        {
+          "url": "https://www.do-blog.jp/riseup/article/4814/",
+          "accessed": "2026-09-30",
+          "title": "Garage Rise Up blog, 29 Oct 2021: シルビア S15 パワーFC 現車合わせセッティング！",
+          "kind": "shop page",
+          "quote": "'スペックSにターボエンジンを積み替えとの事でしたが…' ... 'GT2540タービンでしたが、走行不明エンジンだったのでブースト控えめでセッティング終了しました。 パワー327.2PS、トルク47.1kg'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    },
+    {
+      "id": "s15-forum-anecdotes",
+      "summary": "Forum claims without sheets: nemesis15's JDM Spec-R '288hp at the rear wheels' at 15-17 psi with Nistune and stock AFM/injectors (Silvia Owners Club, 2011); AJ-s15 '162 RWKW's with just the 3.5'' exhaust, and a little more boost' and 'The car made 125kw atw' (PerformanceForums, 2003).",
+      "usable": false,
+      "whyNotUsable": "No sheet, no dyno make; the 288 hp claim was disputed by several members as implausible for the parts.",
+      "vehicle": {
+        "chassis": "S15",
+        "market": "Australia (both)",
+        "grade": "Spec-R / not stated",
+        "gearbox": "not stated",
+        "year": "not stated"
+      },
+      "engine": "SR20DET",
+      "dyno": {
+        "make": "not stated",
+        "model": "not stated",
+        "type": "not stated",
+        "mode": "not stated",
+        "where": "not stated"
+      },
+      "correction": {
+        "value": "not stated",
+        "howKnown": "not in the source"
+      },
+      "testConditions": {
+        "temperature": "not stated",
+        "pressure": "not stated",
+        "humidity": "not stated",
+        "howKnown": "not in the source"
+      },
+      "gear": "not stated",
+      "result": {
+        "peakWheelPower": "claims only (288 hp; 162 kW; 125 kW)",
+        "peakWheelTorque": "not stated",
+        "howRead": "forum text"
+      },
+      "boost": {
+        "peak": "15 psi spiking 17 (nemesis15); not stated (others)",
+        "atPeakPower": "not stated",
+        "fullBoostRpm": "not stated",
+        "howKnown": "forum text"
+      },
+      "fuel": "not stated",
+      "mods": {
+        "turbo": "",
+        "turboSpecs": null,
+        "supercharger": "none",
+        "superchargerSpecs": null,
+        "intercooler": "",
+        "exhaust": "",
+        "intake": "",
+        "injectors": "",
+        "fuelPump": "",
+        "ecu": "",
+        "cams": "",
+        "internals": "",
+        "gearbox": "",
+        "other": "context only"
+      },
+      "sources": [
+        {
+          "url": "https://www.silviaoc.com/discuss/threads/s15-power-figures.8640/",
+          "accessed": "2026-09-30",
+          "title": "Silvia Owners Club: s15 power figures (2011)",
+          "kind": "thread",
+          "quote": "nemesis15: 'i got a spec r jdm s15 ... pod filter / nistune / 3inch turbo back exhaust / boost controller / fmic / bov / fuel pump ... its been tuned to 15 psi but spikes to 17 ... it pulls 288hp at the rear wheels'; replies: 'sounds a little high, maybe the dyno reads high' ... 'stock injectors will max out at 305 to 310bhp atf'"
+        },
+        {
+          "url": "https://performanceforums.com/forums/archive/index.php/t-67145381.html",
+          "accessed": "2026-09-30",
+          "title": "PerformanceForums: s15 with a 3\" exhaust (2003)",
+          "kind": "thread",
+          "quote": "AJ-s15: 'i got 162 RWKW's with just the 3.5'' exhaust, and a little more boost'; ViNcEnXo: 'The car made 125kw atw....'; IMOA: 'the most I've seen is 155kw atw from just an exhaust, no boost controller, at unigroup.'"
+        }
+      ],
+      "confidence": "rejected; data recorded for context only",
+      "notes": ""
+    }
+  ],
+  "gates": [
+    "https://www.350z-tech.com/threads/350z-vs-s15-200sx.44657/ — WebFetch was redirected to https://tollbit.350z-tech.com/threads/350z-vs-s15-200sx.44657/ (TollBit, a paid access / licensing gate for automated readers; curl got a proof-of-work bot challenge). Not followed. A search-result snippet (not verified) says this thread reports 'A dead stock auto S15 pulled 123 rwkW on CRD's dyno (Dyno Dynamics in Shootout Mode) at a NSCC Dyno Day' and that a 'standard S15 pulls around 118 - 122 on dyno dynamics dynos'."
+  ],
+  "notFound": [
+    "Dynojet 248C sheets for the DSPORT S15: only the text numbers are online; the #57 image named 'BaselineDyno' is actually the DTS 'stock final' run.",
+    "A stock Australian 200SX S15 (147 kW) or stock JDM Spec-R dyno sheet on Dyno Dynamics / Mainline: not found. SAU (sau.com.au) returned a Cloudflare 'Sorry, you have been blocked' page to curl and HTTP 403 to WebFetch for every thread tried (e.g. 'S15 Turbo Discussion' /topic/114711, '218.7 Rwkw On Stock Turbo !' /topic/89010, 'Red S15 200sx Silvia Manual' /topic/324572, 'Nissan 2002 S15 200SX Turbo' /topic/486773) — a bot block, not a login or terms page; not bypassed. The 350z-tech thread is gated (see gates). PerformanceForums only has anecdotes.",
+    "S15 builds on a Garrett GT2860RS / GT2871R / GT3071R, HKS GT-SS / GT-RS or Tomei turbo with a readable sheet and a named dyno: none found. Tuned by Apex's 'GT2871R' car is an S14; Phoenix Power's HKS GT-RS S15 graphs return 404 and Phoenix's dyno make is not stated.",
+    "An E85 S15 build with a sheet and a full parts list: not found (Tuned by Apex E85 entries rejected: one is an SR20DE+T conversion, one lists no part makes).",
+    "DSPORT S15 Test & Tune Part 4 (Tomei ARMS B8446 turbo, HKS Twin Power), announced at the end of Part 3: not online (not in DSPORT's Silvia/S15 tag pages or site search).",
+    "Japanese magazine (Option / Hyper Rev) or maker (HKS, Tomei, Trust/GReddy, Blitz, Nismo, Kakimoto, APEXi) S15 chassis-dyno tests with a named dyno: not found. An Option web article on Phoenix Power's chassis dyno (https://option.tokyo/2021/03/27/96577/) now redirects to the WebOption home page.",
+    "Maker data for the Precision 5858 (compressor map, max flow, rated hp): precisionturbo.net / precisionturbo.com is behind an Incapsula bot wall (403 / JS challenge) for curl and WebFetch.",
+    "trak-life.com SR20DET dyno-sheet database (search results listed 'SR20DET: Garrett GT2871R - 242kW', '268kW', '267kW', 'GTX2863 - 220kW', 'T28BB - 201kw', 'Trust T518Z - 215kW'): the live pages are 404 and web.archive.org is blocked by this session's egress policy, so the chassis (S13/S14/S15) and sheets could not be checked.",
+    "Driftworks (UK) forum and blog S15 rolling-road results ('Project DWS15', 'S15 spec r bhp?', '...375.5bhp @1.2bar'): Cloudflare challenge / HTTP 403 for curl and WebFetch; not bypassed.",
+    "Spoonman's S15 dyno sheets: the Photobucket originals are gone and the forum image proxy now returns a placeholder.",
+    "Autolife Hano (Shiga) S15 boost-up posts on goo-net pit (2024): parts lists only, no dyno numbers.",
+    "US 25-year-rule importers (Motorex, Top Rank, JDM Legends, Sunrise, Duncan) and zilvia.net S15 dyno posts: not searched in depth; the session's web-search budget ran out part-way through the research.",
+    "Weather lines for the DSPORT DTS runs and any boost traces for the DSPORT car: not printed on the published sheets."
+  ]
+}
