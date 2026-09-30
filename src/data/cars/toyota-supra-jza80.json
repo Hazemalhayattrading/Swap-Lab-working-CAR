@@ -564,6 +564,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1410,
         "unit": "kg",
         "confidence": "verified",
@@ -810,6 +811,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1420,
         "unit": "kg",
         "confidence": "verified",
@@ -1050,6 +1052,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1450,
         "unit": "kg",
         "confidence": "verified",
@@ -1279,6 +1282,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1430,
         "unit": "kg",
         "confidence": "verified",
@@ -1492,6 +1496,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1440,
         "unit": "kg",
         "confidence": "verified",
@@ -1704,6 +1709,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1470,
         "unit": "kg",
         "confidence": "verified",
@@ -1916,6 +1922,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1430,
         "unit": "kg",
         "confidence": "verified",
@@ -2096,6 +2103,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1440,
         "unit": "kg",
         "confidence": "verified",
@@ -2287,6 +2295,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1430,
         "unit": "kg",
         "confidence": "verified",
@@ -2522,6 +2531,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1450,
         "unit": "kg",
         "confidence": "verified",
@@ -2774,6 +2784,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -3014,6 +3025,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -3248,6 +3260,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1540,
         "unit": "kg",
         "confidence": "verified",
@@ -3494,6 +3507,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1570,
         "unit": "kg",
         "confidence": "verified",
@@ -3710,6 +3724,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -3896,6 +3911,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -4082,6 +4098,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -4269,6 +4286,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -4449,6 +4467,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1500,
         "unit": "kg",
         "confidence": "verified",
@@ -4658,6 +4677,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -4892,6 +4912,7 @@
         "note": "The catalogues say only 'LSD standard'; the Torsen type comes from the axle-code tables (B = Torsen)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -5119,6 +5140,7 @@
         "note": "Open differential as standard; a Torsen LSD was a factory option (axle code xxB)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1500,
         "unit": "kg",
         "confidence": "verified",
@@ -5331,6 +5353,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3215,
         "unit": "lb",
         "confidence": "verified",
@@ -5545,6 +5568,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3275,
         "unit": "lb",
         "confidence": "single-source",
@@ -5729,6 +5753,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3255,
         "unit": "lb",
         "confidence": "single-source",
@@ -5901,6 +5926,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3315,
         "unit": "lb",
         "confidence": "single-source",
@@ -6067,6 +6093,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3210,
         "unit": "lb",
         "confidence": "single-source",
@@ -6221,6 +6248,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3270,
         "unit": "lb",
         "confidence": "single-source",
@@ -6369,6 +6397,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3265,
         "unit": "lb",
         "confidence": "single-source",
@@ -6523,6 +6552,7 @@
         "note": "Both open (A05A/A01A) and Torsen (A05B/A01B) codes exist for the base car, i.e. LSD optional. The 1997 brochure appears to list the Torsen diff as not available on the base car; that scan is too blurred to rely on."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3325,
         "unit": "lb",
         "confidence": "single-source",
@@ -6689,6 +6719,7 @@
         "note": "Toyota's 1998 Product Source and brochure make the Torsen LSD standard on every 1998 Supra (two Toyota documents on one hosting site). The open A01A code in the axle-code table would then apply to MY1997 only."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3265,
         "unit": "lb",
         "confidence": "verified",
@@ -6885,6 +6916,7 @@
         "note": "Toyota's 1998 Product Source and brochure make the Torsen LSD standard on every 1998 Supra (two Toyota documents on one hosting site). The open A01A code in the axle-code table would then apply to MY1997 only."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3325,
         "unit": "lb",
         "confidence": "single-source",
@@ -7068,6 +7100,7 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3415,
         "unit": "lb",
         "confidence": "single-source",
@@ -7312,6 +7345,7 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3475,
         "unit": "lb",
         "confidence": "single-source",
@@ -7507,6 +7541,7 @@
         "note": "200 mm diff, code A02D (Torsen)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3485,
         "unit": "lb",
         "confidence": "verified",
@@ -7708,6 +7743,7 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3505,
         "unit": "lb",
         "confidence": "verified",
@@ -7927,6 +7963,7 @@
         "note": "220 mm 'big' diff, axle code B07D (2-way Torsen)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3445,
         "unit": "lb",
         "confidence": "single-source",
@@ -8122,6 +8159,7 @@
         "note": "Conflict: the Grannas/SupraForums table lists a 1997-1998 A02A (3.769, open) code, which could be the 1997-98 Turbo automatic. Consumer Guide and mkiv.supras.org.nz say the export Turbo had the LSD as standard, so Torsen is kept. Toyota's 1998 Product Source lists the Torsen LSD as standard on the 1998 Turbo (both gearboxes); no Toyota document for MY1997 states the differential type."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3515,
         "unit": "lb",
         "confidence": "single-source",
@@ -8317,6 +8355,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1615,
         "unit": "kg",
         "confidence": "single-source",
@@ -8480,6 +8519,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1620,
         "unit": "kg",
         "confidence": "estimated",

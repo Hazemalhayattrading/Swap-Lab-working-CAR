@@ -1,0 +1,661 @@
+{
+  "$comment": "Reference atmospheres of the engine rating standards (BUILD_PROMPT 6.5). Every factory figure is compared at its own standard's reference; figures printed without a standard use the market rule in unknownStandard and are flagged as assumed.",
+  "standards": [
+    {
+      "id": "JIS-net",
+      "name": "JIS D 1001 (net)",
+      "covers": "JIS D 1001:1993 自動車用エンジン出力試験方法, net power (accessory condition B), revised 1993-08-01 and still valid. Figures published before August 1993 were rated to the 1982 edition, whose text was not found; it corresponds to ISO 1585:1982, which has the same 25 °C / 99 kPa dry reference, so it is assumed to match.",
+      "referenceTemperature": {
+        "value": 25,
+        "unit": "°C",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "標準大気状態 この試験における標準大気状態は，次のとおりとする。 標準大気温度 θ0＝25℃ 標準乾燥大気圧力 p0＝99kPa"
+          }
+        ],
+        "note": "Read in the kikakurui.com reproduction of the JIS text; the JSA catalogue lists ISO 1585:1982 (MOD) as the corresponding international standard."
+      },
+      "referencePressure": {
+        "value": 99,
+        "unit": "kPa",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "標準大気状態 この試験における標準大気状態は，次のとおりとする。 標準大気温度 θ0＝25℃ 標準乾燥大気圧力 p0＝99kPa"
+          }
+        ]
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "(2) 圧力 5.1(9)に規定する大気圧から5.1(5)に規定する水蒸気分圧を減じた乾燥大気圧力p kPa"
+          }
+        ]
+      },
+      "referenceVapourPressure": {
+        "value": 1,
+        "unit": "kPa",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://webdesk.jsa.or.jp/books/W11M0090/index/?bunsyo_id=JIS+D+1001:1993",
+            "accessed": "2026-09-30",
+            "title": "JSA Webdesk catalogue: JIS D 1001:1993 自動車用エンジン出力試験方法",
+            "note": "対応国際規格 ISO 1585:1982 (MOD) , ISO 2534:1974 (MOD)"
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.2.1.2 Dry pressure (pso) 99 kPa NOTE - The dry pressure is based on a total pressure of 100 kPa and a vapour pressure of 1 kPa."
+          }
+        ],
+        "method": "JIS D 1001:1993 prints only the dry pressure (99 kPa). It corresponds to ISO 1585:1982 (JSA catalogue: 'ISO 1585:1982 (MOD)'), whose note bases 99 kPa dry on 100 kPa total and 1 kPa of water vapour, so 1 kPa is used."
+      },
+      "correction": {
+        "value": "ka = (p0/p)^1.2 × ((θ + 273)/(θ0 + 273))^0.6 for naturally aspirated and pressure-charged spark-ignition engines (p dry pressure in kPa, θ in °C); applies for 80 ≤ p ≤ 110 kPa and 15 ≤ θ ≤ 35 °C, with 0.93 ≤ ka ≤ 1.07.",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "(1) 無過給又は過給火花点火エンジンの出力修正係数kaは，次のとおりとする。"
+          },
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "15≦θ≦35℃ で，かつ，0.93≦ka≦1.07とする。kaがこの範囲外で，かつ，p及びθが制限範囲内にある場合は，修正係数によって修正した出力を示し，試験条件を試験成績表に記録しておく。"
+          },
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "kaの適用範囲を 80≦p≦110kPa"
+          }
+        ]
+      },
+      "fittedEquipment": {
+        "value": "Net power: every accessory the engine needs for its intended use fitted (Table 1, condition B). Gross power (condition A) fits only what the engine needs to run.",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "(1) グロス軸出力 エンジンの運転に必要な附属装置（表1の附属装置装着条件A）だけを装着してエンジン試験台で測定した軸出力。 (2) ネット軸出力 エンジンを特定の用途に使用するのに必要な附属装置（表1の附属装置装着条件B）をすべて装着して測定した軸出力。"
+          },
+          {
+            "url": "https://kikakurui.com/d1/D1001-1993-01.html",
+            "accessed": "2026-09-30",
+            "title": "JIS D 1001:1993 自動車用エンジン出力試験方法 (kikakurui.com reproduction of the JIS text)",
+            "note": "(14) 発電機出力はエンジンの運転に必要な最小出力で試験を行う。"
+          }
+        ]
+      },
+      "notes": "JIS D 1001 is a test code and states no tolerance between declared and measured power. Sodré & Soares (SciELO) give 1013.25 mbar and 293 K for JIS D 1001, which contradicts the JIS text; the JIS text is used."
+    },
+    {
+      "id": "SAE-net",
+      "name": "SAE J1349 (net)",
+      "covers": "SAE J1349 net power: the JUN90 revision, its JUN95 reaffirmation and the AUG2004 revision (the basis of SAE J2723 'SAE Certified' figures). The SAE texts are paid and were not read; the values come from one secondary source (Shelquist Engineering). The MAR2008 and SEP2011 revisions were not seen.",
+      "referenceTemperature": {
+        "value": 25,
+        "unit": "°C",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://wahiduddin.net/calc/calc_cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist: Dyno Correction Factor Calculator (secondary)",
+            "note": "For these calculations, the standard reference conditions are: Air temp 77 deg F (25 deg C), 29.235 Inches- Hg (990 mb) altitude-corrected barometric pressure, 0 ft ( 0 m) altitude, 0% relative humidity."
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist (Shelquist Engineering): Equations: Dyno Correction Factor and Relative Horsepower (secondary)",
+            "note": "The equation for the dyno correction factor given in SAE J1349 JUN90 (for spark ignition gasoline engines operated at full (WOT) throttle), converted to use pressure in mb, is:"
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 99,
+        "unit": "kPa",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://wahiduddin.net/calc/calc_cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist: Dyno Correction Factor Calculator (secondary)",
+            "note": "For these calculations, the standard reference conditions are: Air temp 77 deg F (25 deg C), 29.235 Inches- Hg (990 mb) altitude-corrected barometric pressure, 0 ft ( 0 m) altitude, 0% relative humidity."
+          }
+        ],
+        "note": "990 mb dry-air pressure as quoted by the secondary source."
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist (Shelquist Engineering): Equations: Dyno Correction Factor and Relative Horsepower (secondary)",
+            "note": "Pd = the pressure of the dry air, mb Tc = ambient temperature, deg C The pressure of the dry air Pd, is found by subtracting the vapor pressure Pv from the actual air pressure."
+          }
+        ]
+      },
+      "referenceVapourPressure": {
+        "value": 1,
+        "unit": "kPa",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://wahiduddin.net/calc/calc_cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist: Dyno Correction Factor Calculator (secondary)",
+            "note": "For these calculations, the standard reference conditions are: Air temp 77 deg F (25 deg C), 29.235 Inches- Hg (990 mb) altitude-corrected barometric pressure, 0 ft ( 0 m) altitude, 0% relative humidity."
+          },
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Die Bezugszustände der europäischen Richtlinie und der SAE-Richtlinie unterscheiden sich nicht. Der SAE-Korrekturfaktor beinhaltet allerdings einen Wirkungsgrad-Korrekturwert, so dass sich geringfügige Unterschiede der Leistungswerte ergeben."
+          }
+        ],
+        "method": "The SAE text is paid and was not read. The secondary calculator quotes 0 % relative humidity at 990 mb, while German Wikipedia says the SAE and EU reference conditions do not differ, and the EU reference puts 1 kPa of vapour on top of 99 kPa dry. 1 kPa is used, as for the other dry-basis standards; 0 kPa would lower the reference total pressure by 1 %."
+      },
+      "correction": {
+        "value": "cf = 1.180 × [(990/Pd) × ((T + 273)/298)^0.5] − 0.180 (JUN90; AUG2004 uses 1.176 and 0.176), with Pd the dry-air pressure in mb and T in °C. The constants embed an assumed 85 % mechanical efficiency.",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist (Shelquist Engineering): Equations: Dyno Correction Factor and Relative Horsepower (secondary)",
+            "note": "The equation for the dyno correction factor given in SAE J1349 JUN90 (for spark ignition gasoline engines operated at full (WOT) throttle), converted to use pressure in mb, is:"
+          },
+          {
+            "url": "https://wahiduddin.net/calc/cf.htm",
+            "accessed": "2026-09-30",
+            "title": "Richard Shelquist (Shelquist Engineering): Equations: Dyno Correction Factor and Relative Horsepower (secondary)",
+            "note": "Furthermore, the SAE J1349 JUN90 standard includes an assumed mechanical efficiency of 85% in order to provide an estimate of the true engine horsepower (without accessories)."
+          }
+        ]
+      },
+      "fittedEquipment": {
+        "value": "Net power with the engine as installed. Before the 2004 revision an engine could be tested without the power-steering pump; from AUG2004 it carries the same hardware as in the vehicle (WardsAuto, 2005).",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://www.wardsauto.com/internal-combustion-engines/sae-adopts-new-engine-power-test",
+            "accessed": "2026-09-30",
+            "title": "WardsAuto, 'SAE Adopts New Engine-Power Test', Bill Visnic, 11 April 2005",
+            "note": "Before, the engine could be tested without the power steering pump, disregarding the parasitic drag the pump creates."
+          },
+          {
+            "url": "https://www.wardsauto.com/internal-combustion-engines/sae-adopts-new-engine-power-test",
+            "accessed": "2026-09-30",
+            "title": "WardsAuto, 'SAE Adopts New Engine-Power Test', Bill Visnic, 11 April 2005",
+            "note": "an important provision of the new J1349 standard “says you have to (test the engine with) the same hardware that's in the vehicle.” That means, among other things, the hydraulic power steering pump now must be attached to the test engine."
+          }
+        ]
+      },
+      "notes": "Sodré & Soares (SciELO) quote 302.4 K for SAE J1349; not adopted (the same paper misstates JIS D 1001). The J1349 test-fuel clause and any declared-power tolerance were not found."
+    },
+    {
+      "id": "DIN-70020",
+      "name": "DIN 70020",
+      "covers": "DIN 70020 (1954) and DIN 70020-6:1976, which returned to the 1954 reference after the 1972 pre-standard DIN 70020-4 (25 °C, 1000 mbar). Withdrawn: DIN ISO 1585:1997-04 replaced DIN 70020-6. The DIN texts are paid and were not read; the values come from two secondary sources that agree.",
+      "referenceTemperature": {
+        "value": 20,
+        "unit": "°C",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Die gemessene Leistung wird auf 760 Torr (= 1013 mbar) und 20 °C umgerechnet, die Luftfeuchtigkeit wird nicht berücksichtigt."
+          },
+          {
+            "url": "https://www.rs-werkstatt.ch/leistungsfragen.html",
+            "accessed": "2026-09-30",
+            "title": "S & RS-Werkstatt AG (Swiss workshop) - Leistungsfragen (secondary)",
+            "note": "DIN 70020 : Basiswerte 1013 mbar, 20 °C Ansauglufttemperatur, Luftfeuchtigkeit wird nicht berücksichtigt."
+          }
+        ],
+        "note": "Two secondary sources agree; the DIN text itself was not read."
+      },
+      "referencePressure": {
+        "value": 1013,
+        "unit": "mbar",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Die gemessene Leistung wird auf 760 Torr (= 1013 mbar) und 20 °C umgerechnet, die Luftfeuchtigkeit wird nicht berücksichtigt."
+          },
+          {
+            "url": "https://www.rs-werkstatt.ch/leistungsfragen.html",
+            "accessed": "2026-09-30",
+            "title": "S & RS-Werkstatt AG (Swiss workshop) - Leistungsfragen (secondary)",
+            "note": "DIN 70020 : Basiswerte 1013 mbar, 20 °C Ansauglufttemperatur, Luftfeuchtigkeit wird nicht berücksichtigt."
+          },
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Im Dezember 1973 wurde der Abschnitt „Leistungen“ von DIN 70020-3 durch die Vornorm DIN 70020-4, Ausgabe Juni 1972 ersetzt, die als Bezugszustand 25 °C und 1000 mbar statt 20 °C und 1013 mbar = 760 Torr vorsieht."
+          },
+          {
+            "url": "https://www.dinmedia.de/en/standard/din-70020-6/2023920",
+            "accessed": "2026-09-30",
+            "title": "DIN Media catalogue: DIN 70020-6:1976-11",
+            "note": "Standard [WITHDRAWN] DIN 70020-6:1976-11 Automotive Engineering; Power German title Kraftfahrzeugbau; Leistungen Publication date 1976-11"
+          }
+        ]
+      },
+      "pressureBasis": {
+        "value": "total",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Die gemessene Leistung wird auf 760 Torr (= 1013 mbar) und 20 °C umgerechnet, die Luftfeuchtigkeit wird nicht berücksichtigt."
+          },
+          {
+            "url": "https://www.rs-werkstatt.ch/leistungsfragen.html",
+            "accessed": "2026-09-30",
+            "title": "S & RS-Werkstatt AG (Swiss workshop) - Leistungsfragen (secondary)",
+            "note": "DIN 70020 : Basiswerte 1013 mbar, 20 °C Ansauglufttemperatur, Luftfeuchtigkeit wird nicht berücksichtigt."
+          }
+        ],
+        "note": "'Die Luftfeuchtigkeit wird nicht berücksichtigt': humidity is not considered, so the pressure is total barometric pressure."
+      },
+      "referenceVapourPressure": {
+        "value": 1,
+        "unit": "kPa",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.2.1.2 Dry pressure (pso) 99 kPa NOTE - The dry pressure is based on a total pressure of 100 kPa and a vapour pressure of 1 kPa."
+          },
+          {
+            "url": "https://www.goauto.com.au/news/holden/vy-commodore-torque-figues-not-what-they-seem/2002-09-23/21981.html",
+            "accessed": "2026-09-30",
+            "title": "GoAuto, 'VY Commodore torque figues not what they seem', Malcolm Livermore, 23 Sep 2002",
+            "note": "\"Hence the Gen III goes from 460Nm VXII DIN to 450Nm VY ECE. However, they are essentially an equivalent figure.\""
+          }
+        ],
+        "method": "DIN 70020 corrects to total pressure and ignores humidity, so it sets no vapour pressure. The model needs one to split total pressure into dry air and vapour and uses 1 kPa, the ISO 1585 reference value. Holden's own figures for the same V8 give a cross-check: 460 N·m DIN against 450 N·m ECE (GoAuto, 2002), 2.2 % apart; with this value the model puts the same LS1 2.7 % higher at the DIN reference than at ECE (tests/calibration/stock.test.ts)."
+      },
+      "fittedEquipment": {
+        "value": "Series engine with its intake and exhaust systems under normal operating conditions; fan, water pump, fuel pump and an unloaded generator driven by the engine; commercial fuel (1954 edition, via German Wikipedia).",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Zu den normalen Betriebsbedingungen gehören reihenmäßige Einstellungen und handelsüblicher Kraftstoff; Lüfter, Wasserpumpe, Kühlluftgebläse, Kraftstoffpumpe, Einspritzpumpe und die unbelastete Lichtmaschine müssen bei der Prüfung vom Motor angetrieben werden."
+          }
+        ]
+      },
+      "declaredTolerance": {
+        "value": "±5 % on re-checks (1954 edition, via German Wikipedia).",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Pferdest%C3%A4rke",
+            "accessed": "2026-09-30",
+            "title": "Wikipedia (de): Pferdestärke - used as a lead only",
+            "note": "Bei Nachprüfungen ist eine Abweichung von ± 5 % zulässig."
+          }
+        ]
+      },
+      "notes": "No DIN 70020 text was accessible; a correction formula was not verified and is not given here."
+    },
+    {
+      "id": "EEC-80/1269",
+      "name": "EEC 80/1269 / ECE R85 (net)",
+      "covers": "Council Directive 80/1269/EEC (1980) and its amendments 88/195/EEC, 89/491/EEC, 97/21/EC and 1999/99/EC, which follow UN ECE Regulation 85 and ISO 1585. The original 1980 annex and its 1988 replacement share the 25 °C / 99 kPa dry reference. Makers' 'ECE' figures are stored under this entry.",
+      "referenceTemperature": {
+        "value": 25,
+        "unit": "°C",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "6.2.1. Temperature (To): 298 K (25 °C)"
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31980L1269",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC of 16 December 1980 (OJ L 375, 31.12.1980, p. 46) - EU Publications Office (Cellar) copy of the EUR-Lex text",
+            "note": "5.2.2.1. Temperature : 25 ºC."
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/42006X1124%2803%29",
+            "accessed": "2026-09-30",
+            "title": "UN/ECE Regulation No 85 (net power), as published in OJ L 326, 24.11.2006, p. 55 (Cellar XHTML)",
+            "note": "Temperature (To): 298 K (25 °C)"
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.2.1.1 Temperature (To) 298 K (25 O C )"
+          }
+        ]
+      },
+      "referencePressure": {
+        "value": 99,
+        "unit": "kPa",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "6.2.2. Dry pressure (pso): 99 kPa Note: The dry pressure is based on a total pressure of 100 kPa and a water vapour pressure of 1 kPa."
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31980L1269",
+            "accessed": "2026-09-30",
+            "title": "Council Directive 80/1269/EEC of 16 December 1980 (OJ L 375, 31.12.1980, p. 46) - EU Publications Office (Cellar) copy of the EUR-Lex text",
+            "note": "5.2.2.2. Dry pressure (ps) : 990 mbar."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.2.1.2 Dry pressure (pso) 99 kPa NOTE - The dry pressure is based on a total pressure of 100 kPa and a vapour pressure of 1 kPa."
+          }
+        ],
+        "note": "The 1980 text prints 990 mbar dry pressure, the same value."
+      },
+      "pressureBasis": {
+        "value": "dry-air",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "ps is the total dry atmospheric pressure in kilopascals (kPa), that is, the total barometric pressure minus water vapour pressure."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "p , is the total dry atmospheric pressure, in kilopascals (kPa) that is to say, the total barometric pressure minus water vapour pressure."
+          }
+        ]
+      },
+      "referenceVapourPressure": {
+        "value": 1,
+        "unit": "kPa",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "6.2.2. Dry pressure (pso): 99 kPa Note: The dry pressure is based on a total pressure of 100 kPa and a water vapour pressure of 1 kPa."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.2.1.2 Dry pressure (pso) 99 kPa NOTE - The dry pressure is based on a total pressure of 100 kPa and a vapour pressure of 1 kPa."
+          }
+        ],
+        "note": "Dry pressure 99 kPa is based on 100 kPa total and 1 kPa of water vapour."
+      },
+      "correction": {
+        "value": "αa = (99/ps)^1.2 × (T/298)^0.6 for naturally aspirated and pressure-charged spark-ignition engines (ps dry pressure in kPa, T intake air in K); test atmosphere 288–308 K and 80–110 kPa, valid for 0.93 ≤ αa ≤ 1.07 (88/195/EEC, ISO 1585). The 1980 text used Ka = (990/ps) × (T/298)^0.5.",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "6.4.1. Naturally aspirated or supercharged positive-ignition engine - Factor aa : aa = ( 99 ps ) 1,2 . ( T 298 ) 0,6 (2) where T is the absolute temperature in Kelvins (K) of the air drawn in by the engine;"
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "For positive-ignition engines 288 K T 308 K … 80 kPa ps 110 kPa."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "7.3.2 Naturally aspirated and pressure- charged spark ignition engines - Factor U,"
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "This formula is only applicable if : 298 0,93 < a, < 1,07"
+          }
+        ]
+      },
+      "fittedEquipment": {
+        "value": "Net power with the standard-production intake (air filter, silencer), the complete exhaust system, cooling (radiator, fan, water pump, thermostat), a generator limited to what the engine needs, the turbo or supercharger with its charge-air cooler, and the emission devices; a disconnectable fan is tested disconnected (88/195/EEC Table 1; ISO 1585 Table 1).",
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "(6) Where a disconnectable or progressive fan or blower is incorporated, the test shall be made with the disconnectable fan (or blower) disconnected or with the progressive fan or blower running at maximum slip."
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "(8) Minimum power of the generator: the power of the generator shall be limited to that necessary for the operation of accessories which are indispensable for the operation of the engine."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "4.1 net power : The power obtained on a test bed at the end of the crankshaft or its equivalent11 at the corresponding engine speed with the auxiliaries listed in table 1."
+          },
+          {
+            "url": "https://cdn.standards.iteh.ai/samples/6178/84dc0864104d422386e4ef167f54d992/ISO-1585-1982.pdf",
+            "accessed": "2026-09-30",
+            "title": "ISO 1585-1982 (second edition, 1982-05-15) Road vehicles - Engines test code - Net power - free iTeh 'STANDARD PREVIEW' sample pages",
+            "note": "6 ) Where a disconnectable or progressive fan is incorporated, the test shall be made with the disconnectable fan disconnected or with the pro- gressive fan running at maximum slip."
+          }
+        ]
+      },
+      "declaredTolerance": {
+        "value": "Declared net power is accepted within ±2 % at maximum power and ±4 % at the other points of the curve, engine speed ±1.5 % (89/491/EEC); ECE R85 allows ±2 % on engine speed.",
+        "confidence": "single-source",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31989L0491",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 89/491/EEC of 17 July 1989 (OJ L 238, 15.8.1989, p. 43) - Cellar copy of the EUR-Lex text",
+            "note": "9.1. // The net power indicated by the manufacturer for the type of engine shall be accepted if it does not differ by more than ± 2 % for maximum power and more than ± 4 % at, the other measurement points on the curve with a tolerance of ± 1,5 % for engine speed, from the values measured by the technical service on the engine submitted for testing."
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/42006X1124%2803%29",
+            "accessed": "2026-09-30",
+            "title": "UN/ECE Regulation No 85 (net power), as published in OJ L 326, 24.11.2006, p. 55 (Cellar XHTML)",
+            "note": "shall be accepted if it does not differ by more than ± 2 % for maximum power and more than ± 4 % at the other measurement points on the curve with a tolerance of ± 2 % for engine or motor speed,"
+          }
+        ],
+        "note": "Both texts are on the EU Publications Office, so this counts as one site."
+      }
+    }
+  ],
+  "unknownStandard": [
+    {
+      "markets": ["JDM"],
+      "assume": "JIS-net",
+      "reason": {
+        "value": "Japanese makers moved from gross to net figures from 1985, and net figures follow JIS D 1001; no figure in the data predates the switch.",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://nosweb.jp/nostalgichero/articles/detail/2002",
+            "accessed": "2026-09-30",
+            "title": "NostalgicHero (NOSWEB), 片岡英明, 2021-03-04: 大甘だったグロス表示から辛めのネット表示に (secondary)",
+            "note": "1985年以降は徐々に国内でも世界の出力測定法に改められ、馬力とトルク表示は、大甘だったグロス表示から辛めのネット表示に変わる。"
+          },
+          {
+            "url": "https://www.webcartop.jp/2021/04/686898/",
+            "accessed": "2026-09-30",
+            "title": "WEB CARTOP, 近藤暁史, 2021-04-17: エンジンのスペックの「グロス」と「ネット」値とは (secondary)",
+            "note": "1985年を境にして、それまではカタログのスペックもグロス表記だったので、"
+          }
+        ],
+        "method": "Every JDM figure in the data prints JIS net; the rule is only a fallback, from the secondary histories of the gross-to-net switch."
+      }
+    },
+    {
+      "markets": ["USDM", "CDM"],
+      "assume": "SAE-net",
+      "reason": {
+        "value": "US makers publish net figures to SAE J1349 (SAE J2723 certifies figures to it). GM's crate-engine footnotes could not be retrieved; a 2013 forum post says the LS3 crate engine quotes SAE-certified figures, while the LS376/480 and LS376/525 may be rated another way.",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://saemobilus.sae.org/standards/j2723_202110-engine-power-test-code-engine-power-torque-certification",
+            "accessed": "2026-09-30",
+            "title": "SAE Mobilus: J2723_202110",
+            "note": "Certification of engine power and torque to SAE J1349 or SAE J1995 is voluntary; however, this power certification process is mandatory for those advertising power ratings as “Certified to SAE J1349” or “Certified to SAE J1995.”"
+          },
+          {
+            "url": "https://forum.efilive.com/archive/index.php/t-21701.html",
+            "accessed": "2026-09-30",
+            "title": "EFILive Forum archive thread 'gmpp ls3 525 hp stock file?' - post by 'hog', 16 April 2013 (forum, weak)",
+            "note": "Note that this LS3 crate engine is quoting the SAE CERTIFIED power numbers, which is different than the way the 376/480 and LS376/525 crate engines are rated."
+          },
+          {
+            "url": "https://www.chevrolet.com/performance-parts/crate-engines/ls-lsx-engines",
+            "accessed": "2026-09-30",
+            "title": "Chevrolet Performance Parts: LS/LSX Crate Engines (official page)",
+            "note": "LS3 430 Horsepower* 6,600 Max RPM 425 lb.-ft. Torque* … LS376/480 495 Horsepower* … LS376/525 525 Horsepower*"
+          }
+        ],
+        "method": "Market practice (SAE J1349 net since the early 1970s gross-to-net change) applied to the GM crate engines, whose own rating basis was not found; gross (SAE J1995) cannot be ruled out for the LS376 pair."
+      }
+    },
+    {
+      "markets": ["EUDM", "UKDM"],
+      "assume": "EEC-80/1269",
+      "reason": {
+        "value": "From 1 October 1992 Member States could refuse vehicles whose power was not determined under 80/1269/EEC as amended by 88/195/EEC, and new type-approvals from 1 January 2000 had to use the 1999/99/EC version; the 1980 text already used the same reference. BMW's M3 price list and CSL press kit print no standard, but BMW describes the European M3 figure as the ECE rating.",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "http://publications.europa.eu/resource/celex/31988L0195",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 88/195/EEC of 24 March 1988 adapting Directive 80/1269/EEC (OJ L 92, 9.4.1988, p. 50) - Cellar copy of the EUR-Lex text",
+            "note": "3. As from 1 October 1992 Member States may prohibit the entry into service of vehicles of which the engine power has not been determined in accordance with Directive 80/1269/EEC, as last amended by this Directive."
+          },
+          {
+            "url": "http://publications.europa.eu/resource/celex/31999L0099",
+            "accessed": "2026-09-30",
+            "title": "Commission Directive 1999/99/EC of 15 December 1999 (OJ L 334, 28.12.1999, p. 32) - Cellar copy of the EUR-Lex text",
+            "note": "2. With effect from 1 January 2000, Member States: - shall no longer grant EC type-approval pursuant to Article 4(1) of Directive 70/156/EEC,"
+          },
+          {
+            "url": "http://www.treffseiten.de/bmw/info/preise_M3_05_09.pdf",
+            "accessed": "2026-09-30",
+            "title": "BMW AG 'BMW M3 Die Preisliste, Stand: September 2005' (German price list, copy hosted on treffseiten.de)",
+            "note": "Nennleistung kW (PS) … M3 Coupé 6/4 3246 252 (343)"
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0020380EN_US/39112",
+            "accessed": "2026-09-27",
+            "title": "BMW AG press kit for the Paris Auto Show 2000 (28 Sep 2000, posted on PressClub USA), attachment AG000928 Press Kit for Paris Auto Show.rtf, section 2 \"The BMW M3\"",
+            "note": "'providing maximum output of 343 bhp (252 kW) in ECE trim (333 bhp in the US version) at 7900 rpm' (as saved in the S54 engine data)."
+          }
+        ],
+        "method": "Inferred from the EU type-approval rules in force when the figures were published (every unlabelled European figure in the data is from 1993 or later); no maker document naming the standard was found."
+      }
+    },
+    {
+      "markets": ["AUDM"],
+      "to": "2001",
+      "assume": "DIN-70020",
+      "reason": {
+        "value": "Holden printed its VT Series II figures as DIN and told GoAuto in September 2002 that its VX Series II figures were DIN before the VY moved to ECE. No Australian design rule for engine power was found, and nothing from Nissan, Mazda or HSV; their Australian figures from before 2002 are assumed to follow the same practice.",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.goauto.com.au/news/holden/vy-commodore-torque-figues-not-what-they-seem/2002-09-23/21981.html",
+            "accessed": "2026-09-30",
+            "title": "GoAuto, 'VY Commodore torque figues not what they seem', Malcolm Livermore, 23 Sep 2002",
+            "note": "Holden says the reason the base Gen III - which is available with Berlina, Calais and S ute - torque figure is different between VX series II and VY is because it has moved from the DIN standard to a \"more international standard\" - ECE."
+          },
+          {
+            "url": "https://www.goauto.com.au/news/holden/vy-commodore-torque-figues-not-what-they-seem/2002-09-23/21981.html",
+            "accessed": "2026-09-30",
+            "title": "GoAuto, 'VY Commodore torque figues not what they seem', Malcolm Livermore, 23 Sep 2002",
+            "note": "\"Hence the Gen III goes from 460Nm VXII DIN to 450Nm VY ECE. However, they are essentially an equivalent figure.\""
+          },
+          {
+            "url": "https://archive.org/download/pdfy-bgB8G2toaGJhIXTZ/The%20new%20Commodore%20and%20Calais%20Series%20II%20-%20Holden%20Commodore%20and%20Calais%20VT%20Series%20II%20-%20Sales%20Brochure%20-%201999%20%28HD%29_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Holden Ltd: The new Commodore and Calais Series II (VT Series II sales brochure, printed July 1999, GPBR0243), Commodore Specifications page (archive.org OCR text of the scanned brochure; page image n28 also read)",
+            "note": "'POWER (DIN, kW)' in the Gen III V8 specification column (as saved in the LS1 engine data)."
+          }
+        ],
+        "method": "Extrapolated from Holden's stated practice to every Australian figure first published before 2002 (Holden VX II, HSV VT II, Nissan 200SX S15, Mazda RX-7 SP)."
+      }
+    },
+    {
+      "markets": ["AUDM"],
+      "from": "2002",
+      "assume": "EEC-80/1269",
+      "reason": {
+        "value": "Holden moved to the ECE standard with the VY in 2002 (GoAuto) and prints 'ECE' in its 2004 VZ Monaro brochure. Later Australian figures (HSV, Holden VF) name no standard and are assumed to stay on ECE.",
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.goauto.com.au/news/holden/vy-commodore-torque-figues-not-what-they-seem/2002-09-23/21981.html",
+            "accessed": "2026-09-30",
+            "title": "GoAuto, 'VY Commodore torque figues not what they seem', Malcolm Livermore, 23 Sep 2002",
+            "note": "Holden says the reason the base Gen III - which is available with Berlina, Calais and S ute - torque figure is different between VX series II and VY is because it has moved from the DIN standard to a \"more international standard\" - ECE."
+          },
+          {
+            "url": "https://archive.org/download/ProspektHoldenMonaro2004Australia/prospekt%20Holden%20Monaro%202004%20australia.pdf",
+            "accessed": "2026-09-29",
+            "title": "Holden Ltd: VZ Monaro sales brochure (Copyright Holden Ltd November 2004, MONVZ1004), specifications (PDF with text layer on archive.org)",
+            "note": "'Power (ECE, kW) 260 @ 5600rpm*' (as saved in the LS1 engine data)."
+          }
+        ],
+        "method": "Extrapolated from Holden's stated switch to every Australian figure first published from 2002 on."
+      }
+    }
+  ]
+}

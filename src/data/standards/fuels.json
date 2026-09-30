@@ -1,0 +1,214 @@
+{
+  "$comment": "referenceFuels: the fuel a market's factory figures are taken to be rated on (by the variant's first market). pumpFuels: what a user can pick. Per-variant rating fuels (some figures state 98 or 91 RON) are left for the part 2b fuel model.",
+  "referenceFuels": [
+    {
+      "market": "JDM",
+      "grade": "Premium (ハイオク)",
+      "ron": {
+        "value": 99,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://motoinfo.jama.or.jp/?p=12004",
+            "accessed": "2026-09-30",
+            "title": "ライダーの常識!? あたりまえに使っているガソリンのおはなし - JAMA MOTO INFO (2026-03-13)",
+            "note": "実際には、国内のレギュラーは90〜92オクタン、ハイオクは98〜100オクタン程度のものが流通しています。"
+          },
+          {
+            "url": "https://clicccar.com/2020/07/24/993427/",
+            "accessed": "2026-09-30",
+            "title": "ハイオクガソリン不正その後。何と！100オクタンのハイオクは今や流通してない？ | clicccar.com (国沢光宏, 2020-07-24)",
+            "note": "まずオクタン価だけれど、改めてチェックしてみたら現在100オクタンを明言している系列は一つも無かった。 ... 季節によっても精製設備によっても、ベースとなる油種によっても微妙に違うため、98～99.5オクタンの間ぐらいでしょう、とある自動車メーカーのエンジン担当は言ってました。"
+          },
+          {
+            "url": "https://www.eneos.co.jp/binran/part02/chapter01/section01.html",
+            "accessed": "2026-09-30",
+            "title": "第2編第1章第1節 自動車ガソリン｜石油便覧－ENEOS",
+            "note": "JIS規格（JIS K2202）では、オクタン価の違いによって、ハイオクガソリン（1号：オクタン価96以上）とレギュラーガソリン（2号：オクタン価89以上）に分類されている。"
+          }
+        ],
+        "method": "Japanese performance cars are rated on premium. JIS K 2202 sets premium at 96 RON minimum; JAMA says premium as sold is about 98–100 RON and an OEM engine engineer puts it at 98–99.5 (clicccar, 2020). 99 sits in both ranges."
+      }
+    },
+    {
+      "market": "USDM",
+      "grade": "Premium unleaded (91 AKI and up)",
+      "ron": {
+        "value": 95,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.eia.gov/energyexplained/gasoline/octane-in-depth.php",
+            "accessed": "2026-09-30",
+            "title": "Gasoline explained - octane in depth - U.S. Energy Information Administration (EIA)",
+            "note": "Premium (the highest octane fuel—generally 91–94) ... The large number on the yellow gasoline pump octane label is the minimum octane rating. (R+M)/2 Method on the label refers to the octane testing method used, where R is Research Octane Number and M is Motor Octane Number."
+          },
+          {
+            "url": "https://info.ornl.gov/sites/publications/files/pub61169.pdf",
+            "accessed": "2026-09-30",
+            "title": "ORNL/TM-2016/42 Summary of High-Octane, Mid-Level Ethanol Blends Study (ORNL/NREL/ANL, July 2016)",
+            "note": "In the United States, the octane number at the retail pump is given as the anti-knock index (AKI), the average of the RON and the motor octane number (MON), AKI = ½(RON + MON). ... Note that in Figures 3, 4 and 5 the fuel economy (E0 MPGeq) represents miles per gallon normalized to the 97 RON E0 (93 AKI) fuel based on lower (volumetric) heating value."
+          }
+        ],
+        "method": "US pumps post AKI = (RON + MON)/2; premium is generally 91–94 AKI (EIA). ORNL test fuels pair 93 AKI with 97 RON and 88 AKI with 91 RON, so the lowest premium grade, 91 AKI, is taken as about 95 RON. Some US figures (LS1 F-body, 87 AKI regular) were rated on less."
+      }
+    },
+    {
+      "market": "EUDM",
+      "grade": "Super Plus (98 RON, EN 228)",
+      "ron": {
+        "value": 98,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.gma-analytik.de/laboranalytik/mineraloelprodukte/ottokraftstoffe-benzin-super-superplus-e10/",
+            "accessed": "2026-09-30",
+            "title": "GMA - Laboranalytik | Mineralölprodukte: Ottokraftstoffe (Benzin)",
+            "note": "Laut DIN EN 228 muss die ROZ für einen Super-Ottokraftstoff mindestens 95,0 und für einen Super-Plus-Ottokraftstoff mindestens 98,0 betragen. Grundsätzlich liegt die ROZ meist höher als in der Spezifikation mindenstens gefordert. ... Laut DIN EN 228 muss die MOZ für einen Super-Ottokraftstoff mindestens 85,0 und für einen Super-Plus-Ottokraftstoff mindestens 88,0 betragen. Produktbedingt liegt die MOZ meist an der G…"
+          },
+          {
+            "url": "https://via-energy.de/wp-content/uploads/2019/11/VE-Produktspezifikation-OK-98.pdf",
+            "accessed": "2026-09-30",
+            "title": "Produktspezifikation: Ottokraftstoff 98 - Super Plus schwefelfrei gemäß DIN EN 228 (VIA Energy, Juli 2019)",
+            "note": "ROZ korrigiert (1) 98,0 min. DIN EN ISO 5164 MOZ korrigiert (1) 88,0 min. DIN EN ISO 5163"
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/usa/article/attachment/T0022168EN_US/41493",
+            "accessed": "2026-09-30",
+            "title": "BMW Group PressClub USA: BMW Press 3/2003 'BMW M3 CSL' press kit (PDF)",
+            "note": "Fuel RON 98 Output kW/bhp 265/360 at rpm 7,900"
+          },
+          {
+            "url": "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0020386EN_GB/39125",
+            "accessed": "2026-09-27",
+            "title": "BMW (GB) press kit \"The new BMW M3: An icon returns\" (6 Apr 2001), attachment 010402_secii_Tech_spec_M3.rtf \"Technical Specifications\"",
+            "note": "'Compression ratio/fuel grade 11.5 : 1 / RON/98' (as saved in the S54 engine data)."
+          },
+          {
+            "url": "https://archive.org/download/nissan-350z-car-brochure-2004/NISSAN350Z.zip/PAGE38.jpg",
+            "accessed": "2026-09-27",
+            "title": "Nissan Motor (GB) UK sales brochure 'Nissan 350Z', part number 99999-53698 - 05/2004 (archive.org item nissan-350z-car-brochure-2004), PAGE38.jpg ('FACTS & FIGURES' table 'Nissan 350Z'; transcribed from the scan, crops in uk_brochure_2004/)",
+            "note": "Footnote to the power figure: rated to 1999/99/EC, performance figures measured on 98 RON (as saved in the VQ35DE engine data)."
+          }
+        ],
+        "method": "BMW (M3, M3 CSL) and Nissan (350Z) state their European figures on 98 RON, and BMW's GB press kit lists the M3's fuel grade as RON 98; EN 228 sets Super Plus at 98.0 RON minimum. Toyota Europe's rating fuel for the Supra was not found."
+      }
+    },
+    {
+      "market": "AUDM",
+      "grade": "Unleaded (91 RON)",
+      "ron": {
+        "value": 91,
+        "confidence": "estimated",
+        "sources": [
+          {
+            "url": "https://www.legislation.gov.au/F2024L00475/asmade/2024-04-24/text/original/pdf",
+            "accessed": "2026-09-30",
+            "title": "Fuel Quality Standards (Petrol) Determination 2024 (F2024L00475, registered 24/04/2024) - Federal Register of Legislation",
+            "note": "12 Motor octane number (MON) 91 RON grade: 81.0 minimum 95 RON grade: 85.0 minimum ASTM D2700 ... 16 Research octane number (RON) 91 RON grade: 91.0 minimum 95 RON grade: 95.0 minimum ASTM D2699"
+          },
+          {
+            "url": "https://archive.org/download/pdfy-bgB8G2toaGJhIXTZ/The%20new%20Commodore%20and%20Calais%20Series%20II%20-%20Holden%20Commodore%20and%20Calais%20VT%20Series%20II%20-%20Sales%20Brochure%20-%201999%20%28HD%29_djvu.txt",
+            "accessed": "2026-09-29",
+            "title": "Holden Ltd: The new Commodore and Calais Series II (VT Series II sales brochure, printed July 1999, GPBR0243), Commodore Specifications page (archive.org OCR text of the scanned brochure; page image n28 also read)",
+            "note": "Recommended fuel '91 (ULP)' (as saved in the LS1 engine data)."
+          },
+          {
+            "url": "https://carsales.com.au/holden/commodore/price/2017/ss-456292",
+            "accessed": "2026-09-29",
+            "title": "carsales.com.au research: 'Holden Commodore 2017 SS Pricing & Specifications' (2017 Holden Commodore SS VF Series II Manual MY17 spec table)",
+            "note": "'RON Rating | 91' for the VF Series II SS (as saved in the LS3 engine data)."
+          }
+        ],
+        "method": "Holden recommends 91 RON for the VT II Gen III V8 and rates the VF II SS on 91 RON; the Fuel Quality Standards (Petrol) Determination 2024 sets the 91 grade at 91.0 RON minimum. Holden's VZ Monaro figures are on 95 RON premium, and the Nissan and Mazda rating fuels were not found."
+      }
+    }
+  ],
+  "pumpFuels": [
+    {
+      "id": "saudi-91",
+      "name": "PG91",
+      "ron": {
+        "value": 91,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+            "accessed": "2026-09-30",
+            "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+            "note": "Saudi Arabia currently sells 91 RON and 95 RON petrol, using the Research Octane Number (RON) standard applied across Europe, Asia and most of the Middle East."
+          },
+          {
+            "url": "https://www.gso.org.sa/store/standards/GSO:1063773/GSO%202196:2026?lang=en",
+            "accessed": "2026-09-30",
+            "title": "GSO 2196:2026 - Standards Store - GCC Standardization Organization",
+            "note": "The standard outlines the specification and requirements for Unleaded Gasoline (91 RON, 95 RON, and 98 RON) intended for use in engines designed to operate on such fuel."
+          },
+          {
+            "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+            "accessed": "2026-09-30",
+            "title": "Retail fuels – our gasoline and diesel range including current Saudi Arabia prices. Available at Aramco Stations | Aramco",
+            "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+          }
+        ]
+      }
+    },
+    {
+      "id": "saudi-95",
+      "name": "PG95",
+      "ron": {
+        "value": 95,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+            "accessed": "2026-09-30",
+            "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+            "note": "Saudi Arabia currently sells 91 RON and 95 RON petrol, using the Research Octane Number (RON) standard applied across Europe, Asia and most of the Middle East."
+          },
+          {
+            "url": "https://www.gso.org.sa/store/standards/GSO:1063773/GSO%202196:2026?lang=en",
+            "accessed": "2026-09-30",
+            "title": "GSO 2196:2026 - Standards Store - GCC Standardization Organization",
+            "note": "The standard outlines the specification and requirements for Unleaded Gasoline (91 RON, 95 RON, and 98 RON) intended for use in engines designed to operate on such fuel."
+          },
+          {
+            "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+            "accessed": "2026-09-30",
+            "title": "Retail fuels – our gasoline and diesel range including current Saudi Arabia prices. Available at Aramco Stations | Aramco",
+            "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+          }
+        ]
+      }
+    },
+    {
+      "id": "saudi-98",
+      "name": "PG98",
+      "ron": {
+        "value": 98,
+        "confidence": "verified",
+        "sources": [
+          {
+            "url": "https://www.fuelsandlubes.com/saudi-aramco-to-launch-98-octane-fuel-as-saudi-vehicle-fleet-evolves/",
+            "accessed": "2026-09-30",
+            "title": "Saudi Aramco to launch 98-octane fuel as Saudi vehicle fleet evolves - F&L Asia (9 January 2026)",
+            "note": "Saudi Aramco will introduce a 98-octane petrol grade in Saudi Arabia from early 2026, adding a higher-octane option to the Kingdom’s retail fuel slate as the domestic vehicle fleet becomes more diverse and increasingly aligned with global automotive standards. ... The initial rollout will cover Riyadh, Jeddah and the Dammam metropolitan area, as well as key highways linking these cities."
+          },
+          {
+            "url": "https://www.gso.org.sa/store/standards/GSO:1063773/GSO%202196:2026?lang=en",
+            "accessed": "2026-09-30",
+            "title": "GSO 2196:2026 - Standards Store - GCC Standardization Organization",
+            "note": "The standard outlines the specification and requirements for Unleaded Gasoline (91 RON, 95 RON, and 98 RON) intended for use in engines designed to operate on such fuel."
+          },
+          {
+            "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+            "accessed": "2026-09-30",
+            "title": "Retail fuels – our gasoline and diesel range including current Saudi Arabia prices. Available at Aramco Stations | Aramco",
+            "note": "Available in PG91, PG95 and PG98, our gasoline fuels meet the needs of gasoline-powered vehicles sold in Saudi Arabia."
+          }
+        ]
+      },
+      "notes": "New grade from early 2026; the first stations are in Riyadh, Jeddah, the Dammam area and on the highways between them (F&L Asia, 9 Jan 2026)."
+    }
+  ]
+}

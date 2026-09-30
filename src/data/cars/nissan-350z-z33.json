@@ -621,6 +621,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1440,
         "unit": "kg",
         "confidence": "verified",
@@ -870,6 +871,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1480,
         "unit": "kg",
         "confidence": "verified",
@@ -1153,6 +1155,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -1460,6 +1463,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1430,
         "unit": "kg",
         "confidence": "verified",
@@ -1709,6 +1713,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1480,
         "unit": "kg",
         "confidence": "verified",
@@ -1992,6 +1997,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1480,
         "unit": "kg",
         "confidence": "verified",
@@ -2287,6 +2293,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1450,
         "unit": "kg",
         "confidence": "verified",
@@ -2546,6 +2553,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1460,
         "unit": "kg",
         "confidence": "single-source",
@@ -2857,6 +2865,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1520,
         "unit": "kg",
         "confidence": "verified",
@@ -3098,6 +3107,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -3351,6 +3361,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1520,
         "unit": "kg",
         "confidence": "verified",
@@ -3666,6 +3677,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -3987,6 +3999,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1440,
         "unit": "kg",
         "confidence": "verified",
@@ -4264,6 +4277,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1480,
         "unit": "kg",
         "confidence": "verified",
@@ -4547,6 +4561,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1480,
         "unit": "kg",
         "confidence": "verified",
@@ -4854,6 +4869,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1460,
         "unit": "kg",
         "confidence": "verified",
@@ -5131,6 +5147,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1500,
         "unit": "kg",
         "confidence": "verified",
@@ -5414,6 +5431,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1500,
         "unit": "kg",
         "confidence": "verified",
@@ -5721,6 +5739,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1450,
         "unit": "kg",
         "confidence": "verified",
@@ -5998,6 +6017,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -6281,6 +6301,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -6576,6 +6597,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1520,
         "unit": "kg",
         "confidence": "verified",
@@ -6841,6 +6863,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1510,
         "unit": "kg",
         "confidence": "verified",
@@ -7118,6 +7141,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1450,
         "unit": "kg",
         "confidence": "verified",
@@ -7367,6 +7391,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1490,
         "unit": "kg",
         "confidence": "verified",
@@ -7650,6 +7675,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1500,
         "unit": "kg",
         "confidence": "verified",
@@ -7951,6 +7977,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1440,
         "unit": "kg",
         "confidence": "verified",
@@ -8206,6 +8233,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1560,
         "unit": "kg",
         "confidence": "verified",
@@ -8489,6 +8517,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1550,
         "unit": "kg",
         "confidence": "verified",
@@ -8766,6 +8795,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1590,
         "unit": "kg",
         "confidence": "verified",
@@ -9075,6 +9105,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1590,
         "unit": "kg",
         "confidence": "verified",
@@ -9408,6 +9439,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1600,
         "unit": "kg",
         "confidence": "verified",
@@ -9717,6 +9749,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1610,
         "unit": "kg",
         "confidence": "verified",
@@ -10050,6 +10083,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1600,
         "unit": "kg",
         "confidence": "verified",
@@ -10359,6 +10393,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1600,
         "unit": "kg",
         "confidence": "verified",
@@ -10698,6 +10733,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1560,
         "unit": "kg",
         "confidence": "verified",
@@ -10975,6 +11011,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1600,
         "unit": "kg",
         "confidence": "verified",
@@ -11284,6 +11321,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1610,
         "unit": "kg",
         "confidence": "verified",
@@ -11623,6 +11661,7 @@
         "note": "Standard on every JDM grade, including the base car and the automatics (unlike the US base car). The catalogue databases print only \"LSD 標準\"; Nissan names it リヤビスカスLSD in its 2007-01 catalogue, and the US 2004 FSM lists the R200V viscous unit. Nissan names the unit リヤビスカスLSD (standard on all grades) in its 2007-01 catalogue; the US 2004 FSM RFD-35 lists an R200V (LSD) final drive. No JDM source found that prints the LSD type for this catalogue period."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1550,
         "unit": "kg",
         "confidence": "verified",
@@ -11882,6 +11921,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1525,
         "unit": "kg",
         "confidence": "verified",
@@ -12160,6 +12200,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1545,
         "unit": "kg",
         "confidence": "verified",
@@ -12432,6 +12473,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1545,
         "unit": "kg",
         "confidence": "single-source",
@@ -12645,6 +12687,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1635,
         "unit": "kg",
         "confidence": "single-source",
@@ -12918,6 +12961,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1645,
         "unit": "kg",
         "confidence": "single-source",
@@ -13187,6 +13231,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1534,
         "unit": "kg",
         "confidence": "single-source",
@@ -13488,6 +13533,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1549,
         "unit": "kg",
         "confidence": "single-source",
@@ -13789,6 +13835,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1631,
         "unit": "kg",
         "confidence": "single-source",
@@ -14089,6 +14136,7 @@
         "note": "Standard on every European 350Z."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1640,
         "unit": "kg",
         "confidence": "single-source",
@@ -14376,6 +14424,7 @@
         "note": "Nissan Europe's spec sheets cover 04MY-06MY; the German 2008 price list says only \"Sperrdifferential mit begrenztem Schlupf\" (limited-slip). Nissan's 2007-01 Japanese catalogue names the unit as a rear viscous LSD."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1528,
         "unit": "kg",
         "confidence": "single-source",
@@ -14649,6 +14698,7 @@
         "note": "Nissan Europe's spec sheets cover 04MY-06MY; the German 2008 price list says only \"Sperrdifferential mit begrenztem Schlupf\" (limited-slip). Nissan's 2007-01 Japanese catalogue names the unit as a rear viscous LSD."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1537,
         "unit": "kg",
         "confidence": "single-source",
@@ -14922,6 +14972,7 @@
         "note": "Nissan Europe's spec sheets cover 04MY-06MY; the German 2008 price list says only \"Sperrdifferential mit begrenztem Schlupf\" (limited-slip). Nissan's 2007-01 Japanese catalogue names the unit as a rear viscous LSD."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1621,
         "unit": "kg",
         "confidence": "single-source",
@@ -15215,6 +15266,7 @@
         "note": "Nissan Europe's spec sheets cover 04MY-06MY; the German 2008 price list says only \"Sperrdifferential mit begrenztem Schlupf\" (limited-slip). Nissan's 2007-01 Japanese catalogue names the unit as a rear viscous LSD."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1626,
         "unit": "kg",
         "confidence": "single-source",
@@ -15490,6 +15542,7 @@
         "note": "Nissan Europe's spec sheets cover 04MY-06MY; the German 2008 price list says only \"Sperrdifferential mit begrenztem Schlupf\" (limited-slip). Nissan's 2007-01 Japanese catalogue names the unit as a rear viscous LSD."
       },
       "curbWeight": {
+        "basis": "kerb-no-driver",
         "value": 1537,
         "unit": "kg",
         "confidence": "single-source",
@@ -15667,6 +15720,7 @@
         "note": "R200 two-pinion open differential: the base 350Z (6MT only) is the one grade without the viscous LSD, which Nissan lists as an Enthusiast addition."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3188,
         "unit": "lb",
         "confidence": "single-source",
@@ -15990,6 +16044,7 @@
         "note": "R200 two-pinion open differential: the base 350Z (6MT only) is the one grade without the viscous LSD, which Nissan lists as an Enthusiast addition."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3213,
         "unit": "lb",
         "confidence": "single-source",
@@ -16282,6 +16337,7 @@
         "note": "R200 two-pinion open differential: the base 350Z (6MT only) is the one grade without the viscous LSD, which Nissan lists as an Enthusiast addition."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3339,
         "unit": "lb",
         "confidence": "single-source",
@@ -16591,6 +16647,7 @@
         "note": "R200 two-pinion open differential: the base 350Z (6MT only) is the one grade without the viscous LSD, which Nissan lists as an Enthusiast addition."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3339,
         "unit": "lb",
         "confidence": "single-source",
@@ -16894,6 +16951,7 @@
         "note": "R200 two-pinion open differential: the base 350Z (6MT only) is the one grade without the viscous LSD, which Nissan lists as an Enthusiast addition."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3320,
         "unit": "lb",
         "confidence": "single-source",
@@ -17184,6 +17242,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3239,
         "unit": "lb",
         "confidence": "single-source",
@@ -17425,6 +17484,7 @@
         "method": "Nissan does not list the 35th Anniversary's differential. It sits above the Enthusiast (which adds the VLSD) and carries Track-level equipment; every US grade above the base car has the R200V viscous LSD."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3229,
         "unit": "lb",
         "confidence": "single-source",
@@ -17715,6 +17775,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3210,
         "unit": "lb",
         "confidence": "single-source",
@@ -18020,6 +18081,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3234,
         "unit": "lb",
         "confidence": "estimated",
@@ -18330,6 +18392,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3344,
         "unit": "lb",
         "confidence": "single-source",
@@ -18627,6 +18690,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3344,
         "unit": "lb",
         "confidence": "single-source",
@@ -18918,6 +18982,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3364,
         "unit": "lb",
         "confidence": "single-source",
@@ -19227,6 +19292,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3197,
         "unit": "lb",
         "confidence": "single-source",
@@ -19568,6 +19634,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3221,
         "unit": "lb",
         "confidence": "single-source",
@@ -19872,6 +19939,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3346,
         "unit": "lb",
         "confidence": "single-source",
@@ -20181,6 +20249,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3346,
         "unit": "lb",
         "confidence": "single-source",
@@ -20490,6 +20559,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3327,
         "unit": "lb",
         "confidence": "single-source",
@@ -20787,6 +20857,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3391,
         "unit": "lb",
         "confidence": "single-source",
@@ -21094,6 +21165,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3391,
         "unit": "lb",
         "confidence": "single-source",
@@ -21395,6 +21467,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3398,
         "unit": "lb",
         "confidence": "single-source",
@@ -21708,6 +21781,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3404,
         "unit": "lb",
         "confidence": "single-source",
@@ -22027,6 +22101,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3404,
         "unit": "lb",
         "confidence": "verified",
@@ -22352,6 +22427,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3381,
         "unit": "lb",
         "confidence": "single-source",
@@ -22677,6 +22753,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3352,
         "unit": "lb",
         "confidence": "single-source",
@@ -23003,6 +23080,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3353,
         "unit": "lb",
         "confidence": "single-source",
@@ -23293,6 +23371,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3217,
         "unit": "lb",
         "confidence": "single-source",
@@ -23623,6 +23702,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3241,
         "unit": "lb",
         "confidence": "single-source",
@@ -23904,6 +23984,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3239,
         "unit": "lb",
         "confidence": "single-source",
@@ -24215,6 +24296,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3257,
         "unit": "lb",
         "confidence": "single-source",
@@ -24501,6 +24583,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3380,
         "unit": "lb",
         "confidence": "single-source",
@@ -24798,6 +24881,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3380,
         "unit": "lb",
         "confidence": "single-source",
@@ -25089,6 +25173,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3396,
         "unit": "lb",
         "confidence": "single-source",
@@ -25392,6 +25477,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3247,
         "unit": "lb",
         "confidence": "verified",
@@ -25728,6 +25814,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3271,
         "unit": "lb",
         "confidence": "estimated",
@@ -26087,6 +26174,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3370,
         "unit": "lb",
         "confidence": "single-source",
@@ -26402,6 +26490,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3400,
         "unit": "lb",
         "confidence": "single-source",
@@ -26711,6 +26800,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3376,
         "unit": "lb",
         "confidence": "single-source",
@@ -27014,6 +27104,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3225,
         "unit": "lb",
         "confidence": "single-source",
@@ -27421,6 +27512,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3251,
         "unit": "lb",
         "confidence": "single-source",
@@ -27727,6 +27819,7 @@
         "note": "R200V viscous LSD (service manual RFD SDS)."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3400,
         "unit": "lb",
         "confidence": "verified",
@@ -28040,6 +28133,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3445,
         "unit": "lb",
         "confidence": "estimated",
@@ -28375,6 +28469,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3497,
         "unit": "lb",
         "confidence": "estimated",
@@ -28685,6 +28780,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3578,
         "unit": "lb",
         "confidence": "single-source",
@@ -28976,6 +29072,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3578,
         "unit": "lb",
         "confidence": "single-source",
@@ -29261,6 +29358,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3596,
         "unit": "lb",
         "confidence": "single-source",
@@ -29552,6 +29650,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3596,
         "unit": "lb",
         "confidence": "single-source",
@@ -29818,6 +29917,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3428,
         "unit": "lb",
         "confidence": "single-source",
@@ -30135,6 +30235,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3480,
         "unit": "lb",
         "confidence": "single-source",
@@ -30427,6 +30528,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3580,
         "unit": "lb",
         "confidence": "single-source",
@@ -30730,6 +30832,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3580,
         "unit": "lb",
         "confidence": "single-source",
@@ -31020,6 +31123,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3575,
         "unit": "lb",
         "confidence": "single-source",
@@ -31316,6 +31420,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3575,
         "unit": "lb",
         "confidence": "single-source",
@@ -31582,6 +31687,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3600,
         "unit": "lb",
         "confidence": "single-source",
@@ -31879,6 +31985,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3600,
         "unit": "lb",
         "confidence": "single-source",
@@ -32164,6 +32271,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "single-source",
@@ -32455,6 +32563,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3616,
         "unit": "lb",
         "confidence": "single-source",
@@ -32727,6 +32836,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3536,
         "unit": "lb",
         "confidence": "single-source",
@@ -33014,6 +33124,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3602,
         "unit": "lb",
         "confidence": "single-source",
@@ -33317,6 +33428,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3602,
         "unit": "lb",
         "confidence": "single-source",
@@ -33607,6 +33719,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3596,
         "unit": "lb",
         "confidence": "single-source",
@@ -33903,6 +34016,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3596,
         "unit": "lb",
         "confidence": "single-source",
@@ -34169,6 +34283,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3479,
         "unit": "lb",
         "confidence": "single-source",
@@ -34474,6 +34589,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3513,
         "unit": "lb",
         "confidence": "estimated",
@@ -34796,6 +34912,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3598,
         "unit": "lb",
         "confidence": "single-source",
@@ -35087,6 +35204,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3598,
         "unit": "lb",
         "confidence": "single-source",
@@ -35372,6 +35490,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3615,
         "unit": "lb",
         "confidence": "single-source",
@@ -35663,6 +35782,7 @@
         "note": "R200V viscous LSD: the service manuals list the R200V for every automatic."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3615,
         "unit": "lb",
         "confidence": "single-source",
@@ -35935,6 +36055,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3462,
         "unit": "lb",
         "confidence": "single-source",
@@ -36294,6 +36415,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3496,
         "unit": "lb",
         "confidence": "verified",
@@ -36598,6 +36720,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3600,
         "unit": "lb",
         "confidence": "single-source",
@@ -36901,6 +37024,7 @@
         "method": "No Nissan document states the differential per roadster grade for MY2004-2007. Every roadster grade starts at Enthusiast, whose coupe definition includes the viscous LSD, and Nissan lists the VLSD for all MY2008-2009 roadsters."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3600,
         "unit": "lb",
         "confidence": "single-source",
@@ -37191,6 +37315,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3595,
         "unit": "lb",
         "confidence": "verified",
@@ -37499,6 +37624,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 3595,
         "unit": "lb",
         "confidence": "single-source",

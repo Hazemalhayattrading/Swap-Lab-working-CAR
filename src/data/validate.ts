@@ -3,6 +3,14 @@ import { AssetManifestSchema, type Asset, type AssetManifest } from './schema/as
 import { CarSchema, type Car } from './schema/car';
 import { EngineSchema, type Engine } from './schema/engine';
 import { SwapSchema, type Swap } from './schema/swap';
+import { AssumptionsFileSchema } from './schema/model';
+import {
+  FuelsFileSchema,
+  PowerRatingsFileSchema,
+  WeightBasesFileSchema,
+  type FuelsFile,
+  type PowerRatingsFile,
+} from './schema/standards';
 import { BUDGET_BYTES, checkBudget } from './policy';
 
 /**
@@ -79,6 +87,26 @@ export const SCHEMA_RULES: readonly SchemaRule[] = [
     test: (p) => /^src\/data\/swaps\/[a-z0-9-]+\.json$/.test(p),
     schema: SwapSchema,
   },
+  {
+    description: 'power rating standards (reference conditions)',
+    test: (p) => p === 'src/data/standards/power-ratings.json',
+    schema: PowerRatingsFileSchema,
+  },
+  {
+    description: 'rating and pump fuels',
+    test: (p) => p === 'src/data/standards/fuels.json',
+    schema: FuelsFileSchema,
+  },
+  {
+    description: 'curb-weight bases',
+    test: (p) => p === 'src/data/standards/weight-bases.json',
+    schema: WeightBasesFileSchema,
+  },
+  {
+    description: 'simulation model assumptions',
+    test: (p) => p === 'src/data/model/assumptions.json',
+    schema: AssumptionsFileSchema,
+  },
 ];
 
 /** `src/data/cars/nissan-silvia-s15.json` -> `nissan-silvia-s15`. */
@@ -121,8 +149,47 @@ function checkReferences(
   cars: readonly { path: string; car: Car }[],
   engines: readonly { path: string; engine: Engine }[],
   swaps: readonly { path: string; swap: Swap }[] = [],
+  ratings?: { path: string; file: PowerRatingsFile },
+  fuels?: { path: string; file: FuelsFile },
 ): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
+  // Every factory rating must be comparable under its own standard: the
+  // standard has reference conditions (or, if unlabelled, a rule for its
+  // market), and its market has a rating fuel.
+  for (const { path, engine } of engines) {
+    engine.variants.forEach((v, i) => {
+      const market = v.markets[0] ?? 'other';
+      const at = `${path}.variants[${String(i)}].output.standard`;
+      const standard = v.output.standard;
+      if (ratings && standard === 'unknown') {
+        const start = v.period.value.from;
+        const within = (a: string, b: string) =>
+          a
+            .slice(0, Math.min(a.length, b.length))
+            .localeCompare(b.slice(0, Math.min(a.length, b.length)));
+        const rule = ratings.file.unknownStandard.find(
+          (u) =>
+            u.markets.includes(market) &&
+            (u.from === undefined || within(start, u.from) >= 0) &&
+            (u.to === undefined || within(start, u.to) <= 0),
+        );
+        if (!rule) {
+          issues.push({
+            path: at,
+            message: `No assumed standard for unlabelled ${market} figures (${ratings.path}).`,
+          });
+        }
+      } else if (ratings && !ratings.file.standards.some((s) => s.id === standard)) {
+        issues.push({
+          path: at,
+          message: `No reference conditions for "${standard}" (${ratings.path}).`,
+        });
+      }
+      if (fuels && !fuels.file.referenceFuels.some((f) => f.market === market)) {
+        issues.push({ path: at, message: `No rating fuel for ${market} (${fuels.path}).` });
+      }
+    });
+  }
   const byId = new Map<string, Engine>();
   for (const { path, engine } of engines) {
     if (engine.id !== fileStem(path)) {
@@ -308,6 +375,8 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
   const cars: { path: string; car: Car }[] = [];
   const engines: { path: string; engine: Engine }[] = [];
   const swaps: { path: string; swap: Swap }[] = [];
+  let ratings: { path: string; file: PowerRatingsFile } | undefined;
+  let fuels: { path: string; file: FuelsFile } | undefined;
 
   for (const file of files) {
     const rule = SCHEMA_RULES.find((r) => r.test(file.path));
@@ -332,6 +401,11 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       engines.push({ path: file.path, engine: result.data as Engine });
     }
     if (rule.schema === SwapSchema) swaps.push({ path: file.path, swap: result.data as Swap });
+    if (rule.schema === PowerRatingsFileSchema) {
+      ratings = { path: file.path, file: result.data as PowerRatingsFile };
+    }
+    if (rule.schema === FuelsFileSchema)
+      fuels = { path: file.path, file: result.data as FuelsFile };
     if (rule.schema !== AssetManifestSchema) {
       collectConfidence(result.data, file.path, { counts, estimated });
     }
@@ -352,6 +426,6 @@ export function validateData(files: readonly DataFile[], facts: FileFacts): Vali
       }
     }
   }
-  issues.push(...checkReferences(cars, engines, swaps));
+  issues.push(...checkReferences(cars, engines, swaps, ratings, fuels));
   return { issues, checkedFiles, counts, estimated, noAiFiles };
 }

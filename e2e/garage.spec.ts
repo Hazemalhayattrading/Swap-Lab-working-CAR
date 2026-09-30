@@ -22,17 +22,28 @@ async function openGarage(page: Page, query = ''): Promise<string[]> {
   return problems;
 }
 
-/** Mean and standard deviation of luminance (0..1) over the 3D view, above the telemetry strip. */
+/**
+ * Mean and standard deviation of luminance (0..1) over the 3D view: above the
+ * telemetry strip and outside the dyno sheet panel.
+ */
 async function viewportStats(page: Page, file: string): Promise<{ mean: number; std: number }> {
   const buffer = await page.screenshot({ path: `${SHOTS}/${file}` });
   const png = PNG.sync.read(buffer);
   const telemetry = await page.locator('#telemetry').boundingBox();
+  const dyno = await page.locator('#dyno').boundingBox();
   const bottom = Math.floor(telemetry ? telemetry.y : png.height);
+  const inDyno = (x: number, y: number) =>
+    dyno !== null &&
+    x >= dyno.x &&
+    x <= dyno.x + dyno.width &&
+    y >= dyno.y &&
+    y <= dyno.y + dyno.height;
   let sum = 0;
   let sumSq = 0;
   let n = 0;
   for (let y = 0; y < bottom; y += 4) {
     for (let x = 0; x < png.width; x += 4) {
+      if (inDyno(x, y)) continue;
       const i = (y * png.width + x) * 4;
       const l =
         (0.2126 * (png.data[i] ?? 0) +
@@ -159,7 +170,7 @@ test('fits a phone screen without sideways scrolling', async ({ page }) => {
     () => document.documentElement.scrollWidth - window.innerWidth,
   );
   expect(overflow).toBeLessThanOrEqual(0);
-  for (const selector of ['.shop-tag', '#telemetry', '#bay-note', '#quality']) {
+  for (const selector of ['.shop-tag', '#telemetry', '#bay-note', '#quality', '#dyno']) {
     const box = (await page.locator(selector).boundingBox()) ?? { x: -1, width: 0 };
     expect(box.x, selector).toBeGreaterThanOrEqual(0);
     expect(box.x + box.width, selector).toBeLessThanOrEqual(390);

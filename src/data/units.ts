@@ -1,4 +1,4 @@
-import { UNITS } from './schema/common';
+import { UNITS } from './unit-list';
 
 /**
  * Converts values as printed by a source (see `measured()` in schema/source.ts)

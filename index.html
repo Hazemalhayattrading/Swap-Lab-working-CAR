@@ -63,6 +63,38 @@
         </div>
       </section>
 
+      <aside class="dyno" id="dyno" aria-labelledby="dyno-title" data-state="loading">
+        <div class="dyno__head">
+          <h2 class="dyno__title" id="dyno-title">Dyno sheet</h2>
+          <p class="dyno__summary" id="dyno-summary"></p>
+          <button
+            class="dyno__toggle"
+            id="dyno-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="dyno-body"
+          >
+            Hide sheet
+          </button>
+        </div>
+        <div class="dyno__body" id="dyno-body">
+          <div class="dyno__controls" id="dyno-controls"></div>
+          <div class="dyno__sheet" id="dyno-sheet">
+            <p class="dyno__loading">Loading the cars and engines.</p>
+          </div>
+          <div class="dyno__foot" id="dyno-foot"></div>
+        </div>
+        <p class="visually-hidden" id="dyno-status" role="status"></p>
+      </aside>
+
+      <dialog class="manual" id="dyno-manual" aria-labelledby="manual-title">
+        <div class="manual__head">
+          <h2 id="manual-title">How we calculate this</h2>
+          <button class="manual__close" id="manual-close" type="button">Close</button>
+        </div>
+        <div class="manual__body" id="manual-body"></div>
+      </dialog>
+
       <div class="fault" id="fault" role="alert" hidden>
         <h1 class="fault__title" id="fault-title"></h1>
         <p class="fault__body" id="fault-body"></p>

@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { UNITS } from '../unit-list';
 import { measured, sourced } from './source';
 
 /** File and record ids: lowercase letters, digits, - and _. */
@@ -33,21 +34,8 @@ export type Period = z.infer<typeof PeriodSchema>;
 
 export const SourcedPeriodSchema = sourced(PeriodSchema);
 
-/** Units a data file may use, per quantity. The loader converts them to SI. */
-export const UNITS = {
-  power: ['PS', 'hp', 'kW'],
-  torque: ['Nm', 'kgf·m', 'lb-ft'],
-  mass: ['kg', 'lb'],
-  length: ['mm', 'in'],
-  displacement: ['cc'],
-  pressure: ['bar', 'kPa', 'psi', 'kgf/cm²'],
-  speed: ['rpm'],
-  roadSpeed: ['km/h', 'mph'],
-  flow: ['cc/min'],
-  angle: ['deg'],
-  volume: ['L'],
-  time: ['s'],
-} as const;
+/** Units a data file may use, per quantity (src/data/unit-list.ts). */
+export { UNITS };
 
 /**
  * Currencies a price may be printed in. Kept out of UNITS: money has no SI

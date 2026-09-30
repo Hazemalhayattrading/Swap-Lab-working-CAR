@@ -162,7 +162,7 @@ function trim(over: Record<string, unknown> = {}) {
     transmission: 'six-speed',
     finalDrive: v(4.1),
     differential: v('helical-lsd'),
-    curbWeight: v(1250, 'kg'),
+    curbWeight: { ...v(1250, 'kg'), basis: 'jis-vehicle-weight' },
     tyres: { front: v('205/55R16'), rear: v('205/55R16') },
     ...over,
   };

@@ -4,12 +4,15 @@ import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/ibm-plex-mono/latin-400.css';
 import '@fontsource/ibm-plex-mono/latin-500.css';
 import './ui/styles.css';
+import './ui/dyno/dyno.css';
 
 import { GarageView } from './app/garage-view';
+import { SimClient } from './app/sim-client';
 import { parseBackendRequest } from './render/backend';
 import { createRenderer } from './render/renderer';
 import { resolveQuality, type QualityLevel } from './render/quality';
 import { installWebGpuCompat } from './render/webgpu-compat';
+import { DynoPanel } from './ui/dyno/panel';
 import { FrameMeter } from './ui/frame-meter';
 import { Hud, showStartupFault } from './ui/hud';
 
@@ -31,7 +34,14 @@ function storeQuality(level: QualityLevel): void {
   }
 }
 
+/** The dyno sheet runs on its own worker and doesn't need the 3D view, so it starts first. */
+function startDyno(): void {
+  const panel = new DynoPanel(new SimClient());
+  void panel.start();
+}
+
 async function boot(): Promise<void> {
+  startDyno();
   installWebGpuCompat();
   const canvas = document.getElementById('viewport') as HTMLCanvasElement;
   const backendRequest = parseBackendRequest(location.search);

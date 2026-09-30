@@ -592,6 +592,7 @@
         "note": "Mazda names it \"トルセン\"LSD (Torque Sensing Limited Slip Differential, トルク感応型); the 1995-09 catalogue glossary is quoted for the definition."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1290,
         "unit": "kg",
         "confidence": "verified",
@@ -873,6 +874,7 @@
         "note": "Mazda names it \"トルセン\"LSD (Torque Sensing Limited Slip Differential, トルク感応型); the 1995-09 catalogue glossary is quoted for the definition."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1320,
         "unit": "kg",
         "confidence": "verified",
@@ -1160,6 +1162,7 @@
         "note": "Mazda names it \"トルセン\"LSD (Torque Sensing Limited Slip Differential, トルク感応型); the 1995-09 catalogue glossary is quoted for the definition."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -1433,6 +1436,7 @@
         "note": "Mazda names it \"トルセン\"LSD (Torque Sensing Limited Slip Differential, トルク感応型); the 1995-09 catalogue glossary is quoted for the definition."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -1714,6 +1718,7 @@
         "note": "Mazda names it \"トルセン\"LSD (Torque Sensing Limited Slip Differential, トルク感応型); the 1995-09 catalogue glossary is quoted for the definition."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -1940,6 +1945,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M002G001/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2501180/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -2083,6 +2089,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M002G002/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2501181/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -2228,6 +2235,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M002G003/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2501182/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1330,
         "unit": "kg",
         "confidence": "verified",
@@ -2373,6 +2381,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M002G004/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2501183/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1290,
         "unit": "kg",
         "confidence": "verified",
@@ -2536,6 +2545,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -2776,6 +2786,7 @@
         "note": "Type RZ: 強化タイプ [uprated type] Torsen. Mazda name: \"トルセン\"LSD, a torque-sensing LSD."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -3028,6 +3039,7 @@
         "note": "Mazda name: \"トルセン\"LSD, a torque-sensing LSD."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -3268,6 +3280,7 @@
         "note": "Mazda name: \"トルセン\"LSD, a torque-sensing LSD."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -3516,6 +3529,7 @@
         "note": "Mazda name: \"トルセン\"LSD, a torque-sensing LSD."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1330,
         "unit": "kg",
         "confidence": "verified",
@@ -3714,6 +3728,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M003G005/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2502630/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -3883,6 +3898,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M004G004/; https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M005G004/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503199/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -4064,6 +4080,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M004G003/; https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M005G003/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503200/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -4249,6 +4266,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M004G002/; https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M005G002/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503201/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -4416,6 +4434,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M004G001/; https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M005G001/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503202/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -4595,6 +4614,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M004G005/; https://www.carsensor.net/catalog/mazda/efini_rx-7/F001/M005G005/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503203/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1330,
         "unit": "kg",
         "confidence": "verified",
@@ -4751,6 +4771,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2502192/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -4945,6 +4966,7 @@
         "note": "Mazda: 強化タイプ (reinforced) Torsen LSD on Type RS and Type R."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -5200,6 +5222,7 @@
         "note": "Mazda: 強化タイプ (reinforced) Torsen LSD on Type RS and Type R."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -5495,6 +5518,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -5790,6 +5814,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -6085,6 +6110,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -6380,6 +6406,7 @@
         "note": "Mazda: 強化タイプ (reinforced) Torsen LSD on Type RS and Type R."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -6649,6 +6676,7 @@
         "note": "Mazda: 強化タイプ (reinforced) Torsen LSD on Type RS and Type R."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -6958,6 +6986,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -7267,6 +7296,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1240,
         "unit": "kg",
         "confidence": "verified",
@@ -7576,6 +7606,7 @@
         "note": "Mazda: standard Torsen LSD (the reinforced type is RS/R only)."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -7849,6 +7880,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G004/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503199/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -8014,6 +8046,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G003/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503200/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -8177,6 +8210,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G002/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503201/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -8340,6 +8374,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G001/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503202/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1250,
         "unit": "kg",
         "confidence": "verified",
@@ -8503,6 +8538,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G005/; https://www.goo-net.com/catalog/MAZDA/EFINI_RX7/2503203/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1330,
         "unit": "kg",
         "confidence": "verified",
@@ -8636,6 +8672,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M003G006/; https://www.goo-net.com/catalog/MAZDA/RX7/2502193/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -8820,6 +8857,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G010/; https://www.goo-net.com/catalog/MAZDA/RX7/2502441/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1270,
         "unit": "kg",
         "confidence": "verified",
@@ -8968,6 +9006,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G011/; https://www.goo-net.com/catalog/MAZDA/RX7/2502763/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -9178,6 +9217,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G006/; https://www.goo-net.com/catalog/MAZDA/RX7/2502912/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1260,
         "unit": "kg",
         "confidence": "verified",
@@ -9370,6 +9410,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G007/; https://www.goo-net.com/catalog/MAZDA/RX7/2502954/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1270,
         "unit": "kg",
         "confidence": "verified",
@@ -9568,6 +9609,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G008/; https://www.goo-net.com/catalog/MAZDA/RX7/2502955/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -9760,6 +9802,7 @@
         "method": "This trim's own sources say only that an LSD is standard (https://www.carsensor.net/catalog/mazda/rx-7/F001/M002G009/; https://www.goo-net.com/catalog/MAZDA/RX7/2502956/). Mazda's brochures for the 1991-10, 1995-09, 1999 and 2000 grades call it a Torsen (torque-sensing) LSD on every grade they list (https://archive.org/details/0ae-559b-0-01; https://archive.org/details/101_20260806_20260806_1440; https://archive.org/details/1999-mazda-rx-7-brochure.-japan-2-1999.-mkj-01-e-9902-mi-01), and no source says the type changed, so Torsen is assumed."
       },
       "curbWeight": {
+        "basis": "jis-vehicle-weight",
         "value": 1280,
         "unit": "kg",
         "confidence": "verified",
@@ -9960,6 +10003,7 @@
         "note": "Brochure lists the Torsen LSD under Mechanical Standard Features, so it applies to every 1993 US package and both gearboxes."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2789,
         "unit": "lb",
         "confidence": "single-source",
@@ -10212,6 +10256,7 @@
         "note": "Brochure lists the Torsen LSD under Mechanical Standard Features, so it applies to every 1993 US package and both gearboxes."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2857,
         "unit": "lb",
         "confidence": "single-source",
@@ -10417,6 +10462,7 @@
         "note": "Brochure lists the Torsen LSD under Mechanical Standard Features, so it applies to every 1993 US package and both gearboxes."
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2789,
         "unit": "lb",
         "confidence": "estimated",
@@ -10630,6 +10676,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2826,
         "unit": "lb",
         "confidence": "single-source",
@@ -10841,6 +10888,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2881,
         "unit": "lb",
         "confidence": "single-source",
@@ -11019,6 +11067,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2826,
         "unit": "lb",
         "confidence": "estimated",
@@ -11178,6 +11227,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2826,
         "unit": "lb",
         "confidence": "single-source",
@@ -11370,6 +11420,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2881,
         "unit": "lb",
         "confidence": "single-source",
@@ -11548,6 +11599,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "us-curb-weight",
         "value": 2826,
         "unit": "lb",
         "confidence": "estimated",
@@ -11738,6 +11790,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1310,
         "unit": "kg",
         "confidence": "verified",
@@ -12078,6 +12131,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1310,
         "unit": "kg",
         "confidence": "verified",
@@ -12231,6 +12285,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1310,
         "unit": "kg",
         "confidence": "single-source",
@@ -12344,6 +12399,7 @@
         ]
       },
       "curbWeight": {
+        "basis": "unstated",
         "value": 1218,
         "unit": "kg",
         "confidence": "verified",

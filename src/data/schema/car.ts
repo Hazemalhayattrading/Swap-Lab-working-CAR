@@ -1,14 +1,7 @@
 import { z } from 'zod';
-import { measured, sourced } from './source';
-import {
-  Length,
-  Mass,
-  MarketSchema,
-  Ratio,
-  SlugSchema,
-  SourcedPeriodSchema,
-  UNITS,
-} from './common';
+import { checkConfidence, ConfidenceSchema, measured, SourceSchema, sourced } from './source';
+import { WeightBasisSchema } from './standards';
+import { Length, MarketSchema, Ratio, SlugSchema, SourcedPeriodSchema, UNITS } from './common';
 
 /**
  * Car data (BUILD_PROMPT section 7.1): one file per chassis in src/data/cars/.
@@ -87,6 +80,25 @@ const PerformanceTest = z.strictObject({
   by: z.string().min(1),
 });
 
+/**
+ * A curb weight as the market publishes it, with the standard it follows
+ * (src/data/standards/weight-bases.json): JIS 車両重量, US curb weight, DIN
+ * kerb weight, EU mass in running order (with a 75 kg driver), a maker's
+ * kerb weight without driver, Australian kerb mass, or unstated. The loader
+ * normalises every basis to full fuel and no driver.
+ */
+const CurbWeight = z
+  .strictObject({
+    value: z.number().positive(),
+    unit: z.enum(UNITS.mass),
+    basis: WeightBasisSchema,
+    confidence: ConfidenceSchema,
+    sources: z.array(SourceSchema),
+    method: z.string().min(1).optional(),
+    note: z.string().min(1).optional(),
+  })
+  .superRefine(checkConfidence);
+
 export const TrimSchema = z.strictObject({
   id: SlugSchema,
   /** Grade name as sold, e.g. "Spec-R" or "RZ". */
@@ -118,8 +130,8 @@ export const TrimSchema = z.strictObject({
       'speed-sensing-clutch-lsd',
     ]),
   ),
-  /** As the market publishes it; say which standard in the note (JIS 車両重量, US curb weight, EU DIN). */
-  curbWeight: Mass,
+  /** As the market publishes it, with its `basis`; the note gives the source's own wording. */
+  curbWeight: CurbWeight,
   /** Front axle share of curb weight, in percent. */
   weightFrontPercent: measured(['%'], z.number().min(30).max(70)).optional(),
   tyres: z.strictObject({ front: sourced(TyreSize), rear: sourced(TyreSize) }),

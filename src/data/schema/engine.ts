@@ -88,6 +88,12 @@ export const EngineVariantSchema = z.strictObject({
   turbos: z.array(Turbo).optional(),
   /** Stock peak boost. */
   boost: measured(UNITS.pressure).optional(),
+  /**
+   * Sequential twin turbos only: the rpm at which the second turbo comes on at
+   * full load, where a source gives one (the maker's switch point varies with
+   * load, so this is the full-throttle figure).
+   */
+  turboChangeover: Rpm.optional(),
   intercooler: sourced(z.enum(['none', 'air-to-air-front', 'air-to-air-side', 'air-to-water'])),
   /** Flow of one injector; there's one per cylinder or rotor (with staged fuelling, the primary). */
   injectorFlow: measured(UNITS.flow).optional(),
@@ -395,6 +401,13 @@ export const EngineSchema = z
           code: 'custom',
           path: ['variants', i],
           message: 'A naturally aspirated variant cannot have turbos or boost.',
+        });
+      }
+      if (v.turboChangeover && v.induction.value !== 'twin-turbo-sequential') {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['variants', i, 'turboChangeover'],
+          message: 'Only a sequential twin-turbo variant has a changeover rpm.',
         });
       }
       if (v.secondaryInjectorFlow && !v.injectorFlow) {

@@ -20,5 +20,5 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["src", "tests/unit", "tests/calibration"]
+  "include": ["src", "tests/unit", "tests/calibration", "tests/support"]
 }
